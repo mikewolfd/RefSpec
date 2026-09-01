@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/federal-identifier-registry.schema.json",
+  "title": "Federal Identifier Registry",
+  "type": "object",
+  "required": [
+    "metadata",
+    "sources",
+    "repositories",
+    "identifiers"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "authority"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "authority": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "repositories": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "name",
+          "url",
+          "coverage",
+          "status"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "coverage": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "family_id",
+          "domain",
+          "name",
+          "issuer",
+          "object_type",
+          "grammar_class",
+          "regex_exactness",
+          "status",
+          "canonical_form",
+          "examples",
+          "aliases_variations",
+          "candidate_regex_python",
+          "normalization",
+          "required_context",
+          "semantic_validation",
+          "uniqueness_key_scope",
+          "privacy_class",
+          "edge_cases",
+          "source_ids",
+          "repository_ids",
+          "confidence"
+        ],
+        "properties": {
+          "family_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+$"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "issuer": {
+            "type": "string"
+          },
+          "object_type": {
+            "type": "string"
+          },
+          "grammar_class": {
+            "type": "string"
+          },
+          "regex_exactness": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "canonical_form": {
+            "type": "string"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "aliases_variations": {
+            "type": "string"
+          },
+          "candidate_regex_python": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "normalization": {
+            "type": "string"
+          },
+          "required_context": {
+            "type": "string"
+          },
+          "semantic_validation": {
+            "type": "string"
+          },
+          "uniqueness_key_scope": {
+            "type": "string"
+          },
+          "privacy_class": {
+            "type": "string"
+          },
+          "edge_cases": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "repository_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

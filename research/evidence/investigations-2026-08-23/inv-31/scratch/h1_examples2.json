@@ -1,0 +1,7089 @@
+{
+ "GAIN": [
+  {
+   "rin": "2060-AG23",
+   "pub": "199510",
+   "boxes": [
+    "42 USC 7619",
+    "1857G(a) Sec. 15(c)(2)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7619",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "15(c)(2)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7619",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1857g",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2070-AC62",
+   "pub": "199510",
+   "boxes": [
+    "15 USC 2605",
+    "2607(c)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2605",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2605",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2607",
+     "usc_title": 15
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2060-AG71",
+   "pub": "199604",
+   "boxes": [
+    "42 USC 7601(a)(1), 7620",
+    "7401-7671q"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7620",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7620",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7401",
+     "usc_section_end": "7671q",
+     "usc_section_span_rule": "stated",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2060-AG71",
+   "pub": "199610",
+   "boxes": [
+    "42 USC 7601(a)(1), 7620",
+    "7401-7671q"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7620",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7620",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7401",
+     "usc_section_end": "7671q",
+     "usc_section_span_rule": "stated",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2070-AD10",
+   "pub": "199610",
+   "boxes": [
+    "15 USC 2603",
+    "2611"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2603",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2603",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2611",
+     "usc_title": 15
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "0572-AB50",
+   "pub": "199910",
+   "boxes": [
+    "7 USC 901 et seq.",
+    "1921 et seq."
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "901",
+     "usc_title": 7
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "901",
+     "usc_title": 7
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1921",
+     "usc_title": 7
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "199910",
+   "boxes": [
+    "46 App USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1010-AC71",
+   "pub": "200004",
+   "boxes": [
+    "25 USC 2101 et seq",
+    "30 ISC 181 et seq"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2101",
+     "usc_title": 25
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2101",
+     "usc_title": 25
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "30",
+     "usc_title": 25
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB11",
+   "pub": "200004",
+   "boxes": [
+    "22 USC 1431-1442, 1475e,",
+    "2451-2460"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1431",
+     "usc_section_end": "1442",
+     "usc_section_span_rule": "stated",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1475e",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1431",
+     "usc_section_end": "1442",
+     "usc_section_span_rule": "stated",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1475e",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2451",
+     "usc_section_end": "2460",
+     "usc_section_span_rule": "stated",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200004",
+   "boxes": [
+    "46 App USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "0648-AO61",
+   "pub": "200010",
+   "boxes": [
+    "16 USC 1531-1543",
+    "subpart B, 3223.12"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "3223",
+     "usc_title": 16
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB15",
+   "pub": "200010",
+   "boxes": [
+    "22 USC 2778",
+    "sections 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200010",
+   "boxes": [
+    "46 App USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2090-AA11",
+   "pub": "200010",
+   "boxes": [
+    "42 U.S.C. 6905",
+    "6912(a)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6905",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6905",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "0648-AO61",
+   "pub": "200104",
+   "boxes": [
+    "16 USC 1531-1543",
+    "subpart B, 3223.12"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "3223",
+     "usc_title": 16
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB17",
+   "pub": "200104",
+   "boxes": [
+    "42 USC 794",
+    "42 ISC 2000d to 2000d-7"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "794",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "794",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "42",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB15",
+   "pub": "200104",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB18",
+   "pub": "200104",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2120-AH23",
+   "pub": "200104",
+   "boxes": [
+    "49 USC 44709 to 44711",
+    "49 SUC 45102 to 45103"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "49",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200104",
+   "boxes": [
+    "46 App USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2050-AE85",
+   "pub": "200104",
+   "boxes": [
+    "42 USC 7412(r)",
+    "7601 (a)(1)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2090-AA11",
+   "pub": "200104",
+   "boxes": [
+    "42 U.S.C. 6905",
+    "6912(a)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6905",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6905",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "0648-AO61",
+   "pub": "200110",
+   "boxes": [
+    "16 USC 1531-1543",
+    "subpart B, 3223.12"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "3223",
+     "usc_title": 16
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB15",
+   "pub": "200110",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB18",
+   "pub": "200110",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2120-AH23",
+   "pub": "200110",
+   "boxes": [
+    "49 USC 44709 to 44711",
+    "49 SUC 45102 to 45103"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "49",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200110",
+   "boxes": [
+    "46 app USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "3090-AH47",
+   "pub": "200110",
+   "boxes": [
+    "40 USC 476",
+    "42 2000d-1"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "42",
+     "usc_title": 40
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "0648-AO61",
+   "pub": "200204",
+   "boxes": [
+    "16 USC 1531-1543",
+    "subpart B, 3223.12"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1531",
+     "usc_section_end": "1543",
+     "usc_section_span_rule": "stated",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "3223",
+     "usc_title": 16
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB18",
+   "pub": "200204",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB15",
+   "pub": "200204",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2120-AH23",
+   "pub": "200204",
+   "boxes": [
+    "49 USC 44709 to 44711",
+    "49 SUC 45102 to 45103"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "49",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200204",
+   "boxes": [
+    "46 app USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2050-AE85",
+   "pub": "200204",
+   "boxes": [
+    "42 USC 7412(r)",
+    "7601 (a)(1)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "3090-AH47",
+   "pub": "200204",
+   "boxes": [
+    "40 USC 476",
+    "42 2000d-1"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "42",
+     "usc_title": 40
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2502-AH87",
+   "pub": "200210",
+   "boxes": [
+    "12 USC 1735",
+    "12 UDC 1735(f)-14"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "12",
+     "usc_title": 12
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB18",
+   "pub": "200210",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2120-AH23",
+   "pub": "200210",
+   "boxes": [
+    "49 USC 44709 to 44711",
+    "49 SUC 45102 to 45103"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "49",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2133-AB37",
+   "pub": "200210",
+   "boxes": [
+    "46 app USC 1101",
+    "1114(b), 1122(d), 1241"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1101",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1114",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1122",
+     "usc_title": 46
+    },
+    {
+     "authority_type": "usc",
+     "usc_appendix": true,
+     "usc_section": "1241",
+     "usc_title": 46
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1505-AA90",
+   "pub": "200210",
+   "boxes": [
+    "31 USC 3701",
+    "31 UC 3711"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "31",
+     "usc_title": 31
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "3052-AC09",
+   "pub": "200210",
+   "boxes": [
+    "12 USC 2073 to 2076",
+    "12"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2073",
+     "usc_section_end": "2076",
+     "usc_section_span_rule": "stated",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2073",
+     "usc_section_end": "2076",
+     "usc_section_span_rule": "stated",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "12",
+     "usc_title": 12
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "3090-AH47",
+   "pub": "200210",
+   "boxes": [
+    "40 USC 476",
+    "42 2000d-1"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "476",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "42",
+     "usc_title": 40
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1652-AA18",
+   "pub": "200304",
+   "boxes": [
+    "49 USC 44936",
+    "44942, 46105"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "44942",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "46105",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2502-AH87",
+   "pub": "200304",
+   "boxes": [
+    "12 USC 1735",
+    "12 UDC 1735(f)-14"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "12",
+     "usc_title": 12
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1400-AB18",
+   "pub": "200304",
+   "boxes": [
+    "22 USC 2778",
+    "secs 1243 and 1245 of the Defense Offsets"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1243"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2778",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1245",
+     "usc_title": 22
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2120-AH23",
+   "pub": "200304",
+   "boxes": [
+    "49 USC 44709 to 44711",
+    "49 SUC 45102 to 45103"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44709",
+     "usc_section_end": "44711",
+     "usc_section_span_rule": "stated",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "49",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2135-AA15",
+   "pub": "200304",
+   "boxes": [
+    "33 USC 983(a)",
+    "984(a)(4), as amended"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "983",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "983",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "984",
+     "usc_title": 33
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1505-AA90",
+   "pub": "200304",
+   "boxes": [
+    "31 USC 3701",
+    "31 UC 3711"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "31",
+     "usc_title": 31
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1557-AB97",
+   "pub": "200304",
+   "boxes": [
+    "12 USC 92a",
+    "12 UC 93a"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "92a",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "92a",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "12",
+     "usc_title": 12
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "9000-AJ47",
+   "pub": "200304",
+   "boxes": [
+    "40 USC 486 (c)",
+    "10 ch 137"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "486",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "486",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "10",
+     "usc_title": 40
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1652-AA18",
+   "pub": "200310",
+   "boxes": [
+    "49 USC 44936",
+    "44942, 46105"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "44942",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "46105",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2502-AH87",
+   "pub": "200310",
+   "boxes": [
+    "12 USC 1735",
+    "12 UDC 1735(f)-14"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1735",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "12",
+     "usc_title": 12
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1125-AA48",
+   "pub": "200310",
+   "boxes": [
+    "8 USC 1101",
+    "1103"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1103",
+     "usc_title": 8
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1505-AA90",
+   "pub": "200310",
+   "boxes": [
+    "31 USC 3701",
+    "31 UC 3711"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "31",
+     "usc_title": 31
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "9000-AJ47",
+   "pub": "200310",
+   "boxes": [
+    "40 USC 486 (c)",
+    "10 ch 137"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "486",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "486",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "10",
+     "usc_title": 40
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1840-AC84",
+   "pub": "200404",
+   "boxes": [
+    "20 USC 421-429",
+    "1071-1087-2"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "421",
+     "usc_section_end": "429",
+     "usc_section_span_rule": "stated",
+     "usc_title": 20
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "421",
+     "usc_section_end": "429",
+     "usc_section_span_rule": "stated",
+     "usc_title": 20
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1071",
+     "usc_section_end": "1087",
+     "usc_section_span_rule": "stated",
+     "usc_title": 20
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1652-AA18",
+   "pub": "200404",
+   "boxes": [
+    "49 USC 44936",
+    "44942, 46105"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44936",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "44942",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "46105",
+     "usc_title": 49
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1125-AA48",
+   "pub": "200404",
+   "boxes": [
+    "8 USC 1101",
+    "1103"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1103",
+     "usc_title": 8
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "1505-AA90",
+   "pub": "200404",
+   "boxes": [
+    "31 USC 3701",
+    "31 UC 3711"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "31",
+     "usc_title": 31
+    }
+   ],
+   "kind": "GAIN"
+  },
+  {
+   "rin": "2090-AA13",
+   "pub": "200404",
+   "boxes": [
+    "CAA 42 U.S.C. 7401,7412,7414,7416,",
+    "7601",
+    "RCRA 42 U.S.C. 6912, 6922"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7401",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7414",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7416",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6922",
+     "usc_title": 42
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "7401",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7412",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7414",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7416",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "7601",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6922",
+     "usc_title": 42
+    }
+   ],
+   "kind": "GAIN"
+  }
+ ],
+ "LOSS": [
+  {
+   "rin": "2030-AA53",
+   "pub": "199704",
+   "boxes": [
+    "Sec 205(c) 63 Stat. 390",
+    "as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "205(c)",
+     "statute_page": 390,
+     "statute_volume": 63
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 390,
+     "statute_volume": 63
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2502-AH20",
+   "pub": "199810",
+   "boxes": [
+    "FY 1998 Appropriations Act PL 105-65",
+    "approved 10/27/97"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "105-65",
+     "stated_act_name": "Appropriations Act"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "105-65"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0579-AB19",
+   "pub": "200110",
+   "boxes": [
+    "113 Stat. 1501A-293",
+    "sec 301.75-15 and 301.75.16 also issued under sec 203"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "301.75-15"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page_text": "1501A-293",
+     "statute_volume": 113
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0579-AB19",
+   "pub": "200204",
+   "boxes": [
+    "113 Stat. 1501A-293",
+    "sec 301.75-15 and 301.75.16 also issued under sec 203"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "301.75-15"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page_text": "1501A-293",
+     "statute_volume": 113
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0579-AB19",
+   "pub": "200210",
+   "boxes": [
+    "113 Stat 1501A-293",
+    "sec 301.75-15 and 301.75.16 also issued under sec 203"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "301.75-15"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page_text": "1501A-293",
+     "statute_volume": 113
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0579-AB19",
+   "pub": "200304",
+   "boxes": [
+    "113 Stat 1501A-293",
+    "sec 301.75-15 and 301.75.16 also issued under sec 203"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "301.75-15"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page_text": "1501A-293",
+     "statute_volume": 113
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1125-AA42",
+   "pub": "200304",
+   "boxes": [
+    "3 CFR, 1949 to 1953 Comp, p 1002",
+    "1953 Supp Interpret or apply sec 215"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "eo_compilation"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "215"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "eo_compilation",
+     "eo_compilation_page": "1002",
+     "eo_compilation_start": "1949"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0579-AB19",
+   "pub": "200310",
+   "boxes": [
+    "113 Stat 1501A-293",
+    "sec 301.75-15 and 301.75.16 also issued under sec 203"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "301.75-15"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page_text": "1501A-293",
+     "statute_volume": 113
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2126-AA64",
+   "pub": "200404",
+   "boxes": [
+    "sec 211, PL 106-159",
+    "113tat. 1754 (1999)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159",
+     "stated_section": "211"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2126-AA64",
+   "pub": "200410",
+   "boxes": [
+    "sec 211, PL 106-159",
+    "113tat. 1754 (1999)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159",
+     "stated_section": "211"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1218-AC15",
+   "pub": "200504",
+   "boxes": [
+    "Overhead Protection: sec 107, Contract Work Hours and Safety Standards Act (Construction Safety Act), 40 USC 333",
+    "sec 1926.1002 and 19"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Contract Work Hours and Safety Standards Act",
+     "stated_section": "107",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1926.1002"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "19",
+     "usc_title": 40
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2135-AA20",
+   "pub": "200504",
+   "boxes": [
+    "33 USC 983(a)",
+    "984(a)(4)",
+    "49 CFR 1.52"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "983",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "52",
+     "cfr_title": 49
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "983",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "52",
+     "cfr_title": 49
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "984",
+     "usc_title": 33
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1218-AC15",
+   "pub": "200510",
+   "boxes": [
+    "Overhead Protection: sec 107, Contract Work Hours and Safety Standards Act (Construction Safety Act), 40 USC 333",
+    "sec 1926.1002 and 19"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Contract Work Hours and Safety Standards Act",
+     "stated_section": "107",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1926.1002"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "19",
+     "usc_title": 40
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1218-AC15",
+   "pub": "200604",
+   "boxes": [
+    "Overhead Protection: sec 107, Contract Work Hours and Safety Standards Act (Construction Safety Act), 40 USC 333",
+    "sec 1926.1002 and 19"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Contract Work Hours and Safety Standards Act",
+     "stated_section": "107",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1926.1002"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "333",
+     "usc_title": 40
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "19",
+     "usc_title": 40
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0420-AA23",
+   "pub": "200804",
+   "boxes": [
+    "EO 11041, as amended, 3 CFR 1959 to 1963 Comp",
+    "sec 2(6) State Department Delegation of Authority No. 85-11A, as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "11041"
+    },
+    {
+     "authority_type": "eo_compilation"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "2(6)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "11041"
+    },
+    {
+     "authority_type": "eo_compilation",
+     "eo_compilation_start": "1959"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1505-AC02",
+   "pub": "200810",
+   "boxes": [
+    "PL 105-32, 111 Stat 251, 712 to 731, and 786 to 787",
+    "as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "105-32"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 251,
+     "statute_volume": 111
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "105-32"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 251,
+     "statute_volume": 111,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0694-AE53",
+   "pub": "200904",
+   "boxes": [
+    "42 USC 6212",
+    "43",
+    "46 USC"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6212",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_title": 46
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6212",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "43",
+     "usc_title": 42
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0938-AQ10",
+   "pub": "201104",
+   "boxes": [
+    "PL 111-148, secs 6102",
+    "6121",
+    "42 USC 1320a-7j"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148",
+     "stated_section": "6102"
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1320a-7j",
+     "usc_title": 42
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1320a-7j",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3038-AD09",
+   "pub": "201104",
+   "boxes": [
+    "sec 8a(5) of the CEA (7 USC 12a(5))",
+    "as amended by Title VII of the Dodd-Frank Wall Street Reform and Consumer Protection Act,",
+    "PL 111-203"
+   ],
+   "signals": [
+    "L2-open-punctuation",
+    "R2-opens-lowercase-no-scheme",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_section": "8a(5)",
+     "usc_section": "12a",
+     "usc_title": 7
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "Title VII of the Dodd-Frank Wall Street Reform and Consumer Protection Act"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-203"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "12a",
+     "usc_title": 7
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-203"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0938-AQ10",
+   "pub": "201110",
+   "boxes": [
+    "PL 111-148, secs 6102",
+    "6121",
+    "42 USC 1320a-7j"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148",
+     "stated_section": "6102"
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1320a-7j",
+     "usc_title": 42
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1320a-7j",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0938-AR55",
+   "pub": "201304",
+   "boxes": [
+    "MIPPA sec 153 (b",
+    "PL 111-148 sec 3401(h)"
+   ],
+   "signals": [
+    "L3-unbalanced-paren",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other",
+     "stated_section": "153"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148",
+     "stated_section": "3401(h)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1210-AB41",
+   "pub": "201304",
+   "boxes": [
+    "29 USC 1027, 1059, 1135, 1161-1168, 1169, 1181-1183, 1181 note, 1185, 1185a, 1185b, 1191, 1191a, 1191b, and 1191c",
+    "sec 101(g)",
+    "PL 104-191, 110 Stat 1936"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1027",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1059",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1135",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1161",
+     "usc_section_end": "1168",
+     "usc_section_span_rule": "stated",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1169",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1181",
+     "usc_section_end": "1183",
+     "usc_section_span_rule": "stated",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1181",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185a",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185b",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191a",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191b",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191c",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "101(g)"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "104-191"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1936,
+     "statute_volume": 110
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1027",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "104-191"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1936,
+     "statute_volume": 110,
+     "statute_volume_matches_public_law": true
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1059",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1135",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1161",
+     "usc_section_end": "1168",
+     "usc_section_span_rule": "stated",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1169",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1181",
+     "usc_section_end": "1183",
+     "usc_section_span_rule": "stated",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1181",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185a",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1185b",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191a",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191b",
+     "usc_title": 29
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1191c",
+     "usc_title": 29
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1210-AB41",
+   "pub": "201304",
+   "boxes": [
+    "sec 512(d), PL 110-343, 122 Stat 3881",
+    "sec 1001, 1201, and 1562(e)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343",
+     "stated_section": "512(d)"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "512(d)",
+     "statute_page": 3881,
+     "statute_volume": 122
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1001"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 3881,
+     "statute_volume": 122,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1210-AB42",
+   "pub": "201304",
+   "boxes": [
+    "sec 512(d), PL 110-343, 122 Stat 3881",
+    "sec 1001, 1201, and 1562(e)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343",
+     "stated_section": "512(d)"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "512(d)",
+     "statute_page": 3881,
+     "statute_volume": 122
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1001"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 3881,
+     "statute_volume": 122,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1210-AB43",
+   "pub": "201304",
+   "boxes": [
+    "sec 512(d), PL 110-343, 122 Stat 3881",
+    "sec 1001, 1201, and 1562(e)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343",
+     "stated_section": "512(d)"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "512(d)",
+     "statute_page": 3881,
+     "statute_volume": 122
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1001"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 3881,
+     "statute_volume": 122,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1210-AB45",
+   "pub": "201304",
+   "boxes": [
+    "sec 512(d), PL 110-343, 122 Stat 3881",
+    "sec 1001, 1201, and 1562(e)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343",
+     "stated_section": "512(d)"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "512(d)",
+     "statute_page": 3881,
+     "statute_volume": 122
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1001"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "110-343"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 3881,
+     "statute_volume": 122,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1400-AD41",
+   "pub": "201304",
+   "boxes": [
+    "22 USC 2651a",
+    "287c",
+    "sec 1225, PL 108-375"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2651a",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "108-375",
+     "stated_section": "1225"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2651a",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "108-375"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "287c",
+     "usc_title": 22
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1400-AD41",
+   "pub": "201310",
+   "boxes": [
+    "22 USC 2651a",
+    "287c",
+    "sec 1225, PL 108-375"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2651a",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "108-375",
+     "stated_section": "1225"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2651a",
+     "usc_title": 22
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "108-375"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "287c",
+     "usc_title": 22
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2050-AG75",
+   "pub": "201310",
+   "boxes": [
+    "42 USC sec 6907",
+    "6912(a)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_section": "6907",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0625-AB00",
+   "pub": "201404",
+   "boxes": [
+    "Sec 2402, PL 106-36, 113 Stat 127, 168",
+    "19 U.S."
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-36",
+     "stated_section": "2402"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "2402",
+     "statute_page": 127,
+     "statute_volume": 113
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-36"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 127,
+     "statute_volume": 113,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0906-AA85",
+   "pub": "201404",
+   "boxes": [
+    "PL 109-148 sec 31F-3",
+    "and 319F-4 PHA"
+   ],
+   "signals": [
+    "R3-opens-with-connective",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148",
+     "stated_section": "31F-3"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2050-AG75",
+   "pub": "201404",
+   "boxes": [
+    "42 USC Sec 6907",
+    "6912(a)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_section": "6907",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0906-AA85",
+   "pub": "201410",
+   "boxes": [
+    "PL 109-148 sec 31F-3",
+    "and 319F-4 PHA"
+   ],
+   "signals": [
+    "R3-opens-with-connective",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148",
+     "stated_section": "31F-3"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2050-AG75",
+   "pub": "201410",
+   "boxes": [
+    "42 USC sec 6907",
+    "6912(a)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_section": "6907",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "6907",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "6912",
+     "usc_title": 42
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0906-AA85",
+   "pub": "201504",
+   "boxes": [
+    "Pub. L. 109-148 sec 31F-3",
+    "and 319F-4 PHA"
+   ],
+   "signals": [
+    "R3-opens-with-connective",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148",
+     "stated_section": "31F-3"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0790-AJ29",
+   "pub": "201510",
+   "boxes": [
+    "44 U.S.C. 3544",
+    "and sec 941",
+    "Pub. L. 112-239, 126 Stat. 1632"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R3-opens-with-connective",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3544",
+     "usc_title": 44
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "941"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "112-239"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1632,
+     "statute_volume": 126
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3544",
+     "usc_title": 44
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "112-239"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1632,
+     "statute_volume": 126,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0790-AJ29",
+   "pub": "201604",
+   "boxes": [
+    "44 U.S.C. 3544",
+    "and sec 941",
+    "Pub. L. 112-239, 126 Stat. 1632"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R3-opens-with-connective",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3544",
+     "usc_title": 44
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "941"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "112-239"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1632,
+     "statute_volume": 126
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3544",
+     "usc_title": 44
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "112-239"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1632,
+     "statute_volume": 126,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AA49",
+   "pub": "201604",
+   "boxes": [
+    "42 U.S.C. 271",
+    "and sec 122",
+    "Pub. L. 105-115, 11 Stat. 2322 (21 U.S.C. 355 note)"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R3-opens-with-connective",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "271",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "122"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "355",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "105-115"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 2322,
+     "statute_volume": 11
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "271",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_note": true,
+     "usc_section": "355",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "105-115"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 2322,
+     "statute_volume": 11
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AA49",
+   "pub": "201610",
+   "boxes": [
+    "42 U.S.C. 271",
+    "and sec 122",
+    "Pub. L. 105-115, 11 Stat. 2322 (21 U.S.C. 355 note)"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R3-opens-with-connective",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "271",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "122"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "355",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "105-115"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 2322,
+     "statute_volume": 11
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "271",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "usc",
+     "usc_note": true,
+     "usc_section": "355",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "105-115"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 2322,
+     "statute_volume": 11
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2130-AC59",
+   "pub": "201610",
+   "boxes": [
+    "and Pub. L. 114-74, sec. 701 (Nov. 2, 2015)",
+    "note, as amended by sec. 31001(s)(1)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-74",
+     "stated_section": "701"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "31001(s)(1)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-74"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2130-AC59",
+   "pub": "201704",
+   "boxes": [
+    "and Pub. L. 114-74, sec. 701 (Nov. 2, 2015)",
+    "note, as amended by sec. 31001(s)(1)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-74",
+     "stated_section": "701"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "31001(s)(1)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-74"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3038-AE82",
+   "pub": "201904",
+   "boxes": [
+    "31 U.S.C.",
+    "3701 to 3719"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_title": 31
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "3701",
+     "usc_section_end": "3719",
+     "usc_section_span_rule": "stated",
+     "usc_title": 31
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1651-AB38",
+   "pub": "202004",
+   "boxes": [
+    "sec. 101(a)(15)(l)",
+    "8 U.S.C. 1101(a)(15)(l) of the Immigration and Nationality Act of 1952 (INA)"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other",
+     "stated_section": "101(a)(15)(l)"
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Immigration and Nationality Act of 1952",
+     "usc_section": "1101",
+     "usc_title": 8
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2900-AR06",
+   "pub": "202010",
+   "boxes": [
+    "1707",
+    "48 CFR 1.301 to 1.304"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2900-AR06",
+   "pub": "202104",
+   "boxes": [
+    "1707",
+    "48 CFR 1.301 to 1.304"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD46",
+   "pub": "202104",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183",
+    "2243,2244,2252,2277a"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2244",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2277a",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2900-AR06",
+   "pub": "202110",
+   "boxes": [
+    "1707",
+    "48 CFR 1.301 to 1.304"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD46",
+   "pub": "202110",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183",
+    "2243, 2244, 2252, 2277a"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2244",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2277a",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AI29",
+   "pub": "202204",
+   "boxes": [
+    "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+    "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "FD&C Act",
+     "stated_section": "505(x)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "1205-AC10",
+   "pub": "202204",
+   "boxes": [
+    "8 U.S.C. secs. 1101(a)(15)(H) (ii) (b),",
+    "1184(c)(1),(c)(14)(A) and (B), and"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_section": "1101(a)(15)(H)",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1101",
+     "usc_title": 8
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "1184",
+     "usc_title": 8
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2900-AR06",
+   "pub": "202204",
+   "boxes": [
+    "1707",
+    "48 CFR 1.301 to 1.304"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD51",
+   "pub": "202204",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+    "secs 514"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "514"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AI29",
+   "pub": "202210",
+   "boxes": [
+    "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+    "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "FD&C Act",
+     "stated_section": "505(x)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "2900-AR06",
+   "pub": "202210",
+   "boxes": [
+    "1707",
+    "48 CFR 1.301 to 1.304"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "cfr",
+     "cfr_part": "1",
+     "cfr_part_is_plausible": true,
+     "cfr_section": "301",
+     "cfr_title": 48
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD51",
+   "pub": "202210",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+    "secs 514"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "514"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AI29",
+   "pub": "202304",
+   "boxes": [
+    "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+    "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "FD&C Act",
+     "stated_section": "505(x)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD51",
+   "pub": "202304",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+    "secs 514"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "514"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3235-AM94",
+   "pub": "202304",
+   "boxes": [
+    "Secs. 2 and 3 Pub. L. 116-222, 134 Stat. 1063 (2020)",
+    "unless otherwise noted"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "116-222",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "stated_section": "2",
+     "statute_page": 1063,
+     "statute_volume": 134
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "116-222"
+    },
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 1063,
+     "statute_volume": 134,
+     "statute_volume_matches_public_law": true
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "0910-AI29",
+   "pub": "202310",
+   "boxes": [
+    "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+    "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "FD&C Act",
+     "stated_section": "505(x)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "114-89"
+    }
+   ],
+   "kind": "LOSS"
+  },
+  {
+   "rin": "3052-AD51",
+   "pub": "202310",
+   "boxes": [
+    "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+    "secs 514"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "stated_act_name": "Credit Act",
+     "usc_section": "2279",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "514"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2183",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2243",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2252",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279aa-11",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-2",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-3",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-4",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-5",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279bb-6",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2279",
+     "usc_title": 12
+    }
+   ],
+   "kind": "LOSS"
+  }
+ ],
+ "NEUTRAL": [
+  {
+   "rin": "1400-AB11",
+   "pub": "200004",
+   "boxes": [
+    "EO 12048 of March 27, 1978, 3 CFR Comp.",
+    "p. 168."
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12048"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12048"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1205-AB20",
+   "pub": "200010",
+   "boxes": [
+    "506(c)",
+    "29 USC 2939(a)"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "2939",
+     "usc_title": 29
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2939",
+     "usc_title": 29
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2126-AA63",
+   "pub": "200010",
+   "boxes": [
+    "sec.206",
+    "PL 106-159"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other",
+     "stated_section": "206"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "106-159"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2040-AD72",
+   "pub": "200104",
+   "boxes": [
+    "PL 95-217",
+    "100 Sat 7"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "95-217"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "95-217"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2700-AC57",
+   "pub": "200304",
+   "boxes": [
+    "PL 101-194",
+    "70 Comp Gen 196"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "101-194"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "101-194"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2700-AC57",
+   "pub": "200310",
+   "boxes": [
+    "PL 101-194",
+    "70 Comp Gen 196"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "101-194"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "101-194"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1076-AE50",
+   "pub": "200404",
+   "boxes": [
+    "42 USC 2000e(b)",
+    "42 USCe(2)(i)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2000e",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2000e",
+     "usc_title": 42
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2126-AA01",
+   "pub": "200410",
+   "boxes": [
+    "102 Stat. 4527",
+    "4530 (1988)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 4527,
+     "statute_volume": 102
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "statute_at_large",
+     "statute_page": 4527,
+     "statute_volume": 102
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3064-AC90",
+   "pub": "200510",
+   "boxes": [
+    "12 USC 1813(1)",
+    "1813 (m)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1813",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1813",
+     "usc_title": 12
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2120-AI56",
+   "pub": "200604",
+   "boxes": [
+    "49 USC 70101",
+    "70101"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "70101",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "70101",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3064-AC90",
+   "pub": "200604",
+   "boxes": [
+    "12 USC 1813(1)",
+    "1813 (m)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1813",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1813",
+     "usc_title": 12
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1902-AD05",
+   "pub": "200604",
+   "boxes": [
+    "Pub. L. No. 109-58,",
+    "1261 et. seq."
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-58"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-58"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2120-AI91",
+   "pub": "200704",
+   "boxes": [
+    "49 USC 44703",
+    "subpart III"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44703",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44703",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1545-BG31",
+   "pub": "200704",
+   "boxes": [
+    "PL 109-208, 120 Stat.",
+    "780 (2006) sec 1241(d)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-208"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1241(d)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-208"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1545-BG31",
+   "pub": "200710",
+   "boxes": [
+    "PL 109-208, 120 Stat",
+    "780 (2006) sec 1241(d)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-208"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1241(d)"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-208"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2120-AI91",
+   "pub": "200804",
+   "boxes": [
+    "49 USC 44703",
+    "subpart III"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44703",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "44703",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0960-AG73",
+   "pub": "200810",
+   "boxes": [
+    "42 USC 902(a)(5)",
+    "42 USCC 1382"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "902",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "902",
+     "usc_title": 42
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1024-AD74",
+   "pub": "200904",
+   "boxes": [
+    "16 USC 462(k)",
+    "sec 7.96"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "462",
+     "usc_title": 16
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "7.96"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "462",
+     "usc_title": 16
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "200904",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1513-AB05",
+   "pub": "200904",
+   "boxes": [
+    "26 USC 5021 to 5056",
+    "26 USCU.S.C. 5061 to 5064"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "5021",
+     "usc_section_end": "5056",
+     "usc_section_span_rule": "stated",
+     "usc_title": 26
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "5021",
+     "usc_section_end": "5056",
+     "usc_section_span_rule": "stated",
+     "usc_title": 26
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3133-AD54",
+   "pub": "200904",
+   "boxes": [
+    "12 USC 1789",
+    "title V"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1789",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1789",
+     "usc_title": 12
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3245-AF88",
+   "pub": "200904",
+   "boxes": [
+    "15 USC 636(b)",
+    "636(c)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "636",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "636",
+     "usc_title": 15
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0960-AG73",
+   "pub": "200904",
+   "boxes": [
+    "42 USC 902(a)(5)",
+    "42 USCC 1382"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "902",
+     "usc_title": 42
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "902",
+     "usc_title": 42
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0694-AC23",
+   "pub": "200910",
+   "boxes": [
+    "EO 13222",
+    "22 USG 3201 et seq"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "13222"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "13222"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AP73",
+   "pub": "200910",
+   "boxes": [
+    "PL 111-5",
+    "sec 5008 (a) of the Recovery Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "Recovery Act",
+     "stated_section": "5008"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "200910",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2105-AD87",
+   "pub": "200910",
+   "boxes": [
+    "The Department has authority and responsibility under the ACAA (49 USC 41705) to",
+    "ensure that US and foreign air carriers do not discriminate against air traveler"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "41705",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "41705",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2130-AC01",
+   "pub": "200910",
+   "boxes": [
+    "28 USC 2461",
+    "note"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3133-AD54",
+   "pub": "200910",
+   "boxes": [
+    "12 USC 1789",
+    "title V"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1789",
+     "usc_title": 12
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1789",
+     "usc_title": 12
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA82",
+   "pub": "201004",
+   "boxes": [
+    "P L 109-148",
+    "sec 31F-3 and 319F-4 of PHS Act as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "31F-3"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AP73",
+   "pub": "201004",
+   "boxes": [
+    "PL 111-5",
+    "sec 5008 (a) of the Recovery Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "Recovery Act",
+     "stated_section": "5008"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "201004",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2127-AK60",
+   "pub": "201004",
+   "boxes": [
+    "49 USC 30166",
+    "delegation of authority 49"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "30166",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "30166",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2130-AC01",
+   "pub": "201004",
+   "boxes": [
+    "28 USC 2461",
+    "note"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0583-AD43",
+   "pub": "201010",
+   "boxes": [
+    "21 U.S.C. 601 (n)(1), 453(h)(1),601(n)(2), and",
+    "453(h)(3), 601(n)(8)(A) and 453(n)(8)(A),",
+    "21 U.S.C. 621 and 463(b)"
+   ],
+   "signals": [
+    "L2-open-punctuation",
+    "R5-opens-with-digit-no-scheme",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "601",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "453",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "other"
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "621",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "463",
+     "usc_title": 21
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "601",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "621",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "453",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "463",
+     "usc_title": 21
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA89",
+   "pub": "201010",
+   "boxes": [
+    "PL 111-148 amending subsec.(d)",
+    "sec 340B PHS Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "340B"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA82",
+   "pub": "201010",
+   "boxes": [
+    "P L 109-148",
+    "sec 31F-3 and 319F-4 of PHS Act as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "31F-3"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0917-AA09",
+   "pub": "201010",
+   "boxes": [
+    "amended by PL 111-148",
+    "sec 10221, PPAC Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PPAC Act",
+     "stated_section": "10221"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AQ00",
+   "pub": "201010",
+   "boxes": [
+    "MMA 2003, MIPPA (title XVIII of the Social Security Act),",
+    "PL 111-148"
+   ],
+   "signals": [
+    "L2-open-punctuation",
+    "left"
+   ],
+   "old": [
+    {
+     "authority_type": "other",
+     "stated_act_name": "Social Security Act"
+    },
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AP73",
+   "pub": "201010",
+   "boxes": [
+    "PL 111-5",
+    "sec 5008 (a) of the Recovery Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "Recovery Act",
+     "stated_section": "5008"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-5"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1625-AB49",
+   "pub": "201010",
+   "boxes": [
+    "33 USC 1321(m)(2)",
+    "sec 2",
+    "EO 12777, 56 FR 54757"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1321",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12777"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 54757,
+     "fr_volume": 56
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1321",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12777"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 54757,
+     "fr_volume": 56
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "201010",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2105-AE00",
+   "pub": "201010",
+   "boxes": [
+    "49 USC 329",
+    "ch 401"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "329",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "329",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2130-AC01",
+   "pub": "201010",
+   "boxes": [
+    "28 USC 2461",
+    "note"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "3245-AG14",
+   "pub": "201010",
+   "boxes": [
+    "15 USC 687(b)",
+    "687(c)"
+   ],
+   "signals": [
+    "R4-whole-box-is-a-bare-section",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "687",
+     "usc_title": 15
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "687",
+     "usc_title": 15
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0583-AD43",
+   "pub": "201104",
+   "boxes": [
+    "21 USC 601 (n)(1), 453(h)(1),601(n)(2), and",
+    "453(h)(3), 601(n)(8)(A) and 453(n)(8)(A)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "601",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "453",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "601",
+     "usc_title": 21
+    },
+    {
+     "authority_type": "usc",
+     "usc_section": "453",
+     "usc_title": 21
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA82",
+   "pub": "201104",
+   "boxes": [
+    "PL 109-148",
+    "sec 31F-3 and 319F-4 of PHS Act as amended"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "31F-3"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA89",
+   "pub": "201104",
+   "boxes": [
+    "PL 111-148 amending subsec.(d)",
+    "sec 340B PHS Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "340B"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1625-AB49",
+   "pub": "201104",
+   "boxes": [
+    "33 USC 1321(m)(2)",
+    "sec 2",
+    "EO 12777, 56 FR 54757"
+   ],
+   "signals": [
+    "L4-whole-box-is-a-bare-section",
+    "R2-opens-lowercase-no-scheme",
+    "R4-whole-box-is-a-bare-section",
+    "left",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1321",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "2"
+    },
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12777"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 54757,
+     "fr_volume": 56
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "1321",
+     "usc_title": 33
+    },
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12777"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 54757,
+     "fr_volume": 56
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "201104",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2130-AC01",
+   "pub": "201104",
+   "boxes": [
+    "28 USC 2461",
+    "note"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "2461",
+     "usc_title": 28
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA89",
+   "pub": "201110",
+   "boxes": [
+    "PL 111-148 amending subsec.(d)",
+    "sec 340B PHS Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "340B"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AR04",
+   "pub": "201110",
+   "boxes": [
+    "PL 111-48",
+    "secs 1413, 2001, 2002, 2201"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-48"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1413"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-48"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "201110",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "2130-AC28",
+   "pub": "201110",
+   "boxes": [
+    "49 USC 20142",
+    "sec 403, Div A"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "usc",
+     "usc_section": "20142",
+     "usc_title": 49
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "403"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "usc",
+     "usc_section": "20142",
+     "usc_title": 49
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA79",
+   "pub": "201210",
+   "boxes": [
+    "PL 109-148",
+    "sec 31F-3 and 319F-4 of the PHS Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "31F-3"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "109-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0906-AA89",
+   "pub": "201210",
+   "boxes": [
+    "PL 111-148 amending subsec(d)",
+    "sec 340B PHS Act"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    },
+    {
+     "authority_type": "other",
+     "stated_act_name": "PHS Act",
+     "stated_section": "340B"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-148"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "0938-AR04",
+   "pub": "201210",
+   "boxes": [
+    "PL 111-48",
+    "secs 1413, 2001, 2002, 2201"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-48"
+    },
+    {
+     "authority_type": "other",
+     "stated_section": "1413"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-48"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1625-AB85",
+   "pub": "201210",
+   "boxes": [
+    "PL 111-281",
+    "title VI (Marine Safety)"
+   ],
+   "signals": [
+    "R2-opens-lowercase-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-281"
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "public_law",
+     "public_law": "111-281"
+    }
+   ],
+   "kind": "NEUTRAL"
+  },
+  {
+   "rin": "1190-AA60",
+   "pub": "201210",
+   "boxes": [
+    "EO 12250 (45 FR 72955",
+    "11/04/1980)"
+   ],
+   "signals": [
+    "R5-opens-with-digit-no-scheme",
+    "right"
+   ],
+   "old": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    },
+    {
+     "authority_type": "other"
+    }
+   ],
+   "new": [
+    {
+     "authority_type": "executive_order",
+     "executive_order": "12250"
+    },
+    {
+     "authority_type": "federal_register",
+     "fr_page": 72955,
+     "fr_volume": 45
+    }
+   ],
+   "kind": "NEUTRAL"
+  }
+ ]
+}

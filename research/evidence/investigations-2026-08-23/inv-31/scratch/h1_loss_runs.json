@@ -1,0 +1,9874 @@
+[
+ {
+  "rin": "2060-AG23",
+  "pub": "199510",
+  "first_ordinal": 4,
+  "boxes": [
+   "42 USC 7619",
+   "1857G(a) Sec. 15(c)(2)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "7619",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "15(c)(2)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "7619",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1857g",
+    "usc_title": 42
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "7619",
+    "usc_title": 42,
+    "stated_section": "15(c)(2)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1857g",
+    "usc_title": 42,
+    "stated_section": "15(c)(2)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "7619",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB15",
+  "pub": "200010",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "sections 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "2126-AA63",
+  "pub": "200010",
+  "first_ordinal": 0,
+  "boxes": [
+   "sec.206",
+   "PL 106-159"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "206"
+   },
+   {
+    "authority_type": "public_law",
+    "public_law": "106-159"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "106-159"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "106-159",
+    "stated_section": "206"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "106-159"
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB15",
+  "pub": "200104",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB18",
+  "pub": "200104",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "0579-AB19",
+  "pub": "200110",
+  "first_ordinal": 7,
+  "boxes": [
+   "113 Stat. 1501A-293",
+   "sec 301.75-15 and 301.75.16 also issued under sec 203"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "301.75-15"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113,
+    "stated_section": "301.75-15"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB15",
+  "pub": "200110",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB18",
+  "pub": "200110",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "0579-AB19",
+  "pub": "200204",
+  "first_ordinal": 7,
+  "boxes": [
+   "113 Stat. 1501A-293",
+   "sec 301.75-15 and 301.75.16 also issued under sec 203"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "301.75-15"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113,
+    "stated_section": "301.75-15"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB18",
+  "pub": "200204",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB15",
+  "pub": "200204",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "0579-AB19",
+  "pub": "200210",
+  "first_ordinal": 7,
+  "boxes": [
+   "113 Stat 1501A-293",
+   "sec 301.75-15 and 301.75.16 also issued under sec 203"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "301.75-15"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113,
+    "stated_section": "301.75-15"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB18",
+  "pub": "200210",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "0579-AB19",
+  "pub": "200304",
+  "first_ordinal": 7,
+  "boxes": [
+   "113 Stat 1501A-293",
+   "sec 301.75-15 and 301.75.16 also issued under sec 203"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "301.75-15"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113,
+    "stated_section": "301.75-15"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ]
+ },
+ {
+  "rin": "1125-AA42",
+  "pub": "200304",
+  "first_ordinal": 58,
+  "boxes": [
+   "3 CFR, 1949 to 1953 Comp, p 1002",
+   "1953 Supp Interpret or apply sec 215"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_page": "1002",
+    "eo_compilation_start": "1949"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "215"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_page": "1002",
+    "eo_compilation_start": "1949"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_page": "1002",
+    "eo_compilation_start": "1949",
+    "stated_section": "215"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_page": "1002",
+    "eo_compilation_start": "1949"
+   }
+  ]
+ },
+ {
+  "rin": "1400-AB18",
+  "pub": "200304",
+  "first_ordinal": 0,
+  "boxes": [
+   "22 USC 2778",
+   "secs 1243 and 1245 of the Defense Offsets"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1243"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22,
+    "stated_section": "1243"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1245",
+    "usc_title": 22,
+    "stated_section": "1243"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2778",
+    "usc_title": 22
+   }
+  ]
+ },
+ {
+  "rin": "0579-AB19",
+  "pub": "200310",
+  "first_ordinal": 2,
+  "boxes": [
+   "113 Stat 1501A-293",
+   "sec 301.75-15 and 301.75.16 also issued under sec 203"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "301.75-15"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113,
+    "stated_section": "301.75-15"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page_text": "1501A-293",
+    "statute_volume": 113
+   }
+  ]
+ },
+ {
+  "rin": "1545-BG31",
+  "pub": "200704",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-208, 120 Stat.",
+   "780 (2006) sec 1241(d)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1241(d)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208",
+    "stated_section": "1241(d)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   }
+  ]
+ },
+ {
+  "rin": "1545-BG31",
+  "pub": "200710",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-208, 120 Stat",
+   "780 (2006) sec 1241(d)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1241(d)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208",
+    "stated_section": "1241(d)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-208"
+   }
+  ]
+ },
+ {
+  "rin": "3206-AL40",
+  "pub": "200710",
+  "first_ordinal": 0,
+  "boxes": [
+   "5 USC 1103",
+   "secs 7, 9"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "7"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "9",
+    "usc_title": 5
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5,
+    "stated_section": "7"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "9",
+    "usc_title": 5,
+    "stated_section": "7"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   }
+  ]
+ },
+ {
+  "rin": "3206-AL40",
+  "pub": "200804",
+  "first_ordinal": 0,
+  "boxes": [
+   "5 USC 1103",
+   "secs 7, 9"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "7"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "9",
+    "usc_title": 5
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5,
+    "stated_section": "7"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "9",
+    "usc_title": 5,
+    "stated_section": "7"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1103",
+    "usc_title": 5
+   }
+  ]
+ },
+ {
+  "rin": "0420-AA23",
+  "pub": "200804",
+  "first_ordinal": 3,
+  "boxes": [
+   "EO 11041, as amended, 3 CFR 1959 to 1963 Comp",
+   "sec 2(6) State Department Delegation of Authority No. 85-11A, as amended"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "executive_order",
+    "executive_order": "11041"
+   },
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_start": "1959"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "2(6)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "executive_order",
+    "executive_order": "11041"
+   },
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_start": "1959"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "executive_order",
+    "executive_order": "11041",
+    "stated_section": "2(6)"
+   },
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_start": "1959",
+    "stated_section": "2(6)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "executive_order",
+    "executive_order": "11041"
+   },
+   {
+    "authority_type": "eo_compilation",
+    "eo_compilation_start": "1959"
+   }
+  ]
+ },
+ {
+  "rin": "1024-AD74",
+  "pub": "200904",
+  "first_ordinal": 4,
+  "boxes": [
+   "16 USC 462(k)",
+   "sec 7.96"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "462",
+    "usc_title": 16
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "7.96"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "462",
+    "usc_title": 16
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "462",
+    "usc_title": 16,
+    "stated_section": "7.96"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "462",
+    "usc_title": 16
+   }
+  ]
+ },
+ {
+  "rin": "0910-AG32",
+  "pub": "200910",
+  "first_ordinal": 2,
+  "boxes": [
+   "21 USC 371(a)",
+   "secs 505(i), 520(g), and 701(a), FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   }
+  ]
+ },
+ {
+  "rin": "0938-AP73",
+  "pub": "200910",
+  "first_ordinal": 2,
+  "boxes": [
+   "PL 111-5",
+   "sec 5008 (a) of the Recovery Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA82",
+  "pub": "201004",
+  "first_ordinal": 0,
+  "boxes": [
+   "P L 109-148",
+   "sec 31F-3 and 319F-4 of PHS Act as amended"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0910-AG32",
+  "pub": "201004",
+  "first_ordinal": 2,
+  "boxes": [
+   "21 USC 371(a)",
+   "secs 505(i), 520(g), and 701(a), FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   }
+  ]
+ },
+ {
+  "rin": "0938-AP73",
+  "pub": "201004",
+  "first_ordinal": 2,
+  "boxes": [
+   "PL 111-5",
+   "sec 5008 (a) of the Recovery Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201010",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec.(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA82",
+  "pub": "201010",
+  "first_ordinal": 0,
+  "boxes": [
+   "P L 109-148",
+   "sec 31F-3 and 319F-4 of PHS Act as amended"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0910-AG32",
+  "pub": "201010",
+  "first_ordinal": 2,
+  "boxes": [
+   "21 USC 371(a)",
+   "secs 505(i), 520(g), and 701(a), FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   }
+  ]
+ },
+ {
+  "rin": "0917-AA09",
+  "pub": "201010",
+  "first_ordinal": 1,
+  "boxes": [
+   "amended by PL 111-148",
+   "sec 10221, PPAC Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PPAC Act",
+    "stated_section": "10221"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PPAC Act",
+    "stated_section": "10221"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AQ00",
+  "pub": "201010",
+  "first_ordinal": 0,
+  "boxes": [
+   "MMA 2003, MIPPA (title XVIII of the Social Security Act),",
+   "PL 111-148"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L2-open-punctuation"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_act_name": "Social Security Act"
+   },
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "Social Security Act"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AP73",
+  "pub": "201010",
+  "first_ordinal": 2,
+  "boxes": [
+   "PL 111-5",
+   "sec 5008 (a) of the Recovery Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5",
+    "stated_act_name": "Recovery Act",
+    "stated_section": "5008"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-5"
+   }
+  ]
+ },
+ {
+  "rin": "1625-AB49",
+  "pub": "201010",
+  "first_ordinal": 4,
+  "boxes": [
+   "33 USC 1321(m)(2)",
+   "sec 2"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "2"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33,
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA82",
+  "pub": "201104",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148",
+   "sec 31F-3 and 319F-4 of PHS Act as amended"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201104",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec.(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0910-AG32",
+  "pub": "201104",
+  "first_ordinal": 2,
+  "boxes": [
+   "21 USC 371(a)",
+   "secs 505(i), 520(g), and 701(a), FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "520",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "701",
+    "usc_title": 21,
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(i)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "371",
+    "usc_title": 21
+   }
+  ]
+ },
+ {
+  "rin": "1625-AB49",
+  "pub": "201104",
+  "first_ordinal": 4,
+  "boxes": [
+   "33 USC 1321(m)(2)",
+   "sec 2"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "2"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33,
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1321",
+    "usc_title": 33
+   }
+  ]
+ },
+ {
+  "rin": "3038-AD09",
+  "pub": "201104",
+  "first_ordinal": 2,
+  "boxes": [
+   "sec 8a(5) of the CEA (7 USC 12a(5))",
+   "as amended by Title VII of the Dodd-Frank Wall Street Reform and Consumer Protection Act,"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_section": "8a(5)",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Title VII of the Dodd-Frank Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7,
+    "stated_act_name": "Title VII of the Dodd-Frank Wall Street Reform and Consumer Protection Act",
+    "stated_section": "8a(5)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_section": "8a(5)",
+    "usc_section": "12a",
+    "usc_title": 7
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201110",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec.(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AR04",
+  "pub": "201110",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 111-48",
+   "secs 1413, 2001, 2002, 2201"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1413"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48",
+    "stated_section": "1413"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC28",
+  "pub": "201110",
+  "first_ordinal": 3,
+  "boxes": [
+   "49 USC 20142",
+   "sec 403, Div A"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "403"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49,
+    "stated_section": "403"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201210",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201210",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AR04",
+  "pub": "201210",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 111-48",
+   "secs 1413, 2001, 2002, 2201"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1413"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48",
+    "stated_section": "1413"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC28",
+  "pub": "201210",
+  "first_ordinal": 3,
+  "boxes": [
+   "49 USC 20142",
+   "sec 403, Div A"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "403"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49,
+    "stated_section": "403"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "3090-AJ28",
+  "pub": "201210",
+  "first_ordinal": 5,
+  "boxes": [
+   "63 Stat 390",
+   "sec 205(c)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201304",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148,",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201304",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AR55",
+  "pub": "201304",
+  "first_ordinal": 0,
+  "boxes": [
+   "MIPPA sec 153 (b",
+   "PL 111-148 sec 3401(h)"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L3-unbalanced-paren"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "153"
+   },
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_section": "3401(h)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_section": "153"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_section": "3401(h)"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AR04",
+  "pub": "201304",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 111-48",
+   "secs 1413, 2001, 2002, 2201"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1413"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48",
+    "stated_section": "1413"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AP51",
+  "pub": "201304",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 1302",
+   "sec 1861"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1861"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42,
+    "stated_section": "1861"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "1210-AB41",
+  "pub": "201304",
+  "first_ordinal": 0,
+  "boxes": [
+   "29 USC 1027, 1059, 1135, 1161-1168, 1169, 1181-1183, 1181 note, 1185, 1185a, 1185b, 1191, 1191a, 1191b, and 1191c",
+   "sec 101(g)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1027",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1059",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1135",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1161",
+    "usc_section_end": "1168",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1169",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_section_end": "1183",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191c",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "101(g)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1027",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1059",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1135",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1161",
+    "usc_section_end": "1168",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1169",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_section_end": "1183",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191c",
+    "usc_title": 29
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1027",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1059",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1135",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1161",
+    "usc_section_end": "1168",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1169",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_section_end": "1183",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185a",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185b",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191a",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191b",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191c",
+    "usc_title": 29,
+    "stated_section": "101(g)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1027",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1059",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1135",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1161",
+    "usc_section_end": "1168",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1169",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_section_end": "1183",
+    "usc_section_span_rule": "stated",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1181",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1185b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191a",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191b",
+    "usc_title": 29
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1191c",
+    "usc_title": 29
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC28",
+  "pub": "201304",
+  "first_ordinal": 3,
+  "boxes": [
+   "49 USC 20142",
+   "sec 403, Div A"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "403"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49,
+    "stated_section": "403"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201304",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 USC ch 531",
+   "sec 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "3090-AJ28",
+  "pub": "201304",
+  "first_ordinal": 5,
+  "boxes": [
+   "63 Stat 390",
+   "sec 205(c)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201310",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201310",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec (d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0938-AP51",
+  "pub": "201310",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 1302",
+   "sec 1861"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1861"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42,
+    "stated_section": "1861"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1302",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0938-AR04",
+  "pub": "201310",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 111-48",
+   "secs 1413, 2001, 2002 and 2201"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1413"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48",
+    "stated_section": "1413"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-48"
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC28",
+  "pub": "201310",
+  "first_ordinal": 3,
+  "boxes": [
+   "49 USC 20142",
+   "sec 403, Div A"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "403"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49,
+    "stated_section": "403"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201310",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 USC ch 531",
+   "sec 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201404",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201404",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB00",
+  "pub": "201404",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201404",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC28",
+  "pub": "201404",
+  "first_ordinal": 3,
+  "boxes": [
+   "49 USC 20142",
+   "sec 403, div. A"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "403"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49,
+    "stated_section": "403"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "20142",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201404",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 USC Chapter 531",
+   "sec 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201410",
+  "first_ordinal": 1,
+  "boxes": [
+   "PL 111-148 amending subsec(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201410",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201410",
+  "first_ordinal": 0,
+  "boxes": [
+   "PL 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB00",
+  "pub": "201410",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 USC 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201410",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 USC Chapter 531",
+   "sec 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "3090-AJ49",
+  "pub": "201410",
+  "first_ordinal": 0,
+  "boxes": [
+   "sec 205(c)",
+   "63 Stat 390 (40 USC 486(c))",
+   "sec 515"
+  ],
+  "silent": [
+   true,
+   false,
+   true
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section",
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "486",
+    "usc_title": 40
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "515"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "486",
+    "usc_title": 40
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "486",
+    "usc_title": 40,
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "486",
+    "usc_title": 40
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201504",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 111-148 amending subsec(d)",
+   "sec 340B PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201504",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201504",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB00",
+  "pub": "201504",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201504",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch. 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "0703-AA90",
+  "pub": "201510",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 108-375",
+   "title XIV, sections 1401-1408"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "108-375"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1401-1408"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "108-375"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "108-375",
+    "stated_section": "1401-1408"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "108-375"
+   }
+  ]
+ },
+ {
+  "rin": "0790-AJ29",
+  "pub": "201510",
+  "first_ordinal": 3,
+  "boxes": [
+   "44 U.S.C. 3544",
+   "and sec 941"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R3-opens-with-connective",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "941"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44,
+    "stated_section": "941"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201510",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201510",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 111-148, amending subsec(d)",
+   "sec 340B of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340B"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA79",
+  "pub": "201510",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 109-148",
+   "sec 31F-3 and 319F-4 of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB00",
+  "pub": "201510",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2126-AB11",
+  "pub": "201510",
+  "first_ordinal": 0,
+  "boxes": [
+   "49 U.S.C. 31144",
+   "sec 4009 of TEA-21"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "4009"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49,
+    "stated_section": "4009"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201510",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch 531",
+   "sec 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "1545-BM81",
+  "pub": "201510",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 93-406",
+   ",sec 3041"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R1-opens-with-close-or-comma",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "93-406"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "3041"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "93-406"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "93-406",
+    "stated_section": "3041"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "93-406"
+   }
+  ]
+ },
+ {
+  "rin": "0790-AJ29",
+  "pub": "201604",
+  "first_ordinal": 3,
+  "boxes": [
+   "44 U.S.C. 3544",
+   "and sec 941"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R3-opens-with-connective",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "941"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44,
+    "stated_section": "941"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3544",
+    "usc_title": 44
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201604",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 111-148, amending subsec(d)",
+   "sec 340(B) of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201604",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0910-AA49",
+  "pub": "201604",
+  "first_ordinal": 11,
+  "boxes": [
+   "42 U.S.C. 271",
+   "and sec 122"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R3-opens-with-connective",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "122"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42,
+    "stated_section": "122"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2126-AB11",
+  "pub": "201604",
+  "first_ordinal": 0,
+  "boxes": [
+   "49 U.S.C. 31144",
+   "sec. 4009 of TEA-21"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "4009"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49,
+    "stated_section": "4009"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2130-AC59",
+  "pub": "201604",
+  "first_ordinal": 6,
+  "boxes": [
+   "Pub. L. 114-74",
+   "sec 701 (Nov. 2, 2015)"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-74"
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "701"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-74"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-74",
+    "stated_section": "701"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-74"
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201604",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "3038-AE30",
+  "pub": "201604",
+  "first_ordinal": 6,
+  "boxes": [
+   "7 U.S.C. 1a and 2, 7 U.S.C. 5, 7 U.S.C. 6, 7 U.S.C. 6c, 7 U.S.C. 7, 7 U.S.C. 7a-2, 7 U.S.C. 7b-3, and 7 U.S.C. 12a",
+   "as amended by titles VII and VIII of the Dodd Frank Wall Street Reform and Consumer Protection Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   }
+  ]
+ },
+ {
+  "rin": "3038-AE30",
+  "pub": "201604",
+  "first_ordinal": 9,
+  "boxes": [
+   "and 7 U.S.C. 12a and 24a",
+   "as amended by title VII of the Wall Street Reform and Consumer Protection Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7,
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7,
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201610",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 111-148, amending subsec(d)",
+   "sec 340(B) of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201610",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "0910-AA49",
+  "pub": "201610",
+  "first_ordinal": 11,
+  "boxes": [
+   "42 U.S.C. 271",
+   "and sec 122"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R3-opens-with-connective",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "122"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42,
+    "stated_section": "122"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "271",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201610",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch. 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "3038-AE30",
+  "pub": "201610",
+  "first_ordinal": 6,
+  "boxes": [
+   "7 U.S.C. 1a and 2, 7 U.S.C. 5, 7 U.S.C. 6, 7 U.S.C. 6c, 7 U.S.C. 7, 7 U.S.C. 7a-2, 7 U.S.C. 7b-3, and 7 U.S.C. 12a",
+   "as amended by titles VII and VIII of the Dodd Frank Wall Street Reform and Consumer Protection Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7,
+    "stated_act_name": "Dodd Frank Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "6c",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7a-2",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "7b-3",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2",
+    "usc_title": 7
+   }
+  ]
+ },
+ {
+  "rin": "3038-AE30",
+  "pub": "201610",
+  "first_ordinal": 9,
+  "boxes": [
+   "and 7 U.S.C. 12a and 24a",
+   "as amended by title VII of the Wall Street Reform and Consumer Protection Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7,
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7,
+    "stated_act_name": "Wall Street Reform and Consumer Protection Act"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "12a",
+    "usc_title": 7
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "24a",
+    "usc_title": 7
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA82",
+  "pub": "201704",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 109-148",
+   "sec 31F-3 and 319F-4 of PHS Act as amended"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "31F-3"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "109-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AA89",
+  "pub": "201704",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 111-148, amending subsec(d)",
+   "sec. 340(B) of the PHS Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148",
+    "stated_act_name": "PHS Act",
+    "stated_section": "340(B)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "111-148"
+   }
+  ]
+ },
+ {
+  "rin": "0906-AB01",
+  "pub": "201704",
+  "first_ordinal": 1,
+  "boxes": [
+   "42 U.S.C. 300ea-14(e)(2)",
+   "sec 13632(a)(3) of the Family Preservation and Support Services Program Act of 1993"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42,
+    "stated_act_name": "Family Preservation and Support Services Program Act of 1993",
+    "stated_section": "13632(a)(3)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "300",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2126-AB11",
+  "pub": "201704",
+  "first_ordinal": 0,
+  "boxes": [
+   "49 U.S.C. 31144",
+   "sec. 4009 of TEA-21"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "4009"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49,
+    "stated_section": "4009"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "31144",
+    "usc_title": 49
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201704",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201710",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. ch. 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc_chapter",
+    "usc_chapter": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "0945-AA10",
+  "pub": "201804",
+  "first_ordinal": 5,
+  "boxes": [
+   "42 U.S.C. 238n",
+   "secs. 1553, 280g-1(d), 290bb-36(f),1320a-1, 1320c-11, 1395cc(f), 1395i-5, 1395w-22(j)(3)(B), 1395x(e), 1395x(y)(1)",
+   "1396a(a), 1396a(w)(3), 1396f, 1396s(c)(2)(B)(ii), 1396u-2(b)(3)(B), 1397j-1(b), 1553, 5106i(a)",
+   "18113s, 18023(c)(2)(A)(i)-(iii),18023(b)(1)(A), 18023(b)(4), 18113"
+  ],
+  "silent": [
+   false,
+   true,
+   true,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "other"
+   },
+   {
+    "authority_type": "other"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "280g-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "290bb-36",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320a-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320c-11",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395cc",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395i-5",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395w-22",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395x",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396a",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396f",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396s",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396u-2",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1397j-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1553",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5106i",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113s",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18023",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113",
+    "usc_title": 42
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "280g-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "290bb-36",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320a-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320c-11",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395cc",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395i-5",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395w-22",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395x",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396a",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396f",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396s",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396u-2",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1397j-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1553",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5106i",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113s",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18023",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113",
+    "usc_title": 42,
+    "stated_section": "1553"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2133-AB85",
+  "pub": "201804",
+  "first_ordinal": 0,
+  "boxes": [
+   "46 U.S.C. 531",
+   "sec. 3508 of the National Defense Authorization Act of 2013"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "531",
+    "usc_title": 46
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "531",
+    "usc_title": 46
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "531",
+    "usc_title": 46,
+    "stated_act_name": "National Defense Authorization Act of 2013",
+    "stated_section": "3508"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "531",
+    "usc_title": 46
+   }
+  ]
+ },
+ {
+  "rin": "0945-AA10",
+  "pub": "201810",
+  "first_ordinal": 5,
+  "boxes": [
+   "42 U.S.C. 238n",
+   "secs. 1553, 280g-1(d), 290bb-36(f), 1320a-1, 1320c-11, 1395cc(f), 1395i-5, 1395w-22(j)(3)(B), 1395x(e), 1395x(y)(1)",
+   "1396a(a), 1396a(w)(3), 1396f, 1396s(c)(2)(B)(ii), 1396u-2(b)(3)(B), 1397j-1(b), 1553, 5106i(a)",
+   "18113s, 18023(c)(2)(A)(i)-(iii),18023(b)(1)(A), 18023(b)(4), 18113"
+  ],
+  "silent": [
+   false,
+   true,
+   true,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "other"
+   },
+   {
+    "authority_type": "other"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "280g-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "290bb-36",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320a-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320c-11",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395cc",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395i-5",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395w-22",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395x",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396a",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396f",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396s",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396u-2",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1397j-1",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1553",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5106i",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113s",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18023",
+    "usc_title": 42
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113",
+    "usc_title": 42
+   }
+  ],
+  "kind": "GAIN",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "280g-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "290bb-36",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320a-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1320c-11",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395cc",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395i-5",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395w-22",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1395x",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396a",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396f",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396s",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1396u-2",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1397j-1",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1553",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "5106i",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113s",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18023",
+    "usc_title": 42,
+    "stated_section": "1553"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "18113",
+    "usc_title": 42,
+    "stated_section": "1553"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "238n",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "1090-AB22",
+  "pub": "201810",
+  "first_ordinal": 0,
+  "boxes": [
+   "Sec. 205(c)",
+   "63 Stat. 390"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "1090-AB22",
+  "pub": "201904",
+  "first_ordinal": 0,
+  "boxes": [
+   "Sec. 205(c)",
+   "63 Stat. 390"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "3038-AE82",
+  "pub": "201904",
+  "first_ordinal": 6,
+  "boxes": [
+   "31 U.S.C.",
+   "3701 to 3719"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R5-opens-with-digit-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_title": 31
+   },
+   {
+    "authority_type": "other"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3701",
+    "usc_section_end": "3719",
+    "usc_section_span_rule": "stated",
+    "usc_title": 31
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "3701",
+    "usc_section_end": "3719",
+    "usc_section_span_rule": "stated",
+    "usc_title": 31
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_title": 31
+   }
+  ]
+ },
+ {
+  "rin": "1090-AB22",
+  "pub": "201910",
+  "first_ordinal": 0,
+  "boxes": [
+   "sec. 205(c)",
+   "63 Stat. 390"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "1651-AB38",
+  "pub": "202004",
+  "first_ordinal": 0,
+  "boxes": [
+   "sec. 101(a)(15)(l)",
+   "8 U.S.C. 1101(a)(15)(l) of the Immigration and Nationality Act of 1952 (INA)"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "101(a)(15)(l)"
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Immigration and Nationality Act of 1952",
+    "usc_section": "1101",
+    "usc_title": 8
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1101",
+    "usc_title": 8
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1101",
+    "usc_title": 8,
+    "stated_act_name": "Immigration and Nationality Act of 1952",
+    "stated_section": "101(a)(15)(l)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Immigration and Nationality Act of 1952",
+    "usc_section": "1101",
+    "usc_title": 8
+   }
+  ]
+ },
+ {
+  "rin": "1090-AB22",
+  "pub": "202004",
+  "first_ordinal": 0,
+  "boxes": [
+   "sec. 205(c)",
+   "63 Stat. 390"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "205(c)"
+   },
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63,
+    "stated_section": "205(c)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "statute_at_large",
+    "statute_page": 390,
+    "statute_volume": 63
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202204",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202204",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202210",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202210",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202304",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202304",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202310",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202310",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "0584-AE96",
+  "pub": "202404",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 117-328",
+   "sec. 13 and 13a of the Richard B Russell National School Lunch Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202404",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202404",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "0584-AE96",
+  "pub": "202410",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 117-328",
+   "sec. 13 and 13a of the Richard B Russell National School Lunch Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ]
+ },
+ {
+  "rin": "0910-AI29",
+  "pub": "202410",
+  "first_ordinal": 1,
+  "boxes": [
+   "Pub. L. 114-89 sec. 2 and subsection 156(i) as added by Pub. L. 114-89 sec. 2",
+   "secs. 505(x), 512(q), 572(k), and 573(c)(3) of the FD&C Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "505(x)"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89"
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_act_name": "FD&C Act",
+    "stated_section": "2"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "114-89",
+    "stated_section": "2"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202410",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "3060-AK41",
+  "pub": "202410",
+  "first_ordinal": 17,
+  "boxes": [
+   "47 U.S.C. 615(a)-1",
+   "section 1.429 of the Commission’s rules"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "usc_section": "615",
+    "usc_title": 47
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "1.429"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "615",
+    "usc_title": 47
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "615",
+    "usc_title": 47,
+    "stated_section": "1.429"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "615",
+    "usc_title": 47
+   }
+  ]
+ },
+ {
+  "rin": "0584-AF07",
+  "pub": "202504",
+  "first_ordinal": 0,
+  "boxes": [
+   "Pub. L. 117-328",
+   "secs. 13 and 13A of the Richard B Russell National School Lunch Act"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme"
+  ],
+  "old": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   },
+   {
+    "authority_type": "other",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328",
+    "stated_act_name": "Richard B Russell National School Lunch Act",
+    "stated_section": "13"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "public_law",
+    "public_law": "117-328"
+   }
+  ]
+ },
+ {
+  "rin": "3052-AD51",
+  "pub": "202504",
+  "first_ordinal": 3,
+  "boxes": [
+   "Credit Act (12 U.S.C. 2183, 2243, 2252, 2279aa-11, 2279bb-2, 2279bb-3, 2279bb-4, 2279bb-5, 2279bb-6, 2279-cc)",
+   "secs 514"
+  ],
+  "silent": [
+   false,
+   true
+  ],
+  "signals": [
+   "R2-opens-lowercase-no-scheme",
+   "R4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "other",
+    "stated_section": "514"
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "2183",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2243",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2252",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279aa-11",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-2",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-3",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-4",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-5",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279bb-6",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "2279",
+    "usc_title": 12,
+    "stated_act_name": "Credit Act",
+    "stated_section": "514"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2183",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2243",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2252",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279aa-11",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-2",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-3",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-4",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-5",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279bb-6",
+    "usc_title": 12
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Credit Act",
+    "usc_section": "2279",
+    "usc_title": 12
+   }
+  ]
+ },
+ {
+  "rin": "1205-AC31",
+  "pub": "202510",
+  "first_ordinal": 0,
+  "boxes": [
+   "Section 303(a)(12)",
+   "Social Security Act (42 U.S.C. § 503(a)(12))"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L4-whole-box-is-a-bare-section"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_section": "303(a)(12)"
+   },
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Social Security Act",
+    "usc_section": "503",
+    "usc_title": 42
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "503",
+    "usc_title": 42
+   }
+  ],
+  "kind": "LOSS",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "503",
+    "usc_title": 42,
+    "stated_act_name": "Social Security Act",
+    "stated_section": "303(a)(12)"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "stated_act_name": "Social Security Act",
+    "usc_section": "503",
+    "usc_title": 42
+   }
+  ]
+ },
+ {
+  "rin": "2040-AG52",
+  "pub": "202510",
+  "first_ordinal": 0,
+  "boxes": [
+   "secs. 301, 304, 306, 307, 308, 309, and 501 of the Clean Water Act (the Federal Water Pollution Control Act Amendments of 1972, as amended by the Clean Water Act of 1977",
+   "33 U.S.C. 1311, 1314, 1316, 1317, 1318, and 1361"
+  ],
+  "silent": [
+   true,
+   false
+  ],
+  "signals": [
+   "L3-unbalanced-paren"
+  ],
+  "old": [
+   {
+    "authority_type": "other",
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1311",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1314",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1316",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1317",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1318",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1361",
+    "usc_title": 33
+   }
+  ],
+  "new": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1311",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1314",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1316",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1317",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1318",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1361",
+    "usc_title": 33
+   }
+  ],
+  "kind": "NEUTRAL",
+  "new_with_stated": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1311",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1314",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1316",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1317",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1318",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1361",
+    "usc_title": 33,
+    "stated_act_name": "Federal Water Pollution Control Act Amendments of 1972",
+    "stated_section": "301"
+   }
+  ],
+  "lost": [
+   {
+    "authority_type": "usc",
+    "usc_section": "1311",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1314",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1316",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1317",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1318",
+    "usc_title": 33
+   },
+   {
+    "authority_type": "usc",
+    "usc_section": "1361",
+    "usc_title": 33
+   }
+  ]
+ }
+]

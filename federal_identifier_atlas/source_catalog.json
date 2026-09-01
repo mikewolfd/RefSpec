@@ -1,0 +1,852 @@
+{
+  "sources": {
+    "congress_api": {
+      "title": "Congress.gov API documentation",
+      "url": "https://api.congress.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_api_repo": {
+      "title": "Library of Congress Congress.gov API repository",
+      "url": "https://github.com/LibraryOfCongress/api.congress.gov",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_help_bills": {
+      "title": "Congress.gov: About Bills, Resolutions, and Laws",
+      "url": "https://www.congress.gov/help/legislative-glossary",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_help_amendments": {
+      "title": "Congress.gov: About Amendments",
+      "url": "https://www.congress.gov/help/amendments",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_help_nominations": {
+      "title": "Congress.gov: About Nominations",
+      "url": "https://www.congress.gov/help/nominations",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_help_treaties": {
+      "title": "Congress.gov: About Treaty Documents",
+      "url": "https://www.congress.gov/help/treaty-documents",
+      "authority": "official",
+      "notes": ""
+    },
+    "congress_help_votes": {
+      "title": "Congress.gov: Votes in the House and Senate",
+      "url": "https://www.congress.gov/help/votes-in-the-house-and-senate",
+      "authority": "official",
+      "notes": ""
+    },
+    "bioguide": {
+      "title": "Biographical Directory of the United States Congress",
+      "url": "https://bioguide.congress.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "crs_products": {
+      "title": "Congress.gov: CRS Products",
+      "url": "https://www.congress.gov/help/crs-products",
+      "authority": "official",
+      "notes": ""
+    },
+    "gao_reports": {
+      "title": "GAO reports and testimonies",
+      "url": "https://www.gao.gov/reports-testimonies",
+      "authority": "official",
+      "notes": ""
+    },
+    "gao_legal": {
+      "title": "GAO bid protest decisions",
+      "url": "https://www.gao.gov/legal/bid-protests",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_api": {
+      "title": "GovInfo API",
+      "url": "https://api.govinfo.gov/docs/",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_collections": {
+      "title": "GovInfo collections system-design documentation",
+      "url": "https://www.govinfo.gov/features/developer-hub",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_bills": {
+      "title": "GovInfo: Congressional Bills collection",
+      "url": "https://www.govinfo.gov/help/bills",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_laws": {
+      "title": "GovInfo: Public and Private Laws",
+      "url": "https://www.govinfo.gov/help/plaw",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_reports": {
+      "title": "GovInfo: Congressional Reports",
+      "url": "https://www.govinfo.gov/help/crpt",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_hearings": {
+      "title": "GovInfo: Congressional Hearings",
+      "url": "https://www.govinfo.gov/help/chrg",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_prints": {
+      "title": "GovInfo: Committee Prints",
+      "url": "https://www.govinfo.gov/help/cprt",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_docs": {
+      "title": "GovInfo: Congressional Documents",
+      "url": "https://www.govinfo.gov/help/cdoc",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_crec": {
+      "title": "GovInfo: Congressional Record",
+      "url": "https://www.govinfo.gov/help/crec",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_crecb": {
+      "title": "GovInfo: Congressional Record (Bound Edition)",
+      "url": "https://www.govinfo.gov/help/crecb",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_cri": {
+      "title": "GovInfo: Congressional Record Index",
+      "url": "https://www.govinfo.gov/help/cri",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_statute": {
+      "title": "GovInfo: Statutes at Large",
+      "url": "https://www.govinfo.gov/help/statute",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_uscode": {
+      "title": "GovInfo: United States Code",
+      "url": "https://www.govinfo.gov/help/uscode",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_cfr": {
+      "title": "GovInfo: Code of Federal Regulations",
+      "url": "https://www.govinfo.gov/help/cfr",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_fr": {
+      "title": "GovInfo: Federal Register",
+      "url": "https://www.govinfo.gov/help/fr",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_presdocs": {
+      "title": "GovInfo: Compilation of Presidential Documents",
+      "url": "https://www.govinfo.gov/help/cpd",
+      "authority": "official",
+      "notes": ""
+    },
+    "govinfo_uscourts": {
+      "title": "GovInfo: United States Courts Opinions",
+      "url": "https://www.govinfo.gov/help/uscourts",
+      "authority": "official",
+      "notes": ""
+    },
+    "uslm": {
+      "title": "United States Legislative Markup (USLM)",
+      "url": "https://www.govinfo.gov/features/uslm",
+      "authority": "official",
+      "notes": ""
+    },
+    "federalregister_api": {
+      "title": "FederalRegister.gov API documentation",
+      "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "authority": "official",
+      "notes": ""
+    },
+    "regulations_api": {
+      "title": "Regulations.gov API documentation",
+      "url": "https://open.gsa.gov/api/regulationsgov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "reginfo_rin": {
+      "title": "Reginfo.gov RIN data",
+      "url": "https://www.reginfo.gov/public/do/eAgendaMain",
+      "authority": "official",
+      "notes": ""
+    },
+    "omb_control": {
+      "title": "OMB information collection review",
+      "url": "https://www.reginfo.gov/public/do/PRAMain",
+      "authority": "official",
+      "notes": ""
+    },
+    "omb_memos": {
+      "title": "OMB memoranda",
+      "url": "https://www.whitehouse.gov/omb/information-for-agencies/memoranda/",
+      "authority": "official",
+      "notes": ""
+    },
+    "omb_circulars": {
+      "title": "OMB circulars",
+      "url": "https://www.whitehouse.gov/omb/information-for-agencies/circulars/",
+      "authority": "official",
+      "notes": ""
+    },
+    "sam_uei": {
+      "title": "SAM.gov: Unique Entity ID",
+      "url": "https://sam.gov/content/entity-registration",
+      "authority": "official",
+      "notes": ""
+    },
+    "cage": {
+      "title": "Defense Logistics Agency CAGE program",
+      "url": "https://cage.dla.mil/",
+      "authority": "official",
+      "notes": ""
+    },
+    "dodaac": {
+      "title": "Defense Logistics Agency DoDAAC/AAC information",
+      "url": "https://www.transactionservices.dla.mil/daasinq/",
+      "authority": "official",
+      "notes": ""
+    },
+    "far_piid": {
+      "title": "Federal Acquisition Regulation 4.16—Unique Procurement Instrument Identifiers",
+      "url": "https://www.acquisition.gov/far/subpart-4.16",
+      "authority": "official",
+      "notes": ""
+    },
+    "fain": {
+      "title": "Federal Award Identification Number guidance",
+      "url": "https://www.usaspending.gov/data-sources",
+      "authority": "official",
+      "notes": ""
+    },
+    "assistance_listing": {
+      "title": "SAM.gov Assistance Listings",
+      "url": "https://sam.gov/content/assistance-listings",
+      "authority": "official",
+      "notes": ""
+    },
+    "sam_opportunities": {
+      "title": "SAM.gov Contract Opportunities API",
+      "url": "https://open.gsa.gov/api/get-opportunities-public-api/",
+      "authority": "official",
+      "notes": ""
+    },
+    "grants_api": {
+      "title": "Grants.gov APIs",
+      "url": "https://www.grants.gov/web/grants/s2s/applicant-system-to-system.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "usaspending_api": {
+      "title": "USAspending API",
+      "url": "https://github.com/fedspendingtransparency/usaspending-api",
+      "authority": "official",
+      "notes": ""
+    },
+    "treasury_tas": {
+      "title": "Treasury Account Symbol data",
+      "url": "https://fiscal.treasury.gov/data-transparency/metadata/",
+      "authority": "official",
+      "notes": ""
+    },
+    "treasury_betc": {
+      "title": "Business Event Type Code data",
+      "url": "https://fiscal.treasury.gov/data-transparency/metadata/",
+      "authority": "official",
+      "notes": ""
+    },
+    "treasury_alc": {
+      "title": "Agency Location Code data",
+      "url": "https://fiscal.treasury.gov/data-transparency/metadata/",
+      "authority": "official",
+      "notes": ""
+    },
+    "fpds": {
+      "title": "FPDS/Contract data transition information",
+      "url": "https://sam.gov/content/contract-data",
+      "authority": "official",
+      "notes": ""
+    },
+    "ssa_ssn": {
+      "title": "Social Security Number format and invalid ranges",
+      "url": "https://www.ssa.gov/employer/randomization.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "irs_tin": {
+      "title": "IRS taxpayer identification numbers",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/taxpayer-identification-numbers-tin",
+      "authority": "official",
+      "notes": ""
+    },
+    "irs_itin": {
+      "title": "IRS ITIN information",
+      "url": "https://www.irs.gov/individuals/individual-taxpayer-identification-number",
+      "authority": "official",
+      "notes": ""
+    },
+    "irs_ptin": {
+      "title": "IRS PTIN information",
+      "url": "https://www.irs.gov/tax-professionals/ptin-requirements-for-tax-return-preparers",
+      "authority": "official",
+      "notes": ""
+    },
+    "cms_npi": {
+      "title": "CMS National Provider Identifier",
+      "url": "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
+      "authority": "official",
+      "notes": ""
+    },
+    "cms_mbi": {
+      "title": "CMS Medicare Beneficiary Identifier",
+      "url": "https://www.cms.gov/outreach-and-education/medicare-learning-network-mln/mlnproducts/downloads/mbi-format.pdf",
+      "authority": "official",
+      "notes": ""
+    },
+    "cms_clia": {
+      "title": "CMS CLIA laboratory search",
+      "url": "https://qcor.cms.gov/advanced_find_provider.jsp?which=4",
+      "authority": "official",
+      "notes": ""
+    },
+    "fda_ndc": {
+      "title": "FDA National Drug Code directory and format",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory",
+      "authority": "official",
+      "notes": ""
+    },
+    "fda_applications": {
+      "title": "FDA Drugs@FDA application data",
+      "url": "https://www.accessdata.fda.gov/scripts/cder/daf/",
+      "authority": "official",
+      "notes": ""
+    },
+    "fda_devices": {
+      "title": "FDA medical device databases",
+      "url": "https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/medical-device-databases",
+      "authority": "official",
+      "notes": ""
+    },
+    "uscis_receipt": {
+      "title": "USCIS receipt number",
+      "url": "https://www.uscis.gov/tools/checking-your-case-status-online",
+      "authority": "official",
+      "notes": ""
+    },
+    "ice_anumber": {
+      "title": "ICE Online Detainee Locator System",
+      "url": "https://locator.ice.gov/odls/",
+      "authority": "official",
+      "notes": ""
+    },
+    "cbp_i94": {
+      "title": "CBP I-94",
+      "url": "https://i94.cbp.dhs.gov/home",
+      "authority": "official",
+      "notes": ""
+    },
+    "travel_passport": {
+      "title": "U.S. passport information",
+      "url": "https://travel.state.gov/content/travel/en/passports.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "nvc": {
+      "title": "Department of State NVC case information",
+      "url": "https://travel.state.gov/content/travel/en/us-visas/immigrate/national-visa-center.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "sevis": {
+      "title": "ICE SEVIS",
+      "url": "https://www.ice.gov/sevis",
+      "authority": "official",
+      "notes": ""
+    },
+    "piv": {
+      "title": "NIST FIPS 201 PIV standard",
+      "url": "https://csrc.nist.gov/pubs/fips/201-3/final",
+      "authority": "official",
+      "notes": ""
+    },
+    "bop": {
+      "title": "Federal Bureau of Prisons inmate locator",
+      "url": "https://www.bop.gov/inmateloc/",
+      "authority": "official",
+      "notes": ""
+    },
+    "dea": {
+      "title": "DEA registration validation resources",
+      "url": "https://www.deadiversion.usdoj.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "pacer": {
+      "title": "PACER Case Locator",
+      "url": "https://pcl.uscourts.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "uscourts_case_numbers": {
+      "title": "Federal court case management/electronic filing",
+      "url": "https://www.uscourts.gov/court-records/find-case-pacer",
+      "authority": "official",
+      "notes": ""
+    },
+    "scotus_docket": {
+      "title": "Supreme Court docket search",
+      "url": "https://www.supremecourt.gov/docket/docket.aspx",
+      "authority": "official",
+      "notes": ""
+    },
+    "taxcourt": {
+      "title": "U.S. Tax Court docket inquiry",
+      "url": "https://dawson.ustaxcourt.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "cit": {
+      "title": "U.S. Court of International Trade opinions",
+      "url": "https://www.cit.uscourts.gov/opinions",
+      "authority": "official",
+      "notes": ""
+    },
+    "cfc": {
+      "title": "U.S. Court of Federal Claims",
+      "url": "https://www.uscfc.uscourts.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "cafc": {
+      "title": "U.S. Court of Appeals for the Federal Circuit opinions and orders",
+      "url": "https://www.cafc.uscourts.gov/home/case-information/opinions-orders/",
+      "authority": "official",
+      "notes": ""
+    },
+    "cavc": {
+      "title": "U.S. Court of Appeals for Veterans Claims",
+      "url": "https://www.uscourts.cavc.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "jpml": {
+      "title": "Judicial Panel on Multidistrict Litigation",
+      "url": "https://www.jpml.uscourts.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "fisc": {
+      "title": "Foreign Intelligence Surveillance Court public filings",
+      "url": "https://www.fisc.uscourts.gov/public-filings",
+      "authority": "official",
+      "notes": ""
+    },
+    "caaf": {
+      "title": "Court of Appeals for the Armed Forces",
+      "url": "https://www.armfor.uscourts.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "mspb": {
+      "title": "Merit Systems Protection Board decisions",
+      "url": "https://www.mspb.gov/decisions/decisions.htm",
+      "authority": "official",
+      "notes": ""
+    },
+    "eeoc_appeals": {
+      "title": "EEOC federal sector appellate decisions",
+      "url": "https://www.eeoc.gov/federal-sector/appellate-decisions",
+      "authority": "official",
+      "notes": ""
+    },
+    "flra": {
+      "title": "Federal Labor Relations Authority decisions",
+      "url": "https://www.flra.gov/decisions",
+      "authority": "official",
+      "notes": ""
+    },
+    "nlrb": {
+      "title": "National Labor Relations Board case search",
+      "url": "https://www.nlrb.gov/case-search",
+      "authority": "official",
+      "notes": ""
+    },
+    "eoir": {
+      "title": "EOIR virtual law library",
+      "url": "https://www.justice.gov/eoir/virtual-law-library",
+      "authority": "official",
+      "notes": ""
+    },
+    "ocaho": {
+      "title": "OCAHO decisions",
+      "url": "https://www.justice.gov/eoir/office-of-the-chief-administrative-hearing-officer-decisions",
+      "authority": "official",
+      "notes": ""
+    },
+    "asbca": {
+      "title": "Armed Services Board of Contract Appeals",
+      "url": "https://www.asbca.mil/",
+      "authority": "official",
+      "notes": ""
+    },
+    "cbca": {
+      "title": "Civilian Board of Contract Appeals",
+      "url": "https://www.cbca.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "bva": {
+      "title": "Board of Veterans' Appeals search",
+      "url": "https://www.va.gov/vetapp/search.asp",
+      "authority": "official",
+      "notes": ""
+    },
+    "sec_edgar": {
+      "title": "SEC EDGAR filer manual and search",
+      "url": "https://www.sec.gov/edgar/search/",
+      "authority": "official",
+      "notes": ""
+    },
+    "fec_ids": {
+      "title": "FEC candidate and committee data",
+      "url": "https://www.fec.gov/data/",
+      "authority": "official",
+      "notes": ""
+    },
+    "ferc": {
+      "title": "FERC eLibrary and docket search",
+      "url": "https://elibrary.ferc.gov/eLibrary/search",
+      "authority": "official",
+      "notes": ""
+    },
+    "fcc_frn": {
+      "title": "FCC Registration Number",
+      "url": "https://www.fcc.gov/licensing-databases/commission-registration-system-fcc",
+      "authority": "official",
+      "notes": ""
+    },
+    "fcc_uls": {
+      "title": "FCC Universal Licensing System",
+      "url": "https://www.fcc.gov/wireless/universal-licensing-system",
+      "authority": "official",
+      "notes": ""
+    },
+    "uspto_patents": {
+      "title": "USPTO patent number search",
+      "url": "https://ppubs.uspto.gov/pubwebapp/",
+      "authority": "official",
+      "notes": ""
+    },
+    "uspto_trademarks": {
+      "title": "USPTO trademark search",
+      "url": "https://tmsearch.uspto.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "uspto_ptab": {
+      "title": "USPTO PTAB End-to-End",
+      "url": "https://ptab.uspto.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "epa_frs": {
+      "title": "EPA Facility Registry Service",
+      "url": "https://www.epa.gov/frs",
+      "authority": "official",
+      "notes": ""
+    },
+    "epa_rcra": {
+      "title": "EPA RCRAInfo",
+      "url": "https://rcrainfo.epa.gov/rcrainfoweb/action/main-menu/view",
+      "authority": "official",
+      "notes": ""
+    },
+    "epa_tri": {
+      "title": "EPA TRI Explorer",
+      "url": "https://enviro.epa.gov/triexplorer/tri_release.chemical",
+      "authority": "official",
+      "notes": ""
+    },
+    "epa_rmp": {
+      "title": "EPA Risk Management Plan data",
+      "url": "https://www.epa.gov/rmp",
+      "authority": "official",
+      "notes": ""
+    },
+    "fema_disasters": {
+      "title": "FEMA disaster declarations",
+      "url": "https://www.fema.gov/disaster/declarations",
+      "authority": "official",
+      "notes": ""
+    },
+    "osha_inspection": {
+      "title": "OSHA establishment search",
+      "url": "https://www.osha.gov/ords/imis/establishment.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "fmcsa": {
+      "title": "FMCSA company snapshot and USDOT identifiers",
+      "url": "https://safer.fmcsa.dot.gov/CompanySnapshot.aspx",
+      "authority": "official",
+      "notes": ""
+    },
+    "faa_nnumber": {
+      "title": "FAA N-number format",
+      "url": "https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/forming_nnumber",
+      "authority": "official",
+      "notes": ""
+    },
+    "uscg_vessel": {
+      "title": "USCG vessel documentation search",
+      "url": "https://cgmix.uscg.mil/psix/psixsearch.aspx",
+      "authority": "official",
+      "notes": ""
+    },
+    "nhtsa_recalls": {
+      "title": "NHTSA recalls API",
+      "url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+      "authority": "official",
+      "notes": ""
+    },
+    "nih_grants": {
+      "title": "NIH grant application and award identification numbers",
+      "url": "https://grants.nih.gov/grants/how-to-apply-application-guide/format-and-write/format-attachments.htm",
+      "authority": "official",
+      "notes": ""
+    },
+    "nara_ids": {
+      "title": "National Archives identifiers and catalog",
+      "url": "https://catalog.archives.gov/",
+      "authority": "official",
+      "notes": ""
+    },
+    "clinicaltrials": {
+      "title": "ClinicalTrials.gov study identifiers",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "authority": "official",
+      "notes": ""
+    },
+    "pubmed": {
+      "title": "NCBI PubMed/PMC identifiers",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK3827/",
+      "authority": "official",
+      "notes": ""
+    },
+    "doi": {
+      "title": "DOI Handbook",
+      "url": "https://www.doi.org/doi-handbook/HTML/",
+      "authority": "standards",
+      "notes": ""
+    },
+    "census_geography": {
+      "title": "Census geographic identifiers",
+      "url": "https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "gnis": {
+      "title": "USGS GNIS",
+      "url": "https://www.usgs.gov/us-board-on-geographic-names/download-gnis-data",
+      "authority": "official",
+      "notes": ""
+    },
+    "fips_codes": {
+      "title": "Census FIPS codes",
+      "url": "https://www.census.gov/library/reference/code-lists/ansi.html",
+      "authority": "official",
+      "notes": ""
+    },
+    "naics": {
+      "title": "Census NAICS",
+      "url": "https://www.census.gov/naics/",
+      "authority": "official",
+      "notes": ""
+    },
+    "psc": {
+      "title": "Acquisition.gov Product and Service Codes Manual",
+      "url": "https://www.acquisition.gov/psc-manual",
+      "authority": "official",
+      "notes": ""
+    },
+    "soc": {
+      "title": "BLS Standard Occupational Classification",
+      "url": "https://www.bls.gov/soc/",
+      "authority": "official",
+      "notes": ""
+    },
+    "nsn": {
+      "title": "DLA National Stock Number information",
+      "url": "https://www.dla.mil/Information-Operations/Services/Applications/FLIS/",
+      "authority": "official",
+      "notes": ""
+    },
+    "nist_pubs": {
+      "title": "NIST publication series",
+      "url": "https://csrc.nist.gov/publications",
+      "authority": "official",
+      "notes": ""
+    },
+    "cve": {
+      "title": "CVE identifiers",
+      "url": "https://www.cve.org/ResourcesSupport/AllResources/CNARules",
+      "authority": "standards",
+      "notes": ""
+    },
+    "wikidata_props": {
+      "title": "Wikidata identifier properties and format constraints",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_reports/List_of_properties/all",
+      "authority": "community",
+      "notes": ""
+    },
+    "niem": {
+      "title": "NIEM Open model",
+      "url": "https://github.com/niemopen/niem-model",
+      "authority": "standards",
+      "notes": ""
+    },
+    "sudoc": {
+      "title": "GPO Superintendent of Documents classification system",
+      "url": "https://www.fdlp.gov/about-the-fdlp/superintendent-of-documents-classification-system",
+      "authority": "official",
+      "notes": ""
+    },
+    "dhs_trip": {
+      "title": "DHS Traveler Redress Inquiry Program",
+      "url": "https://www.dhs.gov/dhs-trip",
+      "authority": "official",
+      "notes": ""
+    },
+    "tsa_ktn": {
+      "title": "TSA Known Traveler Number information",
+      "url": "https://www.tsa.gov/travel/frequently-asked-questions/what-known-traveler-number-ktn",
+      "authority": "official",
+      "notes": ""
+    },
+    "foia_gov": {
+      "title": "FOIA.gov",
+      "url": "https://www.foia.gov/",
+      "authority": "official",
+      "notes": ""
+    }
+  },
+  "repositories": {
+    "loc_congress_api": {
+      "name": "LibraryOfCongress/api.congress.gov",
+      "url": "https://github.com/LibraryOfCongress/api.congress.gov",
+      "coverage": "Congress.gov endpoint schemas, type enumerations, examples",
+      "status": "active"
+    },
+    "usgpo_bill_status": {
+      "name": "usgpo/bill-status",
+      "url": "https://github.com/usgpo/bill-status",
+      "coverage": "Bill status XML schemas and enumerations",
+      "status": "active"
+    },
+    "usgpo_bulk_data": {
+      "name": "usgpo/bulk-data",
+      "url": "https://github.com/usgpo/bulk-data",
+      "coverage": "GovInfo bulk-data schemas and examples",
+      "status": "active"
+    },
+    "usgpo_uslm": {
+      "name": "usgpo/uslm",
+      "url": "https://github.com/usgpo/uslm",
+      "coverage": "USLM schemas, hierarchy identifiers and legal-document markup",
+      "status": "active"
+    },
+    "congress_legislators": {
+      "name": "unitedstates/congress-legislators",
+      "url": "https://github.com/unitedstates/congress-legislators",
+      "coverage": "Bioguide and crosswalk identifiers for legislators",
+      "status": "active"
+    },
+    "federalregister_api_repo": {
+      "name": "usnationalarchives/federalregister-api-core",
+      "url": "https://github.com/usnationalarchives/federalregister-api-core",
+      "coverage": "Federal Register API implementation and document metadata",
+      "status": "active"
+    },
+    "usaspending_repo": {
+      "name": "fedspendingtransparency/usaspending-api",
+      "url": "https://github.com/fedspendingtransparency/usaspending-api",
+      "coverage": "Federal award data and generated award identifiers",
+      "status": "active"
+    },
+    "niem_repo": {
+      "name": "niemopen/niem-model",
+      "url": "https://github.com/niemopen/niem-model",
+      "coverage": "Large federal/intergovernmental schema and code-list model",
+      "status": "active"
+    },
+    "eyecite": {
+      "name": "freelawproject/eyecite",
+      "url": "https://github.com/freelawproject/eyecite",
+      "coverage": "American legal citation extraction and resolution",
+      "status": "active"
+    },
+    "reporters_db": {
+      "name": "freelawproject/reporters-db",
+      "url": "https://github.com/freelawproject/reporters-db",
+      "coverage": "Reporter abbreviations, variations, editions and regex templates",
+      "status": "active"
+    },
+    "courtlistener": {
+      "name": "freelawproject/courtlistener",
+      "url": "https://github.com/freelawproject/courtlistener",
+      "coverage": "Court/opinion/docket data model and court identifiers",
+      "status": "active"
+    },
+    "juriscraper": {
+      "name": "freelawproject/juriscraper",
+      "url": "https://github.com/freelawproject/juriscraper",
+      "coverage": "Court-specific scraper logic and docket/opinion variations",
+      "status": "active"
+    },
+    "recap": {
+      "name": "freelawproject/recap",
+      "url": "https://github.com/freelawproject/recap",
+      "coverage": "PACER/RECAP docket ingestion",
+      "status": "active"
+    },
+    "presidio": {
+      "name": "data-privacy-stack/presidio",
+      "url": "https://github.com/data-privacy-stack/presidio",
+      "coverage": "PII candidate recognizers; not authoritative validation",
+      "status": "active"
+    },
+    "lexnlp": {
+      "name": "LexPredict/lexpredict-lexnlp",
+      "url": "https://github.com/LexPredict/lexpredict-lexnlp",
+      "coverage": "Legal/NLP extraction utilities",
+      "status": "active"
+    },
+    "govinfo_link_service": {
+      "name": "usgpo/link-service",
+      "url": "https://github.com/usgpo/link-service",
+      "coverage": "Citation/link resolution patterns for federal publications",
+      "status": "verify"
+    }
+  }
+}

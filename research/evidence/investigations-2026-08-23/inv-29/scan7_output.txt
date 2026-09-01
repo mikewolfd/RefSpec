@@ -1,0 +1,1177 @@
+Total continuation strings run through parse_authority_citation: 67
+Total AuthorityCitation rows produced (whole-string-per-record call): 921
+
+Rows by (authority_type, parse_status):
+  usc                  partial          792
+  public_law           partial           40
+  administrative_order partial           26
+  statute_at_large     partial           20
+  federal_register     partial           20
+  cfr                  partial           10
+  eo_compilation       partial            9
+  other                failed             4
+
+====================================================================================================
+
+RIN 1105-AA23 ed 199510  -> 6 row(s)
+  continuation: '18 USC 2513; 19 USC 1613; 19 USC 1618; 21 USC 853; 21 USC 881; 22 USC 401.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 18, 'usc_section': '2513'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1613'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1618'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '853'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '881'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 22, 'usc_section': '401'}
+
+RIN 3235-AG65 ed 199510  -> 6 row(s)
+  continuation: '15 USC 77(g); 15 USC 77(j); 15 USC 77 (eee); 15 USC 77(ggg); 15 USC 77(nnn); 15 USC 77(sss); 15 USC 78(d); 15 USC 78(ff); 15 USC 80a-20; 15 USC 80a-23; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 0938-AG59 ed 199604  -> 5 row(s)
+  continuation: '42 USC 1395f(b) 42 USC 1395l 42 USC 1395x(v) 42 USC 1395cc 42 USC 1395ww'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395f'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395cc'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395ww'}
+
+RIN 1105-AA23 ed 199604  -> 6 row(s)
+  continuation: '18 USC 2513; 19 USC 1613; 19 USC 1618; 21 USC 853; 21 USC 881; 22 USC 401.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 18, 'usc_section': '2513'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1613'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1618'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '853'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '881'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 22, 'usc_section': '401'}
+
+RIN 3235-AG25 ed 199604  -> 18 row(s)
+  continuation: '15 USC 78n; 15 USC 78o; 15 USC 78o-4; 15 USC 78o-5; 15 USC 78p; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78l(d); 15 USC 79q; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o-5'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 3235-AG65 ed 199604  -> 13 row(s)
+  continuation: '15 USC 77g; 15 USC 77j; 15 USC 77 eee; 15 USC 77ggg; 15 USC 77nnn; 15 USC 77sss; 15 USC 78d; 15 USC 78ff; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80b-4; 15 USC 80b-11; 15 USC 78ll(d)'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77j'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77ggg'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77nnn'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77sss'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78d'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ff'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+
+RIN 3235-AG68 ed 199604  -> 13 row(s)
+  continuation: '15 USC 77g; 15 USC 77j; 15 USC 77 eee; 15 USC 77ggg; 15 USC 77nnn; 15 USC 77sss; 15 USC 78d; 15 USC 78ff; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80b-4; 15 USC 80b-1; 15 USC 78ll(d)'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77j'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77ggg'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77nnn'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77sss'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78d'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ff'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+
+RIN 0938-AG59 ed 199610  -> 3 row(s)
+  continuation: '42 USC 1395f(b) 42 USC 1395l 42 USC 1395ww'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395f'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395ww'}
+
+RIN 1105-AA23 ed 199610  -> 6 row(s)
+  continuation: '18 USC 2513; 19 USC 1613; 19 USC 1618; 21 USC 853; 21 USC 881; 22 USC 401.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 18, 'usc_section': '2513'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1613'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1618'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '853'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '881'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 22, 'usc_section': '401'}
+
+RIN 3235-AG69 ed 199610  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11;'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 3235-AG25 ed 199610  -> 18 row(s)
+  continuation: '15 USC 78n; 15 USC 78o; 15 USC 78o-4; 15 USC 78o-5; 15 USC 78p; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78l(d); 15 USC 79q; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o-5'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 0938-AG59 ed 199704  -> 3 row(s)
+  continuation: '42 USC 1395f(b) 42 USC 1395l 42 USC 1395ww'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395f'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395ww'}
+
+RIN 1105-AA23 ed 199704  -> 6 row(s)
+  continuation: '18 USC 2513; 19 USC 1613; 19 USC 1618; 21 USC 853; 21 USC 881; 22 USC 401.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 18, 'usc_section': '2513'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1613'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 19, 'usc_section': '1618'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '853'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 21, 'usc_section': '881'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 22, 'usc_section': '401'}
+
+RIN 3235-AH12 ed 199704  -> 9 row(s)
+  continuation: '15 USC 80a-8, 15 USC 80a-29, 15 USC 80a-30, 15 USC 80a-37, 15 USC 80a-1 et seq, 15 USC 80a-34(b), 15 USC 80a-39, 15 USC 77g, 15 USC 80a-24'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-8'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-30'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-34'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-39'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-24'}
+
+RIN 3235-AG69 ed 199704  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11;'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 3235-AF54 ed 199704  -> 5 row(s)
+  continuation: '15 USC 78w(a); 15 USC 78dd-1; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78dd-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+
+RIN 3235-AG78 ed 199704  -> 21 row(s)
+  continuation: '15 USC 78k; 15 USC 78k-1; 15 USC 78l; 15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79q; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78k'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78k-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 0938-AG59 ed 199710  -> 3 row(s)
+  continuation: '42 USC 1395f(b) 42 USC 1395l 42 USC 1395ww'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395f'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395l'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '1395ww'}
+
+RIN 1210-AA62 ed 199710  -> 12 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712, 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181, 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1182'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA63 ed 199710  -> 12 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712, 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181, 1182, 1191-1194), and amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1182'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 3235-AH12 ed 199710  -> 9 row(s)
+  continuation: '15 USC 80a-8; 15 USC 80a-29; 15 USC 80a-30; 15 USC 80a-37; 15 USC 80a-1 et seq; 15 USC 80a-34(b); 15 USC 80a-39; 15 USC 77g; 15 USC 80a-24'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-8'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-30'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-34'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-39'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-24'}
+
+RIN 3235-AG69 ed 199710  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11;'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 1210-AA63 ed 199804  -> 12 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712, 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181, 1182, 1191-1194), and amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1182'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA62 ed 199804  -> 12 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712, 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181, 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1182'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 3235-AG69 ed 199804  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 3235-AH12 ed 199804  -> 10 row(s)
+  continuation: '15 USC 80a-8; 15 USC 80a-29; 15 USC 80a-30; 15 USC 80a-37; 15 USC 80a-1 et seq; 15 USC 80a-34(b); 15 USC 80a-39; 15 USC 77g; 15 USC 80a-24. The proposed and final rules were mistakenly published in the Federal Register under the RIN of a related rulemaking, 3235-AE17.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-8'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-30'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-1'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-34'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-39'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-24'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '3235'}
+
+RIN 0910-AA94 ed 199810  -> 4 row(s)
+  continuation: '42 USC 216; 42 USC 241; 42 USC 262; 42 USC 264'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '216'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '241'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '262'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '264'}
+
+RIN 1090-AA67 ed 199810  -> 2 row(s)
+  continuation: 'OMB Circular A-110; OMB Circular A-133'
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-110'}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-133'}
+
+RIN 1210-AA63 ed 199810  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), and amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA62 ed 199810  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 3235-AG69 ed 199810  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 0910-AA94 ed 199904  -> 4 row(s)
+  continuation: '42 USC 216; 42 USC 241; 42 USC 262; 42 USC 264'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '216'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '241'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '262'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '264'}
+
+RIN 1090-AA67 ed 199904  -> 2 row(s)
+  continuation: 'OMB Circular A-110; OMB Circular A-133'
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-110'}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-133'}
+
+RIN 1105-AA60 ed 199904  -> 1 row(s)
+  continuation: 'from the President, April 14, 1997, Delegation of Responsibilities Concerning FBI Employees Under the Civil Service Reform Act of 1978.'
+    {'authority_type': 'other', 'parse_status': 'failed', 'stated_act_name': 'Delegation of Responsibilities Concerning FBI Employees Under the Civil Service Reform Act of 1978'}
+
+RIN 1115-AE47 ed 199904  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp., p. 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1115-AF13 ed 199904  -> 9 row(s)
+  continuation: '8 USC 1362; 8 USC 1430; 8 USC 1443; 8 USC 1447; 8 USC 9701; 5 USC 552 and 552A; 8 USC 1182; and 8 CFR 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1430'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '9701'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 5, 'usc_section': '552'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1182'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 5, 'usc_section': '552a'}
+
+RIN 1210-AA62 ed 199904  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA63 ed 199904  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), and amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 3235-AG69 ed 199904  -> 18 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 79g; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79g'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 3235-AH16 ed 199904  -> 5 row(s)
+  continuation: '15 USC 78i; 15 USC 78o; 15 USC 78q; 15 USC 78w; 15 USC 78mm'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78i'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78mm'}
+
+RIN 0910-AA94 ed 199910  -> 4 row(s)
+  continuation: '42 USC 216; 42 USC 241; 42 USC 262; 42 USC 264'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '216'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '241'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '262'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '264'}
+
+RIN 1090-AA67 ed 199910  -> 2 row(s)
+  continuation: 'OMB Circular A-110; OMB Circular A-133'
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-110'}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': 'OMB Circular', 'admin_order_number': 'A-133'}
+
+RIN 1105-AA60 ed 199910  -> 1 row(s)
+  continuation: 'from the President, April 14, 1997, Delegation of Responsibilities Concerning FBI Employees Under the Civil Service Reform Act of 1978.'
+    {'authority_type': 'other', 'parse_status': 'failed', 'stated_act_name': 'Delegation of Responsibilities Concerning FBI Employees Under the Civil Service Reform Act of 1978'}
+
+RIN 1115-AE47 ed 199910  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp., p. 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA62 ed 199910  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA63 ed 199910  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 3235-AG69 ed 199910  -> 20 row(s)
+  continuation: '15 USC 78m; 15 USC 78n; 15 USC 78o; 15 USC 78p; 15 USC 78q; 15 USC 78s; 15 USC 78u-5; 15 USC 78w; 15 USC 78x; 15 USC 78ll(d); 15 USC 78mm; 15 USC 79q; 15 USC 79t; 15 USC 80a-20; 15 USC 80a-23; 15 USC 80a-29; 15 USC 80a-37; 15 USC 80b-3; 15 USC 80b-4; 15 USC 80b-11'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78m'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78n'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78o'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78p'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78s'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78u-5'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78w'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78x'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78ll'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '78mm'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79q'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '79t'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-20'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-23'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-29'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80a-37'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-3'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-4'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '80b-11'}
+
+RIN 0910-AA94 ed 200004  -> 4 row(s)
+  continuation: '42 USC 216; 42 USC 241; 42 USC 262; 42 USC 264'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '216'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '241'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '262'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 42, 'usc_section': '264'}
+
+RIN 1115-AE47 ed 200004  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp., p. 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA62 ed 200004  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA63 ed 200004  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1115-AE47 ed 200010  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA63 ed 200010  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA62 ed 200010  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1115-AE47 ed 200104  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA63 ed 200104  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA62 ed 200104  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1115-AE47 ed 200110  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA63 ed 200110  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA62 ed 200110  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1115-AE47 ed 200204  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA62 ed 200204  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1210-AA63 ed 200204  -> 11 row(s)
+  continuation: "Secs. 107, 209, 505, 701-703, 711, 712 731-734 of ERISA (29 U.S.C. 1027, 1059, 1135, 1171-1173, 1181 1182, 1191-1194), as amended by HIPAA (Pub. L. 104-191, 101 Stat. 1936) and NMHPA (Pub. L. 104-204) and Secretary of Labor's Order No. 1-87, 52 FR 13139, April 21, 1987."
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1027'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-191'}
+    {'authority_type': 'public_law', 'parse_status': 'partial', 'public_law': '104-204'}
+    {'authority_type': 'statute_at_large', 'parse_status': 'partial', 'statute_volume': 101, 'statute_page': 1936}
+    {'authority_type': 'administrative_order', 'parse_status': 'partial', 'admin_order_kind': "Secretary of Labor's Order", 'admin_order_number': '1-87'}
+    {'authority_type': 'federal_register', 'parse_status': 'partial', 'fr_volume': 52, 'fr_page': 13139}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1059'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1135'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1171', 'usc_section_end': '1173', 'usc_section_span_rule': 'stated'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1181'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 29, 'usc_section': '1191', 'usc_section_end': '1194', 'usc_section_span_rule': 'stated'}
+
+RIN 1115-AE47 ed 200210  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA62 ed 200210  -> 1 row(s)
+  continuation: 'Secs. 107, 209, 505, 701-703, 711, 712'
+    {'authority_type': 'other', 'parse_status': 'failed', 'stated_section': '107'}
+
+RIN 1115-AE47 ed 200304  -> 41 row(s)
+  continuation: '8 USC 1186b, 1187, 1201, 1203, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1251, 1252, 1252 note, 1252a, 1252b, 1253, 1254, 1254a note, 1255, 1256, 1258, 1259, 1281, 1282, 1304, 1324a, 1330, 1356, 1357, 1362, 1429, 1440, 1443, 1447; 28 USC 509, 510, 1746; 31 USC 9701; 3 CFR, 1982 Comp, p 166; 8 CFR part 2.'
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1186b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '509'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '9701'}
+    {'authority_type': 'eo_compilation', 'parse_status': 'partial', 'eo_compilation_start': '1982', 'eo_compilation_page': '166'}
+    {'authority_type': 'cfr', 'parse_status': 'partial', 'cfr_title': 8, 'cfr_part': '2', 'cfr_part_is_plausible': True}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1187'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1201'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1203'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1221'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1222'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1223'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1224'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1225'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1226'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1227'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1251'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1252b'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1253'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1254a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1255'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1256'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1258'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1259'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1281'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1282'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1304'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1324a'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1330'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1356'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1357'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1362'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1429'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1440'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1443'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 8, 'usc_section': '1447'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '510'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 28, 'usc_section': '1746'}
+    {'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 31, 'usc_section': '1982'}
+
+RIN 1210-AA62 ed 200304  -> 1 row(s)
+  continuation: 'secs 107, 209, 505, 701 to 703, 711, 712.'
+    {'authority_type': 'other', 'parse_status': 'failed', 'stated_section': '107'}
+
+Wrote 67 records to /Users/mikewolfd/.claude/jobs/9dfc0c64/tmp/inv-29/grammar_results.json
+
+====================================================================================================
+DIAGNOSTIC: does a stray internal space break a USC section match, and
+does it silently vanish when sibling citations in the same call succeed?
+  parse_authority_citation('15 USC 77 eee') -> [{'authority_type': 'usc', 'parse_status': 'partial', 'usc_title': 15, 'usc_section': '77', 'usc_section_end': None, 'usc_section_span_rule': None, 'usc_chapter': None, 'usc_chapter_end': None, 'usc_appendix': False, 'cfr_title': None, 'cfr_part': None, 'cfr_section': None, 'cfr_part_is_plausible': None, 'reorganization_plan': None, 'act_key': None, 'act_section': None, 'case_reporter': None, 'case_volume': None, 'case_page': None, 'usc_note': False, 'presidential_doc_kind': None, 'proclamation': None, 'admin_order_kind': None, 'admin_order_number': None, 'treaty_series': None, 'treaty_volume': None, 'treaty_number': None, 'treaty_page': None, 'constitution_article': None, 'constitution_section': None, 'eo_compilation_start': None, 'eo_compilation_page': None, 'public_law': None, 'executive_order': None, 'statute_volume': None, 'statute_page': None, 'statute_page_text': None, 'statute_volume_matches_public_law': None, 'statute_volume_text': None, 'stated_act_name': None, 'stated_section': None, 'fr_volume': None, 'fr_page': None, 'revised_statute_section': None, 'dc_code_section': None}]
+  parse_authority_citation('15 USC 77eee') -> [{'authority_type': 'usc', 'parse_status': 'ok', 'usc_title': 15, 'usc_section': '77eee', 'usc_section_end': None, 'usc_section_span_rule': None, 'usc_chapter': None, 'usc_chapter_end': None, 'usc_appendix': False, 'cfr_title': None, 'cfr_part': None, 'cfr_section': None, 'cfr_part_is_plausible': None, 'reorganization_plan': None, 'act_key': None, 'act_section': None, 'case_reporter': None, 'case_volume': None, 'case_page': None, 'usc_note': False, 'presidential_doc_kind': None, 'proclamation': None, 'admin_order_kind': None, 'admin_order_number': None, 'treaty_series': None, 'treaty_volume': None, 'treaty_number': None, 'treaty_page': None, 'constitution_article': None, 'constitution_section': None, 'eo_compilation_start': None, 'eo_compilation_page': None, 'public_law': None, 'executive_order': None, 'statute_volume': None, 'statute_page': None, 'statute_page_text': None, 'statute_volume_matches_public_law': None, 'statute_volume_text': None, 'stated_act_name': None, 'stated_section': None, 'fr_volume': None, 'fr_page': None, 'revised_statute_section': None, 'dc_code_section': None}]
+
+  Specimen whole-string call -> 13 rows:
+    usc partial usc_title=15 usc_section=77g
+    usc partial usc_title=15 usc_section=77j
+    usc partial usc_title=15 usc_section=77
+    usc partial usc_title=15 usc_section=77ggg
+    usc partial usc_title=15 usc_section=77nnn
+    usc partial usc_title=15 usc_section=77sss
+    usc partial usc_title=15 usc_section=78d
+    usc partial usc_title=15 usc_section=78ff
+    usc partial usc_title=15 usc_section=80a-20
+    usc partial usc_title=15 usc_section=80a-23
+    usc partial usc_title=15 usc_section=80b-4
+    usc partial usc_title=15 usc_section=80b-11
+    usc partial usc_title=15 usc_section=78ll
+  Distinct usc_section values recovered: ['77', '77g', '77ggg', '77j', '77nnn', '77sss', '78d', '78ff', '78ll', '80a-20', '80a-23', '80b-11', '80b-4']
+  Is '77eee' (or any spelling of it) among them? False
+
+Split-by-';' comparison for the specimen (each fragment its own call):
+  '15 USC 77g'                   -> [('usc', 'ok', '77g')]
+  '15 USC 77j'                   -> [('usc', 'ok', '77j')]
+  '15 USC 77 eee'                -> [('usc', 'partial', '77')]
+  '15 USC 77ggg'                 -> [('usc', 'ok', '77ggg')]
+  '15 USC 77nnn'                 -> [('usc', 'ok', '77nnn')]
+  '15 USC 77sss'                 -> [('usc', 'ok', '77sss')]
+  '15 USC 78d'                   -> [('usc', 'ok', '78d')]
+  '15 USC 78ff'                  -> [('usc', 'ok', '78ff')]
+  '15 USC 80a-20'                -> [('usc', 'ok', '80a-20')]
+  '15 USC 80a-23'                -> [('usc', 'ok', '80a-23')]
+  '15 USC 80b-4'                 -> [('usc', 'ok', '80b-4')]
+  '15 USC 80b-11'                -> [('usc', 'ok', '80b-11')]
+  '15 USC 78ll(d)'               -> [('usc', 'partial', '78ll')]
+  Total rows via split-by-';': 13 (vs 13 via whole-string call)

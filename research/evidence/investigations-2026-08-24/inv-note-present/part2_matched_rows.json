@@ -1,0 +1,6212 @@
+[
+  {
+    "row_key": [
+      "2133-AB19",
+      "199510",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB12",
+      "199510",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB17",
+      "199510",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB17",
+      "199510",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1122(d)",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB20",
+      "199510",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 201",
+    "note_key": "46:201",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "7100-AB50",
+      "199510",
+      14,
+      0
+    ],
+    "authority_text": "15 USC 78(b)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 208",
+    "note_key": "12:208",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      3,
+      0
+    ],
+    "authority_text": "15 USC 78(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      4,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      5,
+      0
+    ],
+    "authority_text": "15 USC 78(j)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      6,
+      0
+    ],
+    "authority_text": "15 USC 78 (l) to 78(q)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      7,
+      0
+    ],
+    "authority_text": "15 USC 78(s)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      8,
+      0
+    ],
+    "authority_text": "15 USC 78(w)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      9,
+      0
+    ],
+    "authority_text": "15 USC 78(x)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG65",
+      "199510",
+      16,
+      1
+    ],
+    "authority_text": "15 USC 77(g); 15 USC 77(j); 15 USC 77 (eee); 15 USC 77(ggg); 15 USC 77(nnn); 15 USC 77(sss); 15 USC 78(d); 15 USC 78(ff); 15 USC 80a-20; 15 USC 80a-23; 15 USC 80b-4; 15 USC 80b-11",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB19",
+      "199604",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB25",
+      "199604",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "7100-AB50",
+      "199604",
+      14,
+      0
+    ],
+    "authority_text": "15 USC 78(b)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 208",
+    "note_key": "12:208",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG69",
+      "199604",
+      2,
+      0
+    ],
+    "authority_text": "15 USC 78(s)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG70",
+      "199604",
+      6,
+      0
+    ],
+    "authority_text": "15 USC 78jA",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 211",
+    "note_key": "17:211",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB19",
+      "199610",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB25",
+      "199610",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB27",
+      "199610",
+      0,
+      0
+    ],
+    "authority_text": "46 USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 272",
+    "note_key": "46:272",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB57",
+      "199610",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB57",
+      "199610",
+      14,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB81",
+      "199610",
+      12,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "7100-AB50",
+      "199610",
+      14,
+      0
+    ],
+    "authority_text": "15 USC 78(b)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 208",
+    "note_key": "12:208",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG70",
+      "199610",
+      6,
+      0
+    ],
+    "authority_text": "15 USC 78jA",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 211",
+    "note_key": "17:211",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB19",
+      "199704",
+      1,
+      0
+    ],
+    "authority_text": "46 USC app 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB57",
+      "199704",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB57",
+      "199704",
+      14,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG70",
+      "199704",
+      6,
+      0
+    ],
+    "authority_text": "15 USC 78jA",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 211",
+    "note_key": "17:211",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB19",
+      "199710",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB19",
+      "199804",
+      1,
+      0
+    ],
+    "authority_text": "46 app USC 1241(b)",
+    "identity": "46:1241",
+    "cfr_note_part": "46 CFR 382",
+    "note_key": "46:382",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1241(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB33",
+      "199804",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 201",
+    "note_key": "46:201",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "199904",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "199910",
+      0,
+      1
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "199910",
+      0,
+      2
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB39",
+      "199910",
+      0,
+      0
+    ],
+    "authority_text": "46 App USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AH68",
+      "199910",
+      16,
+      0
+    ],
+    "authority_text": "15 USC 78dll(D)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200004",
+      0,
+      1
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200004",
+      0,
+      2
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB39",
+      "200004",
+      0,
+      0
+    ],
+    "authority_text": "46 App USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200004",
+      20,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200004",
+      21,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200010",
+      0,
+      1
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200010",
+      0,
+      2
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200010",
+      20,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200010",
+      21,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200104",
+      0,
+      1
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200104",
+      0,
+      2
+    ],
+    "authority_text": "46 App USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200104",
+      20,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AB41",
+      "200104",
+      21,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200110",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200110",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200110",
+      17,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200110",
+      18,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200110",
+      23,
+      0
+    ],
+    "authority_text": "15 USC 78-u2",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200110",
+      24,
+      0
+    ],
+    "authority_text": "15 USC 78-u3",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI24",
+      "200110",
+      1,
+      0
+    ],
+    "authority_text": "15 USC 78 0-3",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI32",
+      "200110",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78(c)(b), 78(c)(3), 78q(a), 78w(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200204",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200204",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200204",
+      17,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200204",
+      18,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200204",
+      23,
+      0
+    ],
+    "authority_text": "15 USC 78-u2",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200204",
+      24,
+      0
+    ],
+    "authority_text": "15 USC 78-u3",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI32",
+      "200204",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78(c)(b), 78(c)(3), 78q(a), 78w(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200210",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200210",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200210",
+      17,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200210",
+      18,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200210",
+      23,
+      0
+    ],
+    "authority_text": "15 USC 78-u2",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AB99",
+      "200210",
+      24,
+      0
+    ],
+    "authority_text": "15 USC 78-u3",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI53",
+      "200210",
+      2,
+      0
+    ],
+    "authority_text": "15 USC 78(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 200",
+    "note_key": "17:200",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 ll"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI53",
+      "200210",
+      3,
+      0
+    ],
+    "authority_text": "15 USC 78(w)(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 200",
+    "note_key": "17:200",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 ll"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI32",
+      "200210",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78(c)(b), 78(c)(3), 78q(a), 78w(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200304",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200304",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200304",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB49",
+      "200304",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC57",
+      "200304",
+      18,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC57",
+      "200304",
+      19,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI75",
+      "200304",
+      8,
+      0
+    ],
+    "authority_text": "15 USC 78 j-1",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 229",
+    "note_key": "17:229",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 mm"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200310",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200310",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200310",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB49",
+      "200310",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC57",
+      "200310",
+      18,
+      0
+    ],
+    "authority_text": "15 USC 78(h)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC57",
+      "200310",
+      19,
+      0
+    ],
+    "authority_text": "15 USC 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200404",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200404",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200404",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB49",
+      "200404",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200404",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AG64",
+      "200404",
+      1,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 239",
+    "note_key": "17:239",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 l",
+        "78 o",
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI77",
+      "200404",
+      6,
+      0
+    ],
+    "authority_text": "15 USC 78(w)a",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 270",
+    "note_key": "17:270",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AI81",
+      "200404",
+      1,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200410",
+      0,
+      0
+    ],
+    "authority_text": "46 App USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200410",
+      0,
+      1
+    ],
+    "authority_text": "46 App USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200410",
+      0,
+      2
+    ],
+    "authority_text": "46 App USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB49",
+      "200410",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200410",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA43",
+      "200504",
+      0,
+      0
+    ],
+    "authority_text": "10 USC 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200504",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200504",
+      0,
+      1
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB37",
+      "200504",
+      0,
+      2
+    ],
+    "authority_text": "46 app USC 1101, 1114(b), 1122(d), 1241",
+    "identity": "46:1122",
+    "cfr_note_part": "46 CFR 381",
+    "note_key": "46:381",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1122(d)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200504",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200504",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA43",
+      "200510",
+      0,
+      0
+    ],
+    "authority_text": "10 USC 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200510",
+      0,
+      0
+    ],
+    "authority_text": "46 App USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC92",
+      "200510",
+      22,
+      0
+    ],
+    "authority_text": "15 USC 78(h) to 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200510",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200510",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2133-AB50",
+      "200604",
+      0,
+      0
+    ],
+    "authority_text": "46 app USC 1114(b)",
+    "identity": "46:1114",
+    "cfr_note_part": "46 CFR 388",
+    "note_key": "46:388",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "1114(b)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200604",
+      40,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3064-AC92",
+      "200604",
+      22,
+      0
+    ],
+    "authority_text": "15 USC 78(h) to 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 308",
+    "note_key": "12:308",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(h)"
+      ],
+      "spaced": [
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200604",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200604",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200610",
+      40,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200610",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200610",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ54",
+      "200610",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78(c)(55)(C)(vi)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200704",
+      40,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200704",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200704",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ77",
+      "200704",
+      2,
+      0
+    ],
+    "authority_text": "15 USC 78(A)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200710",
+      40,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200710",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200710",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ57",
+      "200710",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78(a)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ58",
+      "200710",
+      1,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 229",
+    "note_key": "17:229",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 mm"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ77",
+      "200710",
+      2,
+      0
+    ],
+    "authority_text": "15 USC 78(A)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200804",
+      40,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200804",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200804",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AD11",
+      "200810",
+      15,
+      0
+    ],
+    "authority_text": "15 USC 78(h) and 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AC79",
+      "200810",
+      37,
+      0
+    ],
+    "authority_text": "15 USC 78",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200810",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200810",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AK22",
+      "200810",
+      3,
+      0
+    ],
+    "authority_text": "15 USC 78 k-1",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AD11",
+      "200904",
+      15,
+      0
+    ],
+    "authority_text": "15 USC 78(h) and 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200904",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AF93",
+      "200904",
+      0,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "200910",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201004",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201010",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201104",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(o)(c)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201110",
+      5,
+      0
+    ],
+    "authority_text": "49 USC 1718(a)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201110",
+      6,
+      0
+    ],
+    "authority_text": "49 USC 1718(b)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201110",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(g)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201210",
+      5,
+      0
+    ],
+    "authority_text": "49 USC 1718(a)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201210",
+      6,
+      0
+    ],
+    "authority_text": "49 USC 1718(b)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AD61",
+      "201210",
+      15,
+      0
+    ],
+    "authority_text": "15 USC 78(h) to 78(i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201210",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(g)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201304",
+      5,
+      0
+    ],
+    "authority_text": "49 USC 1718(a)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201304",
+      6,
+      0
+    ],
+    "authority_text": "49 USC 1718(b)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201304",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(g)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201310",
+      5,
+      0
+    ],
+    "authority_text": "49 USC 1718(a)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "2120-AJ97",
+      "201310",
+      6,
+      0
+    ],
+    "authority_text": "49 USC 1718(b)",
+    "identity": "49:1718",
+    "cfr_note_part": "14 CFR 16",
+    "note_key": "14:16",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "unknown",
+    "note_raw": {
+      "paren": [
+        "1718(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AJ37",
+      "201310",
+      13,
+      0
+    ],
+    "authority_text": "15 USC 78(g)",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201410",
+      0,
+      0
+    ],
+    "authority_text": "10 USC 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201504",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201510",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201604",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE04",
+      "201604",
+      22,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201610",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE04",
+      "201610",
+      22,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201704",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE04",
+      "201704",
+      22,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE14",
+      "201704",
+      27,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201710",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE26",
+      "201710",
+      27,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "201710",
+      15,
+      0
+    ],
+    "authority_text": "15 USC 78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "0702-AA66",
+      "201804",
+      0,
+      0
+    ],
+    "authority_text": "10 U.S.C. 30112(g)",
+    "identity": "10:30112",
+    "cfr_note_part": "32 CFR 634",
+    "note_key": "32:634",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "30112(g)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "201804",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE26",
+      "201804",
+      27,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) to (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "201804",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "201810",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "201810",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "201904",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "201904",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "201910",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AN69",
+      "201910",
+      5,
+      5
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C.A. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR parts 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "201910",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202004",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AN69",
+      "202004",
+      5,
+      5
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR parts 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "202004",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202010",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AN69",
+      "202010",
+      5,
+      5
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR parts 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "202010",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202104",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202104",
+      5,
+      5
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR parts 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "202104",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202110",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202110",
+      5,
+      5
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR parts 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "202110",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C.78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN06",
+      "202110",
+      0,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202204",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202204",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202204",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN06",
+      "202204",
+      0,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 249",
+    "note_key": "17:249",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AM09",
+      "202204",
+      15,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78 et seq.",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202210",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202210",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202210",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202304",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202304",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202304",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202310",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202310",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202310",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "1557-AE33",
+      "202404",
+      20,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78(h) and (i)",
+    "identity": "15:78",
+    "cfr_note_part": "12 CFR 19",
+    "note_key": "12:19",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202404",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202404",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202410",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202410",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3206-AO17",
+      "202504",
+      5,
+      3
+    ],
+    "authority_text": "E.O. 13488, as amended (see 5 U.S.C. 7301 note) and Civil Service Rules II, V, and VI as amended and codified at 5 CFR 2, 5, and 6",
+    "identity": "5:5",
+    "cfr_note_part": "5 CFR 731",
+    "note_key": "5:731",
+    "classes": [
+      "cross_family_bleed"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "cross_family_bleed": [
+        "5 u"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN47",
+      "202504",
+      1,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78cn",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN16",
+      "202504",
+      13,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 242",
+    "note_key": "17:242",
+    "classes": [
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3235-AN47",
+      "202510",
+      1,
+      0
+    ],
+    "authority_text": "15 U.S.C. 78cn",
+    "identity": "15:78",
+    "cfr_note_part": "17 CFR 240",
+    "note_key": "17:240",
+    "classes": [
+      "paren",
+      "spaced"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "78(f)",
+        "78(l)",
+        "78(w)",
+        "78(c)"
+      ],
+      "spaced": [
+        "78 l",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 ll",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 q",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o",
+        "78 o"
+      ]
+    },
+    "row_own_shape_damaged": false,
+    "verbatim_note_token_in_row_text": false,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3245-AI74",
+      "202510",
+      0,
+      1
+    ],
+    "authority_text": "5 U.S.C. 552 and App. 3, secs. 2, 4(a), 6(a), and 9(a)(1)(T)",
+    "identity": "5:4",
+    "cfr_note_part": "13 CFR 101",
+    "note_key": "13:101",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "4(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3245-AI74",
+      "202510",
+      0,
+      2
+    ],
+    "authority_text": "5 U.S.C. 552 and App. 3, secs. 2, 4(a), 6(a), and 9(a)(1)(T)",
+    "identity": "5:6",
+    "cfr_note_part": "13 CFR 101",
+    "note_key": "13:101",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "6(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  },
+  {
+    "row_key": [
+      "3245-AI74",
+      "202510",
+      0,
+      3
+    ],
+    "authority_text": "5 U.S.C. 552 and App. 3, secs. 2, 4(a), 6(a), and 9(a)(1)(T)",
+    "identity": "5:9",
+    "cfr_note_part": "13 CFR 101",
+    "note_key": "13:101",
+    "classes": [
+      "paren"
+    ],
+    "oracle_verdict": "absent",
+    "note_raw": {
+      "paren": [
+        "9(a)"
+      ]
+    },
+    "row_own_shape_damaged": true,
+    "verbatim_note_token_in_row_text": true,
+    "current_judge_verdict": "present"
+  }
+]

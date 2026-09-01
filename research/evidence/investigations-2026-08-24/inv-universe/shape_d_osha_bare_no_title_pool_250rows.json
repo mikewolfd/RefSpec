@@ -1,0 +1,2502 @@
+[
+  {
+    "idx":200425,
+    "token":2560.502,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1210-AA89",
+    "authority_text":"Sec 2560.502-1"
+  },
+  {
+    "idx":200426,
+    "token":2560.502,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1210-AA89",
+    "authority_text":"Sec 2560.502i-1"
+  },
+  {
+    "idx":200427,
+    "token":2560.503,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1210-AA89",
+    "authority_text":"Sec 2560.503-1"
+  },
+  {
+    "idx":208111,
+    "token":2635.802,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2700-AC45",
+    "authority_text":"5 CFR 2635.105, 2635.403(a), 2635.802(a), 2635.803"
+  },
+  {
+    "idx":208111,
+    "token":2635.803,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2700-AC45",
+    "authority_text":"5 CFR 2635.105, 2635.403(a), 2635.802(a), 2635.803"
+  },
+  {
+    "idx":223511,
+    "token":2635.802,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2700-AC45",
+    "authority_text":"5 CFR 2635.105, 2635.403(a), 2635.802(a), 2635.803"
+  },
+  {
+    "idx":223511,
+    "token":2635.803,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2700-AC45",
+    "authority_text":"5 CFR 2635.105, 2635.403(a), 2635.802(a), 2635.803"
+  },
+  {
+    "idx":253917,
+    "token":104.104,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3060-AI07",
+    "authority_text":"PL 104.104, 202(h)"
+  },
+  {
+    "idx":269157,
+    "token":104.104,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3060-AI07",
+    "authority_text":"PL 104.104, 202(h)"
+  },
+  {
+    "idx":291819,
+    "token":1926.1002,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1218-AC15",
+    "authority_text":"Sections 1926.1002 and 19"
+  },
+  {
+    "idx":302715,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302715,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302716,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302717,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302718,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":302719,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":305341,
+    "token":1926.1002,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1218-AC15",
+    "authority_text":"sec 1926.1002 and 19"
+  },
+  {
+    "idx":315835,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315835,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315836,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315837,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315838,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.1,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.13,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":150.35,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.4,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.43,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.44,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.47,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.103,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.1065,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.48,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.49,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.75,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":315839,
+    "token":155.775,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"1625-AA94",
+    "authority_text":"Sections 155.100 through 155.130, 150.350 through 155.400, 155.430, 155.440, 155.470, 155.1030(j) and (k); and 155.1065(g) are also issued under 33 U.S.C. 1903(b). Sections 155.480, 155.490, 155.750(e), and 155.775 are also issued under 46 U.S.C. 3703. 33 CFR 155.490 is also issued under the authority of 46 U.S.C. 4110(b)."
+  },
+  {
+    "idx":318285,
+    "token":1926.1002,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1218-AC15",
+    "authority_text":"sec 1926.1002 and 19"
+  },
+  {
+    "idx":331163,
+    "token":1926.1002,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"1218-AC15",
+    "authority_text":"sec 1926.1002 and 19"
+  },
+  {
+    "idx":357453,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":370037,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":383072,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":395891,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":408793,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":421869,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":434961,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":434975,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":448315,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":448365,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AA89",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":458294,
+    "token":111.148,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"0938-AP82",
+    "authority_text":"BBA, BA, BIPA, MMA, PL 111.148"
+  },
+  {
+    "idx":462120,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":472995,
+    "token":2635.403,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":472995,
+    "token":2635.803,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":472995,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":475865,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":486176,
+    "token":2635.403,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":486176,
+    "token":2635.803,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":486176,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"2501-AD55",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.403(a), 2635.803, 2635.807"
+  },
+  {
+    "idx":489112,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":501427,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":512180,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":523007,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":534290,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"PL 103.311"
+  },
+  {
+    "idx":545776,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"Pub. L.103.311"
+  },
+  {
+    "idx":556914,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"Pub. L. 103.311"
+  },
+  {
+    "idx":567837,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AB20",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":629833,
+    "token":205.6,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"0581-AD83",
+    "authority_text":"Pub. L. 205.600-205.607"
+  },
+  {
+    "idx":629833,
+    "token":205.607,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"other",
+    "parse_status":"failed",
+    "rin":"0581-AD83",
+    "authority_text":"Pub. L. 205.600-205.607"
+  },
+  {
+    "idx":668293,
+    "token":100.456,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"0702-AB10",
+    "authority_text":"Pub. L. 100.456"
+  },
+  {
+    "idx":668633,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":668633,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":681161,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":681161,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":693719,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":693719,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":703516,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":703517,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":703518,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":703519,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":705670,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":705670,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":710516,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L. 103.311, 49 U.S.C. 31137(a)"
+  },
+  {
+    "idx":710517,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L. 103.311, 49 U.S.C. 31137(a)"
+  },
+  {
+    "idx":715165,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715165,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715166,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715166,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715167,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715167,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715168,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715168,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715169,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715169,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715172,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715173,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715174,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":715835,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":715836,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":715837,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":715838,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AN06",
+    "authority_text":"sec. 249.220f is also issued under secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":717898,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":717898,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.807"
+  },
+  {
+    "idx":722650,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":726989,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726989,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726990,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726990,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726991,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726991,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726992,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726992,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726993,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726993,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726996,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726997,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":726998,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":727831,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.220f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727832,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.220f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727833,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.220f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727834,
+    "token":249.22,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.220f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727835,
+    "token":249.24,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.240f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727836,
+    "token":249.24,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.240f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727837,
+    "token":249.24,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.240f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":727838,
+    "token":249.24,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"statute_at_large",
+    "parse_status":"partial",
+    "rin":"3235-AM15",
+    "authority_text":"Sec. 249.240f is also issued under Secs. 3(a), 202, 208, 302, 306(a), 401(a), 401(b), 406 and 407, Pub. L. 107-204, 116 Stat. 745, and Secs. 2 and 3, Pub. L. 116-222, 134 Stat. 1063"
+  },
+  {
+    "idx":729702,
+    "token":2635.204,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.803, 2635.807"
+  },
+  {
+    "idx":729702,
+    "token":2635.803,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.803, 2635.807"
+  },
+  {
+    "idx":729702,
+    "token":2635.807,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"0790-AL21",
+    "authority_text":"5 CFR 2635.105, 2635.203(a), 2635.204(k), 2635.803, 2635.807"
+  },
+  {
+    "idx":734276,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L. 103.311"
+  },
+  {
+    "idx":738948,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738948,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738949,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738949,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738950,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738950,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"cfr",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738951,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738951,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"federal_register",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738952,
+    "token":581.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738952,
+    "token":581.306,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12105 (43 FR 59465 and 3 CFR 262)(1979). Secs. 581.102 and 581.306 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738955,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738956,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"executive_order",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":738957,
+    "token":582.102,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"usc",
+    "parse_status":"partial",
+    "rin":"3206-AO41",
+    "authority_text":"E.O. 12897. Sec. 582.102 also issued under 5 U.S.C. 8336a and 8412a."
+  },
+  {
+    "idx":746238,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L. 103.311"
+  },
+  {
+    "idx":758164,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":769630,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":780577,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L 103.311"
+  },
+  {
+    "idx":792785,
+    "token":103.311,
+    "has_usc_marker_nearby":false,
+    "has_cfr_marker_nearby":false,
+    "authority_type":"public_law",
+    "parse_status":"ok",
+    "rin":"2126-AC50",
+    "authority_text":"Pub. L 103.311"
+  }
+]
