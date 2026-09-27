@@ -1,0 +1,23 @@
+{
+  "source": "research/atlas-refresh-2026-09-27/repair-validation/agency-repaired-fidelity.json",
+  "sourceSha256": "6519043e6f5155100be699608a148c733407b7611db78c9ca54a42b8d0666fbf",
+  "note": "Exact gate-relevant fields selected from the committed bounded receipt. That complete receipt is scoped and must not qualify a full release.",
+  "comparison": {
+    "name": "agency-registry-2026-09-26",
+    "kind": "agency",
+    "publisherReader": "independent-agency",
+    "releaseKeys": [
+      "agency-registry-2026-09-26"
+    ],
+    "publisherLoaded": true,
+    "atlasLoaded": true,
+    "fidelityStatus": "exact",
+    "claimScope": {
+      "status": "exact",
+      "independentAgencyComparison": {
+        "status": "passed",
+        "failures": []
+      }
+    }
+  }
+}
