@@ -61,6 +61,16 @@ persistent cache, scheduler, recovery subsystem or agency policy framework.
 Adaptive pack splitting and family-at-a-time fidelity remain conditional on an
 observed failure; the present writer fails explicitly at the existing limits.
 
+Resource measurement scope is explicit: RSS measures the supervised process
+group. macOS footprint uses that same group; a descendant that creates another
+session/group escapes its measurement and cleanup. The nested guard tests do
+this, so outer fast-tier peaks are not full-tree peaks. No such escape appears
+in the inspected builder, validator or fidelity Python paths, but external
+executable internals were not established by that review. Linux cgroup memory
+includes escaped descendant groups and enforces the complete job limit. A
+strict full-job capacity claim therefore requires the Linux release runner;
+local macOS measurements carry the stated scope.
+
 ## Run and receipt locations
 
 Local command logs and resource samples are under
