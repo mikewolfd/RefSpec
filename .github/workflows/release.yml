@@ -227,19 +227,10 @@ jobs:
           PY
           rm -f "$key_path"
 
-      # Job 5: upload the distribution's small receipts, not the ~1.1 GB
-      # packs. What ships in the artifact store, if anything, and how it is
-      # addressed by consumers, is exactly Order of execution step 6's
-      # pending "+ artifact store" decision -- until it lands, GitHub's
-      # own artifact storage is a holding pattern for the receipts alone,
-      # cheap enough (three small JSON files) not to wait on that decision.
-      # These four are precisely the files the seal's payload transitively
-      # covers (Seal design §1): the manifest, the self-attested acceptance
-      # receipt whose digest the manifest pins as a member, the
-      # producer-validation receipt the acceptance receipt's own digest
-      # inputs reference, and the served Parquet view's manifest, whose
-      # digest the 3.1 seal payload binds directly.
+      # Retain failed phase evidence too. Whole-distribution storage remains
+      # an operational decision; these receipts do not publish its packs.
       - name: Upload the distribution and view receipts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: atlas-release-receipts-${{ inputs.output_suffix }}
@@ -251,12 +242,13 @@ jobs:
             ${{ env.COMPACT_VIEW_ROOT }}/search-view-manifest.json
             ${{ env.QUALIFICATION_ROOT }}/qualification.json
             ${{ env.QUALIFICATION_ROOT }}/source-fidelity.json
+            ${{ env.QUALIFICATION_ROOT }}/*.json
             ${{ env.QUALIFICATION_ROOT }}/*.log
             ${{ env.QUALIFICATION_ROOT }}/*.samples.jsonl
             ${{ env.QUALIFICATION_ROOT }}/agency-view/view-manifest.json
             output/atlas-3.1-full-${{ inputs.output_suffix }}/build-phase.*
             output/atlas-3.1-full-${{ inputs.output_suffix }}/agency-evidence-staging.json
-          if-no-files-found: error
+          if-no-files-found: warn
 
   # ---------------------------------------------------------------------
   # Reproducible-rebuild control (Seal design §4; plan Check regime:
