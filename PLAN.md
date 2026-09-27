@@ -20,6 +20,10 @@ full artifact qualification remains blocked. See the
 digests and the remaining acceptance steps. The August artifact remains intact.
 The separate dev21 worktree and downstream adoption work retain their owners.
 
+The [repair proposal](plans/atlas-refresh-repair-plan-2026-09-27.md) covers the
+verified gaps, performance bounds, DRY/KISS audit and acceptance criteria.
+It is proposed work; no implementation or full requalification is claimed.
+
 ## State as of 2026-09-17 (historical)
 
 Branch `main`, tree clean, at `0.1.0.dev11` pinning the vendored SpicyDocs
