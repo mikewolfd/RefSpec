@@ -65,7 +65,7 @@ Publisher defects preserved rather than repaired, each confirmed against the pag
 
 - `H, O, G,` — trailing comma, on the Issuance `Certification of Generation for Tax Credit` row. The Submittal row for the same description reads `H, O, G` without it. Both kept as written.
 - `H, E and RM` — prose `and` instead of a comma, not normalised.
-- `Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe` — the publisher's text stops at `Pipe`, almost certainly a cut-off `Pipelines`. Preserved.
+- `Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe` — the rendered row ends at `Pipe`. Preserved; no intended missing word is inferred. The conflicting Poppler `lines` observation is retained in the September 27 independent evidence and the exact verifier reading exception.
 
 ## What this attestation is and is not
 
