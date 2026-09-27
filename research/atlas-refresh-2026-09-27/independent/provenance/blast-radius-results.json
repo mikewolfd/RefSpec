@@ -1,0 +1,121 @@
+{
+  "bounded_reader_probes": [
+    {
+      "evidence_rows": 5,
+      "kind": "mapping",
+      "name": "eurovoc-mesh-alignment-20171215",
+      "sample": {
+        "expected_native_payload_digest": "sha256:22248ab4297dfcc87d887564095de08a1732617891be55666d6fb794710f059f",
+        "expected_source_digest": "sha256:8d1e120994bb9f3381dc01b0a32986564a7bbffeffc64de9dc85377a3ded586c",
+        "native_payload": {
+          "endpointResolution": {
+            "fromObjectIri": "http://id.nlm.nih.gov/mesh/D057193",
+            "method": "publisherIdentifierHttpToHttpsRedirect",
+            "predicateChanged": false,
+            "toObjectIri": "https://id.nlm.nih.gov/mesh/D057193"
+          },
+          "mappingTripleDigest": "sha256:08275c29afea017bce9cfe4054e76d8d50b43ce5774cfc89198acd667c9c6c96",
+          "objectIri": "https://id.nlm.nih.gov/mesh/D057193",
+          "predicateIri": "http://www.w3.org/2004/02/skos/core#exactMatch",
+          "publisherClaim": {
+            "objectIri": "http://id.nlm.nih.gov/mesh/D057193",
+            "predicateIri": "http://www.w3.org/2004/02/skos/core#exactMatch",
+            "publisherAlignmentDigest": "sha256:8d1e120994bb9f3381dc01b0a32986564a7bbffeffc64de9dc85377a3ded586c",
+            "publisherAlignmentRelease": "http://publications.europa.eu/resource/dataset/eurovoc_alignment_mesh/20171215-0",
+            "publisherAlignmentVersion": "20171215-0",
+            "subjectIri": "http://eurovoc.europa.eu/c_67699417"
+          },
+          "subjectIri": "http://eurovoc.europa.eu/c_67699417"
+        }
+      },
+      "source_digest_differs_payload": 5
+    },
+    {
+      "kind": "vocabulary",
+      "name": "federal-register-api-topics-2026-08-03",
+      "reader_source_digest_is_native_payload_digest": false,
+      "resources": 7767,
+      "retained_payloads": 7767,
+      "source_digest_differs_payload": 7767
+    },
+    {
+      "kind": "vocabulary",
+      "name": "gcmd-science-keywords-24-4",
+      "reader_source_digest_is_native_payload_digest": false,
+      "resources": 3774,
+      "retained_payloads": 3774,
+      "source_digest_differs_payload": 3774
+    },
+    {
+      "kind": "vocabulary",
+      "name": "billstatus-bill-types",
+      "reader_source_digest_is_native_payload_digest": false,
+      "resources": 8,
+      "retained_payloads": 8,
+      "source_digest_differs_payload": 0
+    },
+    {
+      "kind": "vocabulary",
+      "name": "govinfo-collections",
+      "reader_source_digest_is_native_payload_digest": false,
+      "resources": 42,
+      "retained_payloads": 42,
+      "source_digest_differs_payload": 42
+    },
+    {
+      "kind": "vocabulary",
+      "name": "gao-published-topics-capture-subset-2026-09-01",
+      "reader_source_digest_is_native_payload_digest": false,
+      "resources": 31,
+      "retained_payloads": 31,
+      "source_digest_differs_payload": 31
+    }
+  ],
+  "by_kind": {
+    "mapping": 11,
+    "vocabulary": 95
+  },
+  "declarations_without_policy_flag": 106,
+  "explicit_reader_false_declarations": [
+    {
+      "explicit_false_reader_flag": true,
+      "function": "_read_lcsh_consolidated",
+      "kind": "vocabulary",
+      "name": "lcsh-subjects-consolidated-2026-08-06",
+      "raw_digest_assignment": false,
+      "reader": "lcsh-consolidated-jsonld-v1/1.0"
+    },
+    {
+      "explicit_false_reader_flag": true,
+      "function": "_read_lc_external_target_endpoints",
+      "kind": "vocabulary",
+      "name": "lc-external-target-endpoints-2026-08-15",
+      "raw_digest_assignment": false,
+      "reader": "lc-external-target-endpoint-ntriples-v1/1.0"
+    },
+    {
+      "explicit_false_reader_flag": true,
+      "function": "_read_lc_external_target_endpoints",
+      "kind": "vocabulary",
+      "name": "lc-external-fast-endpoints-2026-08-15",
+      "raw_digest_assignment": false,
+      "reader": "lc-external-target-endpoint-ntriples-v1/1.0"
+    },
+    {
+      "explicit_false_reader_flag": true,
+      "function": "_read_fast_bulk_see_also_endpoints",
+      "kind": "vocabulary",
+      "name": "fast-bulk-see-also-endpoints-2026-07-27",
+      "raw_digest_assignment": false,
+      "reader": "fast-bulk-see-also-endpoint-v1/1.0"
+    },
+    {
+      "explicit_false_reader_flag": true,
+      "function": "_read_umthes_endpoints",
+      "kind": "vocabulary",
+      "name": "umthes-gemet-endpoints-2026-08-15",
+      "raw_digest_assignment": false,
+      "reader": "umthes-endpoint-ntriples-archive-v1/1.0"
+    }
+  ]
+}

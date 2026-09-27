@@ -1,0 +1,5446 @@
+{
+  "unassigned_class_table_words": [],
+  "classes": [
+    {
+      "page": 1,
+      "page_row": 0,
+      "y": 71.82216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "ALJ Initial Decision/Certification of Initial Decision and Record"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "ALJ Initial Decision/Certification of Initial Decision and Record"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 1,
+      "y": 81.18216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "ALJ Notice"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "ALJ Notice"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 2,
+      "y": 90.54216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Certification of Question and Memorandum to the Commission"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Certification of Question and Memorandum to the Commission"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 3,
+      "y": 99.54216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Certification of Record"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Certification of Record"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 4,
+      "y": 108.90216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Certification of Settlement"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Certification of Settlement"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 5,
+      "y": 118.26216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Discovery Order"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Discovery Order"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 6,
+      "y": 127.62216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Findings of Fact"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Findings of Fact"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 7,
+      "y": 136.98216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Order on Transcript Correction"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Order on Transcript Correction"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 8,
+      "y": 145.98216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Order Permitting Interlocutory Appeal"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Order Permitting Interlocutory Appeal"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 9,
+      "y": 155.34216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Procedural Order/Procedural Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Procedural Order/Procedural Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 10,
+      "y": 164.70216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Protective Order"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Protective Order"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 11,
+      "y": 174.06216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "ALJ Issuance",
+        "Report to the Commission"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "ALJ Issuance",
+        "type_description": "Report to the Commission"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 12,
+      "y": 183.42216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Approved Designation",
+        "Approved Designation"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Approved Designation",
+        "type_description": "Approved Designation"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 13,
+      "y": 192.42216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Comment",
+        "Comment on Pending Legislation"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Comment",
+        "type_description": "Comment on Pending Legislation"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 14,
+      "y": 201.78216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Comment",
+        "Comment on Policies/Procedures Before Government Agencies"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Comment",
+        "type_description": "Comment on Policies/Procedures Before Government Agencies"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 15,
+      "y": 211.14216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Correspondence With Applicant",
+        "Compliance Directives"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Correspondence With Applicant",
+        "type_description": "Compliance Directives"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 16,
+      "y": 220.50216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Correspondence With Applicant",
+        "Deficiency Letter"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Correspondence With Applicant",
+        "type_description": "Deficiency Letter"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 17,
+      "y": 229.50216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Correspondence With Applicant",
+        "General Correspondence"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Correspondence With Applicant",
+        "type_description": "General Correspondence"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 18,
+      "y": 238.86216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Correspondence With Applicant",
+        "Request for Additional Information"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Correspondence With Applicant",
+        "type_description": "Request for Additional Information"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 19,
+      "y": 248.22216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Correspondence With Government Agencies",
+        "FERC Correspondence With Government Agencies"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Correspondence With Government Agencies",
+        "type_description": "FERC Correspondence With Government Agencies"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 20,
+      "y": 257.58216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Memo",
+        "Internal Transmittal Memo"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Memo",
+        "type_description": "Internal Transmittal Memo"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 21,
+      "y": 266.94216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Memo",
+        "Memo to Commission"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Memo",
+        "type_description": "Memo to Commission"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 22,
+      "y": 275.94216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Memo",
+        "Non‐Compliance Memo"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Memo",
+        "type_description": "Non-Compliance Memo"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 23,
+      "y": 285.30216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Memo",
+        "Other Internal Memo"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Memo",
+        "type_description": "Other Internal Memo"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 24,
+      "y": 294.66216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Memo",
+        "Telephone Conversation or Electronic Mail Memo"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Memo",
+        "type_description": "Telephone Conversation or Electronic Mail Memo"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 25,
+      "y": 304.02216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Report/Study",
+        "Audit Summary"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Report/Study",
+        "type_description": "Audit Summary"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 26,
+      "y": 313.02216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Report/Study",
+        "Environmental Assessment (EA) and Environmental Impact Statement (EIS)"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Report/Study",
+        "type_description": "Environmental Assessment (EA) and Environmental Impact Statement (EIS)"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 27,
+      "y": 322.38216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Report/Study",
+        "Environmental Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Report/Study",
+        "type_description": "Environmental Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 28,
+      "y": 331.74216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Report/Study",
+        "Other FERC Report/Study"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Report/Study",
+        "type_description": "Other FERC Report/Study"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 29,
+      "y": 341.10216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "FERC Report/Study",
+        "Policy Study"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "FERC Report/Study",
+        "type_description": "Policy Study"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 30,
+      "y": 350.10216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "Compliance Audit Summary"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "Compliance Audit Summary"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 31,
+      "y": 359.46216,
+      "raw_cells": [
+        "Issuance",
+        "H, G",
+        "FERC Report/Study",
+        "Construction Inspection Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H, G",
+        "classification": "FERC Report/Study",
+        "type_description": "Construction Inspection Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 32,
+      "y": 368.82216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "EPUI and Public Safety Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "EPUI and Public Safety Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 33,
+      "y": 378.18216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "Dam Safety Inspection Report/Operation Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "Dam Safety Inspection Report/Operation Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 34,
+      "y": 387.18216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "Pre‐license or Pre‐Exemption Inspection Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "Pre-license or Pre-Exemption Inspection Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 35,
+      "y": 396.54216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "Safety and Design Assessment"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "Safety and Design Assessment"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 36,
+      "y": 405.90216,
+      "raw_cells": [
+        "Issuance",
+        "H",
+        "FERC Report/Study",
+        "Special Inspection Report"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H",
+        "classification": "FERC Report/Study",
+        "type_description": "Special Inspection Report"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 37,
+      "y": 415.26216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Informational Correspondence",
+        "Informational Correspondence (Miscellaneous Issuances)"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Informational Correspondence",
+        "type_description": "Informational Correspondence (Miscellaneous Issuances)"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 38,
+      "y": 424.62216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, RM, Gen",
+        "Informational Correspondence",
+        "News Release"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Informational Correspondence",
+        "type_description": "News Release"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 39,
+      "y": 433.62216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, RM, Gen",
+        "Informational Correspondence",
+        "Agenda Materials"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Informational Correspondence",
+        "type_description": "Agenda Materials"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 40,
+      "y": 442.98216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Notice",
+        "Formal Notice"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Notice",
+        "type_description": "Formal Notice"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 41,
+      "y": 452.34216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Notice",
+        "Notice of Proposed Rulemaking"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Notice",
+        "type_description": "Notice of Proposed Rulemaking"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 42,
+      "y": 461.70216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Order/Opinion",
+        "Commission Order/Opinion"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Order/Opinion",
+        "type_description": "Commission Order/Opinion"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 43,
+      "y": 470.70216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Order/Opinion",
+        "Delegated Order"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Order/Opinion",
+        "type_description": "Delegated Order"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 44,
+      "y": 480.06216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Order/Opinion",
+        "Dissent/Concurrence by the Commissioner"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Order/Opinion",
+        "type_description": "Dissent/Concurrence by the Commissioner"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 45,
+      "y": 489.42216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Order/Opinion",
+        "Interpretation and Advisory Opinion"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Order/Opinion",
+        "type_description": "Interpretation and Advisory Opinion"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 46,
+      "y": 498.78216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Transcript",
+        "Approved Transcript Correction"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Transcript",
+        "type_description": "Approved Transcript Correction"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 47,
+      "y": 507.78216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Transcript",
+        "Conference/Meeting Transcript"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Transcript",
+        "type_description": "Conference/Meeting Transcript"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 48,
+      "y": 517.14216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Transcript",
+        "Hearing Transcript"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Transcript",
+        "type_description": "Hearing Transcript"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 49,
+      "y": 526.50216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, Gen",
+        "Transcript",
+        "Commission Open Meeting Transcript"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, Gen",
+        "classification": "Transcript",
+        "type_description": "Commission Open Meeting Transcript"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 50,
+      "y": 535.86216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, RM, Gen",
+        "Agreement/Understanding/Contract",
+        "Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Agreement/Understanding/Contract",
+        "type_description": "Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 0,
+      "y": 72.54216,
+      "raw_cells": [
+        "Issuance",
+        "E, G, O, H, RM, Gen",
+        "FERC Correspondence with Tribal Governments",
+        "FERC Correspondence with Tribal Governments"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "FERC Correspondence with Tribal Governments",
+        "type_description": "FERC Correspondence with Tribal Governments"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 1,
+      "y": 85.50216,
+      "raw_cells": [
+        "Issuance",
+        "H, G",
+        "FERC Report/Study",
+        "Scoping Document"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H, G",
+        "classification": "FERC Report/Study",
+        "type_description": "Scoping Document"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 2,
+      "y": 94.86216,
+      "raw_cells": [
+        "Issuance",
+        "H, O, G,",
+        "Application/Petition/Request",
+        "Certification of Generation for Tax Credit"
+      ],
+      "native": {
+        "category": "Issuance",
+        "library": "H, O, G,",
+        "classification": "Application/Petition/Request",
+        "type_description": "Certification of Generation for Tax Credit"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 0,
+      "y": 71.82216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Affirmation",
+        "Affidavits/Sworn Statement"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Affirmation",
+        "type_description": "Affidavits/Sworn Statement"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 1,
+      "y": 81.18216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Affirmation",
+        "Affirmation to Testimony"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Affirmation",
+        "type_description": "Affirmation to Testimony"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 2,
+      "y": 90.54216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Affirmation",
+        "Certificate of Service"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Affirmation",
+        "type_description": "Certificate of Service"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 3,
+      "y": 99.90216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Agreement/Understanding/Contract",
+        "Stipulation"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Agreement/Understanding/Contract",
+        "type_description": "Stipulation"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 4,
+      "y": 108.90216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Agreement/Understanding/Contract",
+        "Contract/Letter Agreement"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Agreement/Understanding/Contract",
+        "type_description": "Contract/Letter Agreement"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 5,
+      "y": 118.26216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Agreement/Understanding/Contract",
+        "Settlement Agreement (Stipulation and Agreement)"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Agreement/Understanding/Contract",
+        "type_description": "Settlement Agreement (Stipulation and Agreement)"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 6,
+      "y": 127.62216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Agreement/Understanding/Contract",
+        "Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Agreement/Understanding/Contract",
+        "type_description": "Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 7,
+      "y": 136.98216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Approval of Interlocking Position"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Approval of Interlocking Position"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 8,
+      "y": 145.98216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Compliance Electric Rate Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Compliance Electric Rate Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 9,
+      "y": 155.34216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Compliance Electric Refund Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Compliance Electric Refund Report"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 10,
+      "y": 164.70216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Disposition of Facilities Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Disposition of Facilities Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 11,
+      "y": 174.06216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Electric Rate Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Electric Rate Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 12,
+      "y": 183.42216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Electric Transmission Service"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Electric Transmission Service"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 13,
+      "y": 192.42216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "ERO Certification or performance assessment"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "ERO Certification or performance assessment"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 14,
+      "y": 201.78216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Exempt Wholesale Generator Request"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Exempt Wholesale Generator Request"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 15,
+      "y": 211.14216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Federal Rate Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Federal Rate Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 16,
+      "y": 220.50216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Foreign Utility Company Request"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Foreign Utility Company Request"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 17,
+      "y": 229.86216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Merger Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Merger Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 18,
+      "y": 238.86216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Qualifying Facility Application or PURPA Energy Utility Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Qualifying Facility Application or PURPA Energy Utility Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 19,
+      "y": 248.22216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Regional Advisory Body"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Regional Advisory Body"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 20,
+      "y": 257.58216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Regional Entities"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Regional Entities"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 21,
+      "y": 266.94216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Reliability Std. ‐approval, remand, or modification"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Reliability Std. -approval, remand, or modification"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 22,
+      "y": 275.94216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Reliability Std. ‐violation, disposition, or penalty"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Reliability Std. -violation, disposition, or penalty"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 23,
+      "y": 285.30216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Rule Change ‐ ERO or Regional Entity"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Rule Change - ERO or Regional Entity"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 24,
+      "y": 294.66216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Securities Issuances"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Securities Issuances"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 25,
+      "y": 304.02216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Standards of Conduct of Public Utility"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Standards of Conduct of Public Utility"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 26,
+      "y": 313.02216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "Waiver of Electric Regulation"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "Waiver of Electric Regulation"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 27,
+      "y": 322.38216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O",
+        "Application/Petition/Request",
+        "Financial Audit Refund Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O",
+        "classification": "Application/Petition/Request",
+        "type_description": "Financial Audit Refund Report"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 28,
+      "y": 331.74216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O",
+        "Application/Petition/Request",
+        "Tariff Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O",
+        "classification": "Application/Petition/Request",
+        "type_description": "Tariff Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 29,
+      "y": 341.10216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, Gen",
+        "Application/Petition/Request",
+        "Utility Accounting Request"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, Gen",
+        "classification": "Application/Petition/Request",
+        "type_description": "Utility Accounting Request"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 30,
+      "y": 350.10216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Application/Petition/Request",
+        "Complaints"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Application/Petition/Request",
+        "type_description": "Complaints"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 31,
+      "y": 359.46216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Application/Petition/Request",
+        "Petition for Declaratory Order"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Application/Petition/Request",
+        "type_description": "Petition for Declaratory Order"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 32,
+      "y": 368.82216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Application/Petition/Request",
+        "Request for Interpretation"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Application/Petition/Request",
+        "type_description": "Request for Interpretation"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 33,
+      "y": 378.18216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Application/Petition/Request",
+        "Waiver of Filing Fee"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Application/Petition/Request",
+        "type_description": "Waiver of Filing Fee"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 34,
+      "y": 387.18216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Application/Petition/Request",
+        "Abandonment of Service or Facility"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Abandonment of Service or Facility"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 35,
+      "y": 396.54216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Application/Petition/Request",
+        "Application for Participation in Pilot Program"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application for Participation in Pilot Program"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 36,
+      "y": 405.90216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Application/Petition/Request",
+        "Application for Presidential Permit for Pipeline Facilities"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application for Presidential Permit for Pipeline Facilities"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 37,
+      "y": 415.26216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Application/Petition/Request",
+        "Certificate of Public Convenience and Necessity"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Certificate of Public Convenience and Necessity"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 38,
+      "y": 424.62216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Application/Petition/Request",
+        "Standards of Conduct"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Standards of Conduct"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 39,
+      "y": 433.62216,
+      "raw_cells": [
+        "Submittal",
+        "G, O",
+        "Application/Petition/Request",
+        "Gas and Oil Tariff Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, O",
+        "classification": "Application/Petition/Request",
+        "type_description": "Gas and Oil Tariff Filing"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 40,
+      "y": 442.98216,
+      "raw_cells": [
+        "Submittal",
+        "G, O",
+        "Application/Petition/Request",
+        "Waiver of Oil or Gas Regulation"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, O",
+        "classification": "Application/Petition/Request",
+        "type_description": "Waiver of Oil or Gas Regulation"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 41,
+      "y": 452.34216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Allegation of Non‐Compliance"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Allegation of Non-Compliance"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 42,
+      "y": 461.70216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Application for Change in Land & Water Rights"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application for Change in Land & Water Rights"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 43,
+      "y": 470.70216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Application for Preliminary Permit"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application for Preliminary Permit"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 44,
+      "y": 480.06216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Application For Transmission Line License"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application For Transmission Line License"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 45,
+      "y": 489.42216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Application To Amend License or Exemption"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Application To Amend License or Exemption"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 46,
+      "y": 498.78216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Comprehensive Plan Section 10(a)(2)(A)"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Comprehensive Plan Section 10(a)(2)(A)"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 47,
+      "y": 508.14216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Declaration of Intent"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Declaration of Intent"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 48,
+      "y": 517.14216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Determination of Jurisdiction"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Determination of Jurisdiction"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 0,
+      "y": 62.82216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Exemption From License ‐ Conduit/5MW"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Exemption From License - Conduit/5MW"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 1,
+      "y": 87.66216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "License/Relicense Application"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "License/Relicense Application"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 2,
+      "y": 103.50216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Surrender"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Surrender"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 3,
+      "y": 122.22216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Transfer of Hydropower License or Exemption"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Transfer of Hydropower License or Exemption"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 4,
+      "y": 131.58216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Waiver Request for Hydro Fees and Charges"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Waiver Request for Hydro Fees and Charges"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 5,
+      "y": 140.58216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Application/Petition/Request",
+        "Waiver Request For Hydro Regulation or Terms/Conditions"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Application/Petition/Request",
+        "type_description": "Waiver Request For Hydro Regulation or Terms/Conditions"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 6,
+      "y": 149.94216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Correspondence Concerning Filing Fees and Annual Charges"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Correspondence Concerning Filing Fees and Annual Charges"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 7,
+      "y": 159.30216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Deficiency Letter/Data Response"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Deficiency Letter/Data Response"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 8,
+      "y": 168.66216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "General Correspondence"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "General Correspondence"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 9,
+      "y": 178.02216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Request for Delay of Action/Extension of Time"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Request for Delay of Action/Extension of Time"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 10,
+      "y": 187.02216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Response to Inquiry"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Response to Inquiry"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 11,
+      "y": 196.38216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Supplemental/Additional Information"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Supplemental/Additional Information"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 12,
+      "y": 205.74216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Applicant Correspondence",
+        "Withdrawal of Application"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Applicant Correspondence",
+        "type_description": "Withdrawal of Application"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 13,
+      "y": 215.10216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Briefing/Arguments of Law",
+        "Brief"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Briefing/Arguments of Law",
+        "type_description": "Brief"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 14,
+      "y": 224.10216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Briefing/Arguments of Law",
+        "Findings of Fact/Conclusions of Law"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Briefing/Arguments of Law",
+        "type_description": "Findings of Fact/Conclusions of Law"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 15,
+      "y": 233.46216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Briefing/Arguments of Law",
+        "Statement of Issues or Position"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Briefing/Arguments of Law",
+        "type_description": "Statement of Issues or Position"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 16,
+      "y": 242.82216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Comments/Protest",
+        "Comment on Filing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Comments/Protest",
+        "type_description": "Comment on Filing"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 17,
+      "y": 252.18216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Comments/Protest",
+        "Settlement Comment"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Comments/Protest",
+        "type_description": "Settlement Comment"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 18,
+      "y": 261.18216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Comments/Protest",
+        "Rulemaking Comment"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Comments/Protest",
+        "type_description": "Rulemaking Comment"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 19,
+      "y": 270.54216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Comments/Protest",
+        "Litigation Comment"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Comments/Protest",
+        "type_description": "Litigation Comment"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 20,
+      "y": 279.90216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Court Related Documents",
+        "Court Related Documents"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Court Related Documents",
+        "type_description": "Court Related Documents"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 21,
+      "y": 289.26216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Deposition Document",
+        "Deposition"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Deposition Document",
+        "type_description": "Deposition"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 22,
+      "y": 298.62216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Deposition Document",
+        "Notice/Motion to Depose"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Deposition Document",
+        "type_description": "Notice/Motion to Depose"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 23,
+      "y": 307.62216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Deposition Document",
+        "Objection to Deposition"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Deposition Document",
+        "type_description": "Objection to Deposition"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 24,
+      "y": 316.98216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Drawing/Maps",
+        "Drawing/Maps"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Drawing/Maps",
+        "type_description": "Drawing/Maps"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 25,
+      "y": 326.34216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Exhibit",
+        "Exhibit"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Exhibit",
+        "type_description": "Exhibit"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 26,
+      "y": 335.70216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Interrogatory/Data Request",
+        "Data Request Document"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Interrogatory/Data Request",
+        "type_description": "Data Request Document"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 27,
+      "y": 345.06216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Interrogatory/Data Request",
+        "Response to Data Request"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Interrogatory/Data Request",
+        "type_description": "Response to Data Request"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 28,
+      "y": 354.06216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H",
+        "Intervention",
+        "Motion to Intervene Out of Time"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H",
+        "classification": "Intervention",
+        "type_description": "Motion to Intervene Out of Time"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 29,
+      "y": 363.42216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H",
+        "Intervention",
+        "Motion/Notice of Intervention"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H",
+        "classification": "Intervention",
+        "type_description": "Motion/Notice of Intervention"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 30,
+      "y": 372.78216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H",
+        "Intervention",
+        "Withdrawal of Intervention"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H",
+        "classification": "Intervention",
+        "type_description": "Withdrawal of Intervention"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 31,
+      "y": 381.78216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Other Submittal",
+        "Congressional Submittal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Other Submittal",
+        "type_description": "Congressional Submittal"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 32,
+      "y": 391.14216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Other Submittal",
+        "Government Agency Submittal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Other Submittal",
+        "type_description": "Government Agency Submittal"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 33,
+      "y": 400.50216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Other Submittal",
+        "Other External Submittal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Other Submittal",
+        "type_description": "Other External Submittal"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 34,
+      "y": 409.86216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Answer/Response to a Pleading/Motion"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Answer/Response to a Pleading/Motion"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 35,
+      "y": 419.22216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Election"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Election"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 36,
+      "y": 428.22216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Motion to Compel Production"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Motion to Compel Production"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 37,
+      "y": 437.58216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Objection to Motion to Compel Production"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Objection to Motion to Compel Production"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 38,
+      "y": 446.94216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Petition for Review"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Petition for Review"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 39,
+      "y": 456.30216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Production of Document"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Production of Document"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 40,
+      "y": 465.30216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Request for Hearing"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Request for Hearing"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 41,
+      "y": 474.66216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Pleading/Motion",
+        "Response to Complaint"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Response to Complaint"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 42,
+      "y": 484.02216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Pleading/Motion",
+        "Procedural Motion"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Procedural Motion"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 43,
+      "y": 493.38216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Pleading/Motion",
+        "Request for Rehearing or Appeal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Pleading/Motion",
+        "type_description": "Request for Rehearing or Appeal"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 44,
+      "y": 502.74216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Annual Charges Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Annual Charges Report"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 45,
+      "y": 511.74216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "California PX/ISO Monthly Reports"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "California PX/ISO Monthly Reports"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 46,
+      "y": 521.10216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Electric Quarterly Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Electric Quarterly Report"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 47,
+      "y": 530.46216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "FERC Form 719 Public Utility Sellers Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "FERC Form 719 Public Utility Sellers Report"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 48,
+      "y": 539.82216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "FERC‐61 ‐ Narrative Description of Service Company Functions"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "FERC-61 - Narrative Description of Service Company Functions"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 0,
+      "y": 62.82216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "FERC‐730 ‐ Report of Transaction Investment Activity"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "FERC-730 - Report of Transaction Investment Activity"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 1,
+      "y": 71.82216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 1 ‐ Annual Rpt. for Major Electric Utilities, Licensees & Others"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 1 - Annual Rpt. for Major Electric Utilities, Licensees & Others"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 2,
+      "y": 104.58216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 423 ‐ Monthly Rpt. of Cost & Quality of Fuels for Electric Plants"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 423 - Monthly Rpt. of Cost & Quality of Fuels for Electric Plants"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 3,
+      "y": 113.94216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 561 ‐ Annual Report of Interlocking Positions"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 561 - Annual Report of Interlocking Positions"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 4,
+      "y": 123.30216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 566 ‐ Report of Utilitys 20 Largest Purchasers"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 566 - Report of Utilitys 20 Largest Purchasers"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 5,
+      "y": 132.30216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 580 ‐ Fuel and Energy Purchase Practices"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 580 - Fuel and Energy Purchase Practices"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 6,
+      "y": 151.02216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 60 ‐ Annual Report by \"Centralized\" Service Company"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 60 - Annual Report by \"Centralized\" Service Company"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 7,
+      "y": 160.38216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 714 ‐ Annual Electric Control and Planning Area Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 714 - Annual Electric Control and Planning Area Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 8,
+      "y": 169.38216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 715 ‐ Annual Transmission Planning and Evaluation Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 715 - Annual Transmission Planning and Evaluation Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 9,
+      "y": 178.74216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Securities Transaction Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Securities Transaction Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 10,
+      "y": 188.10216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Power Marketer Quarterly Reports"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Power Marketer Quarterly Reports"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 11,
+      "y": 197.46216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, H",
+        "Report/Form",
+        "Form 3‐Q ‐Quarterly financial report of electric utilities‐ licensees‐ and natural gas companies"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, H",
+        "classification": "Report/Form",
+        "type_description": "Form 3-Q -Quarterly financial report of electric utilities- licensees- and natural gas companies"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 12,
+      "y": 206.46216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O",
+        "Report/Form",
+        "CPA Statement Certifications"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O",
+        "classification": "Report/Form",
+        "type_description": "CPA Statement Certifications"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 13,
+      "y": 215.82216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O",
+        "Report/Form",
+        "Report of Refund Obligation"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O",
+        "classification": "Report/Form",
+        "type_description": "Report of Refund Obligation"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 14,
+      "y": 225.18216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Report/Form",
+        "Fee Collection or Validation Forms"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Report/Form",
+        "type_description": "Fee Collection or Validation Forms"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 15,
+      "y": 234.54216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Report/Form",
+        "Other Utility Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Report/Form",
+        "type_description": "Other Utility Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 16,
+      "y": 243.90216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "157.207 Annual Construction Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "157.207 Annual Construction Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 17,
+      "y": 252.90216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Pre-Filing Process"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Pre-Filing Process"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 18,
+      "y": 262.26216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Pre-Filing Process Progress Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Pre-Filing Process Progress Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 19,
+      "y": 271.62216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "2.55 Annual Construction Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "2.55 Annual Construction Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 20,
+      "y": 280.98216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "260.9 Service Interruption Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "260.9 Service Interruption Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 21,
+      "y": 289.98216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "284.11 Annual Construction Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "284.11 Annual Construction Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 22,
+      "y": 299.34216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "284.126 (g) Semi‐Annual Storage Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "284.126 (g) Semi-Annual Storage Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 23,
+      "y": 308.70216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "284.288 Annual Pipeline Sales Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "284.288 Annual Pipeline Sales Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 24,
+      "y": 318.06216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Annual Charges Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Annual Charges Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 25,
+      "y": 327.06216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Certificate of Compliance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Certificate of Compliance Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 26,
+      "y": 336.42216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Emergency Gas Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Emergency Gas Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 27,
+      "y": 345.78216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 11 ‐ Natural Gas Pipeline Company Qtrly. Stmt. of Monthly"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 11 - Natural Gas Pipeline Company Qtrly. Stmt. of Monthly"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 28,
+      "y": 355.14216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 14 ‐ Annual Report for Importers and Exporters of Natural Gas"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 14 - Annual Report for Importers and Exporters of Natural Gas"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 29,
+      "y": 364.50216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 2 ‐ Annual Report of Major Natural Gas Companies"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 2 - Annual Report of Major Natural Gas Companies"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 30,
+      "y": 373.50216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 2‐A ‐ Annual Report of Non‐Major Natural Gas Companies"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 2-A - Annual Report of Non-Major Natural Gas Companies"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 31,
+      "y": 382.86216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 567 ‐ Annual Report of System Flow Diagrams and Capacity"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 567 - Annual Report of System Flow Diagrams and Capacity"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 32,
+      "y": 392.22216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Gas Refund Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Gas Refund Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 33,
+      "y": 401.58216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Index of Customer"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Index of Customer"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 34,
+      "y": 410.58216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Notice/Report of Intent to Proceed with Emergency Procedures"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Notice/Report of Intent to Proceed with Emergency Procedures"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 35,
+      "y": 419.94216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "OCSLA (Outer Continental Shelf Lands Act) Reports"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "OCSLA (Outer Continental Shelf Lands Act) Reports"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 36,
+      "y": 429.30216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Peak Day Capacity Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Peak Day Capacity Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 37,
+      "y": 438.66216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Transportation Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Transportation Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 38,
+      "y": 447.66216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Discount Rate Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Discount Rate Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 39,
+      "y": 457.02216,
+      "raw_cells": [
+        "Submittal",
+        "G, H",
+        "Report/Form",
+        "Cultural Resources Inventory ‐ Report/Archaeological Study"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, H",
+        "classification": "Report/Form",
+        "type_description": "Cultural Resources Inventory - Report/Archaeological Study"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 40,
+      "y": 466.38216,
+      "raw_cells": [
+        "Submittal",
+        "G, H",
+        "Report/Form",
+        "Environmental Study & Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, H",
+        "classification": "Report/Form",
+        "type_description": "Environmental Study & Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 41,
+      "y": 475.74216,
+      "raw_cells": [
+        "Submittal",
+        "G, O",
+        "Report/Form",
+        "Form 542 ‐ Purchased Gas Adjustment"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, O",
+        "classification": "Report/Form",
+        "type_description": "Form 542 - Purchased Gas Adjustment"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 42,
+      "y": 484.74216,
+      "raw_cells": [
+        "Submittal",
+        "G, O",
+        "Report/Form",
+        "Form 8 ‐ Underground Gas Storage Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G, O",
+        "classification": "Report/Form",
+        "type_description": "Form 8 - Underground Gas Storage Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 43,
+      "y": 494.10216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Accident Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Accident Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 44,
+      "y": 503.46216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Annual Conveyance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Annual Conveyance Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 45,
+      "y": 512.82216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Annual Generation Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Annual Generation Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 46,
+      "y": 522.18216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Annual Headwater Benefits Compliance"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Annual Headwater Benefits Compliance"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 47,
+      "y": 531.18216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Annual Spill Gate Testing Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Annual Spill Gate Testing Report"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 48,
+      "y": 540.54216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Annual Water Quality/Minimum Flow"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Annual Water Quality/Minimum Flow"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 0,
+      "y": 62.82216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Dam Safety Compliance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Dam Safety Compliance Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 1,
+      "y": 71.82216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "EAP Testing Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "EAP Testing Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 2,
+      "y": 81.18216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Emergency Action Plan"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Emergency Action Plan"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 3,
+      "y": 90.54216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Environmental and Recreational Compliance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Environmental and Recreational Compliance Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 4,
+      "y": 123.30216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "ILP Comments or Study Request"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "ILP Comments or Study Request"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 5,
+      "y": 132.30216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "ILP Initial or Updated Study Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "ILP Initial or Updated Study Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 6,
+      "y": 141.66216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "ILP Notice of Request for Formal Dispute Resolution"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "ILP Notice of Request for Formal Dispute Resolution"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 7,
+      "y": 151.02216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "ILP Preliminary Licensing Proposal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "ILP Preliminary Licensing Proposal"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 8,
+      "y": 160.38216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "ILP Proposed Study Plan or Revised Study Plan"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "ILP Proposed Study Plan or Revised Study Plan"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 9,
+      "y": 169.74216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Other Dam Safety Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Other Dam Safety Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 10,
+      "y": 178.74216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Part 12 Consultant Safety Inspection Reports"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Part 12 Consultant Safety Inspection Reports"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 11,
+      "y": 188.10216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Form 80 ‐ Licensed Hydropower Development Recreation Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Form 80 - Licensed Hydropower Development Recreation Report"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 12,
+      "y": 197.46216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "Form 1‐F ‐ Annual Report for Non‐Major Public Utilities"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "Form 1-F - Annual Report for Non-Major Public Utilities"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 13,
+      "y": 206.82216,
+      "raw_cells": [
+        "Submittal",
+        "H, O, G",
+        "Application/Petition/Request",
+        "Certification of Generation for Tax Credit"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H, O, G",
+        "classification": "Application/Petition/Request",
+        "type_description": "Certification of Generation for Tax Credit"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 0,
+      "y": 73.26216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Pre‐Application Document"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Pre-Application Document"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 1,
+      "y": 82.62216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Preliminary Permit Progress Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Preliminary Permit Progress Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 2,
+      "y": 91.62216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Progress Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Progress Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 3,
+      "y": 100.98216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Project Operations Compliance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Project Operations Compliance Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 4,
+      "y": 110.34216,
+      "raw_cells": [
+        "Submittal",
+        "H",
+        "Report/Form",
+        "Project Safety Compliance Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H",
+        "classification": "Report/Form",
+        "type_description": "Project Safety Compliance Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 5,
+      "y": 119.70216,
+      "raw_cells": [
+        "Submittal",
+        "O",
+        "Report/Form",
+        "Form 6 ‐ Annual Report of Oil Pipeline Companies"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "O",
+        "classification": "Report/Form",
+        "type_description": "Form 6 - Annual Report of Oil Pipeline Companies"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 6,
+      "y": 129.06216,
+      "raw_cells": [
+        "Submittal",
+        "O",
+        "Report/Form",
+        "Form 6‐Q ‐Quarterly report of oil pipeline companies"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "O",
+        "classification": "Report/Form",
+        "type_description": "Form 6-Q -Quarterly report of oil pipeline companies"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 7,
+      "y": 138.06216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Status Report",
+        "Status Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Status Report",
+        "type_description": "Status Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 8,
+      "y": 147.42216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Subpoena",
+        "Subpoena"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Subpoena",
+        "type_description": "Subpoena"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 9,
+      "y": 156.78216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Testimony",
+        "Initial Testimony"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Testimony",
+        "type_description": "Initial Testimony"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 10,
+      "y": 166.14216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Testimony",
+        "Response (Rebuttal) Testimony"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Testimony",
+        "type_description": "Response (Rebuttal) Testimony"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 11,
+      "y": 175.14216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, Gen",
+        "Top Sheet",
+        "Top Sheet"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, Gen",
+        "classification": "Top Sheet",
+        "type_description": "Top Sheet"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 12,
+      "y": 184.50216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Application/Petition/Request",
+        "ERO Funding"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Application/Petition/Request",
+        "type_description": "ERO Funding"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 13,
+      "y": 193.86216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Informational Correspondence",
+        "Agenda Materials"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Informational Correspondence",
+        "type_description": "Agenda Materials"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 14,
+      "y": 203.22216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H",
+        "Litigation Correspondence",
+        "Litigation Correspondence"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H",
+        "classification": "Litigation Correspondence",
+        "type_description": "Litigation Correspondence"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 15,
+      "y": 212.22216,
+      "raw_cells": [
+        "Submittal",
+        "E, G, O, H, RM, Gen",
+        "Other Submittal",
+        "Tribal Government Submittal"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E, G, O, H, RM, Gen",
+        "classification": "Other Submittal",
+        "type_description": "Tribal Government Submittal"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 16,
+      "y": 221.58216,
+      "raw_cells": [
+        "Submittal",
+        "H, E and RM",
+        "Report/Form",
+        "Annual Charges Report"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "H, E and RM",
+        "classification": "Report/Form",
+        "type_description": "Annual Charges Report"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 17,
+      "y": 230.94216,
+      "raw_cells": [
+        "Submittal",
+        "E",
+        "Report/Form",
+        "ERO Reliability or Adequacy assess. or requested info."
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "E",
+        "classification": "Report/Form",
+        "type_description": "ERO Reliability or Adequacy assess. or requested info."
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 18,
+      "y": 240.30216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 549D‐Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines"
+      }
+    },
+    {
+      "page": 7,
+      "page_row": 19,
+      "y": 249.66216,
+      "raw_cells": [
+        "Submittal",
+        "G",
+        "Report/Form",
+        "Form 552 ‐ Annual Report of Natural Gas Transactions"
+      ],
+      "native": {
+        "category": "Submittal",
+        "library": "G",
+        "classification": "Report/Form",
+        "type_description": "Form 552 - Annual Report of Natural Gas Transactions"
+      }
+    }
+  ],
+  "dockets": [
+    {
+      "page": 1,
+      "page_row": 0,
+      "raw_cells": [
+        "AC",
+        "Gen",
+        "Requests for Approval by Chief Accountant"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "AC",
+        "library": "Gen",
+        "definition": "Requests for Approval by Chief Accountant"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 1,
+      "raw_cells": [
+        "AD",
+        "Gen",
+        "Administrative"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "AD",
+        "library": "Gen",
+        "definition": "Administrative"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 2,
+      "raw_cells": [
+        "AI",
+        "Gen",
+        "Requests for Interpretations by Chief Accountant"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "AI",
+        "library": "Gen",
+        "definition": "Requests for Interpretations by Chief Accountant"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 3,
+      "raw_cells": [
+        "CD",
+        "H",
+        "Conduit Determination (< than 5 MW Facility)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "CD",
+        "library": "H",
+        "definition": "Conduit Determination (< than 5 MW Facility)"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 4,
+      "raw_cells": [
+        "CE",
+        "E, G, O, H, Gen",
+        "Critical Energy Infrastructure Information"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "CE",
+        "library": "E, G, O, H, Gen",
+        "definition": "Critical Energy Infrastructure Information"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 5,
+      "raw_cells": [
+        "CP",
+        "G",
+        "Certiﬁcates for Interstate Natural Gas Pipeline Companies"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "CP",
+        "library": "G",
+        "definition": "Certificates for Interstate Natural Gas Pipeline Companies"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 6,
+      "raw_cells": [
+        "CX",
+        "H, E, G, O",
+        "Categorical Exclusions"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "CX",
+        "library": "H, E, G, O",
+        "definition": "Categorical Exclusions"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 7,
+      "raw_cells": [
+        "DI",
+        "H",
+        "Declarations of Intention and Petitions for Declaratory Order"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "DI",
+        "library": "H",
+        "definition": "Declarations of Intention and Petitions for Declaratory Order"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 8,
+      "raw_cells": [
+        "DO",
+        "O",
+        "Depreciation and Related Matters Pertaining to Oil Pipelines"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "DO",
+        "library": "O",
+        "definition": "Depreciation and Related Matters Pertaining to Oil Pipelines"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 9,
+      "raw_cells": [
+        "DR",
+        "E",
+        "Depreciation Rates for Accounting Purposes"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "DR",
+        "library": "E",
+        "definition": "Depreciation Rates for Accounting Purposes"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 10,
+      "raw_cells": [
+        "DV",
+        "H",
+        "Power Site Lands, Restoration, Withdrawal and Vacation (Bureau of Land Management)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "DV",
+        "library": "H",
+        "definition": "Power Site Lands, Restoration, Withdrawal and Vacation (Bureau of Land Management)"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 11,
+      "raw_cells": [
+        "EC",
+        "E",
+        "Applications of Electric Public Utilities for Authority to Sell, Lease, Purchase, Acquire, or Merge, and Applications for Determination of Jurisdiction"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EC",
+        "library": "E",
+        "definition": "Applications of Electric Public Utilities for Authority to Sell, Lease, Purchase, Acquire, or Merge, and Applications for Determination of Jurisdiction"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 12,
+      "raw_cells": [
+        "EF",
+        "E",
+        "Federal Electric Rates for DOE's Power Administrations"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EF",
+        "library": "E",
+        "definition": "Federal Electric Rates for DOE's Power Administrations"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 13,
+      "raw_cells": [
+        "EG",
+        "E",
+        "Applications for Exempt Wholesale Generation Determinations"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EG",
+        "library": "E",
+        "definition": "Applications for Exempt Wholesale Generation Determinations"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 14,
+      "raw_cells": [
+        "EL",
+        "E",
+        "Miscellaneous Formal Filings Related to Electric Power"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EL",
+        "library": "E",
+        "definition": "Miscellaneous Formal Filings Related to Electric Power"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 15,
+      "raw_cells": [
+        "EM",
+        "G",
+        "Emergency Natural Gas Sales, Transportation, Exchange Transactions and Replacement of Facilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EM",
+        "library": "G",
+        "definition": "Emergency Natural Gas Sales, Transportation, Exchange Transactions and Replacement of Facilities"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 16,
+      "raw_cells": [
+        "EP",
+        "H",
+        "Power Site Reserves, Classiﬁcations and Designations, Right-of- Way or Lease of Federal Lands (Bureau of Land Management)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EP",
+        "library": "H",
+        "definition": "Power Site Reserves, Classifications and Designations, Right-of- Way or Lease of Federal Lands (Bureau of Land Management)"
+      }
+    },
+    {
+      "page": 1,
+      "page_row": 17,
+      "raw_cells": [
+        "ER",
+        "E",
+        "Electric Rate Filings"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ER",
+        "library": "E",
+        "definition": "Electric Rate Filings"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 0,
+      "raw_cells": [
+        "ES",
+        "E",
+        "Issuance of Securities and Assumption of Liabilities of Electric Utilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ES",
+        "library": "E",
+        "definition": "Issuance of Securities and Assumption of Liabilities of Electric Utilities"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 1,
+      "raw_cells": [
+        "ET",
+        "E",
+        "Application and Exhibits for a Permit to Site New Electric Transmission Facilities or Modify Existing Facilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ET",
+        "library": "E",
+        "definition": "Application and Exhibits for a Permit to Site New Electric Transmission Facilities or Modify Existing Facilities"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 2,
+      "raw_cells": [
+        "EX",
+        "E",
+        "Electric Discussion Items"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EX",
+        "library": "E",
+        "definition": "Electric Discussion Items"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 3,
+      "raw_cells": [
+        "EY",
+        "E",
+        "Emergency Reports for Deviations from Standards of Conduct"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "EY",
+        "library": "E",
+        "definition": "Emergency Reports for Deviations from Standards of Conduct"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 4,
+      "raw_cells": [
+        "FA",
+        "Gen",
+        "Financial Audits by the Chief Accountant for Jurisdictional Companies"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "FA",
+        "library": "Gen",
+        "definition": "Financial Audits by the Chief Accountant for Jurisdictional Companies"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 5,
+      "raw_cells": [
+        "FC",
+        "E or G",
+        "Foreign Utility Company Request"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "FC",
+        "library": "E or G",
+        "definition": "Foreign Utility Company Request"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 6,
+      "raw_cells": [
+        "GP",
+        "G",
+        "General Tracking Docket Category for Matters Under the Natural Gas Policy Act"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "GP",
+        "library": "G",
+        "definition": "General Tracking Docket Category for Matters Under the Natural Gas Policy Act"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 7,
+      "raw_cells": [
+        "GT",
+        "G",
+        "General Tariﬀ Changes for Interstate Gas Pipelines"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "GT",
+        "library": "G",
+        "definition": "General Tariff Changes for Interstate Gas Pipelines"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 8,
+      "raw_cells": [
+        "GX",
+        "G",
+        "Gas Discussion Items"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "GX",
+        "library": "G",
+        "definition": "Gas Discussion Items"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 9,
+      "raw_cells": [
+        "HC",
+        "E or G",
+        "Certain Filings by Holding Companies under PUHCA"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "HC",
+        "library": "E or G",
+        "definition": "Certain Filings by Holding Companies under PUHCA"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 10,
+      "raw_cells": [
+        "IN",
+        "Gen",
+        "Investigations Instituted by OGC-Enforcement"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "IN",
+        "library": "Gen",
+        "definition": "Investigations Instituted by OGC-Enforcement"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 11,
+      "raw_cells": [
+        "IS",
+        "O",
+        "Investigations and Suspensions into Rates, Fares, Charges & Practices of Oil P/Ls"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "IS",
+        "library": "O",
+        "definition": "Investigations and Suspensions into Rates, Fares, Charges & Practices of Oil P/Ls"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 12,
+      "raw_cells": [
+        "JR",
+        "H",
+        "Jurisdictional Reviews of Licensed Projects"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "JR",
+        "library": "H",
+        "definition": "Jurisdictional Reviews of Licensed Projects"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 13,
+      "raw_cells": [
+        "LA",
+        "E",
+        "Order 697-C Site Acquisition Quarterly Reports"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "LA",
+        "library": "E",
+        "definition": "Order 697-C Site Acquisition Quarterly Reports"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 14,
+      "raw_cells": [
+        "LP",
+        "H",
+        "Lease of Power Privilege (Bureau of Reclamation)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "LP",
+        "library": "H",
+        "definition": "Lease of Power Privilege (Bureau of Reclamation)"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 15,
+      "raw_cells": [
+        "MC",
+        "H",
+        "Mining Claims for Locatable Minerals (Bureau of Land Management)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "MC",
+        "library": "H",
+        "definition": "Mining Claims for Locatable Minerals (Bureau of Land Management)"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 16,
+      "raw_cells": [
+        "MD",
+        "E, G",
+        "Mediation and Arbitration"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "MD",
+        "library": "E, G",
+        "definition": "Mediation and Arbitration"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 17,
+      "raw_cells": [
+        "MG",
+        "G",
+        "Marketing Aﬃliates Non-Tariﬀ General Filings under Order No. 497"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "MG",
+        "library": "G",
+        "definition": "Marketing Affiliates Non-Tariff General Filings under Order No. 497"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 18,
+      "raw_cells": [
+        "ML",
+        "H",
+        "Mineral Leases Usually Oil & Gas (Bureau of Land Management)"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ML",
+        "library": "H",
+        "definition": "Mineral Leases Usually Oil & Gas (Bureau of Land Management)"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 19,
+      "raw_cells": [
+        "MO",
+        "E",
+        "State of the Market Reports"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "MO",
+        "library": "E",
+        "definition": "State of the Market Reports"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 20,
+      "raw_cells": [
+        "MT",
+        "G",
+        "Tariﬀ Filings under Order No. 497"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "MT",
+        "library": "G",
+        "definition": "Tariff Filings under Order No. 497"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 21,
+      "raw_cells": [
+        "NJ",
+        "E",
+        "Non-Jurisdictional / Electric"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "NJ",
+        "library": "E",
+        "definition": "Non-Jurisdictional / Electric"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 22,
+      "raw_cells": [
+        "NL",
+        "E, G, O",
+        "No-Action Letter"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "NL",
+        "library": "E, G, O",
+        "definition": "No-Action Letter"
+      }
+    },
+    {
+      "page": 2,
+      "page_row": 23,
+      "raw_cells": [
+        "NP",
+        "E",
+        "Notice of Penalty"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "NP",
+        "library": "E",
+        "definition": "Notice of Penalty"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 0,
+      "raw_cells": [
+        "NR",
+        "Gen",
+        "News Releases"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "NR",
+        "library": "Gen",
+        "definition": "News Releases"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 1,
+      "raw_cells": [
+        "OA",
+        "E",
+        "Open Access Transmission Tariﬀs"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "OA",
+        "library": "E",
+        "definition": "Open Access Transmission Tariffs"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 2,
+      "raw_cells": [
+        "OR",
+        "O",
+        "Oil Pipeline Rate Cases"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "OR",
+        "library": "O",
+        "definition": "Oil Pipeline Rate Cases"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 3,
+      "raw_cells": [
+        "OT",
+        "O",
+        "Oil Pipeline Tariﬀs"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "OT",
+        "library": "O",
+        "definition": "Oil Pipeline Tariffs"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 4,
+      "raw_cells": [
+        "PA",
+        "E, G, O, H, Gen",
+        "Audits other than ﬁnancial audits by the Chief Accountant"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PA",
+        "library": "E, G, O, H, Gen",
+        "definition": "Audits other than financial audits by the Chief Accountant"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 5,
+      "raw_cells": [
+        "PF",
+        "G",
+        "Pre-Filing NEPA Activities for Proposed Gas Pipelines"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PF",
+        "library": "G",
+        "definition": "Pre-Filing NEPA Activities for Proposed Gas Pipelines"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 6,
+      "raw_cells": [
+        "PH",
+        "E or G",
+        "Exemption from or Waiver of Regulation as Holding Company (FERC-65A [Exemption Notiﬁcation] and FERC- 65B [Waiver Notiﬁcation])"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PH",
+        "library": "E or G",
+        "definition": "Exemption from or Waiver of Regulation as Holding Company (FERC-65A [Exemption Notification] and FERC- 65B [Waiver Notification])"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 7,
+      "raw_cells": [
+        "PL",
+        "Gen, RM",
+        "General Policy Cases"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PL",
+        "library": "Gen, RM",
+        "definition": "General Policy Cases"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 8,
+      "raw_cells": [
+        "PR",
+        "G",
+        "Petitions for Rate Approval for Transportation of Natural Gas under NGPA"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PR",
+        "library": "G",
+        "definition": "Petitions for Rate Approval for Transportation of Natural Gas under NGPA"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 9,
+      "raw_cells": [
+        "PT",
+        "E",
+        "Preﬁlling Activity for a Permit to Site New Electric Transmission Facilities or Modify Existing Facilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "PT",
+        "library": "E",
+        "definition": "Prefilling Activity for a Permit to Site New Electric Transmission Facilities or Modify Existing Facilities"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 10,
+      "raw_cells": [
+        "QF",
+        "E",
+        "Qualifying Status of Cogeneration and Small Power Production Facilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "QF",
+        "library": "E",
+        "definition": "Qualifying Status of Cogeneration and Small Power Production Facilities"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 11,
+      "raw_cells": [
+        "QM",
+        "E",
+        "Relief from, or Reinstatement of, Mandatory Purchase or Sell Requirement between Utility and Qualifying Facility, as mandated by the Energy Policy Act of 2005"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "QM",
+        "library": "E",
+        "definition": "Relief from, or Reinstatement of, Mandatory Purchase or Sell Requirement between Utility and Qualifying Facility, as mandated by the Energy Policy Act of 2005"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 12,
+      "raw_cells": [
+        "RA",
+        "G, O",
+        "Appeals form Denial of Requests for Adjustments Issued by Economic Regulatory Administration, DOE"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RA",
+        "library": "G, O",
+        "definition": "Appeals form Denial of Requests for Adjustments Issued by Economic Regulatory Administration, DOE"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 13,
+      "raw_cells": [
+        "RC",
+        "E",
+        "Compliance and Enforcement of Reliability Standards"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RC",
+        "library": "E",
+        "definition": "Compliance and Enforcement of Reliability Standards"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 14,
+      "raw_cells": [
+        "RD",
+        "E",
+        "Electric Reliability Standards"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RD",
+        "library": "E",
+        "definition": "Electric Reliability Standards"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 15,
+      "raw_cells": [
+        "RM",
+        "Gen, RM",
+        "Rulemaking Proceedings"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RM",
+        "library": "Gen, RM",
+        "definition": "Rulemaking Proceedings"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 16,
+      "raw_cells": [
+        "RO",
+        "G, O",
+        "Appeals from Remedial Orders Issued by Economic Regulatory Administration, DOE"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RO",
+        "library": "G, O",
+        "definition": "Appeals from Remedial Orders Issued by Economic Regulatory Administration, DOE"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 17,
+      "raw_cells": [
+        "RP",
+        "G",
+        "Rates for Interstate Natural Gas Pipeline Companies"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RP",
+        "library": "G",
+        "definition": "Rates for Interstate Natural Gas Pipeline Companies"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 18,
+      "raw_cells": [
+        "RR",
+        "E",
+        "ERO Rules and Organizational Filings"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RR",
+        "library": "E",
+        "definition": "ERO Rules and Organizational Filings"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 19,
+      "raw_cells": [
+        "RS",
+        "G",
+        "Restructuring Gas Cases under Order No. 636"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RS",
+        "library": "G",
+        "definition": "Restructuring Gas Cases under Order No. 636"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 20,
+      "raw_cells": [
+        "RT",
+        "E",
+        "Electric Rate Filings – Rate Transmission"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "RT",
+        "library": "E",
+        "definition": "Electric Rate Filings – Rate Transmission"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 21,
+      "raw_cells": [
+        "SA",
+        "G",
+        "Staﬀ Adjustments under Section 502 of NGPA"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "SA",
+        "library": "G",
+        "definition": "Staff Adjustments under Section 502 of NGPA"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 22,
+      "raw_cells": [
+        "SC",
+        "E",
+        "Stranded Costs / Electric"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "SC",
+        "library": "E",
+        "definition": "Stranded Costs / Electric"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 23,
+      "raw_cells": [
+        "TC",
+        "G",
+        "Tariﬀ Curtailments of Interstate Natural Gas Pipelines"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TC",
+        "library": "G",
+        "definition": "Tariff Curtailments of Interstate Natural Gas Pipelines"
+      }
+    },
+    {
+      "page": 3,
+      "page_row": 24,
+      "raw_cells": [
+        "TF",
+        "G",
+        "Flexible Tracking Adjustments not Accompanied by Quarterly or Annual PGA Filings"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TF",
+        "library": "G",
+        "definition": "Flexible Tracking Adjustments not Accompanied by Quarterly or Annual PGA Filings"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 0,
+      "raw_cells": [
+        "TM",
+        "G",
+        "Miscellaneous Tracking Adjustments not Accompanied by Quarterly or Annual PGA Filings"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TM",
+        "library": "G",
+        "definition": "Miscellaneous Tracking Adjustments not Accompanied by Quarterly or Annual PGA Filings"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 1,
+      "raw_cells": [
+        "TQ",
+        "G",
+        "Quarterly Tracking Filings and Out-of-Cycle PGA Filings of Interstate Natural Gas Pipelines"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TQ",
+        "library": "G",
+        "definition": "Quarterly Tracking Filings and Out-of-Cycle PGA Filings of Interstate Natural Gas Pipelines"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 2,
+      "raw_cells": [
+        "TS",
+        "E, G",
+        "Transmission Standards"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TS",
+        "library": "E, G",
+        "definition": "Transmission Standards"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 3,
+      "raw_cells": [
+        "TX",
+        "E",
+        "Transmission Services under Section 211 of the Federal Power Act"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "TX",
+        "library": "E",
+        "definition": "Transmission Services under Section 211 of the Federal Power Act"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 4,
+      "raw_cells": [
+        "UL",
+        "H",
+        "Unlicensed Hydroelectric Projects"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "UL",
+        "library": "H",
+        "definition": "Unlicensed Hydroelectric Projects"
+      }
+    },
+    {
+      "page": 4,
+      "page_row": 5,
+      "raw_cells": [
+        "ZZ",
+        "E, G, H, O",
+        "Tracking Docket for Certain Non-Docketed Submissions"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ZZ",
+        "library": "E, G, H, O",
+        "definition": "Tracking Docket for Certain Non-Docketed Submissions"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 0,
+      "raw_cells": [
+        "HB",
+        "H",
+        "Headwater Beneﬁts Related to Hydroelectric Projects"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "HB",
+        "library": "H",
+        "definition": "Headwater Benefits Related to Hydroelectric Projects"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 1,
+      "raw_cells": [
+        "IC",
+        "Gen",
+        "Information Collections – Public Involvement on the Development of the Commission's Information Collection Requirements Prior to OMB Approval"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "IC",
+        "library": "Gen",
+        "definition": "Information Collections – Public Involvement on the Development of the Commission's Information Collection Requirements Prior to OMB Approval"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 2,
+      "raw_cells": [
+        "ID",
+        "E",
+        "Interlocking Directorates for Electric Utilities"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "ID",
+        "library": "E",
+        "definition": "Interlocking Directorates for Electric Utilities"
+      }
+    },
+    {
+      "page": 5,
+      "page_row": 3,
+      "raw_cells": [
+        "P",
+        "H",
+        "Hydropower Projects"
+      ],
+      "native": {
+        "status": "active",
+        "prefix": "P",
+        "library": "H",
+        "definition": "Hydropower Projects"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 0,
+      "raw_cells": [
+        "AR",
+        "G",
+        "Area Rate Proceedings – Independent Natural Gas Producers"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "AR",
+        "library": "G",
+        "definition": "Area Rate Proceedings – Independent Natural Gas Producers"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 1,
+      "raw_cells": [
+        "CI",
+        "G",
+        "Certiﬁcates for Small Independent Natural Gas Producers & Marketers"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "CI",
+        "library": "G",
+        "definition": "Certificates for Small Independent Natural Gas Producers & Marketers"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 2,
+      "raw_cells": [
+        "CS",
+        "G",
+        "Certiﬁcates for Small Independent Natural Gas Producers"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "CS",
+        "library": "G",
+        "definition": "Certificates for Small Independent Natural Gas Producers"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 3,
+      "raw_cells": [
+        "DA",
+        "H",
+        "Bureau of Land Management – Power Site Determinations (Replaced by DV, EP, MC, and ML prefixes)"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "DA",
+        "library": "H",
+        "definition": "Bureau of Land Management – Power Site Determinations (Replaced by DV, EP, MC, and ML prefixes)"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 4,
+      "raw_cells": [
+        "E-",
+        "Gen",
+        "All Electric Cases (Replaced by ER, ES, EL, etc. prefixes)"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "E-",
+        "library": "Gen",
+        "definition": "All Electric Cases (Replaced by ER, ES, EL, etc. prefixes)"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 5,
+      "raw_cells": [
+        "FS",
+        "O",
+        "Fourth Section Applications of Oil Pipelines"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "FS",
+        "library": "O",
+        "definition": "Fourth Section Applications of Oil Pipelines"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 6,
+      "raw_cells": [
+        "G-",
+        "G",
+        "Gas Cases – Used Prior to 1960"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "G-",
+        "library": "G",
+        "definition": "Gas Cases – Used Prior to 1960"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 7,
+      "raw_cells": [
+        "IR",
+        "E",
+        "Requests for Waiver of PURPA Regulations"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "IR",
+        "library": "E",
+        "definition": "Requests for Waiver of PURPA Regulations"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 8,
+      "raw_cells": [
+        "IT",
+        "E",
+        "International Transmission – Electric"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "IT",
+        "library": "E",
+        "definition": "International Transmission – Electric"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 9,
+      "raw_cells": [
+        "JD",
+        "G, O",
+        "Well Category Determinations by State and Federal Jurisdictional Agencies"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "JD",
+        "library": "G, O",
+        "definition": "Well Category Determinations by State and Federal Jurisdictional Agencies"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 10,
+      "raw_cells": [
+        "PD",
+        "O",
+        "Depreciation and Related Matters Pertaining to Oil Pipelines (prior to March 21, 1989)"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "PD",
+        "library": "O",
+        "definition": "Depreciation and Related Matters Pertaining to Oil Pipelines (prior to March 21, 1989)"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 11,
+      "raw_cells": [
+        "PV",
+        "O",
+        "Oil Pipeline Valuation Rates"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "PV",
+        "library": "O",
+        "definition": "Oil Pipeline Valuation Rates"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 12,
+      "raw_cells": [
+        "R-",
+        "Gen",
+        "Rulemakings (Prior to Formation of RM Preﬁx – Fiscal Year 1974)"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "R-",
+        "library": "Gen",
+        "definition": "Rulemakings (Prior to Formation of RM Prefix – Fiscal Year 1974)"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 13,
+      "raw_cells": [
+        "RE",
+        "E",
+        "Requests for Extensions of Time or Exemptions under PURPA"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "RE",
+        "library": "E",
+        "definition": "Requests for Extensions of Time or Exemptions under PURPA"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 14,
+      "raw_cells": [
+        "RI",
+        "G, O",
+        "Rates for Independent Natural Gas Producers"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "RI",
+        "library": "G, O",
+        "definition": "Rates for Independent Natural Gas Producers"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 15,
+      "raw_cells": [
+        "SP",
+        "O",
+        "Special Permission Application or Waivers for Oil Pipelines"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "SP",
+        "library": "O",
+        "definition": "Special Permission Application or Waivers for Oil Pipelines"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 16,
+      "raw_cells": [
+        "ST",
+        "G",
+        "Transportation Annual Reports / Gas"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "ST",
+        "library": "G",
+        "definition": "Transportation Annual Reports / Gas"
+      }
+    },
+    {
+      "page": 6,
+      "page_row": 17,
+      "raw_cells": [
+        "TA",
+        "G",
+        "Annual Tracking Filings of Interstate Natural Gas Pipelines"
+      ],
+      "native": {
+        "status": "discontinued",
+        "prefix": "TA",
+        "library": "G",
+        "definition": "Annual Tracking Filings of Interstate Natural Gas Pipelines"
+      }
+    }
+  ],
+  "ua": {
+    "U.S.C.": "The United States Code is a consolidation and codification of all general and permanent laws of the United States. The USC is divided into 50 titles, each title covering a broad area of Federal law.",
+    "Pub. L.": "A public law is a law passed by Congress and signed by the President or enacted over his veto. It has general applicability, unlike a private law that applies only to those persons or entities specifically designated. Public laws are numbered in sequence throughout the 2-year life of each Congress; for example, Public Law 112-4 is the fourth public law of the 112th Congress.",
+    "E.O.": "An Executive order is a directive from the President to Executive agencies, issued under constitutional or statutory authority. Executive orders are published in the Federal Register and in title 3 of the Code of Federal Regulations."
+  },
+  "glossary_labels": [
+    "ANPRM",
+    "CFR",
+    "E.O.",
+    "FR",
+    "FY",
+    "NPRM",
+    "Legal Authority",
+    "Pub. L.",
+    "RFA",
+    "RIN",
+    "Seq. No.",
+    "U.S.C."
+  ]
+}

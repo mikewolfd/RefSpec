@@ -1,0 +1,23 @@
+{
+  "declarationRepair": {
+    "name": "configuration",
+    "passed": true,
+    "summary": "audit settings checked for fail-open values",
+    "failures": [],
+    "source_findings": []
+  },
+  "declaredFullyLoadedCoverageOnly": {
+    "name": "distribution-coverage",
+    "passed": false,
+    "summary": "127/131 construction units have an independent comparison",
+    "failures": [
+      "4 of 131 construction units have no independent publisher adapter; each uncovered unit is reported separately below",
+      "agency-registry-2026-09-26: no independent publisher comparison was performed",
+      "ferc-docket-prefixes: no independent publisher comparison was performed",
+      "ferc-document-class-types: no independent publisher comparison was performed",
+      "unified-agenda-legal-authority-citation-types: no independent publisher comparison was performed"
+    ],
+    "source_findings": []
+  },
+  "note": "No actual distribution data or publisher fidelity verdict is represented."
+}

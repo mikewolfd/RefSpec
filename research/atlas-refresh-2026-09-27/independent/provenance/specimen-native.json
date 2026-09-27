@@ -1,0 +1,188 @@
+{
+  "definitions": [],
+  "deprecated": false,
+  "labels": [
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "role": "preferred",
+      "value": "Verkehr"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "role": "preferred",
+      "value": "transport"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Bringungswesen"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Mobilitätssektor"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Transportsektor"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Transportwesen"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Verkehrsbereich"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Verkehrssektor"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Verkehrsstrom"
+    },
+    {
+      "language": "de",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "Verkehrswesen"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "traffic"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "traffic sector"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "transport sector"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "transportation"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "role": "alternate",
+      "value": "transportation sector"
+    },
+    {
+      "language": "en",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+      "role": "hidden",
+      "value": "field of traffic"
+    }
+  ],
+  "legacyIri": "http://data.uba.de/umt/_00028834",
+  "relations": [
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00049266",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#broader"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00004462",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00009165",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00009388",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00012088",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00017821",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00019085",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00021686",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00023151",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00023714",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00046203",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00607401",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_66e4cda9",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_bf44461d",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#narrower"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00026105",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00026115",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00029829",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00046264",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_00607485",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    },
+    {
+      "objectIri": "https://sns.uba.de/umthes/_2c2a2e22",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related"
+    }
+  ],
+  "responseByteLength": 11142,
+  "responseDigest": "sha256:3c81b1fe83ece0c213ae1c54c1c1a645d8457f35180dfb61ff27e669f1bf8974",
+  "retrievedAt": "2026-08-16T00:21:03Z"
+}

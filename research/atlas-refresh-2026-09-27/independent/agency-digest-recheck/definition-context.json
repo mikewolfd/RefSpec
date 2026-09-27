@@ -1,0 +1,72 @@
+[
+  {
+    "path": "plans/agency-registry-design.md",
+    "firstLine": 169,
+    "lastLine": 198,
+    "sourceSha256": "d36824c335e778b81fc29bf91c69644a4fbb30a10c8d0b2ecb348a78ed08369d",
+    "text": "169:    same `--check`. Candidate ids are content-derived\n170:    (`same:<source>:<target>`, `succ:<original>:<result>`), so adding a row\n171:    moves no other id; an event's id runs over its sorted original ids\n172:    (`event:fr232`, and for a merger such as the later batch's PPRC and ProPAC\n173:    into MedPAC, `event:fr407+fr440`). The candidate JSON carries the map from\n174:    the previous round's positional ids. The sheet cites `candidates_digest`,\n175:    which covers only roster-derived content, as the set's digest. Each\n176:    decidable item (identity row, event, non-emission, no-bridge code) also\n177:    carries its own `content_digest` over what the owner decides on — the\n178:    question and options, both sides' sealed names and ids, the relation or\n179:    basis, dates and records — with replay counts and effects left out, so a\n180:    refresh stales nothing. Each row's effect under spicy-regs' rule is read\n181:    from the measurement in §9 (`--rule-effects`), and the tool refuses a\n182:    measurement taken against another candidate set, replay, or spicy-regs\n183:    commit.\n184: 2. The owner adjudicates the batch through the question tool or by editing\n185:    `plans/agency-registry-batch-1-decisions.json` — never the sheet. Each\n186:    decision is keyed by a candidate or event id and records the answer the\n187:    sheet offers, the date, the channel, and the `content_digest` of that item\n188:    as decided (the sheet's Decision keys table lists them). The tool only\n189:    reads that file and re-renders the sheet's decision cells from it, so a\n190:    `--write` after a replay refresh keeps every decision. A decision stales\n191:    only when its own item's digest changes — an edit to another row leaves\n192:    it current; an event's digest covers its rows, so a change to any of them\n193:    stales the event. A stale decision is shown and listed until the owner\n194:    re-confirms it, never dropped. An unknown id is refused (a removed or\n195:    re-keyed row is reconciled by hand), and so is a row id inside an event: a\n196:    succession event is one decision. The tool's `--check-committed`, run by the fast-tier test, is\n197:    the check CI can run without the replay or the rule effects: the committed\n198:    candidates still follow from the rosters, the rule effects carry the pinned"
+  },
+  {
+    "path": "tools/assemble_agency_registry_batch_1.py",
+    "firstLine": 83,
+    "lastLine": 88,
+    "sourceSha256": "801c0258975a177835bda5d41758764940f306ab0dc7dc40caa49ea21fe017cd",
+    "text": "83: MEASUREMENT_SCRIPT_SHA256 = \"sha256:0c31ebffa9de5133ee9f7432d1513f7b919c48b14a24a6a878b3ae048990bae7\"\n84: # The effect note reads the measured effects, so it stays outside what a decision binds to.\n85: _OUTSIDE_CONTENT = frozenset({\"content_digest\", \"effect_note\"})\n86: SCHEMA_VERSION = \"refspec-agency-registry-batch-1-candidates/4\"\n87: FR_PARQUET = \"federal_register.parquet\"\n88: CANDIDATES_DIGEST_COVERS = entity_alignments.CANDIDATES_DIGEST_COVERS"
+  },
+  {
+    "path": "tools/assemble_agency_registry_batch_1.py",
+    "firstLine": 1355,
+    "lastLine": 1375,
+    "sourceSha256": "801c0258975a177835bda5d41758764940f306ab0dc7dc40caa49ea21fe017cd",
+    "text": "1355: def content_digest(entry: Mapping[str, Any], members: Sequence[Mapping[str, Any]] = ()) -> str:\n1356:     \"\"\"What a decision binds to: the entry as the owner reads it and, for an event, its rows.\n1357: \n1358:     Roster-derived only -- questions, options, both sides' sealed names and ids, the\n1359:     relation or basis, dates and records -- so a replay or effect refresh stales nothing,\n1360:     and a change to another row leaves this one's decision current.\n1361:     \"\"\"\n1362: \n1363:     def owner_view(item: Mapping[str, Any]) -> dict[str, Any]:\n1364:         return {key: value for key, value in item.items() if key not in _OUTSIDE_CONTENT}\n1365: \n1366:     return _digest({\"entry\": owner_view(entry), \"members\": [owner_view(member) for member in members]})\n1367: \n1368: \n1369: def _canonical_json_bytes(value: Any) -> bytes:\n1370:     return json.dumps(value, ensure_ascii=False, allow_nan=False, sort_keys=True, separators=(\",\", \":\")).encode(\"utf-8\")\n1371: \n1372: \n1373: def _digest(value: Any) -> str:\n1374:     return \"sha256:\" + hashlib.sha256(_canonical_json_bytes(value)).hexdigest()\n1375: "
+  },
+  {
+    "path": "tools/assemble_agency_registry_batch_1.py",
+    "firstLine": 1542,
+    "lastLine": 1601,
+    "sourceSha256": "801c0258975a177835bda5d41758764940f306ab0dc7dc40caa49ea21fe017cd",
+    "text": "1542:     out: list[dict[str, Any]] = []\n1543:     for event in sorted(events, key=lambda item: sorted(item.originals)):\n1544:         originals = sorted(set(event.originals))\n1545:         key = event_id(fr, originals)\n1546:         _require(len(originals) == len(event.originals), f\"{key} repeats an original\")\n1547:         pairs = []\n1548:         for successor in event.rows:\n1549:             original = successor.original_fr_id\n1550:             if original is None and len(originals) == 1:\n1551:                 original = originals[0]\n1552:             _require(original in originals, f\"{key} row to FR {successor.successor_fr_id} names no original of the event\")\n1553:             pairs.append((original, successor))\n1554:         _require(len({(o, r.successor_fr_id) for o, r in pairs}) == len(pairs), f\"{key} repeats a row\")\n1555:         _require({o for o, _ in pairs} == set(originals), f\"{key} has an original with no row\")\n1556:         _require(not set(originals) & {r.successor_fr_id for _, r in pairs}, f\"{key} lists an original among its results\")\n1557:         if len(pairs) > 1:\n1558:             _require(all(r.functions_taken for _, r in pairs), f\"{key} splits or merges without naming functions\")\n1559:         records: dict[str, dict[str, str]] = {}\n1560:         row_ids = []\n1561:         for original, successor in sorted(pairs, key=lambda pair: (pair[0], pair[1].successor_fr_id)):\n1562:             source_iri, target_iri = fr.iri(original), fr.iri(successor.successor_fr_id)\n1563:             row_id = f\"succ:{fr.token(source_iri)}:{fr.token(target_iri)}\"\n1564:             row_ids.append(row_id)\n1565:             for record in successor.records:\n1566:                 records.setdefault(record.citation, record.to_dict())\n1567:             rows.append(\n1568:                 {\n1569:                     \"candidate_id\": row_id,\n1570:                     \"relation\": \"resultingOrganization\",\n1571:                     \"event_id\": key,\n1572:                     \"source\": fr.record(source_iri),\n1573:                     \"target\": fr.record(target_iri),\n1574:                     \"functions_taken\": successor.functions_taken,\n1575:                     \"public_records\": [record.to_dict() for record in successor.records],\n1576:                     \"reasoning\": successor.reasoning,\n1577:                     \"closest_rejected_alternative\": successor.rejected.to_dict(),\n1578:                     \"status\": CANDIDATE_STATUS,\n1579:                 }\n1580:             )\n1581:             rows[-1][\"content_digest\"] = content_digest(rows[-1])\n1582:         entry: dict[str, Any] = {\n1583:             \"event_id\": key,\n1584:             \"event_type\": \"ChangeEvent\",\n1585:             \"group\": \"C\" if len(pairs) == 1 else \"D\",\n1586:             \"originals\": [fr.record(fr.iri(original)) for original in originals],\n1587:             \"effective_date\": event.effective_date,\n1588:             \"date_basis\": event.date_basis,\n1589:             \"effective_date_alternatives\": [\n1590:                 {\"date\": date, \"date_basis\": basis} for date, basis in event.date_alternatives\n1591:             ],\n1592:             \"rows\": row_ids,\n1593:             \"public_records\": list(records.values()),\n1594:             \"owner_note\": event.owner_note,\n1595:             \"status\": CANDIDATE_STATUS,\n1596:         }\n1597:         if event.owner_question is not None:\n1598:             entry[\"owner_question\"] = event.owner_question.to_dict()\n1599:         entry[\"content_digest\"] = content_digest(entry, [row for row in rows if row[\"event_id\"] == key])\n1600:         out.append(entry)\n1601:     return rows, out"
+  },
+  {
+    "path": "tools/assemble_agency_registry_batch_1.py",
+    "firstLine": 1667,
+    "lastLine": 1668,
+    "sourceSha256": "801c0258975a177835bda5d41758764940f306ab0dc7dc40caa49ea21fe017cd",
+    "text": "1667: def candidates_digest(assembled: Mapping[str, Any]) -> str:\n1668:     return _digest({key: assembled[key] for key in CANDIDATES_DIGEST_COVERS})"
+  },
+  {
+    "path": "tools/assemble_agency_registry_batch_1.py",
+    "firstLine": 1887,
+    "lastLine": 1894,
+    "sourceSha256": "801c0258975a177835bda5d41758764940f306ab0dc7dc40caa49ea21fe017cd",
+    "text": "1887:             \"event_periods\": live.pop(\"event_periods\"),\n1888:             \"per_fr_id\": {str(aid): stats for aid, stats in per_id.items()},\n1889:             \"rule_effects\": effects,\n1890:         },\n1891:     }\n1892:     report[\"digest\"] = _digest(report)\n1893:     return report\n1894: "
+  },
+  {
+    "path": "src/refspec/atlas/v3_registry_alignments_entity.py",
+    "firstLine": 1246,
+    "lastLine": 1258,
+    "sourceSha256": "479707238555a1bde49b31c1a1dcdcd2cee474ffa1777c4e5f86ea8cc7ec76d0",
+    "text": "1246: # What the owner decided on: plans/agency-registry-batch-1-candidates.json's\n1247: # candidates_digest, recomputed here, never read off the file.\n1248: AGENCY_REGISTRY_CANDIDATES_DIGEST = \"sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc\"\n1249: AGENCY_REGISTRY_CANDIDATES_PATH = \"plans/agency-registry-batch-1-candidates.json\"\n1250: AGENCY_REGISTRY_DECISIONS_PATH = \"plans/agency-registry-batch-1-decisions.json\"\n1251: _AGENCY_REGISTRY_CANDIDATES_SHA256 = \"sha256:6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2\"\n1252: _AGENCY_REGISTRY_CANDIDATES_BYTE_LENGTH = 191_706\n1253: _AGENCY_REGISTRY_DECISIONS_SHA256 = \"sha256:a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098\"\n1254: _AGENCY_REGISTRY_DECISIONS_BYTE_LENGTH = 6_744\n1255: # The adjudicable content; replay-derived counts sit outside it on purpose.\n1256: CANDIDATES_DIGEST_COVERS = (\"candidates\", \"events\", \"non_emissions\", \"no_fr_bridge\")\n1257: EXPECTED_AGENCY_REGISTRY_BRIDGE_COUNT = 13\n1258: EXPECTED_AGENCY_REGISTRY_EVENT_COUNT = 9"
+  },
+  {
+    "path": "src/refspec/atlas/v3_registry_alignments_entity.py",
+    "firstLine": 1300,
+    "lastLine": 1307,
+    "sourceSha256": "479707238555a1bde49b31c1a1dcdcd2cee474ffa1777c4e5f86ea8cc7ec76d0",
+    "text": "1300: def decision_digests(report: Mapping[str, Any]) -> dict[str, str]:\n1301:     \"\"\"Every decidable id and the content digest its decisions bind to.\"\"\"\n1302: \n1303:     entries = [row for row in report[\"candidates\"] if row[\"relation\"] == \"sameEntityAs\"]\n1304:     entries += [*report[\"non_emissions\"], *report[\"events\"]]\n1305:     digests = {entry.get(\"candidate_id\") or entry[\"event_id\"]: entry[\"content_digest\"] for entry in entries}\n1306:     digests.update({row[\"value_id\"]: row[\"content_digest\"] for row in report[\"no_fr_bridge\"]})\n1307:     return digests"
+  },
+  {
+    "path": "src/refspec/atlas/v3_registry_alignments_entity.py",
+    "firstLine": 1336,
+    "lastLine": 1346,
+    "sourceSha256": "479707238555a1bde49b31c1a1dcdcd2cee474ffa1777c4e5f86ea8cc7ec76d0",
+    "text": "1336: def load_decisions(path: Path, report: Mapping[str, Any]) -> Decisions:\n1337:     \"\"\"Read the owner's decisions file; an absent file is no decisions.\n1338: \n1339:     Each decision names a decidable id and is bound to the ``content_digest`` of\n1340:     that row or event as it stood when decided. When its own row or event changes,\n1341:     the decision is stale: returned and rendered as stale, never dropped. A change\n1342:     to any other row leaves it current. An id that names no decidable row or\n1343:     event is refused, so a removed or re-keyed row is reconciled by hand. A\n1344:     current decision must give one of the answers the sheet offers.\n1345:     \"\"\"\n1346: "
+  },
+  {
+    "path": "docs/decisions.md",
+    "firstLine": 5977,
+    "lastLine": 5986,
+    "sourceSha256": "2622da6f22bce835f8a7d00474347207f60d750d92245dc86289de059659705f",
+    "text": "5977: `tools/assemble_agency_registry_batch_1.py`, which imports it, so the sheet and\n5978: the release read one file one way. The release reads the committed candidates\n5979: and decisions by file digest, recomputes the candidates digest the owner\n5980: decided on (`sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc`),\n5981: binds each decision to its item's `content_digest`, and refuses the whole\n5982: release while any decision is stale or missing or any answer has no rule: the\n5983: generic answers mean the same everywhere, and the three numbered options it\n5984: reads (`same:fr151…` option 2, `same:fr296…` option 1, `event:fr564` option 1)\n5985: are named one by one, their text sealed inside the item digest. Candidates\n5986: never enter the release; it re-derives every sealed name and parent from the"
+  }
+]

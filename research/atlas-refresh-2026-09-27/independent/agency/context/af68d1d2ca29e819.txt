@@ -1,0 +1,23 @@
+Lines 340-360
+340: for more details.
+341: 
+342: Department of Health and Human Services
+343: Office of the Secretary
+344: 
+345: Under the authority of Section 6 of Reorganization Plan No. 1 of 1953 and pursuant to the authorities vested in me as Secretary of Health and Human Services, I hereby order organizational changes in the Department of Health and Human Services (HHS) as follows. Under Part F, (Health Care Financing Administration) Statement of Organization, Functions, and Delegations of Authority for the Department of Health and Human Services, Part F, as amended at 46 FR 13262-63, dated March 9, 1977, and most recently amended at 65 FR 43771, dated July 14, 2000, is being amended to retitle, Part F, Health Care Financing Administration, as the Centers for Medicare & Medicaid Services. The changes are as follows:
+346: 
+347: 1. Under Part F, all references to the Health Care Financing Administration (HCFA), are hereby changed to the Centers for Medicare & Medicaid Services (CMS); and all references to HCFA are changed to CMS.
+348: 
+349: 2. All references to the HCFA “Administrator” are changed to the “Administrator of CMS.”
+350: 
+351: 3. Delegations of Authority. All delegations of authority from the Secretary or other HHS officials to the Administrator, Health Care Financing Administration and redelegations from the Administrator to subordinate employees pertaining to the Health Care Financing Administration are vested in the Administrator, Centers for Medicare & Medicaid Services and such subordinate employees and remain in effect until revoked or modified.
+352: 
+353: Dated: June 29, 2001.
+354: 
+355: Tommy G. Thompson,
+356: 
+357: Secretary.
+358: 
+359: [FR Doc. 01-16800 Filed 6-29-01; 3:24 pm]
+360: 
+

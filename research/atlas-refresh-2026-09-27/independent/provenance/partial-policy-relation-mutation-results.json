@@ -1,0 +1,39 @@
+{
+  "baseline_failures": {
+    "claim-scope": 1,
+    "configuration": 3,
+    "rdf-provenance-fidelity": 50
+  },
+  "expected_relation_payloads": 0,
+  "independent_raw_relation_field_errors": [],
+  "independent_raw_relation_fields_checked": 50,
+  "independent_relation_reconstruction": {
+    "exact_match": true,
+    "expected_count": 50,
+    "observed_count": 50
+  },
+  "mutations": [
+    {
+      "identical_failure_sets": true,
+      "mutation": "responseDigest",
+      "new_failures": {},
+      "removed_failures": {}
+    },
+    {
+      "identical_failure_sets": true,
+      "mutation": "editorialReason",
+      "new_failures": {},
+      "removed_failures": {}
+    },
+    {
+      "identical_failure_sets": false,
+      "mutation": "relationObject",
+      "new_failures": {
+        "rdf-provenance-fidelity": [
+          "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:09b0253340c314e63927ff3d813873652ecc74cf0c55cee4c9b4b1f9de5351e4> publisherRelation ('https://sns.uba.de/umthes/_00025839', 'http://www.w3.org/2004/02/skos/core#related', 'https://sns.uba.de/umthes/_wrong') is absent from publisher bytes"
+        ]
+      },
+      "removed_failures": {}
+    }
+  ]
+}

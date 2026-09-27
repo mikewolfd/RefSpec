@@ -1,0 +1,8 @@
+{
+  "observedAtUtc": "2026-09-27T20:40:44.831377+00:00",
+  "worktreeCommit": "41e2bf9d8474dca501a11a18e799855f74e70cec",
+  "exitCode": 0,
+  "watcherMeta": "start 2026-09-27T18:44:45Z load { 9.06 9.82 9.04 }\nend 2026-09-27T20:37:30Z load { 4.86 6.71 7.25 } exit 0 peak_tree_rss_kib 14838128\n",
+  "testSummary": "4 passed, 29 warnings in 6759.18s (1:52:39)",
+  "concurrency": "This separate job was active throughout our failed full-build attempt and finished afterward. Its completion is producer-side coverage on dev21, not standalone full-file validation of cc507773."
+}

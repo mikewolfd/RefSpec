@@ -1,0 +1,641 @@
+[
+  {
+    "resourceIri": "urn:ref:ecfr-agency:african-development-foundation",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "african-development-foundation",
+      "name": "African Development Foundation",
+      "short_name": "USADF",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:copyright-royalty-board",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "copyright-royalty-board",
+      "name": "Copyright Royalty Board",
+      "short_name": "CRB",
+      "parentSlugFromNesting": "library-of-congress"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:economic-analysis-bureau",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "economic-analysis-bureau",
+      "name": "Bureau of Economic Analysis",
+      "short_name": "EAB",
+      "parentSlugFromNesting": "commerce-department"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:energy-department",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "energy-department",
+      "name": "Department of Energy",
+      "short_name": "DOE",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:export-import-bank",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "export-import-bank",
+      "name": "Export-Import Bank of the United States",
+      "short_name": "EIB/USEIB",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:federal-register-office",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "federal-register-office",
+      "name": "Office of Federal Register",
+      "short_name": "OFR",
+      "parentSlugFromNesting": "national-archives-and-records-administration"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:international-boundary-and-water-commission-united-states-and-mexico",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "international-boundary-and-water-commission-united-states-and-mexico",
+      "name": "United States Section United States and Mexico International Boundary and Water Commission",
+      "short_name": "IBWC",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:investment-security-office",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "investment-security-office",
+      "name": "Office of Investment Security",
+      "short_name": "IIO",
+      "parentSlugFromNesting": "treasury-department"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:labor-department",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "labor-department",
+      "name": "Department of Labor",
+      "short_name": "DOL",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:library-of-congress",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "library-of-congress",
+      "name": "Library of Congress",
+      "short_name": "LOC",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:ecfr-agency:postal-regulatory-commission",
+    "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+    "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+    "sourceContext": {
+      "slug": "postal-regulatory-commission",
+      "name": "Postal Regulatory Commission",
+      "short_name": "PRC",
+      "parentSlugFromNesting": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-hierarchy-org:100004455",
+    "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+    "sourceSha256": "90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96",
+    "sourceContext": {
+      "fhorgid": 100004455,
+      "fhorgname": "OFFICE OF THE INSPECTOR GENERAL",
+      "fhorgtype": "Sub-Tier",
+      "fhdeptindagencyorgid": 100004222,
+      "fhagencyorgname": "HEALTH AND HUMAN SERVICES, DEPARTMENT OF"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-hierarchy-org:100006936",
+    "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+    "sourceSha256": "90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96",
+    "sourceContext": {
+      "fhorgid": 100006936,
+      "fhorgname": "OFFICE OF INSPECTOR GENERAL",
+      "fhorgtype": "Sub-Tier",
+      "fhdeptindagencyorgid": 100006809,
+      "fhagencyorgname": "AGRICULTURE, DEPARTMENT OF"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-hierarchy-org:100012075",
+    "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+    "sourceSha256": "bb78b6c039167ef158bea672275c86961be784e269f4db41a52e4b0cd09c277e",
+    "sourceContext": {
+      "fhorgid": 100012075,
+      "fhorgname": "U.S. IMMIGRATION AND CUSTOMS ENFORCEMENT",
+      "fhorgtype": "Sub-Tier",
+      "fhdeptindagencyorgid": 100011942,
+      "fhagencyorgname": "HOMELAND SECURITY, DEPARTMENT OF"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-hierarchy-org:100525875",
+    "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+    "sourceSha256": "b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff",
+    "sourceContext": {
+      "fhorgid": 100525875,
+      "fhorgname": "ADMINISTRATION FOR COMMUNITY LIVING (ACL)",
+      "fhorgtype": "Sub-Tier",
+      "fhdeptindagencyorgid": 100004222,
+      "fhagencyorgname": "HEALTH AND HUMAN SERVICES, DEPARTMENT OF"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-hierarchy-org:300000070",
+    "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+    "sourceSha256": "b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff",
+    "sourceContext": {
+      "fhorgid": 300000070,
+      "fhorgname": "MORRIS K. UDALL SCHOLARSHIP AND EXCELLENCE IN NATIONAL ENVIRONMENTAL POLICY FOUNDATION",
+      "fhorgtype": "Department/Ind. Agency",
+      "fhdeptindagencyorgid": 300000070,
+      "fhagencyorgname": "MORRIS K UDALL SCHOLARSHIP AND EXCELLENCE IN NATIONAL ENVIRONMENTAL POLICY FOUNDATION"
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:118",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 118,
+      "slug": "economic-analysis-bureau",
+      "name": "Economic Analysis Bureau",
+      "short_name": "EAB",
+      "parent_id": 54
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:131",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 131,
+      "slug": "employee-benefits-security-administration",
+      "name": "Employee Benefits Security Administration",
+      "short_name": "EBSA",
+      "parent_id": 271
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:136",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 136,
+      "slug": "energy-department",
+      "name": "Energy Department",
+      "short_name": "DOE",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:150",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 150,
+      "slug": "export-administration-bureau",
+      "name": "Export Administration Bureau",
+      "short_name": "EAB",
+      "parent_id": 54
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:151",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 151,
+      "slug": "export-import-bank",
+      "name": "Export-Import Bank",
+      "short_name": "EIB/USEIB",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:186",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 186,
+      "slug": "federal-register-office",
+      "name": "Federal Register Office",
+      "short_name": "OFR",
+      "parent_id": 304
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:232",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 232,
+      "slug": "immigration-and-naturalization-service",
+      "name": "Immigration and Naturalization Service",
+      "short_name": "INS",
+      "parent_id": 268
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:241",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 241,
+      "slug": "industry-and-security-bureau",
+      "name": "Industry and Security Bureau",
+      "short_name": "BIS",
+      "parent_id": 54
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:244",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 244,
+      "slug": "inspector-general-office-agriculture-department",
+      "name": "Inspector General Office, Agriculture Department",
+      "short_name": "OIG USDA",
+      "parent_id": 12
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:245",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 245,
+      "slug": "inspector-general-office-health-and-human-services-department",
+      "name": "Inspector General Office, Health and Human Services Department",
+      "short_name": "OIG HHS",
+      "parent_id": 221
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:255",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 255,
+      "slug": "international-boundary-and-water-commission-united-states-and-mexico",
+      "name": "International Boundary and Water Commission, United States and Mexico",
+      "short_name": "IBWC",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:259",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 259,
+      "slug": "international-investment-office",
+      "name": "International Investment Office",
+      "short_name": "IIO",
+      "parent_id": 497
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:271",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 271,
+      "slug": "labor-department",
+      "name": "Labor Department",
+      "short_name": "DOL",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:277",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 277,
+      "slug": "library-of-congress",
+      "name": "Library of Congress",
+      "short_name": "LOC",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:296",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 296,
+      "slug": "morris-k-udall-and-stewart-l-udall-foundation",
+      "name": "Morris K. Udall and Stewart L. Udall Foundation",
+      "short_name": "Udall Foundation",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:4",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 4,
+      "slug": "african-development-foundation",
+      "name": "United States African Development Foundation",
+      "short_name": "USADF",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:404",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 404,
+      "slug": "pension-and-welfare-benefits-administration",
+      "name": "Pension and Welfare Benefits Administration",
+      "short_name": "PWBA",
+      "parent_id": 271
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:409",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 409,
+      "slug": "postal-regulatory-commission",
+      "name": "Postal Regulatory Commission",
+      "short_name": "PRC",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:41",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 41,
+      "slug": "broadcasting-board-of-governors",
+      "name": "Broadcasting Board of Governors",
+      "short_name": "BBG",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:45",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 45,
+      "slug": "centers-for-medicare-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "short_name": "CMS",
+      "parent_id": 221
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:476",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 476,
+      "slug": "state-department",
+      "name": "State Department",
+      "short_name": "DOS",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:481",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 481,
+      "slug": "surface-transportation-board",
+      "name": "Surface Transportation Board",
+      "short_name": "STB",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:492",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 492,
+      "slug": "transportation-department",
+      "name": "Transportation Department",
+      "short_name": "DOT",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:499",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 499,
+      "slug": "u-s-citizenship-and-immigration-services",
+      "name": "U.S. Citizenship and Immigration Services",
+      "short_name": "USCIS",
+      "parent_id": 227
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:501",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 501,
+      "slug": "u-s-customs-and-border-protection",
+      "name": "U.S. Customs and Border Protection",
+      "short_name": "USCBP",
+      "parent_id": 227
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:503",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 503,
+      "slug": "u-s-immigration-and-customs-enforcement",
+      "name": "U.S. Immigration and Customs Enforcement",
+      "short_name": "ICE",
+      "parent_id": 227
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:510",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 510,
+      "slug": "united-states-information-agency",
+      "name": "United States Information Agency",
+      "short_name": "USIA",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:543",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 543,
+      "slug": "interstate-commerce-commission",
+      "name": "Interstate Commerce Commission",
+      "short_name": "ICC",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:559",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 559,
+      "slug": "health-care-finance-administration",
+      "name": "Health Care Finance Administration",
+      "short_name": "HCFA",
+      "parent_id": 221
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:564",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 564,
+      "slug": "postal-rate-commission",
+      "name": "Postal Rate Commission",
+      "short_name": "PRC",
+      "parent_id": null
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:587",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 587,
+      "slug": "community-living-administration",
+      "name": "Community Living Administration",
+      "short_name": null,
+      "parent_id": 221
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:603",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 603,
+      "slug": "investment-security-office",
+      "name": "Investment Security Office",
+      "short_name": "IIO",
+      "parent_id": 497
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:88",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 88,
+      "slug": "copyright-royalty-board",
+      "name": "Copyright Royalty Board",
+      "short_name": "LOC",
+      "parent_id": 277
+    },
+    "match": true
+  },
+  {
+    "resourceIri": "urn:ref:federal-register-agency:96",
+    "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+    "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+    "sourceContext": {
+      "id": 96,
+      "slug": "customs-service",
+      "name": "Customs Service",
+      "short_name": null,
+      "parent_id": 497
+    },
+    "match": true
+  }
+]

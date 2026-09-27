@@ -1,0 +1,23 @@
+{
+  "workingDirectory": "/tmp",
+  "repoSelectedBy": "REFSPEC_REPO",
+  "outputDirectoryOutsideRepo": true,
+  "results": [
+    {
+      "file": "artifact-comparison.json",
+      "identicalExceptCheckTimestamp": true
+    },
+    {
+      "file": "actual-agency-tables.json",
+      "identicalExceptCheckTimestamp": true
+    },
+    {
+      "file": "actual-agency-rdf.json",
+      "identicalExceptCheckTimestamp": true
+    },
+    {
+      "file": "raw-roster-endpoints.json",
+      "identicalExceptCheckTimestamp": true
+    }
+  ]
+}

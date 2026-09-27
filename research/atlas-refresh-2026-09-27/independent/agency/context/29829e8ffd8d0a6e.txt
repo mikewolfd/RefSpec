@@ -1,0 +1,141 @@
+Lines 117-126
+117: SEC. 2. <<NOTE: 49 USC 701 note.>> EFFECTIVE DATE.
+118: 
+119: Except as otherwise provided in this Act, this Act shall take effect
+120: on January 1, 1996.
+121: 
+122: TITLE I--ABOLITION OF INTERSTATE COMMERCE COMMISSION
+123: 
+124: SEC. 101. <<NOTE: 49 USC 701 note.>> ABOLITION.
+125: 
+126: The Interstate Commerce Commission is abolished.
+
+Lines 289-325
+289: ``Sec. 10501. General jurisdiction
+290: 
+291: ``(a)(1) Subject to this chapter, the Board has jurisdiction over
+292: transportation by rail carrier that is--
+293: ``(A) only by railroad; or
+294: ``(B) by railroad and water, when the transportation is
+295: under common control, management, or arrangement for a
+296: continuous carriage or shipment.
+297: 
+298: ``(2) Jurisdiction under paragraph (1) applies only to
+299: transportation in the United States between a place in--
+300: ``(A) a State and a place in the same or another State as
+301: part of the interstate rail network;
+302: ``(B) a State and a place in a territory or possession of
+303: the United States;
+304: ``(C) a territory or possession of the United States and a
+305: place in another such territory or possession;
+306: ``(D) a territory or possession of the United States and
+307: another place in the same territory or possession;
+308: ``(E) the United States and another place in the United
+309: States through a foreign country; or
+310: ``(F) the United States and a place in a foreign country.
+311: 
+312: ``(b) The jurisdiction of the Board over--
+313: ``(1) transportation by rail carriers, and the remedies
+314: provided in this part with respect to rates, classifications,
+315: rules (including car service, interchange, and other operating
+316: rules), practices, routes, services, and facilities of such
+317: carriers; and
+318: ``(2) the construction, acquisition, operation, abandonment,
+319: or discontinuance of spur, industrial, team, switching, or side
+320: tracks, or facilities, even if the tracks are located, or
+321: intended to be located, entirely in one State,
+322: 
+323: is exclusive. Except as otherwise provided in this part, the remedies
+324: provided under this part with respect to regulation of rail
+325: transportation are exclusive and preempt the remedies provided under
+
+Lines 3377-3385
+3377: ``Sec. 13301. Powers
+3378: 
+3379: ``(a) General Powers of Secretary.--Except as otherwise specified,
+3380: the Secretary shall carry out this part. Enumeration
+3381: 
+3382: [[Page 109 STAT. 857]]
+3383: 
+3384: of a power of the Secretary in this part does not exclude another power
+3385: the Secretary may have in carrying out this part. The Secretary may
+
+Lines 8103-8110
+8103: 
+8104: ``SUBCHAPTER I--ESTABLISHMENT
+8105: 
+8106: ``Sec. 701. Establishment of Board
+8107: 
+8108: ``(a) Establishment.--There is hereby established within the
+8109: Department of Transportation the Surface Transportation Board.
+8110: ``(b) Membership.--(1) <<NOTE: President.>> The Board shall consist
+
+Lines 8618-8643
+8618: SEC. 203. <<NOTE: 49 USC 701 note.>> TRANSFER OF ASSETS AND PERSONNEL.
+8619: 
+8620: (a) To Board.--Except as otherwise provided in this Act and the
+8621: amendments made by this Act, those personnel, property, and records
+8622: employed, used, held, available, or to be made available in connection
+8623: with a function transferred to the Board by this Act shall be
+8624: transferred to the Board for use in connection with the functions
+8625: transferred, and unexpended balances of appropriations, allocations, and
+8626: other funds of the Interstate Commerce Commission shall also be
+8627: transferred to the Board. Such unexpended balances, allocations, and
+8628: other funds, together with any unobligated balances from user fees
+8629: collected by the Commission during fiscal year 1996, may be used to pay
+8630: for the closedown of the Commission and severance costs for Commission
+8631: personnel, regardless of whether those costs are incurred at the
+8632: Commission or at the Board.
+8633: 
+8634: (b) To Secretary.--Except as otherwise provided in this Act and the
+8635: amendments made by this Act, those personnel, property, and records
+8636: employed, used, held, available, or to be made available in connection
+8637: with a function transferred to the Secretary by this Act shall be
+8638: transferred to the Secretary for use in connection with the functions
+8639: transferred.
+8640: (c) Separated Employees.--Notwithstanding all other laws and
+8641: regulations, the Department of Transportation shall place all Interstate
+8642: Commerce Commission employees separated from the Commission as a result
+8643: of this Act on the DOT reemployment priority list (competitive service)
+
+Lines 8745-8752
+8745: SEC. 205. <<NOTE: 49 USC 701 note.>> REFERENCES.
+8746: 
+8747: Any reference to the Interstate Commerce Commission in any other
+8748: Federal law, Executive order, rule, regulation, or delegation of
+8749: authority, or any document of or pertaining to the Interstate Commerce
+8750: Commission or an officer or employee of the Interstate Commerce
+8751: Commission, is deemed to refer to the Board, a member or employee of the
+8752: Board, or the Secretary, as appropriate.
+
+Lines 9114-9142
+9114: SEC. 314. FAIR CREDIT REPORTING ACT AMENDMENT.
+9115: 
+9116: Section 621(b)(4) of the Fair Credit Reporting Act (15 U.S.C.
+9117: 1681s(b)(4)) is amended by striking ``Interstate Commerce Commission
+9118: with respect to any common carrier subject to those Acts'' and inserting
+9119: in lieu thereof ``Secretary of Transportation, with respect to all
+9120: carriers subject to the jurisdiction of the Surface Transportation
+9121: Board''.
+9122: 
+9123: SEC. 315. EQUAL CREDIT OPPORTUNITY ACT AMENDMENT.
+9124: 
+9125: Section 704(a)(4) of the Equal Credit Opportunity Act (15 U.S.C.
+9126: 1691c(a)(4)) is amended by striking ``Interstate Commerce Commission
+9127: with respect to any common carrier subject to those Acts'' and inserting
+9128: in lieu thereof ``Secretary of Transportation, with respect to all
+9129: carriers subject to the jurisdiction of the Surface Transportation
+9130: Board''.
+9131: 
+9132: [[Page 109 STAT. 949]]
+9133: 
+9134: SEC. 316. FAIR DEBT COLLECTION PRACTICES ACT AMENDMENT.
+9135: 
+9136: Section 814(b)(4) of the Fair Debt Collection Practices Act (15
+9137: U.S.C. 1692l(b)(4)) is amended by striking ``Interstate Commerce
+9138: Commission with respect to any common carrier subject to those Acts''
+9139: and inserting in lieu thereof ``Secretary of Transportation, with
+9140: respect to all carriers subject to the jurisdiction of the Surface
+9141: Transportation Board''.
+9142: 
+

@@ -1,0 +1,299 @@
+{
+  "counts": {
+    "ferc-docket-prefixes": 95,
+    "ferc-document-class-types": 235,
+    "unified-agenda-legal-authority-citation-types": 3
+  },
+  "distribution_manifest_sha256": "c5ade49d11a81de3b6ea090c13dfd097e22a460288c47e75850be33aa44649b4",
+  "emission_failures": [],
+  "limits": [
+    "source_path and upstream digest comparison use observed loader fields because the Parquet view does not carry those fields directly",
+    "SourceRecord identity is recomputed from observed payload plus authenticated upstream input; that is identity consistency, not independent payload-field fidelity",
+    "The geometric PDF text extraction includes text that may be invisible in the rendered page; no such discrepancy is silently filtered",
+    "No generic audit adapter was installed; full source-fidelity qualification is not claimed"
+  ],
+  "mutations": [
+    {
+      "added_failures": [
+        {
+          "actual": "active",
+          "expected": "discontinued",
+          "field": "status",
+          "row": 77,
+          "unit": "ferc-docket-prefixes"
+        }
+      ],
+      "name": "docket_status"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": "Certificates for Small Independent Natural Gas Producers &",
+          "expected": "Certificates for Small Independent Natural Gas Producers & Marketers",
+          "field": "definition",
+          "row": 78,
+          "unit": "ferc-docket-prefixes"
+        }
+      ],
+      "name": "docket_continuation"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": [
+            "ZZZ"
+          ],
+          "expected": [
+            "AC"
+          ],
+          "field": "notations",
+          "row": 0,
+          "unit": "ferc-docket-prefixes"
+        }
+      ],
+      "name": "docket_notation"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": {
+            "category": "Issuance",
+            "classification": "Wrong Class",
+            "library": "E, G, O, H, Gen",
+            "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+            "sourceMedium": "pdf",
+            "text": "Issuance E, G, O, H, Gen ALJ Issuance ALJ Initial Decision/Certification of Initial Decision and Record",
+            "type_description": "ALJ Initial Decision/Certification of Initial Decision and Record"
+          },
+          "expected": {
+            "category": "Issuance",
+            "classification": "ALJ Issuance",
+            "library": "E, G, O, H, Gen",
+            "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+            "sourceMedium": "pdf",
+            "text": "Issuance E, G, O, H, Gen ALJ Issuance ALJ Initial Decision/Certification of Initial Decision and Record",
+            "type_description": "ALJ Initial Decision/Certification of Initial Decision and Record"
+          },
+          "field": "native_payload",
+          "row": 0,
+          "unit": "ferc-document-class-types"
+        }
+      ],
+      "name": "class_classification"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": "Wrong definition",
+          "expected": "The United States Code is a consolidation and codification of all general and permanent laws of the United States. The USC is divided into 50 titles, each title covering a broad area of Federal law.",
+          "field": "definition",
+          "row": 0,
+          "unit": "unified-agenda-legal-authority-citation-types"
+        }
+      ],
+      "name": "ua_definition"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": "urn:wrong",
+          "expected": "urn:ref:source-concept:v2:unified-agenda-legal-authority:019fc90b-a378-7f3a-b522-841d18d2a680",
+          "field": "iri",
+          "row": 0,
+          "unit": "unified-agenda-legal-authority-citation-types"
+        }
+      ],
+      "name": "ua_identity"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": 94,
+          "expected": 95,
+          "kind": "row_count",
+          "unit": "ferc-docket-prefixes"
+        }
+      ],
+      "name": "dropped_discontinued"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": 2,
+          "expected": 3,
+          "kind": "row_count",
+          "unit": "unified-agenda-legal-authority-citation-types"
+        }
+      ],
+      "name": "dropped_citation"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": {
+            "category": "Submittal",
+            "classification": "Report/Form",
+            "library": "G",
+            "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+            "sourceMedium": "pdf",
+            "text": "Submittal E Report/Form Annual Charges Report",
+            "type_description": "Annual Charges Report"
+          },
+          "expected": {
+            "category": "Submittal",
+            "classification": "Report/Form",
+            "library": "E",
+            "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+            "sourceMedium": "pdf",
+            "text": "Submittal E Report/Form Annual Charges Report",
+            "type_description": "Annual Charges Report"
+          },
+          "field": "native_payload",
+          "row": 147,
+          "unit": "ferc-document-class-types"
+        }
+      ],
+      "name": "duplicate_label_library_swap"
+    },
+    {
+      "added_failures": [
+        {
+          "actual": 4,
+          "expected": 3,
+          "kind": "row_count",
+          "unit": "unified-agenda-legal-authority-citation-types"
+        }
+      ],
+      "name": "extra_unselected_glossary_entry"
+    }
+  ],
+  "payload_digest_failures": [],
+  "qualification": "bounded comparison; FERC class/type source reading unresolved",
+  "source_comparison_failures": [
+    {
+      "actual": "urn:ref:source-concept:v2:ferc-document-class-types:019fc910-3b40-737b-aaac-b2ee73a8a6c9",
+      "expected": "urn:ref:source-concept:v2:ferc-document-class-types:019fc910-3b40-7112-af32-5464b7b270f3",
+      "field": "iri",
+      "row": 233,
+      "unit": "ferc-document-class-types"
+    },
+    {
+      "actual": "Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe",
+      "expected": "Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines",
+      "field": "label",
+      "row": 233,
+      "unit": "ferc-document-class-types"
+    },
+    {
+      "actual": {
+        "category": "Submittal",
+        "classification": "Report/Form",
+        "library": "G",
+        "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+        "sourceMedium": "pdf",
+        "text": "Submittal G Report/Form Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe",
+        "type_description": "Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe"
+      },
+      "expected": {
+        "category": "Submittal",
+        "classification": "Report/Form",
+        "library": "G",
+        "sourceArtifact": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf",
+        "sourceMedium": "pdf",
+        "text": "Submittal G Report/Form Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines",
+        "type_description": "Form 549D-Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines"
+      },
+      "field": "native_payload",
+      "row": 233,
+      "unit": "ferc-document-class-types"
+    }
+  ],
+  "source_pins": {
+    "classes": {
+      "byte_length": 193934,
+      "path": "output/registry-real-data-sources/ferc-class-types-january-2025.pdf",
+      "sha256": "af632c9c6adbf0e7919d17e018b3a65078d0746bd1ab69a8d9fa65043720d688",
+      "source_url": "https://www.ferc.gov/sites/default/files/2025-06/Document%20Class%20Types%20January%202025.pdf"
+    },
+    "dockets": {
+      "byte_length": 282729,
+      "path": "output/registry-real-data-sources/ferc-docket-prefix-june-2025.pdf",
+      "sha256": "c32efae9f51a70b6f955821d2fb3d3025995ef0e17e57bf2d32dfa16c2508dcb",
+      "source_url": "https://elibrary.ferc.gov/eLibrary/assets/docket-prefix.pdf"
+    },
+    "ua": {
+      "byte_length": 148467,
+      "path": "tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+      "sha256": "b7372fec456cf0c346bd23528ae227913e37f546bb1c03689da19ee6a44cb2a5",
+      "source_url": "https://www.reginfo.gov/public/jsp/eAgenda/StaticContent/202210/RiscPreamble.pdf"
+    }
+  },
+  "source_record_identity_failures": [],
+  "source_revision": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "stale_pin_mutations": [
+    {
+      "changed_last_byte_refused": true,
+      "source": "classes"
+    },
+    {
+      "changed_last_byte_refused": true,
+      "source": "dockets"
+    },
+    {
+      "changed_last_byte_refused": true,
+      "source": "ua"
+    }
+  ],
+  "unexpected_artifact_resources": [],
+  "view_manifest_sha256": "8692676053309f823d0fabfde8e29d2f3d996c94399b88c73099dffc58d5799e",
+  "view_member_checks": [
+    {
+      "byte_length": 37526,
+      "path": "tables/resources.parquet",
+      "pin_matches": true,
+      "sha256": "9ccf0c2d028c333a4f70197d5124f085fef02f13f225a88e29a6f079a8053e1f"
+    },
+    {
+      "byte_length": 50840,
+      "path": "tables/labels.parquet",
+      "pin_matches": true,
+      "sha256": "c340e9216c260a5e4e0d4d699ff124161317e9f85ce12ea62aa7278438c0cf82"
+    },
+    {
+      "byte_length": 2718,
+      "path": "tables/statements.parquet",
+      "pin_matches": true,
+      "sha256": "78ccd7509733d643ad157e2a21b9534601f0f029dd83872aafb8fa0de5306281"
+    },
+    {
+      "byte_length": 2631,
+      "path": "tables/evidence-bindings.parquet",
+      "pin_matches": true,
+      "sha256": "ca06475d04675d7b45538c112110924ae5e79b9ab779a51c9c6259347cde91ba"
+    },
+    {
+      "byte_length": 55135,
+      "path": "tables/source-records.parquet",
+      "pin_matches": true,
+      "sha256": "9a952c26371179d500f439f771284daa7df80eae2d08dd24173be2ac8c63ee0a"
+    },
+    {
+      "byte_length": 5789,
+      "path": "tables/releases.parquet",
+      "pin_matches": true,
+      "sha256": "fd0dda8c56774cd2013940a0f56e90485deff1a972db1018619d9f8e18f2ef1c"
+    },
+    {
+      "byte_length": 1234,
+      "path": "tables/identifiers.parquet",
+      "pin_matches": true,
+      "sha256": "9dea7090dd522ce1965678ec4d5e0d767fbe5e3453b5b95888e491eb292a4de6"
+    },
+    {
+      "byte_length": 1668,
+      "path": "tables/lifecycle-events.parquet",
+      "pin_matches": true,
+      "sha256": "d023c376334e9e8993fddbba897788682cac991b407500c3e6ced232d4a33d00"
+    }
+  ]
+}

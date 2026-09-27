@@ -1,0 +1,547 @@
+{
+  "events": [
+    {
+      "eventId": "event:fr543",
+      "node": "urn:ref:atlas-change-event:abd9f427d83e54d60e5c5103ac846530f3fa6bc2d24ca709546a888bfb18fef1",
+      "effectiveDate": "1996-01-01T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:543"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:481",
+        "urn:ref:federal-register-agency:492"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:29c14f0400bfd923df23ff3c6e607d48863b79c626bf01d596b15b81a29d3abf"
+      ],
+      "event": {
+        "dateBasis": "ICCTA sec. 2's effective date for the Act",
+        "effectiveDate": "1996-01-01",
+        "eventId": "event:fr543",
+        "originals": [
+          {
+            "publisherName": "Interstate Commerce Commission",
+            "resourceIri": "urn:ref:federal-register-agency:543"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Surface Transportation Board",
+            "reasoning": "The ICC Termination Act abolished the Interstate Commerce Commission and chartered the Surface Transportation Board for the economic functions that survived it, both effective 1996-01-01 by the Act's own effective-date section.",
+            "resourceIri": "urn:ref:federal-register-agency:481",
+            "rowId": "succ:fr543:fr481",
+            "functionsTaken": "the surviving economic regulation: rail rate and service regulation and the residual carrier jurisdiction the Act recodifies into subtitle IV, chartered as the Board (ICCTA title II)"
+          },
+          {
+            "publisherName": "Transportation Department",
+            "reasoning": "The Act did not send everything to the Board: the Secretary of Transportation carries out the recodified motor-carrier part, the consumer-protection Acts the ICC enforced for carriers were redirected to the Secretary, and sec. 203(b) moves the personnel and assets for Secretary functions separately from the Board's.",
+            "resourceIri": "urn:ref:federal-register-agency:492",
+            "rowId": "succ:fr543:fr492",
+            "functionsTaken": "the functions the Act vests in the Secretary: carrying out the recodified motor-carrier part (49 U.S.C. 13301(a): 'Except as otherwise specified, the Secretary shall carry out this part') and the carrier-related consumer-protection enforcement the conforming amendments redirect (ICCTA secs. 314-316)"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr510",
+      "node": "urn:ref:atlas-change-event:eb5b222695fd69814cc95fe80a8795176a07a30749c94c3782146d2111551014",
+      "effectiveDate": "1999-10-01T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:510"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:41",
+        "urn:ref:federal-register-agency:476"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:6a85bc6cb52f0f1261dbeb7b66d54a4fc1f37aa51503a19f9cbebf4bf5123123",
+        "urn:ref:atlas-source-record:8e3c9955ecdf6b12def019d3af2f2d2be7530ff82a396b135a72c989b68539d3"
+      ],
+      "event": {
+        "dateBasis": "FARRA sec. 1301's effective date, the earlier of 1999-10-01 or the sec. 1601 plan's abolition date",
+        "effectiveDate": "1999-10-01",
+        "eventId": "event:fr510",
+        "originals": [
+          {
+            "publisherName": "United States Information Agency",
+            "resourceIri": "urn:ref:federal-register-agency:510"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Broadcasting Board of Governors",
+            "reasoning": "The Board is not new: the 1994 International Broadcasting Act consolidated broadcasting into USIA under it, and FARRA carved it out of the abolition and continued it, so USIA's broadcasting functions stayed there, not at State. The International Broadcasting Bureau (FR 256, sealed name International Broadcasting Board) is its component and stays with it.",
+            "resourceIri": "urn:ref:federal-register-agency:41",
+            "rowId": "succ:fr510:fr41",
+            "functionsTaken": "international broadcasting, which the Board already held inside USIA and kept: sec. 1311 excepts the Board and the International Broadcasting Bureau from the abolition, sec. 1312(b) keeps them and their functions out of the transfer to State, and sec. 1322 continues the Board as an independent establishment"
+          },
+          {
+            "publisherName": "State Department",
+            "reasoning": "The 1998 restructuring Act abolished USIA and vested every remaining function in the Secretary of State, effective 1999-10-01 under sec. 1301's default; if the owner holds that the plan abolished USIA earlier, the owner fixes that date.",
+            "resourceIri": "urn:ref:federal-register-agency:476",
+            "rowId": "succ:fr510:fr476",
+            "functionsTaken": "every USIA function other than broadcasting: all functions of the Director and of the agency, transferred to the Secretary of State (FARRA sec. 1312(a))"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr559",
+      "node": "urn:ref:atlas-change-event:4eef2884f2d36341673c2179a4633371f81863b874f659e924a78992ca6bbe20",
+      "effectiveDate": "2001-06-29T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:559"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:45"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:4c651efc7785e5bd100ae1a7e80d758f310d966623e8446b2b5e530a6b7027aa",
+        "urn:ref:atlas-source-record:7428d53b5c7ffd38bcf431b1f3a4a4117a28397776325038926525bc7be01a16"
+      ],
+      "event": {
+        "dateBasis": "the Reorganization Order's signature date -- the order states no effective date, and 66 FR 39450 records the Secretary's 2001-06-14 announcement of the new name",
+        "effectiveDate": "2001-06-29",
+        "eventId": "event:fr559",
+        "originals": [
+          {
+            "publisherName": "Health Care Finance Administration",
+            "resourceIri": "urn:ref:federal-register-agency:559"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Centers for Medicare & Medicaid Services",
+            "reasoning": "The HHS Secretary's Reorganization Order, dated 2001-06-29, retitled the Health Care Financing Administration the Centers for Medicare & Medicaid Services; the Federal Register roster keeps both records under the HHS department.",
+            "resourceIri": "urn:ref:federal-register-agency:45",
+            "rowId": "succ:fr559:fr45"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr150",
+      "node": "urn:ref:atlas-change-event:fef12c15bf6043aedf18c84d3fe0f22dd36f79248e9439b7029e53098017a015",
+      "effectiveDate": "2002-04-18T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:150"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:241"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:fbe7c0ec0b287b04c1381eb6e3fed033057087d575d91cfc46be687b7dd2e962"
+      ],
+      "event": {
+        "dateBasis": "the Commerce organizational order's date, on which the name-change rule took effect",
+        "effectiveDate": "2002-04-18",
+        "eventId": "event:fr150",
+        "originals": [
+          {
+            "publisherName": "Export Administration Bureau",
+            "resourceIri": "urn:ref:federal-register-agency:150"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Industry and Security Bureau",
+            "reasoning": "Commerce renamed the Bureau of Export Administration the Bureau of Industry and Security by organizational order effective 2002-04-18; the Federal Register roster keeps the old name on FR 150 and the new one on FR 241.",
+            "resourceIri": "urn:ref:federal-register-agency:241",
+            "rowId": "succ:fr150:fr241"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr404",
+      "node": "urn:ref:atlas-change-event:d4fa1c224d390daf410678e859909c4e5a68a735d10026c7a0f88dfb26888ad1",
+      "effectiveDate": "2003-02-03T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:404"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:131"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:ccaf585b919cf6030ab453eee65f69dd1107631b397717ebb88e472ad2ad3ad7",
+        "urn:ref:atlas-source-record:d25dc862ebd7c576f90132fc2d46bb01e8128d4e8d1e860ea59e0b8edcf715c2"
+      ],
+      "event": {
+        "dateBasis": "the Secretary's Order's effective date, 'upon the date of publication in the Federal Register'",
+        "effectiveDate": "2003-02-03",
+        "eventId": "event:fr404",
+        "originals": [
+          {
+            "publisherName": "Pension and Welfare Benefits Administration",
+            "resourceIri": "urn:ref:federal-register-agency:404"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Employee Benefits Security Administration",
+            "reasoning": "Secretary of Labor's Order 1-2003 renamed the Pension and Welfare Benefits Administration the Employee Benefits Security Administration, effective on publication 2003-02-03; the CFR conforming amendments followed effective 2003-04-03.",
+            "resourceIri": "urn:ref:federal-register-agency:131",
+            "rowId": "succ:fr404:fr131"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr96",
+      "node": "urn:ref:atlas-change-event:9fc53c98821977e06a56b92628bece22737f5d7c24a9ab3c99d44a0da3818c7d",
+      "effectiveDate": "2003-03-01T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:96"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:501",
+        "urn:ref:federal-register-agency:503"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:2d043868817666af18ad82e9e50a316f1e536a6cfbfc0695b4db9a98db772e10",
+        "urn:ref:atlas-source-record:35d7602a65426519c35cbeb109e504e8da55318cda4465f2bda830a7c024b71a",
+        "urn:ref:atlas-source-record:8b642c99c6376020634b6dea9a4e3e5624a4459fa3cc5b1e4123198b8bf1c60a"
+      ],
+      "event": {
+        "dateBasis": "the Reorganization Plan Modification's effective date, as 68 FR 51868 recites it; the Homeland Security Act itself names no such date, since its sec. 4 takes effect 60 days after enactment",
+        "effectiveDate": "2003-03-01",
+        "eventId": "event:fr96",
+        "originals": [
+          {
+            "publisherName": "Customs Service",
+            "resourceIri": "urn:ref:federal-register-agency:96"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "U.S. Customs and Border Protection",
+            "reasoning": "HSA sec. 403(1) transferred the United States Customs Service to DHS; 68 FR 51868 records that the Service 'is now known as the bureau of Customs and Border Protection', whose inspection and border side is the plan's subsection (b). HSA sec. 412 keeps the Secretary of the Treasury's authority over customs revenue functions.",
+            "resourceIri": "urn:ref:federal-register-agency:501",
+            "rowId": "succ:fr96:fr501",
+            "functionsTaken": "the Customs Service's inspection and ports-of-entry side (the plan's subsection (b) bureau)"
+          },
+          {
+            "publisherName": "U.S. Immigration and Customs Enforcement",
+            "reasoning": "The plan's subsection (a) builds Immigration and Customs Enforcement as the interior-enforcement bureau, and 68 FR 51868 records that ICE 'brings together the investigation arms of the former Customs Service', with the same 2003-03-01 effect. HSA sec. 412 keeps customs revenue authority with Treasury.",
+            "resourceIri": "urn:ref:federal-register-agency:503",
+            "rowId": "succ:fr96:fr503",
+            "functionsTaken": "the investigation arms of the former Customs Service (H. Doc. 108-32 subsection (a))"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr232",
+      "node": "urn:ref:atlas-change-event:251c1fbee6c0a9f18e5cb2179933324f47f07f55533597c2775752b766d145a6",
+      "effectiveDate": "2003-03-01T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:232"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:499",
+        "urn:ref:federal-register-agency:501",
+        "urn:ref:federal-register-agency:503"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:140e96e2a5f1cc9dd2f16812b8f718bc459ea2aeeb905ff40f4655966daa0232",
+        "urn:ref:atlas-source-record:713030a6738d80818706116aa6bc2c028a4928f0dd95e504a0861d7d6955750c",
+        "urn:ref:atlas-source-record:75d537188f6ee5ebe48bd3280a10a4d5169b184ba13177fed351c97616be3617",
+        "urn:ref:atlas-source-record:b5f830d53fb350fc7dd1831625d7461df246be710f0db514855571bf3ad21ae7"
+      ],
+      "event": {
+        "dateBasis": "the transfer-and-abolition date the delegation rule and the reorganization plan state",
+        "effectiveDate": "2003-03-01",
+        "eventId": "event:fr232",
+        "originals": [
+          {
+            "publisherName": "Immigration and Naturalization Service",
+            "resourceIri": "urn:ref:federal-register-agency:232"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "U.S. Citizenship and Immigration Services",
+            "reasoning": "HSA sec. 451 established the Bureau of Citizenship and Immigration Services for the service functions; the delegation rule records the transfer of all INS functions to DHS and the INS's abolition on 2003-03-01.",
+            "resourceIri": "urn:ref:federal-register-agency:499",
+            "rowId": "succ:fr232:fr499",
+            "functionsTaken": "immigration services and adjudications (the services bureau HSA sec. 451 establishes)"
+          },
+          {
+            "publisherName": "U.S. Customs and Border Protection",
+            "reasoning": "HSA sec. 441 transfers the Border Patrol and inspections programs; the plan's subsection (b) places them in the Bureau of Customs and Border Protection it builds, effective 2003-03-01.",
+            "resourceIri": "urn:ref:federal-register-agency:501",
+            "rowId": "succ:fr232:fr501",
+            "functionsTaken": "the Border Patrol and the inspections program (H. Doc. 108-32 subsection (b))"
+          },
+          {
+            "publisherName": "U.S. Immigration and Customs Enforcement",
+            "reasoning": "HSA sec. 441 transfers the investigations, detention-and-removal and intelligence programs; the plan's subsection (a) builds Immigration and Customs Enforcement around them, effective 2003-03-01, and 68 FR 51868 records that ICE brings together those investigative functions of the former INS.",
+            "resourceIri": "urn:ref:federal-register-agency:503",
+            "rowId": "succ:fr232:fr503",
+            "functionsTaken": "investigations, detention and removal, and intelligence (H. Doc. 108-32 subsection (a))"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr564",
+      "node": "urn:ref:atlas-change-event:b31b1d7a17090c80f1ab511d584299427354b0d004a59a18b6242db134f2c0b1",
+      "effectiveDate": "2006-12-20T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:564"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:409"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:72c8c919f995ebf568c6cdfa1d9a48e0265ab84d3ad1f16faae58d035ed6cd94",
+        "urn:ref:atlas-source-record:8c78d915428c597ff784dbf105853c693d3f48045255f68852023e453f2e00f3",
+        "urn:ref:atlas-source-record:bf42b55d17ad96752c91979724db1bd731b9b6e4ee94f0c3261e8e185c8e45b1",
+        "urn:ref:atlas-source-record:f611e29a4b745c90ab5289826bf902d2b70cac397d765ebc2bb6d0c833e362e2"
+      ],
+      "event": {
+        "dateBasis": "PAEA's approval date; sec. 604 states no separate effective date, and title VI's one effective-date clause, sec. 603(d)(1), governs appropriations, not the redesignation",
+        "effectiveDate": "2006-12-20",
+        "eventId": "event:fr564",
+        "originals": [
+          {
+            "publisherName": "Postal Rate Commission",
+            "resourceIri": "urn:ref:federal-register-agency:564"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Postal Regulatory Commission",
+            "reasoning": "PAEA sec. 604 redesignated the Postal Rate Commission as the Postal Regulatory Commission, and the roster's description of FR 409 names it the successor agency. The records are not period-disjoint, though: the Register files documents headed POSTAL RATE COMMISSION under FR 409, FR 564's one document carries a heading with a citation fused in, and FR 564's own description is the Postal Regulatory Commission's post-PAEA text, so FR 564 may be a duplicate record of the same commission rather than a predecessor.",
+            "resourceIri": "urn:ref:federal-register-agency:409",
+            "rowId": "succ:fr564:fr409"
+          }
+        ]
+      }
+    },
+    {
+      "eventId": "event:fr259",
+      "node": "urn:ref:atlas-change-event:089e7eab158dccb9a8ebf1c2ce3e2555cbc62ef126018bcde22283705805afa7",
+      "effectiveDate": "2008-11-21T00:00:00+00:00",
+      "originals": [
+        "urn:ref:federal-register-agency:259"
+      ],
+      "results": [
+        "urn:ref:federal-register-agency:603"
+      ],
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:7a2eb7f8070a9997da94fbb3d7c0558e6e43a7c2b93fb87d6e9aff3325e43610",
+        "urn:ref:atlas-source-record:9b5cf06669d43b1af5c3668770909941a4592610fe27b548a0762bfbb74d8d3d",
+        "urn:ref:atlas-source-record:fc215fbc0df52dee2aaf50a403b9737dc414b3d504a1fd1d11bfd1d672f7ebc8"
+      ],
+      "event": {
+        "dateBasis": "the change date the Federal Register roster states, the day E8-27525 published the renamed heading",
+        "effectiveDate": "2008-11-21",
+        "eventId": "event:fr259",
+        "originals": [
+          {
+            "publisherName": "International Investment Office",
+            "resourceIri": "urn:ref:federal-register-agency:259"
+          }
+        ],
+        "results": [
+          {
+            "publisherName": "Investment Security Office",
+            "reasoning": "The Federal Register roster's own description of FR 259 records the change to the Office of Investment Security, citing 73 FR 70716, a page inside rule E8-27525; both records sit under the Treasury department.",
+            "resourceIri": "urn:ref:federal-register-agency:603",
+            "rowId": "succ:fr259:fr603"
+          }
+        ]
+      }
+    }
+  ],
+  "bridges": [
+    {
+      "candidateId": "same:fr118:ecfr:economic-analysis-bureau",
+      "nodes": [
+        "urn:ref:atlas-assertion:9572bb923efff53de714c55b1a1c3355b643992557c281a39e296aa853308b36"
+      ],
+      "subject": "urn:ref:federal-register-agency:118",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:economic-analysis-bureau",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:393203c2357d8d0a6b5d78725187a7309483202cb0250bad1de4b3aeb19e29a1",
+        "urn:ref:atlas-source-record:a730bb993031deab9f435c4eaa21cd961444cdc4ccc387ccb44616f63193f8f2"
+      ]
+    },
+    {
+      "candidateId": "same:fr136:ecfr:energy-department",
+      "nodes": [
+        "urn:ref:atlas-assertion:c04a66980176c0ecf5b23c1e1df1706c2992928c050ccdabb05512f7a1bc7b26"
+      ],
+      "subject": "urn:ref:federal-register-agency:136",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:energy-department",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:4058daecceb0319d7890e5dc8e1deec472d422f7881714e7dbc330799a17ac00",
+        "urn:ref:atlas-source-record:bbcec744a0467514d8ff813fc47a1c11e1bf53465c9811086f7a5a651485236d"
+      ]
+    },
+    {
+      "candidateId": "same:fr186:ecfr:federal-register-office",
+      "nodes": [
+        "urn:ref:atlas-assertion:2631387affc14fe03ed74e6bba4aa3a96ff592b1dde89641aa06ead83f497cb3"
+      ],
+      "subject": "urn:ref:federal-register-agency:186",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:federal-register-office",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:64397da078ddb85fe61b629244b567951e7af89b2f74805f52f5b4e777b56f8d",
+        "urn:ref:atlas-source-record:ba8515309cc084ccc86dae381d6cbd12e90db448676d5812786ed88d8698ab52"
+      ]
+    },
+    {
+      "candidateId": "same:fr244:fh:100006936",
+      "nodes": [
+        "urn:ref:atlas-assertion:4ec39fcec4f0e3fdc677aec2e971ac107642cb84bdfcca35c0572907c6d90329"
+      ],
+      "subject": "urn:ref:federal-register-agency:244",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:federal-hierarchy-org:100006936",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:3b7e7143db5fd5a92049141f8208c50b64730f296311dc0d8a79dc729455fd8e",
+        "urn:ref:atlas-source-record:c589d178df79aa1d8373f63ad712433ac983230adaa1574352561bf238dd0d32"
+      ]
+    },
+    {
+      "candidateId": "same:fr245:fh:100004455",
+      "nodes": [
+        "urn:ref:atlas-assertion:e530480bce3028816caaa7b21b72b62465cfc7899a2c2944088833638cbe5fec"
+      ],
+      "subject": "urn:ref:federal-register-agency:245",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:federal-hierarchy-org:100004455",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:0654f45ea013228deebf013cc97842f47d01b2021007c8232935b43f5779a5a9",
+        "urn:ref:atlas-source-record:69678ca85bb83f51db4d90bf97153119b6ddc5bb7383f57586f707524801cf87"
+      ]
+    },
+    {
+      "candidateId": "same:fr271:ecfr:labor-department",
+      "nodes": [
+        "urn:ref:atlas-assertion:e1bcfd4845d54a5cf67d81b2c4b45215a100673d830860ad8c5a7530a98d546e"
+      ],
+      "subject": "urn:ref:federal-register-agency:271",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:labor-department",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:db0102e2339056015a2f5247d8fb7dcfdefe6c78da3f97ca8907da049a87f31d",
+        "urn:ref:atlas-source-record:ea47d7435a2d49057b3642d07108569bb1573bad49202bb55c06569ec10a5123"
+      ]
+    },
+    {
+      "candidateId": "same:fr277:ecfr:library-of-congress",
+      "nodes": [
+        "urn:ref:atlas-assertion:a2a417ac8925ea81c50ea550dac1139f0560160aef76224a7a94ec09da043503"
+      ],
+      "subject": "urn:ref:federal-register-agency:277",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:library-of-congress",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:6125c3283e14477c71ab8b198094939d778fe8db10d25bc20cddae4f36316546",
+        "urn:ref:atlas-source-record:9b03ddc46c684e97e142aaf942c83142a05249e066fc73ab238cc246967f812c"
+      ]
+    },
+    {
+      "candidateId": "same:fr409:ecfr:postal-regulatory-commission",
+      "nodes": [
+        "urn:ref:atlas-assertion:ffe0e6be82ef180793d5981712bfe97b94fad9096bd97eed99047cc2c48d963e"
+      ],
+      "subject": "urn:ref:federal-register-agency:409",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:postal-regulatory-commission",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:5ab33c16846ae2563e927f1a83a115ce3ac3ed6758c0dbdd8a7a9b9240b607c0",
+        "urn:ref:atlas-source-record:afcc4e47dcfe7b7434214a0810cfd9cc9686c6a1624243252c3578daccf4f62e"
+      ]
+    },
+    {
+      "candidateId": "same:fr4:ecfr:african-development-foundation",
+      "nodes": [
+        "urn:ref:atlas-assertion:047b694a67822a97e2a4096dd268d959dfa3265daef073eb34b9398b0c6f1ffc"
+      ],
+      "subject": "urn:ref:federal-register-agency:4",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:african-development-foundation",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:020355b48f229af6bc29255bcbc41533689dfcc8d7b9f4351d13e8da1c31e42e",
+        "urn:ref:atlas-source-record:853641347337c07ae1d61322071ae145c4caf1c1ccad26f2cd3e1823cc8150f9"
+      ]
+    },
+    {
+      "candidateId": "same:fr503:fh:100012075",
+      "nodes": [
+        "urn:ref:atlas-assertion:4f59dbc9a3d19abf28971f55f88f4d9f9e9614e77b8b1f7966c9bd648d189453"
+      ],
+      "subject": "urn:ref:federal-register-agency:503",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:federal-hierarchy-org:100012075",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:4b371bc5e9810ceefd93da839aa73e28e3357bde228eb59c2a7ea8e01e1235d9",
+        "urn:ref:atlas-source-record:962dc0a5b6bd2b01ab86f3ab386dbe1dd18cb20a0e47a665366ac98522b06500"
+      ]
+    },
+    {
+      "candidateId": "same:fr587:fh:100525875",
+      "nodes": [
+        "urn:ref:atlas-assertion:6b5e9de4ab38cf6479d5de8b40d7e412afbe1f482f40420e4fb2555d0871ecee"
+      ],
+      "subject": "urn:ref:federal-register-agency:587",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:federal-hierarchy-org:100525875",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:9bfaafba121584725c26dd9a11b923c2f6c8743ef32d3ce260fac437d100adaf",
+        "urn:ref:atlas-source-record:bc4df55d39d5e6a8b47f95a6202435b4a0c91a361d7dd2afcc48d4669741be7f"
+      ]
+    },
+    {
+      "candidateId": "same:fr603:ecfr:investment-security-office",
+      "nodes": [
+        "urn:ref:atlas-assertion:74a1be83cdc1afa55ef0691caaa4ba52ec63bd5455a76bdcd16c1639d31b8ecb"
+      ],
+      "subject": "urn:ref:federal-register-agency:603",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:investment-security-office",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:3dc95f073703efc2d87e0176592d8237929d91af9a11539ca973716dc44eb9a7",
+        "urn:ref:atlas-source-record:f0ebec8193c93c714b1f6592f7775b22eb9162ed08062940454eac4f10efc39c"
+      ]
+    },
+    {
+      "candidateId": "same:fr88:ecfr:copyright-royalty-board",
+      "nodes": [
+        "urn:ref:atlas-assertion:787fb86a285e15fb4ee7f2abd6776bec44c81c07c4f1f9341ec62272d6f79b0e"
+      ],
+      "subject": "urn:ref:federal-register-agency:88",
+      "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+      "object": "urn:ref:ecfr-agency:copyright-royalty-board",
+      "evidenceRecords": [
+        "urn:ref:atlas-source-record:02bb3b5714caeecb15f3678d1a9a9bae334a058ab6710ab1c3c07c8be408a209",
+        "urn:ref:atlas-source-record:e24ab8c319ae839fa2fb22da22cb2b4279c82f011c28bae6f8feed8314daefc9"
+      ]
+    }
+  ],
+  "nonEmissionAbsences": [
+    {
+      "itemId": "no-fr-bridge:regs:CISA",
+      "absent": true
+    },
+    {
+      "itemId": "same:fr151:ecfr:export-import-bank",
+      "absent": true
+    },
+    {
+      "itemId": "same:fr255:ecfr:international-boundary-and-water-commission-united-states-and-mexico",
+      "absent": true
+    },
+    {
+      "itemId": "same:fr296:fh:300000070",
+      "absent": true
+    }
+  ]
+}

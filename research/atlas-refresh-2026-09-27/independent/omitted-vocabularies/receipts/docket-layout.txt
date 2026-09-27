@@ -1,0 +1,239 @@
+                                           Federal Energy Regulatory Commission
+                                                            Docket Prefix List
+Table 1 – Active: Standard Docket Format
+
+
+ Prefix               Library              Definition
+
+ AC                   Gen                  Requests for Approval by Chief Accountant
+
+ AD                   Gen                  Administrative
+
+ AI                   Gen                  Requests for Interpretations by Chief Accountant
+
+ CD                   H                    Conduit Determination (< than 5 MW Facility)
+
+ CE                   E, G, O, H, Gen      Critical Energy Infrastructure Information
+
+ CP                   G                    Certiﬁcates for Interstate Natural Gas Pipeline Companies
+
+ CX                   H, E, G, O           Categorical Exclusions
+
+ DI                   H                    Declarations of Intention and Petitions for Declaratory Order
+
+ DO                   O                    Depreciation and Related Matters Pertaining to Oil Pipelines
+
+ DR                   E                    Depreciation Rates for Accounting Purposes
+
+ DV                   H                    Power Site Lands, Restoration, Withdrawal and Vacation (Bureau
+                                           of Land Management)
+
+ EC                   E                    Applications of Electric Public Utilities for Authority to Sell, Lease,
+                                           Purchase, Acquire, or Merge, and Applications for Determination of
+                                           Jurisdiction
+
+ EF                   E                    Federal Electric Rates for DOE's Power Administrations
+
+ EG                   E                    Applications for Exempt Wholesale Generation Determinations
+
+ EL                   E                    Miscellaneous Formal Filings Related to Electric Power
+
+ EM                   G                    Emergency Natural Gas Sales, Transportation, Exchange
+                                           Transactions and Replacement of Facilities
+
+ EP                   H                    Power Site Reserves, Classiﬁcations and Designations, Right-of-
+                                           Way or Lease of Federal Lands (Bureau of Land Management)
+
+ ER                   E                    Electric Rate Filings
+
+
+
+                                                            1                                          June 2025
+Prefix   Library   Definition
+
+ES       E         Issuance of Securities and Assumption of Liabilities of Electric
+                   Utilities
+
+ET       E         Application and Exhibits for a Permit to Site New Electric
+                   Transmission Facilities or Modify Existing Facilities
+
+EX       E         Electric Discussion Items
+
+EY       E         Emergency Reports for Deviations from Standards of Conduct
+
+FA       Gen       Financial Audits by the Chief Accountant for Jurisdictional
+                   Companies
+
+FC       E or G    Foreign Utility Company Request
+
+GP       G         General Tracking Docket Category for Matters Under the Natural
+                   Gas Policy Act
+
+GT       G         General Tariﬀ Changes for Interstate Gas Pipelines
+
+GX       G         Gas Discussion Items
+
+HC       E or G    Certain Filings by Holding Companies under PUHCA
+
+IN       Gen       Investigations Instituted by OGC-Enforcement
+
+IS       O         Investigations and Suspensions into Rates, Fares, Charges &
+                   Practices of Oil P/Ls
+
+JR       H         Jurisdictional Reviews of Licensed Projects
+
+LA       E         Order 697-C Site Acquisition Quarterly Reports
+
+LP       H         Lease of Power Privilege (Bureau of Reclamation)
+
+MC       H         Mining Claims for Locatable Minerals (Bureau of Land
+                   Management)
+
+MD       E, G      Mediation and Arbitration
+
+MG       G         Marketing Aﬃliates Non-Tariﬀ General Filings under Order No. 497
+
+ML       H         Mineral Leases Usually Oil & Gas (Bureau of Land Management)
+
+MO       E         State of the Market Reports
+
+MT       G         Tariﬀ Filings under Order No. 497
+
+NJ       E         Non-Jurisdictional / Electric
+
+NL       E, G, O   No-Action Letter
+
+NP       E         Notice of Penalty
+
+
+                                   2                                             June 2025
+Prefix   Library           Definition
+
+NR       Gen               News Releases
+
+OA       E                 Open Access Transmission Tariﬀs
+
+OR       O                 Oil Pipeline Rate Cases
+
+OT       O                 Oil Pipeline Tariﬀs
+
+PA       E, G, O, H, Gen   Audits other than ﬁnancial audits by the Chief Accountant
+
+PF       G                 Pre-Filing NEPA Activities for Proposed Gas Pipelines
+
+PH       E or G            Exemption from or Waiver of Regulation as Holding Company
+                           (FERC-65A [Exemption Notiﬁcation] and FERC- 65B [Waiver
+                           Notiﬁcation])
+
+PL       Gen, RM           General Policy Cases
+
+PR       G                 Petitions for Rate Approval for Transportation of Natural Gas under
+                           NGPA
+
+PT       E                 Preﬁlling Activity for a Permit to Site New Electric Transmission
+                           Facilities or Modify Existing Facilities
+
+QF       E                 Qualifying Status of Cogeneration and Small Power Production
+                           Facilities
+QM       E                 Relief from, or Reinstatement of, Mandatory Purchase or Sell
+                           Requirement between Utility and Qualifying Facility, as mandated
+                           by the Energy Policy Act of 2005
+RA       G, O              Appeals form Denial of Requests for Adjustments Issued by
+                           Economic Regulatory Administration, DOE
+RC       E                 Compliance and Enforcement of Reliability Standards
+RD       E                 Electric Reliability Standards
+RM       Gen, RM           Rulemaking Proceedings
+RO       G, O              Appeals from Remedial Orders Issued by Economic Regulatory
+                           Administration, DOE
+RP       G                 Rates for Interstate Natural Gas Pipeline Companies
+RR       E                 ERO Rules and Organizational Filings
+RS       G                 Restructuring Gas Cases under Order No. 636
+RT       E                 Electric Rate Filings – Rate Transmission
+SA       G                 Staﬀ Adjustments under Section 502 of NGPA
+SC       E                 Stranded Costs / Electric
+TC       G                 Tariﬀ Curtailments of Interstate Natural Gas Pipelines
+TF       G                 Flexible Tracking Adjustments not Accompanied by Quarterly or
+                           Annual PGA Filings
+
+
+                                           3                                          June 2025
+Prefix   Library      Definition
+TM       G            Miscellaneous Tracking Adjustments not Accompanied by
+                      Quarterly or Annual PGA Filings
+TQ       G            Quarterly Tracking Filings and Out-of-Cycle PGA Filings of
+                      Interstate Natural Gas Pipelines
+TS       E, G         Transmission Standards
+TX       E            Transmission Services under Section 211 of the Federal Power Act
+UL       H            Unlicensed Hydroelectric Projects
+ZZ       E, G, H, O   Tracking Docket for Certain Non-Docketed Submissions
+
+
+
+
+                                     4                                             June 2025
+Table 2 – Active: Non-Standard Docket Format
+
+
+ Prefix               Library             Definition
+ HB                   H                   Headwater Beneﬁts Related to Hydroelectric Projects
+
+ IC                   Gen                 Information Collections – Public Involvement on the
+                                          Development of the Commission's Information Collection
+                                          Requirements Prior to OMB Approval
+ ID                   E                   Interlocking Directorates for Electric Utilities
+ P                    H                   Hydropower Projects
+
+
+
+
+                                                          5                                        June 2025
+Table 3 – Discontinued Preﬁxes
+
+
+ Prefix               Library    Definition
+
+ AR                   G          Area Rate Proceedings – Independent Natural Gas Producers
+
+ CI                   G          Certiﬁcates for Small Independent Natural Gas Producers &
+                                 Marketers
+
+ CS                   G          Certiﬁcates for Small Independent Natural Gas Producers
+
+ DA                   H          Bureau of Land Management – Power Site Determinations
+                                 (Replaced by DV, EP, MC, and ML prefixes)
+
+ E-                   Gen        All Electric Cases (Replaced by ER, ES, EL, etc. prefixes)
+
+ FS                   O          Fourth Section Applications of Oil Pipelines
+
+ G-                   G          Gas Cases – Used Prior to 1960
+
+ IR                   E          Requests for Waiver of PURPA Regulations
+
+ IT                   E          International Transmission – Electric
+
+ JD                   G, O       Well Category Determinations by State and Federal Jurisdictional
+                                 Agencies
+
+ PD                   O          Depreciation and Related Matters Pertaining to Oil Pipelines (prior
+                                 to March 21, 1989)
+
+ PV                   O          Oil Pipeline Valuation Rates
+
+ R-                   Gen        Rulemakings (Prior to Formation of RM Preﬁx – Fiscal Year 1974)
+
+ RE                   E          Requests for Extensions of Time or Exemptions under PURPA
+
+ RI                   G, O       Rates for Independent Natural Gas Producers
+
+ SP                   O          Special Permission Application or Waivers for Oil Pipelines
+
+ ST                   G          Transportation Annual Reports / Gas
+
+ TA                   G          Annual Tracking Filings of Interstate Natural Gas Pipelines
+
+
+
+
+                                                 6                                             June 2025
+

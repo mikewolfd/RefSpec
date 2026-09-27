@@ -1,0 +1,101 @@
+Lines 558-560
+558: SEC. 4. <<NOTE: 6 USC 101 note.>> EFFECTIVE DATE.
+559: 
+560: This Act shall take effect 60 days after the date of enactment.
+
+Lines 2792-2800
+2792: SEC. 403. <<NOTE: 6 USC 203.>> FUNCTIONS TRANSFERRED.
+2793: 
+2794: In accordance with title XV (relating to transition provisions),
+2795: there shall be transferred to the Secretary the functions, personnel,
+2796: assets, and liabilities of--
+2797: (1) the United States Customs Service of the Department of
+2798: the Treasury, including the functions of the Secretary of the
+2799: Treasury relating thereto;
+2800: (2) the Transportation Security Administration of the
+
+Lines 2842-2868
+2842: SEC. 412. <<NOTE: 6 USC 212.>> RETENTION OF CUSTOMS REVENUE FUNCTIONS BY
+2843: SECRETARY OF THE TREASURY.
+2844: 
+2845: (a) Retention of Customs Revenue Functions by Secretary of the
+2846: Treasury.--
+2847: (1) Retention of authority.--Notwithstanding section
+2848: 403(a)(1), authority related to Customs revenue functions that
+2849: was vested in the Secretary of the Treasury by law before the
+2850: effective date of this Act under those provisions of law set
+2851: forth in paragraph (2) shall not be transferred to the Secretary
+2852: by reason of this Act, and on and after the effective date of
+2853: this Act, the Secretary of the Treasury may delegate any such
+2854: authority to the Secretary at the discretion of the Secretary of
+2855: the Treasury. The Secretary of the Treasury shall consult with
+2856: the Secretary regarding the exercise of any such authority not
+2857: delegated to the Secretary.
+2858: (2) Statutes.--The provisions of law referred to in
+2859: paragraph (1) are the following: the Tariff Act of 1930; section
+2860: 249 of the Revised Statutes of the United States (19 U.S.C. 3);
+2861: section 2 of the Act of March 4, 1923 (19 U.S.C. 6); section
+2862: 13031 of the Consolidated Omnibus Budget Reconciliation Act of
+2863: 1985 (19 U.S.C. 58c); section 251 of the Revised Statutes of the
+2864: United States (19 U.S.C. 66); section 1 of the Act of June 26,
+2865: 1930 (19 U.S.C. 68); the Foreign Trade Zones Act (19 U.S.C. 81a
+2866: et seq.); section 1 of the Act of March 2, 1911 (19 U.S.C. 198);
+2867: the Trade Act of 1974; the Trade Agreements Act of 1979; the
+2868: North American Free Trade Area Implementation Act; the Uruguay
+
+Lines 3682-3696
+3682: SEC. 441. <<NOTE: 6 USC 251.>> TRANSFER OF FUNCTIONS TO UNDER SECRETARY
+3683: FOR BORDER AND TRANSPORTATION SECURITY.
+3684: 
+3685: In accordance with title XV (relating to transition provisions),
+3686: there shall be transferred from the Commissioner of Immigration and
+3687: Naturalization to the Under Secretary for Border and Transportation
+3688: Security all functions performed under the following programs, and all
+3689: personnel, assets, and liabilities pertaining to such programs,
+3690: immediately before such transfer occurs:
+3691: (1) The Border Patrol program.
+3692: (2) The detention and removal program.
+3693: (3) The intelligence program.
+3694: (4) The investigations program.
+3695: (5) The inspections program.
+3696: 
+
+Lines 3846-3855
+3846: SEC. 451. <<NOTE: 6 USC 271.>> ESTABLISHMENT OF BUREAU OF CITIZENSHIP
+3847: AND IMMIGRATION SERVICES.
+3848: 
+3849: (a) Establishment of Bureau.--
+3850: (1) In general.--There shall be in the Department a bureau
+3851: to be known as the ``Bureau of Citizenship and Immigration
+3852: Services''.
+3853: (2) Director.--The head of the Bureau of Citizenship and
+3854: Immigration Services shall be the Director of the Bureau of
+3855: Citizenship and Immigration Services, who--
+
+Lines 3916-3930
+3916: (b) Transfer of Functions From Commissioner.--In accordance with
+3917: title XV (relating to transition provisions), there are transferred from
+3918: the Commissioner of Immigration and Naturalization to the Director of
+3919: the Bureau of Citizenship and Immigration Services the following
+3920: functions, and all personnel, infrastructure, and funding provided to
+3921: the Commissioner in support of such functions immediately before the
+3922: effective date specified in section 455:
+3923: (1) Adjudications of immigrant visa petitions.
+3924: (2) Adjudications of naturalization petitions.
+3925: (3) Adjudications of asylum and refugee applications.
+3926: (4) Adjudications performed at service centers.
+3927: (5) All other adjudications performed by the Immigration and
+3928: Naturalization Service immediately before the effective date
+3929: specified in section 455.
+3930: 
+
+Lines 4493-4500
+4493: SEC. 471. <<NOTE: 6 USC 291.>> ABOLISHMENT OF INS.
+4494: 
+4495: (a) In General.--Upon completion of all transfers from the
+4496: Immigration and Naturalization Service as provided for by this Act, the
+4497: Immigration and Naturalization Service of the Department of Justice is
+4498: abolished.
+4499: (b) Prohibition.--The authority provided by section 1502 may be used
+4500: to reorganize functions or organizational units within the Bureau of
+

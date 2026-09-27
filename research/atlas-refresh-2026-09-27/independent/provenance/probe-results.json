@@ -1,0 +1,169 @@
+{
+  "archive_manifest_errors": [],
+  "baseline_provenance_failures": 3415,
+  "declared_no_payload_digest_policy": [
+    "lcsh-subjects-consolidated-2026-08-06",
+    "lcsh-external-links-mappings-2026-08-15",
+    "lc-external-target-endpoints-2026-08-15",
+    "lc-external-fast-endpoints-2026-08-15",
+    "fast-bulk-external-links-delta-2026-07-27",
+    "fast-bulk-see-also-endpoints-2026-07-27",
+    "eurovoc-gemet-alignment-20201218",
+    "eurovoc-mesh-alignment-20171215",
+    "gemet-eurovoc-alignments-4.2.3",
+    "umthes-gemet-endpoints-2026-08-15",
+    "gemet-umthes-alignments-4.2.3",
+    "mesh-lcsh-mapping-2021-03-31",
+    "federal-register-api-topics-2026-08-03",
+    "gcmd-science-keywords-24-4",
+    "billstatus-action-codes",
+    "billstatus-bill-types",
+    "billstatus-summary-version-codes",
+    "fec-committee-designation",
+    "fec-filing-frequency",
+    "fec-organization-type",
+    "fec-committee-type",
+    "fec-party",
+    "regulations-gov-docket-type",
+    "regulations-gov-document-type",
+    "regulations-gov-submitter-type",
+    "sam-assistance-assistance-types",
+    "sam-assistance-eligible-applicant-types",
+    "sam-assistance-eligible-beneficiary-types",
+    "sam-opportunities-notice-types",
+    "sam-opportunities-opportunity-statuses",
+    "sam-opportunities-set-aside-codes",
+    "ferc-sectors",
+    "ferc-security-levels",
+    "grants-gov-eligibilities",
+    "grants-gov-funding-categories",
+    "oira-review-controls",
+    "oversight-report-types",
+    "census-function-items",
+    "census-data-flags",
+    "pra-icr-controls",
+    "fac-api-field-dictionary-2026-08-03",
+    "census-tiger-geoid-structure",
+    "usgs-gnis-identifiers",
+    "omb-a11-functional-classification",
+    "omb-a11-object-classification",
+    "omb-a11-apportionment-categories",
+    "uscourts-nature-of-suit",
+    "courtlistener-jurisdictions-2026-08-03",
+    "unified-agenda-priority-category",
+    "unified-agenda-rin-status",
+    "unified-agenda-rule-stage",
+    "unified-agenda-major",
+    "unified-agenda-unfunded-mandate",
+    "unified-agenda-eo13771-designation",
+    "unified-agenda-rfa-section610-review",
+    "unified-agenda-rplan-entry",
+    "unified-agenda-rfa-required",
+    "unified-agenda-small-entity",
+    "unified-agenda-govt-level",
+    "unified-agenda-federalism",
+    "unified-agenda-energy-affected",
+    "unified-agenda-print-paper",
+    "unified-agenda-international-interest",
+    "unified-agenda-dline-type",
+    "unified-agenda-dline-action-stage",
+    "unified-agenda-timetable-action",
+    "unified-agenda-rin-relation",
+    "unified-agenda-agency-relation",
+    "gsdm-online-data-dictionary-2026-08-03",
+    "nppes-data-dissemination-layout-v2-2026-08-03",
+    "naics-2022",
+    "psc-april-2025",
+    "treasury-fast-book-accounts-parts-ii-iii-2026-07",
+    "opm-ehri-data-standards-2026-08-04",
+    "opm-ehri-agency-subelement-2026-08-04",
+    "federal-register-documented-document-types-2026-08-15",
+    "federal-register-documented-presidential-document-types-2026-08-15",
+    "federal-register-agencies-roster-2026-08-15",
+    "fcc-bureaus-offices-roster-2026-08-15",
+    "federal-hierarchy-orgs-complete-2026-08-15",
+    "cfr-subject-index-parts-2026-08-20",
+    "ecfr-agencies-roster-2026-08-15",
+    "regulations-gov-agencies-roster-2026-08-16",
+    "gao-published-topics-capture-subset-2026-09-01",
+    "gao-cra-rule-types",
+    "gao-cra-priority-of-regulation",
+    "unified-agenda-gao-cra-priority-2026-08-15",
+    "nrc-adams-documented-profile-properties-2026-08-15",
+    "nrc-adams-documented-accession-number-2026-08-15",
+    "treasury-fast-book-fund-groups-2026-07",
+    "lda-general-issue-codes",
+    "lda-filing-types",
+    "ecfr-cfr-titles",
+    "govinfo-collections",
+    "usaspending-award-types",
+    "gsdm-data-dictionary-domain-values-2026-08-03",
+    "nasa-technology-taxonomy-8817",
+    "crs-legislative-entities",
+    "crs-legislative-subjects",
+    "crs-policy-areas",
+    "fast-topical-current",
+    "fast-lcsh-adopted-2026-08-15",
+    "icpsr-subject-thesaurus",
+    "eurovoc-lcsh-alignment-20240711",
+    "mesh-descriptors-2026",
+    "regulations-gov-agency-identity-2026-08-16"
+  ],
+  "evidence_pins": {
+    "bindings": 4900,
+    "pins_matching_native_payload_digest": 0,
+    "pins_matching_source_record_content_digest": 4900
+  },
+  "flag_only_examples": [
+    "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:09b0253340c314e63927ff3d813873652ecc74cf0c55cee4c9b4b1f9de5351e4> sourceDigest differs from its exact publisherRelation payload",
+    "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0e393bec64589e5e4e822551218901d0b2c20423352725f3f1ef6f41a7aae37b> sourceDigest differs from its exact publisherRelation payload"
+  ],
+  "flag_only_provenance_failures": 50,
+  "fresh_failed_checks": [
+    "configuration",
+    "claim-scope",
+    "rdf-provenance-fidelity"
+  ],
+  "mutations": [
+    {
+      "added_failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08> native payload responseDigest differs -- expected 'sha256:3c81b1fe83ece0c213ae1c54c1c1a645d8457f35180dfb61ff27e669f1bf8974', observed 'sha256:0000000000000000000000000000000000000000000000000000000000000000'"
+      ],
+      "field": "responseDigest"
+    },
+    {
+      "added_failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08> native payload responseByteLength differs -- expected 11142, observed 0"
+      ],
+      "field": "responseByteLength"
+    },
+    {
+      "added_failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08> native payload retrievedAt differs -- expected '2026-08-16T00:21:03Z', observed '1900-01-01T00:00:00Z'"
+      ],
+      "field": "retrievedAt"
+    },
+    {
+      "added_failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08> native payload legacyIri differs -- expected 'http://data.uba.de/umt/_00028834', observed 'http://data.uba.de/umt/_wrong'"
+      ],
+      "field": "legacyIri"
+    }
+  ],
+  "payload_hash_errors": [],
+  "raw_source_fidelity_errors": [],
+  "rdf_parquet_errors": [],
+  "records": 3415,
+  "resource_records": 3365,
+  "samples": [
+    {
+      "id": "urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08",
+      "locator": "https://sns.uba.de/umthes/de/concepts/_00028834.nt",
+      "payload_digest": "sha256:b2f45f92cc6f098ac49aefab2151b54365d256c50b8f2e7d3b4cb8bcbe4eaba8",
+      "response_digest": "sha256:3c81b1fe83ece0c213ae1c54c1c1a645d8457f35180dfb61ff27e669f1bf8974",
+      "target": "https://sns.uba.de/umthes/_00028834"
+    }
+  ],
+  "source_id_errors": [],
+  "transformed_relation_records": 50
+}

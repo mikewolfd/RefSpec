@@ -1,0 +1,82 @@
+{
+  "REPORT.md": {
+    "byte_length": 10386,
+    "sha256": "95be4964025493b1ba9e9d667d57894285b55c4b95aca91e79a8267329020776"
+  },
+  "blast-radius-results.json": {
+    "byte_length": 4429,
+    "sha256": "55a221493e55eb5c7463868e1b457f6a149ba4715f3a45be39d103194d79544a"
+  },
+  "fresh-receipt.json": {
+    "byte_length": 74314,
+    "sha256": "cf10dbcb4b6023cda256c964d4334a79ea780c6a4914d11e21f421e790b3c1ab"
+  },
+  "partial-policy-relation-baseline-checks.json": {
+    "byte_length": 16247,
+    "sha256": "f339c51c303222c4f3060ac565c2bbee2e45264ccff70e07ed16cb7aa1496135"
+  },
+  "partial-policy-relation-editorialReason-checks.json": {
+    "byte_length": 18547,
+    "sha256": "cfa7d4c5debc1a3a5877e9f34e0e8c8f8e063b9a0fb6a23ea8e2182cb3778744"
+  },
+  "partial-policy-relation-mutation-results.json": {
+    "byte_length": 1199,
+    "sha256": "94757604a71a46476478bbda2d32c5e90f5970198d206024208b7d09bf1bad90"
+  },
+  "partial-policy-relation-relationObject-checks.json": {
+    "byte_length": 18886,
+    "sha256": "3421d8809af6b7adf420e45dee1151403c8f9b40189247321233d6a7e03fbbd7"
+  },
+  "partial-policy-relation-responseDigest-checks.json": {
+    "byte_length": 18562,
+    "sha256": "221be6ebd4324c6d76d1c103e530d79834e5b29880a40dc40011e8a2fa80782a"
+  },
+  "probe-results.json": {
+    "byte_length": 7024,
+    "sha256": "57051eef7d7480742962761b2390598dd93be9435b10ec54c519f80e9190c462"
+  },
+  "relation-baseline-checks.json.gz": {
+    "byte_length": 406736,
+    "sha256": "fbd6e7be66d3a1042f55a7973452662c7a607deb1a486a561ac032307ba1b08f"
+  },
+  "relation-editorialReason-checks.json.gz": {
+    "byte_length": 407762,
+    "sha256": "57061363c5dd0241897a9d0b223bcde8c8395ef4527575720aa2455f74652f3a"
+  },
+  "relation-mutation-results.json": {
+    "byte_length": 1278,
+    "sha256": "9119c6f5d7b73efb0926676bd0e7862f2c90882bf838ed4c08f0a9181c0482f5"
+  },
+  "relation-relationObject-checks.json.gz": {
+    "byte_length": 407906,
+    "sha256": "c1b45a6e007519c3af751f6340cff82ef294600f1f0e1c7da1f7b3cb4456a175"
+  },
+  "relation-responseDigest-checks.json.gz": {
+    "byte_length": 407750,
+    "sha256": "e284678827d2a7fef78ea2d4a8a722479108a42d33b2155584e5c3b14aa03560"
+  },
+  "relation-specimen.json": {
+    "byte_length": 1227,
+    "sha256": "d46580cbb886f34067b3e91d6dbe6abeb48fbcd4ab203da34cbe361df9f90c27"
+  },
+  "replay_blast_radius.py": {
+    "byte_length": 3050,
+    "sha256": "bff01fab33069ac42054230cdc2629f5a57b2ca31143acb4c1be2aaf0cc0a0bc"
+  },
+  "replay_provenance.py": {
+    "byte_length": 7942,
+    "sha256": "9bb8124f84a4645235f7e0c0ac420d296d2daf0d7c298254d7d0eba713bcff92"
+  },
+  "replay_relation_mutations.py": {
+    "byte_length": 4793,
+    "sha256": "017eeaac5c855f8d4804007ad8272ea11dda3eb66345aa6532ce658205c4679a"
+  },
+  "specimen-native.json": {
+    "byte_length": 5750,
+    "sha256": "a1ffb34e1bbc9b6371661fbdba66febf4903443ae9b73b5ce1faed37d72f0ede"
+  },
+  "specimen.nt": {
+    "byte_length": 11142,
+    "sha256": "3c81b1fe83ece0c213ae1c54c1c1a645d8457f35180dfb61ff27e669f1bf8974"
+  }
+}

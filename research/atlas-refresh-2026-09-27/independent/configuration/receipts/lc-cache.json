@@ -1,0 +1,24 @@
+{
+  "individualReader": {
+    "fixture-agrovoc": [
+      "http://aims.fao.org/aos/agrovoc/1"
+    ],
+    "fixture-getty-aat": [
+      "http://vocab.getty.edu/aat/2"
+    ]
+  },
+  "combinedBuildContext": {
+    "fixture-agrovoc": [
+      "http://aims.fao.org/aos/agrovoc/1"
+    ],
+    "fixture-getty-aat": [
+      "http://aims.fao.org/aos/agrovoc/1"
+    ]
+  },
+  "cacheLeakReproduced": true,
+  "pinFailures": [],
+  "expectedSyntheticMissingDistribution": [
+    "missing atlas-manifest.json for pack transport authentication",
+    "missing atlas-construction-summary.json"
+  ]
+}

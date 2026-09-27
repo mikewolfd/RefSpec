@@ -1,0 +1,199 @@
+Source: tools/generate_atlas_v3_full.py
+Commit: cc507773af7d01a9330b0bdd0dca293b25380147
+SHA-256: 3216829a01fa1bf6817f3a9810b82be25cf487bf2edc0988774884346d1523a1
+
+Lines 535-560
+535: 
+536: class _MutationTrackedGraph(Graph):
+537:     """An RDFLib graph with a cheap in-process mutation receipt."""
+538: 
+539:     def __init__(self, *args: Any, **kwargs: Any) -> None:
+540:         super().__init__(*args, **kwargs)
+541:         self.revision = 0
+542: 
+543:     def add(self, triple: tuple[Any, Any, Any]) -> _MutationTrackedGraph:
+544:         if triple not in self:
+545:             super().add(triple)
+546:             self.revision += 1
+547:         return self
+548: 
+549:     def remove(self, triple: tuple[Any, Any, Any]) -> _MutationTrackedGraph:
+550:         removed = tuple(self.triples(triple))
+551:         if removed:
+552:             super().remove(triple)
+553:             self.revision += len(removed)
+554:         return self
+555: 
+556: 
+557: def _new_build_graph() -> _MutationTrackedGraph:
+558:     """Create a single-context graph without rdflib's redundant context index."""
+559: 
+560:     return _MutationTrackedGraph(store="SimpleMemory")
+
+Lines 4040-4116
+4040: def _expected_mapping_asserted_graph(
+4041:     mapping_releases: Sequence[RegistryMappingRelease],
+4042: ) -> Graph:
+4043:     """Reconstruct the exact mapping claims, evidence, records, and policies."""
+4044: 
+4045:     graph = _new_build_graph()
+4046:     for release in mapping_releases:
+4047:         policy = _add_policy(graph, release.editorial_policy)
+4048:         source_release = URIRef(release.source_release_iri)
+4049:         for mapping in release.mappings:
+4050:             assertion = _add_assertion(
+4051:                 graph,
+4052:                 assertion_type=ATLAS.MappingAssertion,
+4053:                 ring=_mapping_release_ring(release.ring),
+4054:                 subject=URIRef(mapping.subject),
+4055:                 predicate=URIRef(mapping.predicate),
+4056:                 obj=URIRef(mapping.object),
+4057:                 source_release=URIRef(mapping.subject_atlas_release_iri),
+4058:                 target_release=URIRef(mapping.object_atlas_release_iri),
+4059:                 policy=policy,
+4060:                 asserted_at=mapping.asserted_at,
+4061:                 effective_period=_mapping_effective_period(
+4062:                     mapping,
+4063:                     ring=release.ring,
+4064:                 ),
+4065:             )
+4066:             for evidence in mapping.evidence:
+4067:                 locator, digest, payload = _mapping_evidence(
+4068:                     release,
+4069:                     mapping,
+4070:                     evidence,
+4071:                 )
+4072:                 record = _add_source_record(
+4073:                     graph,
+4074:                     source_release=source_release,
+4075:                     source_locator=locator,
+4076:                     source_digest=digest,
+4077:                     native_payload=payload,
+4078:                     represents_resource=None,
+4079:                 )
+4080:                 _add_evidence_binding(
+4081:                     graph,
+4082:                     assertion=assertion,
+4083:                     evidence_record=record,
+4084:                     reviewer=URIRef(evidence.reviewer_iri),
+4085:                     review_warrant=_mapping_review_method(evidence.review_warrant),
+4086:                     decided_at=evidence.attested_at,
+4087:                 )
+4088:         for event in release.change_events:
+4089:             _add_change_event(graph, release=release, event=event, source_release=source_release)
+4090:     return graph
+4091: 
+4092: 
+4093: def _mapping_accounting_expectations(
+4094:     mapping_releases: Sequence[RegistryMappingRelease],
+4095: ) -> dict[str, dict[str, set[str]]]:
+4096:     """Group exact mapping assertion identities by evidence SourceRecord."""
+4097: 
+4098:     graph = _expected_mapping_asserted_graph(mapping_releases)
+4099:     expected: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
+4100:     try:
+4101:         for binding in graph.subjects(RDF.type, RKAF.EvidenceBinding):
+4102:             assertion = graph.value(binding, RKAF.bindsAssertion)
+4103:             record = graph.value(binding, ATLAS.evidenceSourceRecord)
+4104:             source_release = graph.value(record, ATLAS.inSourceRelease) if isinstance(record, URIRef) else None
+4105:             if not all(isinstance(value, URIRef) for value in (assertion, record, source_release)):
+4106:                 raise AssertionError("expected mapping evidence lacks assertion or release ownership")
+4107:             expected[str(source_release)][str(record)].add(str(assertion))
+4108:         return {
+4109:             release: {record: set(assertions) for record, assertions in records.items()}
+4110:             for release, records in expected.items()
+4111:         }
+4112:     finally:
+4113:         graph.close()
+4114: 
+4115: 
+4116: def _validate_compiled_evidence_output(
+
+Lines 4998-5036
+4998: def _validate_compiled_source_accounting(
+4999:     releases: Sequence[LoadedRelease],
+5000:     accounting: Mapping[str, Any],
+5001:     mapping_releases: Sequence[RegistryMappingRelease] = (),
+5002: ) -> str:
+5003:     """Reconcile the generated ledger with the compact source membership."""
+5004: 
+5005:     if set(accounting) != {"assertedInventoryDigest", "distributionId", "inputs", "totals", "type", "version"}:
+5006:         raise ValueError("compiled producer source accounting fields differ")
+5007:     if (
+5008:         accounting.get("distributionId") != distribution_identity(accounting)
+5009:         or accounting.get("type") != "AtlasSourceAccounting"
+5010:         or accounting.get("version") != "3.1"
+5011:     ):
+5012:         raise ValueError("compiled producer source accounting identity differs")
+5013:     inputs = accounting.get("inputs")
+5014:     if not isinstance(inputs, list):
+5015:         raise TypeError("compiled producer source accounting inputs are not a list")
+5016:     rows_by_release: dict[str, Mapping[str, Any]] = {}
+5017:     for row in inputs:
+5018:         if not isinstance(row, Mapping) or set(row) != {
+5019:             "dispositions",
+5020:             "membershipMode",
+5021:             "sourceRelease",
+5022:         }:
+5023:             raise ValueError("compiled producer source accounting row fields differ")
+5024:         source_release = row.get("sourceRelease")
+5025:         if not isinstance(source_release, str) or source_release in rows_by_release:
+5026:             raise ValueError("compiled producer source accounting repeats a release")
+5027:         rows_by_release[source_release] = row
+5028: 
+5029:     expected_releases = {release.source_release_iri for release in releases} | {
+5030:         release.source_release_iri for release in mapping_releases
+5031:     }
+5032:     if set(rows_by_release) != expected_releases:
+5033:         raise ValueError("compiled producer source accounting release set differs")
+5034: 
+5035:     mapping_expectations = _mapping_accounting_expectations(mapping_releases)
+5036:     source_records: set[str] = set()
+
+Lines 7398-7442
+7398:     spool.append_catalog()
+7399:     _STATUS.phase("derive-registered-relations")
+7400:     derived, derived_relation_count, derived_rows = _derive_registered_relations(
+7401:         spool,
+7402:         all_source_releases,
+7403:         generated_at=prebuild.generation_report["createdAt"],
+7404:     )
+7405:     spool.counts["derivedRelations"] = derived_relation_count
+7406:     accounting_rows.sort(key=lambda row: row["sourceRelease"])
+7407:     represented = sum(
+7408:         disposition["status"] == "represented"
+7409:         for row in accounting_rows
+7410:         for disposition in row["dispositions"]
+7411:     )
+7412:     excluded = sum(
+7413:         disposition["status"] == "excluded"
+7414:         for row in accounting_rows
+7415:         for disposition in row["dispositions"]
+7416:     )
+7417:     unresolved = sum(
+7418:         disposition["status"] == "unresolved"
+7419:         for row in accounting_rows
+7420:         for disposition in row["dispositions"]
+7421:     )
+7422:     accounting = _identified_source_accounting(
+7423:         {
+7424:             "inputs": accounting_rows,
+7425:             "totals": {
+7426:                 "excluded": excluded,
+7427:                 "represented": represented,
+7428:                 "sourceRecords": represented + excluded + unresolved,
+7429:                 "sourceReleases": len(accounting_rows),
+7430:                 "unresolved": unresolved,
+7431:             },
+7432:             "assertedInventoryDigest": UNSTAMPED_ASSERTED_INVENTORY_DIGEST,
+7433:             "type": "AtlasSourceAccounting",
+7434:             "version": "3.1",
+7435:         }
+7436:     )
+7437:     accounting_digest = _validate_compiled_source_accounting(
+7438:         all_source_releases,
+7439:         accounting,
+7440:         all_mapping_releases,
+7441:     )
+7442:     if spool.counts != dict(prebuild.compiled_rows.expected_counts):
+

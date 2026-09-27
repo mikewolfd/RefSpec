@@ -1,0 +1,13 @@
+Lines 145-155
+145: Subscribe
+146: 
+147: The Broadcasting Board of Governors' mission is to promote freedom and democracy and to enhance understanding by broadcasting accurate, objective, and balanced news and information about the United States and the world to audiences abroad.
+148: 
+149: The Broadcasting Board of Governors (BBG) became an independent agency on October 1, 1999, by authority of the Foreign Affairs Reform and Restructuring Act of 1998 (22 U.S.C. 6501 note). It is composed of nine members. Eight members are appointed by the President and confirmed by the Senate; the ninth, an ex-officio member, is the Secretary of State.
+150: 
+151: The BBG serves as the governing body for all nonmilitary U.S. broadcasting and provides programming in 56 languages via radio, television, and the Internet. The BBG broadcast services include the Voice of America, the Office of Cuba Broadcasting, Radio Free Europe/ Radio Liberty, Radio Free Asia, and the Middle East Broadcasting Networks.
+152: 
+153: All BBG broadcast services adhere to the broadcasting standards and principles of the International Broadcasting Act of 1994, which include reliable, accurate, and comprehensive news; balanced and comprehensive presentations of U.S. thought, institutions, and policies, as well as discussions about those policies; information about developments throughout the world; and a variety of opinions from nations around the world.
+154: 
+155: Agency URL:
+

@@ -1,0 +1,32 @@
+Lines 447-467
+447: SUMMARY:
+448: 
+449: This final rule amends certain regulations relating to the administration and enforcement of the immigration laws to reflect the authority of the Secretary of Homeland Security and to address delegation of that authority, as a result of the March 1, 2003, transfer of the Immigration and Naturalization Service of the Department of Justice to the Department of Homeland Security.
+450: 
+451: DATES:
+452: 
+453: This final rule is effective March 6, 2003. Written comments may be submitted to the Department of Homeland Security on or before April 7, 2003.
+454: 
+455: ADDRESSES:
+456: 
+457: Submit written comments (preferably an original and three copies) to the Associate General Counsel (General Law), Department of Homeland Security, Washington, DC 20528.
+458: 
+459: FOR FURTHER INFORMATION CONTACT:
+460: 
+461: Philip B. Busch, (202) 514-2895, not a toll free call.
+462: 
+463: SUPPLEMENTARY INFORMATION:
+464: 
+465: I. Background
+466: 
+467: On November 25, 2002, the President signed into law the Homeland Security Act of 2002 (Pub. L. 107-296) (the Act), which created the new Department of Homeland Security (DHS). Pursuant to the provisions of the Act, DHS came into existence on January 24, 2003. As provided by the Act and by the Department of Homeland Security Reorganization Plan of November 25, 2002, as modified (Reorganization Plan), the functions of the Immigration and Naturalization Service (INS) of the Department of Justice, and all authorities with respect to those functions, transfer to DHS on March 1, 2003, and the INS is abolished on that date. The transition and savings provisions of the Act, including sections 1512(d) and 1517, provide that references relating to the INS in statutes, regulations, directives or delegations of authority shall be deemed to refer to the appropriate official or component of DHS. Despite this continued validity of Title 8 of the Code of Federal Regulations with respect to DHS, and its application as a matter of law in full to DHS as the successor to the INS unless and until specifically modified, it is appropriate at this time to begin the process of conforming the text of Title 8 to the new governmental structures provided by the Act and the Reorganization Plan.
+
+Lines 479-485
+479: Second, the final rule deletes delegations of authority at 8 CFR 103.1 that reflect the structure of the former INS and therefore no longer provide accurate information from the regulations. These delegations are replaced with a cross-reference to the Secretary of Homeland Security's delegation authority under 8 CFR 2.1. Delegations to replace the former § 103.1 will be in place on March 1, 2003, but are not required to be, and will not be promulgated as rules or codified in the Code of Federal Regulations. The final rule retains the designations of “immigration officer” in former 8 CFR 103.1(j) (new § 103.1(b)), and amends it to include additional officers in DHS as the Secretary may designate as provided by § 2.1.
+480: 
+481: Third, the final rule revises the regulation at 8 CFR 239.1 that delegates authority to issue notices to appear. The Secretary of Homeland Security has determined in his discretion that he will continue publication of this delegation to certain officers in the Code of Federal Regulations, but has added a cross-reference to his delegation authority under 8 CFR 2.1 to clarify that he may in his discretion supplement or revise the list by memorandum or other method other than rulemaking or publication in the
+482: Federal Register
+483: . The list has also been revised to reflect new titles. This rule omits the former first sentence of § 239.1 as superfluous explanatory material that is unnecessary in light of the jurisdictional regulations of the Executive Office for Immigration Review of the Department of Justice at 8 CFR 3.14.
+484: 
+485: Fourth, the final rule supplements the regulatory definition of “director” at 8 CFR 1.1(o) to clarify that on or after March 1, 2003, any reference to a district director or other director in Title 8 of the Code of Federal Regulations with respect to any function or authority will be a reference to that official within the Bureau of Immigration and Customs Enforcement, the Bureau of Customs and Border Protection, the Bureau of Citizenship and Immigration Services, or other component of DHS who has been delegated that function or authority for a district or other geographic area.
+

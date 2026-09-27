@@ -1,0 +1,89 @@
+[
+  {
+    "name": "umthes",
+    "root": "output/atlas-3.1-umthes-2026-09-27",
+    "distributionId": "urn:ref:atlas:distribution:3.1-bounded-development:a82ced907fac4272fd47f8c61d9c08bbfb05867b6afc4bdda5aaede08ba8f593",
+    "distributionManifestSha256": "474328e2a2d2bcbbcb2c00861afc18831c215c06ec82b826700b79c845838e02",
+    "fullViewManifestSha256": "4ad1995b91ca9188cced9d22e549c5734aa7918794ce58f0bcc4a26117eb8485",
+    "counts": {
+      "crossRingRelationAssertions": 0,
+      "derivedRelations": 0,
+      "evidenceBindings": 4900,
+      "identifiers": 0,
+      "labels": 17241,
+      "mappingAssertions": 0,
+      "nativeRelationAssertions": 4900,
+      "projectedRelations": 0,
+      "relationAssertions": 4900,
+      "releases": 1,
+      "resources": 3365,
+      "sourceAssignments": 0,
+      "sourceRecords": 3415
+    },
+    "quadCount": 262530,
+    "standaloneValidation": {
+      "exitCode": 0,
+      "log": "umthes-validation.log",
+      "watchMetadata": "start 2026-09-27T18:57:29Z load { 10.55 10.52 10.14 }\nend 2026-09-27T18:57:39Z load { 10.69 10.56 10.15 } exit 0 peak_tree_rss_kib 275424\n"
+    },
+    "sourceQualification": "not a passing generic source-fidelity audit"
+  },
+  {
+    "name": "omitted-vocabularies",
+    "root": "output/atlas-3.1-omitted-vocabularies-2026-09-27",
+    "distributionId": "urn:ref:atlas:distribution:3.1-bounded-development:68662a5ca5783c7563f841ec04f7d24acf642282dafc7ec9d5ff42879876e184",
+    "distributionManifestSha256": "c5ade49d11a81de3b6ea090c13dfd097e22a460288c47e75850be33aa44649b4",
+    "fullViewManifestSha256": "8692676053309f823d0fabfde8e29d2f3d996c94399b88c73099dffc58d5799e",
+    "counts": {
+      "crossRingRelationAssertions": 0,
+      "derivedRelations": 0,
+      "evidenceBindings": 0,
+      "identifiers": 0,
+      "labels": 333,
+      "mappingAssertions": 0,
+      "nativeRelationAssertions": 0,
+      "projectedRelations": 0,
+      "relationAssertions": 0,
+      "releases": 3,
+      "resources": 333,
+      "sourceAssignments": 0,
+      "sourceRecords": 333
+    },
+    "quadCount": 7910,
+    "standaloneValidation": {
+      "exitCode": 0,
+      "log": "omitted-vocabularies-validation.log",
+      "watchMetadata": "start 2026-09-27T20:10:43Z load { 7.36 7.71 6.73 }\nend 2026-09-27T20:10:53Z load { 8.75 8.00 6.84 } exit 0 peak_tree_rss_kib 128912\n"
+    },
+    "sourceQualification": "not a passing generic source-fidelity audit"
+  },
+  {
+    "name": "agency-with-endpoint-closure",
+    "root": "output/atlas-3.1-agency-2026-09-27",
+    "distributionId": "urn:ref:atlas:distribution:3.1-bounded-development:d6b300b066f71ccd494fbccaf686e0fd8da954341700073ea7649f82a72b2022",
+    "distributionManifestSha256": "560266ed48d2db7a8c86cddd861f17f31f9b3d6ead7f10edbdc45be61de14dc1",
+    "fullViewManifestSha256": "9e9b0700b4dd9e43d41720e6b8ebee7056b8170903284f5623ec372694662e7e",
+    "counts": {
+      "crossRingRelationAssertions": 446,
+      "derivedRelations": 0,
+      "evidenceBindings": 87242,
+      "identifiers": 3581,
+      "labels": 7271,
+      "mappingAssertions": 13,
+      "nativeRelationAssertions": 86748,
+      "projectedRelations": 0,
+      "relationAssertions": 87207,
+      "releases": 7,
+      "resources": 6455,
+      "sourceAssignments": 0,
+      "sourceRecords": 6503
+    },
+    "quadCount": 2249291,
+    "standaloneValidation": {
+      "exitCode": 0,
+      "log": "agency-validation.log",
+      "watchMetadata": "start 2026-09-27T20:14:47Z load { 7.47 7.53 6.89 }\nend 2026-09-27T20:15:58Z load { 7.04 7.41 6.90 } exit 0 peak_tree_rss_kib 1234704\n"
+    },
+    "sourceQualification": "not a passing generic source-fidelity audit"
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "renders": [
+    {
+      "file": "class-page4.png",
+      "source_key": "classes",
+      "pdf_page": 4,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "4",
+        "-l",
+        "4",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "class-page5.png",
+      "source_key": "classes",
+      "pdf_page": 5,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "5",
+        "-l",
+        "5",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "class-page7.png",
+      "source_key": "classes",
+      "pdf_page": 7,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "7",
+        "-l",
+        "7",
+        "-scale-to",
+        "2600",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "docket-page1.png",
+      "source_key": "dockets",
+      "pdf_page": 1,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "1",
+        "-l",
+        "1",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "docket-page5.png",
+      "source_key": "dockets",
+      "pdf_page": 5,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "5",
+        "-l",
+        "5",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "docket-page6.png",
+      "source_key": "dockets",
+      "pdf_page": 6,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "6",
+        "-l",
+        "6",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "ua-page-18.png",
+      "source_key": "ua",
+      "pdf_page": 18,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "18",
+        "-l",
+        "18",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "ua-page-19.png",
+      "source_key": "ua",
+      "pdf_page": 19,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "19",
+        "-l",
+        "19",
+        "-scale-to",
+        "1800",
+        "-png"
+      ],
+      "visually_inspected": true
+    },
+    {
+      "file": "class-page7-tail-crop.png",
+      "source_key": "classes",
+      "pdf_page": 7,
+      "renderer": "pdftoppm",
+      "options": [
+        "-f",
+        "7",
+        "-l",
+        "7",
+        "-r",
+        "600",
+        "-x",
+        "5583",
+        "-y",
+        "1970",
+        "-W",
+        "600",
+        "-H",
+        "180",
+        "-png",
+        "-singlefile"
+      ],
+      "visually_inspected": true
+    }
+  ],
+  "pdftoppm_version": "pdftoppm version 26.06.0"
+}

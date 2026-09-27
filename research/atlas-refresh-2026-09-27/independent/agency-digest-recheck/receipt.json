@@ -1,0 +1,1273 @@
+{
+  "status": "passed",
+  "rules": {
+    "aggregateFields": [
+      "candidates",
+      "events",
+      "non_emissions",
+      "no_fr_bridge"
+    ],
+    "entryExcludedFields": [
+      "content_digest",
+      "effect_note"
+    ],
+    "entryPreimage": "{\"entry\": all entry fields except content_digest/effect_note, \"members\": event member rows with same exclusions in retained order; empty for a non-event}",
+    "serialization": "UTF-8 JSON; sorted object keys; original array order; no spaces; no terminal LF; non-ASCII unchanged; nonfinite numbers refused",
+    "eventRowSelection": "rows in retained candidates order whose event_id equals the event id; event rows list checked separately",
+    "decisionRule": "Only identity rows, events, non-emissions, no-bridge codes are decidable; event result rows bind through their event. A changed item digest stales only its decision."
+  },
+  "inputs": [
+    {
+      "path": "plans/agency-registry-batch-1-candidates.json",
+      "sha256": "6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2",
+      "bytes": 191706
+    },
+    {
+      "path": "plans/agency-registry-batch-1-decisions.json",
+      "sha256": "a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098",
+      "bytes": 6744
+    }
+  ],
+  "counts": {
+    "itemDigests": 40,
+    "eventDigests": 9,
+    "eventResultDigests": 14,
+    "decisionLinks": 26
+  },
+  "aggregate": {
+    "declared": "sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc",
+    "ledgerApproved": "sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc",
+    "observed": "sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc",
+    "matches": true
+  },
+  "wholeReport": {
+    "declared": "sha256:449b89032917badfa1be4462f7d7b6f9d442210797092009c4e4b40a7b9b4431",
+    "observed": "sha256:449b89032917badfa1be4462f7d7b6f9d442210797092009c4e4b40a7b9b4431",
+    "matches": true
+  },
+  "items": [
+    {
+      "group": "candidates",
+      "itemId": "same:fr118:ecfr:economic-analysis-bureau",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+      "observed": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr136:ecfr:energy-department",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:45fb22665147ceca9843ab9946c361de9ae768a4c6d96618feced2ac41f61c8b",
+      "observed": "sha256:45fb22665147ceca9843ab9946c361de9ae768a4c6d96618feced2ac41f61c8b",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr151:ecfr:export-import-bank",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "owner_question",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:8098a457be196e15c109f06682a7e64e98d6f4ee4fa898e75f2d1b7197da1748",
+      "observed": "sha256:8098a457be196e15c109f06682a7e64e98d6f4ee4fa898e75f2d1b7197da1748",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr186:ecfr:federal-register-office",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:ffc8ab24080790b482b24128506e0bb4ce49158ffba82bad01aeaef2efe98455",
+      "observed": "sha256:ffc8ab24080790b482b24128506e0bb4ce49158ffba82bad01aeaef2efe98455",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr244:fh:100006936",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:8b92a7b43ceef6bbf9061b4ac7bb3032aba799a40565ad05160ecbf5897ea292",
+      "observed": "sha256:8b92a7b43ceef6bbf9061b4ac7bb3032aba799a40565ad05160ecbf5897ea292",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr245:fh:100004455",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:e382ea673b6109651dcf83c2c6de5d65f5d6ad46aad9c425b20e47abd1bb373f",
+      "observed": "sha256:e382ea673b6109651dcf83c2c6de5d65f5d6ad46aad9c425b20e47abd1bb373f",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr271:ecfr:labor-department",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:948eb955087fc79aa73a0f535412385e4641feaafe5328355f58d476adebb6c1",
+      "observed": "sha256:948eb955087fc79aa73a0f535412385e4641feaafe5328355f58d476adebb6c1",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr277:ecfr:library-of-congress",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:ab8e33fcb6c86e1756e5287b5dc0fd2d50396d1cee51b54949a89be813ea8a62",
+      "observed": "sha256:ab8e33fcb6c86e1756e5287b5dc0fd2d50396d1cee51b54949a89be813ea8a62",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr296:fh:300000070",
+      "coveredEntryFields": [
+        "alternative_basis",
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "owner_question",
+        "proposed_basis",
+        "proposed_hold",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:37e122e07a9f0542ec8c4ba4565b88318426508902d521a3d6a982219c575afb",
+      "observed": "sha256:37e122e07a9f0542ec8c4ba4565b88318426508902d521a3d6a982219c575afb",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr409:ecfr:postal-regulatory-commission",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:07c30ec02a64ec49c9960c67cc03d7f44a806b56cdf1c2a5f6db474385a229fe",
+      "observed": "sha256:07c30ec02a64ec49c9960c67cc03d7f44a806b56cdf1c2a5f6db474385a229fe",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr4:ecfr:african-development-foundation",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:5f47df2bcc29a48cf9251000b561b44a7008238ae40251c4f94c93bf4ad7dede",
+      "observed": "sha256:5f47df2bcc29a48cf9251000b561b44a7008238ae40251c4f94c93bf4ad7dede",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr503:fh:100012075",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:29a4c8f57806cec928f0441637e6f1e79e30818ffe8b212ff549cf7635669469",
+      "observed": "sha256:29a4c8f57806cec928f0441637e6f1e79e30818ffe8b212ff549cf7635669469",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr587:fh:100525875",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:63de839e25b54e8c15e8a3cb6d997df5dd83545c5f2a5e9578ea67360575ed2c",
+      "observed": "sha256:63de839e25b54e8c15e8a3cb6d997df5dd83545c5f2a5e9578ea67360575ed2c",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr603:ecfr:investment-security-office",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:1f63e7d636f6f8a9a60a60d904e1a7d207b23c8a9dc823225fdaba3ebc515cbf",
+      "observed": "sha256:1f63e7d636f6f8a9a60a60d904e1a7d207b23c8a9dc823225fdaba3ebc515cbf",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "same:fr88:ecfr:copyright-royalty-board",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "codes_selecting_fr_id_after_bridge",
+        "finding",
+        "fr_id_reached_today",
+        "group",
+        "proposed_basis",
+        "reasoning",
+        "regulations_gov_codes",
+        "relation",
+        "relation_iri",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:e1845dec02312895a961975b02de375478c3d54b362e6f6888365e9f8a5cc270",
+      "observed": "sha256:e1845dec02312895a961975b02de375478c3d54b362e6f6888365e9f8a5cc270",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr96:fr501",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:53d4ee0cbd9f9df9d4d476e9138cc148a0b74af7c03e8da32e473e882ae708b3",
+      "observed": "sha256:53d4ee0cbd9f9df9d4d476e9138cc148a0b74af7c03e8da32e473e882ae708b3",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr96:fr503",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:0937833bb76f159c3eb8663e91eccf774d42a43bd7728e1f2c3ed4b7707fb6d7",
+      "observed": "sha256:0937833bb76f159c3eb8663e91eccf774d42a43bd7728e1f2c3ed4b7707fb6d7",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr150:fr241",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:52ec3b2592bdc8696a1d6b71acdf3a2931d6194b4cf56790c869c8ae7a997a7c",
+      "observed": "sha256:52ec3b2592bdc8696a1d6b71acdf3a2931d6194b4cf56790c869c8ae7a997a7c",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr232:fr499",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:6e2cf3aa34cc96a6c5e48ce2aa98e7554a5510d005b37e627aacdd03b65f5f52",
+      "observed": "sha256:6e2cf3aa34cc96a6c5e48ce2aa98e7554a5510d005b37e627aacdd03b65f5f52",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr232:fr501",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:05438c5c8a835ee70343d3fea9c4fb3781ca4a7eb8e526fde8b2fbe0e30b8322",
+      "observed": "sha256:05438c5c8a835ee70343d3fea9c4fb3781ca4a7eb8e526fde8b2fbe0e30b8322",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr232:fr503",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:9ba03f6f717461768f1c62767cfcd3fe6cac31574959eb6339f9b0cb12215f63",
+      "observed": "sha256:9ba03f6f717461768f1c62767cfcd3fe6cac31574959eb6339f9b0cb12215f63",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr259:fr603",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:9b63cd987faf9529fa05bfe82d8da2a3c54573fc2dfbb29524108cb42bfdda43",
+      "observed": "sha256:9b63cd987faf9529fa05bfe82d8da2a3c54573fc2dfbb29524108cb42bfdda43",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr404:fr131",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:5ac30a33d995dff4b0a921ddf70870d51cdfb76e080b31d26985c55706ce200d",
+      "observed": "sha256:5ac30a33d995dff4b0a921ddf70870d51cdfb76e080b31d26985c55706ce200d",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr510:fr41",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:9980fee4ae3883b01a41cbcffe577948009530aa968e61f9cf9e542f14b04990",
+      "observed": "sha256:9980fee4ae3883b01a41cbcffe577948009530aa968e61f9cf9e542f14b04990",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr510:fr476",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:2dda45e739bbbfa35ef383afa23c5e44928df51fb3813d185ec5a4214dc31ebf",
+      "observed": "sha256:2dda45e739bbbfa35ef383afa23c5e44928df51fb3813d185ec5a4214dc31ebf",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr543:fr481",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:2d0738a675ff7360203d418c2732479b18478ae254508ec12b340f48a8485a78",
+      "observed": "sha256:2d0738a675ff7360203d418c2732479b18478ae254508ec12b340f48a8485a78",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr543:fr492",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:1ab349bd3962f86545d6a00e02f1ccdb4a6f0612fdc4861f9fb03e168d601ffc",
+      "observed": "sha256:1ab349bd3962f86545d6a00e02f1ccdb4a6f0612fdc4861f9fb03e168d601ffc",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr559:fr45",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:946051ab54e484e1afca5952a14a7924fe13ea2eac529956650a2967ddf4cffd",
+      "observed": "sha256:946051ab54e484e1afca5952a14a7924fe13ea2eac529956650a2967ddf4cffd",
+      "matches": true
+    },
+    {
+      "group": "candidates",
+      "itemId": "succ:fr564:fr409",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_rejected_alternative",
+        "event_id",
+        "functions_taken",
+        "public_records",
+        "reasoning",
+        "relation",
+        "source",
+        "status",
+        "target"
+      ],
+      "members": [],
+      "declared": "sha256:b6e0509b44483e311d27581906e1a1b26a936f2844ff7fc6693453932c3ce929",
+      "observed": "sha256:b6e0509b44483e311d27581906e1a1b26a936f2844ff7fc6693453932c3ce929",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr96",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr96:fr501",
+        "succ:fr96:fr503"
+      ],
+      "declared": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "observed": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr150",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr150:fr241"
+      ],
+      "declared": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "observed": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr232",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr232:fr499",
+        "succ:fr232:fr501",
+        "succ:fr232:fr503"
+      ],
+      "declared": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "observed": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr259",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr259:fr603"
+      ],
+      "declared": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "observed": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr404",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr404:fr131"
+      ],
+      "declared": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "observed": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr510",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr510:fr41",
+        "succ:fr510:fr476"
+      ],
+      "declared": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "observed": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr543",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr543:fr481",
+        "succ:fr543:fr492"
+      ],
+      "declared": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "observed": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr559",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr559:fr45"
+      ],
+      "declared": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "observed": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "matches": true
+    },
+    {
+      "group": "events",
+      "itemId": "event:fr564",
+      "coveredEntryFields": [
+        "date_basis",
+        "effective_date",
+        "effective_date_alternatives",
+        "event_id",
+        "event_type",
+        "group",
+        "originals",
+        "owner_note",
+        "owner_question",
+        "public_records",
+        "rows",
+        "status"
+      ],
+      "members": [
+        "succ:fr564:fr409"
+      ],
+      "declared": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "observed": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "matches": true
+    },
+    {
+      "group": "non_emissions",
+      "itemId": "same:fr255:ecfr:international-boundary-and-water-commission-united-states-and-mexico",
+      "coveredEntryFields": [
+        "candidate_id",
+        "closest_alternative",
+        "leaves_fr_mentions_unreached",
+        "proposed_decision",
+        "reason",
+        "regulations_gov_codes",
+        "source",
+        "status",
+        "target",
+        "withdrawn_relation"
+      ],
+      "members": [],
+      "declared": "sha256:1ed962cf1a958d1e5f510d847a4859d63d4d75c9923901cf296f740104e09510",
+      "observed": "sha256:1ed962cf1a958d1e5f510d847a4859d63d4d75c9923901cf296f740104e09510",
+      "matches": true
+    },
+    {
+      "group": "no_fr_bridge",
+      "itemId": "no-fr-bridge:regs:CISA",
+      "coveredEntryFields": [
+        "reason",
+        "reason_in_ref038_vocabulary",
+        "reasoning",
+        "roster",
+        "status",
+        "value",
+        "value_id"
+      ],
+      "members": [],
+      "declared": "sha256:1d829cd829c7205639a448d1b64c7f981eab484ba1e4384e94c04ed3834a38f6",
+      "observed": "sha256:1d829cd829c7205639a448d1b64c7f981eab484ba1e4384e94c04ed3834a38f6",
+      "matches": true
+    }
+  ],
+  "decisions": [
+    {
+      "itemId": "event:fr150",
+      "answer": "accept",
+      "declared": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "observed": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr232",
+      "answer": "accept-every-row",
+      "declared": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "observed": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr259",
+      "answer": "accept",
+      "declared": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "observed": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr404",
+      "answer": "accept",
+      "declared": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "observed": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr510",
+      "answer": "accept-every-row",
+      "declared": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "observed": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr543",
+      "answer": "accept-every-row",
+      "declared": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "observed": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr559",
+      "answer": "accept",
+      "declared": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "observed": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr564",
+      "answer": "1",
+      "declared": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "observed": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "event:fr96",
+      "answer": "accept-every-row",
+      "declared": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "observed": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "no-fr-bridge:regs:CISA",
+      "answer": "confirm",
+      "declared": "sha256:1d829cd829c7205639a448d1b64c7f981eab484ba1e4384e94c04ed3834a38f6",
+      "observed": "sha256:1d829cd829c7205639a448d1b64c7f981eab484ba1e4384e94c04ed3834a38f6",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr118:ecfr:economic-analysis-bureau",
+      "answer": "yes",
+      "declared": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+      "observed": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr136:ecfr:energy-department",
+      "answer": "yes",
+      "declared": "sha256:45fb22665147ceca9843ab9946c361de9ae768a4c6d96618feced2ac41f61c8b",
+      "observed": "sha256:45fb22665147ceca9843ab9946c361de9ae768a4c6d96618feced2ac41f61c8b",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr151:ecfr:export-import-bank",
+      "answer": "2",
+      "declared": "sha256:8098a457be196e15c109f06682a7e64e98d6f4ee4fa898e75f2d1b7197da1748",
+      "observed": "sha256:8098a457be196e15c109f06682a7e64e98d6f4ee4fa898e75f2d1b7197da1748",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr186:ecfr:federal-register-office",
+      "answer": "yes",
+      "declared": "sha256:ffc8ab24080790b482b24128506e0bb4ce49158ffba82bad01aeaef2efe98455",
+      "observed": "sha256:ffc8ab24080790b482b24128506e0bb4ce49158ffba82bad01aeaef2efe98455",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr244:fh:100006936",
+      "answer": "yes",
+      "declared": "sha256:8b92a7b43ceef6bbf9061b4ac7bb3032aba799a40565ad05160ecbf5897ea292",
+      "observed": "sha256:8b92a7b43ceef6bbf9061b4ac7bb3032aba799a40565ad05160ecbf5897ea292",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr245:fh:100004455",
+      "answer": "yes",
+      "declared": "sha256:e382ea673b6109651dcf83c2c6de5d65f5d6ad46aad9c425b20e47abd1bb373f",
+      "observed": "sha256:e382ea673b6109651dcf83c2c6de5d65f5d6ad46aad9c425b20e47abd1bb373f",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr255:ecfr:international-boundary-and-water-commission-united-states-and-mexico",
+      "answer": "confirm",
+      "declared": "sha256:1ed962cf1a958d1e5f510d847a4859d63d4d75c9923901cf296f740104e09510",
+      "observed": "sha256:1ed962cf1a958d1e5f510d847a4859d63d4d75c9923901cf296f740104e09510",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr271:ecfr:labor-department",
+      "answer": "yes",
+      "declared": "sha256:948eb955087fc79aa73a0f535412385e4641feaafe5328355f58d476adebb6c1",
+      "observed": "sha256:948eb955087fc79aa73a0f535412385e4641feaafe5328355f58d476adebb6c1",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr277:ecfr:library-of-congress",
+      "answer": "yes",
+      "declared": "sha256:ab8e33fcb6c86e1756e5287b5dc0fd2d50396d1cee51b54949a89be813ea8a62",
+      "observed": "sha256:ab8e33fcb6c86e1756e5287b5dc0fd2d50396d1cee51b54949a89be813ea8a62",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr296:fh:300000070",
+      "answer": "1",
+      "declared": "sha256:37e122e07a9f0542ec8c4ba4565b88318426508902d521a3d6a982219c575afb",
+      "observed": "sha256:37e122e07a9f0542ec8c4ba4565b88318426508902d521a3d6a982219c575afb",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr409:ecfr:postal-regulatory-commission",
+      "answer": "yes",
+      "declared": "sha256:07c30ec02a64ec49c9960c67cc03d7f44a806b56cdf1c2a5f6db474385a229fe",
+      "observed": "sha256:07c30ec02a64ec49c9960c67cc03d7f44a806b56cdf1c2a5f6db474385a229fe",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr4:ecfr:african-development-foundation",
+      "answer": "yes",
+      "declared": "sha256:5f47df2bcc29a48cf9251000b561b44a7008238ae40251c4f94c93bf4ad7dede",
+      "observed": "sha256:5f47df2bcc29a48cf9251000b561b44a7008238ae40251c4f94c93bf4ad7dede",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr503:fh:100012075",
+      "answer": "yes",
+      "declared": "sha256:29a4c8f57806cec928f0441637e6f1e79e30818ffe8b212ff549cf7635669469",
+      "observed": "sha256:29a4c8f57806cec928f0441637e6f1e79e30818ffe8b212ff549cf7635669469",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr587:fh:100525875",
+      "answer": "yes",
+      "declared": "sha256:63de839e25b54e8c15e8a3cb6d997df5dd83545c5f2a5e9578ea67360575ed2c",
+      "observed": "sha256:63de839e25b54e8c15e8a3cb6d997df5dd83545c5f2a5e9578ea67360575ed2c",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr603:ecfr:investment-security-office",
+      "answer": "yes",
+      "declared": "sha256:1f63e7d636f6f8a9a60a60d904e1a7d207b23c8a9dc823225fdaba3ebc515cbf",
+      "observed": "sha256:1f63e7d636f6f8a9a60a60d904e1a7d207b23c8a9dc823225fdaba3ebc515cbf",
+      "decidable": true,
+      "matches": true
+    },
+    {
+      "itemId": "same:fr88:ecfr:copyright-royalty-board",
+      "answer": "yes",
+      "declared": "sha256:e1845dec02312895a961975b02de375478c3d54b362e6f6888365e9f8a5cc270",
+      "observed": "sha256:e1845dec02312895a961975b02de375478c3d54b362e6f6888365e9f8a5cc270",
+      "decidable": true,
+      "matches": true
+    }
+  ],
+  "missingDecisionIds": [],
+  "unknownDecisionIds": [],
+  "mutations": [
+    {
+      "name": "bridge-reasoning",
+      "itemId": "same:fr136:ecfr:energy-department",
+      "field": "reasoning",
+      "optionIndex": null,
+      "previousValue": "Department of Energy is Energy Department in ordinary word order, and both records are top-level organizations with no parent.",
+      "replacement": "Changed identity reasoning.",
+      "changedItemDigests": [
+        "same:fr136:ecfr:energy-department"
+      ],
+      "staleDecisionIds": [
+        "same:fr136:ecfr:energy-department"
+      ],
+      "expectedStaleDecisionIds": [
+        "same:fr136:ecfr:energy-department"
+      ],
+      "aggregateStillMatches": false,
+      "expectedAggregateChanged": true,
+      "checksPass": true,
+      "changedAggregate": "sha256:8255dfa6f48872912aec7bef3c5d969c2338c94dc47fa8f9e20671c436bc5bb1"
+    },
+    {
+      "name": "event-date-basis",
+      "itemId": "event:fr559",
+      "field": "date_basis",
+      "optionIndex": null,
+      "previousValue": "the Reorganization Order's signature date -- the order states no effective date, and 66 FR 39450 records the Secretary's 2001-06-14 announcement of the new name",
+      "replacement": "Changed date policy.",
+      "changedItemDigests": [
+        "event:fr559"
+      ],
+      "staleDecisionIds": [
+        "event:fr559"
+      ],
+      "expectedStaleDecisionIds": [
+        "event:fr559"
+      ],
+      "aggregateStillMatches": false,
+      "expectedAggregateChanged": true,
+      "checksPass": true,
+      "changedAggregate": "sha256:34c8540e565d2b9cc3d0729200dd657b06b05b2c142bfa8a09d62462f0025203"
+    },
+    {
+      "name": "event-result-functions",
+      "itemId": "succ:fr232:fr499",
+      "field": "functions_taken",
+      "optionIndex": null,
+      "previousValue": "immigration services and adjudications (the services bureau HSA sec. 451 establishes)",
+      "replacement": "Changed transferred functions.",
+      "changedItemDigests": [
+        "event:fr232",
+        "succ:fr232:fr499"
+      ],
+      "staleDecisionIds": [
+        "event:fr232"
+      ],
+      "expectedStaleDecisionIds": [
+        "event:fr232"
+      ],
+      "aggregateStillMatches": false,
+      "expectedAggregateChanged": true,
+      "checksPass": true,
+      "changedAggregate": "sha256:64e18d7cf58c95633f8a44f1dad3f80790a6adaafa562868dc8407ff3680abf1"
+    },
+    {
+      "name": "numbered-owner-option",
+      "itemId": "same:fr151:ecfr:export-import-bank",
+      "field": "owner_question",
+      "optionIndex": 1,
+      "previousValue": {
+        "options": [
+          "Not the same organization: reject the bridge.",
+          "The same organization, but reject the reverse-lookup cost: no bridge, FR 151 stays resolved through USEIB alone.",
+          "Accept the bridge: FR 151 becomes ambiguous (EIB, USEIB) in the reverse lookup."
+        ],
+        "question": "FR 151 Export-Import Bank and eCFR Export-Import Bank of the United States: are they the same organization, and is joining them worth the reverse-lookup cost?"
+      },
+      "replacement": "Changed option text.",
+      "changedItemDigests": [
+        "same:fr151:ecfr:export-import-bank"
+      ],
+      "staleDecisionIds": [
+        "same:fr151:ecfr:export-import-bank"
+      ],
+      "expectedStaleDecisionIds": [
+        "same:fr151:ecfr:export-import-bank"
+      ],
+      "aggregateStillMatches": false,
+      "expectedAggregateChanged": true,
+      "checksPass": true,
+      "changedAggregate": "sha256:2e37fc6c51434e8cc9f1e0a6fd4532ab6a0c3a66381f33427f730b19752d53e6"
+    },
+    {
+      "name": "excluded-effect-note",
+      "itemId": "same:fr136:ecfr:energy-department",
+      "field": "effect_note",
+      "optionIndex": null,
+      "previousValue": null,
+      "replacement": "Changed effect note.",
+      "changedItemDigests": [],
+      "staleDecisionIds": [],
+      "expectedStaleDecisionIds": [],
+      "aggregateStillMatches": false,
+      "expectedAggregateChanged": true,
+      "checksPass": true,
+      "changedAggregate": "sha256:c86d14b0c2de4374f6daab74681e0f2b92bd54b4182be0eaef352982a17dee52"
+    },
+    {
+      "name": "excluded-replay-count",
+      "field": "measured.agency_mention_total",
+      "allItemAndAggregateDigestsUnchanged": true,
+      "wholeReportDigestChanged": true,
+      "checksPass": true
+    }
+  ],
+  "failures": []
+}

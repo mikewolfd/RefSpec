@@ -1,0 +1,96 @@
+<https://sns.uba.de/umthes/_66e4cda9> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reiseverkehr"@de .
+<https://sns.uba.de/umthes/_66e4cda9> <http://www.w3.org/2004/02/skos/core#prefLabel> "tourist traffic"@en .
+<https://sns.uba.de/umthes/_00023714> <http://www.w3.org/2004/02/skos/core#prefLabel> "Straßenverkehr"@de .
+<https://sns.uba.de/umthes/_00023714> <http://www.w3.org/2004/02/skos/core#prefLabel> "road transport"@en .
+<https://sns.uba.de/umthes/_00023151> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stadtverkehr"@de .
+<https://sns.uba.de/umthes/_00023151> <http://www.w3.org/2004/02/skos/core#prefLabel> "urban transport"@en .
+<https://sns.uba.de/umthes/_00009165> <http://www.w3.org/2004/02/skos/core#prefLabel> "Radverkehr"@de .
+<https://sns.uba.de/umthes/_00009165> <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle traffic"@en .
+<https://sns.uba.de/umthes/_00021686> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schienenverkehr"@de .
+<https://sns.uba.de/umthes/_00021686> <http://www.w3.org/2004/02/skos/core#prefLabel> "rail transport"@en .
+<https://sns.uba.de/umthes/_00004462> <http://www.w3.org/2004/02/skos/core#prefLabel> "Berufsverkehr"@de .
+<https://sns.uba.de/umthes/_00004462> <http://www.w3.org/2004/02/skos/core#prefLabel> "rush-hour traffic"@en .
+<https://sns.uba.de/umthes/_00012088> <http://www.w3.org/2004/02/skos/core#prefLabel> "Güterverkehr"@de .
+<https://sns.uba.de/umthes/_00012088> <http://www.w3.org/2004/02/skos/core#prefLabel> "freight transport"@en .
+<https://sns.uba.de/umthes/_00607401> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nachhaltiger Verkehr"@de .
+<https://sns.uba.de/umthes/_00607401> <http://www.w3.org/2004/02/skos/core#prefLabel> "sustainable transport"@en .
+<https://sns.uba.de/umthes/_00019085> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personenverkehr"@de .
+<https://sns.uba.de/umthes/_00019085> <http://www.w3.org/2004/02/skos/core#prefLabel> "passenger transport"@en .
+<https://sns.uba.de/umthes/_00009388> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fernverkehr"@de .
+<https://sns.uba.de/umthes/_00009388> <http://www.w3.org/2004/02/skos/core#prefLabel> "long-distance traffic"@en .
+<https://sns.uba.de/umthes/_00046203> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentlicher Verkehr"@de .
+<https://sns.uba.de/umthes/_00046203> <http://www.w3.org/2004/02/skos/core#prefLabel> "public transport"@en .
+<https://sns.uba.de/umthes/_00017821> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nahverkehr"@de .
+<https://sns.uba.de/umthes/_00017821> <http://www.w3.org/2004/02/skos/core#prefLabel> "local transport"@en .
+<https://sns.uba.de/umthes/_bf44461d> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wirtschaftsverkehr"@de .
+<https://sns.uba.de/umthes/_bf44461d> <http://www.w3.org/2004/02/skos/core#prefLabel> "commercial transport"@en .
+<https://sns.uba.de/umthes/_00049266> <http://www.w3.org/2004/02/skos/core#prefLabel> "[Verkehr und Transport]"@de .
+<https://sns.uba.de/umthes/_00049266> <http://www.w3.org/2004/02/skos/core#prefLabel> "[Traffic and Transport]"@en .
+<https://sns.uba.de/umthes/_00026115> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsinfrastruktur"@de .
+<https://sns.uba.de/umthes/_00026115> <http://www.w3.org/2004/02/skos/core#prefLabel> "transport infrastructure"@en .
+<https://sns.uba.de/umthes/_00026105> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsemission"@de .
+<https://sns.uba.de/umthes/_00026105> <http://www.w3.org/2004/02/skos/core#prefLabel> "transport emission"@en .
+<https://sns.uba.de/umthes/_2c2a2e22> <http://www.w3.org/2004/02/skos/core#prefLabel> "transport service"@en .
+<https://sns.uba.de/umthes/_2c2a2e22> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsdienstleistung"@de .
+<https://sns.uba.de/umthes/_00029829> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsbauwerk"@de .
+<https://sns.uba.de/umthes/_00029829> <http://www.w3.org/2004/02/skos/core#prefLabel> "traffic structure"@en .
+<https://sns.uba.de/umthes/_00607485> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsmobilität"@de .
+<https://sns.uba.de/umthes/_00607485> <http://www.w3.org/2004/02/skos/core#prefLabel> "traffic mobility"@en .
+<https://sns.uba.de/umthes/_00046264> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehrsfläche"@de .
+<https://sns.uba.de/umthes/_00046264> <http://www.w3.org/2004/02/skos/core#prefLabel> "traffic area"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://sns.uba.de/umthes/_00028834> <https://sns.uba.de/umthes/schema#memberOf> <https://sns.uba.de/umthes/NL74> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#inScheme> <https://sns.uba.de/umthes/scheme> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00621225> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "traffic"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00024627> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Transportwesen"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00048854> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Transportsektor"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00026145> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Verkehrssektor"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00608587> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Verkehrsbereich"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#hiddenLabel> <https://sns.uba.de/umthes/TH_00609285> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#hiddenLabel> "field of traffic"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00026153> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Verkehrsstrom"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00050448> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Bringungswesen"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00024617> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "transportation"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00616891> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "transportation sector"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00653614> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "transport sector"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00026166> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Verkehrswesen"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00622831> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "traffic sector"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#prefLabel> <https://sns.uba.de/umthes/TH_00647447> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#prefLabel> "transport"@en .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/_c100b87c> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#altLabel> "Mobilitätssektor"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2008/05/skos-xl#prefLabel> <https://sns.uba.de/umthes/TH_00028834> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehr"@de .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_66e4cda9> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00023714> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00023151> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00009165> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00021686> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00004462> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00012088> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00607401> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00019085> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00009388> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00046203> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00017821> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_bf44461d> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#broader> <https://sns.uba.de/umthes/_00049266> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_00026115> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_00026105> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_2c2a2e22> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_00029829> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_00607485> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#related> <https://sns.uba.de/umthes/_00046264> .
+<https://sns.uba.de/umthes/_00028834> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.eionet.europa.eu/gemet/concept/8582> .

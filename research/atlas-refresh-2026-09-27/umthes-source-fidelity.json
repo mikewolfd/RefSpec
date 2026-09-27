@@ -1,0 +1,1096 @@
+{
+  "comparisons": [
+    {
+      "atlasLoaded": true,
+      "atlasOnlyNativePayloadFields": [],
+      "checkedPackTransports": [
+        {
+          "byteLength": 4468656,
+          "manifestByteLength": 4468656,
+          "manifestSha256": "sha256:1665fde5c6f6a15680df75fc828d6da7a52bab77a44f4fa136f87f24181f9cb6",
+          "path": "sources/umthes-gemet-endpoints-2026-08-15/all.nq.zst",
+          "sha256": "sha256:1665fde5c6f6a15680df75fc828d6da7a52bab77a44f4fa136f87f24181f9cb6"
+        }
+      ],
+      "checkedPacks": [
+        "sources/umthes-gemet-endpoints-2026-08-15/all.nq.zst"
+      ],
+      "claimScope": {
+        "claimFamilies": [
+          {
+            "atlasClaimCount": 5196,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "preferredLabels",
+            "sourceClaimCount": 5196,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 10378,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "alternateLabels",
+            "sourceClaimCount": 10378,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 1667,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "hiddenLabels",
+            "sourceClaimCount": 1667,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#notation"
+            ],
+            "checkedBy": "notation-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "notations",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#notation"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#definition"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "languageSelection": "all",
+            "name": "definitions",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#definition"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#note",
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "languageSelection": "all",
+            "mappedSourceValueCount": 0,
+            "name": "notes",
+            "recoveredSourcePredicateCount": 0,
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityReconstructable": true,
+            "sourcePredicates": [
+              "http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote",
+              "http://www.w3.org/2004/02/skos/core#changeNote",
+              "http://www.w3.org/2004/02/skos/core#editorialNote",
+              "http://www.w3.org/2004/02/skos/core#example",
+              "http://www.w3.org/2004/02/skos/core#historyNote",
+              "http://www.w3.org/2004/02/skos/core#note",
+              "http://www.w3.org/2004/02/skos/core#scopeNote"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "name": "resourceValuedAnnotations",
+            "sourceClaimCount": 0,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote",
+              "http://www.w3.org/2004/02/skos/core#changeNote",
+              "http://www.w3.org/2004/02/skos/core#definition",
+              "http://www.w3.org/2004/02/skos/core#editorialNote",
+              "http://www.w3.org/2004/02/skos/core#example",
+              "http://www.w3.org/2004/02/skos/core#historyNote",
+              "http://www.w3.org/2004/02/skos/core#note",
+              "http://www.w3.org/2004/02/skos/core#scopeNote"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "name": "annotationTargetClosure",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 3365,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-iri-fidelity",
+            "name": "memberIriMetadata",
+            "sourceClaimCount": 3365,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-literal-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "memberMetadataLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-literal-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "sourceWideLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 3365,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "checkedBy": "concept-traceability",
+            "name": "conceptIdentities",
+            "sourceClaimCount": 3365,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 4900,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+            ],
+            "checkedBy": "relation-fidelity",
+            "name": "semanticRelations",
+            "sourceClaimCount": 4900,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#broader",
+              "http://www.w3.org/2004/02/skos/core#narrower",
+              "http://www.w3.org/2004/02/skos/core#related",
+              "http://www.w3.org/2004/02/skos/core#exactMatch",
+              "http://www.w3.org/2004/02/skos/core#closeMatch",
+              "http://www.w3.org/2004/02/skos/core#broadMatch",
+              "http://www.w3.org/2004/02/skos/core#narrowMatch",
+              "http://www.w3.org/2004/02/skos/core#relatedMatch"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "schemeMemberships",
+            "nativeSourceMembershipCount": 0,
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#inScheme"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "sourceSchemeIdentities",
+            "reconstruction": "exact source type; native scheme references prove membership, not an explicit publisher rdf:type claim",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "sourceSchemeIriMetadata",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload",
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "https://refspec.org/ns/atlas/v3#notation",
+              "https://refspec.org/ns/atlas/v3#definition",
+              "https://refspec.org/ns/atlas/v3#note"
+            ],
+            "checkedBy": "scheme-organisation",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "sourceSchemeLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "top-concept-fidelity",
+            "name": "topConceptOfAssignments",
+            "nativePayloadEvidence": true,
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#topConceptOf"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "top-concept-fidelity",
+            "name": "hasTopConceptAssignments",
+            "reconstruction": "inverse nativePayload.topConceptOfIris",
+            "sourceClaimCount": 0,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#hasTopConcept"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "adoptedReleaseIris": [
+              "urn:ref:source-release:umthes:gemet-endpoints:978b10cd1e3f2f8729372a86f2afa1b62d2790e4810c6d57af5343835259d25f"
+            ],
+            "atlasClaimCount": 0,
+            "atlasPredicates": [],
+            "checkedBy": "source-release-metadata",
+            "name": "sourceReleaseMetadata",
+            "sourceClaimCount": 0,
+            "sourceFieldFamilies": {},
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [],
+            "checkedBy": "source-claim-coverage",
+            "meaning": "publisher or Atlas source-shaped claims not owned by any executable comparison",
+            "name": "completeSourceClaimCoverage",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#representsResource",
+              "https://refspec.org/ns/atlas/v3#sourceLocator",
+              "https://refspec.org/ns/atlas/v3#sourceDigest",
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "rdf-provenance-fidelity",
+            "evaluationFailureCount": 3415,
+            "name": "sourceRecordProvenance",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [],
+            "status": "differences-found"
+          }
+        ],
+        "intentionallyExcludedFamilies": [
+          {
+            "name": "atlasRepresentationStructure",
+            "predicates": [
+              "https://refspec.org/ns/atlas/v3#contentDigest",
+              "https://refspec.org/ns/atlas/v3#inRelease",
+              "https://refspec.org/ns/atlas/v3#inScheme",
+              "https://refspec.org/ns/atlas/v3#recordStatus",
+              "https://refspec.org/ns/atlas/v3#resourceProfile",
+              "https://refspec.org/ns/atlas/v3#semanticRing",
+              "https://refspec.org/ns/atlas/v3#sourceRecord"
+            ],
+            "reason": "classes, rings, profiles, releases, schemes, source records, relation assertions, rkaf evidence bindings, and the record lifecycle state are Atlas-minted and are not publisher claims; each listed predicate is still a failure on any subject the comparison does not already know"
+          }
+        ],
+        "status": "differences-found",
+        "unexpectedPublisherPredicates": []
+      },
+      "fidelityStatus": "differences-found",
+      "identityPolicy": "publisher-iri",
+      "includedPublisherConceptIris": [],
+      "kind": "vocabulary",
+      "name": "umthes-gemet-endpoints-2026-08-15",
+      "nativeControl": null,
+      "nonWaivingPredicateDeclarations": [],
+      "organizationRecordPayloadFields": [],
+      "policies": [
+        "english-annotation-selection",
+        "english-label-selection",
+        "skos-note-to-atlas-note",
+        "top-concept-source-shape-inverse"
+      ],
+      "publisherInputs": [
+        {
+          "archiveMember": null,
+          "byteLength": 11935413,
+          "constructionPath": "refspec/output/registry-real-data-sources/umthes-gemet-endpoints-2026-08-15.zip",
+          "evidenceClass": "directSourceBytes",
+          "path": "umthes-gemet-endpoints-2026-08-15.zip",
+          "role": "publisherEndpointSource",
+          "sha256": "sha256:978b10cd1e3f2f8729372a86f2afa1b62d2790e4810c6d57af5343835259d25f",
+          "sourceIri": "https://sns.uba.de/umthes/"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 7423725,
+          "constructionPath": "refspec/output/registry-real-data-sources/gemet-4.2.3.rdf.gz",
+          "evidenceClass": "directSourceBytes",
+          "path": "gemet-4.2.3.rdf.gz",
+          "role": "publisherMappingSource",
+          "sha256": "sha256:96002bb7cd1f89bccb05ee174fb834a04dd7342bdd1428f32105cd47fd6b73b6",
+          "sourceIri": "https://www.eionet.europa.eu/gemet/4.2.3/gemet.rdf.gz"
+        }
+      ],
+      "publisherLoaded": true,
+      "publisherReader": "umthes-endpoint-ntriples-archive-v1/1.0",
+      "releaseKeys": [
+        "umthes-gemet-endpoints-2026-08-15"
+      ],
+      "sourceExtract": null,
+      "subset": "all"
+    }
+  ],
+  "constructionSummaryDigest": "sha256:d389e10fda47f630035548d3ab04fea2dc8f84ecba5a51fe1d682e759b1d37a9",
+  "coverage": {
+    "adapterLoadedUnitCount": 1,
+    "constructionUnitCount": 1,
+    "constructionUnits": [
+      {
+        "inputCount": 2,
+        "key": "umthes-gemet-endpoints-2026-08-15",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 3365,
+        "status": "differences-found"
+      }
+    ],
+    "coveredUnitCount": 1,
+    "coveredUnits": [
+      "umthes-gemet-endpoints-2026-08-15"
+    ],
+    "exactUnitCount": 0,
+    "notEvaluatedScopedOutUnitCount": 0,
+    "uncoveredUnits": []
+  },
+  "executablePolicies": {
+    "english-annotation-selection": "Compare every publisher definition and note in both directions; the historical policy name grants no non-English waiver.",
+    "english-label-selection": "Compare every publisher label in both directions, including language and datatype; the historical policy name grants no non-English waiver.",
+    "skos-note-to-atlas-note": "Compare each exact SKOS or XKOS note literal with generic atlas:note, reject collisions, and require the original source predicate to remain in native payload evidence.",
+    "top-concept-source-shape-inverse": "Reverse nativePayload.topConceptOfIris into each top-concept direction that the publisher graph actually asserts, and reject claims absent in both directions."
+  },
+  "expectations": {
+    "minimumLabelSample": 200,
+    "requestedMinimumLabelSample": 200,
+    "requireCompleteCoverage": true,
+    "requireInputPins": true,
+    "requirePackPins": true,
+    "requiredSources": []
+  },
+  "languageScope": {
+    "atlasNonEnglishLiteralClaimCount": 0,
+    "atlasNonEnglishLiteralClaimExamples": [],
+    "atlasNonEnglishLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasNoncanonicalSemanticLiteralClaimCount": 0,
+    "atlasNoncanonicalSemanticLiteralClaimExamples": [],
+    "atlasNoncanonicalSemanticLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasScanFailures": [],
+    "declaredPublisherClaimCount": 0,
+    "expectedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "observedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "sourceDeclarationCount": 0
+  },
+  "manifestDigest": "sha256:474328e2a2d2bcbbcb2c00861afc18831c215c06ec82b826700b79c845838e02",
+  "passed": false,
+  "receiptLimits": {
+    "cappedFields": [
+      "results[].failures",
+      "results[].sourceFindings"
+    ],
+    "completeness": "each capped field carries its own totalCount, a truncated flag, and a sha256 over the complete ordered list, so a re-run proves the omitted tail",
+    "perCheckListLimit": 100
+  },
+  "results": [
+    {
+      "check": "load-errors",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 source, inventory, or pack loading errors collected"
+    },
+    {
+      "check": "configuration",
+      "failures": [
+        "lc-external-target-endpoints-2026-08-15: source comparison must own exactly one construction-unit key",
+        "ecfr-agencies-roster-2026-08-15: unsupported identity policy 'publisher-key'",
+        "regulations-gov-agencies-roster-2026-08-16: unsupported identity policy 'publisher-key'"
+      ],
+      "failuresDigest": "sha256:8bd0291f06eeb8c0b12eacddb98a4a702ae403667d76ca4182d6addf0c239d13",
+      "failuresTotalCount": 3,
+      "failuresTruncated": false,
+      "passed": false,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "audit settings checked for fail-open values"
+    },
+    {
+      "check": "language-scope",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "no language-scope declaration applies to this run"
+    },
+    {
+      "check": "claim-scope",
+      "failures": [
+        "umthes-gemet-endpoints-2026-08-15: sourceRecordProvenance source claims are differences-found"
+      ],
+      "failuresDigest": "sha256:02e9c92a1f55f35be9e9655e3a523b68da17a0cb1cbfa78bffa9101864ec564b",
+      "failuresTotalCount": 1,
+      "failuresTruncated": false,
+      "passed": false,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "22 declared source claim families checked for complete evaluation scope"
+    },
+    {
+      "check": "distribution-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1/1 construction units have an independent comparison"
+    },
+    {
+      "check": "publisher-input-pins",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "2 distinct publisher inputs authenticated; 2/2 construction input rows matched exactly"
+    },
+    {
+      "check": "graph-structure",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1 manifest-discovered packs checked for transport and source-evidence structure"
+    },
+    {
+      "check": "rdf-provenance-fidelity",
+      "failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:000e6359baff727a9e55e40b8c8f9a4415e901c9dd60e211ae529b73df9b0f08> digest differs -- expected sha256:3c81b1fe83ece0c213ae1c54c1c1a645d8457f35180dfb61ff27e669f1bf8974, observed 'sha256:b2f45f92cc6f098ac49aefab2151b54365d256c50b8f2e7d3b4cb8bcbe4eaba8'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:002acc6af59e302b25d3883cab8446453c65ef5c5a0799e2cc47ba4600164add> digest differs -- expected sha256:8eb96ae1f993bef30799a633a5543791e88abf286f8fd2d64b270db8f847bb75, observed 'sha256:4884d0a47355bd9070eb64f1022dd3ebe1aac3e82fedc9da7d49db208f75060a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:002d6ec3fc63efbb2234b51a3d0f0b9f5150b707352a4c6ea32238286426fddb> digest differs -- expected sha256:d4d18ea0b3ad88fcdce0b11222f4ae83de23ffbf44ab544c95024122a9807ec7, observed 'sha256:e4d217cec664ab7f55c89c7209423fff8d180575c4ab55cc16c5fe796561932d'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0039573b3f2c5314c74bf8c953279385845fe7c519fba679b86e89e5c7051882> digest differs -- expected sha256:8d1a82dfbcf1e819828aa8e2d33439d53b3c04d30c920df8e7eed7313498f649, observed 'sha256:9e953bef52fd45cf628ad60457a87017e95ba01dc93e7233a3ed0dea66fed8b3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00437d9ba6c313017674a5bd2471af41fcef061e1465a3f52d80f997a7ead4ea> digest differs -- expected sha256:b8e7631e302c235af8f11fe8ba39f04786a6cc24716e2fc3dd8a140e4478561e, observed 'sha256:42fb2d3dcff551579c076c9c6d5aa72e9746f1f38e6a346e5f0452db7ce779e5'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00543663193ddffcb5c47ccf7b000c3197fd3370e22b55579dae9ae0667a70d5> digest differs -- expected sha256:4c846fd974565b00ff1235dff2541c7c84e85b0a1a724bacbc236f339f6cae29, observed 'sha256:3e07e26dff803c8e196d56d518e3ed93c7d9cd4c42de4b70b4563668c3b8fad6'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00655b94ca11cb49d8c288cb7d0d8dd14317146d0a1bb74e66167bdc5c33e102> digest differs -- expected sha256:62869163721206a3e7a85ac5a3be8e7b621597b36bba9f204fe4bcc32cf4fea8, observed 'sha256:6df3dfd136a1cd0493af396731404ccf1865a73bc08902001d56af91368dacc4'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0086b67078d4702569d212e064ce3f207292c2baa136690ab33f270130256c86> digest differs -- expected sha256:c17e9db9c67a8905519930a04c4c50df0491c1d204a1d5796d9560b1f7843d89, observed 'sha256:bc17c855998a4ed2415004461c46a42241c18a828f8be06a2282e2b6bc644f5b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0086f01fe0127eed0591c6b4a946cb3f77168c332232347b82e16362b2741c79> digest differs -- expected sha256:70ab01750c7e471bf7f731345d87321fd33df15a78b0c659894e17bea32d7f49, observed 'sha256:9a092589d94451ce76b1701194c7f064f3fb828b16bce2efd4da314e18e6df15'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00cef64a938665455455046bebacb2848e54947c5e06c5fc974a5c41554473b3> digest differs -- expected sha256:f166794b3af6614b7406d1790cab8a67a72fa7952d113b53ef4fb62b620212d5, observed 'sha256:7723d7b64e602781d70a106f0fb2061613ce2c6ddfb6eeac9d22b5e7fb661eeb'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00d60c3ff8d5d5f26b8b0ceb0ada4436844cdc2c54795e2be2a91e8089d59130> digest differs -- expected sha256:2135487143069e8dec0ecd3edaf247f532642ff3d1923f445f20c7df96c1f21a, observed 'sha256:b4c73f928f730dca74861132e742cbcaecaf34df91886b4d0c4db97ba5dcaea3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00d87e3c304d7f627aec7f1b4a4152091529e447845528a236e6773bf67ac068> digest differs -- expected sha256:cc950e2e239aaa4e349c1a62d84336d117cdcbd61a222c89b57c585b2dca3c61, observed 'sha256:b2c0bb100e6348d868fa4c1d2c6ab5ffa5136e43b729237187b448a80d78e799'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00dd8e0bff0dd77c076a432a1ca4410e1e007d180b83fddac82595d74b24c482> digest differs -- expected sha256:7c433dec6a561b65efa40d240fcf922e77fbe7a37f57863d150dcb1090e1b007, observed 'sha256:8f57375d2b48218e2b26ed427c8d6187fc8378fe976d3dd1da839e98d1d20def'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00ed6638a82b59914a74ab26a21a96cb2a2c36f901422b8dafc80a5eb04372b9> digest differs -- expected sha256:849843b86b0e7fa2abdae24a4988d6993118d77b8b07b6317f4784cf22fb547d, observed 'sha256:c423750031900521f96090744304abfba1cdaec128d3c63a733638b1e41a83e4'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:00fd92551019f08d61ebe77bdc302c22fa5725e0792d9769f60b1274cbe881dc> digest differs -- expected sha256:bebbee8e1b481dcbdd4f4d87fc55537e01164d0f88498f499d0fb5044929ef23, observed 'sha256:6f25c223e2064767174f529ced95eed3a7df3a7960d982179f7f080ff7219781'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0125a7050a8b7e75c248e29af12a128b68ef2883edfa21f05124ab4c11b395f2> digest differs -- expected sha256:1aca53e739bd977258ceb57ab01cc82039a6efab7e2387021e928069b105aca7, observed 'sha256:ee5882c4cb643e81988bfc47faca48499d22defdb3dc3bd0cf8c6f097a6611fd'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:012d4cfe3ffa80955dfafde35aa9e0eae845e60bc95603c1f2a3a9f54160be93> digest differs -- expected sha256:2962bca68dd04d1bafbe72deb7aa250c8b51e67cf06f93cb5d7d1d59bbfd5b1b, observed 'sha256:16968305f372e8dcb405a08d73d911c10912a3814f40f83737ecad8289b3c713'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:014e4f278380735058f6bc04f12eb71a721be7a29566225bd40cbda06aa0f0a2> digest differs -- expected sha256:66f09cc5215aaee8c281317c3de820dfb7eed80de4a4869f727fca45abbda116, observed 'sha256:95b08a10b646010b616ec49dc6dd4cd4e230380d77037cb7fd28e64c3bb056bb'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:01514b058ec1ad52c1eef6fccc12d466d569412e14731fd80f7077dedb22b79b> digest differs -- expected sha256:53dd72aea56e945ebb9a36c082430a36fb5ff42cd21f44e9d002a3f9a70747fa, observed 'sha256:eb9257058bba5d3f9c3502c6cc72102508635b85888c87f07b243ab8f46081f7'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0159cd76dd8f0e81385e708ed3fbe09c72820c45b179c00728c964eef3bd54cf> digest differs -- expected sha256:779e6703f614c3192f7076f7b39068d47ce629612a6a2fd4cf1babb1c1516e7f, observed 'sha256:96cc6f40c66725eb3c55e4d13a1f1e6cd5037b799b17a82f73a433dddbe92ed3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:01fb52b8d64b59a04dc3185300cf0f8ed0c0d73038afe56f03a9dc4702318c48> digest differs -- expected sha256:d9a324336277ca74294e333c0af6dcd1e8f09a7d6043294a9497d3822776307d, observed 'sha256:b05cf3398fc77159f248a3a2ba9f6b858af503ef39a3fcda2e6bfa9941b2e004'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:020c209bfaa523ef856d205f23ebfd2cc5c59a94753b77181fffb2a434a78a08> digest differs -- expected sha256:96ff620487138aea674e2cf91a32ee4b11e6497ec834a1a65c9cc6a85c552695, observed 'sha256:3f91eeda86c15161f114fc96531f7378afd444c5f8e6c75bfda51808d429c21b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:023d50fbaae7fd353c5838db6ae689cbcf622cb18c2f3265e50db8af525c4eae> digest differs -- expected sha256:91bd0321a2e6d96db1a0beb8e1fffa0b70a29393b2b21070a03e64ededf41218, observed 'sha256:45fb8f502674dda847b541b4ad91cc58255317a6a3985adaf18685bc3d67ac14'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0240cfe2b1ccc2503d8f967615a65e3190f58cad8f78d76820d0a11c29a9f24b> digest differs -- expected sha256:555b8c7911a1c6fbe0b4652cd4ea4cd9e68d37f86af5447feb5ebbe7652988b2, observed 'sha256:5b7a3cd87ffae35953135d1ee329793c920ce743bec3178008fd5b7be16a7d95'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0262579a781f07c0e86b4f0c0453573377abaa42372435b41083a748c51e03df> digest differs -- expected sha256:3fa2e7278ee3d4b0be9591cee7467f48ec1c4112af2af3cee7e66eed7434ac12, observed 'sha256:dafd0908c8f715002291518156e5f5d3bee8b0435f7f15a99d9f533a7cebfbda'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:028c6306fb87643e5f82b9b990b8cce8bef65b2c40b776378c3891d6e865b6c0> digest differs -- expected sha256:7b6fd32f100c0fb8b26c79152d118f6f07b981856cbf6043468c235493e730bc, observed 'sha256:7d93c95ad12fe9b18d6e44587ad111d722ab6b4daa05fb5f3354a22c45f23cc0'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:02a8a965faa14a295333fa08938fd261fef06f8d685fd22ab18662bd3515e685> digest differs -- expected sha256:2bb95a24f2618fcd25b24e6427677506b8eca20833819bb6d792ea69e2aaebce, observed 'sha256:b2846996253e4699de2a87b5f3c92bf40b6cce80abf39df522b1beb5e370cb60'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:02b76403a2867008974fb3756b375b8dfcca191ff92743a8ca4b759bd249a397> digest differs -- expected sha256:3a8331ea562439f8b73ba6ff1d6b2a4051bde41023e7fadacea0a5e4c20b0f0c, observed 'sha256:4abac52f1560798b2ecfa8644d2f64ccf9375eeb69876434b9f423a03d5458a0'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:02bb9b109a4ec7f21762103032606feae1ca3a9f928aac0a01449111d1f390e1> digest differs -- expected sha256:9aeeaa74e3baedab53dd96aec9dcf62c42863b171a735caca15e45712c961fdc, observed 'sha256:29b05630fbd4fed9366d2ce5ec1529eee394affbe4a8a82791d7f6ab3995c7f3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:02cf26199a2ebd992d90d5a317f767b483df6df2ff542f9402e5f2f31694ac2c> digest differs -- expected sha256:bc85ba93de1a857e96e1027d7c1c9697a46f4e148629b3702104ffa33968d37e, observed 'sha256:b4857a04978d2be6a1e78bb0210726d2e397f49b7803a096c142ebcdf257e777'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03013facf0cc8333b1539d4c0d16d82e8402f1555d18f30188a4901808d7c0a6> digest differs -- expected sha256:e2f4c7d4f2c6411e5e7d62a9b6208ecf43e4b16f38693f9dbad22b4a9a4e24fc, observed 'sha256:802654b90242a14a380b8e920e142d8375d920bed601ae92376222495a173f6b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03035c18110c51edb60caeae9c8bbea98ba8b936276412844ad890637b4a5df2> digest differs -- expected sha256:2bd0e8f339ec3c876f0ed55c089952367f739be1d1bc770d79c57e17e94f7f18, observed 'sha256:6e1a2ea03cf9cebda42200beb71d257cba4ea4bec2ac2ee8c2a6108995463f7b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:032df98b07a0476375760b06f4e6b1b761f33873efc9e3cf5f1feaac1c5c5ce9> digest differs -- expected sha256:b3ada2b39c26bd6e8c9ac7a4888cb39734eb862298b78a449b51ee66b9bc5d44, observed 'sha256:f0d6c8291a568e1b2ac7c434979cb4057bcd1a2c421b12f5d760a108e6126657'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0334dc4f6c418950514ec788b3c2fe331e0c4ebe5d8a1b2b936a2673befa34dc> digest differs -- expected sha256:7179e3cae566d442ba740755caea74ce79d447d7d5472d1a2519a2d7461e4986, observed 'sha256:bfa12c6bdd0f95011f8ff3003094c86bbfca027ebfafeafd78c05f220233665a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:033dfc729dbb354094bae06253c47aa7a8c114567038cc377e7bd54c9e51d6d6> digest differs -- expected sha256:746d1a2fb79681c5213c71e9f5a7a6409cdbae769e27d2d10177b6cb3dc69441, observed 'sha256:56f050ae20cb1a1362133bb0c86622dd4a8102a5030c8c40595e0a48bbf91b2e'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:033e11be3b544e87114ba149b906a7db1415072a747d65947476e80120115f33> digest differs -- expected sha256:41c0f766a676a8d2c7f493151dc8643e6d8f1f614bcc602bce858ca6a37170c1, observed 'sha256:341ebbddf4ca853b26311dc3ff5d72eaa7305edfb65c4d5ff25fbbb508d9c46b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:033fd8d8f083f01faa7d893319843f74e6cd5911597cafe1614b844d32479f89> digest differs -- expected sha256:3fc8f7ff1005699838d3839d7ee265dd2e12e6d33650dde3c1f703bc6f1cbde2, observed 'sha256:4bc74b6ecdc2798600fa8c8fa76f399ccb8f9671b63fee21c66851df15bab5ec'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0345470717e1d0d1cd4e28d990a005d6f2bb53cc8f59d00b907956cc20fa223f> digest differs -- expected sha256:ba1f106b3500fd3bd8daa73a388c3b7032407f5e531a220485c2c947e0f8d606, observed 'sha256:81b8d69268fa88e6e6949acb3671d8342c04dd4e924948e30714f1b6631a6d35'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:036e83eeec5f7823c764bfd1b90d89874947e92313f4b77bf713dc5eead1f334> digest differs -- expected sha256:765c695bce81098d6d3cfd1dec456826dfa9e37d57c164b557e950c67a8066ff, observed 'sha256:0d182cef1d16d6ca1526ed11d137ebae7dd877c6a5df31c0c200faa69afe339d'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03792b7713f7bf19011f95a89955ca6f6af0089dcaeca8bf3976759f30c2c205> digest differs -- expected sha256:8fcb897aea7db35645c849462852b0ef59431d5f6e8372f09c5f8cc592e7130b, observed 'sha256:334e32d86339d7bc69d1f45d0cdf2217b11a92d00fcd908b20d50fdd4f806d0f'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03823c2ac03ec6374a8ffebc37025cc621ef465c7b93046695b1c01a824d5dcb> digest differs -- expected sha256:8927bee41b118171fd7e623da04808fd1892087fc39ed7eac29e62d794b19fe0, observed 'sha256:a0a42baf8d3f0a750918959550228a9cbb89abdd0dd44a35bc05b9e3365d69c0'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0382b778abfc3483310c1f14e2deda63f9f8289ac6ce4453a21b6511af4f49ea> digest differs -- expected sha256:c9774683b01ae9f8a75bfebfb80a388f9e4361c4a80d3a5c5e72d618d3064358, observed 'sha256:61ab57092b2e4fc2c536f1cd9c259a8ca9351e92e4e4e906f4d92bdffd0fe0fe'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0383935911dd445c4d626383ccd0a55e5e8a8d1e69cf0035af71b4042a372433> digest differs -- expected sha256:29f9079e0ad575f25a8a2785c1b3c9f4eda6222aeda99583adc06f76d2a88247, observed 'sha256:552efbaf8a7944efc3a6f6adb09630a44d769036767a23d7d3db7b1970b3ac99'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03856795dbe13d41cdb7b62f56f855a13a5c79c4ef2501eaf0b80e8da0ad884f> digest differs -- expected sha256:f0cee8f8fc13abf7b5ee7c535b72e8c165e832142978bd75206f34fd7baa63b1, observed 'sha256:f8d24089259699e867d052e4040b6c00978f6def82be1beb41f22fea92849688'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:038cf346eb9b36f72ec15d2781ec82e01306319c1e6d795c69dc35cdf242ac21> digest differs -- expected sha256:79f87f23b0dba7402aaae2d2fd1069d674edf8e0936124bd45d345702bff5112, observed 'sha256:a6bfa730aa06b44626fc0d0c3448b95ab5842d449ece746373c476cbd2a741c7'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0393361acf8370dbff72808b49b175ca156cc483497e5e79a0b510aa48205d59> digest differs -- expected sha256:e5673b3bf163a4b5c8dca1620cc2528102147017a7e637942c014653a922616d, observed 'sha256:1f53d7ffd1663730811c86582c60399d3279a9bbcb94700cab62e4007b4705da'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03bbc8e6a56d1509ef79bd5b024e89e0408e8f0fa2db10fcc605ff59558d3b39> digest differs -- expected sha256:7a9d11cb0daecde52de04d5025fedbbbea84d066ef635d7f587f00b9fd0b1914, observed 'sha256:798db014bb76651332b33a83b13d013fcbb0882ebf820abafb17ecebc58fadb3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03ed16519ace5f880598803de5525724ed56cde32fc0a33778864457753f469c> digest differs -- expected sha256:dc014d7b0e43caa7e7fbc25fcd48a9b5acd2251d039e1260c91cfbf2b01aadc0, observed 'sha256:7bace5dff6cd39e8c2c4f6615d02ad2a8c22c438218e7ae52ced1d9366ee1e7e'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03f1956a93a87ce4f10bdc33a62cd938a2497e9bc8806537cee7483d7c418c35> digest differs -- expected sha256:aa1472a9d99becc7cacfbb0dd972b02169a838c0888b9fc4b82c622cc54d7910, observed 'sha256:bf7d8b52e54f55f3119df4b2cc58c40fe4e77e08a31854efd25112e5b316a124'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:03fce3021311d2a5d2e70a401b593ae8a992289827af4bd41b3c121dcb8ab778> digest differs -- expected sha256:fe685e67955aaa4623f53e06b40c8b2b2ea858ae26b73d0292364b0f4aa5fb66, observed 'sha256:4db5e183a8d7abe398805eda7dcc213a85e6f7e767efa0d414b04526be8ba81a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:040af268642a86b08abaaa814205acfa7e6301a7a2b6a5bea72dd2abf0a2bcc2> digest differs -- expected sha256:8ca19397d4fe03458f56ed62c50f7b8f7b7be2be0820cce58cf08fc50829b498, observed 'sha256:e209706f4f258eceb9c833a44ad72f9956aab674a14d87d595b7a5f8b1ef86da'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:043142a7a49c41e464caf8db38dac18374502c0f0c8acb2e5d81b37c834de58d> digest differs -- expected sha256:e3486bae3a367c3b90ac18c8946c545c1edb0c5770d0500228e6f021751cc951, observed 'sha256:b2b29b7621623aedab5c6fd5b1a4a274116b8881b40c833a30ae9d97414fd886'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0439655aa3004c7e966f91fe776f7c8c144b252d1d4adf2b8164043ea34d1ba3> digest differs -- expected sha256:e3704f6e2d6445548e93027a16e0880ec4b0a1828a6d53dd741cba6bb838b6d9, observed 'sha256:efa89c2c1dae164af332791463815e19de4b4a1de403f0fa058dee8860a1f136'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:043ead147f5fb65237aadf71214c969773f579a08c6a3ae5961dfe0d4cbb396b> digest differs -- expected sha256:bb4e17793b13aff093026d17d8426bf1d96d9d72915b6c0a6f97ace0fdb064b2, observed 'sha256:84330d83881f66434d7c5fc67fffe68d101f2c7954df4ed926cc33c6e56fe256'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:044b44a9e8807a11760b8e6e580143f35c86db32f601550c63c8c086745b6f66> digest differs -- expected sha256:5c158356d8ba90a623474b595cafe0cd941f8e3e8c850ec6bfd6d44c2accb53d, observed 'sha256:2d9ab30eda663a713ae76f74f902b87025b49045c2946ebfff076ee9388fa08b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:045c6409279789974866e347ca9d4a4a87fa61ac4aefe5a1f5d97cfef5ada26b> digest differs -- expected sha256:c0a8b73723201915e10d687136250ea83842d60c9b67abe1a6fc4c4f6aab9a53, observed 'sha256:a2e335d48b979649709a6ecdb2f027255e734d4b496c18dcdd9fec6753dc148f'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:046e7023bcbd6a2b0dc8b41b1788926c2377e32a8d1d458124de510b8e72c4fd> digest differs -- expected sha256:d2399718890a03a4810ddc3cba7eca34fc81a1c87c3fe5dc412facda784349c5, observed 'sha256:f575590ecc02d32ccba8014053ae5fb5834c3b80d0490750da2635460116157b'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:04742df8f0b94958d1685ad9f6e80403bfe447944a82e24b10428431afd931b7> digest differs -- expected sha256:173827e8b986f4dcdcdc34a5bc7440c8fec6ce90784176aa2c22384435806f6d, observed 'sha256:ec4c5e619f0ea52825b4b6172a394f7f1325cb432162b5b5dd7e9303da591952'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:049202d692e5acd7d8950d684a279853c7a57f30649266d9762671b9aa39e5f0> digest differs -- expected sha256:9b1bfa3aeb25950c84525e700b99282f102efa14a7b35bbe1c5d2ef219c17691, observed 'sha256:3391898f97698f96b24484b00b6f7fce19bcf8d4ed1a5485b34bf791a01a724e'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:04985c5e07539becbeac4d86990b45a0b49f0af747161a49c8ae5ce02b335780> digest differs -- expected sha256:f74b06e3d7fadb4003e5f915a749db48a80b8bf55be06bd9c811de56bc6c193f, observed 'sha256:69598a69823a0e1edece47eb0d96e08be39208e8ce8a170ffd5f25c814c64a0c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:04a860e76f9df8ae7ee65dd59adc9846d6d85063de69ae883ef1c7539e8dffc9> digest differs -- expected sha256:5218e7a58c792c68233bb439e56e50aece4006733094a851fab514625b13481d, observed 'sha256:f93c82f7702c365553ec65f3b1849af0b25224fa43108b6620843833eae3077d'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:04b67bb40d8ae7bd67c5520fe7b1f44efe3eb1373e2ea388dbe5824885afccb0> digest differs -- expected sha256:40132039656c74ed49e0ea0d5f6df249e907023caa4dd29c4b10c663ee071965, observed 'sha256:c9b9fe2257105c960b78fc41ac9226e1a5f10ba6d577fdd3cac2de76f1ffefbf'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:04fbc0e67bd7916c8d4dd44ba519eb253f06d90c0b182a7b721c48de52cea8a6> digest differs -- expected sha256:d02908936bb66c17da3616ab6be085cf3f0a9378d484f131b131470d97de7507, observed 'sha256:17a7a0a20153566f67329dd5ecae23d00048383f0f2988da13f1084d23a4a9c4'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0536dd2899a15aaf5c1c32e6b959df944d19cc56c2d850cc680d7ca79321212a> digest differs -- expected sha256:d1de9c6380030cedf27c73ccf0961154ff85855a7c5a1d8e6482b33475db68fa, observed 'sha256:e44dfe86bc5386a99c232de938956a12a5d533c2a53cc626c30b3ec3b6fd673f'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:053df95c3d2efcaf1f862b8d7f780ed4e431ebbb8e5874d3b400d3777def3dd5> digest differs -- expected sha256:2402c2207423942422ff4468b27906084ad0bae022257003c75cf93a22fd5494, observed 'sha256:18f7c959b0fc27ebcad570babfc0efb0b0cd9a8886b8f4ac4229fce8ca602d6a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:055d9e04f84023b93e08299a9696517aef58bc486b3df6e033e0a56e874ce527> digest differs -- expected sha256:d0ab8357b4333e4020b2211712f088920f5821f7bfc9df28c50ff29bbb639c6b, observed 'sha256:dcac17d9dbd35e55c63d93a0db32612055be14a75632ecb3f48e7e9f8cc1ecb5'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05713eb67e896b059ca327e1ddad71fc8fe0389160fa3ba72680b9288e32ccab> digest differs -- expected sha256:5de1597d758641316490f8d44fa70e11a86b49265b5b10d7349bc025f0593423, observed 'sha256:a2c35b19a1b96946412a24f06ad740757d1500f5f7f01b15b89499facc5cbb0c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05860f8adcbabc2210189831031a0b6f111edb12962366ab6bb8808b07764300> digest differs -- expected sha256:180370044e0c9ce2905fd956b2cbfd7a89d3e25c3b253299c0a223640a77303f, observed 'sha256:808757e408a13b6db51cc5d8a8b6a7f21dacbc6fdaab42eb049931b93d946e01'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:059320d08dde580d8507f6f51d3aa6b499e214a51de6133e9b624baac4ee97a9> digest differs -- expected sha256:fc781cd59d6f87e826f8bcac1dc159591b2575d3cccd29ec51dbecd4d7981446, observed 'sha256:15b545016e94c6b65d127600eb9f387dca3a6432a50e653a843bc7fa87d5702c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05b4ff2e67248a6fbd9d69ca062ed1e11aa4c375f7e36e7047770e5b7b3da58e> digest differs -- expected sha256:fec95c182fc6e77dad286c36f65e872ed495b157e3ed59fc11d4a3b8c973b05a, observed 'sha256:85505df0fe65b05a788c80468bd163decc03f1c1fa7bf6854e4205f8f039336a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05f426fe3f4fdd2f6f48bb1ad4c8b4795f426bec3c13feae367bc3e9f55f660c> digest differs -- expected sha256:769ebf2f63d69c5b76820189a9864b6821cb7ff9135e22f102698c97a9134063, observed 'sha256:8d20b71a5f5c92a5549088eee356f1550f20a3770a06d4d91c25a861265d617c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05f80e1574afee3d31140ebc4925334fbbf32f3da19c14bbe5ad7b910b06e11f> digest differs -- expected sha256:edf0a461e509e828bf9dbd5a9f999e16cb2ea25af1b083fede6f2a4f9298b651, observed 'sha256:3311f07c18f5b3a97832366ad1dbac9f9abc7869baa6e007aa44a532d28fb543'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:05f96ad2507b3514c4a617a14344dbe9683a851d41a834403765019a58654518> digest differs -- expected sha256:20b0552f54d99f316bba3a854c32a5c846b62b77073309b50e01a19f6027c8a3, observed 'sha256:45adfb38b7b728dc968f9aec12afb59c2124bac754c0640848d20658d01dda9a'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0603fe8c20ebe91863c8e1033239c171fd6cc459575cfbaa53266f153f8f1b6a> digest differs -- expected sha256:77f1c5c3de8d597aa0a40d154841b6002f023846e7c518b6ae91b4a9008e601d, observed 'sha256:ff4dc2668c983d6c78ce568e82bb6fab855037c37c09f32f9dc5ee479b9457f6'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:060d0aecad302a2f42121279d8f0a3eb1aaf544b0010cb1c94323aa9e3a5f9e8> digest differs -- expected sha256:d67e52581f771a8c79a927b28487248ae6ee47e71070eb479a28523642f8060b, observed 'sha256:213bbf147ee6b585d7307234ae4e7dcc99bcee9298141005308c27e93c471032'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:063938130139fa1d2c181cb8e1802c20edb22a1b982e2e7183a73af6b0130947> digest differs -- expected sha256:53eacaa336a1287c0240ef239a8124a7af93c26533ba5fcb2c3d0a969838de98, observed 'sha256:95b25bc0f9ce4c1aefabbbe3a46b7acb05a204d08058d1de11f76128f97c4d59'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06453280f9c0dc4a0449b0d867f87d141774c077c73e82f7c9388d4769a7a506> digest differs -- expected sha256:f9f9fab09b86c0d177b8d14f7a2fbcd15f8e8adee5377ad6323d05ec5145569e, observed 'sha256:db02b1a9480e8b6e2cb884325c2b9974b7bdab2d92b6c6c35b69f38848845074'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0656a4425bcf75a78c4f22ddd7e1136528a6daf78a28fdc8a08ac135d48dd648> digest differs -- expected sha256:be4c94efbed5bb472f7254e9a3eb7356bcb489a329f95c7473d3eb915d7984db, observed 'sha256:cab5a90fe0f8a6a21c34d1f129d8bc20103786dd58404b2cc8d8279486a58a74'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0666bfdde0f76e7d118cdd372a7567bca70fcacdfabe6025fb6b741b90ea3a54> digest differs -- expected sha256:4ab3a28c2cec2e5829943694660f4446d45b7a81b36ebef2f78e28c7d04838b2, observed 'sha256:06e8db1e0f5a10223f6a57ea4b884544157c896ead80a8e788f1dcd6fd5ea9da'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06779fc7d76724242c2c7ed2b2055d588b030b8745d6c62cec494d3c06141f2c> digest differs -- expected sha256:6698e5ac18ae88e6db41c83b8f2a412099548391963ee69391068d889c31d559, observed 'sha256:07945c1761b79daea5f96b5008b20299428b201dffc9039dc7c109d6fc430e56'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0682e92c8428630a6f657dd56abb28f63ab3d8de904c5e9df9db4e79e3e2c9b4> digest differs -- expected sha256:46bbed7afcdb95432250786104b5b8cce4dc6fb41a1407b6f8340922e0e66768, observed 'sha256:ec25ee418ebafd14ac6c57ef6a119a45a909408e0fe10c756ea4d666f1c79764'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:068910619ffee0dc986543df7a308e275de539d753e9a3c602c0c8ce8203fc10> digest differs -- expected sha256:118e879c66a88e4410218afd30bbe1bf40fa989efd6dfa88919cb47d8c195e03, observed 'sha256:6cd575f7e76ac31a0bbd4a40a9e7869f7f0c93dc4161e4d135818f79d16c2207'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06933101c3f7d8fc106eb2c7a7b591f14fe4cdb6aadd3280cb083675f2affdb0> digest differs -- expected sha256:9c420e34b317be130cc8944823e87f1911396815580ab80bc9e3ff755d8dab84, observed 'sha256:94fd3cc827cb67dc7d9ff132bab243679b67166a8825e41bb6c83af25e1811f6'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:069f562c458b768ef5a91f04ca2983b02c26e2a9e25c98e6ae690a2a65ab0618> digest differs -- expected sha256:9ff4fbee946bc28a49bb4f8898e5e784394400b34463545a8efcb50c57f601e7, observed 'sha256:fb59d7bd1939b498f1a60934f3caafb2ec2e01b49e2005db7bb5b9072123b5a6'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06a821822e4410f966142e52b050cbfd8edfbc5e18b833f7127c2e436fcb8c6b> digest differs -- expected sha256:55562b08b35372b04ba23892f38967eb125bcb0bbd217ce49542409674303966, observed 'sha256:7901d9c9bce0346e30452e8c0d7de555aff36116ea34920b226264c8c3010fd3'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06aa00ed9a1b9489ee37d071cd83d83b1493b9a67011fdbae385455c181a7cd7> digest differs -- expected sha256:70725a2ae34a2f98424dfd7d848cbb317b68405f7f8dd8bcd89ec011f3fac017, observed 'sha256:dda2710217ef36fab8780cfc2d5bebe446766745ee7cc6284406313567c92dc9'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06ace084a09de92c810ce8a1a20ed0aed8a9756ec198b58139ef77a194f4ed88> digest differs -- expected sha256:63c8b0cc02e2754be8ff7982e5f2ecffc3adab4c82991364593abfea6b6d6bc5, observed 'sha256:86947467b10fa93b35b84fec33f34edb298d00d406226621f785313295819e24'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06afcacbae8c5f6ad8ca9bb1ddc90e99a1eabda32dd4d3b075338c76cb5f9fd1> digest differs -- expected sha256:96f404a23fcb64d8419e0f0a37bf96759d7327e2c31e0b8047cf6b82c1f33ef5, observed 'sha256:8ebc3144d73e517a8c99c82977bc1b9497b24685f9df7a6df019f44bff5a99d4'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06c43d1df7167048126ad421171c72519f47199b28a67b4d3db9b415fca7bd55> digest differs -- expected sha256:171e554863d635ce548381d94c76b2e2d6988919a704e31767160353e1bcbbe9, observed 'sha256:1b7c86f6713f910bb9c6126df6a598097a715dbc0d84c2ac4ae43b2f06dda1df'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06d2385784cc3ec3dba134215a2ea50766020bb481a5b2b1956f136cd55567c4> digest differs -- expected sha256:ecf208f85035b61bc4c977fb0dfcc9734a70d7a742fa1b69ad3fc4da6fd73b57, observed 'sha256:058552109206c0b8091459c8ff7abc40fc4104655db31c2738b9d251bcab3d0f'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06d69f3d100fee52a7365ecb255fa2c1578eb655d05975837f4dce078f3234d9> digest differs -- expected sha256:6cfacaeab184cfaa012ac901ec7bf4da4cd04ab65f582835ec63f79150220daa, observed 'sha256:f0527b21f4f9c29a8b0f69b8875af6a9a96282fc076ec01bef8853156cfbb131'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06d97f1fc7ea52bd96c018a0f5dd7c28faef391438ba2487534d9b08edd8d3d0> digest differs -- expected sha256:e54e7c1ca4f84c020c234bc114f2c9f445c488cbf9e91b7fcbb6076060b59467, observed 'sha256:c2368c94755e31831b44efa6bd506c57fca52e6b42d7aa9dc1233ac40bd1700c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06e8d4cda1f19305492c0a96c9aa549ba21fe1476c9da76b8829a68101466dfe> digest differs -- expected sha256:353bd3678111805f2b3e76b710ce997f150376286de560a21dcc7d82088e59ea, observed 'sha256:f8955b8f3fa49019cbda54978a71e6d06771ada68f97a47ea469090d9865fe0c'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:06ebcb06e303e43715ddbffb3c6932ac54edb7f782510f4ea88b52688502c089> digest differs -- expected sha256:e8ae6a03a78a98606441fe3fac0ec8cec8123daf19fb37ff7dae61497e84e26b, observed 'sha256:88689ff594cc428cd94313cd8067cd43e523f9d98b6425c71f5a435db4db76f5'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:07152989d78b0ca19d4bfc03cf9b88e8f4b2891eaad52515820d7339c24ee0c6> digest differs -- expected sha256:a46944929b6d4af25029e7123c419b6d616b9285259857de9df5b1eab94911e4, observed 'sha256:5208f5b4da37df9ad76704c99e0b9aff1a19bcc17808415b51ada6fb0ab8b6c7'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:071a92241c00ae1f26699bcbb07fb6eab6ac71d6cbfa7164039dd8b85c68704c> digest differs -- expected sha256:21363a627287c980536333fd82c01b6cfdb19c6768b3e235f162c4e5a13f86aa, observed 'sha256:e3cc33564f83cc320379a5d27351179dec55db2be0b4011894c8d34eec525c20'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:072f867d20da7808248d2f4529a36c8a4d5730b39ccc61a50b767082bd1cb620> digest differs -- expected sha256:e938dc9353e6dfc86e0ca7694c4ac87865d7faf0fc39325d5fc4a3dbefb24a36, observed 'sha256:4e76dbffe4849223fb977aa456ed9093a0faec9677fb5d854b39bb8a6df9b870'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:07545a9d01bf7f1947d438a0f22fbe6949181e023d8a77465420f40b1bd4c82c> digest differs -- expected sha256:df63f797d4c80aaf86c5813f4282ac8d67fed967a626d68d11919f8ad5c55dc6, observed 'sha256:0292529137157e080017bc96708108ab3813e03a7ff87a4e7b01d707ad0a46c2'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0754ba588bfa25827ef8c1939976cff986f69ad1be5268eab9ba27dc4d32c87d> digest differs -- expected sha256:e90f125cdfe35f1c3300d50077b9d093e6fd7ebba34295393439a2df23d956a6, observed 'sha256:a9825691b0b132ed20ed620e3c4b93c3c3f5aa69e96ee0659b265e21c22c7798'",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:075a79f253bdae6d2bfad36bd284495051c89a3fe25629fef403e4e4b824dd06> digest differs -- expected sha256:f5db0fd775dd51b5ad10ef96dedf81939cb7f8d22bc441b776b69984322bf61e, observed 'sha256:d13cabf26e36bca612a752cfaae1de1e778392e6e6a9bde8f36db7a8f573eef2'"
+      ],
+      "failuresDigest": "sha256:573f3ece7d0beda818dc14a64686d1ffcb5d31382b40cf97a76fca21db7e672b",
+      "failuresTotalCount": 3415,
+      "failuresTruncated": true,
+      "passed": false,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3415 RDF source records checked against publisher bytes"
+    },
+    {
+      "check": "native-control-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 controlled values compared directly with pinned Parquet rows"
+    },
+    {
+      "check": "source-extract-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 extract concepts compared with the Atlas packs that represent them"
+    },
+    {
+      "check": "concept-traceability",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 asserted concepts traced to a publisher record across 1 sources"
+    },
+    {
+      "check": "identifier-retention",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 concept identities checked against declared source identity policies"
+    },
+    {
+      "check": "label-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "17241 Atlas labels compared byte-for-byte against publisher literals"
+    },
+    {
+      "check": "notation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas notations compared as exact RDF literals"
+    },
+    {
+      "check": "annotation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas definitions and notes compared as exact RDF literals in every language"
+    },
+    {
+      "check": "member-iri-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 Atlas member IRI claims compared with publisher claims"
+    },
+    {
+      "check": "member-literal-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas member metadata literals compared with publisher claims"
+    },
+    {
+      "check": "top-concept-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas topConceptOf assignments compared against exact publisher claims"
+    },
+    {
+      "check": "relation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "4900 asserted relations matched a publisher triple exactly, direction included"
+    },
+    {
+      "check": "no-manufactured-relations",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "4900 asserted relations checked for manufacture and predicate strengthening"
+    },
+    {
+      "check": "reification-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 relation statement reifications reconstructed from Atlas"
+    },
+    {
+      "check": "count-reconciliation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "17 source claim categories reconciled exactly"
+    },
+    {
+      "check": "scheme-organisation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1 vocabularies checked by reversing publisher-native scheme claims"
+    },
+    {
+      "check": "source-release-metadata",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas release claims compared against publisher release descriptions"
+    },
+    {
+      "check": "source-claim-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 publisher or Atlas source claims remain outside executable comparisons; 0 more are declared out of scope and itemised in the receipt"
+    },
+    {
+      "check": "source-defects",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 defects observed in publisher data and reported, not repaired"
+    }
+  ],
+  "scope": {
+    "complete": false,
+    "evaluatedComparisons": [
+      "umthes-gemet-endpoints-2026-08-15"
+    ],
+    "scopedOutComparisons": [
+      "billstatus-action-codes",
+      "billstatus-bill-types",
+      "billstatus-summary-version-codes",
+      "census-data-flags",
+      "census-function-items",
+      "census-tiger-geoid-structure",
+      "cfr-subject-index-parts-2026-08-20",
+      "courtlistener-jurisdictions-2026-08-03",
+      "crs-legislative-entities",
+      "crs-legislative-subjects",
+      "crs-policy-areas",
+      "doe-osti-semantic-thesaurus-2020",
+      "ecfr-agencies-roster-2026-08-15",
+      "ecfr-cfr-titles",
+      "elsst-r6",
+      "eurovoc-4.24",
+      "eurovoc-domains-4.24",
+      "eurovoc-gemet-alignment-20201218",
+      "eurovoc-lcsh-alignment-20240711",
+      "eurovoc-mesh-alignment-20171215",
+      "eurovoc-microthesauri-4.24",
+      "fac-api-field-dictionary-2026-08-03",
+      "fast-bulk-external-links-delta-2026-07-27",
+      "fast-bulk-see-also-endpoints-2026-07-27",
+      "fast-lcsh-adopted-2026-08-15",
+      "fast-topical-current",
+      "fcc-bureaus-offices-roster-2026-08-15",
+      "fec-committee-designation",
+      "fec-committee-type",
+      "fec-filing-frequency",
+      "fec-organization-type",
+      "fec-party",
+      "federal-hierarchy-orgs-complete-2026-08-15",
+      "federal-register-agencies-roster-2026-08-15",
+      "federal-register-api-topics-2026-08-03",
+      "federal-register-documented-document-types-2026-08-15",
+      "federal-register-documented-presidential-document-types-2026-08-15",
+      "federal-register-thesaurus-2025",
+      "ferc-sectors",
+      "ferc-security-levels",
+      "gao-cra-priority-of-regulation",
+      "gao-cra-rule-types",
+      "gao-published-topics-capture-subset-2026-09-01",
+      "gcmd-science-keywords-24-4",
+      "gemet-4.2.3",
+      "gemet-eurovoc-alignments-4.2.3",
+      "gemet-umthes-alignments-4.2.3",
+      "govinfo-collections",
+      "grants-gov-eligibilities",
+      "grants-gov-funding-categories",
+      "gsdm-data-dictionary-domain-values-2026-08-03",
+      "gsdm-online-data-dictionary-2026-08-03",
+      "icpsr-subject-thesaurus",
+      "lc-external-fast-endpoints-2026-08-15",
+      "lc-external-target-endpoints-2026-08-15",
+      "lcsh-external-links-mappings-2026-08-15",
+      "lcsh-subjects-consolidated-2026-08-06",
+      "lda-filing-types",
+      "lda-general-issue-codes",
+      "mesh-descriptors-2026",
+      "mesh-lcsh-mapping-2021-03-31",
+      "naics-2022",
+      "nasa-technology-taxonomy-8817",
+      "nasa-thesaurus-skos",
+      "nppes-data-dissemination-layout-v2-2026-08-03",
+      "nrc-adams-documented-accession-number-2026-08-15",
+      "nrc-adams-documented-profile-properties-2026-08-15",
+      "oira-review-controls",
+      "omb-a11-apportionment-categories",
+      "omb-a11-functional-classification",
+      "omb-a11-object-classification",
+      "opm-ehri-agency-subelement-2026-08-04",
+      "opm-ehri-data-standards-2026-08-04",
+      "oversight-report-types",
+      "pra-icr-controls",
+      "psc-april-2025",
+      "regulations-gov-agencies-roster-2026-08-16",
+      "regulations-gov-agency-identity-2026-08-16",
+      "regulations-gov-docket-type",
+      "regulations-gov-document-type",
+      "regulations-gov-submitter-type",
+      "sam-assistance-assistance-types",
+      "sam-assistance-eligible-applicant-types",
+      "sam-assistance-eligible-beneficiary-types",
+      "sam-opportunities-notice-types",
+      "sam-opportunities-opportunity-statuses",
+      "sam-opportunities-set-aside-codes",
+      "treasury-fast-book-accounts-parts-ii-iii-2026-07",
+      "treasury-fast-book-fund-groups-2026-07",
+      "unified-agenda-agency-relation",
+      "unified-agenda-dline-action-stage",
+      "unified-agenda-dline-type",
+      "unified-agenda-energy-affected",
+      "unified-agenda-eo13771-designation",
+      "unified-agenda-federalism",
+      "unified-agenda-gao-cra-priority-2026-08-15",
+      "unified-agenda-govt-level",
+      "unified-agenda-international-interest",
+      "unified-agenda-major",
+      "unified-agenda-print-paper",
+      "unified-agenda-priority-category",
+      "unified-agenda-rfa-required",
+      "unified-agenda-rfa-section610-review",
+      "unified-agenda-rin-relation",
+      "unified-agenda-rin-status",
+      "unified-agenda-rplan-entry",
+      "unified-agenda-rule-stage",
+      "unified-agenda-small-entity",
+      "unified-agenda-timetable-action",
+      "unified-agenda-unfunded-mandate",
+      "usaspending-award-types",
+      "uscourts-nature-of-suit",
+      "usgs-gnis-identifiers"
+    ],
+    "scopedOutUnits": []
+  },
+  "type": "AtlasSourceFidelityReceipt",
+  "verifier": "atlas-source-fidelity/15"
+}

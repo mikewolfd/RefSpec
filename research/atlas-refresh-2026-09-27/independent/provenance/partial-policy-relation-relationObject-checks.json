@@ -1,0 +1,277 @@
+{
+  "changed_locator": "urn:ref:publisher-relation:a2296c40ff8784993d28db7f63dd57c7eea1dfcfae6472947525c64cd58acea1",
+  "changed_payload": {
+    "editorialTransformation": {
+      "fromPredicate": "http://www.w3.org/2004/02/skos/core#related",
+      "reason": "SKOS-S27-hierarchy-path",
+      "rule": "preserveAuthoredAssociationOutsideSkosProjection",
+      "toPredicate": "https://refspec.org/ns/atlas/v3#thesaurusRelated"
+    },
+    "publisherRelation": {
+      "objectIri": "https://sns.uba.de/umthes/_wrong",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related",
+      "responseDigest": "sha256:4c85e9379e83719ec067aadfc7c691361a3449160986d11db27edbf14ca04681",
+      "subjectIri": "https://sns.uba.de/umthes/_00025839"
+    },
+    "publisherRelationDigest": "sha256:a2296c40ff8784993d28db7f63dd57c7eea1dfcfae6472947525c64cd58acea1"
+  },
+  "changed_record": "urn:ref:atlas-source-record:09b0253340c314e63927ff3d813873652ecc74cf0c55cee4c9b4b1f9de5351e4",
+  "changed_source_digest": "sha256:d4c296884ae850c64a2b20d289d204b61f0a8168616f28626f3f5b5e9801bc43",
+  "checks": [
+    {
+      "check": "load-errors",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 source, inventory, or pack loading errors collected"
+    },
+    {
+      "check": "configuration",
+      "failures": [
+        "lc-external-target-endpoints-2026-08-15: source comparison must own exactly one construction-unit key",
+        "ecfr-agencies-roster-2026-08-15: unsupported identity policy 'publisher-key'",
+        "regulations-gov-agencies-roster-2026-08-16: unsupported identity policy 'publisher-key'"
+      ],
+      "passed": false,
+      "sourceFindings": [],
+      "summary": "audit settings checked for fail-open values"
+    },
+    {
+      "check": "language-scope",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "no language-scope declaration applies to this run"
+    },
+    {
+      "check": "claim-scope",
+      "failures": [
+        "umthes-gemet-endpoints-2026-08-15: sourceRecordProvenance source claims are differences-found"
+      ],
+      "passed": false,
+      "sourceFindings": [],
+      "summary": "22 declared source claim families checked for complete evaluation scope"
+    },
+    {
+      "check": "distribution-coverage",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "1/1 construction units have an independent comparison"
+    },
+    {
+      "check": "publisher-input-pins",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "2 distinct publisher inputs authenticated; 2/2 construction input rows matched exactly"
+    },
+    {
+      "check": "graph-structure",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "1 manifest-discovered packs checked for transport and source-evidence structure"
+    },
+    {
+      "check": "rdf-provenance-fidelity",
+      "failures": [
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:09b0253340c314e63927ff3d813873652ecc74cf0c55cee4c9b4b1f9de5351e4> publisherRelation ('https://sns.uba.de/umthes/_00025839', 'http://www.w3.org/2004/02/skos/core#related', 'https://sns.uba.de/umthes/_wrong') is absent from publisher bytes",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:09b0253340c314e63927ff3d813873652ecc74cf0c55cee4c9b4b1f9de5351e4> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0e393bec64589e5e4e822551218901d0b2c20423352725f3f1ef6f41a7aae37b> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:0fd1bebf5b92309bfa4bfd40071f0e6ee69d87f5440cc88c868b2ed55a669f96> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:1735d7c43b4f50824cc65cac5f69ee3380dae9acc16c33765555f78d2ae90c1d> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:1a63cc75707b79ef730a359463e865c5db0d481d7b943864c28ed089d05be5f4> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:1c393d7e9d2f18fefd4a40d55a4474decc027fa528e2be78d0ea9b7e929cd0c6> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:1f7daad2029264c68ee62cc22ea4a30f29bcf2ff20d28998ff86a65bc43c8e67> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:2032989f930fca59ab6523a5f817123417865814b0b544804574f094a91946f4> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:2aef2f0e1fb367ee113856bacf1ed34a35a07780bde4e7086436edbdeca9ed16> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:3212673cda85e37be83b6e189e72ea3fe4a6fa6ac28d9af0500a2bef71204319> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:3c5f5a3d72a43d9726ceac25b1c8beab84ca0c4ec0bbbe805d722d8d3bb0675b> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:40cde015d476c33b228df8438a3ccd5b95a272c38022563d8888dd70d82970ba> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:4d86cd371b46f7aa0bee525a9c1add80db370bd1bec844211907588baf241454> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:4fc3c6626b9ab7c595f75612001fed38d2850bfa262bb6d14f5817c771d432be> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:53f121d2da19d7de9da6f225978bfffd733c461a38a9634e69ddcde5cdbf23e1> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:5f61dcb8bc9859ace875670b441440c5c422dfe66a3de7aa7656cf1dc307e8db> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:63fafec52d8de2780971c84951b8122ec30943e856f25e153b23597cd8d595f4> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:6a0575f9f6b5f06163d2304c075a3182240c47ec5969fe4d5679cbdcbeca429f> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:6d64af6825a21e061ce3e0937222c229372c0a9b7e9d18c4df27c2e8bf30fdf9> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:728e1a493c7792d9de910edd14993a9af08ab24ef4f320dd98a5d968edd66c52> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:73997bbaff1a6c7eefed008888b428dfb8bff3d4825b48b3bb668bff2732de01> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:7485551d55fff7325ce2c5b73e26a10fce59c0d3a927acfbe182c17f066eeda3> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:7e78f16b8b01c7acb3446991b9f2726ddb408c2f0dd6c334be89823e0e853f21> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:87207d2aab6b21eff7bf001e70cca36882d11c909cc6ca2969a56e61537e32ea> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:8a181c6b8399ca4a8a54fcbb0c2fe284f1af8019e5c51956faa0ba859ec259e5> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:8bef7a06f662c96bde663d9394e558cbbffc009be324ce859ce72bc56ac7ce6d> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:8f7ce86a1fed088efdcac9d9ee0e96b934376fbd6a48623e3c68c470ea2c9ba8> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:939b086763c1d9103f23bd170cb482c4018666a2079ade66d0ae5a7d30167af0> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:967e55b328ef2ff0edacc051a8f1cf55b00c5f286f19bd72c43c405aeb4dab71> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:9c8a6bfee7a67ba5cff34a1cdd377c2b2a1f6d9e833850a06757315fed050e75> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:a53afcf3f8475c16b84664678ea70cbe525af122942ceeb551bf780fc48086c9> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:a84ff6ee44294a3ce04aa623f4e21708cf241a529fa027f5bbb0c25487fdd9f9> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:abacc2cc1bcabf3812ebc10a416a47b972b89a1c41245e5e6027cbb4989e8d5b> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:ae1687169d0a3d834c9c7006bdd2cb101bd296e61d771da72c2904d5ee5e4df4> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:af3293c615353caaa98f556e45c903e55d0eea84ff1673a746df6a40a8e7b57f> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:b096d91b46b2caf8dd3aabb6d8325ceb9b56fe659ba94e949488edd6ab20f571> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:bc3bcabafa5a51f4df3750ea5932dd8ca47b8fe9b7418d23d56de102342c3741> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:bdb2dfee68147b075ea1c69e9b03699d4e586c3b6cd292abd84b3e82a85f5a44> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:c1f84bc44792966f90d5b938a28738d39fd802e1ee9dcdf975568326dbb243ee> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:c7fc169eed6bef0807d5a1e6ebb8c86692f7f8bd8eb087e0eff4dfe547d3abdf> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:c9e9ca50aa1cfe43b47bfc9a0e3470c3f15e22a096d0b4d3a6cf9fde54760163> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:d0a4e71fb997fab12b0d088f57cf5ee14d1acc6091e0c57d70256a1a06e7c13d> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:d385d3770aa9e145cdbc10f512253ec638d2d8094127aefead46efbc0f86efcb> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:dd0dd661a62dab27ae1d5fa3ec06e2da10f3903be615af60f5740746f7e6726e> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:e26d70c57a9355ae67484aa5537aaf36898969cceb0c2d90fcd0ae95989330ab> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:ec891cf40c28f832e9e583b50796301e751d024013a1aa3dfb234f93c67a1ffb> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:f1ab0f829ebacbd0e3afcb673c92bc6ffe976886d20c619f21bd66e14a7652a2> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:f29ba82ceef1e0aa0acc002d161a146ca2ad01ba6d9bbc0503a459b534f0dc0e> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:f646bc3d0f4730eb1d744389c06b01c02bffd7dca0b898a5f0372297bd221869> sourceDigest differs from its exact publisherRelation payload",
+        "umthes-gemet-endpoints-2026-08-15: source record <urn:ref:atlas-source-record:f767c090e90e5a8f12db9888cf94c232b11440b050dfe035b1ef980998fa72fb> sourceDigest differs from its exact publisherRelation payload"
+      ],
+      "passed": false,
+      "sourceFindings": [],
+      "summary": "3415 RDF source records checked against publisher bytes"
+    },
+    {
+      "check": "native-control-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 controlled values compared directly with pinned Parquet rows"
+    },
+    {
+      "check": "source-extract-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 extract concepts compared with the Atlas packs that represent them"
+    },
+    {
+      "check": "concept-traceability",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "3365 asserted concepts traced to a publisher record across 1 sources"
+    },
+    {
+      "check": "identifier-retention",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "3365 concept identities checked against declared source identity policies"
+    },
+    {
+      "check": "label-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "17241 Atlas labels compared byte-for-byte against publisher literals"
+    },
+    {
+      "check": "notation-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 Atlas notations compared as exact RDF literals"
+    },
+    {
+      "check": "annotation-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 Atlas definitions and notes compared as exact RDF literals in every language"
+    },
+    {
+      "check": "member-iri-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "3365 Atlas member IRI claims compared with publisher claims"
+    },
+    {
+      "check": "member-literal-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 Atlas member metadata literals compared with publisher claims"
+    },
+    {
+      "check": "top-concept-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 Atlas topConceptOf assignments compared against exact publisher claims"
+    },
+    {
+      "check": "relation-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "4900 asserted relations matched a publisher triple exactly, direction included"
+    },
+    {
+      "check": "no-manufactured-relations",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "4900 asserted relations checked for manufacture and predicate strengthening"
+    },
+    {
+      "check": "reification-fidelity",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 relation statement reifications reconstructed from Atlas"
+    },
+    {
+      "check": "count-reconciliation",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "17 source claim categories reconciled exactly"
+    },
+    {
+      "check": "scheme-organisation",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "1 vocabularies checked by reversing publisher-native scheme claims"
+    },
+    {
+      "check": "source-release-metadata",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 Atlas release claims compared against publisher release descriptions"
+    },
+    {
+      "check": "source-claim-coverage",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 publisher or Atlas source claims remain outside executable comparisons; 0 more are declared out of scope and itemised in the receipt"
+    },
+    {
+      "check": "source-defects",
+      "failures": [],
+      "passed": true,
+      "sourceFindings": [],
+      "summary": "0 defects observed in publisher data and reported, not repaired"
+    }
+  ],
+  "original_payload": {
+    "editorialTransformation": {
+      "fromPredicate": "http://www.w3.org/2004/02/skos/core#related",
+      "reason": "SKOS-S27-hierarchy-path",
+      "rule": "preserveAuthoredAssociationOutsideSkosProjection",
+      "toPredicate": "https://refspec.org/ns/atlas/v3#thesaurusRelated"
+    },
+    "publisherRelation": {
+      "objectIri": "https://sns.uba.de/umthes/_00046593",
+      "predicateIri": "http://www.w3.org/2004/02/skos/core#related",
+      "responseDigest": "sha256:4c85e9379e83719ec067aadfc7c691361a3449160986d11db27edbf14ca04681",
+      "subjectIri": "https://sns.uba.de/umthes/_00025839"
+    },
+    "publisherRelationDigest": "sha256:5900d163acfb3214ded05afc9ae5b10a7f02157ee7400d6ea92e185174f57cb7"
+  }
+}

@@ -1,0 +1,50 @@
+Lines 46024-46056
+46024: TITLE XIII--UNITED STATES INFORMATION AGENCY
+46025: 
+46026: CHAPTER 1--GENERAL PROVISIONS
+46027: 
+46028: SEC. 1301. <<NOTE: 22 USC 6531 note.>> EFFECTIVE DATE.
+46029: 
+46030: This title, and the amendments made by this title, shall take effect
+46031: on the earlier of--
+46032: (1) October 1, 1999; or
+46033: (2) the date of abolition of the United States Information
+46034: Agency pursuant to the reorganization plan described in section
+46035: 1601.
+46036: 
+46037: CHAPTER 2--ABOLITION AND TRANSFER OF FUNCTIONS
+46038: 
+46039: SEC. 1311. <<NOTE: 22 USC 6531.>> ABOLITION OF UNITED STATES INFORMATION
+46040: AGENCY.
+46041: 
+46042: The United States Information Agency (other than the Broadcasting
+46043: Board of Governors and the International Broadcasting Bureau) is
+46044: abolished.
+46045: 
+46046: SEC. 1312. <<NOTE: 22 USC 6532.>> TRANSFER OF FUNCTIONS.
+46047: 
+46048: (a) In General.--There are transferred to the Secretary of State all
+46049: functions of the Director of the United States Information Agency and
+46050: all functions of the United States Information Agency and any office or
+46051: component of such agency, under any statute, reorganization plan,
+46052: Executive order, or other provision of law, as of the day before the
+46053: effective date of this title.
+46054: (b) Exception.--Subsection (a) does not apply to the Broadcasting
+46055: Board of Governors, the International Broadcasting Bureau, or any
+46056: function performed by the Board or the Bureau.
+
+Lines 46133-46145
+46133: SEC. 1322. CONTINUED EXISTENCE OF BROADCASTING BOARD OF GOVERNORS.
+46134: 
+46135: Section 304(a) of the United States International Broadcasting Act
+46136: of 1994 (22 U.S.C. 6203(a)) is amended to read as follows:
+46137: ``(a) Continued Existence Within Executive Branch.--
+46138: ``(1) In general.--The Broadcasting Board of Governors shall
+46139: continue to exist within the Executive branch of Government as
+46140: an entity described in section 104 of title 5, United States
+46141: Code.
+46142: ``(2) Retention of existing board members.--The members of
+46143: the Broadcasting Board of Governors appointed by the President
+46144: pursuant to subsection (b)(1)(A) before the effective date of
+46145: title XIII of the Foreign Affairs Agencies Consolidation Act of
+

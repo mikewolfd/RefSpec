@@ -1,0 +1,360 @@
+{
+  "checkedAtUtc": "2026-09-27T20:27:11.261077+00:00",
+  "repoHead": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "status": "passed",
+  "counts": {
+    "events": 9,
+    "eventResults": 14,
+    "bridges": 13,
+    "nonEmissions": 4,
+    "rdfQuads": 1061,
+    "rdfEventEvidenceRecords": 22,
+    "rdfBridgeEvidenceRecords": 26,
+    "ownerDecisions": 26
+  },
+  "digests": [
+    {
+      "path": "plans/agency-registry-batch-1-candidates.json",
+      "sha256": "6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2",
+      "bytes": 191706
+    },
+    {
+      "path": "plans/agency-registry-batch-1-decisions.json",
+      "sha256": "a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098",
+      "bytes": 6744
+    },
+    {
+      "path": "output/atlas-3.1-agency-2026-09-27/distribution/atlas-manifest.json",
+      "sha256": "560266ed48d2db7a8c86cddd861f17f31f9b3d6ead7f10edbdc45be61de14dc1",
+      "bytes": 10439
+    },
+    {
+      "path": "output/atlas-3.1-agency-2026-09-27/distribution/packs/mappings/agency-registry-2026-09-26.nq.zst",
+      "sha256": "077bb0f5ff122badfefc2eb7bd66563ff7288e864a66d1dc697c059d8b50d24c",
+      "bytes": 26299
+    },
+    {
+      "path": "output/agency-registry-view/view-manifest.json",
+      "sha256": "77b357cc06fe3e67bcacb0591833884087572727064f89643e10aa2a28ad6b87",
+      "bytes": 2059
+    },
+    {
+      "path": "output/agency-registry-view/tables/agency-registry-bridges.parquet",
+      "sha256": "2e33905b475c6a1adf27960ecf170a1b4c82df2baf20ac13df9307bb687dd898",
+      "bytes": 10541
+    },
+    {
+      "path": "output/agency-registry-view/tables/agency-registry-events.parquet",
+      "sha256": "09e35a12adcb16581b131fcb187d4d2e07b8d005d431163431c303f1b6fecf2e",
+      "bytes": 19064
+    },
+    {
+      "path": "output/agency-registry-view/tables/agency-registry-non-emissions.parquet",
+      "sha256": "da863e467f00f16a6b7a9ff1a3e1182fb8e7488f8b7d33f0d7f0c403a0663e24",
+      "bytes": 9500
+    },
+    {
+      "path": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+      "sha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+      "bytes": 694024
+    },
+    {
+      "path": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+      "sha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+      "bytes": 98197
+    },
+    {
+      "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+      "sha256": "b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff",
+      "bytes": 183892
+    },
+    {
+      "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-1.json",
+      "sha256": "8043dd5bcc850b0036ed1c28c5f36a55d1bb44e4c0c934548c9f8086f21ad6e2",
+      "bytes": 179237
+    },
+    {
+      "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-2.json",
+      "sha256": "7dbb2ab10f480f08f661049cda4753d5618983d4ba0c95fca314348f53804c64",
+      "bytes": 181649
+    },
+    {
+      "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+      "sha256": "90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96",
+      "bytes": 182189
+    },
+    {
+      "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+      "sha256": "bb78b6c039167ef158bea672275c86961be784e269f4db41a52e4b0cd09c277e",
+      "bytes": 100030
+    },
+    {
+      "path": "output/atlas-3.1-agency-2026-09-27/parquet-view/view-manifest.json",
+      "sha256": "9e9b0700b4dd9e43d41720e6b8ebee7056b8170903284f5623ec372694662e7e",
+      "bytes": 4183
+    }
+  ],
+  "errors": [],
+  "mutationChecks": [
+    {
+      "mutation": "date",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "date-basis",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "functions",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "result-name",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "result-iri",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "originals",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "owner-answer",
+      "detected": true,
+      "differenceCount": 6
+    },
+    {
+      "mutation": "bridge-parent",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "bridge-basis",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "non-emission-reason",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "non-emission-decision",
+      "detected": true,
+      "differenceCount": 6
+    },
+    {
+      "mutation": "drop-event-result",
+      "detected": true
+    },
+    {
+      "mutation": "RDF-effective-date",
+      "detected": true,
+      "differenceCount": 1
+    },
+    {
+      "mutation": "RDF-native-date-basis-and-digest",
+      "detected": true,
+      "differenceCount": 3
+    }
+  ],
+  "retainedSourceHashChecks": [
+    {
+      "sourceUrl": "https://www.congress.gov/104/plaws/publ88/PLAW-104publ88.htm",
+      "sha256": "e5e91df73059690f35cd1d06cd6c183dddcd2f40b27817bfbccc70ba493aa655",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm",
+      "sha256": "e96e8b44905469d308187a78a906db5695ebb0b3c218575e55835c62526a0fd2",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.congress.gov/109/plaws/publ435/PLAW-109publ435.htm",
+      "sha256": "cd70d4e9f6c5cb2014a1a33c1f99342efd43060931e84ae00c8d9c32690d8cac",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/agencies/broadcasting-board-of-governors",
+      "sha256": "4b14e55f730788856035745c47cb5157127ceea843c8cc71c83844f843b46832",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/agencies/international-investment-office",
+      "sha256": "b283958ea4bf5913874ec42c2f315ae219ee4265d5753c3768cbc9ff2986c37d",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/agencies/postal-rate-commission",
+      "sha256": "59ff5d687acb6fca44d33da89b5a919ae0e25d7f59f0287f2aefac9070d443c2",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/agencies/postal-regulatory-commission",
+      "sha256": "d8537d140b76fdac9465eeaad75d84f14812cc17f5641ac96f47f90a13c2569b",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2001/07/05/01-16800/centers-for-medicare-and-medicaid-services-statement-of-organization-functions-and-delegations-of",
+      "sha256": "37d0fa7df57b8d57c14c15266f1ab67b6276a31d1af5830e97a3a509137b8468",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2001/07/31/01-18959/medicare-and-medicaid-programs-change-of-agency-name-technical-amendments",
+      "sha256": "e24ae5439fa1048e239486fe44475bd99df318d21195c44fc9cb66ea46ab21fe",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2002/04/26/02-10166/industry-and-security-programs-change-of-agency-name",
+      "sha256": "75bb784872d57b4da69689378b42dd4da7f02d752e3a82d1cc6afd2182ef5886",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2003/02/03/03-2163/delegation-of-authority-and-assignment-of-responsibilities-to-the-employee-benefits-security",
+      "sha256": "0a3065449a3eadae9830718449a10c0f09fcd18467169fbff9b1f766fc7be881",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2003/03/06/03-5146/authority-of-the-secretary-of-homeland-security-delegations-of-authority-immigration-laws",
+      "sha256": "e1d84edcc614239190f19b26072659295ae83dd6ab4ddd2e6a18d486d77374ea",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2003/03/25/03-7022/customized-market-mail",
+      "sha256": "86ca43396232d6a65edb348fe34e925b5042b6b6b027061c5b5f960e5164ca7c",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2003/04/03/03-8099/change-of-agency-name-technical-amendments",
+      "sha256": "e4862f910f30d61a13e38d305eed5bdd8a548340d05403f464f2a58a6a31adcf",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the",
+      "sha256": "396036e6b56ebadf26bc50dff9ea3f8599e68e6c5ee320041fbb8e35a67ebb4a",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2008/04/23/08-1172/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons",
+      "sha256": "993b94ae55c437c3396b4feadcd4c3efde9428ed639ce78695cd3f5d82f7df9f",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.federalregister.gov/documents/2008/11/21/E8-27525/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons",
+      "sha256": "7c64cc6dd814370b80cc5970068698e78db610fbe6ff97de17831cf550b98bbf",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+      "sha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/PLAW-105publ277/html/PLAW-105publ277.htm",
+      "sha256": "da69e92dc00a751292a3109c0202654497637d51a946b7491580c8bc19ef935d",
+      "match": true
+    },
+    {
+      "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2003-03-25/pdf/03-7022.pdf",
+      "sha256": "659d34b95893f779adb9fa1dfe854de7b539473f64ad63a07b3394c705100cce",
+      "match": true
+    }
+  ],
+  "manualSourceReviewFieldChecks": [
+    {
+      "eventId": "event:fr96",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_with_roster_display_variants"
+      ]
+    },
+    {
+      "eventId": "event:fr150",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_with_roster_display_variants"
+      ]
+    },
+    {
+      "eventId": "event:fr232",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_with_roster_display_variants"
+      ]
+    },
+    {
+      "eventId": "event:fr259",
+      "match": true,
+      "claimStatuses": [
+        "matched_owner_date_policy",
+        "matched_with_roster_display_variants",
+        "not_claimed"
+      ]
+    },
+    {
+      "eventId": "event:fr404",
+      "match": true,
+      "claimStatuses": [
+        "matched"
+      ]
+    },
+    {
+      "eventId": "event:fr510",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_retained_functions",
+        "matched_with_roster_display_variants",
+        "matched_with_stated_condition"
+      ]
+    },
+    {
+      "eventId": "event:fr543",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_with_roster_display_variants"
+      ]
+    },
+    {
+      "eventId": "event:fr559",
+      "match": true,
+      "claimStatuses": [
+        "different_source_spelling",
+        "matched",
+        "owner_policy_supported_but_not_explicit_effective_date"
+      ]
+    },
+    {
+      "eventId": "event:fr564",
+      "match": true,
+      "claimStatuses": [
+        "matched",
+        "matched_enactment_basis_not_explicit_effective_clause",
+        "not_claimed",
+        "owner_adjudication_not_proved_by_rename_alone"
+      ]
+    }
+  ],
+  "rawRosterEndpointsChecked": 50,
+  "limits": [
+    "Owner date and identity choices preserved, not re-adjudicated.",
+    "Expected output derived from raw candidates and owner decisions; no producer semantic imports.",
+    "Generic Atlas typed Parquet intentionally omits change events; dedicated registry view checked separately.",
+    "Public-source factual review is a separate claim receipt, not replaced by matching candidate text.",
+    "Decision digest equality is checked; the owner candidate-content digest algorithm is not re-derived.",
+    "SourceRecord sourceDigest hashes its emitted native JSON; primary public-document bytes are separately retained and hashed.",
+    "This bounded comparison does not qualify all Atlas construction units."
+  ]
+}

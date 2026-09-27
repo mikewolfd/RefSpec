@@ -1,0 +1,1273 @@
+{
+  "events": [
+    {
+      "content_digest": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "date_basis": "the Reorganization Plan Modification's effective date, as 68 FR 51868 recites it; the Homeland Security Act itself names no such date, since its sec. 4 takes effect 60 days after enactment",
+      "effective_date": "2003-03-01",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr96",
+      "event_type": "ChangeEvent",
+      "group": "D",
+      "originals": [
+        {
+          "id": 96,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Treasury Department",
+            "resource_iri": "urn:ref:federal-register-agency:497"
+          },
+          "publisher_name": "Customs Service",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:96",
+          "roster": "federal-register-agencies",
+          "short_name": null,
+          "slug": "customs-service"
+        }
+      ],
+      "owner_note": null,
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "rows": [
+        "succ:fr96:fr501",
+        "succ:fr96:fr503"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "date_basis": "the Commerce organizational order's date, on which the name-change rule took effect",
+      "effective_date": "2002-04-18",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr150",
+      "event_type": "ChangeEvent",
+      "group": "C",
+      "originals": [
+        {
+          "id": 150,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Commerce Department",
+            "resource_iri": "urn:ref:federal-register-agency:54"
+          },
+          "publisher_name": "Export Administration Bureau",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:150",
+          "roster": "federal-register-agencies",
+          "short_name": "EAB",
+          "slug": "export-administration-bureau"
+        }
+      ],
+      "owner_note": null,
+      "public_records": [
+        {
+          "citation": "67 FR 20630 (2002-04-26), FR Doc 02-10166, Industry and Security Programs; Change of Agency Name",
+          "kind": "frNotice",
+          "note": "Records that Commerce changed the Bureau of Export Administration's name to the Bureau of Industry and Security by internal organizational order on 2002-04-18 and makes the rule effective that day, preserving all prior actions under the new name.",
+          "url": "https://www.federalregister.gov/documents/2002/04/26/02-10166/industry-and-security-programs-change-of-agency-name"
+        }
+      ],
+      "rows": [
+        "succ:fr150:fr241"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "date_basis": "the transfer-and-abolition date the delegation rule and the reorganization plan state",
+      "effective_date": "2003-03-01",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr232",
+      "event_type": "ChangeEvent",
+      "group": "D",
+      "originals": [
+        {
+          "id": 232,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Justice Department",
+            "resource_iri": "urn:ref:federal-register-agency:268"
+          },
+          "publisher_name": "Immigration and Naturalization Service",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:232",
+          "roster": "federal-register-agencies",
+          "short_name": "INS",
+          "slug": "immigration-and-naturalization-service"
+        }
+      ],
+      "owner_note": null,
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "68 FR 10922 (2003-03-06), FR Doc 03-5146, Authority of the Secretary of Homeland Security; Delegations of Authority; Immigration Laws",
+          "kind": "frNotice",
+          "note": "States that the INS functions transfer to DHS on March 1, 2003, and that the INS is abolished on that date.",
+          "url": "https://www.federalregister.gov/documents/2003/03/06/03-5146/authority-of-the-secretary-of-homeland-security-delegations-of-authority-immigration-laws"
+        },
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "rows": [
+        "succ:fr232:fr499",
+        "succ:fr232:fr501",
+        "succ:fr232:fr503"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "date_basis": "the change date the Federal Register roster states, the day E8-27525 published the renamed heading",
+      "effective_date": "2008-11-21",
+      "effective_date_alternatives": [
+        {
+          "date": "2008-12-22",
+          "date_basis": "a CFR-heading date: 73 FR 70716, the page the roster cites, is inside E8-27525, whose chapter-heading revision took effect with the rule -- the same kind of date set aside for PWBA (2003-04-03) and HCFA (2001-07-31)"
+        }
+      ],
+      "event_id": "event:fr259",
+      "event_type": "ChangeEvent",
+      "group": "C",
+      "originals": [
+        {
+          "id": 259,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Treasury Department",
+            "resource_iri": "urn:ref:federal-register-agency:497"
+          },
+          "publisher_name": "International Investment Office",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:259",
+          "roster": "federal-register-agencies",
+          "short_name": "IIO",
+          "slug": "international-investment-office"
+        }
+      ],
+      "owner_note": "The last document under the old name is FR Doc 08-1172 (73 FR 21861, 2008-04-23).",
+      "public_records": [
+        {
+          "citation": "Federal Register agency roster description of 259, International Investment Office",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: 'Name changed Nov. 21, 2008 (73 FR 70716) to Office of Investment Security.'",
+          "url": "https://www.federalregister.gov/agencies/international-investment-office"
+        },
+        {
+          "citation": "73 FR 70702 (2008-11-21), FR Doc E8-27525, Regulations Pertaining to Mergers, Acquisitions, and Takeovers by Foreign Persons",
+          "kind": "frNotice",
+          "note": "Spans 73 FR 70702-70729; its page 70716 -- the page the roster cites -- revises the heading of 31 CFR chapter VIII to 'Office of Investment Security, Department of the Treasury'. Published 2008-11-21, effective 2008-12-22.",
+          "url": "https://www.federalregister.gov/documents/2008/11/21/E8-27525/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons"
+        },
+        {
+          "citation": "73 FR 21861 (2008-04-23), FR Doc 08-1172, Regulations Pertaining to Mergers, Acquisitions, and Takeovers by Foreign Persons",
+          "kind": "frDocument",
+          "note": "The last document the Federal Register files under the old name (the publisher's API, newest first).",
+          "url": "https://www.federalregister.gov/documents/2008/04/23/08-1172/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons"
+        }
+      ],
+      "rows": [
+        "succ:fr259:fr603"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "date_basis": "the Secretary's Order's effective date, 'upon the date of publication in the Federal Register'",
+      "effective_date": "2003-02-03",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr404",
+      "event_type": "ChangeEvent",
+      "group": "C",
+      "originals": [
+        {
+          "id": 404,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Labor Department",
+            "resource_iri": "urn:ref:federal-register-agency:271"
+          },
+          "publisher_name": "Pension and Welfare Benefits Administration",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:404",
+          "roster": "federal-register-agencies",
+          "short_name": "PWBA",
+          "slug": "pension-and-welfare-benefits-administration"
+        }
+      ],
+      "owner_note": null,
+      "public_records": [
+        {
+          "citation": "68 FR 5374 (2003-02-03), FR Doc 03-2163, Secretary's Order 1-2003: Delegation of Authority and Assignment of Responsibilities to the Employee Benefits Security Administration",
+          "kind": "frNotice",
+          "note": "Secretary of Labor's Order 1-2003 redesignates the Pension and Welfare Benefits Administration as the Employee Benefits Security Administration, signed 2003-01-23 and effective on publication, 2003-02-03.",
+          "url": "https://www.federalregister.gov/documents/2003/02/03/03-2163/delegation-of-authority-and-assignment-of-responsibilities-to-the-employee-benefits-security"
+        },
+        {
+          "citation": "68 FR 16399 (2003-04-03), FR Doc 03-8099, Change of Agency Name; Technical Amendments",
+          "kind": "frNotice",
+          "note": "The conforming CFR record, revising 29 CFR chapter XXV effective 2003-04-03 -- carried only as the CFR conforming date, not the rename date.",
+          "url": "https://www.federalregister.gov/documents/2003/04/03/03-8099/change-of-agency-name-technical-amendments"
+        }
+      ],
+      "rows": [
+        "succ:fr404:fr131"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "date_basis": "FARRA sec. 1301's effective date, the earlier of 1999-10-01 or the sec. 1601 plan's abolition date",
+      "effective_date": "1999-10-01",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr510",
+      "event_type": "ChangeEvent",
+      "group": "D",
+      "originals": [
+        {
+          "id": 510,
+          "name_field": "name",
+          "parent": null,
+          "publisher_name": "United States Information Agency",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:510",
+          "roster": "federal-register-agencies",
+          "short_name": "USIA",
+          "slug": "united-states-information-agency"
+        }
+      ],
+      "owner_note": "FR 41 is not a new body: it published before the event (measured periods) and kept functions it already held (sec. 1312(b)). The split has a cost: a consumer that needs exactly one code gets none for USIA's documents, where either result on its own would code them (effect column).",
+      "public_records": [
+        {
+          "citation": "Foreign Affairs Reform and Restructuring Act of 1998, div. G of Pub. L. 105-277, 112 Stat. 2681-761, secs. 1301, 1311, 1312, 1322",
+          "kind": "statute",
+          "note": "Sec. 1301 makes the title effective on the earlier of 1999-10-01 or the date of abolition under the sec. 1601 reorganization plan; sec. 1311 abolishes the United States Information Agency 'other than the Broadcasting Board of Governors and the International Broadcasting Bureau'; sec. 1312(a) transfers all its functions to the Secretary of State and 1312(b) excepts the Board, the Bureau, and their functions; sec. 1322 amends 22 U.S.C. 6203(a) so the Board 'shall continue to exist within the Executive branch' as an independent establishment (5 U.S.C. 104).",
+          "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ277/html/PLAW-105publ277.htm"
+        },
+        {
+          "citation": "Federal Register agency roster description of 41, Broadcasting Board of Governors",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: the Board 'became an independent agency on October 1, 1999, by authority of the Foreign Affairs Reform and Restructuring Act of 1998'.",
+          "url": "https://www.federalregister.gov/agencies/broadcasting-board-of-governors"
+        }
+      ],
+      "rows": [
+        "succ:fr510:fr41",
+        "succ:fr510:fr476"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "date_basis": "ICCTA sec. 2's effective date for the Act",
+      "effective_date": "1996-01-01",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr543",
+      "event_type": "ChangeEvent",
+      "group": "D",
+      "originals": [
+        {
+          "id": 543,
+          "name_field": "name",
+          "parent": null,
+          "publisher_name": "Interstate Commerce Commission",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:543",
+          "roster": "federal-register-agencies",
+          "short_name": "ICC",
+          "slug": "interstate-commerce-commission"
+        }
+      ],
+      "owner_note": null,
+      "public_records": [
+        {
+          "citation": "ICC Termination Act of 1995, Pub. L. 104-88, 109 Stat. 803, secs. 2, 101, 103, 201, 203, 205, 314-316",
+          "kind": "statute",
+          "note": "Sec. 101 abolishes the Interstate Commerce Commission; sec. 2 makes the Act effective 1996-01-01; title II charters the Surface Transportation Board; sec. 203 moves the Commission's assets and personnel for Board functions to the Board (203(a)) and for Secretary functions to the Secretary of Transportation (203(b)); the recodified motor-carrier part vests in the Secretary (49 U.S.C. 13301(a)); sec. 205 deems references to the ICC to refer to the Board or the Secretary, as appropriate; secs. 314-316 strike 'Interstate Commerce Commission' from the Fair Credit Reporting, Equal Credit Opportunity, and Fair Debt Collection Practices Acts and insert 'Secretary of Transportation, with respect to all carriers subject to the jurisdiction of the Surface Transportation Board'.",
+          "url": "https://www.congress.gov/104/plaws/publ88/PLAW-104publ88.htm"
+        }
+      ],
+      "rows": [
+        "succ:fr543:fr481",
+        "succ:fr543:fr492"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "date_basis": "the Reorganization Order's signature date -- the order states no effective date, and 66 FR 39450 records the Secretary's 2001-06-14 announcement of the new name",
+      "effective_date": "2001-06-29",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr559",
+      "event_type": "ChangeEvent",
+      "group": "C",
+      "originals": [
+        {
+          "id": 559,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Health and Human Services Department",
+            "resource_iri": "urn:ref:federal-register-agency:221"
+          },
+          "publisher_name": "Health Care Finance Administration",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:559",
+          "roster": "federal-register-agencies",
+          "short_name": "HCFA",
+          "slug": "health-care-finance-administration"
+        }
+      ],
+      "owner_note": "The periods are not mutually exclusive: documents printed under the old heading kept arriving after the order, and the Register also maps one later, unrelated heading to HCFA's record (the measured periods list each printed heading).",
+      "public_records": [
+        {
+          "citation": "66 FR 35437 (2001-07-05), FR Doc 01-16800, Centers for Medicare & Medicaid Services; Statement of Organization, Functions and Delegations of Authority; Reorganization Order",
+          "kind": "frNotice",
+          "note": "The Secretary's Reorganization Order retitling Part F (Health Care Financing Administration) as the Centers for Medicare & Medicaid Services and vesting every HCFA delegation in the CMS Administrator; 'Dated: June 29, 2001', with no effective-date clause.",
+          "url": "https://www.federalregister.gov/documents/2001/07/05/01-16800/centers-for-medicare-and-medicaid-services-statement-of-organization-functions-and-delegations-of"
+        },
+        {
+          "citation": "66 FR 39450 (2001-07-31), FR Doc 01-18959, Medicare and Medicaid Programs; Change of Agency Name: Technical Amendments",
+          "kind": "frNotice",
+          "note": "Records that the Secretary 'announced on June 14, 2001, the new name'; its own effective date, 2001-07-31, is the CFR conforming date, carried beside, not as, the rename date.",
+          "url": "https://www.federalregister.gov/documents/2001/07/31/01-18959/medicare-and-medicaid-programs-change-of-agency-name-technical-amendments"
+        }
+      ],
+      "rows": [
+        "succ:fr559:fr45"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    },
+    {
+      "content_digest": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "date_basis": "PAEA's approval date; sec. 604 states no separate effective date, and title VI's one effective-date clause, sec. 603(d)(1), governs appropriations, not the redesignation",
+      "effective_date": "2006-12-20",
+      "effective_date_alternatives": [],
+      "event_id": "event:fr564",
+      "event_type": "ChangeEvent",
+      "group": "C",
+      "originals": [
+        {
+          "id": 564,
+          "name_field": "name",
+          "parent": null,
+          "publisher_name": "Postal Rate Commission",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:564",
+          "roster": "federal-register-agencies",
+          "short_name": "PRC",
+          "slug": "postal-rate-commission"
+        }
+      ],
+      "owner_note": "The records are not period-disjoint: the Register files documents headed POSTAL RATE COMMISSION under 409 (measured periods); 564's only document, FR Doc 03-7022, is headed 'POSTAL RATE COMMISSION 39 U.S.C. 3623'; and 564's own roster description is the Postal Regulatory Commission's post-PAEA text.",
+      "owner_question": {
+        "options": [
+          "Succession: 564 became 409 on 2006-12-20, as this event proposes.",
+          "Duplicate record: FR 564 sameEntityAs FR 409, both records of one commission.",
+          "Neither: relate nothing, and the 1 mention under FR 564 stays unreached."
+        ],
+        "question": "Is FR 564 Postal Rate Commission the predecessor of FR 409, or a duplicate record of it?"
+      },
+      "public_records": [
+        {
+          "citation": "Postal Accountability and Enhancement Act, Pub. L. 109-435, 120 Stat. 3198, sec. 604",
+          "kind": "statute",
+          "note": "Sec. 604 redesignates the Postal Rate Commission as the Postal Regulatory Commission throughout titles 39, 5, and 44, and sec. 604(f) deems any other reference to the one a reference to the other; the Act was approved 2006-12-20.",
+          "url": "https://www.congress.gov/109/plaws/publ435/PLAW-109publ435.htm"
+        },
+        {
+          "citation": "Federal Register agency roster description of 409, Postal Regulatory Commission",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: 'The Postal Regulatory Commission is the successor agency to the Postal Rate Commission'.",
+          "url": "https://www.federalregister.gov/agencies/postal-regulatory-commission"
+        },
+        {
+          "citation": "Federal Register agency roster description of 564, Postal Rate Commission",
+          "kind": "publisherRoster",
+          "note": "The record is named Postal Rate Commission, but its description is the Postal Regulatory Commission's post-PAEA text: 'The Postal Regulatory Commission (PRC) is an independent agency that has exercised regulatory oversight over the Postal Service since its creation by the Postal Reorganization Act of 1970 ... the Postal Accountability and Enhancement Act (PAEA) enacted on December 20, 2006, significantly strengthened the Commission's authority'.",
+          "url": "https://www.federalregister.gov/agencies/postal-rate-commission"
+        },
+        {
+          "citation": "68 FR 14435 (2003-03-25), FR Doc 03-7022, Customized Market Mail",
+          "kind": "frDocument",
+          "note": "The Register's only document under FR 564 (the publisher's API); its agency heading reads 'POSTAL RATE COMMISSION 39 U.S.C. 3623', a statute citation fused into the heading.",
+          "url": "https://www.federalregister.gov/documents/2003/03/25/03-7022/customized-market-mail"
+        }
+      ],
+      "rows": [
+        "succ:fr564:fr409"
+      ],
+      "status": "candidate-pending-owner-adjudication"
+    }
+  ],
+  "resultRows": [
+    {
+      "candidate_id": "succ:fr96:fr501",
+      "closest_rejected_alternative": {
+        "description": "Customs Service sameEntityAs U.S. Customs and Border Protection, folded into identity.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The Customs Service published under its own FR id before 2003-03-01 and CBP after, and its investigation arms went to ICE; identity would collapse the two records and the split the record separates."
+      },
+      "content_digest": "sha256:53d4ee0cbd9f9df9d4d476e9138cc148a0b74af7c03e8da32e473e882ae708b3",
+      "event_id": "event:fr96",
+      "functions_taken": "the Customs Service's inspection and ports-of-entry side (the plan's subsection (b) bureau)",
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "reasoning": "HSA sec. 403(1) transferred the United States Customs Service to DHS; 68 FR 51868 records that the Service 'is now known as the bureau of Customs and Border Protection', whose inspection and border side is the plan's subsection (b). HSA sec. 412 keeps the Secretary of the Treasury's authority over customs revenue functions.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 96,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Treasury Department",
+          "resource_iri": "urn:ref:federal-register-agency:497"
+        },
+        "publisher_name": "Customs Service",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:96",
+        "roster": "federal-register-agencies",
+        "short_name": null,
+        "slug": "customs-service"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 501,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Homeland Security Department",
+          "resource_iri": "urn:ref:federal-register-agency:227"
+        },
+        "publisher_name": "U.S. Customs and Border Protection",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:501",
+        "roster": "federal-register-agencies",
+        "short_name": "USCBP",
+        "slug": "u-s-customs-and-border-protection"
+      }
+    },
+    {
+      "candidate_id": "succ:fr96:fr503",
+      "closest_rejected_alternative": {
+        "description": "Fold the Customs investigators into the Customs-to-CBP row alone.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "68 FR 51868 names the former Customs Service's investigation arms as ICE's, not CBP's; one result would misroute the enforcement functions the record assigns to the other bureau."
+      },
+      "content_digest": "sha256:0937833bb76f159c3eb8663e91eccf774d42a43bd7728e1f2c3ed4b7707fb6d7",
+      "event_id": "event:fr96",
+      "functions_taken": "the investigation arms of the former Customs Service (H. Doc. 108-32 subsection (a))",
+      "public_records": [
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "reasoning": "The plan's subsection (a) builds Immigration and Customs Enforcement as the interior-enforcement bureau, and 68 FR 51868 records that ICE 'brings together the investigation arms of the former Customs Service', with the same 2003-03-01 effect. HSA sec. 412 keeps customs revenue authority with Treasury.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 96,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Treasury Department",
+          "resource_iri": "urn:ref:federal-register-agency:497"
+        },
+        "publisher_name": "Customs Service",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:96",
+        "roster": "federal-register-agencies",
+        "short_name": null,
+        "slug": "customs-service"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 503,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Homeland Security Department",
+          "resource_iri": "urn:ref:federal-register-agency:227"
+        },
+        "publisher_name": "U.S. Immigration and Customs Enforcement",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:503",
+        "roster": "federal-register-agencies",
+        "short_name": "ICE",
+        "slug": "u-s-immigration-and-customs-enforcement"
+      }
+    },
+    {
+      "candidate_id": "succ:fr150:fr241",
+      "closest_rejected_alternative": {
+        "description": "Export Administration Bureau sameEntityAs Industry and Security Bureau, folded into identity.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The rename has a date the public record states; identity would misdate documents under the old name, and FR 150's short name EAB, shared with the Economic Analysis Bureau (FR 118), shows how wrong an acronym-level identity would be."
+      },
+      "content_digest": "sha256:52ec3b2592bdc8696a1d6b71acdf3a2931d6194b4cf56790c869c8ae7a997a7c",
+      "event_id": "event:fr150",
+      "functions_taken": null,
+      "public_records": [
+        {
+          "citation": "67 FR 20630 (2002-04-26), FR Doc 02-10166, Industry and Security Programs; Change of Agency Name",
+          "kind": "frNotice",
+          "note": "Records that Commerce changed the Bureau of Export Administration's name to the Bureau of Industry and Security by internal organizational order on 2002-04-18 and makes the rule effective that day, preserving all prior actions under the new name.",
+          "url": "https://www.federalregister.gov/documents/2002/04/26/02-10166/industry-and-security-programs-change-of-agency-name"
+        }
+      ],
+      "reasoning": "Commerce renamed the Bureau of Export Administration the Bureau of Industry and Security by organizational order effective 2002-04-18; the Federal Register roster keeps the old name on FR 150 and the new one on FR 241.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 150,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Commerce Department",
+          "resource_iri": "urn:ref:federal-register-agency:54"
+        },
+        "publisher_name": "Export Administration Bureau",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:150",
+        "roster": "federal-register-agencies",
+        "short_name": "EAB",
+        "slug": "export-administration-bureau"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 241,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Commerce Department",
+          "resource_iri": "urn:ref:federal-register-agency:54"
+        },
+        "publisher_name": "Industry and Security Bureau",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:241",
+        "roster": "federal-register-agencies",
+        "short_name": "BIS",
+        "slug": "industry-and-security-bureau"
+      }
+    },
+    {
+      "candidate_id": "succ:fr232:fr499",
+      "closest_rejected_alternative": {
+        "description": "A single succession from INS to the DHS department (FR 227).",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The Homeland Security Act did not move INS into DHS whole: sec. 441 transfers its programs, sec. 451 builds the services bureau, sec. 471 abolishes INS only 'upon completion of all transfers', and the Reorganization Plan Modification effective 2003-03-01 split the programs across three components. One result at the department would misroute every pre-2003 INS document to an entity that never published it."
+      },
+      "content_digest": "sha256:6e2cf3aa34cc96a6c5e48ce2aa98e7554a5510d005b37e627aacdd03b65f5f52",
+      "event_id": "event:fr232",
+      "functions_taken": "immigration services and adjudications (the services bureau HSA sec. 451 establishes)",
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "68 FR 10922 (2003-03-06), FR Doc 03-5146, Authority of the Secretary of Homeland Security; Delegations of Authority; Immigration Laws",
+          "kind": "frNotice",
+          "note": "States that the INS functions transfer to DHS on March 1, 2003, and that the INS is abolished on that date.",
+          "url": "https://www.federalregister.gov/documents/2003/03/06/03-5146/authority-of-the-secretary-of-homeland-security-delegations-of-authority-immigration-laws"
+        }
+      ],
+      "reasoning": "HSA sec. 451 established the Bureau of Citizenship and Immigration Services for the service functions; the delegation rule records the transfer of all INS functions to DHS and the INS's abolition on 2003-03-01.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 232,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Justice Department",
+          "resource_iri": "urn:ref:federal-register-agency:268"
+        },
+        "publisher_name": "Immigration and Naturalization Service",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:232",
+        "roster": "federal-register-agencies",
+        "short_name": "INS",
+        "slug": "immigration-and-naturalization-service"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 499,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Homeland Security Department",
+          "resource_iri": "urn:ref:federal-register-agency:227"
+        },
+        "publisher_name": "U.S. Citizenship and Immigration Services",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:499",
+        "roster": "federal-register-agencies",
+        "short_name": "USCIS",
+        "slug": "u-s-citizenship-and-immigration-services"
+      }
+    },
+    {
+      "candidate_id": "succ:fr232:fr501",
+      "closest_rejected_alternative": {
+        "description": "A single succession from INS to the DHS department (FR 227).",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The Homeland Security Act did not move INS into DHS whole: sec. 441 transfers its programs, sec. 451 builds the services bureau, sec. 471 abolishes INS only 'upon completion of all transfers', and the Reorganization Plan Modification effective 2003-03-01 split the programs across three components. One result at the department would misroute every pre-2003 INS document to an entity that never published it."
+      },
+      "content_digest": "sha256:05438c5c8a835ee70343d3fea9c4fb3781ca4a7eb8e526fde8b2fbe0e30b8322",
+      "event_id": "event:fr232",
+      "functions_taken": "the Border Patrol and the inspections program (H. Doc. 108-32 subsection (b))",
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 10922 (2003-03-06), FR Doc 03-5146, Authority of the Secretary of Homeland Security; Delegations of Authority; Immigration Laws",
+          "kind": "frNotice",
+          "note": "States that the INS functions transfer to DHS on March 1, 2003, and that the INS is abolished on that date.",
+          "url": "https://www.federalregister.gov/documents/2003/03/06/03-5146/authority-of-the-secretary-of-homeland-security-delegations-of-authority-immigration-laws"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "reasoning": "HSA sec. 441 transfers the Border Patrol and inspections programs; the plan's subsection (b) places them in the Bureau of Customs and Border Protection it builds, effective 2003-03-01.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 232,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Justice Department",
+          "resource_iri": "urn:ref:federal-register-agency:268"
+        },
+        "publisher_name": "Immigration and Naturalization Service",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:232",
+        "roster": "federal-register-agencies",
+        "short_name": "INS",
+        "slug": "immigration-and-naturalization-service"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 501,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Homeland Security Department",
+          "resource_iri": "urn:ref:federal-register-agency:227"
+        },
+        "publisher_name": "U.S. Customs and Border Protection",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:501",
+        "roster": "federal-register-agencies",
+        "short_name": "USCBP",
+        "slug": "u-s-customs-and-border-protection"
+      }
+    },
+    {
+      "candidate_id": "succ:fr232:fr503",
+      "closest_rejected_alternative": {
+        "description": "A single succession from INS to the DHS department (FR 227).",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The Homeland Security Act did not move INS into DHS whole: sec. 441 transfers its programs, sec. 451 builds the services bureau, sec. 471 abolishes INS only 'upon completion of all transfers', and the Reorganization Plan Modification effective 2003-03-01 split the programs across three components. One result at the department would misroute every pre-2003 INS document to an entity that never published it."
+      },
+      "content_digest": "sha256:9ba03f6f717461768f1c62767cfcd3fe6cac31574959eb6339f9b0cb12215f63",
+      "event_id": "event:fr232",
+      "functions_taken": "investigations, detention and removal, and intelligence (H. Doc. 108-32 subsection (a))",
+      "public_records": [
+        {
+          "citation": "Homeland Security Act of 2002, Pub. L. 107-296, 116 Stat. 2135",
+          "kind": "statute",
+          "note": "Enacted 2002-11-25; sec. 4 sets the Act's effective date 60 days later.",
+          "url": "https://www.congress.gov/107/plaws/publ296/PLAW-107publ296.htm"
+        },
+        {
+          "citation": "Reorganization Plan Modification for the Department of Homeland Security, H. Doc. 108-32 (108th Congress)",
+          "kind": "reorganizationPlan",
+          "note": "The President's plan modification under HSA sec. 1502, effective 2003-03-01. Subsection (a) builds the interior-enforcement bureau (Immigration and Customs Enforcement) around the transferred investigation, detention-and-removal, and intelligence programs; subsection (b) builds the Bureau of Customs and Border Protection around the border inspections program, including the Border Patrol.",
+          "url": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf"
+        },
+        {
+          "citation": "68 FR 10922 (2003-03-06), FR Doc 03-5146, Authority of the Secretary of Homeland Security; Delegations of Authority; Immigration Laws",
+          "kind": "frNotice",
+          "note": "States that the INS functions transfer to DHS on March 1, 2003, and that the INS is abolished on that date.",
+          "url": "https://www.federalregister.gov/documents/2003/03/06/03-5146/authority-of-the-secretary-of-homeland-security-delegations-of-authority-immigration-laws"
+        },
+        {
+          "citation": "68 FR 51868 (2003-08-28), FR Doc 03-21995, Delegations of Authority: Signature of Customs and Border Protection Regulations",
+          "kind": "frNotice",
+          "note": "Recites the Reorganization Plan Modification effective March 1, 2003, which renamed the Bureau of Border Security as Immigration and Customs Enforcement (ICE brings together the investigation arms of the former Customs Service and the investigative functions of the former INS), records that the United States Customs Service 'is now known as the bureau of Customs and Border Protection', and recites that HSA sec. 412 keeps the Secretary of the Treasury's legal authority over customs revenue functions.",
+          "url": "https://www.federalregister.gov/documents/2003/08/28/03-21995/delegations-of-authority-signature-of-customs-and-border-protection-regulations-published-in-the"
+        }
+      ],
+      "reasoning": "HSA sec. 441 transfers the investigations, detention-and-removal and intelligence programs; the plan's subsection (a) builds Immigration and Customs Enforcement around them, effective 2003-03-01, and 68 FR 51868 records that ICE brings together those investigative functions of the former INS.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 232,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Justice Department",
+          "resource_iri": "urn:ref:federal-register-agency:268"
+        },
+        "publisher_name": "Immigration and Naturalization Service",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:232",
+        "roster": "federal-register-agencies",
+        "short_name": "INS",
+        "slug": "immigration-and-naturalization-service"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 503,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Homeland Security Department",
+          "resource_iri": "urn:ref:federal-register-agency:227"
+        },
+        "publisher_name": "U.S. Immigration and Customs Enforcement",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:503",
+        "roster": "federal-register-agencies",
+        "short_name": "ICE",
+        "slug": "u-s-immigration-and-customs-enforcement"
+      }
+    },
+    {
+      "candidate_id": "succ:fr259:fr603",
+      "closest_rejected_alternative": {
+        "description": "International Investment Office sameEntityAs Investment Security Office, folded into identity.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The rename carries a date the publisher states; identity would misdate the documents under the old name and discard the date the roster itself records."
+      },
+      "content_digest": "sha256:9b63cd987faf9529fa05bfe82d8da2a3c54573fc2dfbb29524108cb42bfdda43",
+      "event_id": "event:fr259",
+      "functions_taken": null,
+      "public_records": [
+        {
+          "citation": "Federal Register agency roster description of 259, International Investment Office",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: 'Name changed Nov. 21, 2008 (73 FR 70716) to Office of Investment Security.'",
+          "url": "https://www.federalregister.gov/agencies/international-investment-office"
+        },
+        {
+          "citation": "73 FR 70702 (2008-11-21), FR Doc E8-27525, Regulations Pertaining to Mergers, Acquisitions, and Takeovers by Foreign Persons",
+          "kind": "frNotice",
+          "note": "Spans 73 FR 70702-70729; its page 70716 -- the page the roster cites -- revises the heading of 31 CFR chapter VIII to 'Office of Investment Security, Department of the Treasury'. Published 2008-11-21, effective 2008-12-22.",
+          "url": "https://www.federalregister.gov/documents/2008/11/21/E8-27525/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons"
+        },
+        {
+          "citation": "73 FR 21861 (2008-04-23), FR Doc 08-1172, Regulations Pertaining to Mergers, Acquisitions, and Takeovers by Foreign Persons",
+          "kind": "frDocument",
+          "note": "The last document the Federal Register files under the old name (the publisher's API, newest first).",
+          "url": "https://www.federalregister.gov/documents/2008/04/23/08-1172/regulations-pertaining-to-mergers-acquisitions-and-takeovers-by-foreign-persons"
+        }
+      ],
+      "reasoning": "The Federal Register roster's own description of FR 259 records the change to the Office of Investment Security, citing 73 FR 70716, a page inside rule E8-27525; both records sit under the Treasury department.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 259,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Treasury Department",
+          "resource_iri": "urn:ref:federal-register-agency:497"
+        },
+        "publisher_name": "International Investment Office",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:259",
+        "roster": "federal-register-agencies",
+        "short_name": "IIO",
+        "slug": "international-investment-office"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 603,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Treasury Department",
+          "resource_iri": "urn:ref:federal-register-agency:497"
+        },
+        "publisher_name": "Investment Security Office",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:603",
+        "roster": "federal-register-agencies",
+        "short_name": "IIO",
+        "slug": "investment-security-office"
+      }
+    },
+    {
+      "candidate_id": "succ:fr404:fr131",
+      "closest_rejected_alternative": {
+        "description": "Pension and Welfare Benefits Administration sameEntityAs Employee Benefits Security Administration.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The rename has a stated effective date; identity would erase it and misdate the documents under each name."
+      },
+      "content_digest": "sha256:5ac30a33d995dff4b0a921ddf70870d51cdfb76e080b31d26985c55706ce200d",
+      "event_id": "event:fr404",
+      "functions_taken": null,
+      "public_records": [
+        {
+          "citation": "68 FR 5374 (2003-02-03), FR Doc 03-2163, Secretary's Order 1-2003: Delegation of Authority and Assignment of Responsibilities to the Employee Benefits Security Administration",
+          "kind": "frNotice",
+          "note": "Secretary of Labor's Order 1-2003 redesignates the Pension and Welfare Benefits Administration as the Employee Benefits Security Administration, signed 2003-01-23 and effective on publication, 2003-02-03.",
+          "url": "https://www.federalregister.gov/documents/2003/02/03/03-2163/delegation-of-authority-and-assignment-of-responsibilities-to-the-employee-benefits-security"
+        },
+        {
+          "citation": "68 FR 16399 (2003-04-03), FR Doc 03-8099, Change of Agency Name; Technical Amendments",
+          "kind": "frNotice",
+          "note": "The conforming CFR record, revising 29 CFR chapter XXV effective 2003-04-03 -- carried only as the CFR conforming date, not the rename date.",
+          "url": "https://www.federalregister.gov/documents/2003/04/03/03-8099/change-of-agency-name-technical-amendments"
+        }
+      ],
+      "reasoning": "Secretary of Labor's Order 1-2003 renamed the Pension and Welfare Benefits Administration the Employee Benefits Security Administration, effective on publication 2003-02-03; the CFR conforming amendments followed effective 2003-04-03.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 404,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Labor Department",
+          "resource_iri": "urn:ref:federal-register-agency:271"
+        },
+        "publisher_name": "Pension and Welfare Benefits Administration",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:404",
+        "roster": "federal-register-agencies",
+        "short_name": "PWBA",
+        "slug": "pension-and-welfare-benefits-administration"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 131,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Labor Department",
+          "resource_iri": "urn:ref:federal-register-agency:271"
+        },
+        "publisher_name": "Employee Benefits Security Administration",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:131",
+        "roster": "federal-register-agencies",
+        "short_name": "EBSA",
+        "slug": "employee-benefits-security-administration"
+      }
+    },
+    {
+      "candidate_id": "succ:fr510:fr41",
+      "closest_rejected_alternative": {
+        "description": "Leave broadcasting out and keep USIA to State as a single-successor event.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "Secs. 1311 and 1312(b) keep broadcasting from both the abolition and the transfer; a State-only event would route USIA's broadcasting documents to a department that never held that function."
+      },
+      "content_digest": "sha256:9980fee4ae3883b01a41cbcffe577948009530aa968e61f9cf9e542f14b04990",
+      "event_id": "event:fr510",
+      "functions_taken": "international broadcasting, which the Board already held inside USIA and kept: sec. 1311 excepts the Board and the International Broadcasting Bureau from the abolition, sec. 1312(b) keeps them and their functions out of the transfer to State, and sec. 1322 continues the Board as an independent establishment",
+      "public_records": [
+        {
+          "citation": "Foreign Affairs Reform and Restructuring Act of 1998, div. G of Pub. L. 105-277, 112 Stat. 2681-761, secs. 1301, 1311, 1312, 1322",
+          "kind": "statute",
+          "note": "Sec. 1301 makes the title effective on the earlier of 1999-10-01 or the date of abolition under the sec. 1601 reorganization plan; sec. 1311 abolishes the United States Information Agency 'other than the Broadcasting Board of Governors and the International Broadcasting Bureau'; sec. 1312(a) transfers all its functions to the Secretary of State and 1312(b) excepts the Board, the Bureau, and their functions; sec. 1322 amends 22 U.S.C. 6203(a) so the Board 'shall continue to exist within the Executive branch' as an independent establishment (5 U.S.C. 104).",
+          "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ277/html/PLAW-105publ277.htm"
+        },
+        {
+          "citation": "Federal Register agency roster description of 41, Broadcasting Board of Governors",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: the Board 'became an independent agency on October 1, 1999, by authority of the Foreign Affairs Reform and Restructuring Act of 1998'.",
+          "url": "https://www.federalregister.gov/agencies/broadcasting-board-of-governors"
+        }
+      ],
+      "reasoning": "The Board is not new: the 1994 International Broadcasting Act consolidated broadcasting into USIA under it, and FARRA carved it out of the abolition and continued it, so USIA's broadcasting functions stayed there, not at State. The International Broadcasting Bureau (FR 256, sealed name International Broadcasting Board) is its component and stays with it.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 510,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "United States Information Agency",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:510",
+        "roster": "federal-register-agencies",
+        "short_name": "USIA",
+        "slug": "united-states-information-agency"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 41,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Broadcasting Board of Governors",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:41",
+        "roster": "federal-register-agencies",
+        "short_name": "BBG",
+        "slug": "broadcasting-board-of-governors"
+      }
+    },
+    {
+      "candidate_id": "succ:fr510:fr476",
+      "closest_rejected_alternative": {
+        "description": "United States Information Agency sameEntityAs State Department, folded into identity.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "An agency was abolished into a department, not renamed; identity would equate a subunit's functions with the absorbing department, and the broadcasting exception means part of USIA never went to State."
+      },
+      "content_digest": "sha256:2dda45e739bbbfa35ef383afa23c5e44928df51fb3813d185ec5a4214dc31ebf",
+      "event_id": "event:fr510",
+      "functions_taken": "every USIA function other than broadcasting: all functions of the Director and of the agency, transferred to the Secretary of State (FARRA sec. 1312(a))",
+      "public_records": [
+        {
+          "citation": "Foreign Affairs Reform and Restructuring Act of 1998, div. G of Pub. L. 105-277, 112 Stat. 2681-761, secs. 1301, 1311, 1312, 1322",
+          "kind": "statute",
+          "note": "Sec. 1301 makes the title effective on the earlier of 1999-10-01 or the date of abolition under the sec. 1601 reorganization plan; sec. 1311 abolishes the United States Information Agency 'other than the Broadcasting Board of Governors and the International Broadcasting Bureau'; sec. 1312(a) transfers all its functions to the Secretary of State and 1312(b) excepts the Board, the Bureau, and their functions; sec. 1322 amends 22 U.S.C. 6203(a) so the Board 'shall continue to exist within the Executive branch' as an independent establishment (5 U.S.C. 104).",
+          "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ277/html/PLAW-105publ277.htm"
+        }
+      ],
+      "reasoning": "The 1998 restructuring Act abolished USIA and vested every remaining function in the Secretary of State, effective 1999-10-01 under sec. 1301's default; if the owner holds that the plan abolished USIA earlier, the owner fixes that date.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 510,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "United States Information Agency",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:510",
+        "roster": "federal-register-agencies",
+        "short_name": "USIA",
+        "slug": "united-states-information-agency"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 476,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "State Department",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:476",
+        "roster": "federal-register-agencies",
+        "short_name": "DOS",
+        "slug": "state-department"
+      }
+    },
+    {
+      "candidate_id": "succ:fr543:fr481",
+      "closest_rejected_alternative": {
+        "description": "A single succession from the ICC to the Department of Transportation (FR 492) alone.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "ICCTA sec. 101 abolished the Commission; sec. 203 splits the aftermath into two streams (assets and personnel for Board functions to the Board, for Secretary functions to the Secretary) and sec. 205 deems references to the ICC to mean the Board or the Secretary 'as appropriate'. The functions genuinely divided, and the Board is an independent decisional body, not the department acting."
+      },
+      "content_digest": "sha256:2d0738a675ff7360203d418c2732479b18478ae254508ec12b340f48a8485a78",
+      "event_id": "event:fr543",
+      "functions_taken": "the surviving economic regulation: rail rate and service regulation and the residual carrier jurisdiction the Act recodifies into subtitle IV, chartered as the Board (ICCTA title II)",
+      "public_records": [
+        {
+          "citation": "ICC Termination Act of 1995, Pub. L. 104-88, 109 Stat. 803, secs. 2, 101, 103, 201, 203, 205, 314-316",
+          "kind": "statute",
+          "note": "Sec. 101 abolishes the Interstate Commerce Commission; sec. 2 makes the Act effective 1996-01-01; title II charters the Surface Transportation Board; sec. 203 moves the Commission's assets and personnel for Board functions to the Board (203(a)) and for Secretary functions to the Secretary of Transportation (203(b)); the recodified motor-carrier part vests in the Secretary (49 U.S.C. 13301(a)); sec. 205 deems references to the ICC to refer to the Board or the Secretary, as appropriate; secs. 314-316 strike 'Interstate Commerce Commission' from the Fair Credit Reporting, Equal Credit Opportunity, and Fair Debt Collection Practices Acts and insert 'Secretary of Transportation, with respect to all carriers subject to the jurisdiction of the Surface Transportation Board'.",
+          "url": "https://www.congress.gov/104/plaws/publ88/PLAW-104publ88.htm"
+        }
+      ],
+      "reasoning": "The ICC Termination Act abolished the Interstate Commerce Commission and chartered the Surface Transportation Board for the economic functions that survived it, both effective 1996-01-01 by the Act's own effective-date section.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 543,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Interstate Commerce Commission",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:543",
+        "roster": "federal-register-agencies",
+        "short_name": "ICC",
+        "slug": "interstate-commerce-commission"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 481,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Surface Transportation Board",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:481",
+        "roster": "federal-register-agencies",
+        "short_name": "STB",
+        "slug": "surface-transportation-board"
+      }
+    },
+    {
+      "candidate_id": "succ:fr543:fr492",
+      "closest_rejected_alternative": {
+        "description": "A single succession from the ICC to the Department of Transportation (FR 492) alone.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "ICCTA sec. 101 abolished the Commission; sec. 203 splits the aftermath into two streams (assets and personnel for Board functions to the Board, for Secretary functions to the Secretary) and sec. 205 deems references to the ICC to mean the Board or the Secretary 'as appropriate'. The functions genuinely divided, and the Board is an independent decisional body, not the department acting."
+      },
+      "content_digest": "sha256:1ab349bd3962f86545d6a00e02f1ccdb4a6f0612fdc4861f9fb03e168d601ffc",
+      "event_id": "event:fr543",
+      "functions_taken": "the functions the Act vests in the Secretary: carrying out the recodified motor-carrier part (49 U.S.C. 13301(a): 'Except as otherwise specified, the Secretary shall carry out this part') and the carrier-related consumer-protection enforcement the conforming amendments redirect (ICCTA secs. 314-316)",
+      "public_records": [
+        {
+          "citation": "ICC Termination Act of 1995, Pub. L. 104-88, 109 Stat. 803, secs. 2, 101, 103, 201, 203, 205, 314-316",
+          "kind": "statute",
+          "note": "Sec. 101 abolishes the Interstate Commerce Commission; sec. 2 makes the Act effective 1996-01-01; title II charters the Surface Transportation Board; sec. 203 moves the Commission's assets and personnel for Board functions to the Board (203(a)) and for Secretary functions to the Secretary of Transportation (203(b)); the recodified motor-carrier part vests in the Secretary (49 U.S.C. 13301(a)); sec. 205 deems references to the ICC to refer to the Board or the Secretary, as appropriate; secs. 314-316 strike 'Interstate Commerce Commission' from the Fair Credit Reporting, Equal Credit Opportunity, and Fair Debt Collection Practices Acts and insert 'Secretary of Transportation, with respect to all carriers subject to the jurisdiction of the Surface Transportation Board'.",
+          "url": "https://www.congress.gov/104/plaws/publ88/PLAW-104publ88.htm"
+        }
+      ],
+      "reasoning": "The Act did not send everything to the Board: the Secretary of Transportation carries out the recodified motor-carrier part, the consumer-protection Acts the ICC enforced for carriers were redirected to the Secretary, and sec. 203(b) moves the personnel and assets for Secretary functions separately from the Board's.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 543,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Interstate Commerce Commission",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:543",
+        "roster": "federal-register-agencies",
+        "short_name": "ICC",
+        "slug": "interstate-commerce-commission"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 492,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Transportation Department",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:492",
+        "roster": "federal-register-agencies",
+        "short_name": "DOT",
+        "slug": "transportation-department"
+      }
+    },
+    {
+      "candidate_id": "succ:fr559:fr45",
+      "closest_rejected_alternative": {
+        "description": "Health Care Finance Administration sameEntityAs Centers for Medicare & Medicaid Services.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "The rename has a dated order; identity would erase that date and misdate the documents filed under each name, even though the periods are not cleanly disjoint (measured periods)."
+      },
+      "content_digest": "sha256:946051ab54e484e1afca5952a14a7924fe13ea2eac529956650a2967ddf4cffd",
+      "event_id": "event:fr559",
+      "functions_taken": null,
+      "public_records": [
+        {
+          "citation": "66 FR 35437 (2001-07-05), FR Doc 01-16800, Centers for Medicare & Medicaid Services; Statement of Organization, Functions and Delegations of Authority; Reorganization Order",
+          "kind": "frNotice",
+          "note": "The Secretary's Reorganization Order retitling Part F (Health Care Financing Administration) as the Centers for Medicare & Medicaid Services and vesting every HCFA delegation in the CMS Administrator; 'Dated: June 29, 2001', with no effective-date clause.",
+          "url": "https://www.federalregister.gov/documents/2001/07/05/01-16800/centers-for-medicare-and-medicaid-services-statement-of-organization-functions-and-delegations-of"
+        },
+        {
+          "citation": "66 FR 39450 (2001-07-31), FR Doc 01-18959, Medicare and Medicaid Programs; Change of Agency Name: Technical Amendments",
+          "kind": "frNotice",
+          "note": "Records that the Secretary 'announced on June 14, 2001, the new name'; its own effective date, 2001-07-31, is the CFR conforming date, carried beside, not as, the rename date.",
+          "url": "https://www.federalregister.gov/documents/2001/07/31/01-18959/medicare-and-medicaid-programs-change-of-agency-name-technical-amendments"
+        }
+      ],
+      "reasoning": "The HHS Secretary's Reorganization Order, dated 2001-06-29, retitled the Health Care Financing Administration the Centers for Medicare & Medicaid Services; the Federal Register roster keeps both records under the HHS department.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 559,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Health and Human Services Department",
+          "resource_iri": "urn:ref:federal-register-agency:221"
+        },
+        "publisher_name": "Health Care Finance Administration",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:559",
+        "roster": "federal-register-agencies",
+        "short_name": "HCFA",
+        "slug": "health-care-finance-administration"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 45,
+        "name_field": "name",
+        "parent": {
+          "publisher_name": "Health and Human Services Department",
+          "resource_iri": "urn:ref:federal-register-agency:221"
+        },
+        "publisher_name": "Centers for Medicare & Medicaid Services",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:45",
+        "roster": "federal-register-agencies",
+        "short_name": "CMS",
+        "slug": "centers-for-medicare-medicaid-services"
+      }
+    },
+    {
+      "candidate_id": "succ:fr564:fr409",
+      "closest_rejected_alternative": {
+        "description": "Postal Rate Commission sameEntityAs Postal Regulatory Commission, folded into identity.",
+        "leaves_fr_mentions_unreached": false,
+        "why_rejected": "Proposed only if the owner reads FR 564 as a duplicate record; the event's question offers it as an answer rather than rejecting it."
+      },
+      "content_digest": "sha256:b6e0509b44483e311d27581906e1a1b26a936f2844ff7fc6693453932c3ce929",
+      "event_id": "event:fr564",
+      "functions_taken": null,
+      "public_records": [
+        {
+          "citation": "Postal Accountability and Enhancement Act, Pub. L. 109-435, 120 Stat. 3198, sec. 604",
+          "kind": "statute",
+          "note": "Sec. 604 redesignates the Postal Rate Commission as the Postal Regulatory Commission throughout titles 39, 5, and 44, and sec. 604(f) deems any other reference to the one a reference to the other; the Act was approved 2006-12-20.",
+          "url": "https://www.congress.gov/109/plaws/publ435/PLAW-109publ435.htm"
+        },
+        {
+          "citation": "Federal Register agency roster description of 409, Postal Regulatory Commission",
+          "kind": "publisherRoster",
+          "note": "The publisher's own roster description: 'The Postal Regulatory Commission is the successor agency to the Postal Rate Commission'.",
+          "url": "https://www.federalregister.gov/agencies/postal-regulatory-commission"
+        },
+        {
+          "citation": "Federal Register agency roster description of 564, Postal Rate Commission",
+          "kind": "publisherRoster",
+          "note": "The record is named Postal Rate Commission, but its description is the Postal Regulatory Commission's post-PAEA text: 'The Postal Regulatory Commission (PRC) is an independent agency that has exercised regulatory oversight over the Postal Service since its creation by the Postal Reorganization Act of 1970 ... the Postal Accountability and Enhancement Act (PAEA) enacted on December 20, 2006, significantly strengthened the Commission's authority'.",
+          "url": "https://www.federalregister.gov/agencies/postal-rate-commission"
+        },
+        {
+          "citation": "68 FR 14435 (2003-03-25), FR Doc 03-7022, Customized Market Mail",
+          "kind": "frDocument",
+          "note": "The Register's only document under FR 564 (the publisher's API); its agency heading reads 'POSTAL RATE COMMISSION 39 U.S.C. 3623', a statute citation fused into the heading.",
+          "url": "https://www.federalregister.gov/documents/2003/03/25/03-7022/customized-market-mail"
+        }
+      ],
+      "reasoning": "PAEA sec. 604 redesignated the Postal Rate Commission as the Postal Regulatory Commission, and the roster's description of FR 409 names it the successor agency. The records are not period-disjoint, though: the Register files documents headed POSTAL RATE COMMISSION under FR 409, FR 564's one document carries a heading with a citation fused in, and FR 564's own description is the Postal Regulatory Commission's post-PAEA text, so FR 564 may be a duplicate record of the same commission rather than a predecessor.",
+      "relation": "resultingOrganization",
+      "source": {
+        "id": 564,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Postal Rate Commission",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:564",
+        "roster": "federal-register-agencies",
+        "short_name": "PRC",
+        "slug": "postal-rate-commission"
+      },
+      "status": "candidate-pending-owner-adjudication",
+      "target": {
+        "id": 409,
+        "name_field": "name",
+        "parent": null,
+        "publisher_name": "Postal Regulatory Commission",
+        "release_key": "federal-register-agencies-roster-2026-08-15",
+        "resource_iri": "urn:ref:federal-register-agency:409",
+        "roster": "federal-register-agencies",
+        "short_name": "PRC",
+        "slug": "postal-regulatory-commission"
+      }
+    }
+  ],
+  "decisions": {
+    "event:fr96": {
+      "answer": "accept-every-row",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:fa18fe419e2d525c745b58c7aa9ff90e9b3075292eceeaef92048f7c428bdc28",
+      "channel": "questionTool"
+    },
+    "event:fr150": {
+      "answer": "accept",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:356837bb8a866841611c316cfb2a027b03f46059fad62d7a018248841f07d2af",
+      "channel": "questionTool",
+      "note": "Research 2026-09-26 confirmed: 67 FR 20630 states the rule is effective 2002-04-18, the date of Amendment 3 to DOO 50-1."
+    },
+    "event:fr232": {
+      "answer": "accept-every-row",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:920b5dbfae9ff3e0661dacbe13ca061c416f53cada7150afe83429e999f4c692",
+      "channel": "questionTool"
+    },
+    "event:fr259": {
+      "answer": "accept",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:c98c04fb57995b4757dd03bce11aa10f988fab7d1db5711320cf0e2b536ec998",
+      "channel": "questionTool",
+      "note": "2008-11-21, the roster's stated change date, chosen over the 2008-12-22 CFR-heading date."
+    },
+    "event:fr404": {
+      "answer": "accept",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:33b405f386f33bc77f251ae3a61ae7ec15f78b712797e60910280aa3cc1c7f4e",
+      "channel": "questionTool",
+      "note": "Research 2026-09-26 confirmed: Secretary's Order 1-2003 is effective on publication, 2003-02-03."
+    },
+    "event:fr510": {
+      "answer": "accept-every-row",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:3285f1f2d21f2ffe39a5c090be8fcfc72c9ea544bc1d72eaee2ceaba965a11f2",
+      "channel": "questionTool"
+    },
+    "event:fr543": {
+      "answer": "accept-every-row",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:a0a34a81fc975917a74d4f9df898e4f6ff5b98c285ee0868384c8ddbe90a0083",
+      "channel": "questionTool"
+    },
+    "event:fr559": {
+      "answer": "accept",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:07155f72952462546e26b7d54aa69fd885be51e0eebf758ada7a88b2e4853ab8",
+      "channel": "questionTool",
+      "note": "Kept the order's own date, 2001-06-29, over the 2001-07-01 that secondary records (66 FR 38447; CMS biographies) call effective."
+    },
+    "event:fr564": {
+      "answer": "1",
+      "decided_on": "2026-09-26",
+      "content_digest": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+      "channel": "questionTool"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<https://sns.uba.de/umthes/_00047435> <http://www.w3.org/2004/02/skos/core#prefLabel> "physicochemical process"@en .
+<https://sns.uba.de/umthes/_00047435> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physikalisch-chemischer Prozess"@de .
+<https://sns.uba.de/umthes/_00049270> <http://www.w3.org/2004/02/skos/core#prefLabel> "[Allgemeine und übergreifende Begriffe - Umweltnutzung, Technik]"@de .
+<https://sns.uba.de/umthes/_00049270> <http://www.w3.org/2004/02/skos/core#prefLabel> "General Terms [Use of Environmental Resources, Technical Aspects]"@en .
+<https://sns.uba.de/umthes/_00000622> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abgrabung"@de .
+<https://sns.uba.de/umthes/_00000622> <http://www.w3.org/2004/02/skos/core#prefLabel> "excavation"@en .
+<https://sns.uba.de/umthes/_00000014> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abiotischer Abbau"@de .
+<https://sns.uba.de/umthes/_00000014> <http://www.w3.org/2004/02/skos/core#prefLabel> "abiotic degradation"@en .
+<https://sns.uba.de/umthes/_00000023> <http://www.w3.org/2004/02/skos/core#prefLabel> "biodegradation"@en .
+<https://sns.uba.de/umthes/_00000023> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biologischer Abbau"@de .
+<https://sns.uba.de/umthes/_00029842> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwitterung"@de .
+<https://sns.uba.de/umthes/_00021448> <http://www.w3.org/2004/02/skos/core#prefLabel> "pollutant degradation"@en .
+<https://sns.uba.de/umthes/_00021448> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schadstoffabbau"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#inScheme> <https://sns.uba.de/umthes/scheme> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00006491> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "Degradierung"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00000044> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "Abbauprozess"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00028227> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "Zersetzung"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00000042> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "Abbaumechanismus"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#prefLabel> <https://sns.uba.de/umthes/TH_00647416> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#prefLabel> "degradation"@en .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00620899> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "decomposition"@en .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#altLabel> <https://sns.uba.de/umthes/TH_00000055> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#altLabel> "Abbauvorgang"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2008/05/skos-xl#prefLabel> <https://sns.uba.de/umthes/TH_00000013> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abbau"@de .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#broader> <https://sns.uba.de/umthes/_00047435> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#broader> <https://sns.uba.de/umthes/_00049270> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00000622> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00000014> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00000023> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00029842> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#narrower> <https://sns.uba.de/umthes/_00021448> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.eionet.europa.eu/gemet/concept/2040> .
+<https://sns.uba.de/umthes/_00000013> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.eionet.europa.eu/gemet/concept/2014> .

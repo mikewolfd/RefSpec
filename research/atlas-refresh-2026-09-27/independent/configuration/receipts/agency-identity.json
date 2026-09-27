@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ecfr-agencies-roster-2026-08-15",
+    "pinCount": 2,
+    "publisherConcepts": 316,
+    "sourceKeyDerivedConfigPass": true,
+    "resource": "urn:ref:ecfr-agency:administrative-conference-of-the-united-states",
+    "nativePayload": {
+      "name": "Administrative Conference of the United States",
+      "short_name": "ACUS",
+      "display_name": "Administrative Conference of the United States",
+      "sortable_name": "Administrative Conference of the United States",
+      "slug": "administrative-conference-of-the-united-states",
+      "cfr_references": [
+        {
+          "title": 1,
+          "chapter": "III"
+        }
+      ],
+      "childAgencySlugs": [],
+      "parentAgencySlug": null
+    }
+  },
+  {
+    "name": "regulations-gov-agencies-roster-2026-08-16",
+    "pinCount": 1,
+    "publisherConcepts": 331,
+    "sourceKeyDerivedConfigPass": true,
+    "resource": "urn:ref:regulations-gov-agency:ABMC",
+    "nativePayload": {
+      "id": "ABMC",
+      "type": "agencies",
+      "parent": null,
+      "participate": false,
+      "partner": false,
+      "postingGuidelines": null,
+      "name": "American Battle Monuments Commission",
+      "agencyType": "Federal",
+      "links": {
+        "self": "https://api.regulations.gov/v4/agencies/ABMC"
+      }
+    }
+  }
+]

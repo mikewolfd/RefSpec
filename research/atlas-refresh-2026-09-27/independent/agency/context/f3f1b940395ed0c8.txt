@@ -1,0 +1,32 @@
+Lines 145-174
+145: Subscribe
+146: 
+147: The Postal Regulatory Commission (PRC) is an independent agency that has exercised regulatory oversight over the Postal Service since its creation by the Postal Reorganization Act of 1970.
+148: 
+149: While that oversight, initially, consisted primarily of conducting public, on-the-record hearings concerning proposed rate, mail classification or major service changes, and recommending decisions for action by the postal Governors, the Postal Accountability and Enhancement Act (PAEA) enacted on December 20, 2006, significantly strengthened the Commission's authority to serve as a counterbalance to new flexibility granted to the Postal Service in setting postal rates. Under PAEA, the Commission is required to develop and maintain regulations for a modern system of rate regulation, consult with the Postal Service on delivery service standards and performance measures, consult with the Department of State on international postal policies, prevent cross-subsidization or other anticompetitive postal practices, promote transparency and accountability, and adjudicate complaints.
+150: 
+151: The law also assigns new and continuing oversight responsibilities to the PRC, including annual determinations of Postal Service compliance with applicable laws, development of accounting practices and procedures for the Postal Service, review of the Universal Service requirement, and assurance of transparency through periodic reports. New enforcement tools include subpoena power, authority to direct the Postal Service to adjust rates and to take other remedial actions, and levying fines in cases of deliberate noncompliance with applicable postal laws.
+152: 
+153: Agency URL:
+154: http://www.prc.gov
+155: 
+156: Listing ofRecently Published Documents
+157: 
+158: Showing 1-1 of
+159: 
+160: Limited results
+161: since 1994.
+162: 
+163: Customized Market Mail
+164: 
+165: Add to clipboard
+166: 
+167: by the Postal Rate Commission
+168: on 03/25/2003.
+169: 
+170: This document informs the public that the Postal Service has requested an expedited Commission decision on Customized Market Mail (CMM). CMM would allow non-rectangular pieces of Standard Mail, which currently are prohibited because of their shape, to be mailed under certain conditions. The document identifies key deadlines for various filings,...
+171: 
+172: Home
+173: 
+174: Home
+

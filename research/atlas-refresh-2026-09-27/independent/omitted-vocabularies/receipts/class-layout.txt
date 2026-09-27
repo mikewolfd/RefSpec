@@ -1,0 +1,295 @@
+                                 File and Class Type Descriptions
+
+Category   Library                Classification                                 Type Description
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   ALJ Initial Decision/Certification of Initial Decision and Record
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   ALJ Notice
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Certification of Question and Memorandum to the Commission
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Certification of Record
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Certification of Settlement
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Discovery Order
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Findings of Fact
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Order on Transcript Correction
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Order Permitting Interlocutory Appeal
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Procedural Order/Procedural Report
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Protective Order
+Issuance   E, G, O, H, Gen        ALJ Issuance                                   Report to the Commission
+Issuance   E, G, O, H, Gen        Approved Designation                           Approved Designation
+Issuance   E, G, O, H, Gen        FERC Comment                                   Comment on Pending Legislation
+Issuance   E, G, O, H, Gen        FERC Comment                                   Comment on Policies/Procedures Before Government Agencies
+Issuance   E, G, O, H, Gen        FERC Correspondence With Applicant             Compliance Directives
+Issuance   E, G, O, H, Gen        FERC Correspondence With Applicant             Deficiency Letter
+Issuance   E, G, O, H, Gen        FERC Correspondence With Applicant             General Correspondence
+Issuance   E, G, O, H, Gen        FERC Correspondence With Applicant             Request for Additional Information
+Issuance   E, G, O, H, Gen        FERC Correspondence With Government Agencies   FERC Correspondence With Government Agencies
+Issuance   E, G, O, H, Gen        FERC Memo                                      Internal Transmittal Memo
+Issuance   E, G, O, H, Gen        FERC Memo                                      Memo to Commission
+Issuance   E, G, O, H, Gen        FERC Memo                                      Non‐Compliance Memo
+Issuance   E, G, O, H, Gen        FERC Memo                                      Other Internal Memo
+Issuance   E, G, O, H, Gen        FERC Memo                                      Telephone Conversation or Electronic Mail Memo
+Issuance   E, G, O, H, Gen        FERC Report/Study                              Audit Summary
+Issuance   E, G, O, H, Gen        FERC Report/Study                              Environmental Assessment (EA) and Environmental Impact Statement (EIS)
+Issuance   E, G, O, H, Gen        FERC Report/Study                              Environmental Report
+Issuance   E, G, O, H, Gen        FERC Report/Study                              Other FERC Report/Study
+Issuance   E, G, O, H, Gen        FERC Report/Study                              Policy Study
+Issuance   H                      FERC Report/Study                              Compliance Audit Summary
+Issuance   H, G                   FERC Report/Study                              Construction Inspection Report
+Issuance   H                      FERC Report/Study                              EPUI and Public Safety Report
+Issuance   H                      FERC Report/Study                              Dam Safety Inspection Report/Operation Report
+Issuance   H                      FERC Report/Study                              Pre‐license or Pre‐Exemption Inspection Report
+Issuance   H                      FERC Report/Study                              Safety and Design Assessment
+Issuance   H                      FERC Report/Study                              Special Inspection Report
+Issuance   E, G, O, H, Gen        Informational Correspondence                   Informational Correspondence (Miscellaneous Issuances)
+Issuance   E, G, O, H, RM, Gen    Informational Correspondence                   News Release
+Issuance   E, G, O, H, RM, Gen    Informational Correspondence                   Agenda Materials
+Issuance   E, G, O, H, Gen        Notice                                         Formal Notice
+Issuance   E, G, O, H, Gen        Notice                                         Notice of Proposed Rulemaking
+Issuance   E, G, O, H, Gen        Order/Opinion                                  Commission Order/Opinion
+Issuance   E, G, O, H, Gen        Order/Opinion                                  Delegated Order
+Issuance   E, G, O, H, Gen        Order/Opinion                                  Dissent/Concurrence by the Commissioner
+Issuance   E, G, O, H, Gen        Order/Opinion                                  Interpretation and Advisory Opinion
+Issuance   E, G, O, H, Gen        Transcript                                     Approved Transcript Correction
+Issuance   E, G, O, H, Gen        Transcript                                     Conference/Meeting Transcript
+Issuance   E, G, O, H, Gen        Transcript                                     Hearing Transcript
+Issuance   E, G, O, H, Gen        Transcript                                     Commission Open Meeting Transcript
+Issuance   E, G, O, H, RM, Gen    Agreement/Understanding/Contract               Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)
+
+
+
+                                                        January 2025
+                                 File and Class Type Descriptions
+
+Category   Library                Classification                                Type Description
+Issuance   E, G, O, H, RM, Gen    FERC Correspondence with Tribal Governments   FERC Correspondence with Tribal Governments
+Issuance   H, G                   FERC Report/Study                             Scoping Document
+Issuance   H, O, G,               Application/Petition/Request                  Certification of Generation for Tax Credit
+
+
+
+
+                                                          January 2025
+                                  File and Class Type Descriptions
+
+Category    Library                Classification                        Type Description
+Submittal   E, G, O, H, Gen        Affirmation                           Affidavits/Sworn Statement
+Submittal   E, G, O, H, Gen        Affirmation                           Affirmation to Testimony
+Submittal   E, G, O, H, Gen        Affirmation                           Certificate of Service
+Submittal   E, G, O, H, Gen        Agreement/Understanding/Contract      Stipulation
+Submittal   E, G, O, H, Gen        Agreement/Understanding/Contract      Contract/Letter Agreement
+Submittal   E, G, O, H, Gen        Agreement/Understanding/Contract      Settlement Agreement (Stipulation and Agreement)
+Submittal   E, G, O, H, RM, Gen    Agreement/Understanding/Contract      Memoranda of Understanding(MOU)/Memoranda of Agreement (MOA)
+Submittal   E                      Application/Petition/Request          Approval of Interlocking Position
+Submittal   E                      Application/Petition/Request          Compliance Electric Rate Filing
+Submittal   E                      Application/Petition/Request          Compliance Electric Refund Report
+Submittal   E                      Application/Petition/Request          Disposition of Facilities Filing
+Submittal   E                      Application/Petition/Request          Electric Rate Filing
+Submittal   E                      Application/Petition/Request          Electric Transmission Service
+Submittal   E                      Application/Petition/Request          ERO Certification or performance assessment
+Submittal   E                      Application/Petition/Request          Exempt Wholesale Generator Request
+Submittal   E                      Application/Petition/Request          Federal Rate Filing
+Submittal   E                      Application/Petition/Request          Foreign Utility Company Request
+Submittal   E                      Application/Petition/Request          Merger Filing
+Submittal   E                      Application/Petition/Request          Qualifying Facility Application or PURPA Energy Utility Filing
+Submittal   E                      Application/Petition/Request          Regional Advisory Body
+Submittal   E                      Application/Petition/Request          Regional Entities
+Submittal   E                      Application/Petition/Request          Reliability Std. ‐approval, remand, or modification
+Submittal   E                      Application/Petition/Request          Reliability Std. ‐violation, disposition, or penalty
+Submittal   E                      Application/Petition/Request          Rule Change ‐ ERO or Regional Entity
+Submittal   E                      Application/Petition/Request          Securities Issuances
+Submittal   E                      Application/Petition/Request          Standards of Conduct of Public Utility
+Submittal   E                      Application/Petition/Request          Waiver of Electric Regulation
+Submittal   E, G, O                Application/Petition/Request          Financial Audit Refund Report
+Submittal   E, G, O                Application/Petition/Request          Tariff Filing
+Submittal   E, G, O, Gen           Application/Petition/Request          Utility Accounting Request
+Submittal   E, G, O, H, Gen        Application/Petition/Request          Complaints
+Submittal   E, G, O, H, Gen        Application/Petition/Request          Petition for Declaratory Order
+Submittal   E, G, O, H, Gen        Application/Petition/Request          Request for Interpretation
+Submittal   E, G, O, H, Gen        Application/Petition/Request          Waiver of Filing Fee
+Submittal   G                      Application/Petition/Request          Abandonment of Service or Facility
+Submittal   G                      Application/Petition/Request          Application for Participation in Pilot Program
+Submittal   G                      Application/Petition/Request          Application for Presidential Permit for Pipeline Facilities
+Submittal   G                      Application/Petition/Request          Certificate of Public Convenience and Necessity
+Submittal   G                      Application/Petition/Request          Standards of Conduct
+Submittal   G, O                   Application/Petition/Request          Gas and Oil Tariff Filing
+Submittal   G, O                   Application/Petition/Request          Waiver of Oil or Gas Regulation
+Submittal   H                      Application/Petition/Request          Allegation of Non‐Compliance
+Submittal   H                      Application/Petition/Request          Application for Change in Land & Water Rights
+Submittal   H                      Application/Petition/Request          Application for Preliminary Permit
+Submittal   H                      Application/Petition/Request          Application For Transmission Line License
+Submittal   H                      Application/Petition/Request          Application To Amend License or Exemption
+Submittal   H                      Application/Petition/Request          Comprehensive Plan Section 10(a)(2)(A)
+Submittal   H                      Application/Petition/Request          Declaration of Intent
+Submittal   H                      Application/Petition/Request          Determination of Jurisdiction
+
+
+
+
+                                                          January 2025
+                                  File and Class Type Descriptions
+
+Submittal   H                      Application/Petition/Request            Exemption From License ‐ Conduit/5MW
+
+Category    Library                Classification                          Type Description
+Submittal   H                      Application/Petition/Request            License/Relicense Application
+
+Submittal   H                      Application/Petition/Request            Surrender
+
+Submittal   H                      Application/Petition/Request            Transfer of Hydropower License or Exemption
+Submittal   H                      Application/Petition/Request            Waiver Request for Hydro Fees and Charges
+Submittal   H                      Application/Petition/Request            Waiver Request For Hydro Regulation or Terms/Conditions
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Correspondence Concerning Filing Fees and Annual Charges
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Deficiency Letter/Data Response
+Submittal   E, G, O, H, Gen        Applicant Correspondence                General Correspondence
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Request for Delay of Action/Extension of Time
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Response to Inquiry
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Supplemental/Additional Information
+Submittal   E, G, O, H, Gen        Applicant Correspondence                Withdrawal of Application
+Submittal   E, G, O, H, Gen        Briefing/Arguments of Law               Brief
+Submittal   E, G, O, H, Gen        Briefing/Arguments of Law               Findings of Fact/Conclusions of Law
+Submittal   E, G, O, H, Gen        Briefing/Arguments of Law               Statement of Issues or Position
+Submittal   E, G, O, H, Gen        Comments/Protest                        Comment on Filing
+Submittal   E, G, O, H, Gen        Comments/Protest                        Settlement Comment
+Submittal   E, G, O, H, RM, Gen    Comments/Protest                        Rulemaking Comment
+Submittal   E, G, O, H, Gen        Comments/Protest                        Litigation Comment
+Submittal   E, G, O, H, Gen        Court Related Documents                 Court Related Documents
+Submittal   E, G, O, H, Gen        Deposition Document                     Deposition
+Submittal   E, G, O, H, Gen        Deposition Document                     Notice/Motion to Depose
+Submittal   E, G, O, H, Gen        Deposition Document                     Objection to Deposition
+Submittal   E, G, O, H, Gen        Drawing/Maps                            Drawing/Maps
+Submittal   E, G, O, H, Gen        Exhibit                                 Exhibit
+Submittal   E, G, O, H, Gen        Interrogatory/Data Request              Data Request Document
+Submittal   E, G, O, H, Gen        Interrogatory/Data Request              Response to Data Request
+Submittal   E, G, O, H             Intervention                            Motion to Intervene Out of Time
+Submittal   E, G, O, H             Intervention                            Motion/Notice of Intervention
+Submittal   E, G, O, H             Intervention                            Withdrawal of Intervention
+Submittal   E, G, O, H, Gen        Other Submittal                         Congressional Submittal
+Submittal   E, G, O, H, Gen        Other Submittal                         Government Agency Submittal
+Submittal   E, G, O, H, Gen        Other Submittal                         Other External Submittal
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Answer/Response to a Pleading/Motion
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Election
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Motion to Compel Production
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Objection to Motion to Compel Production
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Petition for Review
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Production of Document
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Request for Hearing
+Submittal   E, G, O, H, Gen        Pleading/Motion                         Response to Complaint
+Submittal   E, G, O, H, RM, Gen    Pleading/Motion                         Procedural Motion
+Submittal   E, G, O, H, RM, Gen    Pleading/Motion                         Request for Rehearing or Appeal
+Submittal   E                      Report/Form                             Annual Charges Report
+Submittal   E                      Report/Form                             California PX/ISO Monthly Reports
+Submittal   E                      Report/Form                             Electric Quarterly Report
+Submittal   E                      Report/Form                             FERC Form 719 Public Utility Sellers Report
+Submittal   E                      Report/Form                             FERC‐61 ‐ Narrative Description of Service Company Functions
+
+
+                                                            January 2025
+                              File and Class Type Descriptions
+
+Submittal   E                  Report/Form                       FERC‐730 ‐ Report of Transaction Investment Activity
+Submittal   E                  Report/Form                       Form 1 ‐ Annual Rpt. for Major Electric Utilities, Licensees & Others
+
+
+Category    Library            Classification                    Type Description
+Submittal   E                  Report/Form                       Form 423 ‐ Monthly Rpt. of Cost & Quality of Fuels for Electric Plants
+Submittal   E                  Report/Form                       Form 561 ‐ Annual Report of Interlocking Positions
+Submittal   E                  Report/Form                       Form 566 ‐ Report of Utilitys 20 Largest Purchasers
+Submittal   E                  Report/Form                       Form 580 ‐ Fuel and Energy Purchase Practices
+
+Submittal   E                  Report/Form                       Form 60 ‐ Annual Report by "Centralized" Service Company
+Submittal   E                  Report/Form                       Form 714 ‐ Annual Electric Control and Planning Area Report
+Submittal   E                  Report/Form                       Form 715 ‐ Annual Transmission Planning and Evaluation Report
+Submittal   E                  Report/Form                       Securities Transaction Report
+Submittal   E                  Report/Form                       Power Marketer Quarterly Reports
+Submittal   E, G, H            Report/Form                       Form 3‐Q ‐Quarterly financial report of electric utilities‐ licensees‐ and natural gas companies
+Submittal   E, G, O            Report/Form                       CPA Statement Certifications
+Submittal   E, G, O            Report/Form                       Report of Refund Obligation
+Submittal   E, G, O, H, Gen    Report/Form                       Fee Collection or Validation Forms
+Submittal   E, G, O, H, Gen    Report/Form                       Other Utility Report
+Submittal   G                  Report/Form                       157.207 Annual Construction Report
+Submittal   G                  Report/Form                       Pre-Filing Process
+Submittal   G                  Report/Form                       Pre-Filing Process Progress Report
+Submittal   G                  Report/Form                       2.55 Annual Construction Report
+Submittal   G                  Report/Form                       260.9 Service Interruption Report
+Submittal   G                  Report/Form                       284.11 Annual Construction Report
+Submittal   G                  Report/Form                       284.126 (g) Semi‐Annual Storage Report
+Submittal   G                  Report/Form                       284.288 Annual Pipeline Sales Report
+Submittal   G                  Report/Form                       Annual Charges Report
+Submittal   G                  Report/Form                       Certificate of Compliance Report
+Submittal   G                  Report/Form                       Emergency Gas Report
+Submittal   G                  Report/Form                       Form 11 ‐ Natural Gas Pipeline Company Qtrly. Stmt. of Monthly
+Submittal   G                  Report/Form                       Form 14 ‐ Annual Report for Importers and Exporters of Natural Gas
+Submittal   G                  Report/Form                       Form 2 ‐ Annual Report of Major Natural Gas Companies
+Submittal   G                  Report/Form                       Form 2‐A ‐ Annual Report of Non‐Major Natural Gas Companies
+Submittal   G                  Report/Form                       Form 567 ‐ Annual Report of System Flow Diagrams and Capacity
+Submittal   G                  Report/Form                       Gas Refund Report
+Submittal   G                  Report/Form                       Index of Customer
+Submittal   G                  Report/Form                       Notice/Report of Intent to Proceed with Emergency Procedures
+Submittal   G                  Report/Form                       OCSLA (Outer Continental Shelf Lands Act) Reports
+Submittal   G                  Report/Form                       Peak Day Capacity Report
+Submittal   G                  Report/Form                       Transportation Report
+Submittal   G                  Report/Form                       Discount Rate Report
+Submittal   G, H               Report/Form                       Cultural Resources Inventory ‐ Report/Archaeological Study
+Submittal   G, H               Report/Form                       Environmental Study & Report
+Submittal   G, O               Report/Form                       Form 542 ‐ Purchased Gas Adjustment
+Submittal   G, O               Report/Form                       Form 8 ‐ Underground Gas Storage Report
+Submittal   H                  Report/Form                       Accident Report
+Submittal   H                  Report/Form                       Annual Conveyance Report
+Submittal   H                  Report/Form                       Annual Generation Report
+Submittal   H                  Report/Form                       Annual Headwater Benefits Compliance
+Submittal   H                  Report/Form                       Annual Spill Gate Testing Report
+Submittal   H                  Report/Form                       Annual Water Quality/Minimum Flow
+
+
+                                                January 2025
+                      File and Class Type Descriptions
+
+Submittal   H          Report/Form                            Dam Safety Compliance Report
+Submittal   H          Report/Form                            EAP Testing Report
+Submittal   H          Report/Form                            Emergency Action Plan
+Submittal   H          Report/Form                            Environmental and Recreational Compliance Report
+
+
+Category    Library    Classification                         Type Description
+Submittal   H          Report/Form                            ILP Comments or Study Request
+Submittal   H          Report/Form                            ILP Initial or Updated Study Report
+Submittal   H          Report/Form                            ILP Notice of Request for Formal Dispute Resolution
+Submittal   H          Report/Form                            ILP Preliminary Licensing Proposal
+Submittal   H          Report/Form                            ILP Proposed Study Plan or Revised Study Plan
+Submittal   H          Report/Form                            Other Dam Safety Report
+Submittal   H          Report/Form                            Part 12 Consultant Safety Inspection Reports
+Submittal   H          Report/Form                            Form 80 ‐ Licensed Hydropower Development Recreation Report
+Submittal   E          Report/Form                            Form 1‐F ‐ Annual Report for Non‐Major Public Utilities
+Submittal   H, O, G    Application/Petition/Request           Certification of Generation for Tax Credit
+
+
+
+
+                                               January 2025
+                                  File and Class Type Descriptions
+
+Category    Library                Classification                        Type Description
+Submittal   H                      Report/Form                           Pre‐Application Document
+Submittal   H                      Report/Form                           Preliminary Permit Progress Report
+Submittal   H                      Report/Form                           Progress Report
+Submittal   H                      Report/Form                           Project Operations Compliance Report
+Submittal   H                      Report/Form                           Project Safety Compliance Report
+Submittal   O                      Report/Form                           Form 6 ‐ Annual Report of Oil Pipeline Companies
+Submittal   O                      Report/Form                           Form 6‐Q ‐Quarterly report of oil pipeline companies
+Submittal   E, G, O, H, Gen        Status Report                         Status Report
+Submittal   E, G, O, H, Gen        Subpoena                              Subpoena
+Submittal   E, G, O, H, Gen        Testimony                             Initial Testimony
+Submittal   E, G, O, H, Gen        Testimony                             Response (Rebuttal) Testimony
+Submittal   E, G, O, H, Gen        Top Sheet                             Top Sheet
+Submittal   E                      Application/Petition/Request          ERO Funding
+Submittal   E, G, O, H, RM, Gen    Informational Correspondence          Agenda Materials
+Submittal   E, G, O, H             Litigation Correspondence             Litigation Correspondence
+Submittal   E, G, O, H, RM, Gen    Other Submittal                       Tribal Government Submittal
+Submittal   H, E and RM            Report/Form                           Annual Charges Report
+Submittal   E                      Report/Form                           ERO Reliability or Adequacy assess. or requested info.
+Submittal   G                      Report/Form                           Form 549D‐Quarterly Transportation & Storage Report for Intrastate Natural Gas and Hinshaw Pipe lines
+Submittal   G                      Report/Form                           Form 552 ‐ Annual Report of Natural Gas Transactions
+
+
+
+
+                                                          January 2025
+

@@ -1,0 +1,13 @@
+{
+  "mode": "synthetic-force-partition-via-test-only-threshold",
+  "wholeAndStreamedBytesEqual": true,
+  "mappingPackCount": 4,
+  "mappingPackPaths": [
+    "packs/mappings/eurovoc-lcsh-alignment-20240711/8.nq.zst",
+    "packs/mappings/eurovoc-lcsh-alignment-20240711/2.nq.zst",
+    "packs/mappings/eurovoc-lcsh-alignment-20240711/e.nq.zst",
+    "packs/mappings/eurovoc-lcsh-alignment-20240711/b.nq.zst"
+  ],
+  "productionThreshold": 50000,
+  "limitation": "Writer-path equivalence, not full-artifact size or acceptance."
+}

@@ -1,0 +1,69 @@
+{
+  "checkedAtUtc": "2026-09-27T20:02:08.874272+00:00",
+  "sourceRevision": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "meaning": "Exit zero means historical failure conditions reproduced; this is not an Atlas fidelity pass.",
+  "scripts": {
+    "_probe.py": "92b12496d7ccc72a61a9528963b455845ad5fd5707b09823d6a09179a853a833",
+    "capture_context.py": "75571b6bf085aaa4b9ace0db238b083b54f02f0165eaa2ce3da8c9945ea9e2d7",
+    "check_agency_identity.py": "cdcaeda47f7415b11f5f3b492fcb7297424c22c0d7f228dca25b4b25995301aa",
+    "check_config.py": "bc151b0d9097daf4ff86dec5c8cdf5abc7c72ccb7d718f2448fdfe19b497fbd9",
+    "check_lc_cache.py": "670857040ae27e39bb435db0d7e717e3fb93c17a2fa7357b50c557d0920eccbd",
+    "check_repairs.py": "f627cb1fc359533b27ea27d3120a371604eb1464367b45ee6633480b666ec7a4",
+    "run_all.py": "d02c3bba0bd39e8781d253eae14cab2f2f93d861ad152d205475d336241c46ef"
+  },
+  "results": [
+    {
+      "script": "check_config.py",
+      "exitCode": 0,
+      "stdoutBytes": 751,
+      "stderr": ""
+    },
+    {
+      "script": "check_lc_cache.py",
+      "exitCode": 0,
+      "stdoutBytes": 574,
+      "stderr": ""
+    },
+    {
+      "script": "check_agency_identity.py",
+      "exitCode": 0,
+      "stdoutBytes": 1331,
+      "stderr": ""
+    },
+    {
+      "script": "check_repairs.py",
+      "exitCode": 0,
+      "stdoutBytes": 990,
+      "stderr": ""
+    },
+    {
+      "script": "capture_context.py",
+      "exitCode": 0,
+      "stdoutBytes": 10152,
+      "stderr": ""
+    }
+  ],
+  "originalDiagnosticComparison": [
+    {
+      "file": "config.json",
+      "baselineSha256": "4c7ac0bd95df1c1046854f7b87e193d615f6de68f55688200829a78f0311c8ce",
+      "jsonEqual": true
+    },
+    {
+      "file": "lc-cache.json",
+      "baselineSha256": "66bed8405c485282cb28a52de11c325786105c62d98a809b8364ca09c71779b2",
+      "jsonEqual": true
+    },
+    {
+      "file": "agency-identity.json",
+      "baselineSha256": "141a9dc66a4b9b5361171de59fd171bbb27805b60c56a55ff6c1bd81f5675b5f",
+      "jsonEqual": true
+    },
+    {
+      "file": "repair-probe.json",
+      "baselineSha256": "68b9cc6f2f877876b09baca6510e01e674f12fffe010507dd9eb0cdd5bd7e63c",
+      "jsonEqual": true
+    }
+  ],
+  "allPassed": true
+}

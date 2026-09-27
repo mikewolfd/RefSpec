@@ -1,0 +1,222 @@
+{
+  "inputs": {
+    "ecfr": {
+      "path": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+      "bytes": 98197,
+      "sha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+    },
+    "regs": {
+      "path": "tests/fixtures/regulations_gov_agencies/regulations-gov-agencies-2026-08-16.json",
+      "bytes": 91408,
+      "sha256": "28ab9f5422dd27fc7906ddc696e8e7811b11056822f370bcee7ea18a28418fa2"
+    },
+    "candidates": {
+      "path": "plans/agency-registry-batch-1-candidates.json",
+      "bytes": 191706,
+      "sha256": "6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2"
+    },
+    "decisions": {
+      "path": "plans/agency-registry-batch-1-decisions.json",
+      "bytes": 6744,
+      "sha256": "a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098"
+    },
+    "fercClass": {
+      "path": "output/registry-real-data-sources/ferc-class-types-january-2025.pdf",
+      "bytes": 193934,
+      "sha256": "af632c9c6adbf0e7919d17e018b3a65078d0746bd1ab69a8d9fa65043720d688"
+    },
+    "fercDocket": {
+      "path": "output/registry-real-data-sources/ferc-docket-prefix-june-2025.pdf",
+      "bytes": 282729,
+      "sha256": "c32efae9f51a70b6f955821d2fb3d3025995ef0e17e57bf2d32dfa16c2508dcb"
+    },
+    "ua": {
+      "path": "tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+      "bytes": 148467,
+      "sha256": "b7372fec456cf0c346bd23528ae227913e37f546bb1c03689da19ee6a44cb2a5"
+    },
+    "lc": {
+      "path": "output/registry-real-data-sources/lcsh-externallinks-2026-08-15.nt.zip",
+      "bytes": 239565667,
+      "sha256": "7d279d69c6920b41a579634a84a1b31ff73af764345fe51df3f7c480efeba9d1"
+    }
+  },
+  "specimens": [
+    {
+      "input": "ecfr",
+      "jsonPointer": "/agencies/16/children/1",
+      "parentSlug": "commerce-department",
+      "row": {
+        "name": "Bureau of Economic Analysis",
+        "short_name": "EAB",
+        "display_name": "Bureau of Economic Analysis, Department of Commerce",
+        "sortable_name": "Economic Analysis, Bureau of",
+        "slug": "economic-analysis-bureau",
+        "cfr_references": [
+          {
+            "title": 15,
+            "chapter": "VIII"
+          }
+        ]
+      }
+    },
+    {
+      "input": "regs",
+      "jsonPointer": "/data/0",
+      "row": {
+        "id": "ABMC",
+        "type": "agencies",
+        "attributes": {
+          "parent": null,
+          "participate": false,
+          "partner": false,
+          "postingGuidelines": null,
+          "name": "American Battle Monuments Commission",
+          "agencyType": "Federal"
+        },
+        "links": {
+          "self": "https://api.regulations.gov/v4/agencies/ABMC"
+        }
+      }
+    },
+    {
+      "input": "candidates",
+      "jsonPointer": "/candidates/0",
+      "row": {
+        "candidate_id": "same:fr118:ecfr:economic-analysis-bureau",
+        "closest_rejected_alternative": {
+          "description": "FR 150 (Export Administration Bureau, short name EAB) shares the publisher short name.",
+          "leaves_fr_mentions_unreached": false,
+          "why_rejected": "The two are sibling bureaus under Commerce with different publisher names; the shared short name EAB is a genuine acronym collision, and REF-038 bridges no identity on a short name alone."
+        },
+        "codes_selecting_fr_id_after_bridge": [
+          "EAB"
+        ],
+        "content_digest": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+        "finding": "Found by exact slug equality between the two rosters, which is only the search rule: REF-038 refuses equal strings from different identifier authorities (Federal Register slug versus eCFR slug among them), so the basis submitted is the publisher evidence REF-038 admits instead.",
+        "fr_id_reached_today": false,
+        "group": "A",
+        "proposed_basis": "obviousPublisherNameVariant",
+        "reasoning": "The eCFR name Bureau of Economic Analysis is the Federal Register name Economic Analysis Bureau in ordinary word order, and both publishers place the bureau under the Commerce department.",
+        "regulations_gov_codes": [
+          "EAB"
+        ],
+        "relation": "sameEntityAs",
+        "relation_iri": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+        "source": {
+          "id": 118,
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Commerce Department",
+            "resource_iri": "urn:ref:federal-register-agency:54"
+          },
+          "publisher_name": "Economic Analysis Bureau",
+          "release_key": "federal-register-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:federal-register-agency:118",
+          "roster": "federal-register-agencies",
+          "short_name": "EAB",
+          "slug": "economic-analysis-bureau"
+        },
+        "status": "candidate-pending-owner-adjudication",
+        "target": {
+          "name_field": "name",
+          "parent": {
+            "publisher_name": "Department of Commerce",
+            "resource_iri": "urn:ref:ecfr-agency:commerce-department"
+          },
+          "publisher_name": "Bureau of Economic Analysis",
+          "release_key": "ecfr-agencies-roster-2026-08-15",
+          "resource_iri": "urn:ref:ecfr-agency:economic-analysis-bureau",
+          "roster": "ecfr-agencies",
+          "short_name": "EAB",
+          "slug": "economic-analysis-bureau"
+        }
+      }
+    },
+    {
+      "input": "candidates",
+      "jsonPointer": "/events/8",
+      "row": {
+        "content_digest": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+        "date_basis": "PAEA's approval date; sec. 604 states no separate effective date, and title VI's one effective-date clause, sec. 603(d)(1), governs appropriations, not the redesignation",
+        "effective_date": "2006-12-20",
+        "effective_date_alternatives": [],
+        "event_id": "event:fr564",
+        "event_type": "ChangeEvent",
+        "group": "C",
+        "originals": [
+          {
+            "id": 564,
+            "name_field": "name",
+            "parent": null,
+            "publisher_name": "Postal Rate Commission",
+            "release_key": "federal-register-agencies-roster-2026-08-15",
+            "resource_iri": "urn:ref:federal-register-agency:564",
+            "roster": "federal-register-agencies",
+            "short_name": "PRC",
+            "slug": "postal-rate-commission"
+          }
+        ],
+        "owner_note": "The records are not period-disjoint: the Register files documents headed POSTAL RATE COMMISSION under 409 (measured periods); 564's only document, FR Doc 03-7022, is headed 'POSTAL RATE COMMISSION 39 U.S.C. 3623'; and 564's own roster description is the Postal Regulatory Commission's post-PAEA text.",
+        "owner_question": {
+          "options": [
+            "Succession: 564 became 409 on 2006-12-20, as this event proposes.",
+            "Duplicate record: FR 564 sameEntityAs FR 409, both records of one commission.",
+            "Neither: relate nothing, and the 1 mention under FR 564 stays unreached."
+          ],
+          "question": "Is FR 564 Postal Rate Commission the predecessor of FR 409, or a duplicate record of it?"
+        },
+        "public_records": [
+          {
+            "citation": "Postal Accountability and Enhancement Act, Pub. L. 109-435, 120 Stat. 3198, sec. 604",
+            "kind": "statute",
+            "note": "Sec. 604 redesignates the Postal Rate Commission as the Postal Regulatory Commission throughout titles 39, 5, and 44, and sec. 604(f) deems any other reference to the one a reference to the other; the Act was approved 2006-12-20.",
+            "url": "https://www.congress.gov/109/plaws/publ435/PLAW-109publ435.htm"
+          },
+          {
+            "citation": "Federal Register agency roster description of 409, Postal Regulatory Commission",
+            "kind": "publisherRoster",
+            "note": "The publisher's own roster description: 'The Postal Regulatory Commission is the successor agency to the Postal Rate Commission'.",
+            "url": "https://www.federalregister.gov/agencies/postal-regulatory-commission"
+          },
+          {
+            "citation": "Federal Register agency roster description of 564, Postal Rate Commission",
+            "kind": "publisherRoster",
+            "note": "The record is named Postal Rate Commission, but its description is the Postal Regulatory Commission's post-PAEA text: 'The Postal Regulatory Commission (PRC) is an independent agency that has exercised regulatory oversight over the Postal Service since its creation by the Postal Reorganization Act of 1970 ... the Postal Accountability and Enhancement Act (PAEA) enacted on December 20, 2006, significantly strengthened the Commission's authority'.",
+            "url": "https://www.federalregister.gov/agencies/postal-rate-commission"
+          },
+          {
+            "citation": "68 FR 14435 (2003-03-25), FR Doc 03-7022, Customized Market Mail",
+            "kind": "frDocument",
+            "note": "The Register's only document under FR 564 (the publisher's API); its agency heading reads 'POSTAL RATE COMMISSION 39 U.S.C. 3623', a statute citation fused into the heading.",
+            "url": "https://www.federalregister.gov/documents/2003/03/25/03-7022/customized-market-mail"
+          }
+        ],
+        "rows": [
+          "succ:fr564:fr409"
+        ],
+        "status": "candidate-pending-owner-adjudication"
+      }
+    },
+    {
+      "input": "decisions",
+      "jsonPointer": "/decisions/event:fr564",
+      "row": {
+        "answer": "1",
+        "decided_on": "2026-09-26",
+        "content_digest": "sha256:b6c4a424a1b26378d9223dccecde2d3f8febb54cf25ad571517f71e64aa67b61",
+        "channel": "questionTool"
+      }
+    },
+    {
+      "input": "decisions",
+      "jsonPointer": "/decisions/same:fr118:ecfr:economic-analysis-bureau",
+      "row": {
+        "answer": "yes",
+        "decided_on": "2026-09-26",
+        "content_digest": "sha256:d6337973959b633bc77ab4dbfced7bd54bd171c39f1a9dd0cbc0eafc4b99165e",
+        "channel": "questionTool"
+      }
+    }
+  ]
+}

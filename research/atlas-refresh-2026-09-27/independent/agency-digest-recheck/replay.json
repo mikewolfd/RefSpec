@@ -1,0 +1,14 @@
+{
+  "workingDirectory": "/tmp",
+  "repoSelectedBy": "REFSPEC_REPO",
+  "results": [
+    {
+      "path": "receipt.json",
+      "byteIdentical": true
+    },
+    {
+      "path": "definition-context.json",
+      "byteIdentical": true
+    }
+  ]
+}

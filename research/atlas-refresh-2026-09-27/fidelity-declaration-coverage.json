@@ -1,0 +1,12 @@
+{
+  "producerOnly": [
+    "agency-registry-2026-09-26",
+    "ferc-docket-prefixes",
+    "ferc-document-class-types",
+    "unified-agenda-legal-authority-citation-types"
+  ],
+  "verifierOnly": [],
+  "producerUnits": 131,
+  "declaredFidelityUnits": 127,
+  "note": "Declaration coverage only, not a data-fidelity verdict."
+}

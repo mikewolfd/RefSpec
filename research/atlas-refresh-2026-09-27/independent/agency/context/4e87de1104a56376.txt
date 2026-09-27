@@ -1,0 +1,25 @@
+Lines 475-483
+475: SUMMARY:
+476: 
+477: In accordance with the name change of the Health Care Financing Administration to the “Centers for Medicare & Medicaid Services,” this technical regulation revises all references to “Health Care Financing Administration” and “HCFA” in chapters I, IV and V of title 42 and subtitle A and chapters II and III of title 45 of the Code of Federal Regulations. This regulation also makes conforming changes to the general definitions sections.
+478: 
+479: DATES:
+480: 
+481: Effective date: July 31, 2001.
+482: 
+483: Comment date: Comments will be considered if we receive them at the appropriate address, as provided below, no later than 5 p.m. on October 1, 2001.
+
+Lines 509-520
+509: 
+510: I. Background
+511: 
+512: The Secretary of the Department of Health and Human Services (the Secretary) announced on June 14, 2001, the new name for the Health Care Financing Administration (HCFA): The
+513: 
+514: ( printed page 39451)
+515: 
+516: Centers for Medicare & Medicaid Services (CMS). We are, therefore, revising the references to “Health Care Financing Administration” and “HCFA” in chapters I, IV and, V of title 42 and subtitle A and chapters II and III of title 45 of the Code of Federal Regulations (CFR).
+517: 
+518: II. Provisions of the Final Rule With Comment Period
+519: 
+520: In 42 CFR chapters I, IV, and V and in 45 CFR subtitle A and chapters II and III, all references to “Health Care Financing Administration” are revised to read “Centers for Medicare & Medicaid Services.” All references to “HCFA” are revised to read “CMS.” All references to the possessive “Health Care Financing Administration's” are revised to read “Centers for Medicare & Medicaid Services'.” All references to the possessive “HCFA's” are revised to read “CMS's.”
+

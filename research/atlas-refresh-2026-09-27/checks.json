@@ -1,0 +1,243 @@
+{
+  "sourceCommit": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "baseCommit": "41e2bf9d",
+  "qualification": "incomplete",
+  "checks": [
+    {
+      "log": "contract-dev.log",
+      "start": "start 2026-09-27T18:51:18Z load { 10.48 10.48 9.87 }",
+      "end": "end 2026-09-27T18:52:09Z load { 12.66 11.31 10.22 } exit 0 peak_tree_rss_kib 158160",
+      "exitCode": 0,
+      "peakTreeRssKiB": 158160
+    },
+    {
+      "log": "shape-scale.log",
+      "start": "start 2026-09-27T18:52:39Z load { 9.92 10.78 10.07 }",
+      "end": "end 2026-09-27T18:52:45Z load { 9.61 10.70 10.05 } exit 0 peak_tree_rss_kib 30000",
+      "exitCode": 0,
+      "peakTreeRssKiB": 30000
+    },
+    {
+      "log": "checks.log",
+      "start": "start 2026-09-27T18:52:22Z load { 11.57 11.12 10.17 }",
+      "end": "end 2026-09-27T18:52:37Z load { 9.92 10.78 10.07 } exit 2 peak_tree_rss_kib 228528",
+      "exitCode": 2,
+      "peakTreeRssKiB": 228528
+    },
+    {
+      "log": "checks-final.log",
+      "start": "start 2026-09-27T18:53:21Z load { 7.94 10.18 9.88 }",
+      "end": "end 2026-09-27T18:55:51Z load { 10.92 10.80 10.19 } exit 143 peak_tree_rss_kib 8424912",
+      "exitCode": 143,
+      "peakTreeRssKiB": 8424912
+    },
+    {
+      "log": "test-package-final.log",
+      "start": "start 2026-09-27T18:56:20Z load { 8.86 10.33 10.04 }",
+      "end": "end 2026-09-27T18:59:21Z load { 9.11 10.28 10.10 } exit 0 peak_tree_rss_kib 7653584",
+      "exitCode": 0,
+      "peakTreeRssKiB": 7653584
+    },
+    {
+      "log": "binding-slow.log",
+      "start": "start 2026-09-27T18:59:57Z load { 10.05 10.30 10.11 }",
+      "end": "end 2026-09-27T19:01:45Z load { 9.66 10.00 10.00 } exit 0 peak_tree_rss_kib 453696",
+      "exitCode": 0,
+      "peakTreeRssKiB": 453696
+    },
+    {
+      "log": "umthes-build.log",
+      "start": "start 2026-09-27T18:56:55Z load { 9.88 10.41 10.08 }",
+      "end": "end 2026-09-27T18:57:11Z load { 10.29 10.48 10.11 } exit 0 peak_tree_rss_kib 410960",
+      "exitCode": 0,
+      "peakTreeRssKiB": 410960
+    },
+    {
+      "log": "umthes-validation.log",
+      "start": "start 2026-09-27T18:57:29Z load { 10.55 10.52 10.14 }",
+      "end": "end 2026-09-27T18:57:39Z load { 10.69 10.56 10.15 } exit 0 peak_tree_rss_kib 275424",
+      "exitCode": 0,
+      "peakTreeRssKiB": 275424
+    },
+    {
+      "log": "umthes-source-fidelity.log",
+      "start": "start 2026-09-27T18:57:29Z load { 10.55 10.52 10.14 }",
+      "end": "end 2026-09-27T18:57:34Z load { 10.75 10.57 10.15 } exit 1 peak_tree_rss_kib 30096",
+      "exitCode": 1,
+      "peakTreeRssKiB": 30096
+    },
+    {
+      "log": "agency-build.log",
+      "start": "start 2026-09-27T20:09:28Z load { 7.80 7.81 6.67 }",
+      "end": "end 2026-09-27T20:09:33Z load { 7.42 7.73 6.65 } exit 1 peak_tree_rss_kib 29984",
+      "exitCode": 1,
+      "peakTreeRssKiB": 29984
+    },
+    {
+      "log": "agency-build-with-rosters.log",
+      "start": "start 2026-09-27T20:09:54Z load { 8.07 7.85 6.72 }",
+      "end": "end 2026-09-27T20:10:04Z load { 8.48 7.94 6.76 } exit 1 peak_tree_rss_kib 272944",
+      "exitCode": 1,
+      "peakTreeRssKiB": 272944
+    },
+    {
+      "log": "agency-build-closed-scope.log",
+      "start": "start 2026-09-27T20:11:58Z load { 6.92 7.68 6.81 }",
+      "end": "end 2026-09-27T20:12:03Z load { 7.09 7.71 6.82 } exit 1 peak_tree_rss_kib 30000",
+      "exitCode": 1,
+      "peakTreeRssKiB": 30000
+    },
+    {
+      "log": "agency-build-complete-closure.log",
+      "start": "start 2026-09-27T20:13:17Z load { 6.43 7.37 6.77 }",
+      "end": "end 2026-09-27T20:14:38Z load { 7.91 7.62 6.92 } exit 0 peak_tree_rss_kib 786944",
+      "exitCode": 0,
+      "peakTreeRssKiB": 786944
+    },
+    {
+      "log": "agency-validation.log",
+      "start": "start 2026-09-27T20:14:47Z load { 7.47 7.53 6.89 }",
+      "end": "end 2026-09-27T20:15:58Z load { 7.04 7.41 6.90 } exit 0 peak_tree_rss_kib 1234704",
+      "exitCode": 0,
+      "peakTreeRssKiB": 1234704
+    },
+    {
+      "log": "omitted-vocabularies-build.log",
+      "start": "start 2026-09-27T20:10:19Z load { 7.87 7.82 6.74 }",
+      "end": "end 2026-09-27T20:10:24Z load { 7.81 7.81 6.75 } exit 0 peak_tree_rss_kib 75376",
+      "exitCode": 0,
+      "peakTreeRssKiB": 75376
+    },
+    {
+      "log": "omitted-vocabularies-validation.log",
+      "start": "start 2026-09-27T20:10:43Z load { 7.36 7.71 6.73 }",
+      "end": "end 2026-09-27T20:10:53Z load { 8.75 8.00 6.84 } exit 0 peak_tree_rss_kib 128912",
+      "exitCode": 0,
+      "peakTreeRssKiB": 128912
+    },
+    {
+      "log": "full-build.log",
+      "start": "start 2026-09-27T18:54:43Z load { 11.20 10.70 10.11 }",
+      "guard": "killed at 20:36:28: rss 20499008 KiB over cap",
+      "end": "end 2026-09-27T20:36:38Z load { 6.25 7.25 7.46 } exit 143 peak_tree_rss_kib 20499008",
+      "exitCode": 143,
+      "peakTreeRssKiB": 20499008
+    }
+  ],
+  "umthesStandaloneValidation": {
+    "counts": {
+      "crossRingRelationAssertions": 0,
+      "derivedRelations": 0,
+      "evidenceBindings": 4900,
+      "identifiers": 0,
+      "labels": 17241,
+      "mappingAssertions": 0,
+      "nativeRelationAssertions": 4900,
+      "projectedRelations": 0,
+      "relationAssertions": 4900,
+      "releases": 1,
+      "resources": 3365,
+      "sourceAssignments": 0,
+      "sourceRecords": 3415
+    },
+    "distributionId": "urn:ref:atlas:distribution:3.1-bounded-development:a82ced907fac4272fd47f8c61d9c08bbfb05867b6afc4bdda5aaede08ba8f593",
+    "inferredMappingCount": 0,
+    "quadCount": 262530
+  },
+  "fullBuild": {
+    "status": "capacity_interrupted",
+    "log": "full-build.log",
+    "exitCode": 143,
+    "guard": "18 GiB process-tree RSS; periodically sampled",
+    "observedPeakTreeRssKiB": 20499008,
+    "observedFootprintBytes": 33772217664,
+    "footprintObservedAt": "2026-09-27T20:35:50Z",
+    "lastStatusPhase": "derive-registered-relations",
+    "phaseScope": "also spans source-accounting reconciliation; exact active Python function not established",
+    "completedDistribution": false,
+    "partialOutputRetained": true,
+    "restarted": false,
+    "evidence": "independent/full-capacity/README.md",
+    "retainedPartialBytes": 36630819719,
+    "resumeSupportVerified": false,
+    "sharedHostOtherFullTierJobActiveDuringAttempt": true
+  },
+  "fullIndependentValidation": "not run: no completed full distribution",
+  "fullSourceFidelity": "not passed: bounded independent audit confirms verifier defects; no completed full distribution",
+  "deployment": "not performed",
+  "independentRechecks": {
+    "sourceCommit": "cc507773af7d01a9330b0bdd0dca293b25380147",
+    "configurationEvidence": "independent/configuration/REPORT.md",
+    "provenanceEvidence": "independent/provenance/REPORT.md",
+    "evidenceFilesMatchRetainedChecksums": true,
+    "configurationFailuresReproduced": 3,
+    "missingConstructionUnitsReproduced": [
+      "agency-registry-2026-09-26",
+      "ferc-docket-prefixes",
+      "ferc-document-class-types",
+      "unified-agenda-legal-authority-citation-types"
+    ],
+    "lcSplitCacheWrongSubsetReproduced": true,
+    "umthesRawPayloadIdentityAndRdfParquetDiscrepancies": 0,
+    "umthesTransformedRelationsIndependentlyReconstructed": 50,
+    "stockAuditMissesSelfConsistentRelationMutations": [
+      "responseDigest",
+      "editorialReason"
+    ],
+    "qualificationPassed": false,
+    "meaning": "Independent diagnostic checks reproduced failures and missing coverage; no full source-fidelity pass is claimed.",
+    "validationEvidence": "independent/validation/README.md",
+    "preferredLabelRegressions": "passed",
+    "partitionedWriterEquivalence": "passed on bounded synthetic mapping",
+    "freshUmthesStandaloneValidation": "passed",
+    "omittedVocabularyEvidence": "independent/omitted-vocabularies/REPORT.md",
+    "omittedVocabularyComparison": {
+      "fercDocketPrefixes": "95 rows match retained source",
+      "unifiedAgendaCitationTypes": "3 selected rows match retained source",
+      "fercClassTypes": "234 rows match; 1 explicit PDF text-layer/render difference; emitted reading matches render",
+      "dataMutationsDetected": 10,
+      "staleSourcePinsDetected": 3,
+      "genericFidelityAdapterAdded": false
+    },
+    "agencyEvidence": "independent/agency/REPORT.md",
+    "agencyArtifactComparison": {
+      "differences": 0,
+      "events": 9,
+      "results": 14,
+      "identityBridges": 13,
+      "nonEmissions": 4,
+      "ownerDecisions": 26,
+      "rawRosterEndpointsChecked": 50,
+      "evidenceBindings": 48,
+      "mutationsDetected": 14,
+      "primarySourceOriginals": "output/atlas-refresh-2026-09-27-evidence/agency-primary-sources",
+      "genericFidelityAdapterAdded": false,
+      "limits": [
+        "preserves explicit owner date policy and identity judgments",
+        "uncited FARRA section 1601 plan not acquired"
+      ],
+      "digestRecheck": {
+        "evidence": "independent/agency-digest-recheck/REPORT.md",
+        "status": "passed",
+        "itemDigests": 40,
+        "decisionLinks": 26,
+        "aggregateMatches": true,
+        "wholeReportMatches": true,
+        "mutationControlsPassed": 6,
+        "producerHelpersImported": false
+      }
+    }
+  },
+  "remoteObservation": "deployment-observation.json",
+  "boundedArtifactReceipts": "bounded-artifacts.json",
+  "fullCompactSearchView": "not built or verified: no completed full distribution",
+  "fullPackBounds": "not verified: no completed full manifest",
+  "dev21CompletedTiers": {
+    "sourceCommit": "41e2bf9d8474dca501a11a18e799855f74e70cec",
+    "evidence": "dev21-completed-tiers/",
+    "slowTestsPassed": 416,
+    "fullAtlasProducerTestsPassed": 4,
+    "fullArtifactIndependentlyValidated": false,
+    "otherWorkerCurrentlyRunning": false
+  }
+}

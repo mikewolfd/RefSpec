@@ -1,0 +1,18 @@
+{
+  "checkedAtUtc": "2026-09-27T19:57:34.120239+00:00",
+  "repo": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927",
+  "commit": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "oldManifest": "/Users/mikewolfd/Work/spicy-stack/RefSpec/output/atlas-3.1-full-2026-08-21d/atlas-manifest.json",
+  "oldPackCount": 192,
+  "oldQuadCount": 100915760,
+  "oldLargestContentBytes": 6580663676,
+  "oldLargestPack": "packs/mappings/lcsh-external-links-mappings-2026-08-15.nq.zst",
+  "oldAggregateContentBytes": 24995517100,
+  "limits": {
+    "perPackContentBytes": 4294967296,
+    "perPackTransportBytes": 1073741824,
+    "aggregateContentBytes": 34359738368
+  },
+  "newFullManifestPresent": false,
+  "externalDev21Commit": "41e2bf9d8474dca501a11a18e799855f74e70cec"
+}

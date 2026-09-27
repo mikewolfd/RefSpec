@@ -1,0 +1,101 @@
+{
+  "note": "Selected whole pages rendered from retained source bytes and visually inspected during the diagnostic; full PDFs are not duplicated.",
+  "pages": [
+    {
+      "image": "ferc-class-p4.png",
+      "imageSha256": "1ab31367a6613ea0e92370f91522f28f168bbbfca2ec0baa6d8210f9943dd18c",
+      "source": {
+        "path": "output/registry-real-data-sources/ferc-class-types-january-2025.pdf",
+        "bytes": 193934,
+        "sha256": "af632c9c6adbf0e7919d17e018b3a65078d0746bd1ab69a8d9fa65043720d688"
+      },
+      "pageNumber": 4,
+      "renderCommand": [
+        "pdftoppm",
+        "-f",
+        "4",
+        "-l",
+        "4",
+        "-scale-to",
+        "1800",
+        "-png",
+        "-singlefile",
+        "REPO/output/registry-real-data-sources/ferc-class-types-january-2025.pdf",
+        "OUTPUT/ferc-class-p4"
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "image": "ferc-docket-p6.png",
+      "imageSha256": "8f3ae847f3a2eb50fec3fc9779f3e3d2cfdbd91012cab8009f042fffa77e2818",
+      "source": {
+        "path": "output/registry-real-data-sources/ferc-docket-prefix-june-2025.pdf",
+        "bytes": 282729,
+        "sha256": "c32efae9f51a70b6f955821d2fb3d3025995ef0e17e57bf2d32dfa16c2508dcb"
+      },
+      "pageNumber": 6,
+      "renderCommand": [
+        "pdftoppm",
+        "-f",
+        "6",
+        "-l",
+        "6",
+        "-scale-to",
+        "1800",
+        "-png",
+        "-singlefile",
+        "REPO/output/registry-real-data-sources/ferc-docket-prefix-june-2025.pdf",
+        "OUTPUT/ferc-docket-p6"
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "image": "ua-p18.png",
+      "imageSha256": "a624718aa0d2e706cae64f80513c4a6d27204205cc8edded17d074c8d1053c23",
+      "source": {
+        "path": "tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+        "bytes": 148467,
+        "sha256": "b7372fec456cf0c346bd23528ae227913e37f546bb1c03689da19ee6a44cb2a5"
+      },
+      "pageNumber": 18,
+      "renderCommand": [
+        "pdftoppm",
+        "-f",
+        "18",
+        "-l",
+        "18",
+        "-scale-to",
+        "1800",
+        "-png",
+        "-singlefile",
+        "REPO/tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+        "OUTPUT/ua-p18"
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "image": "ua-p19.png",
+      "imageSha256": "80002b89adcfedd21de1dd4963f8f7834efb828a7508236a9ccaf05c958f9417",
+      "source": {
+        "path": "tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+        "bytes": 148467,
+        "sha256": "b7372fec456cf0c346bd23528ae227913e37f546bb1c03689da19ee6a44cb2a5"
+      },
+      "pageNumber": 19,
+      "renderCommand": [
+        "pdftoppm",
+        "-f",
+        "19",
+        "-l",
+        "19",
+        "-scale-to",
+        "1800",
+        "-png",
+        "-singlefile",
+        "REPO/tests/fixtures/unified_agenda_codes/risc-preamble-202210.pdf",
+        "OUTPUT/ua-p19"
+      ],
+      "visuallyInspected": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+Analysis of sampling python3 (pid 10128) every 10 milliseconds
+Process:         python3.12 [10128]
+Path:            /Users/USER/*/python3.12
+Load Address:    0x100c24000
+Identifier:      python3.12
+Version:         ???
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  uv [10125]
+Target Type:     live task
+
+Date/Time:       2026-09-27 15:23:41.626 -0400
+Launch Time:     2026-09-27 14:54:43.462 -0400
+OS Version:      macOS 26.6 (25G5057c)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         7.7G
+Physical footprint (peak):  8.4G
+Idle exit:                  untracked
+----
+
+Call graph:
+    90 Thread_15236064   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 90 start  (in dyld) + 6992  [0x1820444e4]
+    +   90 Py_BytesMain  (in libpython3.12.dylib) + 36  [0x10243d634]
+    +     90 pymain_main  (in libpython3.12.dylib) + 456  [0x10243d808]
+    +       90 Py_RunMain  (in libpython3.12.dylib) + 1120  [0x10243de04]
+    +         90 pymain_run_file  (in libpython3.12.dylib) + 72  [0x10243fc00]
+    +           90 pymain_run_file_obj  (in libpython3.12.dylib) + 164  [0x1024405a0]
+    +             90 _PyRun_AnyFileObject  (in libpython3.12.dylib) + 80  [0x1024411e4]
+    +               90 _PyRun_SimpleFileObject  (in libpython3.12.dylib) + 268  [0x102449d3c]
+    +                 90 pyrun_file  (in libpython3.12.dylib) + 156  [0x10244a5fc]
+    +                   90 run_mod.llvm.12194046240795210664  (in libpython3.12.dylib) + 284  [0x1023cf75c]
+    +                     90 PyEval_EvalCode  (in libpython3.12.dylib) + 220  [0x1023cf908]
+    +                       90 _PyEval_EvalFrameDefault  (in libpython3.12.dylib) + 175140  [0x10232c184]
+    +                         90 gc_collect  (in libpython3.12.dylib) + 164  [0x10255c104]
+    +                           90 gc_collect_main.llvm.17806924345524726744  (in libpython3.12.dylib) + 336  [0x1022e090c]
+    +                             72 deduce_unreachable  (in libpython3.12.dylib) + 352  [0x1022e1b5c]
+    +                             ! 30 subtype_traverse  (in libpython3.12.dylib) + 20,96,...  [0x102bd1e4c,0x102bd1e98,...]
+    +                             ! 13 subtype_traverse  (in libpython3.12.dylib) + 128  [0x102bd1eb8]
+    +                             ! : 13 visit_reachable  (in libpython3.12.dylib) + 28,0,...  [0x102c00f4c,0x102c00f30,...]
+    +                             ! 7 dict_traverse  (in libpython3.12.dylib) + 84,92,...  [0x102bc71b4,0x102bc71bc,...]
+    +                             ! 7 tupletraverse  (in libpython3.12.dylib) + 56  [0x102bced08]
+    +                             ! : 7 visit_reachable  (in libpython3.12.dylib) + 40,48,...  [0x102c00f58,0x102c00f60,...]
+    +                             ! 7 tupletraverse  (in libpython3.12.dylib) + 72,40  [0x102bced18,0x102bcecf8]
+    +                             ! 6 visit_reachable  (in libpython3.12.dylib) + 32,36  [0x102c00f50,0x102c00f54]
+    +                             ! 1 dict_traverse  (in libpython3.12.dylib) + 100  [0x102bc71c4]
+    +                             ! : 1 visit_reachable  (in libpython3.12.dylib) + 16  [0x102c00f40]
+    +                             ! 1 subtype_traverse  (in libpython3.12.dylib) + 284  [0x102bd1f54]
+    +                             !   1 visit_reachable  (in libpython3.12.dylib) + 100  [0x102c00f94]
+    +                             !     1 type_is_gc  (in libpython3.12.dylib) + 0  [0x102bcfbfc]
+    +                             10 deduce_unreachable  (in libpython3.12.dylib) + 304,332,...  [0x1022e1b2c,0x1022e1b48,...]
+    +                             5 subtype_traverse  (in libpython3.12.dylib) + 304,308  [0x102bd1f68,0x102bd1f6c]
+    +                             2 list_traverse  (in libpython3.12.dylib) + 92  [0x102bc54d8]
+    +                             1 tupletraverse  (in libpython3.12.dylib) + 84  [0x102bced24]
+    90 Thread_15236084
+    + 90 start_wqthread  (in libsystem_pthread.dylib) + 8  [0x18240ac10]
+    +   90 _pthread_wqthread  (in libsystem_pthread.dylib) + 368  [0x18240bf0c]
+    +     90 __workq_kernreturn  (in libsystem_kernel.dylib) + 8  [0x1823cd9f0]
+    90 Thread_15236121

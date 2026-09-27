@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "inputs": [
+    {
+      "path": "plans/agency-registry-batch-1-candidates.json",
+      "bytes": 191706,
+      "sha256": "6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2"
+    },
+    {
+      "path": "plans/agency-registry-batch-1-decisions.json",
+      "bytes": 6744,
+      "sha256": "a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098"
+    }
+  ],
+  "scope": "Nine adopted events only; checked without edits to checkout or artifact."
+}

@@ -1,0 +1,56 @@
+                                                                                      File and Class Type Descriptions 
+ 
+                                                                                                                      January 2025 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lines 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Category Library Classification Type Description 
+Submittal H Report/Form Pre‐Application  Document 
+Submittal H Report/Form Preliminary Permit  Progress  Report 
+Submittal H Report/Form Progress Report 
+Submittal H Report/Form Project Operations Compliance Report 
+Submittal H Report/Form Project Safety Compliance Report 
+Submittal O Report/Form Form 6 ‐ Annual Report of Oil Pipeline Companies 
+Submittal O Report/Form Form 6‐Q ‐Quarterly report of oil pipeline companies 
+Submittal E, G, O, H, Gen Status Report Status Report 
+Submittal E, G, O, H, Gen Subpoena Subpoena 
+Submittal E, G, O, H, Gen Testimony Initial Testimony 
+Submittal E, G, O, H, Gen Testimony Response (Rebuttal)  Testimony 
+Submittal E, G, O, H, Gen Top Sheet Top Sheet 
+Submittal E Application/Petition/Request ERO Funding 
+Submittal E, G, O, H, RM, Gen Informational  Correspondence Agenda Materials 
+Submittal E, G, O, H Litigation Correspondence Litigation Correspondence 
+Submittal E, G, O, H, RM, Gen Other Submittal Tribal Government  Submittal 
+Submittal H, E and RM Report/Form Annual Charges Report 
+Submittal E Report/Form ERO Reliability or Adequacy assess. or requested  info. 
+Submittal G Report/Form Form 549D‐Quarterly  Transportation  & Storage Report for Intrastate Natural Gas and Hinshaw Pipe 
+Submittal G Report/Form Form 552 ‐ Annual Report of Natural Gas Transactions 
+ 

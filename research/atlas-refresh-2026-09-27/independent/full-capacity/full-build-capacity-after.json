@@ -1,0 +1,28 @@
+{
+  "utc": "2026-09-27T20:36:51.132328+00:00",
+  "pressure": {
+    "exit": 0,
+    "stdout": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 79%\n",
+    "stderr": ""
+  },
+  "pressureLevel": {
+    "exit": 0,
+    "stdout": "kern.memorystatus_vm_pressure_level: 1\n",
+    "stderr": ""
+  },
+  "swap": {
+    "exit": 0,
+    "stdout": "vm.swapusage: total = 18432.00M  used = 16543.81M  free = 1888.19M  (encrypted)\n",
+    "stderr": ""
+  },
+  "rss": {
+    "exit": 0,
+    "stdout": "  PID  ELAPSED      TIME  %CPU    RSS\n 2095 01:52:05 107:08.09  17.4 6141904\n",
+    "stderr": ""
+  },
+  "footprint": {
+    "exit": 0,
+    "stdout": "================================================================================\npython [2095]: 64-bit    Footprint: 12430350968 B (16384 bytes per page)\n================================================================================\n\nAuxiliary data:\n    phys_footprint: 12430383736 B\n    phys_footprint_peak: 46266894464 B\n\n",
+    "stderr": "footprint: Unable to find pid for process matching '10128'\n"
+  }
+}

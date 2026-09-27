@@ -1,0 +1,1171 @@
+{
+  "observedAtUtc": "2026-09-27T20:39:46.678436+00:00",
+  "root": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27",
+  "fileCount": 229,
+  "totalBytes": 36630819719,
+  "groups": {
+    "otherSpool": {
+      "files": 7,
+      "bytes": 11775755940
+    },
+    "rdfSpool": {
+      "files": 222,
+      "bytes": 24855063779
+    }
+  },
+  "requiredCompletedOutputsPresent": {
+    "distribution/atlas-manifest.json": false,
+    "distribution/atlas-construction-summary.json": false,
+    "parquet-view/view-manifest.json": false,
+    "search-view/search-view-manifest.json": false
+  },
+  "retainedWithoutCleanup": true,
+  "resumeCapabilityVerified": false,
+  "files": [
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/EvidenceBinding.jsonl",
+      "byteLength": 2601162155,
+      "mtimeUtc": "2026-09-27T20:23:00.043975+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/Identifier.jsonl",
+      "byteLength": 2374310,
+      "mtimeUtc": "2026-09-27T19:26:46.870110+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/Label.jsonl",
+      "byteLength": 1636656477,
+      "mtimeUtc": "2026-09-27T19:43:07.254020+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/Release.jsonl",
+      "byteLength": 185934,
+      "mtimeUtc": "2026-09-27T20:22:59.077460+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/Resource.jsonl",
+      "byteLength": 998321788,
+      "mtimeUtc": "2026-09-27T19:43:07.255042+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/SourceRecord.jsonl",
+      "byteLength": 4171080501,
+      "mtimeUtc": "2026-09-27T20:23:00.043817+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/compact/Statement.jsonl",
+      "byteLength": 2365974775,
+      "mtimeUtc": "2026-09-27T20:23:00.044043+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/agency-registry-2026-09-26.unsorted.nq",
+      "byteLength": 358346,
+      "mtimeUtc": "2026-09-27T20:22:50.690475+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/billstatus-action-codes.unsorted.nq",
+      "byteLength": 209188,
+      "mtimeUtc": "2026-09-27T19:20:32.472270+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/billstatus-bill-types.unsorted.nq",
+      "byteLength": 47998,
+      "mtimeUtc": "2026-09-27T19:20:38.618324+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/billstatus-summary-version-codes.unsorted.nq",
+      "byteLength": 572944,
+      "mtimeUtc": "2026-09-27T19:20:44.782820+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/catalog.unsorted.nq",
+      "byteLength": 368943,
+      "mtimeUtc": "2026-09-27T20:23:11.907759+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/census-data-flags.unsorted.nq",
+      "byteLength": 100929,
+      "mtimeUtc": "2026-09-27T19:20:50.743300+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/census-function-items.unsorted.nq",
+      "byteLength": 195656,
+      "mtimeUtc": "2026-09-27T19:20:56.675630+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/census-tiger-geoid-structure.unsorted.nq",
+      "byteLength": 69072,
+      "mtimeUtc": "2026-09-27T19:21:02.626329+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/cfr-subject-index-parts-2026-08-20.unsorted.nq",
+      "byteLength": 227037145,
+      "mtimeUtc": "2026-09-27T19:28:54.345116+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/courtlistener-jurisdictions-2026-08-03.unsorted.nq",
+      "byteLength": 21383757,
+      "mtimeUtc": "2026-09-27T19:20:05.069239+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/crs-legislative-entities.unsorted.nq",
+      "byteLength": 5842764,
+      "mtimeUtc": "2026-09-27T19:06:31.850169+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/crs-legislative-subjects.unsorted.nq",
+      "byteLength": 7109592,
+      "mtimeUtc": "2026-09-27T19:06:38.134599+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/crs-policy-areas.unsorted.nq",
+      "byteLength": 431234,
+      "mtimeUtc": "2026-09-27T19:06:43.406466+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/doe-osti-semantic-thesaurus-2020.unsorted.nq",
+      "byteLength": 810997783,
+      "mtimeUtc": "2026-09-27T19:08:30.657063+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ecfr-agencies-roster-2026-08-15.unsorted.nq",
+      "byteLength": 5612482,
+      "mtimeUtc": "2026-09-27T19:28:32.794920+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ecfr-cfr-titles.unsorted.nq",
+      "byteLength": 281261,
+      "mtimeUtc": "2026-09-27T19:21:08.709730+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/elsst-r6.unsorted.nq",
+      "byteLength": 91080209,
+      "mtimeUtc": "2026-09-27T19:08:43.798792+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-4-24.unsorted.nq",
+      "byteLength": 192857328,
+      "mtimeUtc": "2026-09-27T19:09:04.950591+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-domains-4-24.unsorted.nq",
+      "byteLength": 104101,
+      "mtimeUtc": "2026-09-27T19:09:10.320933+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-gemet-alignment-20201218.unsorted.nq",
+      "byteLength": 15851248,
+      "mtimeUtc": "2026-09-27T20:21:42.779288+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-lcsh-alignment-20240711.unsorted.nq",
+      "byteLength": 16687762,
+      "mtimeUtc": "2026-09-27T19:43:18.476102+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-mesh-alignment-20171215.unsorted.nq",
+      "byteLength": 41804,
+      "mtimeUtc": "2026-09-27T20:21:51.078847+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/eurovoc-microthesauri-4-24.unsorted.nq",
+      "byteLength": 44265070,
+      "mtimeUtc": "2026-09-27T19:09:18.857461+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fac-api-field-dictionary-2026-08-03.unsorted.nq",
+      "byteLength": 865420,
+      "mtimeUtc": "2026-09-27T19:26:34.045487+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-bulk-external-links-delta-2026-07-27.unsorted.nq",
+      "byteLength": 72832,
+      "mtimeUtc": "2026-09-27T20:21:26.015290+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-bulk-see-also-endpoints-2026-07-27.unsorted.nq",
+      "byteLength": 240762993,
+      "mtimeUtc": "2026-09-27T19:42:56.305835+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-0.unsorted.nq",
+      "byteLength": 214848335,
+      "mtimeUtc": "2026-09-27T19:54:26.439424+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-1.unsorted.nq",
+      "byteLength": 213890471,
+      "mtimeUtc": "2026-09-27T19:54:26.435733+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-2.unsorted.nq",
+      "byteLength": 214701965,
+      "mtimeUtc": "2026-09-27T19:54:26.451466+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-3.unsorted.nq",
+      "byteLength": 215519395,
+      "mtimeUtc": "2026-09-27T19:54:26.447528+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-4.unsorted.nq",
+      "byteLength": 215898263,
+      "mtimeUtc": "2026-09-27T19:54:26.442554+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-5.unsorted.nq",
+      "byteLength": 213955665,
+      "mtimeUtc": "2026-09-27T19:54:26.442598+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-6.unsorted.nq",
+      "byteLength": 216117267,
+      "mtimeUtc": "2026-09-27T19:54:26.440912+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-7.unsorted.nq",
+      "byteLength": 215617219,
+      "mtimeUtc": "2026-09-27T19:54:26.438435+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-8.unsorted.nq",
+      "byteLength": 215296797,
+      "mtimeUtc": "2026-09-27T19:54:26.447562+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-9.unsorted.nq",
+      "byteLength": 214403161,
+      "mtimeUtc": "2026-09-27T19:54:26.449205+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-a.unsorted.nq",
+      "byteLength": 216072464,
+      "mtimeUtc": "2026-09-27T19:54:26.447498+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-b.unsorted.nq",
+      "byteLength": 213925642,
+      "mtimeUtc": "2026-09-27T19:54:26.449266+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-c.unsorted.nq",
+      "byteLength": 216363675,
+      "mtimeUtc": "2026-09-27T19:54:26.447327+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-d.unsorted.nq",
+      "byteLength": 214655313,
+      "mtimeUtc": "2026-09-27T19:54:26.447444+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-e.unsorted.nq",
+      "byteLength": 216732044,
+      "mtimeUtc": "2026-09-27T19:54:26.442632+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-lcsh-adopted-2026-08-15-f.unsorted.nq",
+      "byteLength": 215025701,
+      "mtimeUtc": "2026-09-27T19:54:26.440167+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-0.unsorted.nq",
+      "byteLength": 238908575,
+      "mtimeUtc": "2026-09-27T19:19:34.388698+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-1.unsorted.nq",
+      "byteLength": 238670576,
+      "mtimeUtc": "2026-09-27T19:19:34.389088+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-2.unsorted.nq",
+      "byteLength": 238813749,
+      "mtimeUtc": "2026-09-27T19:19:34.388590+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-3.unsorted.nq",
+      "byteLength": 238961862,
+      "mtimeUtc": "2026-09-27T19:19:34.389261+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-4.unsorted.nq",
+      "byteLength": 238849257,
+      "mtimeUtc": "2026-09-27T19:19:34.389171+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-5.unsorted.nq",
+      "byteLength": 238818487,
+      "mtimeUtc": "2026-09-27T19:19:34.388728+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-6.unsorted.nq",
+      "byteLength": 239293641,
+      "mtimeUtc": "2026-09-27T19:19:34.389200+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-7.unsorted.nq",
+      "byteLength": 336844481,
+      "mtimeUtc": "2026-09-27T19:19:34.389386+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-8.unsorted.nq",
+      "byteLength": 239704363,
+      "mtimeUtc": "2026-09-27T19:19:34.388627+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-9.unsorted.nq",
+      "byteLength": 238976308,
+      "mtimeUtc": "2026-09-27T19:19:34.388660+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-a.unsorted.nq",
+      "byteLength": 238394497,
+      "mtimeUtc": "2026-09-27T19:19:34.389230+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-b.unsorted.nq",
+      "byteLength": 237799563,
+      "mtimeUtc": "2026-09-27T19:19:34.388758+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-c.unsorted.nq",
+      "byteLength": 239338901,
+      "mtimeUtc": "2026-09-27T19:19:34.389116+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-d.unsorted.nq",
+      "byteLength": 239114879,
+      "mtimeUtc": "2026-09-27T19:19:34.389290+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-e.unsorted.nq",
+      "byteLength": 238584096,
+      "mtimeUtc": "2026-09-27T19:19:34.389145+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fast-topical-current-f.unsorted.nq",
+      "byteLength": 239869894,
+      "mtimeUtc": "2026-09-27T19:19:34.388510+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fcc-bureaus-offices-roster-2026-08-15.unsorted.nq",
+      "byteLength": 103426,
+      "mtimeUtc": "2026-09-27T19:27:43.829883+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fec-committee-designation.unsorted.nq",
+      "byteLength": 37303,
+      "mtimeUtc": "2026-09-27T19:21:14.716029+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fec-committee-type.unsorted.nq",
+      "byteLength": 99300,
+      "mtimeUtc": "2026-09-27T19:21:20.624433+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fec-filing-frequency.unsorted.nq",
+      "byteLength": 36587,
+      "mtimeUtc": "2026-09-27T19:21:26.418041+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fec-organization-type.unsorted.nq",
+      "byteLength": 36783,
+      "mtimeUtc": "2026-09-27T19:21:32.519160+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/fec-party.unsorted.nq",
+      "byteLength": 520657,
+      "mtimeUtc": "2026-09-27T19:21:38.604310+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-hierarchy-orgs-complete-2026-08-15.unsorted.nq",
+      "byteLength": 494393314,
+      "mtimeUtc": "2026-09-27T19:28:26.865686+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-register-agencies-roster-2026-08-15.unsorted.nq",
+      "byteLength": 5062925,
+      "mtimeUtc": "2026-09-27T19:27:38.304831+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-register-api-topics-2026-08-03.unsorted.nq",
+      "byteLength": 14270942,
+      "mtimeUtc": "2026-09-27T19:20:12.015239+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-register-documented-document-types-2026-08-15.unsorted.nq",
+      "byteLength": 21230,
+      "mtimeUtc": "2026-09-27T19:27:26.521202+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-register-documented-presidential-document-types-2026-08-15.unsorted.nq",
+      "byteLength": 36652,
+      "mtimeUtc": "2026-09-27T19:27:32.052731+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/federal-register-thesaurus-2025.unsorted.nq",
+      "byteLength": 12800106,
+      "mtimeUtc": "2026-09-27T19:09:25.115925+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ferc-docket-prefixes.unsorted.nq",
+      "byteLength": 525078,
+      "mtimeUtc": "2026-09-27T19:21:44.592111+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ferc-document-class-types.unsorted.nq",
+      "byteLength": 1209449,
+      "mtimeUtc": "2026-09-27T19:21:50.528720+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ferc-sectors.unsorted.nq",
+      "byteLength": 31335,
+      "mtimeUtc": "2026-09-27T19:21:56.340742+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/ferc-security-levels.unsorted.nq",
+      "byteLength": 22345,
+      "mtimeUtc": "2026-09-27T19:22:02.283195+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gao-cra-priority-of-regulation.unsorted.nq",
+      "byteLength": 30165,
+      "mtimeUtc": "2026-09-27T19:22:08.207621+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gao-cra-rule-types.unsorted.nq",
+      "byteLength": 29441,
+      "mtimeUtc": "2026-09-27T19:22:14.047077+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gao-published-topics-capture-subset-2026-09-01.unsorted.nq",
+      "byteLength": 169156,
+      "mtimeUtc": "2026-09-27T19:29:05.725118+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gcmd-science-keywords-24-4.unsorted.nq",
+      "byteLength": 22463178,
+      "mtimeUtc": "2026-09-27T19:09:32.135374+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gemet-4-2-3.unsorted.nq",
+      "byteLength": 200867718,
+      "mtimeUtc": "2026-09-27T19:09:53.204725+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gemet-eurovoc-alignments-4-2-3.unsorted.nq",
+      "byteLength": 14549326,
+      "mtimeUtc": "2026-09-27T20:22:01.311697+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gemet-umthes-alignments-4-2-3.unsorted.nq",
+      "byteLength": 27021759,
+      "mtimeUtc": "2026-09-27T20:22:13.567754+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/govinfo-collections.unsorted.nq",
+      "byteLength": 235227,
+      "mtimeUtc": "2026-09-27T19:22:19.736656+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/grants-gov-eligibilities.unsorted.nq",
+      "byteLength": 98970,
+      "mtimeUtc": "2026-09-27T19:22:25.447695+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/grants-gov-funding-categories.unsorted.nq",
+      "byteLength": 150419,
+      "mtimeUtc": "2026-09-27T19:22:31.141031+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gsdm-data-dictionary-domain-values-2026-08-03.unsorted.nq",
+      "byteLength": 5172556,
+      "mtimeUtc": "2026-09-27T19:27:04.156640+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/gsdm-online-data-dictionary-2026-08-03.unsorted.nq",
+      "byteLength": 2768596,
+      "mtimeUtc": "2026-09-27T19:26:58.128096+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/icpsr-subject-thesaurus.unsorted.nq",
+      "byteLength": 162387406,
+      "mtimeUtc": "2026-09-27T19:07:04.211842+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-agrovoc-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 5853051,
+      "mtimeUtc": "2026-09-27T19:37:52.323798+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-bncf-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 90263072,
+      "mtimeUtc": "2026-09-27T19:38:06.735862+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-bne-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 225414093,
+      "mtimeUtc": "2026-09-27T19:38:33.592423+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-0.unsorted.nq",
+      "byteLength": 31157072,
+      "mtimeUtc": "2026-09-27T19:39:32.727972+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-1.unsorted.nq",
+      "byteLength": 31070225,
+      "mtimeUtc": "2026-09-27T19:39:32.727472+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-2.unsorted.nq",
+      "byteLength": 30323491,
+      "mtimeUtc": "2026-09-27T19:39:32.729083+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-3.unsorted.nq",
+      "byteLength": 30780801,
+      "mtimeUtc": "2026-09-27T19:39:32.728426+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-4.unsorted.nq",
+      "byteLength": 30936156,
+      "mtimeUtc": "2026-09-27T19:39:32.727499+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-5.unsorted.nq",
+      "byteLength": 31084724,
+      "mtimeUtc": "2026-09-27T19:39:32.727857+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-6.unsorted.nq",
+      "byteLength": 30686245,
+      "mtimeUtc": "2026-09-27T19:39:32.727520+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-7.unsorted.nq",
+      "byteLength": 30759794,
+      "mtimeUtc": "2026-09-27T19:39:32.727448+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-8.unsorted.nq",
+      "byteLength": 31064411,
+      "mtimeUtc": "2026-09-27T19:39:32.727902+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-9.unsorted.nq",
+      "byteLength": 30554164,
+      "mtimeUtc": "2026-09-27T19:39:32.728182+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-a.unsorted.nq",
+      "byteLength": 30914379,
+      "mtimeUtc": "2026-09-27T19:39:32.727947+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-b.unsorted.nq",
+      "byteLength": 30592980,
+      "mtimeUtc": "2026-09-27T19:39:32.728600+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-c.unsorted.nq",
+      "byteLength": 48066135,
+      "mtimeUtc": "2026-09-27T19:39:33.437488+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-d.unsorted.nq",
+      "byteLength": 31093266,
+      "mtimeUtc": "2026-09-27T19:39:32.727883+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-e.unsorted.nq",
+      "byteLength": 30608715,
+      "mtimeUtc": "2026-09-27T19:39:32.727999+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-fast-endpoints-2026-08-15-f.unsorted.nq",
+      "byteLength": 30345654,
+      "mtimeUtc": "2026-09-27T19:39:32.728399+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-getty-aat-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 4971420,
+      "mtimeUtc": "2026-09-27T19:39:42.416769+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-getty-ulan-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 665499,
+      "mtimeUtc": "2026-09-27T19:39:49.287807+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-gnd-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 220776282,
+      "mtimeUtc": "2026-09-27T19:40:15.321864+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-homosaurus-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 3202120,
+      "mtimeUtc": "2026-09-27T19:40:23.050312+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-nalt-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 75798875,
+      "mtimeUtc": "2026-09-27T19:40:36.419083+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-ndl-names-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 115172,
+      "mtimeUtc": "2026-09-27T19:40:43.726950+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-ndl-subjects-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 75597079,
+      "mtimeUtc": "2026-09-27T19:40:56.995307+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-periodo-lcsh-periods-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 7981019,
+      "mtimeUtc": "2026-09-27T19:41:04.639323+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-0.unsorted.nq",
+      "byteLength": 27240335,
+      "mtimeUtc": "2026-09-27T19:41:57.307501+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-1.unsorted.nq",
+      "byteLength": 27172697,
+      "mtimeUtc": "2026-09-27T19:41:57.307438+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-2.unsorted.nq",
+      "byteLength": 26920816,
+      "mtimeUtc": "2026-09-27T19:41:57.307543+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-3.unsorted.nq",
+      "byteLength": 26783774,
+      "mtimeUtc": "2026-09-27T19:41:57.307621+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-4.unsorted.nq",
+      "byteLength": 42278269,
+      "mtimeUtc": "2026-09-27T19:41:57.911823+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-5.unsorted.nq",
+      "byteLength": 27138111,
+      "mtimeUtc": "2026-09-27T19:41:57.307562+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-6.unsorted.nq",
+      "byteLength": 26990769,
+      "mtimeUtc": "2026-09-27T19:41:57.307520+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-7.unsorted.nq",
+      "byteLength": 27070904,
+      "mtimeUtc": "2026-09-27T19:41:57.307481+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-8.unsorted.nq",
+      "byteLength": 26918394,
+      "mtimeUtc": "2026-09-27T19:41:57.303205+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-9.unsorted.nq",
+      "byteLength": 27384049,
+      "mtimeUtc": "2026-09-27T19:41:57.303228+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-a.unsorted.nq",
+      "byteLength": 26860054,
+      "mtimeUtc": "2026-09-27T19:41:57.307345+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-b.unsorted.nq",
+      "byteLength": 26778871,
+      "mtimeUtc": "2026-09-27T19:41:57.307395+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-c.unsorted.nq",
+      "byteLength": 27062422,
+      "mtimeUtc": "2026-09-27T19:41:57.307462+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-d.unsorted.nq",
+      "byteLength": 27229735,
+      "mtimeUtc": "2026-09-27T19:41:57.307417+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-e.unsorted.nq",
+      "byteLength": 27163741,
+      "mtimeUtc": "2026-09-27T19:41:57.307297+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-rameau-endpoints-2026-08-15-f.unsorted.nq",
+      "byteLength": 27035661,
+      "mtimeUtc": "2026-09-27T19:41:57.307372+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-wikidata-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 123265036,
+      "mtimeUtc": "2026-09-27T19:42:16.208768+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lc-external-yso-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 76069590,
+      "mtimeUtc": "2026-09-27T19:42:29.587253+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-0.unsorted.nq",
+      "byteLength": 410658409,
+      "mtimeUtc": "2026-09-27T20:21:08.241609+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-1.unsorted.nq",
+      "byteLength": 412088569,
+      "mtimeUtc": "2026-09-27T20:21:08.241647+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-2.unsorted.nq",
+      "byteLength": 410831857,
+      "mtimeUtc": "2026-09-27T20:21:08.241527+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-3.unsorted.nq",
+      "byteLength": 412623597,
+      "mtimeUtc": "2026-09-27T20:21:08.234843+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-4.unsorted.nq",
+      "byteLength": 411576178,
+      "mtimeUtc": "2026-09-27T20:21:08.241234+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-5.unsorted.nq",
+      "byteLength": 412447535,
+      "mtimeUtc": "2026-09-27T20:21:08.229917+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-6.unsorted.nq",
+      "byteLength": 409656288,
+      "mtimeUtc": "2026-09-27T20:21:08.238169+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-7.unsorted.nq",
+      "byteLength": 411573784,
+      "mtimeUtc": "2026-09-27T20:21:08.236357+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-8.unsorted.nq",
+      "byteLength": 411176456,
+      "mtimeUtc": "2026-09-27T20:21:08.240813+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-9.unsorted.nq",
+      "byteLength": 411307756,
+      "mtimeUtc": "2026-09-27T20:21:08.240555+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-a.unsorted.nq",
+      "byteLength": 409264321,
+      "mtimeUtc": "2026-09-27T20:21:08.241196+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-b.unsorted.nq",
+      "byteLength": 408812919,
+      "mtimeUtc": "2026-09-27T20:21:08.225565+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-c.unsorted.nq",
+      "byteLength": 410924392,
+      "mtimeUtc": "2026-09-27T20:21:08.241683+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-d.unsorted.nq",
+      "byteLength": 412448170,
+      "mtimeUtc": "2026-09-27T20:21:08.241486+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-e.unsorted.nq",
+      "byteLength": 412291445,
+      "mtimeUtc": "2026-09-27T20:21:08.241568+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-external-links-mappings-2026-08-15-f.unsorted.nq",
+      "byteLength": 412982000,
+      "mtimeUtc": "2026-09-27T20:21:08.234926+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-0.unsorted.nq",
+      "byteLength": 292709640,
+      "mtimeUtc": "2026-09-27T19:37:36.103888+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-1.unsorted.nq",
+      "byteLength": 292186171,
+      "mtimeUtc": "2026-09-27T19:37:36.106258+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-2.unsorted.nq",
+      "byteLength": 291720495,
+      "mtimeUtc": "2026-09-27T19:37:36.103860+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-3.unsorted.nq",
+      "byteLength": 292375925,
+      "mtimeUtc": "2026-09-27T19:37:36.103793+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-4.unsorted.nq",
+      "byteLength": 292966824,
+      "mtimeUtc": "2026-09-27T19:37:36.101232+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-5.unsorted.nq",
+      "byteLength": 293596198,
+      "mtimeUtc": "2026-09-27T19:37:36.101257+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-6.unsorted.nq",
+      "byteLength": 293329480,
+      "mtimeUtc": "2026-09-27T19:37:36.103961+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-7.unsorted.nq",
+      "byteLength": 291870660,
+      "mtimeUtc": "2026-09-27T19:37:36.101202+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-8.unsorted.nq",
+      "byteLength": 294577092,
+      "mtimeUtc": "2026-09-27T19:37:36.103916+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-9.unsorted.nq",
+      "byteLength": 291962180,
+      "mtimeUtc": "2026-09-27T19:37:36.103941+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-a.unsorted.nq",
+      "byteLength": 293047264,
+      "mtimeUtc": "2026-09-27T19:37:36.106638+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-b.unsorted.nq",
+      "byteLength": 391027781,
+      "mtimeUtc": "2026-09-27T19:37:36.101306+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-c.unsorted.nq",
+      "byteLength": 293687616,
+      "mtimeUtc": "2026-09-27T19:37:36.101282+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-d.unsorted.nq",
+      "byteLength": 293476772,
+      "mtimeUtc": "2026-09-27T19:37:36.101353+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-e.unsorted.nq",
+      "byteLength": 292480461,
+      "mtimeUtc": "2026-09-27T19:37:36.101330+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lcsh-subjects-consolidated-2026-08-06-f.unsorted.nq",
+      "byteLength": 292409927,
+      "mtimeUtc": "2026-09-27T19:37:36.103829+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lda-filing-types.unsorted.nq",
+      "byteLength": 271820,
+      "mtimeUtc": "2026-09-27T19:22:36.845114+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/lda-general-issue-codes.unsorted.nq",
+      "byteLength": 433411,
+      "mtimeUtc": "2026-09-27T19:22:42.723700+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/mesh-descriptors-2026.unsorted.nq",
+      "byteLength": 265142133,
+      "mtimeUtc": "2026-09-27T19:10:27.447630+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/mesh-lcsh-mapping-2021-03-31.unsorted.nq",
+      "byteLength": 109072558,
+      "mtimeUtc": "2026-09-27T20:22:40.678124+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/naics-2022.unsorted.nq",
+      "byteLength": 11395145,
+      "mtimeUtc": "2026-09-27T19:19:50.330255+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/nasa-technology-taxonomy-8817.unsorted.nq",
+      "byteLength": 107983,
+      "mtimeUtc": "2026-09-27T19:22:48.399299+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/nasa-thesaurus-skos.unsorted.nq",
+      "byteLength": 1011304895,
+      "mtimeUtc": "2026-09-27T19:12:03.630077+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/nppes-data-dissemination-layout-v2-2026-08-03.unsorted.nq",
+      "byteLength": 1475564,
+      "mtimeUtc": "2026-09-27T19:26:39.651038+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/nrc-adams-documented-accession-number-2026-08-15.unsorted.nq",
+      "byteLength": 13857,
+      "mtimeUtc": "2026-09-27T19:27:20.976387+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/nrc-adams-documented-profile-properties-2026-08-15.unsorted.nq",
+      "byteLength": 110689,
+      "mtimeUtc": "2026-09-27T19:27:15.502767+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/oira-review-controls.unsorted.nq",
+      "byteLength": 115747,
+      "mtimeUtc": "2026-09-27T19:22:54.047938+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/omb-a11-apportionment-categories.unsorted.nq",
+      "byteLength": 52474,
+      "mtimeUtc": "2026-09-27T19:22:59.746533+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/omb-a11-functional-classification.unsorted.nq",
+      "byteLength": 573522,
+      "mtimeUtc": "2026-09-27T19:23:05.515819+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/omb-a11-object-classification.unsorted.nq",
+      "byteLength": 241914,
+      "mtimeUtc": "2026-09-27T19:23:11.299418+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/opm-ehri-agency-subelement-2026-08-04.unsorted.nq",
+      "byteLength": 4004000,
+      "mtimeUtc": "2026-09-27T19:27:09.999828+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/opm-ehri-data-standards-2026-08-04.unsorted.nq",
+      "byteLength": 99202126,
+      "mtimeUtc": "2026-09-27T19:20:26.170800+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/oversight-report-types.unsorted.nq",
+      "byteLength": 58838,
+      "mtimeUtc": "2026-09-27T19:23:16.928654+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/pra-icr-controls.unsorted.nq",
+      "byteLength": 87097,
+      "mtimeUtc": "2026-09-27T19:23:22.585588+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/psc-april-2025.unsorted.nq",
+      "byteLength": 12738754,
+      "mtimeUtc": "2026-09-27T19:19:57.319196+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/regulations-gov-agencies-roster-2026-08-16.unsorted.nq",
+      "byteLength": 2445093,
+      "mtimeUtc": "2026-09-27T19:29:00.179400+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/regulations-gov-agency-identity-2026-08-16.unsorted.nq",
+      "byteLength": 4562394,
+      "mtimeUtc": "2026-09-27T20:23:00.044188+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/regulations-gov-docket-type.unsorted.nq",
+      "byteLength": 13984,
+      "mtimeUtc": "2026-09-27T19:23:28.194835+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/regulations-gov-document-type.unsorted.nq",
+      "byteLength": 30925,
+      "mtimeUtc": "2026-09-27T19:23:34.102509+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/regulations-gov-submitter-type.unsorted.nq",
+      "byteLength": 19742,
+      "mtimeUtc": "2026-09-27T19:23:39.756269+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-assistance-assistance-types.unsorted.nq",
+      "byteLength": 101770,
+      "mtimeUtc": "2026-09-27T19:23:45.427081+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-assistance-eligible-applicant-types.unsorted.nq",
+      "byteLength": 265743,
+      "mtimeUtc": "2026-09-27T19:23:51.083656+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-assistance-eligible-beneficiary-types.unsorted.nq",
+      "byteLength": 440519,
+      "mtimeUtc": "2026-09-27T19:23:56.740250+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-opportunities-notice-types.unsorted.nq",
+      "byteLength": 68526,
+      "mtimeUtc": "2026-09-27T19:24:02.592303+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-opportunities-opportunity-statuses.unsorted.nq",
+      "byteLength": 33540,
+      "mtimeUtc": "2026-09-27T19:24:08.266404+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/sam-opportunities-set-aside-codes.unsorted.nq",
+      "byteLength": 112675,
+      "mtimeUtc": "2026-09-27T19:24:13.918117+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/treasury-fast-book-accounts-parts-ii-iii-2026-07.unsorted.nq",
+      "byteLength": 21704738,
+      "mtimeUtc": "2026-09-27T19:26:46.884712+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/treasury-fast-book-fund-groups-2026-07.unsorted.nq",
+      "byteLength": 46925,
+      "mtimeUtc": "2026-09-27T19:26:52.429903+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/umthes-gemet-endpoints-2026-08-15.unsorted.nq",
+      "byteLength": 62663826,
+      "mtimeUtc": "2026-09-27T19:43:09.209496+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-agency-relation.unsorted.nq",
+      "byteLength": 13746,
+      "mtimeUtc": "2026-09-27T19:24:19.540461+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-dline-action-stage.unsorted.nq",
+      "byteLength": 30412,
+      "mtimeUtc": "2026-09-27T19:24:25.163342+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-dline-type.unsorted.nq",
+      "byteLength": 24316,
+      "mtimeUtc": "2026-09-27T19:24:30.988008+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-energy-affected.unsorted.nq",
+      "byteLength": 19197,
+      "mtimeUtc": "2026-09-27T19:24:36.668182+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-eo13771-designation.unsorted.nq",
+      "byteLength": 36270,
+      "mtimeUtc": "2026-09-27T19:24:42.317373+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-federalism.unsorted.nq",
+      "byteLength": 18888,
+      "mtimeUtc": "2026-09-27T19:24:47.942351+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-gao-cra-priority-2026-08-15.unsorted.nq",
+      "byteLength": 100926,
+      "mtimeUtc": "2026-09-27T19:54:34.544239+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-govt-level.unsorted.nq",
+      "byteLength": 34996,
+      "mtimeUtc": "2026-09-27T19:24:53.585279+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-international-interest.unsorted.nq",
+      "byteLength": 19642,
+      "mtimeUtc": "2026-09-27T19:24:59.246141+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-legal-authority-citation-types.unsorted.nq",
+      "byteLength": 20792,
+      "mtimeUtc": "2026-09-27T19:25:05.047889+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-major.unsorted.nq",
+      "byteLength": 18573,
+      "mtimeUtc": "2026-09-27T19:25:10.604257+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-print-paper.unsorted.nq",
+      "byteLength": 18905,
+      "mtimeUtc": "2026-09-27T19:25:16.124096+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-priority-category.unsorted.nq",
+      "byteLength": 37862,
+      "mtimeUtc": "2026-09-27T19:25:21.655115+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rfa-required.unsorted.nq",
+      "byteLength": 19008,
+      "mtimeUtc": "2026-09-27T19:25:27.169154+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rfa-section610-review.unsorted.nq",
+      "byteLength": 25428,
+      "mtimeUtc": "2026-09-27T19:25:32.924652+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rin-relation.unsorted.nq",
+      "byteLength": 29948,
+      "mtimeUtc": "2026-09-27T19:25:38.485028+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rin-status.unsorted.nq",
+      "byteLength": 13808,
+      "mtimeUtc": "2026-09-27T19:25:44.005826+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rplan-entry.unsorted.nq",
+      "byteLength": 13538,
+      "mtimeUtc": "2026-09-27T19:25:49.543574+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-rule-stage.unsorted.nq",
+      "byteLength": 35200,
+      "mtimeUtc": "2026-09-27T19:25:55.045161+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-small-entity.unsorted.nq",
+      "byteLength": 35344,
+      "mtimeUtc": "2026-09-27T19:26:00.715560+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-timetable-action.unsorted.nq",
+      "byteLength": 190268,
+      "mtimeUtc": "2026-09-27T19:26:06.264733+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/unified-agenda-unfunded-mandate.unsorted.nq",
+      "byteLength": 24888,
+      "mtimeUtc": "2026-09-27T19:26:11.746713+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/usaspending-award-types.unsorted.nq",
+      "byteLength": 186225,
+      "mtimeUtc": "2026-09-27T19:26:17.243831+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/uscourts-nature-of-suit.unsorted.nq",
+      "byteLength": 586542,
+      "mtimeUtc": "2026-09-27T19:26:22.778902+00:00"
+    },
+    {
+      "path": "atlas3-construction-spool-xdnx32o5/rdf/usgs-gnis-identifiers.unsorted.nq",
+      "byteLength": 143130,
+      "mtimeUtc": "2026-09-27T19:26:28.266538+00:00"
+    }
+  ]
+}

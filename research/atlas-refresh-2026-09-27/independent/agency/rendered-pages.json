@@ -1,0 +1,56 @@
+[
+  {
+    "image": "pages/dhs-plan-5.png",
+    "imageSha256": "e0e74dd5d5c2c6d1b2bec9b246c4b768cb3dfbdc2e0daf7540b545f55f25cb47",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+    "sourceSha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+    "pdfPage": 5,
+    "renderScaleTo": 1800,
+    "visuallyInspectedWholePage": true
+  },
+  {
+    "image": "pages/dhs-plan-6.png",
+    "imageSha256": "e6f7f48517d4515d27ee8175f0c235422a9ed00cae6560e61f370a96113f41c6",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+    "sourceSha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+    "pdfPage": 6,
+    "renderScaleTo": 1800,
+    "visuallyInspectedWholePage": true
+  },
+  {
+    "image": "pages/dhs-plan-7.png",
+    "imageSha256": "d479da8d68c7a06552f62f7dc79d8452ec79bf91dbfcfc7d4f25a032c0cd744b",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+    "sourceSha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+    "pdfPage": 7,
+    "renderScaleTo": 1800,
+    "visuallyInspectedWholePage": true
+  },
+  {
+    "image": "pages/dhs-plan-8.png",
+    "imageSha256": "d91cc14ab380cbc2bfecaf66d452e0bff1cc9ea17629506e483e59100f1f2bae",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+    "sourceSha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+    "pdfPage": 8,
+    "renderScaleTo": 1800,
+    "visuallyInspectedWholePage": true
+  },
+  {
+    "image": "pages/dhs-plan-9.png",
+    "imageSha256": "d7bf5aa70ff15ba2e63df76450f56d4c786a62fa7a58c2644c79c7d829437f0e",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/CDOC-108hdoc32/pdf/CDOC-108hdoc32.pdf",
+    "sourceSha256": "f1366de6497beea9ca796327248e238eb88267c22d28de67efe41555c85d7fdf",
+    "pdfPage": 9,
+    "renderScaleTo": 1800,
+    "visuallyInspectedWholePage": true
+  },
+  {
+    "image": "pages/postal-03-7022-p1.png",
+    "imageSha256": "b4fa73236655359ba25c7691eba41085499a849fc937a021d09a1a722aecfe2b",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2003-03-25/pdf/03-7022.pdf",
+    "sourceSha256": "659d34b95893f779adb9fa1dfe854de7b539473f64ad63a07b3394c705100cce",
+    "pdfPage": 1,
+    "renderScaleTo": 2000,
+    "visuallyInspectedWholePage": true
+  }
+]

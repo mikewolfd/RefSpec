@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-09-27T19:54:00Z",
+  "mode": "read-only",
+  "wranglerVersion": "4.123.0",
+  "authentication": {
+    "type": "OAuth Token",
+    "accountsVisible": 1,
+    "accountId": "174055408ff1560e60601c4d12c561c4"
+  },
+  "workerName": "refspec-atlas-explorer",
+  "command": "npx --no-install wrangler deployments status --name refspec-atlas-explorer --json",
+  "exitCode": 1,
+  "cloudflareErrorCode": 10007,
+  "message": "This Worker does not exist on your account.",
+  "conclusion": "The configured Worker is absent from the currently authenticated account. This does not establish its status in other accounts or at an unknown public URL.",
+  "originMain": "afea0826c8425cf5842c8de526a6f20ef94afaac",
+  "openPullRequests": [],
+  "githubReleases": [],
+  "remoteWritesPerformed": false,
+  "docs": "https://developers.cloudflare.com/workers/wrangler/commands/workers/#deployments-status",
+  "followUp": {
+    "observedAt": "2026-09-27T20:39:00Z",
+    "mode": "read-only",
+    "localMain": "41e2bf9d8474dca501a11a18e799855f74e70cec",
+    "originMain": "41e2bf9d8474dca501a11a18e799855f74e70cec",
+    "mainWorktreeClean": true,
+    "dev21ReleaseWorktreePresent": false,
+    "ourLaneHead": "cc507773af7d01a9330b0bdd0dca293b25380147",
+    "ourRemoteWritesPerformed": false,
+    "completedTierEvidence": "dev21-completed-tiers/",
+    "fullAtlasProducerTests": {
+      "passed": 4,
+      "exitCode": 0,
+      "elapsedSeconds": 6759.18
+    },
+    "slowTests": {
+      "passed": 416,
+      "exitCode": 0
+    },
+    "boundary": "Other owner advanced main; these producer tests do not qualify the refreshed full distribution."
+  }
+}

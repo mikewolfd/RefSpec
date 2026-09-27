@@ -1,0 +1,39 @@
+[
+  {
+    "case": "multilingual",
+    "acceptedBySemanticChecks": true
+  },
+  {
+    "case": "duplicate-language-different-text",
+    "acceptedBySemanticChecks": false,
+    "code": "shacl.data",
+    "message": "shacl.data: asserted graph does not conform [UniqueLangConstraintComponent]: Validation Report Conforms: False Results (1): Constraint Violation in UniqueLangConstraintComponent (http://www.w3.org/ns/shacl#UniqueLangConstraintComponent): Severity: sh:Violation Source Shape: [ sh:path ( skosxl:prefLabel skosxl:literalForm ) ; sh:uniqueLang Literal(\"true\" = True, datatype=xsd:boolean) ] Focus Node: <urn:ref:atlas-fixture:resource:subject-c> Result Path: ( skosxl:prefLabel skosxl:literalForm ) Message: More than one String shares the same Language (rerun with REFSPEC_ATLAS_VALIDATION_MODE=audit f"
+  },
+  {
+    "case": "duplicate-literal-distinct-ids",
+    "acceptedBySemanticChecks": false,
+    "code": "dataset.label-integrity",
+    "message": "dataset.label-integrity: urn:ref:atlas-fixture:resource:subject-c has more than one preferred label in a language"
+  },
+  {
+    "case": "missing-language",
+    "acceptedBySemanticChecks": false,
+    "code": "shacl.data",
+    "message": "shacl.data: asserted graph does not conform [DatatypeConstraintComponent]: Validation Report Conforms: False Results (1): Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent): Severity: sh:Violation Source Shape: [ sh:datatype rdf:langString ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"Atlas 3.1 label literals MUST carry a language tag. The canonical RDF layer requires lowercase BCP 47 spelling.\") ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:minLength Literal(\"1\", datatype=xsd:integer) ; sh:nodeKind sh:L"
+  },
+  {
+    "case": "uppercase-language",
+    "acceptedBySemanticChecks": true
+  },
+  {
+    "case": "role-overlap",
+    "acceptedBySemanticChecks": false,
+    "code": "shacl.data",
+    "message": "shacl.data: asserted graph does not conform [DisjointConstraintComponent]: Validation Report Conforms: False Results (1): Constraint Violation in DisjointConstraintComponent (http://www.w3.org/ns/shacl#DisjointConstraintComponent): Severity: sh:Violation Source Shape: [ sh:class skosxl:Label ; sh:disjoint skosxl:altLabel, skosxl:hiddenLabel ; sh:nodeKind sh:IRI ; sh:path skosxl:prefLabel ] Focus Node: <urn:ref:atlas-fixture:resource:subject-c> Value Node: <urn:ref:atlas-fixture:label:subject-c:en> Result Path: skosxl:prefLabel Message: Value of <urn:ref:atlas-fixture:resource:subject-c>->skosx"
+  },
+  {
+    "case": "uppercase-language-wire",
+    "acceptedByCanonicalGrammar": false,
+    "issue": "('rdf.canonical', 'is not in the canonical N-Quads term form')"
+  }
+]

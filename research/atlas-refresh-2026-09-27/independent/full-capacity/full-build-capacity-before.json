@@ -1,0 +1,28 @@
+{
+  "utc": "2026-09-27T20:35:50.269789+00:00",
+  "pressure": {
+    "exit": 0,
+    "stdout": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 39%\n",
+    "stderr": ""
+  },
+  "pressureLevel": {
+    "exit": 0,
+    "stdout": "kern.memorystatus_vm_pressure_level: 2\n",
+    "stderr": ""
+  },
+  "swap": {
+    "exit": 0,
+    "stdout": "vm.swapusage: total = 25600.00M  used = 24146.81M  free = 1453.19M  (encrypted)\n",
+    "stderr": ""
+  },
+  "rss": {
+    "exit": 0,
+    "stdout": "  PID  ELAPSED      TIME  %CPU    RSS\n 2095 01:51:04 106:35.50  74.1 10340352\n10128 01:41:07  97:39.68  83.3 2358656\n",
+    "stderr": ""
+  },
+  "footprint": {
+    "exit": 0,
+    "stdout": "================================================================================\npython3 [10128]: 64-bit    Footprint: 33777722688 B (16384 bytes per page)\n================================================================================\n\nAuxiliary data:\n    phys_footprint: 33772217664 B\n    phys_footprint_peak: 33772217664 B\n\n================================================================================\npython [2095]: 64-bit    Footprint: 33290876880 B (16384 bytes per page)\n================================================================================\n\nAuxiliary data:\n    phys_footprint: 33290909648 B\n    phys_footprint_peak: 46266894464 B\n\n================================================================================\nSummary Footprint: 67068468496 B\n================================================================================\n\n",
+    "stderr": ""
+  }
+}

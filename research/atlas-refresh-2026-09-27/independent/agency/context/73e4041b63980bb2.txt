@@ -1,0 +1,7 @@
+Lines 170-174
+170: Subscribe
+171: 
+172: The Postal Regulatory Commission develops and implements a modern system of postal rate regulation. The Postal Regulatory Commission is the successor agency to the Postal Rate Commission, which was created by the Postal Reorganization Act, as amended (39 U.S.C. 3601-3604). The Commission was established as an independent agency in the executive branch of Government by the Postal Accountability and Enhancement Act (39 U.S.C. 101 note). It is composed of five Commissioners, appointed by the President with the advice and consent of the Senate, one of whom is designated as Chairman.
+173: 
+174: The Commission promulgates rules and regulations, establishes procedures, and takes other actions necessary to carry out its obligations. It considers complaints received from interested persons relating to United States Postal Service rates, regulations, and services. The Commission also has certain reporting obligations, including a report on universal postal service and the postal monopoly.
+

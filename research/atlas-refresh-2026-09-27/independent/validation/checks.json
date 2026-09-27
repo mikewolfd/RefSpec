@@ -1,0 +1,60 @@
+{
+  "checkedAtUtc": "2026-09-27T20:07:13.895689+00:00",
+  "commit": "cc507773af7d01a9330b0bdd0dca293b25380147",
+  "checks": [
+    {
+      "name": "preferred-label-tests",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "pytest",
+        "-q",
+        "-n",
+        "0",
+        "tests/test_atlas_v3_preferred_languages.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "packing-tests",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "pytest",
+        "-q",
+        "-n",
+        "0",
+        "tests/test_generate_atlas_v3_full.py::test_a_large_mapping_release_buckets_its_pack",
+        "tests/test_generate_atlas_v3_full.py::test_same_release_cross_partition_reference_pins_target_pack",
+        "tests/test_generate_atlas_v3_full.py::test_streamed_construction_matches_the_whole_graph_oracle"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "umthes-standalone-validation",
+      "command": [
+        "uv",
+        "run",
+        "--no-project",
+        "--with-requirements",
+        "bindings/atlas/3.1/requirements.txt",
+        "python",
+        "bindings/atlas/3.1/tools/validate.py",
+        "--distribution",
+        "output/atlas-3.1-umthes-2026-09-27/distribution"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "additional-label-boundaries",
+      "exitCode": 0
+    },
+    {
+      "name": "partitioned-mapping-writer-probe",
+      "exitCode": 0
+    }
+  ],
+  "qualification": "bounded structural and writer-path checks only"
+}

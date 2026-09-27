@@ -1,0 +1,23 @@
+{
+  "configuration": {
+    "name": "configuration",
+    "passed": false,
+    "summary": "audit settings checked for fail-open values",
+    "failures": [
+      "lc-external-target-endpoints-2026-08-15: source comparison must own exactly one construction-unit key",
+      "ecfr-agencies-roster-2026-08-15: unsupported identity policy 'publisher-key'",
+      "regulations-gov-agencies-roster-2026-08-16: unsupported identity policy 'publisher-key'"
+    ],
+    "source_findings": []
+  },
+  "producerUnits": 131,
+  "verifierUnits": 127,
+  "missing": [
+    "agency-registry-2026-09-26",
+    "ferc-docket-prefixes",
+    "ferc-document-class-types",
+    "unified-agenda-legal-authority-citation-types"
+  ],
+  "extra": [],
+  "lc_reader_in_spec_cache": false
+}
