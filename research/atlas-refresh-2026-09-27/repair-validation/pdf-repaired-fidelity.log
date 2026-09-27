@@ -1,0 +1,31 @@
+Atlas source-fidelity verification
+==============================================================================
+PASS  load-errors                   0 source, inventory, or pack loading errors collected
+PASS  configuration                 audit settings checked for fail-open values
+PASS  language-scope                no language-scope declaration applies to this run
+PASS  claim-scope                   66 declared source claim families checked for complete evaluation scope
+PASS  distribution-coverage         3/3 construction units have an independent comparison
+PASS  publisher-input-pins          3 distinct publisher inputs authenticated; 3/3 construction input rows matched exactly
+PASS  graph-structure               3 manifest-discovered packs checked for transport and source-evidence structure
+PASS  rdf-provenance-fidelity       333 RDF source records checked against publisher bytes
+PASS  agency-fidelity               Independent agency decisions, evidence and view comparison
+PASS  native-control-fidelity       0 controlled values compared directly with pinned Parquet rows
+PASS  source-extract-fidelity       0 extract concepts compared with the Atlas packs that represent them
+PASS  concept-traceability          333 asserted concepts traced to a publisher record across 3 sources
+PASS  identifier-retention          333 concept identities checked against declared source identity policies
+PASS  label-fidelity                333 Atlas labels compared byte-for-byte against publisher literals
+PASS  notation-fidelity             98 Atlas notations compared as exact RDF literals
+PASS  annotation-fidelity           98 Atlas definitions and notes compared as exact RDF literals in every language
+PASS  member-iri-fidelity           0 Atlas member IRI claims compared with publisher claims
+PASS  member-literal-fidelity       0 Atlas member metadata literals compared with publisher claims
+PASS  top-concept-fidelity          0 Atlas topConceptOf assignments compared against exact publisher claims
+PASS  relation-fidelity             0 asserted relations matched a publisher triple exactly, direction included
+PASS  no-manufactured-relations     0 asserted relations checked for manufacture and predicate strengthening
+PASS  reification-fidelity          0 relation statement reifications reconstructed from Atlas
+PASS  count-reconciliation          51 source claim categories reconciled exactly
+PASS  scheme-organisation           3 vocabularies checked by reversing publisher-native scheme claims
+PASS  source-release-metadata       0 Atlas release claims compared against publisher release descriptions
+PASS  source-claim-coverage         0 publisher or Atlas source claims remain outside executable comparisons; 0 more are declared out of scope and itemised in the receipt
+PASS  source-defects                0 defects observed in publisher data and reported, not repaired
+------------------------------------------------------------------------------
+27/27 checks passed

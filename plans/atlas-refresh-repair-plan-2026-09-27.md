@@ -1,6 +1,8 @@
 # Atlas refresh repair proposal
 
-Status: proposed, not implemented or ratified. Reviewed against `ac72b203`,
+Status: implementation authorized on 2026-09-27; see the [implementation and
+validation record](../research/atlas-refresh-2026-09-27/repair-validation/README.md).
+The proposal below was reviewed against `ac72b203`,
 including the label correction at `cc507773` and the
 [independent investigation](../research/atlas-refresh-2026-09-27/README.md).
 This document covers every finding from that investigation and the concrete

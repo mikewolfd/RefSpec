@@ -1,0 +1,2124 @@
+{
+  "comparisons": [
+    {
+      "atlasLoaded": true,
+      "atlasOnlyNativePayloadFields": [],
+      "checkedPackTransports": [
+        {
+          "byteLength": 26299,
+          "manifestByteLength": 26299,
+          "manifestSha256": "sha256:077bb0f5ff122badfefc2eb7bd66563ff7288e864a66d1dc697c059d8b50d24c",
+          "path": "mappings/agency-registry-2026-09-26.nq.zst",
+          "sha256": "sha256:077bb0f5ff122badfefc2eb7bd66563ff7288e864a66d1dc697c059d8b50d24c"
+        }
+      ],
+      "checkedPacks": [
+        "mappings/agency-registry-2026-09-26.nq.zst"
+      ],
+      "claimScope": {
+        "claimFamilies": [],
+        "independentAgencyComparison": {
+          "comparedRows": {
+            "bridges": 13,
+            "events": 14,
+            "non-emissions": 4
+          },
+          "failures": [],
+          "rawRosterEndpointsChecked": 50,
+          "rawRosterInputs": [
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:african-development-foundation",
+              "sourceContext": {
+                "name": "African Development Foundation",
+                "parentSlugFromNesting": null,
+                "short_name": "USADF",
+                "slug": "african-development-foundation"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:copyright-royalty-board",
+              "sourceContext": {
+                "name": "Copyright Royalty Board",
+                "parentSlugFromNesting": "library-of-congress",
+                "short_name": "CRB",
+                "slug": "copyright-royalty-board"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:economic-analysis-bureau",
+              "sourceContext": {
+                "name": "Bureau of Economic Analysis",
+                "parentSlugFromNesting": "commerce-department",
+                "short_name": "EAB",
+                "slug": "economic-analysis-bureau"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:energy-department",
+              "sourceContext": {
+                "name": "Department of Energy",
+                "parentSlugFromNesting": null,
+                "short_name": "DOE",
+                "slug": "energy-department"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:export-import-bank",
+              "sourceContext": {
+                "name": "Export-Import Bank of the United States",
+                "parentSlugFromNesting": null,
+                "short_name": "EIB/USEIB",
+                "slug": "export-import-bank"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:federal-register-office",
+              "sourceContext": {
+                "name": "Office of Federal Register",
+                "parentSlugFromNesting": "national-archives-and-records-administration",
+                "short_name": "OFR",
+                "slug": "federal-register-office"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:international-boundary-and-water-commission-united-states-and-mexico",
+              "sourceContext": {
+                "name": "United States Section United States and Mexico International Boundary and Water Commission",
+                "parentSlugFromNesting": null,
+                "short_name": "IBWC",
+                "slug": "international-boundary-and-water-commission-united-states-and-mexico"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:investment-security-office",
+              "sourceContext": {
+                "name": "Office of Investment Security",
+                "parentSlugFromNesting": "treasury-department",
+                "short_name": "IIO",
+                "slug": "investment-security-office"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:labor-department",
+              "sourceContext": {
+                "name": "Department of Labor",
+                "parentSlugFromNesting": null,
+                "short_name": "DOL",
+                "slug": "labor-department"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:library-of-congress",
+              "sourceContext": {
+                "name": "Library of Congress",
+                "parentSlugFromNesting": null,
+                "short_name": "LOC",
+                "slug": "library-of-congress"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:ecfr-agency:postal-regulatory-commission",
+              "sourceContext": {
+                "name": "Postal Regulatory Commission",
+                "parentSlugFromNesting": null,
+                "short_name": "PRC",
+                "slug": "postal-regulatory-commission"
+              },
+              "sourcePath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+              "sourceSha256": "766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+              "resourceIri": "urn:ref:federal-hierarchy-org:100004455",
+              "sourceContext": {
+                "fhagencyorgname": "HEALTH AND HUMAN SERVICES, DEPARTMENT OF",
+                "fhdeptindagencyorgid": 100004222,
+                "fhorgid": 100004455,
+                "fhorgname": "OFFICE OF THE INSPECTOR GENERAL",
+                "fhorgtype": "Sub-Tier"
+              },
+              "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+              "sourceSha256": "90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+              "resourceIri": "urn:ref:federal-hierarchy-org:100006936",
+              "sourceContext": {
+                "fhagencyorgname": "AGRICULTURE, DEPARTMENT OF",
+                "fhdeptindagencyorgid": 100006809,
+                "fhorgid": 100006936,
+                "fhorgname": "OFFICE OF INSPECTOR GENERAL",
+                "fhorgtype": "Sub-Tier"
+              },
+              "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+              "sourceSha256": "90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+              "resourceIri": "urn:ref:federal-hierarchy-org:100012075",
+              "sourceContext": {
+                "fhagencyorgname": "HOMELAND SECURITY, DEPARTMENT OF",
+                "fhdeptindagencyorgid": 100011942,
+                "fhorgid": 100012075,
+                "fhorgname": "U.S. IMMIGRATION AND CUSTOMS ENFORCEMENT",
+                "fhorgtype": "Sub-Tier"
+              },
+              "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+              "sourceSha256": "bb78b6c039167ef158bea672275c86961be784e269f4db41a52e4b0cd09c277e"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+              "resourceIri": "urn:ref:federal-hierarchy-org:100525875",
+              "sourceContext": {
+                "fhagencyorgname": "HEALTH AND HUMAN SERVICES, DEPARTMENT OF",
+                "fhdeptindagencyorgid": 100004222,
+                "fhorgid": 100525875,
+                "fhorgname": "ADMINISTRATION FOR COMMUNITY LIVING (ACL)",
+                "fhorgtype": "Sub-Tier"
+              },
+              "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+              "sourceSha256": "b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+              "resourceIri": "urn:ref:federal-hierarchy-org:300000070",
+              "sourceContext": {
+                "fhagencyorgname": "MORRIS K UDALL SCHOLARSHIP AND EXCELLENCE IN NATIONAL ENVIRONMENTAL POLICY FOUNDATION",
+                "fhdeptindagencyorgid": 300000070,
+                "fhorgid": 300000070,
+                "fhorgname": "MORRIS K. UDALL SCHOLARSHIP AND EXCELLENCE IN NATIONAL ENVIRONMENTAL POLICY FOUNDATION",
+                "fhorgtype": "Department/Ind. Agency"
+              },
+              "sourcePath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+              "sourceSha256": "b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:118",
+              "sourceContext": {
+                "id": 118,
+                "name": "Economic Analysis Bureau",
+                "parent_id": 54,
+                "short_name": "EAB",
+                "slug": "economic-analysis-bureau"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:131",
+              "sourceContext": {
+                "id": 131,
+                "name": "Employee Benefits Security Administration",
+                "parent_id": 271,
+                "short_name": "EBSA",
+                "slug": "employee-benefits-security-administration"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:136",
+              "sourceContext": {
+                "id": 136,
+                "name": "Energy Department",
+                "parent_id": null,
+                "short_name": "DOE",
+                "slug": "energy-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:150",
+              "sourceContext": {
+                "id": 150,
+                "name": "Export Administration Bureau",
+                "parent_id": 54,
+                "short_name": "EAB",
+                "slug": "export-administration-bureau"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:151",
+              "sourceContext": {
+                "id": 151,
+                "name": "Export-Import Bank",
+                "parent_id": null,
+                "short_name": "EIB/USEIB",
+                "slug": "export-import-bank"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:186",
+              "sourceContext": {
+                "id": 186,
+                "name": "Federal Register Office",
+                "parent_id": 304,
+                "short_name": "OFR",
+                "slug": "federal-register-office"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:232",
+              "sourceContext": {
+                "id": 232,
+                "name": "Immigration and Naturalization Service",
+                "parent_id": 268,
+                "short_name": "INS",
+                "slug": "immigration-and-naturalization-service"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:241",
+              "sourceContext": {
+                "id": 241,
+                "name": "Industry and Security Bureau",
+                "parent_id": 54,
+                "short_name": "BIS",
+                "slug": "industry-and-security-bureau"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:244",
+              "sourceContext": {
+                "id": 244,
+                "name": "Inspector General Office, Agriculture Department",
+                "parent_id": 12,
+                "short_name": "OIG USDA",
+                "slug": "inspector-general-office-agriculture-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:245",
+              "sourceContext": {
+                "id": 245,
+                "name": "Inspector General Office, Health and Human Services Department",
+                "parent_id": 221,
+                "short_name": "OIG HHS",
+                "slug": "inspector-general-office-health-and-human-services-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:255",
+              "sourceContext": {
+                "id": 255,
+                "name": "International Boundary and Water Commission, United States and Mexico",
+                "parent_id": null,
+                "short_name": "IBWC",
+                "slug": "international-boundary-and-water-commission-united-states-and-mexico"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:259",
+              "sourceContext": {
+                "id": 259,
+                "name": "International Investment Office",
+                "parent_id": 497,
+                "short_name": "IIO",
+                "slug": "international-investment-office"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:271",
+              "sourceContext": {
+                "id": 271,
+                "name": "Labor Department",
+                "parent_id": null,
+                "short_name": "DOL",
+                "slug": "labor-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:277",
+              "sourceContext": {
+                "id": 277,
+                "name": "Library of Congress",
+                "parent_id": null,
+                "short_name": "LOC",
+                "slug": "library-of-congress"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:296",
+              "sourceContext": {
+                "id": 296,
+                "name": "Morris K. Udall and Stewart L. Udall Foundation",
+                "parent_id": null,
+                "short_name": "Udall Foundation",
+                "slug": "morris-k-udall-and-stewart-l-udall-foundation"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:4",
+              "sourceContext": {
+                "id": 4,
+                "name": "United States African Development Foundation",
+                "parent_id": null,
+                "short_name": "USADF",
+                "slug": "african-development-foundation"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:404",
+              "sourceContext": {
+                "id": 404,
+                "name": "Pension and Welfare Benefits Administration",
+                "parent_id": 271,
+                "short_name": "PWBA",
+                "slug": "pension-and-welfare-benefits-administration"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:409",
+              "sourceContext": {
+                "id": 409,
+                "name": "Postal Regulatory Commission",
+                "parent_id": null,
+                "short_name": "PRC",
+                "slug": "postal-regulatory-commission"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:41",
+              "sourceContext": {
+                "id": 41,
+                "name": "Broadcasting Board of Governors",
+                "parent_id": null,
+                "short_name": "BBG",
+                "slug": "broadcasting-board-of-governors"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:45",
+              "sourceContext": {
+                "id": 45,
+                "name": "Centers for Medicare & Medicaid Services",
+                "parent_id": 221,
+                "short_name": "CMS",
+                "slug": "centers-for-medicare-medicaid-services"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:476",
+              "sourceContext": {
+                "id": 476,
+                "name": "State Department",
+                "parent_id": null,
+                "short_name": "DOS",
+                "slug": "state-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:481",
+              "sourceContext": {
+                "id": 481,
+                "name": "Surface Transportation Board",
+                "parent_id": null,
+                "short_name": "STB",
+                "slug": "surface-transportation-board"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:492",
+              "sourceContext": {
+                "id": 492,
+                "name": "Transportation Department",
+                "parent_id": null,
+                "short_name": "DOT",
+                "slug": "transportation-department"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:499",
+              "sourceContext": {
+                "id": 499,
+                "name": "U.S. Citizenship and Immigration Services",
+                "parent_id": 227,
+                "short_name": "USCIS",
+                "slug": "u-s-citizenship-and-immigration-services"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:501",
+              "sourceContext": {
+                "id": 501,
+                "name": "U.S. Customs and Border Protection",
+                "parent_id": 227,
+                "short_name": "USCBP",
+                "slug": "u-s-customs-and-border-protection"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:503",
+              "sourceContext": {
+                "id": 503,
+                "name": "U.S. Immigration and Customs Enforcement",
+                "parent_id": 227,
+                "short_name": "ICE",
+                "slug": "u-s-immigration-and-customs-enforcement"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:510",
+              "sourceContext": {
+                "id": 510,
+                "name": "United States Information Agency",
+                "parent_id": null,
+                "short_name": "USIA",
+                "slug": "united-states-information-agency"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:543",
+              "sourceContext": {
+                "id": 543,
+                "name": "Interstate Commerce Commission",
+                "parent_id": null,
+                "short_name": "ICC",
+                "slug": "interstate-commerce-commission"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:559",
+              "sourceContext": {
+                "id": 559,
+                "name": "Health Care Finance Administration",
+                "parent_id": 221,
+                "short_name": "HCFA",
+                "slug": "health-care-finance-administration"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:564",
+              "sourceContext": {
+                "id": 564,
+                "name": "Postal Rate Commission",
+                "parent_id": null,
+                "short_name": "PRC",
+                "slug": "postal-rate-commission"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:587",
+              "sourceContext": {
+                "id": 587,
+                "name": "Community Living Administration",
+                "parent_id": 221,
+                "short_name": null,
+                "slug": "community-living-administration"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:603",
+              "sourceContext": {
+                "id": 603,
+                "name": "Investment Security Office",
+                "parent_id": 497,
+                "short_name": "IIO",
+                "slug": "investment-security-office"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:88",
+              "sourceContext": {
+                "id": 88,
+                "name": "Copyright Royalty Board",
+                "parent_id": 277,
+                "short_name": "LOC",
+                "slug": "copyright-royalty-board"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            },
+            {
+              "match": true,
+              "resolvedSourcePath": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "resourceIri": "urn:ref:federal-register-agency:96",
+              "sourceContext": {
+                "id": 96,
+                "name": "Customs Service",
+                "parent_id": 497,
+                "short_name": null,
+                "slug": "customs-service"
+              },
+              "sourcePath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+              "sourceSha256": "70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b"
+            }
+          ],
+          "rdf": {
+            "bridges": [
+              {
+                "candidateId": "same:fr118:ecfr:economic-analysis-bureau",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:393203c2357d8d0a6b5d78725187a7309483202cb0250bad1de4b3aeb19e29a1",
+                  "urn:ref:atlas-source-record:a730bb993031deab9f435c4eaa21cd961444cdc4ccc387ccb44616f63193f8f2"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:9572bb923efff53de714c55b1a1c3355b643992557c281a39e296aa853308b36"
+                ],
+                "object": "urn:ref:ecfr-agency:economic-analysis-bureau",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:118"
+              },
+              {
+                "candidateId": "same:fr136:ecfr:energy-department",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:4058daecceb0319d7890e5dc8e1deec472d422f7881714e7dbc330799a17ac00",
+                  "urn:ref:atlas-source-record:bbcec744a0467514d8ff813fc47a1c11e1bf53465c9811086f7a5a651485236d"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:c04a66980176c0ecf5b23c1e1df1706c2992928c050ccdabb05512f7a1bc7b26"
+                ],
+                "object": "urn:ref:ecfr-agency:energy-department",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:136"
+              },
+              {
+                "candidateId": "same:fr186:ecfr:federal-register-office",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:64397da078ddb85fe61b629244b567951e7af89b2f74805f52f5b4e777b56f8d",
+                  "urn:ref:atlas-source-record:ba8515309cc084ccc86dae381d6cbd12e90db448676d5812786ed88d8698ab52"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:2631387affc14fe03ed74e6bba4aa3a96ff592b1dde89641aa06ead83f497cb3"
+                ],
+                "object": "urn:ref:ecfr-agency:federal-register-office",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:186"
+              },
+              {
+                "candidateId": "same:fr244:fh:100006936",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:3b7e7143db5fd5a92049141f8208c50b64730f296311dc0d8a79dc729455fd8e",
+                  "urn:ref:atlas-source-record:c589d178df79aa1d8373f63ad712433ac983230adaa1574352561bf238dd0d32"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:4ec39fcec4f0e3fdc677aec2e971ac107642cb84bdfcca35c0572907c6d90329"
+                ],
+                "object": "urn:ref:federal-hierarchy-org:100006936",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:244"
+              },
+              {
+                "candidateId": "same:fr245:fh:100004455",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:0654f45ea013228deebf013cc97842f47d01b2021007c8232935b43f5779a5a9",
+                  "urn:ref:atlas-source-record:69678ca85bb83f51db4d90bf97153119b6ddc5bb7383f57586f707524801cf87"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:e530480bce3028816caaa7b21b72b62465cfc7899a2c2944088833638cbe5fec"
+                ],
+                "object": "urn:ref:federal-hierarchy-org:100004455",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:245"
+              },
+              {
+                "candidateId": "same:fr271:ecfr:labor-department",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:db0102e2339056015a2f5247d8fb7dcfdefe6c78da3f97ca8907da049a87f31d",
+                  "urn:ref:atlas-source-record:ea47d7435a2d49057b3642d07108569bb1573bad49202bb55c06569ec10a5123"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:e1bcfd4845d54a5cf67d81b2c4b45215a100673d830860ad8c5a7530a98d546e"
+                ],
+                "object": "urn:ref:ecfr-agency:labor-department",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:271"
+              },
+              {
+                "candidateId": "same:fr277:ecfr:library-of-congress",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:6125c3283e14477c71ab8b198094939d778fe8db10d25bc20cddae4f36316546",
+                  "urn:ref:atlas-source-record:9b03ddc46c684e97e142aaf942c83142a05249e066fc73ab238cc246967f812c"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:a2a417ac8925ea81c50ea550dac1139f0560160aef76224a7a94ec09da043503"
+                ],
+                "object": "urn:ref:ecfr-agency:library-of-congress",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:277"
+              },
+              {
+                "candidateId": "same:fr409:ecfr:postal-regulatory-commission",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:5ab33c16846ae2563e927f1a83a115ce3ac3ed6758c0dbdd8a7a9b9240b607c0",
+                  "urn:ref:atlas-source-record:afcc4e47dcfe7b7434214a0810cfd9cc9686c6a1624243252c3578daccf4f62e"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:ffe0e6be82ef180793d5981712bfe97b94fad9096bd97eed99047cc2c48d963e"
+                ],
+                "object": "urn:ref:ecfr-agency:postal-regulatory-commission",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:409"
+              },
+              {
+                "candidateId": "same:fr4:ecfr:african-development-foundation",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:020355b48f229af6bc29255bcbc41533689dfcc8d7b9f4351d13e8da1c31e42e",
+                  "urn:ref:atlas-source-record:853641347337c07ae1d61322071ae145c4caf1c1ccad26f2cd3e1823cc8150f9"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:047b694a67822a97e2a4096dd268d959dfa3265daef073eb34b9398b0c6f1ffc"
+                ],
+                "object": "urn:ref:ecfr-agency:african-development-foundation",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:4"
+              },
+              {
+                "candidateId": "same:fr503:fh:100012075",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:4b371bc5e9810ceefd93da839aa73e28e3357bde228eb59c2a7ea8e01e1235d9",
+                  "urn:ref:atlas-source-record:962dc0a5b6bd2b01ab86f3ab386dbe1dd18cb20a0e47a665366ac98522b06500"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:4f59dbc9a3d19abf28971f55f88f4d9f9e9614e77b8b1f7966c9bd648d189453"
+                ],
+                "object": "urn:ref:federal-hierarchy-org:100012075",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:503"
+              },
+              {
+                "candidateId": "same:fr587:fh:100525875",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:9bfaafba121584725c26dd9a11b923c2f6c8743ef32d3ce260fac437d100adaf",
+                  "urn:ref:atlas-source-record:bc4df55d39d5e6a8b47f95a6202435b4a0c91a361d7dd2afcc48d4669741be7f"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:6b5e9de4ab38cf6479d5de8b40d7e412afbe1f482f40420e4fb2555d0871ecee"
+                ],
+                "object": "urn:ref:federal-hierarchy-org:100525875",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:587"
+              },
+              {
+                "candidateId": "same:fr603:ecfr:investment-security-office",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:3dc95f073703efc2d87e0176592d8237929d91af9a11539ca973716dc44eb9a7",
+                  "urn:ref:atlas-source-record:f0ebec8193c93c714b1f6592f7775b22eb9162ed08062940454eac4f10efc39c"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:74a1be83cdc1afa55ef0691caaa4ba52ec63bd5455a76bdcd16c1639d31b8ecb"
+                ],
+                "object": "urn:ref:ecfr-agency:investment-security-office",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:603"
+              },
+              {
+                "candidateId": "same:fr88:ecfr:copyright-royalty-board",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:02bb3b5714caeecb15f3678d1a9a9bae334a058ab6710ab1c3c07c8be408a209",
+                  "urn:ref:atlas-source-record:e24ab8c319ae839fa2fb22da22cb2b4279c82f011c28bae6f8feed8314daefc9"
+                ],
+                "nodes": [
+                  "urn:ref:atlas-assertion:787fb86a285e15fb4ee7f2abd6776bec44c81c07c4f1f9341ec62272d6f79b0e"
+                ],
+                "object": "urn:ref:ecfr-agency:copyright-royalty-board",
+                "relation": "https://refspec.org/ns/atlas/v3#sameEntityAs",
+                "subject": "urn:ref:federal-register-agency:88"
+              }
+            ],
+            "events": [
+              {
+                "effectiveDate": "1996-01-01T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "ICCTA sec. 2's effective date for the Act",
+                  "effectiveDate": "1996-01-01",
+                  "eventId": "event:fr543",
+                  "originals": [
+                    {
+                      "publisherName": "Interstate Commerce Commission",
+                      "resourceIri": "urn:ref:federal-register-agency:543"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "functionsTaken": "the surviving economic regulation: rail rate and service regulation and the residual carrier jurisdiction the Act recodifies into subtitle IV, chartered as the Board (ICCTA title II)",
+                      "publisherName": "Surface Transportation Board",
+                      "reasoning": "The ICC Termination Act abolished the Interstate Commerce Commission and chartered the Surface Transportation Board for the economic functions that survived it, both effective 1996-01-01 by the Act's own effective-date section.",
+                      "resourceIri": "urn:ref:federal-register-agency:481",
+                      "rowId": "succ:fr543:fr481"
+                    },
+                    {
+                      "functionsTaken": "the functions the Act vests in the Secretary: carrying out the recodified motor-carrier part (49 U.S.C. 13301(a): 'Except as otherwise specified, the Secretary shall carry out this part') and the carrier-related consumer-protection enforcement the conforming amendments redirect (ICCTA secs. 314-316)",
+                      "publisherName": "Transportation Department",
+                      "reasoning": "The Act did not send everything to the Board: the Secretary of Transportation carries out the recodified motor-carrier part, the consumer-protection Acts the ICC enforced for carriers were redirected to the Secretary, and sec. 203(b) moves the personnel and assets for Secretary functions separately from the Board's.",
+                      "resourceIri": "urn:ref:federal-register-agency:492",
+                      "rowId": "succ:fr543:fr492"
+                    }
+                  ]
+                },
+                "eventId": "event:fr543",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:29c14f0400bfd923df23ff3c6e607d48863b79c626bf01d596b15b81a29d3abf"
+                ],
+                "node": "urn:ref:atlas-change-event:abd9f427d83e54d60e5c5103ac846530f3fa6bc2d24ca709546a888bfb18fef1",
+                "originals": [
+                  "urn:ref:federal-register-agency:543"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:481",
+                  "urn:ref:federal-register-agency:492"
+                ]
+              },
+              {
+                "effectiveDate": "1999-10-01T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "FARRA sec. 1301's effective date, the earlier of 1999-10-01 or the sec. 1601 plan's abolition date",
+                  "effectiveDate": "1999-10-01",
+                  "eventId": "event:fr510",
+                  "originals": [
+                    {
+                      "publisherName": "United States Information Agency",
+                      "resourceIri": "urn:ref:federal-register-agency:510"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "functionsTaken": "international broadcasting, which the Board already held inside USIA and kept: sec. 1311 excepts the Board and the International Broadcasting Bureau from the abolition, sec. 1312(b) keeps them and their functions out of the transfer to State, and sec. 1322 continues the Board as an independent establishment",
+                      "publisherName": "Broadcasting Board of Governors",
+                      "reasoning": "The Board is not new: the 1994 International Broadcasting Act consolidated broadcasting into USIA under it, and FARRA carved it out of the abolition and continued it, so USIA's broadcasting functions stayed there, not at State. The International Broadcasting Bureau (FR 256, sealed name International Broadcasting Board) is its component and stays with it.",
+                      "resourceIri": "urn:ref:federal-register-agency:41",
+                      "rowId": "succ:fr510:fr41"
+                    },
+                    {
+                      "functionsTaken": "every USIA function other than broadcasting: all functions of the Director and of the agency, transferred to the Secretary of State (FARRA sec. 1312(a))",
+                      "publisherName": "State Department",
+                      "reasoning": "The 1998 restructuring Act abolished USIA and vested every remaining function in the Secretary of State, effective 1999-10-01 under sec. 1301's default; if the owner holds that the plan abolished USIA earlier, the owner fixes that date.",
+                      "resourceIri": "urn:ref:federal-register-agency:476",
+                      "rowId": "succ:fr510:fr476"
+                    }
+                  ]
+                },
+                "eventId": "event:fr510",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:6a85bc6cb52f0f1261dbeb7b66d54a4fc1f37aa51503a19f9cbebf4bf5123123",
+                  "urn:ref:atlas-source-record:8e3c9955ecdf6b12def019d3af2f2d2be7530ff82a396b135a72c989b68539d3"
+                ],
+                "node": "urn:ref:atlas-change-event:eb5b222695fd69814cc95fe80a8795176a07a30749c94c3782146d2111551014",
+                "originals": [
+                  "urn:ref:federal-register-agency:510"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:41",
+                  "urn:ref:federal-register-agency:476"
+                ]
+              },
+              {
+                "effectiveDate": "2001-06-29T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the Reorganization Order's signature date -- the order states no effective date, and 66 FR 39450 records the Secretary's 2001-06-14 announcement of the new name",
+                  "effectiveDate": "2001-06-29",
+                  "eventId": "event:fr559",
+                  "originals": [
+                    {
+                      "publisherName": "Health Care Finance Administration",
+                      "resourceIri": "urn:ref:federal-register-agency:559"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "publisherName": "Centers for Medicare & Medicaid Services",
+                      "reasoning": "The HHS Secretary's Reorganization Order, dated 2001-06-29, retitled the Health Care Financing Administration the Centers for Medicare & Medicaid Services; the Federal Register roster keeps both records under the HHS department.",
+                      "resourceIri": "urn:ref:federal-register-agency:45",
+                      "rowId": "succ:fr559:fr45"
+                    }
+                  ]
+                },
+                "eventId": "event:fr559",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:4c651efc7785e5bd100ae1a7e80d758f310d966623e8446b2b5e530a6b7027aa",
+                  "urn:ref:atlas-source-record:7428d53b5c7ffd38bcf431b1f3a4a4117a28397776325038926525bc7be01a16"
+                ],
+                "node": "urn:ref:atlas-change-event:4eef2884f2d36341673c2179a4633371f81863b874f659e924a78992ca6bbe20",
+                "originals": [
+                  "urn:ref:federal-register-agency:559"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:45"
+                ]
+              },
+              {
+                "effectiveDate": "2002-04-18T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the Commerce organizational order's date, on which the name-change rule took effect",
+                  "effectiveDate": "2002-04-18",
+                  "eventId": "event:fr150",
+                  "originals": [
+                    {
+                      "publisherName": "Export Administration Bureau",
+                      "resourceIri": "urn:ref:federal-register-agency:150"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "publisherName": "Industry and Security Bureau",
+                      "reasoning": "Commerce renamed the Bureau of Export Administration the Bureau of Industry and Security by organizational order effective 2002-04-18; the Federal Register roster keeps the old name on FR 150 and the new one on FR 241.",
+                      "resourceIri": "urn:ref:federal-register-agency:241",
+                      "rowId": "succ:fr150:fr241"
+                    }
+                  ]
+                },
+                "eventId": "event:fr150",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:fbe7c0ec0b287b04c1381eb6e3fed033057087d575d91cfc46be687b7dd2e962"
+                ],
+                "node": "urn:ref:atlas-change-event:fef12c15bf6043aedf18c84d3fe0f22dd36f79248e9439b7029e53098017a015",
+                "originals": [
+                  "urn:ref:federal-register-agency:150"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:241"
+                ]
+              },
+              {
+                "effectiveDate": "2003-02-03T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the Secretary's Order's effective date, 'upon the date of publication in the Federal Register'",
+                  "effectiveDate": "2003-02-03",
+                  "eventId": "event:fr404",
+                  "originals": [
+                    {
+                      "publisherName": "Pension and Welfare Benefits Administration",
+                      "resourceIri": "urn:ref:federal-register-agency:404"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "publisherName": "Employee Benefits Security Administration",
+                      "reasoning": "Secretary of Labor's Order 1-2003 renamed the Pension and Welfare Benefits Administration the Employee Benefits Security Administration, effective on publication 2003-02-03; the CFR conforming amendments followed effective 2003-04-03.",
+                      "resourceIri": "urn:ref:federal-register-agency:131",
+                      "rowId": "succ:fr404:fr131"
+                    }
+                  ]
+                },
+                "eventId": "event:fr404",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:ccaf585b919cf6030ab453eee65f69dd1107631b397717ebb88e472ad2ad3ad7",
+                  "urn:ref:atlas-source-record:d25dc862ebd7c576f90132fc2d46bb01e8128d4e8d1e860ea59e0b8edcf715c2"
+                ],
+                "node": "urn:ref:atlas-change-event:d4fa1c224d390daf410678e859909c4e5a68a735d10026c7a0f88dfb26888ad1",
+                "originals": [
+                  "urn:ref:federal-register-agency:404"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:131"
+                ]
+              },
+              {
+                "effectiveDate": "2003-03-01T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the Reorganization Plan Modification's effective date, as 68 FR 51868 recites it; the Homeland Security Act itself names no such date, since its sec. 4 takes effect 60 days after enactment",
+                  "effectiveDate": "2003-03-01",
+                  "eventId": "event:fr96",
+                  "originals": [
+                    {
+                      "publisherName": "Customs Service",
+                      "resourceIri": "urn:ref:federal-register-agency:96"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "functionsTaken": "the Customs Service's inspection and ports-of-entry side (the plan's subsection (b) bureau)",
+                      "publisherName": "U.S. Customs and Border Protection",
+                      "reasoning": "HSA sec. 403(1) transferred the United States Customs Service to DHS; 68 FR 51868 records that the Service 'is now known as the bureau of Customs and Border Protection', whose inspection and border side is the plan's subsection (b). HSA sec. 412 keeps the Secretary of the Treasury's authority over customs revenue functions.",
+                      "resourceIri": "urn:ref:federal-register-agency:501",
+                      "rowId": "succ:fr96:fr501"
+                    },
+                    {
+                      "functionsTaken": "the investigation arms of the former Customs Service (H. Doc. 108-32 subsection (a))",
+                      "publisherName": "U.S. Immigration and Customs Enforcement",
+                      "reasoning": "The plan's subsection (a) builds Immigration and Customs Enforcement as the interior-enforcement bureau, and 68 FR 51868 records that ICE 'brings together the investigation arms of the former Customs Service', with the same 2003-03-01 effect. HSA sec. 412 keeps customs revenue authority with Treasury.",
+                      "resourceIri": "urn:ref:federal-register-agency:503",
+                      "rowId": "succ:fr96:fr503"
+                    }
+                  ]
+                },
+                "eventId": "event:fr96",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:2d043868817666af18ad82e9e50a316f1e536a6cfbfc0695b4db9a98db772e10",
+                  "urn:ref:atlas-source-record:35d7602a65426519c35cbeb109e504e8da55318cda4465f2bda830a7c024b71a",
+                  "urn:ref:atlas-source-record:8b642c99c6376020634b6dea9a4e3e5624a4459fa3cc5b1e4123198b8bf1c60a"
+                ],
+                "node": "urn:ref:atlas-change-event:9fc53c98821977e06a56b92628bece22737f5d7c24a9ab3c99d44a0da3818c7d",
+                "originals": [
+                  "urn:ref:federal-register-agency:96"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:501",
+                  "urn:ref:federal-register-agency:503"
+                ]
+              },
+              {
+                "effectiveDate": "2003-03-01T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the transfer-and-abolition date the delegation rule and the reorganization plan state",
+                  "effectiveDate": "2003-03-01",
+                  "eventId": "event:fr232",
+                  "originals": [
+                    {
+                      "publisherName": "Immigration and Naturalization Service",
+                      "resourceIri": "urn:ref:federal-register-agency:232"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "functionsTaken": "immigration services and adjudications (the services bureau HSA sec. 451 establishes)",
+                      "publisherName": "U.S. Citizenship and Immigration Services",
+                      "reasoning": "HSA sec. 451 established the Bureau of Citizenship and Immigration Services for the service functions; the delegation rule records the transfer of all INS functions to DHS and the INS's abolition on 2003-03-01.",
+                      "resourceIri": "urn:ref:federal-register-agency:499",
+                      "rowId": "succ:fr232:fr499"
+                    },
+                    {
+                      "functionsTaken": "the Border Patrol and the inspections program (H. Doc. 108-32 subsection (b))",
+                      "publisherName": "U.S. Customs and Border Protection",
+                      "reasoning": "HSA sec. 441 transfers the Border Patrol and inspections programs; the plan's subsection (b) places them in the Bureau of Customs and Border Protection it builds, effective 2003-03-01.",
+                      "resourceIri": "urn:ref:federal-register-agency:501",
+                      "rowId": "succ:fr232:fr501"
+                    },
+                    {
+                      "functionsTaken": "investigations, detention and removal, and intelligence (H. Doc. 108-32 subsection (a))",
+                      "publisherName": "U.S. Immigration and Customs Enforcement",
+                      "reasoning": "HSA sec. 441 transfers the investigations, detention-and-removal and intelligence programs; the plan's subsection (a) builds Immigration and Customs Enforcement around them, effective 2003-03-01, and 68 FR 51868 records that ICE brings together those investigative functions of the former INS.",
+                      "resourceIri": "urn:ref:federal-register-agency:503",
+                      "rowId": "succ:fr232:fr503"
+                    }
+                  ]
+                },
+                "eventId": "event:fr232",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:140e96e2a5f1cc9dd2f16812b8f718bc459ea2aeeb905ff40f4655966daa0232",
+                  "urn:ref:atlas-source-record:713030a6738d80818706116aa6bc2c028a4928f0dd95e504a0861d7d6955750c",
+                  "urn:ref:atlas-source-record:75d537188f6ee5ebe48bd3280a10a4d5169b184ba13177fed351c97616be3617",
+                  "urn:ref:atlas-source-record:b5f830d53fb350fc7dd1831625d7461df246be710f0db514855571bf3ad21ae7"
+                ],
+                "node": "urn:ref:atlas-change-event:251c1fbee6c0a9f18e5cb2179933324f47f07f55533597c2775752b766d145a6",
+                "originals": [
+                  "urn:ref:federal-register-agency:232"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:499",
+                  "urn:ref:federal-register-agency:501",
+                  "urn:ref:federal-register-agency:503"
+                ]
+              },
+              {
+                "effectiveDate": "2006-12-20T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "PAEA's approval date; sec. 604 states no separate effective date, and title VI's one effective-date clause, sec. 603(d)(1), governs appropriations, not the redesignation",
+                  "effectiveDate": "2006-12-20",
+                  "eventId": "event:fr564",
+                  "originals": [
+                    {
+                      "publisherName": "Postal Rate Commission",
+                      "resourceIri": "urn:ref:federal-register-agency:564"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "publisherName": "Postal Regulatory Commission",
+                      "reasoning": "PAEA sec. 604 redesignated the Postal Rate Commission as the Postal Regulatory Commission, and the roster's description of FR 409 names it the successor agency. The records are not period-disjoint, though: the Register files documents headed POSTAL RATE COMMISSION under FR 409, FR 564's one document carries a heading with a citation fused in, and FR 564's own description is the Postal Regulatory Commission's post-PAEA text, so FR 564 may be a duplicate record of the same commission rather than a predecessor.",
+                      "resourceIri": "urn:ref:federal-register-agency:409",
+                      "rowId": "succ:fr564:fr409"
+                    }
+                  ]
+                },
+                "eventId": "event:fr564",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:72c8c919f995ebf568c6cdfa1d9a48e0265ab84d3ad1f16faae58d035ed6cd94",
+                  "urn:ref:atlas-source-record:8c78d915428c597ff784dbf105853c693d3f48045255f68852023e453f2e00f3",
+                  "urn:ref:atlas-source-record:bf42b55d17ad96752c91979724db1bd731b9b6e4ee94f0c3261e8e185c8e45b1",
+                  "urn:ref:atlas-source-record:f611e29a4b745c90ab5289826bf902d2b70cac397d765ebc2bb6d0c833e362e2"
+                ],
+                "node": "urn:ref:atlas-change-event:b31b1d7a17090c80f1ab511d584299427354b0d004a59a18b6242db134f2c0b1",
+                "originals": [
+                  "urn:ref:federal-register-agency:564"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:409"
+                ]
+              },
+              {
+                "effectiveDate": "2008-11-21T00:00:00+00:00",
+                "event": {
+                  "dateBasis": "the change date the Federal Register roster states, the day E8-27525 published the renamed heading",
+                  "effectiveDate": "2008-11-21",
+                  "eventId": "event:fr259",
+                  "originals": [
+                    {
+                      "publisherName": "International Investment Office",
+                      "resourceIri": "urn:ref:federal-register-agency:259"
+                    }
+                  ],
+                  "results": [
+                    {
+                      "publisherName": "Investment Security Office",
+                      "reasoning": "The Federal Register roster's own description of FR 259 records the change to the Office of Investment Security, citing 73 FR 70716, a page inside rule E8-27525; both records sit under the Treasury department.",
+                      "resourceIri": "urn:ref:federal-register-agency:603",
+                      "rowId": "succ:fr259:fr603"
+                    }
+                  ]
+                },
+                "eventId": "event:fr259",
+                "evidenceRecords": [
+                  "urn:ref:atlas-source-record:7a2eb7f8070a9997da94fbb3d7c0558e6e43a7c2b93fb87d6e9aff3325e43610",
+                  "urn:ref:atlas-source-record:9b5cf06669d43b1af5c3668770909941a4592610fe27b548a0762bfbb74d8d3d",
+                  "urn:ref:atlas-source-record:fc215fbc0df52dee2aaf50a403b9737dc414b3d504a1fd1d11bfd1d672f7ebc8"
+                ],
+                "node": "urn:ref:atlas-change-event:089e7eab158dccb9a8ebf1c2ce3e2555cbc62ef126018bcde22283705805afa7",
+                "originals": [
+                  "urn:ref:federal-register-agency:259"
+                ],
+                "results": [
+                  "urn:ref:federal-register-agency:603"
+                ]
+              }
+            ],
+            "nonEmissionAbsences": [
+              {
+                "absent": true,
+                "itemId": "no-fr-bridge:regs:CISA"
+              },
+              {
+                "absent": true,
+                "itemId": "same:fr151:ecfr:export-import-bank"
+              },
+              {
+                "absent": true,
+                "itemId": "same:fr255:ecfr:international-boundary-and-water-commission-united-states-and-mexico"
+              },
+              {
+                "absent": true,
+                "itemId": "same:fr296:fh:300000070"
+              }
+            ]
+          },
+          "rdfQuadCount": 1061,
+          "scope": "Faithful representation of recorded owner decisions and pinned primary-source review; no legal adjudication",
+          "status": "passed",
+          "trustedInputs": {
+            "agencyViewManifest": {
+              "path": "output/agency-registry-view/view-manifest.json",
+              "sha256": "sha256:77b357cc06fe3e67bcacb0591833884087572727064f89643e10aa2a28ad6b87"
+            },
+            "auditEvidenceManifest": {
+              "path": "research/atlas-refresh-2026-09-27/independent/agency/audit-evidence-manifest.json",
+              "sha256": "sha256:fde4401ea78b2e0e5c1c758b90d32def2d81d40693098a5f3ca904e33344ef3b"
+            },
+            "reviewReceipt": {
+              "path": "research/atlas-refresh-2026-09-27/independent/agency/claim-receipt.json",
+              "sha256": "sha256:4b6a8e01b2d589ad1a2fcad17406070da15c9d31c725f127450efc70ae2ba9ed"
+            }
+          }
+        },
+        "status": "exact"
+      },
+      "fidelityStatus": "exact",
+      "identityPolicy": "publisher-iri",
+      "includedPublisherConceptIris": [],
+      "kind": "agency",
+      "name": "agency-registry-2026-09-26",
+      "nativeControl": null,
+      "nonWaivingPredicateDeclarations": [],
+      "organizationRecordPayloadFields": [],
+      "policies": [],
+      "publisherInputs": [
+        {
+          "archiveMember": null,
+          "byteLength": 1154183,
+          "constructionPath": "output/registry-real-data-sources/EHRI-Data-Standards-20260804.xlsx",
+          "evidenceClass": "directSourceBytes",
+          "path": "output/registry-real-data-sources/EHRI-Data-Standards-20260804.xlsx",
+          "role": "agencyRoster03Input01",
+          "sha256": "sha256:6978bd6d76158f029d468982737fcd68e6dd742c2aedaa9ab5dca151d2a84bfc",
+          "sourceIri": "https://data.opm.gov/data-standards/ehri-data-standards"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 191706,
+          "constructionPath": "plans/agency-registry-batch-1-candidates.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "plans/agency-registry-batch-1-candidates.json",
+          "role": "ownerCandidates",
+          "sha256": "sha256:6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2",
+          "sourceIri": "urn:ref:source-artifact:6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 6744,
+          "constructionPath": "plans/agency-registry-batch-1-decisions.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "plans/agency-registry-batch-1-decisions.json",
+          "role": "ownerDecisions",
+          "sha256": "sha256:a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098",
+          "sourceIri": "urn:ref:source-artifact:a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 98197,
+          "constructionPath": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+          "role": "agencyRoster04Input01",
+          "sha256": "sha256:766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+          "sourceIri": "https://www.ecfr.gov/api/admin/v1/agencies.json"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 183892,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+          "role": "agencyRoster02Input01",
+          "sha256": "sha256:b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=0"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 179237,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-1.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-1.json",
+          "role": "agencyRoster02Input02",
+          "sha256": "sha256:8043dd5bcc850b0036ed1c28c5f36a55d1bb44e4c0c934548c9f8086f21ad6e2",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=200"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 181649,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-2.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-2.json",
+          "role": "agencyRoster02Input03",
+          "sha256": "sha256:7dbb2ab10f480f08f661049cda4753d5618983d4ba0c95fca314348f53804c64",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=400"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 182189,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+          "role": "agencyRoster02Input04",
+          "sha256": "sha256:90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=600"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 100030,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+          "role": "agencyRoster02Input05",
+          "sha256": "sha256:bb78b6c039167ef158bea672275c86961be784e269f4db41a52e4b0cd09c277e",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=800"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 919,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-total-dept.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-total-dept.json",
+          "role": "agencyRoster02Input06",
+          "sha256": "sha256:e08d262428b48a2539c8db513982510e731978220461e7058c155d2a01ab35b6",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?fhorgtype=Department%2FInd.%20Agency&limit=1&offset=0"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 898,
+          "constructionPath": "tests/fixtures/federal_hierarchy_complete/fh-orgs-total-subtier.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_hierarchy_complete/fh-orgs-total-subtier.json",
+          "role": "agencyRoster02Input07",
+          "sha256": "sha256:9f23757566e92492e4eeb0bd272a677048a87985bba9db98930f354359431359",
+          "sourceIri": "https://api.sam.gov/prod/federalorganizations/v1/orgs?fhorgtype=Sub-Tier&limit=1&offset=0"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 694024,
+          "constructionPath": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+          "role": "agencyRoster01Input01",
+          "sha256": "sha256:70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+          "sourceIri": "https://www.federalregister.gov/api/v1/agencies"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 229776,
+          "constructionPath": "tests/fixtures/federal_register_native_controls/fr-api-documentation-2026-08-15.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/federal_register_native_controls/fr-api-documentation-2026-08-15.json",
+          "role": "agencyRoster01Input02",
+          "sha256": "sha256:9190df715f0227e62acb57ff924635fc7115732064a5d2c1fb15a57d80879a42",
+          "sourceIri": "https://www.federalregister.gov/api/v1/documentation.json"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 8033,
+          "constructionPath": "tests/fixtures/govinfo_collections/ecfr-cfr-titles-2026-08-03.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/govinfo_collections/ecfr-cfr-titles-2026-08-03.json",
+          "role": "agencyRoster04Input02",
+          "sha256": "sha256:a5985527fc0b07ac95d2cb5d7c867cfd0ddbc2712708e271edbe4ad742001781",
+          "sourceIri": "https://www.ecfr.gov/api/versioner/v1/titles.json"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 91408,
+          "constructionPath": "tests/fixtures/regulations_gov_agencies/regulations-gov-agencies-2026-08-16.json",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/regulations_gov_agencies/regulations-gov-agencies-2026-08-16.json",
+          "role": "agencyRoster05Input01",
+          "sha256": "sha256:28ab9f5422dd27fc7906ddc696e8e7811b11056822f370bcee7ea18a28418fa2",
+          "sourceIri": "https://api.regulations.gov/v4/agencies"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 420508,
+          "constructionPath": "tests/fixtures/treasury_tas_fast_book/fast-book-part-ii-iii-2026-07-31.xlsx",
+          "evidenceClass": "directSourceBytes",
+          "path": "tests/fixtures/treasury_tas_fast_book/fast-book-part-ii-iii-2026-07-31.xlsx",
+          "role": "agencyRoster02Input08",
+          "sha256": "sha256:0e40902a2e4bfee7439fbe24d90fd9ff39fad859b4ba432725256866b06cb461",
+          "sourceIri": "https://tfx.treasury.gov/media/60111/download?inline="
+        }
+      ],
+      "publisherLoaded": true,
+      "publisherReader": "independent-agency",
+      "readingExceptions": [],
+      "releaseKeys": [
+        "agency-registry-2026-09-26"
+      ],
+      "sourceExtract": null,
+      "subset": "all"
+    }
+  ],
+  "constructionSummaryDigest": "sha256:768aa5f7824036b1729c25b4f5aaea80223713b62d4d17f842ab12a821f374af",
+  "coverage": {
+    "adapterLoadedUnitCount": 1,
+    "constructionUnitCount": 8,
+    "constructionUnits": [
+      {
+        "inputCount": 16,
+        "key": "agency-registry-2026-09-26",
+        "kind": "mapping",
+        "packCount": 1,
+        "resourceCount": 0,
+        "status": "exact"
+      },
+      {
+        "inputCount": 2,
+        "key": "ecfr-agencies-roster-2026-08-15",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 316,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 1,
+        "key": "ecfr-cfr-titles",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 50,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 8,
+        "key": "federal-hierarchy-orgs-complete-2026-08-15",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 907,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 2,
+        "key": "federal-register-agencies-roster-2026-08-15",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 472,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 1,
+        "key": "opm-ehri-agency-subelement-2026-08-04",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 798,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 1,
+        "key": "regulations-gov-agencies-roster-2026-08-16",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 331,
+        "status": "not-evaluated-scoped-out"
+      },
+      {
+        "inputCount": 1,
+        "key": "treasury-fast-book-accounts-parts-ii-iii-2026-07",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 3581,
+        "status": "not-evaluated-scoped-out"
+      }
+    ],
+    "coveredUnitCount": 1,
+    "coveredUnits": [
+      "agency-registry-2026-09-26"
+    ],
+    "exactUnitCount": 1,
+    "notEvaluatedScopedOutUnitCount": 7,
+    "uncoveredUnits": []
+  },
+  "executablePolicies": {
+    "english-annotation-selection": "Compare every publisher definition and note in both directions; the historical policy name grants no non-English waiver.",
+    "english-label-selection": "Compare every publisher label in both directions, including language and datatype; the historical policy name grants no non-English waiver.",
+    "skos-note-to-atlas-note": "Compare each exact SKOS or XKOS note literal with generic atlas:note, reject collisions, and require the original source predicate to remain in native payload evidence.",
+    "top-concept-source-shape-inverse": "Reverse nativePayload.topConceptOfIris into each top-concept direction that the publisher graph actually asserts, and reject claims absent in both directions."
+  },
+  "expectations": {
+    "minimumLabelSample": 200,
+    "requestedMinimumLabelSample": 200,
+    "requireCompleteCoverage": true,
+    "requireInputPins": true,
+    "requirePackPins": true,
+    "requiredSources": []
+  },
+  "implementationFiles": [
+    {
+      "path": "tools/verify_atlas_source_fidelity.py",
+      "sha256": "sha256:39c5c55406ffdf74a14bfaca2541e3254ce17ed4cde9e69db4a35d55c0ece592"
+    },
+    {
+      "path": "tools/atlas_independent_pdf.py",
+      "sha256": "sha256:e327770af7116efbd6067d74648da3e90b055d46bfa41fed9c4bb5a798494525"
+    },
+    {
+      "path": "tools/atlas_independent_agency.py",
+      "sha256": "sha256:673e1c407a3f5a64f3cff9f0f59a66cb743eaef283f396a4d38d8081b02edfd6"
+    }
+  ],
+  "languageScope": {
+    "atlasNonEnglishLiteralClaimCount": 0,
+    "atlasNonEnglishLiteralClaimExamples": [],
+    "atlasNonEnglishLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasNoncanonicalSemanticLiteralClaimCount": 0,
+    "atlasNoncanonicalSemanticLiteralClaimExamples": [],
+    "atlasNoncanonicalSemanticLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasScanFailures": [],
+    "declaredPublisherClaimCount": 0,
+    "expectedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "observedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "sourceDeclarationCount": 0
+  },
+  "manifestDigest": "sha256:560266ed48d2db7a8c86cddd861f17f31f9b3d6ead7f10edbdc45be61de14dc1",
+  "passed": true,
+  "receiptLimits": {
+    "cappedFields": [
+      "results[].failures",
+      "results[].sourceFindings"
+    ],
+    "completeness": "each capped field carries its own totalCount, a truncated flag, and a sha256 over the complete ordered list, so a re-run proves the omitted tail",
+    "perCheckListLimit": 100
+  },
+  "results": [
+    {
+      "check": "load-errors",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 source, inventory, or pack loading errors collected"
+    },
+    {
+      "check": "configuration",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "audit settings checked for fail-open values"
+    },
+    {
+      "check": "language-scope",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "no language-scope declaration applies to this run"
+    },
+    {
+      "check": "claim-scope",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 declared source claim families checked for complete evaluation scope"
+    },
+    {
+      "check": "distribution-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1/8 construction units have an independent comparison; 7 not evaluated (scoped out)"
+    },
+    {
+      "check": "publisher-input-pins",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "16 distinct publisher inputs authenticated; 16/16 construction input rows matched exactly"
+    },
+    {
+      "check": "graph-structure",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1 manifest-discovered packs checked for transport and source-evidence structure"
+    },
+    {
+      "check": "rdf-provenance-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 RDF source records checked against publisher bytes"
+    },
+    {
+      "check": "agency-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "Independent agency decisions, evidence and view comparison"
+    },
+    {
+      "check": "native-control-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 controlled values compared directly with pinned Parquet rows"
+    },
+    {
+      "check": "source-extract-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 extract concepts compared with the Atlas packs that represent them"
+    },
+    {
+      "check": "concept-traceability",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 asserted concepts traced to a publisher record across 0 sources"
+    },
+    {
+      "check": "identifier-retention",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 concept identities checked against declared source identity policies"
+    },
+    {
+      "check": "label-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas labels compared byte-for-byte against publisher literals"
+    },
+    {
+      "check": "notation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas notations compared as exact RDF literals"
+    },
+    {
+      "check": "annotation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas definitions and notes compared as exact RDF literals in every language"
+    },
+    {
+      "check": "member-iri-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas member IRI claims compared with publisher claims"
+    },
+    {
+      "check": "member-literal-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas member metadata literals compared with publisher claims"
+    },
+    {
+      "check": "top-concept-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas topConceptOf assignments compared against exact publisher claims"
+    },
+    {
+      "check": "relation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 asserted relations matched a publisher triple exactly, direction included"
+    },
+    {
+      "check": "no-manufactured-relations",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 asserted relations checked for manufacture and predicate strengthening"
+    },
+    {
+      "check": "reification-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 relation statement reifications reconstructed from Atlas"
+    },
+    {
+      "check": "count-reconciliation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 source claim categories reconciled exactly"
+    },
+    {
+      "check": "scheme-organisation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 vocabularies checked by reversing publisher-native scheme claims"
+    },
+    {
+      "check": "source-release-metadata",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas release claims compared against publisher release descriptions"
+    },
+    {
+      "check": "source-claim-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 publisher or Atlas source claims remain outside executable comparisons; 0 more are declared out of scope and itemised in the receipt"
+    },
+    {
+      "check": "source-defects",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 defects observed in publisher data and reported, not repaired"
+    }
+  ],
+  "scope": {
+    "complete": false,
+    "evaluatedComparisons": [
+      "agency-registry-2026-09-26"
+    ],
+    "scopedOutComparisons": [
+      "billstatus-action-codes",
+      "billstatus-bill-types",
+      "billstatus-summary-version-codes",
+      "census-data-flags",
+      "census-function-items",
+      "census-tiger-geoid-structure",
+      "cfr-subject-index-parts-2026-08-20",
+      "courtlistener-jurisdictions-2026-08-03",
+      "crs-legislative-entities",
+      "crs-legislative-subjects",
+      "crs-policy-areas",
+      "doe-osti-semantic-thesaurus-2020",
+      "ecfr-agencies-roster-2026-08-15",
+      "ecfr-cfr-titles",
+      "elsst-r6",
+      "eurovoc-4.24",
+      "eurovoc-domains-4.24",
+      "eurovoc-gemet-alignment-20201218",
+      "eurovoc-lcsh-alignment-20240711",
+      "eurovoc-mesh-alignment-20171215",
+      "eurovoc-microthesauri-4.24",
+      "fac-api-field-dictionary-2026-08-03",
+      "fast-bulk-external-links-delta-2026-07-27",
+      "fast-bulk-see-also-endpoints-2026-07-27",
+      "fast-lcsh-adopted-2026-08-15",
+      "fast-topical-current",
+      "fcc-bureaus-offices-roster-2026-08-15",
+      "fec-committee-designation",
+      "fec-committee-type",
+      "fec-filing-frequency",
+      "fec-organization-type",
+      "fec-party",
+      "federal-hierarchy-orgs-complete-2026-08-15",
+      "federal-register-agencies-roster-2026-08-15",
+      "federal-register-api-topics-2026-08-03",
+      "federal-register-documented-document-types-2026-08-15",
+      "federal-register-documented-presidential-document-types-2026-08-15",
+      "federal-register-thesaurus-2025",
+      "ferc-docket-prefixes",
+      "ferc-document-class-types",
+      "ferc-sectors",
+      "ferc-security-levels",
+      "gao-cra-priority-of-regulation",
+      "gao-cra-rule-types",
+      "gao-published-topics-capture-subset-2026-09-01",
+      "gcmd-science-keywords-24-4",
+      "gemet-4.2.3",
+      "gemet-eurovoc-alignments-4.2.3",
+      "gemet-umthes-alignments-4.2.3",
+      "govinfo-collections",
+      "grants-gov-eligibilities",
+      "grants-gov-funding-categories",
+      "gsdm-data-dictionary-domain-values-2026-08-03",
+      "gsdm-online-data-dictionary-2026-08-03",
+      "icpsr-subject-thesaurus",
+      "lc-external-agrovoc-endpoints-2026-08-15",
+      "lc-external-bncf-endpoints-2026-08-15",
+      "lc-external-bne-endpoints-2026-08-15",
+      "lc-external-fast-endpoints-2026-08-15",
+      "lc-external-getty-aat-endpoints-2026-08-15",
+      "lc-external-getty-ulan-endpoints-2026-08-15",
+      "lc-external-gnd-endpoints-2026-08-15",
+      "lc-external-homosaurus-endpoints-2026-08-15",
+      "lc-external-nalt-endpoints-2026-08-15",
+      "lc-external-ndl-names-endpoints-2026-08-15",
+      "lc-external-ndl-subjects-endpoints-2026-08-15",
+      "lc-external-periodo-lcsh-periods-endpoints-2026-08-15",
+      "lc-external-rameau-endpoints-2026-08-15",
+      "lc-external-wikidata-endpoints-2026-08-15",
+      "lc-external-yso-endpoints-2026-08-15",
+      "lcsh-external-links-mappings-2026-08-15",
+      "lcsh-subjects-consolidated-2026-08-06",
+      "lda-filing-types",
+      "lda-general-issue-codes",
+      "mesh-descriptors-2026",
+      "mesh-lcsh-mapping-2021-03-31",
+      "naics-2022",
+      "nasa-technology-taxonomy-8817",
+      "nasa-thesaurus-skos",
+      "nppes-data-dissemination-layout-v2-2026-08-03",
+      "nrc-adams-documented-accession-number-2026-08-15",
+      "nrc-adams-documented-profile-properties-2026-08-15",
+      "oira-review-controls",
+      "omb-a11-apportionment-categories",
+      "omb-a11-functional-classification",
+      "omb-a11-object-classification",
+      "opm-ehri-agency-subelement-2026-08-04",
+      "opm-ehri-data-standards-2026-08-04",
+      "oversight-report-types",
+      "pra-icr-controls",
+      "psc-april-2025",
+      "regulations-gov-agencies-roster-2026-08-16",
+      "regulations-gov-agency-identity-2026-08-16",
+      "regulations-gov-docket-type",
+      "regulations-gov-document-type",
+      "regulations-gov-submitter-type",
+      "sam-assistance-assistance-types",
+      "sam-assistance-eligible-applicant-types",
+      "sam-assistance-eligible-beneficiary-types",
+      "sam-opportunities-notice-types",
+      "sam-opportunities-opportunity-statuses",
+      "sam-opportunities-set-aside-codes",
+      "treasury-fast-book-accounts-parts-ii-iii-2026-07",
+      "treasury-fast-book-fund-groups-2026-07",
+      "umthes-gemet-endpoints-2026-08-15",
+      "unified-agenda-agency-relation",
+      "unified-agenda-dline-action-stage",
+      "unified-agenda-dline-type",
+      "unified-agenda-energy-affected",
+      "unified-agenda-eo13771-designation",
+      "unified-agenda-federalism",
+      "unified-agenda-gao-cra-priority-2026-08-15",
+      "unified-agenda-govt-level",
+      "unified-agenda-international-interest",
+      "unified-agenda-legal-authority-citation-types",
+      "unified-agenda-major",
+      "unified-agenda-print-paper",
+      "unified-agenda-priority-category",
+      "unified-agenda-rfa-required",
+      "unified-agenda-rfa-section610-review",
+      "unified-agenda-rin-relation",
+      "unified-agenda-rin-status",
+      "unified-agenda-rplan-entry",
+      "unified-agenda-rule-stage",
+      "unified-agenda-small-entity",
+      "unified-agenda-timetable-action",
+      "unified-agenda-unfunded-mandate",
+      "usaspending-award-types",
+      "uscourts-nature-of-suit",
+      "usgs-gnis-identifiers"
+    ],
+    "scopedOutUnits": [
+      "ecfr-agencies-roster-2026-08-15",
+      "ecfr-cfr-titles",
+      "federal-hierarchy-orgs-complete-2026-08-15",
+      "federal-register-agencies-roster-2026-08-15",
+      "opm-ehri-agency-subelement-2026-08-04",
+      "regulations-gov-agencies-roster-2026-08-16",
+      "treasury-fast-book-accounts-parts-ii-iii-2026-07"
+    ]
+  },
+  "type": "AtlasSourceFidelityReceipt",
+  "verifier": "atlas-source-fidelity/16"
+}

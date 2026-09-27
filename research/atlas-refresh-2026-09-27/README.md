@@ -1,5 +1,8 @@
 # Atlas refresh, 2026-09-27
 
+This is the retained investigation before the repairs. For current implementation
+and qualification status, see the [repair validation record](repair-validation/README.md).
+
 The refresh starts from RefSpec dev21 (`41e2bf9d`, SpicyDocs 0.46.0) on
 `lane/atlas-refresh-20260927`. Commit `cc507773` corrects the independent validator's
 preferred-label rule before rebuilding the full Atlas. Bounded artifacts pass

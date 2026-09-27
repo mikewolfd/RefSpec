@@ -1,0 +1,1034 @@
+{
+  "comparisons": [
+    {
+      "atlasLoaded": true,
+      "atlasOnlyNativePayloadFields": [],
+      "checkedPackTransports": [
+        {
+          "byteLength": 4468656,
+          "manifestByteLength": 4468656,
+          "manifestSha256": "sha256:1665fde5c6f6a15680df75fc828d6da7a52bab77a44f4fa136f87f24181f9cb6",
+          "path": "sources/umthes-gemet-endpoints-2026-08-15/all.nq.zst",
+          "sha256": "sha256:1665fde5c6f6a15680df75fc828d6da7a52bab77a44f4fa136f87f24181f9cb6"
+        }
+      ],
+      "checkedPacks": [
+        "sources/umthes-gemet-endpoints-2026-08-15/all.nq.zst"
+      ],
+      "claimScope": {
+        "claimFamilies": [
+          {
+            "atlasClaimCount": 5196,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "preferredLabels",
+            "sourceClaimCount": 5196,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 10378,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "alternateLabels",
+            "sourceClaimCount": 10378,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 1667,
+            "atlasPredicates": [
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "checkedBy": "label-fidelity",
+            "languageAndDatatypeCompared": true,
+            "languageSelection": "all",
+            "lexicalFormRetained": true,
+            "name": "hiddenLabels",
+            "sourceClaimCount": 1667,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "http://www.w3.org/2008/05/skos-xl#literalForm"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#notation"
+            ],
+            "checkedBy": "notation-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "notations",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#notation"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#definition"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "languageSelection": "all",
+            "name": "definitions",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#definition"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#note",
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "languageSelection": "all",
+            "mappedSourceValueCount": 0,
+            "name": "notes",
+            "recoveredSourcePredicateCount": 0,
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityReconstructable": true,
+            "sourcePredicates": [
+              "http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote",
+              "http://www.w3.org/2004/02/skos/core#changeNote",
+              "http://www.w3.org/2004/02/skos/core#editorialNote",
+              "http://www.w3.org/2004/02/skos/core#example",
+              "http://www.w3.org/2004/02/skos/core#historyNote",
+              "http://www.w3.org/2004/02/skos/core#note",
+              "http://www.w3.org/2004/02/skos/core#scopeNote"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "name": "resourceValuedAnnotations",
+            "sourceClaimCount": 0,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://rdf-vocabulary.ddialliance.org/xkos#additionalContentNote",
+              "http://www.w3.org/2004/02/skos/core#changeNote",
+              "http://www.w3.org/2004/02/skos/core#definition",
+              "http://www.w3.org/2004/02/skos/core#editorialNote",
+              "http://www.w3.org/2004/02/skos/core#example",
+              "http://www.w3.org/2004/02/skos/core#historyNote",
+              "http://www.w3.org/2004/02/skos/core#note",
+              "http://www.w3.org/2004/02/skos/core#scopeNote"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "annotation-fidelity",
+            "name": "annotationTargetClosure",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 3365,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-iri-fidelity",
+            "name": "memberIriMetadata",
+            "sourceClaimCount": 3365,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-literal-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "memberMetadataLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "member-literal-fidelity",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "sourceWideLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 3365,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "checkedBy": "concept-traceability",
+            "name": "conceptIdentities",
+            "sourceClaimCount": 3365,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 4900,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+            ],
+            "checkedBy": "relation-fidelity",
+            "name": "semanticRelations",
+            "sourceClaimCount": 4900,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#broader",
+              "http://www.w3.org/2004/02/skos/core#narrower",
+              "http://www.w3.org/2004/02/skos/core#related",
+              "http://www.w3.org/2004/02/skos/core#exactMatch",
+              "http://www.w3.org/2004/02/skos/core#closeMatch",
+              "http://www.w3.org/2004/02/skos/core#broadMatch",
+              "http://www.w3.org/2004/02/skos/core#narrowMatch",
+              "http://www.w3.org/2004/02/skos/core#relatedMatch"
+            ],
+            "status": "exact"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "schemeMemberships",
+            "nativeSourceMembershipCount": 0,
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#inScheme"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "sourceSchemeIdentities",
+            "reconstruction": "exact source type; native scheme references prove membership, not an explicit publisher rdf:type claim",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "scheme-organisation",
+            "name": "sourceSchemeIriMetadata",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload",
+              "http://www.w3.org/2008/05/skos-xl#prefLabel",
+              "http://www.w3.org/2008/05/skos-xl#altLabel",
+              "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+              "https://refspec.org/ns/atlas/v3#notation",
+              "https://refspec.org/ns/atlas/v3#definition",
+              "https://refspec.org/ns/atlas/v3#note"
+            ],
+            "checkedBy": "scheme-organisation",
+            "languageAndDatatypeCompared": true,
+            "lexicalFormRetained": true,
+            "name": "sourceSchemeLiterals",
+            "sourceClaimCount": 0,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "top-concept-fidelity",
+            "name": "topConceptOfAssignments",
+            "nativePayloadEvidence": true,
+            "sourceClaimCount": 0,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#topConceptOf"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "top-concept-fidelity",
+            "name": "hasTopConceptAssignments",
+            "reconstruction": "inverse nativePayload.topConceptOfIris",
+            "sourceClaimCount": 0,
+            "sourceDirectionRetained": true,
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [
+              "http://www.w3.org/2004/02/skos/core#hasTopConcept"
+            ],
+            "status": "not-applicable"
+          },
+          {
+            "adoptedReleaseIris": [
+              "urn:ref:source-release:umthes:gemet-endpoints:978b10cd1e3f2f8729372a86f2afa1b62d2790e4810c6d57af5343835259d25f"
+            ],
+            "atlasClaimCount": 0,
+            "atlasPredicates": [],
+            "checkedBy": "source-release-metadata",
+            "name": "sourceReleaseMetadata",
+            "sourceClaimCount": 0,
+            "sourceFieldFamilies": {},
+            "sourcePredicateIdentityRetained": true,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [],
+            "checkedBy": "source-claim-coverage",
+            "meaning": "publisher or Atlas source-shaped claims not owned by any executable comparison",
+            "name": "completeSourceClaimCoverage",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [],
+            "status": "not-applicable"
+          },
+          {
+            "atlasClaimCount": 0,
+            "atlasPredicates": [
+              "https://refspec.org/ns/atlas/v3#representsResource",
+              "https://refspec.org/ns/atlas/v3#sourceLocator",
+              "https://refspec.org/ns/atlas/v3#sourceDigest",
+              "https://refspec.org/ns/atlas/v3#nativePayload"
+            ],
+            "checkedBy": "rdf-provenance-fidelity",
+            "evaluationFailureCount": 0,
+            "name": "sourceRecordProvenance",
+            "sourceClaimCount": 0,
+            "sourcePredicates": [],
+            "status": "exact"
+          }
+        ],
+        "intentionallyExcludedFamilies": [
+          {
+            "name": "atlasRepresentationStructure",
+            "predicates": [
+              "https://refspec.org/ns/atlas/v3#contentDigest",
+              "https://refspec.org/ns/atlas/v3#inRelease",
+              "https://refspec.org/ns/atlas/v3#inScheme",
+              "https://refspec.org/ns/atlas/v3#recordStatus",
+              "https://refspec.org/ns/atlas/v3#resourceProfile",
+              "https://refspec.org/ns/atlas/v3#semanticRing",
+              "https://refspec.org/ns/atlas/v3#sourceRecord"
+            ],
+            "reason": "classes, rings, profiles, releases, schemes, source records, relation assertions, rkaf evidence bindings, and the record lifecycle state are Atlas-minted and are not publisher claims; each listed predicate is still a failure on any subject the comparison does not already know"
+          }
+        ],
+        "status": "exact",
+        "unexpectedPublisherPredicates": []
+      },
+      "fidelityStatus": "exact",
+      "identityPolicy": "publisher-iri",
+      "includedPublisherConceptIris": [],
+      "kind": "vocabulary",
+      "name": "umthes-gemet-endpoints-2026-08-15",
+      "nativeControl": null,
+      "nonWaivingPredicateDeclarations": [],
+      "organizationRecordPayloadFields": [],
+      "policies": [
+        "english-annotation-selection",
+        "english-label-selection",
+        "skos-note-to-atlas-note",
+        "top-concept-source-shape-inverse"
+      ],
+      "publisherInputs": [
+        {
+          "archiveMember": null,
+          "byteLength": 11935413,
+          "constructionPath": "refspec/output/registry-real-data-sources/umthes-gemet-endpoints-2026-08-15.zip",
+          "evidenceClass": "directSourceBytes",
+          "path": "umthes-gemet-endpoints-2026-08-15.zip",
+          "role": "publisherEndpointSource",
+          "sha256": "sha256:978b10cd1e3f2f8729372a86f2afa1b62d2790e4810c6d57af5343835259d25f",
+          "sourceIri": "https://sns.uba.de/umthes/"
+        },
+        {
+          "archiveMember": null,
+          "byteLength": 7423725,
+          "constructionPath": "refspec/output/registry-real-data-sources/gemet-4.2.3.rdf.gz",
+          "evidenceClass": "directSourceBytes",
+          "path": "gemet-4.2.3.rdf.gz",
+          "role": "publisherMappingSource",
+          "sha256": "sha256:96002bb7cd1f89bccb05ee174fb834a04dd7342bdd1428f32105cd47fd6b73b6",
+          "sourceIri": "https://www.eionet.europa.eu/gemet/4.2.3/gemet.rdf.gz"
+        }
+      ],
+      "publisherLoaded": true,
+      "publisherReader": "umthes-endpoint-ntriples-archive-v1/1.0",
+      "readingExceptions": [],
+      "releaseKeys": [
+        "umthes-gemet-endpoints-2026-08-15"
+      ],
+      "sourceExtract": null,
+      "subset": "all"
+    }
+  ],
+  "constructionSummaryDigest": "sha256:d389e10fda47f630035548d3ab04fea2dc8f84ecba5a51fe1d682e759b1d37a9",
+  "coverage": {
+    "adapterLoadedUnitCount": 1,
+    "constructionUnitCount": 1,
+    "constructionUnits": [
+      {
+        "inputCount": 2,
+        "key": "umthes-gemet-endpoints-2026-08-15",
+        "kind": "sourceRelease",
+        "packCount": 1,
+        "resourceCount": 3365,
+        "status": "exact"
+      }
+    ],
+    "coveredUnitCount": 1,
+    "coveredUnits": [
+      "umthes-gemet-endpoints-2026-08-15"
+    ],
+    "exactUnitCount": 1,
+    "notEvaluatedScopedOutUnitCount": 0,
+    "uncoveredUnits": []
+  },
+  "executablePolicies": {
+    "english-annotation-selection": "Compare every publisher definition and note in both directions; the historical policy name grants no non-English waiver.",
+    "english-label-selection": "Compare every publisher label in both directions, including language and datatype; the historical policy name grants no non-English waiver.",
+    "skos-note-to-atlas-note": "Compare each exact SKOS or XKOS note literal with generic atlas:note, reject collisions, and require the original source predicate to remain in native payload evidence.",
+    "top-concept-source-shape-inverse": "Reverse nativePayload.topConceptOfIris into each top-concept direction that the publisher graph actually asserts, and reject claims absent in both directions."
+  },
+  "expectations": {
+    "minimumLabelSample": 200,
+    "requestedMinimumLabelSample": 200,
+    "requireCompleteCoverage": true,
+    "requireInputPins": true,
+    "requirePackPins": true,
+    "requiredSources": []
+  },
+  "implementationFiles": [
+    {
+      "path": "tools/verify_atlas_source_fidelity.py",
+      "sha256": "sha256:39c5c55406ffdf74a14bfaca2541e3254ce17ed4cde9e69db4a35d55c0ece592"
+    },
+    {
+      "path": "tools/atlas_independent_pdf.py",
+      "sha256": "sha256:e327770af7116efbd6067d74648da3e90b055d46bfa41fed9c4bb5a798494525"
+    },
+    {
+      "path": "tools/atlas_independent_agency.py",
+      "sha256": "sha256:673e1c407a3f5a64f3cff9f0f59a66cb743eaef283f396a4d38d8081b02edfd6"
+    }
+  ],
+  "languageScope": {
+    "atlasNonEnglishLiteralClaimCount": 0,
+    "atlasNonEnglishLiteralClaimExamples": [],
+    "atlasNonEnglishLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasNoncanonicalSemanticLiteralClaimCount": 0,
+    "atlasNoncanonicalSemanticLiteralClaimExamples": [],
+    "atlasNoncanonicalSemanticLiteralClaimsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "atlasScanFailures": [],
+    "declaredPublisherClaimCount": 0,
+    "expectedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "observedConstructionStatement": {
+      "includedLanguageFamilies": [
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja"
+      ],
+      "selectionRule": "publisher-or-deterministic-lowercase-bcp47",
+      "unselectedPublisherContent": "notRepresented",
+      "wireLanguageTag": "lowercase-bcp47"
+    },
+    "sourceDeclarationCount": 0
+  },
+  "manifestDigest": "sha256:474328e2a2d2bcbbcb2c00861afc18831c215c06ec82b826700b79c845838e02",
+  "passed": true,
+  "receiptLimits": {
+    "cappedFields": [
+      "results[].failures",
+      "results[].sourceFindings"
+    ],
+    "completeness": "each capped field carries its own totalCount, a truncated flag, and a sha256 over the complete ordered list, so a re-run proves the omitted tail",
+    "perCheckListLimit": 100
+  },
+  "results": [
+    {
+      "check": "load-errors",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 source, inventory, or pack loading errors collected"
+    },
+    {
+      "check": "configuration",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "audit settings checked for fail-open values"
+    },
+    {
+      "check": "language-scope",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "no language-scope declaration applies to this run"
+    },
+    {
+      "check": "claim-scope",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "22 declared source claim families checked for complete evaluation scope"
+    },
+    {
+      "check": "distribution-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1/1 construction units have an independent comparison"
+    },
+    {
+      "check": "publisher-input-pins",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "2 distinct publisher inputs authenticated; 2/2 construction input rows matched exactly"
+    },
+    {
+      "check": "graph-structure",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1 manifest-discovered packs checked for transport and source-evidence structure"
+    },
+    {
+      "check": "rdf-provenance-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3415 RDF source records checked against publisher bytes"
+    },
+    {
+      "check": "agency-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "Independent agency decisions, evidence and view comparison"
+    },
+    {
+      "check": "native-control-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 controlled values compared directly with pinned Parquet rows"
+    },
+    {
+      "check": "source-extract-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 extract concepts compared with the Atlas packs that represent them"
+    },
+    {
+      "check": "concept-traceability",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 asserted concepts traced to a publisher record across 1 sources"
+    },
+    {
+      "check": "identifier-retention",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 concept identities checked against declared source identity policies"
+    },
+    {
+      "check": "label-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "17241 Atlas labels compared byte-for-byte against publisher literals"
+    },
+    {
+      "check": "notation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas notations compared as exact RDF literals"
+    },
+    {
+      "check": "annotation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas definitions and notes compared as exact RDF literals in every language"
+    },
+    {
+      "check": "member-iri-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "3365 Atlas member IRI claims compared with publisher claims"
+    },
+    {
+      "check": "member-literal-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas member metadata literals compared with publisher claims"
+    },
+    {
+      "check": "top-concept-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas topConceptOf assignments compared against exact publisher claims"
+    },
+    {
+      "check": "relation-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "4900 asserted relations matched a publisher triple exactly, direction included"
+    },
+    {
+      "check": "no-manufactured-relations",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "4900 asserted relations checked for manufacture and predicate strengthening"
+    },
+    {
+      "check": "reification-fidelity",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 relation statement reifications reconstructed from Atlas"
+    },
+    {
+      "check": "count-reconciliation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "17 source claim categories reconciled exactly"
+    },
+    {
+      "check": "scheme-organisation",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "1 vocabularies checked by reversing publisher-native scheme claims"
+    },
+    {
+      "check": "source-release-metadata",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 Atlas release claims compared against publisher release descriptions"
+    },
+    {
+      "check": "source-claim-coverage",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 publisher or Atlas source claims remain outside executable comparisons; 0 more are declared out of scope and itemised in the receipt"
+    },
+    {
+      "check": "source-defects",
+      "failures": [],
+      "failuresDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "failuresTotalCount": 0,
+      "failuresTruncated": false,
+      "passed": true,
+      "sourceFindings": [],
+      "sourceFindingsDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "sourceFindingsTotalCount": 0,
+      "sourceFindingsTruncated": false,
+      "summary": "0 defects observed in publisher data and reported, not repaired"
+    }
+  ],
+  "scope": {
+    "complete": false,
+    "evaluatedComparisons": [
+      "umthes-gemet-endpoints-2026-08-15"
+    ],
+    "scopedOutComparisons": [
+      "agency-registry-2026-09-26",
+      "billstatus-action-codes",
+      "billstatus-bill-types",
+      "billstatus-summary-version-codes",
+      "census-data-flags",
+      "census-function-items",
+      "census-tiger-geoid-structure",
+      "cfr-subject-index-parts-2026-08-20",
+      "courtlistener-jurisdictions-2026-08-03",
+      "crs-legislative-entities",
+      "crs-legislative-subjects",
+      "crs-policy-areas",
+      "doe-osti-semantic-thesaurus-2020",
+      "ecfr-agencies-roster-2026-08-15",
+      "ecfr-cfr-titles",
+      "elsst-r6",
+      "eurovoc-4.24",
+      "eurovoc-domains-4.24",
+      "eurovoc-gemet-alignment-20201218",
+      "eurovoc-lcsh-alignment-20240711",
+      "eurovoc-mesh-alignment-20171215",
+      "eurovoc-microthesauri-4.24",
+      "fac-api-field-dictionary-2026-08-03",
+      "fast-bulk-external-links-delta-2026-07-27",
+      "fast-bulk-see-also-endpoints-2026-07-27",
+      "fast-lcsh-adopted-2026-08-15",
+      "fast-topical-current",
+      "fcc-bureaus-offices-roster-2026-08-15",
+      "fec-committee-designation",
+      "fec-committee-type",
+      "fec-filing-frequency",
+      "fec-organization-type",
+      "fec-party",
+      "federal-hierarchy-orgs-complete-2026-08-15",
+      "federal-register-agencies-roster-2026-08-15",
+      "federal-register-api-topics-2026-08-03",
+      "federal-register-documented-document-types-2026-08-15",
+      "federal-register-documented-presidential-document-types-2026-08-15",
+      "federal-register-thesaurus-2025",
+      "ferc-docket-prefixes",
+      "ferc-document-class-types",
+      "ferc-sectors",
+      "ferc-security-levels",
+      "gao-cra-priority-of-regulation",
+      "gao-cra-rule-types",
+      "gao-published-topics-capture-subset-2026-09-01",
+      "gcmd-science-keywords-24-4",
+      "gemet-4.2.3",
+      "gemet-eurovoc-alignments-4.2.3",
+      "gemet-umthes-alignments-4.2.3",
+      "govinfo-collections",
+      "grants-gov-eligibilities",
+      "grants-gov-funding-categories",
+      "gsdm-data-dictionary-domain-values-2026-08-03",
+      "gsdm-online-data-dictionary-2026-08-03",
+      "icpsr-subject-thesaurus",
+      "lc-external-agrovoc-endpoints-2026-08-15",
+      "lc-external-bncf-endpoints-2026-08-15",
+      "lc-external-bne-endpoints-2026-08-15",
+      "lc-external-fast-endpoints-2026-08-15",
+      "lc-external-getty-aat-endpoints-2026-08-15",
+      "lc-external-getty-ulan-endpoints-2026-08-15",
+      "lc-external-gnd-endpoints-2026-08-15",
+      "lc-external-homosaurus-endpoints-2026-08-15",
+      "lc-external-nalt-endpoints-2026-08-15",
+      "lc-external-ndl-names-endpoints-2026-08-15",
+      "lc-external-ndl-subjects-endpoints-2026-08-15",
+      "lc-external-periodo-lcsh-periods-endpoints-2026-08-15",
+      "lc-external-rameau-endpoints-2026-08-15",
+      "lc-external-wikidata-endpoints-2026-08-15",
+      "lc-external-yso-endpoints-2026-08-15",
+      "lcsh-external-links-mappings-2026-08-15",
+      "lcsh-subjects-consolidated-2026-08-06",
+      "lda-filing-types",
+      "lda-general-issue-codes",
+      "mesh-descriptors-2026",
+      "mesh-lcsh-mapping-2021-03-31",
+      "naics-2022",
+      "nasa-technology-taxonomy-8817",
+      "nasa-thesaurus-skos",
+      "nppes-data-dissemination-layout-v2-2026-08-03",
+      "nrc-adams-documented-accession-number-2026-08-15",
+      "nrc-adams-documented-profile-properties-2026-08-15",
+      "oira-review-controls",
+      "omb-a11-apportionment-categories",
+      "omb-a11-functional-classification",
+      "omb-a11-object-classification",
+      "opm-ehri-agency-subelement-2026-08-04",
+      "opm-ehri-data-standards-2026-08-04",
+      "oversight-report-types",
+      "pra-icr-controls",
+      "psc-april-2025",
+      "regulations-gov-agencies-roster-2026-08-16",
+      "regulations-gov-agency-identity-2026-08-16",
+      "regulations-gov-docket-type",
+      "regulations-gov-document-type",
+      "regulations-gov-submitter-type",
+      "sam-assistance-assistance-types",
+      "sam-assistance-eligible-applicant-types",
+      "sam-assistance-eligible-beneficiary-types",
+      "sam-opportunities-notice-types",
+      "sam-opportunities-opportunity-statuses",
+      "sam-opportunities-set-aside-codes",
+      "treasury-fast-book-accounts-parts-ii-iii-2026-07",
+      "treasury-fast-book-fund-groups-2026-07",
+      "unified-agenda-agency-relation",
+      "unified-agenda-dline-action-stage",
+      "unified-agenda-dline-type",
+      "unified-agenda-energy-affected",
+      "unified-agenda-eo13771-designation",
+      "unified-agenda-federalism",
+      "unified-agenda-gao-cra-priority-2026-08-15",
+      "unified-agenda-govt-level",
+      "unified-agenda-international-interest",
+      "unified-agenda-legal-authority-citation-types",
+      "unified-agenda-major",
+      "unified-agenda-print-paper",
+      "unified-agenda-priority-category",
+      "unified-agenda-rfa-required",
+      "unified-agenda-rfa-section610-review",
+      "unified-agenda-rin-relation",
+      "unified-agenda-rin-status",
+      "unified-agenda-rplan-entry",
+      "unified-agenda-rule-stage",
+      "unified-agenda-small-entity",
+      "unified-agenda-timetable-action",
+      "unified-agenda-unfunded-mandate",
+      "usaspending-award-types",
+      "uscourts-nature-of-suit",
+      "usgs-gnis-identifiers"
+    ],
+    "scopedOutUnits": []
+  },
+  "type": "AtlasSourceFidelityReceipt",
+  "verifier": "atlas-source-fidelity/16"
+}
