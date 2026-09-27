@@ -1,0 +1,36 @@
+{
+  "childCpuSecondsIncludingProbeTools": 592.1659689999999,
+  "command": [
+    "make",
+    "test-package",
+    "PYTEST_ARGS=-n 2 --junitxml=output/atlas-refresh-repair-validation/fast-tier-final-junit.xml",
+    "TEST_PACKAGE_FAIL_SECONDS=1200"
+  ],
+  "elapsedSeconds": 315.4934471660017,
+  "exitCode": 0,
+  "footprintLimitBytes": 12884901888,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 77%",
+    "swap": "total = 12288.00M  used = 10980.44M  free = 1307.56M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   458635.\nPages active:                                 903320.\nPages inactive:                               932551.\nPages speculative:                             94401.\nPages throttled:                                   0.\nPages wired down:                             338359.\nPages purgeable:                               23694.\n\"Translation faults\":                     1651811206.\nPages copy-on-write:                        84609648.\nPages zero filled:                         802628546.\nPages reactivated:                         156834457.\nPages purged:                                7812573.\nFile-backed pages:                            464863.\nAnonymous pages:                             1465409.\nPages stored in compressor:                  1826224.\nPages occupied by compressor:                 362771.\nDecompressions:                            282672298.\nCompressions:                              303992416.\nPageins:                                    78059427.\nPageouts:                                    1371419.\nSwapins:                                     4757159.\nSwapouts:                                    5748097."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 83%",
+    "swap": "total = 12288.00M  used = 11036.44M  free = 1251.56M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   646805.\nPages active:                                 964374.\nPages inactive:                               815247.\nPages speculative:                            150206.\nPages throttled:                                   0.\nPages wired down:                             254861.\nPages purgeable:                               14364.\n\"Translation faults\":                     1635682793.\nPages copy-on-write:                        83743124.\nPages zero filled:                         793293096.\nPages reactivated:                         156183005.\nPages purged:                                7791601.\nFile-backed pages:                            722011.\nAnonymous pages:                             1207816.\nPages stored in compressor:                  1629849.\nPages occupied by compressor:                 258459.\nDecompressions:                            282151031.\nCompressions:                              302827688.\nPageins:                                    76215134.\nPageouts:                                    1371059.\nSwapins:                                     4753653.\nSwapouts:                                    5748097."
+  },
+  "hostSwapUsedDeltaBytes": -58720256,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-refresh-repair-validation/fast-tier-final.log",
+  "peakDiskBytes": 0,
+  "peakFootprintBytes": 6221979976,
+  "peakRssBytes": 7115194368,
+  "phase": "fast-tier-final",
+  "physicalMetric": "physical-footprint",
+  "pid": 7804,
+  "rssLimitBytes": 12884901888,
+  "samples": "output/atlas-refresh-repair-validation/fast-tier-final.samples.jsonl",
+  "startedAtUnix": 1790545978.900579,
+  "status": "passed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

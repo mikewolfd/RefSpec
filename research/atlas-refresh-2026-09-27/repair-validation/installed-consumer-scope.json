@@ -1,0 +1,550 @@
+{
+  "boundary": "installed package compatibility only; new Atlas data adoption pending",
+  "docspec": {
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "pytest",
+      "-q",
+      "tests/test_source_catalog_installed_wheel.py::test_installed_wheels_cover_source_kinds_reuse_and_independent_admission",
+      "tests/test_govinfo_bill_installed_wheel.py",
+      "tests/test_provider_examples_installed_wheel.py",
+      "tests/test_package_boundary.py"
+    ],
+    "environment": {
+      "PATHPrefix": "/opt/homebrew/bin",
+      "uv": "0.11"
+    },
+    "evidence": {
+      "bytes": 111,
+      "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/output/atlas-adoption/installed.log",
+      "sha256": "sha256:87b6675032a7b5746212660f48a00dc42b1c52d6fb494ff78ee15a2b516d5194"
+    },
+    "evidenceLimitation": "11-pass text log and committed command/harness retained; no per-case JUnit retained. Earlier bounded source-native run is not attributed to this installed run.",
+    "harnessEvidence": [
+      {
+        "bytes": 1596,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/docs/atlas-adoption-2026-09-27.md",
+        "sha256": "sha256:62280f97f58eb086f467f99fb1fbc9ec4a0d8e761eb4273df10df91d82894aba"
+      },
+      {
+        "bytes": 13284,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/test_source_catalog_installed_wheel.py",
+        "sha256": "sha256:c677d3dad6d565a0bd4fda8dfe9b19e0a143cfe2bc2e7ee9789a7cbbe68e9487"
+      },
+      {
+        "bytes": 3411,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/test_govinfo_bill_installed_wheel.py",
+        "sha256": "sha256:929bbb1792d1a0c43d6c7cff57fbb7211fcd0385774669409928fea4ff567ce8"
+      },
+      {
+        "bytes": 3723,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/test_provider_examples_installed_wheel.py",
+        "sha256": "sha256:5b16bdb9dab4c16cbfe9d9f142f65cc215473daf8dff3568e2f107c346351069"
+      },
+      {
+        "bytes": 17120,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/test_package_boundary.py",
+        "sha256": "sha256:3f395dc97b11b43574775423a1b539d117ffa481834b098b5c0343fab716faa9"
+      },
+      {
+        "bytes": 5523,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/conftest.py",
+        "sha256": "sha256:3e9c64549e65a0c92cc317749422277f91fd7aa5f2e974bc24901f907e6e7ff6"
+      },
+      {
+        "bytes": 43316,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/docspec-atlas-adoption-20260927/tests/support/installed_source_catalog_probe.py",
+        "sha256": "sha256:7aedf8dae78ddef8d0615ad70cd4e9571f9f16e79d2b20cf513403d42c400b80"
+      }
+    ],
+    "installedLogResult": "11 passed",
+    "scope": "Installed source-catalog GAO/comments/reuse/independent admission, bill, annual-CFR/FEC provider examples, and package boundary. No new Atlas artifact queried.",
+    "sourceCommit": "be4c17b0a74c40a482f88d713b1a6a26cf84e221",
+    "testSelections": [
+      "tests/test_source_catalog_installed_wheel.py::test_installed_wheels_cover_source_kinds_reuse_and_independent_admission",
+      "tests/test_govinfo_bill_installed_wheel.py",
+      "tests/test_provider_examples_installed_wheel.py",
+      "tests/test_package_boundary.py"
+    ]
+  },
+  "scopeNote": "SpicySearch additional checks are reported by the retained owner summary; its isolated installed-test per-case totals and skips are extracted from JUnit XML. DocSpec scope is separately established from its executed installed-wheel harness.",
+  "spicysearch": {
+    "evidence": [
+      {
+        "bytes": 39804,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/spicysearch-atlas-adoption-20260927/output/atlas-adoption/installed-receipt.json",
+        "sha256": "sha256:cd397c809e48314d639370f86b2ba894d8abf1109e6afb25c0225c6bb1b921dc"
+      },
+      {
+        "bytes": 169872,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/spicysearch-atlas-adoption-20260927/output/atlas-adoption/installed.xml",
+        "sha256": "sha256:6d111a2f038b4da923c91226355215197ca466a728a33297a5e0f35697c8ced2"
+      },
+      {
+        "bytes": 2871,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/spicysearch-atlas-adoption-20260927/output/atlas-adoption/check_installed.py",
+        "sha256": "sha256:f55e9f9504a9a1bbb222e2458dd8602e83e5d8d85a7218bc67d3d4a3d0393a2c"
+      },
+      {
+        "bytes": 80,
+        "path": "/Users/mikewolfd/Work/spicy-stack-worktrees/spicysearch-atlas-adoption-20260927/output/atlas-adoption/boundaries.log",
+        "sha256": "sha256:a5bad37fc2190bed21c8f7befa636dc4fbe8b2f6206048cff2d3378a016c4864"
+      }
+    ],
+    "isolation": "fresh environment; python -I; copied tests outside checkout; normal wheel dependency resolution and pip check",
+    "reportedAdditionalChecks": [
+      "tests/test_package_boundary.py",
+      "tests/test_generation_reader.py",
+      "tests/test_catalog_enrichment.py"
+    ],
+    "skipReasons": {
+      "reason-1": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-05: spicysearch widens \u2014 the literal FRDOC anchor is unambiguous prose, unlike a bare pre-2010 FR number, so spicysearch reads the year-less AGENCY_FRDOC_0001 docket family in prose (refspec's prose reader does not) and fences a Regulations.gov document id shaped like AGENCY_FRDOC_0001-NNNN out of its docket grammar (refspec's does not: measured, refspec's _DOCKET_BARE still misreads NOAA_FRDOC_0001-5462 as a docket with year 0001)",
+        "type": "pytest.skip"
+      },
+      "reason-2": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-02: keep native \u2014 layer difference (refspec column-reader folds; spicysearch normalizes upstream in query policy)",
+        "type": "pytest.skip"
+      },
+      "reason-3": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-02: keep native \u2014 scope difference (refspec's column license and partner hatch serve a minter; spicysearch reads only the two spaces REF-064/065 opened, and mints nothing)",
+        "type": "pytest.skip"
+      },
+      "reason-4": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-02: keep native \u2014 spicysearch spells rulespec's rkaf:us-frdoc-x space (5-7); refspec's membership check spells the measured letter families (5-6). Empty population either way",
+        "type": "pytest.skip"
+      },
+      "reason-5": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-02: keep native \u2014 refspec's minter preserves case and takes the partner hatch; spicysearch's classifier folds case because it returns no identity to keep recoverable",
+        "type": "pytest.skip"
+      },
+      "reason-6": {
+        "message": "known divergence, adjudication: ADJUDICATED 2026-09-02: keep native \u2014 REF-066 is a MINTING ruling (one IRI cannot stand for two documents) and spicysearch mints nothing, so it has no analogue; refspec's own shape layer still reads the value. REVISIT IF SPICYSEARCH EVER MINTS",
+        "type": "pytest.skip"
+      }
+    },
+    "skips": [
+      {
+        "reason": "reason-1",
+        "test": "test_detect_identifiers_agrees_with_detect_identifier_shapes[AOA_FRDOC_0001]"
+      },
+      {
+        "reason": "reason-1",
+        "test": "test_detect_identifiers_agrees_with_detect_identifier_shapes[NOAA_FRDOC_0001-5462]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 2026-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u201303227]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u201103227]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 2026-032 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u2013032]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u2011032]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 2026-0322 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u20130322]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2026\\u20110322]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 1799-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[1799\\u201303227]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[1799\\u201103227]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 0000-00000 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[0000\\u201300000]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[0000\\u201100000]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 9999-99999 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[9999\\u201399999]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[9999\\u201199999]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[ 2010-31094 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2010\\u201331094]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees[2010\\u201131094]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 2026-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 2026-032 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 2026-0322 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 1799-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 0000-00000 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 9999-99999 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[2026-11]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 2026-11 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[2026\\u201311]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[2026\\u201111]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 09-19806 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 00-1 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 00-11 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 94-120124 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ X94-10503 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ X09-101207 ]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[X09-1230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[X09\\u20131230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[X09\\u20111230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[x09-1230101]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[E9-654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ E9-654 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[E9\\u2013654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[E9\\u2011654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[e9-654]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_federal_register_document_number_agrees_under_the_column_license[ 2010-31094 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 2026-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 2026-032 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 2026-0322 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 1799-03227 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 0000-00000 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 9999-99999 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2026-11]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 2026-11 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2026\\u201311]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2026\\u201111]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E7-21559]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ E7-21559 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E7\\u201321559]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E7\\u201121559]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[e7-21559]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[C1-2026-13078]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ C1-2026-13078 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[C1\\u20132026\\u201313078]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[C1\\u20112026\\u201113078]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[c1-2026-13078]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 09-19806 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 00-1 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 00-11 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ 94-120124 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ X94-10503 ]"
+      },
+      {
+        "reason": "reason-5",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[x94-10503]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ X09-101207 ]"
+      },
+      {
+        "reason": "reason-5",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[x09-101207]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[X09-1230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[X09\\u20131230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[X09\\u20111230101]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[x09-1230101]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E9-654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[ E9-654 ]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E9\\u2013654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[E9\\u2011654]"
+      },
+      {
+        "reason": "reason-3",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[e9-654]"
+      },
+      {
+        "reason": "reason-6",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2010-31094]"
+      },
+      {
+        "reason": "reason-6",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2010\\u201331094]"
+      },
+      {
+        "reason": "reason-6",
+        "test": "test_classification_agrees_with_refspecs_minting_decision[2010\\u201131094]"
+      },
+      {
+        "reason": "reason-4",
+        "test": "test_dated_classification_agrees_with_refspecs_minting_decision[X09-1230101-2009-01-01]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[ 9999-AA42 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[9999\\u2013AA42]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[9999\\u2011AA42]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[ 2060-AB12 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[2060\\u2013AB12]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[2060\\u2011AB12]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[ 0000-AA00 ]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[0000\\u2013AA00]"
+      },
+      {
+        "reason": "reason-2",
+        "test": "test_is_regulation_identifier_number_agrees[0000\\u2011AA00]"
+      }
+    ],
+    "sourceCommit": "f365ec3d92c33e448ab1a88ad9edd8567faaf2bc",
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "Michaels-MacBook-Pro.local",
+        "name": "pytest",
+        "skipped": "99",
+        "tests": "775",
+        "time": "3.390",
+        "timestamp": "2026-09-27T17:43:01.098075-04:00"
+      }
+    ],
+    "testFiles": [
+      "tests/test_query.py",
+      "tests/test_metadata_preparation.py",
+      "tests/search/test_identifier_contract.py",
+      "tests/search/test_identifier_parity.py"
+    ],
+    "testSupport": "tests/search/identifier_contract_exceptions.py"
+  },
+  "status": "passed",
+  "summary": "consumer-adoption-final.json",
+  "wheelPins": "consumer-adoption-final.json#wheels"
+}

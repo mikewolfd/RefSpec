@@ -71,6 +71,34 @@ includes escaped descendant groups and enforces the complete job limit. A
 strict full-job capacity claim therefore requires the Linux release runner;
 local macOS measurements carry the stated scope.
 
+## Final bounded checks and installed-package adoption
+
+[The final check index](bounded-checks-final.json) retains the fast-tier result,
+exact command and selection, source-log hashes, and the known expected failure.
+Its JUnit summary reports no failures or errors. The one strict xfail concerns
+the previously sealed registry audit summary after `term_explanation` joined;
+its complete recorded reason is retained in the index. This run does not replace
+that source audit. [The original phase receipt](fast-tier-final.json) preserves
+the observed timing and memory values; apply the process-group scope described
+above, including the nested-guard limitation.
+
+The broad fast-tier run finished before commit `59318e5a`, which corrected the
+agency receipt schema under `comparisons[].claimScope.independentAgencyComparison`.
+[The later focused qualification receipt](qualification-schema-final.json) records
+that correction and malformed/missing/duplicate required coverage separately.
+The broad-run index lists only the qualification and guard cases in its own
+JUnit output, including the cleanup-error failure-receipt regression.
+Earlier scoped source-audit receipts remain historical evidence with their
+original tool hashes; they have not been rewritten as later full qualification.
+
+[Installed-package adoption](consumer-adoption-final.json) retains the local
+DocSpec and SpicySearch commits, owner/dependency wheel hashes, final installed
+versions and dependency check. [The scope receipt](installed-consumer-scope.json)
+records copied test files, installed-test results, and every existing adjudicated
+identifier-case skip with its reason. These results establish package compatibility.
+The fresh full build, complete qualification, and consumer queries against the
+new qualified data artifact remain pending. No public promotion is claimed.
+
 ## Run and receipt locations
 
 Local command logs and resource samples are under

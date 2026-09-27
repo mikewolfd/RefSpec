@@ -1,0 +1,330 @@
+{
+  "boundary": "focused qualifier regressions after agency-schema correction; not full artifact qualification",
+  "cases": [
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_complete_sequence_copies_binding_and_uses_audit"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[pack-inventory]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[standalone-audit]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[publisher-fidelity]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[full-view]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[verify-compact-view]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_scoped_fidelity_does_not_qualify_even_if_command_succeeds"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_changed_input_during_phase_fails_before_next_command"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_wrong_manifest_pin_prevents_all_commands"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_full_view_from_other_distribution_is_refused"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[distribution]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[full_view]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[agency_view]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[tools/read_source.py]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[src/refspec/reader.py]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[src/refspec/data/schema.json]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/tools/validate.py]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/shapes.ttl]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/ontology.ttl]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/requirements.txt]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[pyproject.toml]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[uv.lock]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[.python-version]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[head]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[copied-shapes]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_membership_change_is_refused[add]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_membership_change_is_refused[delete]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_executable_change_before_first_phase_prevents_launch"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_unrelated_docs_and_generated_binding_fixtures_do_not_interrupt"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_retained_agency_schema_qualifies_without_invented_top_level_field"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[comparisons-None]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[comparisons-value1]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[comparisons-value2]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[comparisons-value3]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[coverage-value4]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[scope-value5]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_malformed_receipt_container_is_refused[expectations-value6]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path0-other]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path1-other]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path2-value2]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path3-other]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path4-False]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path5-False]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path6-not-evaluated]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path7-None]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path8-value8]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path9-not-evaluated]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path10-None]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path11-value11]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path12-unevaluated]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path13-failed]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path14-value14]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path15-other]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path16-not-evaluated]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path17-2]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path18-True]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path19-True]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path20-value20]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path21-value21]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path22-value22]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path23-False]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path24-value24]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path25-False]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path26-other]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_required_agency_and_coverage_conditions_fail_closed[path27-False]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_duplicate_agency_or_coverage_entry_is_refused[agency]"
+    },
+    {
+      "status": "passed",
+      "test": "tests.test_atlas_release_qualification::test_duplicate_agency_or_coverage_entry_is_refused[unit]"
+    }
+  ],
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_atlas_release_qualification.py",
+    "--junitxml=output/atlas-refresh-repair-validation/qualification-schema-final.xml"
+  ],
+  "executedSource": [
+    {
+      "bytes": 17734,
+      "path": "tools/qualify_atlas_release.py",
+      "sha256": "sha256:2c8a12f243ae04217ac75deea3c93395cfda475fdb463923e56cd592c3912867"
+    },
+    {
+      "bytes": 15223,
+      "path": "tests/test_atlas_release_qualification.py",
+      "sha256": "sha256:aa2d9bdf2dc5d2fa3b093a30d70357a379b2144a56f51b84f67236410b622e2e"
+    },
+    {
+      "bytes": 769,
+      "path": "tests/fixtures/atlas_release_qualification/agency-comparison.json",
+      "sha256": "sha256:d62b3851e1dd12e19422c36c737297ed944dedc05d406607f8bddb7e67d6b425"
+    }
+  ],
+  "fixCommit": "59318e5ac77a6c2740573f9e10ae13396f66d1f0",
+  "sourceCommit": "b9944286d26767a4d404886226a7e1e304cfab17",
+  "sourceEvidence": [
+    {
+      "bytes": 268,
+      "path": "output/atlas-refresh-repair-validation/qualification-schema-final.log",
+      "sha256": "sha256:9835eb24daae93267563963eaf37c0cd425f1b42f65b4a68b50c70163998f68e"
+    },
+    {
+      "bytes": 10445,
+      "path": "output/atlas-refresh-repair-validation/qualification-schema-final.xml",
+      "sha256": "sha256:474499afc405866fefca4beb4891136868e1fef79492187f2c73f2df875afc70"
+    }
+  ],
+  "sourceState": "Only docs/evidence dirty at execution, reported by executing parent agent; qualifier unchanged.",
+  "status": "passed",
+  "suites": [
+    {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "Michaels-MacBook-Pro.local",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "67",
+      "time": "1.509",
+      "timestamp": "2026-09-27T18:44:32.735426-04:00"
+    }
+  ],
+  "temporalBoundary": "Separate later run; fast-tier-final predates fixCommit and does not prove this correction."
+}

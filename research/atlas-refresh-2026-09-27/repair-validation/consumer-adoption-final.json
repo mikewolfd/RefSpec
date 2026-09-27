@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "boundary": "installed package compatibility; no Atlas data adoption",
+  "versions": {
+    "spicysearch": "0.6.3",
+    "refspec": "0.1.0.dev22",
+    "docspec": "0.11.5",
+    "spicy-docs": "0.46.0"
+  },
+  "wheels": {
+    "spicysearch-0.6.3-py3-none-any.whl": "04c65f65ba251e7af322a2d534b6f50e026ae9c8f423497d6ab8ed97ae1ec73d",
+    "docspec-0.11.5-py3-none-any.whl": "095d10d42aff2d6b1c2eda5ee5536dce6e181b49c6286aa9fd8c82f7bf27f471",
+    "refspec-0.1.0.dev22-py3-none-any.whl": "6ef56e9870ad26a7a54d61ce9926d22cbe242fd06f253c07850bd28791e9c01d",
+    "rulespec_artifacts-1.1.2-py3-none-any.whl": "7d547cd432b1d533b93dcfd3802e4a0e179de6e89301fd6faa8bb917b99830ef",
+    "rulespec_conformance-0.2.0rc19-py3-none-any.whl": "bb1e2fd674b8863be8022b2bafe4093279194c8dde7aa2c6ce0a6a28ec48e218",
+    "spicy_docs-0.46.0-py3-none-any.whl": "2af2dfff55f0e2801bdc2ac2d928cbbd4e63701afbd87b719dd597736ef0b799"
+  },
+  "skips": "Only existing adjudicated identifier-contract cases; full reasons retained in output/atlas-adoption/installed-receipt.json",
+  "sourceState": "local committed package adoption; no push, merge or deployment",
+  "additionalChecks": {
+    "tests/test_package_boundary.py": "passed",
+    "tests/test_generation_reader.py": "passed",
+    "tests/test_catalog_enrichment.py": "passed"
+  },
+  "sourceCommits": {
+    "refspec": "2de8e3650a5876354a53403f6904e4f7e998473d",
+    "docspec": "be4c17b0a74c40a482f88d713b1a6a26cf84e221",
+    "spicy-docs": "f486e733d5363416652338d898907210b924d5f2",
+    "spicysearch": "f365ec3d92c33e448ab1a88ad9edd8567faaf2bc"
+  },
+  "finalOwnerWheelRebuild": "RefSpec and DocSpec wheel hashes match the installed-test inputs exactly",
+  "finalInstalledProbe": {
+    "status": "passed",
+    "versions": {
+      "spicysearch": "0.6.3",
+      "refspec": "0.1.0.dev22",
+      "docspec": "0.11.5",
+      "spicy-docs": "0.46.0"
+    },
+    "dependencyCheck": "Using Python 3.12.13 environment at: /var/folders/g8/10vdwk2n07z85vqn_vlv2lfc0000gn/T/spicysearch-atlas-installed-nsa8jpe4/env\nChecked 69 packages in 8ms\nAll installed packages are compatible"
+  },
+  "finalRebuildsMatchInstalledInputs": true
+}

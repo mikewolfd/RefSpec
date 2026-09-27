@@ -1,0 +1,154 @@
+{
+  "boundary": "bounded implementation tests; not full artifact qualification",
+  "broadRunSourceBoundary": {
+    "endedBeforeCommit": "59318e5ac77a6c2740573f9e10ae13396f66d1f0",
+    "excludedLaterChange": "Correct nested agency qualification receipt schema; this broad run does not validate that later fix.",
+    "qualifierRegressionTestsActuallyRun": [
+      "tests.test_atlas_phase_guard::test_exit_status_is_retained[import time; time.sleep(.1)-passed]",
+      "tests.test_atlas_phase_guard::test_exit_status_is_retained[import sys; sys.exit(7)-command-failed]",
+      "tests.test_atlas_phase_guard::test_footprint_stop_is_not_semantic_rejection",
+      "tests.test_atlas_phase_guard::test_timeout_stops_only_owned_group",
+      "tests.test_atlas_phase_guard::test_missing_linux_resource_scope_refuses_to_launch",
+      "tests.test_atlas_phase_guard::test_exclusive_window_rejects_second_phase",
+      "tests.test_atlas_phase_guard::test_parent_success_cannot_hide_live_child",
+      "tests.test_atlas_phase_guard::test_timeout_shorter_than_poll_interval_is_enforced",
+      "tests.test_atlas_phase_guard::test_shutdown_catches_child_forked_by_sigterm_handler",
+      "tests.test_atlas_phase_guard::test_regular_directory_is_not_a_linux_resource_scope",
+      "tests.test_atlas_phase_guard::test_regular_files_cannot_impersonate_cgroup_controls",
+      "tests.test_atlas_phase_guard::test_cleanup_error_cannot_preserve_passed_receipt",
+      "tests.test_atlas_phase_guard::test_child_first_seen_at_shutdown_deadline_is_still_owned",
+      "tests.test_atlas_phase_guard::test_slow_process_probe_cannot_hide_elapsed_deadline",
+      "tests.test_atlas_release_qualification::test_complete_sequence_copies_binding_and_uses_audit",
+      "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[pack-inventory]",
+      "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[standalone-audit]",
+      "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[publisher-fidelity]",
+      "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[full-view]",
+      "tests.test_atlas_release_qualification::test_failed_phase_stops_qualification[verify-compact-view]",
+      "tests.test_atlas_release_qualification::test_scoped_fidelity_does_not_qualify_even_if_command_succeeds",
+      "tests.test_atlas_release_qualification::test_changed_input_during_phase_fails_before_next_command",
+      "tests.test_atlas_release_qualification::test_wrong_manifest_pin_prevents_all_commands",
+      "tests.test_atlas_release_qualification::test_full_view_from_other_distribution_is_refused",
+      "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[distribution]",
+      "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[full_view]",
+      "tests.test_atlas_release_qualification::test_compact_output_cannot_change_a_previously_verified_artifact[agency_view]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[tools/read_source.py]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[src/refspec/reader.py]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[src/refspec/data/schema.json]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/tools/validate.py]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/shapes.ttl]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/ontology.ttl]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[bindings/atlas/3.1/requirements.txt]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[pyproject.toml]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[uv.lock]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[.python-version]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[head]",
+      "tests.test_atlas_release_qualification::test_executable_change_during_phase_refuses_qualification[copied-shapes]",
+      "tests.test_atlas_release_qualification::test_executable_membership_change_is_refused[add]",
+      "tests.test_atlas_release_qualification::test_executable_membership_change_is_refused[delete]",
+      "tests.test_atlas_release_qualification::test_executable_change_before_first_phase_prevents_launch",
+      "tests.test_atlas_release_qualification::test_unrelated_docs_and_generated_binding_fixtures_do_not_interrupt"
+    ]
+  },
+  "fastTier": {
+    "command": [
+      "make",
+      "test-package",
+      "PYTEST_ARGS=-n 2 --junitxml=output/atlas-refresh-repair-validation/fast-tier-final-junit.xml",
+      "TEST_PACKAGE_FAIL_SECONDS=1200"
+    ],
+    "knownExpectedFailures": [
+      {
+        "message": "2026-09-07: `term_explanation` joined the registry, so the source manifest carries a module this sealed summary does not -- its module list has shifted, not just its count. Regenerating it is `make audit-registry-real-data`, which runs every direct module test and rewrites a sealed evidence artifact, which needs the owner's own words to the session performing it. PARKED, NOT FORGOTTEN: no consumer build needs it, and it runs serially (the tool runs `sys.executable -m pytest` with no -n; the direct module tests alone recorded 1,194 s in the committed summary) under the shared measurement lock, `compositions/measurement.lock` in the SpicySearch checkout whose AGENTS.md states the rule, so it runs in any quiet window in which no lane needs that lock -- never mid-batch. The complete suite is NOT part of the run: the tool reaches it only when the gate has no failures, and the gate will have them. What is derivable before running: from the current manifest and `real_data_evidence_failures`, the gate stays `failed` and gains exactly one evidence-derived gap, term_explanation's, which has no publisher input of its own by design; the receipt-derived gaps are observed by the run and cannot be predicted. THREE TRAPS FOR WHOEVER RUNS IT: plain `verify_registry_audit.py` writes realDataGate {status: notEvaluated, failures: []} over a summary that honestly says `failed` with named gaps; only the --require-real-data form (the make target's) preserves them. The audit aborts WITHOUT WRITING when a direct test fails, which reads exactly like a stale summary. And on the SUCCESSFUL path the target still exits 1, printing `registry audit error: real-data gate failed` AFTER writing, while the not-written case prints `direct registry tests failed with exit code N` -- read the message, never the exit code or the mtime. STRICT so the marker cannot outlive the regeneration.",
+        "test": "tests.test_registry_real_data_audit::test_registry_audit_snapshot_is_current_and_honest_about_open_gaps",
+        "type": "pytest.xfail"
+      }
+    ],
+    "phaseReceipt": "fast-tier-final.json",
+    "selection": "--tier fast: excludes full_atlas, slow, release_tier and built-artifact readers unless no_artifact",
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "Michaels-MacBook-Pro.local",
+        "name": "pytest",
+        "skipped": "1",
+        "tests": "6402",
+        "time": "307.909",
+        "timestamp": "2026-09-27T17:53:05.920601-04:00"
+      }
+    ]
+  },
+  "focusedChecks": [
+    {
+      "log": "guard-verifier-final.log",
+      "result": "299 passed, 10 deselected",
+      "scope": "guard and verifier focused regressions; scope corroborated by final fast-tier per-test inventory"
+    },
+    {
+      "log": "guard-scope-final.log",
+      "result": "14 passed",
+      "scope": "process guard regression tests"
+    },
+    {
+      "log": "publication-label-final.log",
+      "result": "26 passed",
+      "scope": "publication checks after package/data label clarification"
+    }
+  ],
+  "laterQualificationEvidence": "qualification-schema-final.json",
+  "pending": [
+    "fresh full build",
+    "cold standalone audit",
+    "complete unscoped source fidelity",
+    "full and compact view qualification",
+    "consumer queries against the newly qualified artifact",
+    "public promotion"
+  ],
+  "sourceEvidence": [
+    {
+      "bytes": 3951,
+      "path": "output/atlas-refresh-repair-validation/fast-tier-final.json",
+      "sha256": "sha256:4549a178e252ca75cc953f6fac0a755868785b8112d74b07f28237f4598ecb16"
+    },
+    {
+      "bytes": 3150736,
+      "path": "output/atlas-refresh-repair-validation/fast-tier-final-junit.xml",
+      "sha256": "sha256:e0beb39b9706c0e9229741bea41cc6de776bdc58beb27c377a7ab1c48895e3b5"
+    },
+    {
+      "bytes": 20537,
+      "path": "output/atlas-refresh-repair-validation/fast-tier-final.log",
+      "sha256": "sha256:d6b2edfef80ce32b9c692760ea3aea248dd2efda6affacabe1c262871e66abf3"
+    },
+    {
+      "bytes": 1648,
+      "path": "output/atlas-refresh-repair-validation/guard-verifier-final.log",
+      "sha256": "sha256:caa9a313c34eba58204b8f4d0c2e469b9109929407ec97dd3ccf0809a95526e0"
+    },
+    {
+      "bytes": 99,
+      "path": "output/atlas-refresh-repair-validation/guard-scope-final.log",
+      "sha256": "sha256:746bf6b56e589420af6fedf731b4d57fd2b9c543de8486d867bbca85131dc32d"
+    },
+    {
+      "bytes": 99,
+      "path": "output/atlas-refresh-repair-validation/publication-label-final.log",
+      "sha256": "sha256:00ae9453b21ecd41ca1dc7b442896e16b5513fa9c6890409bf5ae20cf328aab2"
+    },
+    {
+      "bytes": 415,
+      "path": "output/atlas-refresh-repair-validation/static-binding-checks.log",
+      "sha256": "sha256:cf96d11c60898487d21b6a99dccff6cd74d448339519a0a9e15ea78f179d8c85"
+    },
+    {
+      "bytes": 200946,
+      "path": "output/atlas-refresh-repair-validation/generated-checks.log",
+      "sha256": "sha256:1046f552a21b6f9a163873334ac04c0651663ccf97b24c1cce43affec9257e63"
+    }
+  ],
+  "staticChecks": {
+    "generated-checks.log": "generated artifacts, coverage, descriptors, source manifest and binding fixture checks; realDataGate remains notEvaluated",
+    "static-binding-checks.log": "ruff; strict RDF parser; JSON binding valid/invalid fixtures"
+  },
+  "status": "passed"
+}
