@@ -1,8 +1,8 @@
 # Atlas repair implementation and validation
 
 The [F1–F14 repair proposal](../../../plans/atlas-refresh-repair-plan-2026-09-27.md)
-is implemented locally. Full-corpus qualification is pending a fresh measured
-build and independent audit. Package adoption, artifact qualification and public
+is implemented locally. The fresh full build passed; full-corpus qualification
+stopped at the standalone validator's 30 GiB memory guard. Package adoption, artifact qualification and public
 promotion remain separate results. The previous incomplete output and the
 August artifact remain intact.
 
@@ -44,7 +44,7 @@ are expected-case; string hashing/comparison also costs bytes.
 | Requested hierarchy paths | Worst-case `O(s(V+E) + Q)` traversal/query work for `s` queried starts and `Q` requested pairs; `O(V+E+Q)` state. Exact reachability remains required. |
 | PDF and coverage | Per-page word sorting/sweep: `O(W log W)`; keyed declaration coverage: `O(declarations + units)`. |
 | Compact/public views | Compact writing avoids unused column decoding; authentication remains `O(all stored bytes)`. Public verification streams `O(served bytes)` with bounded buffers. |
-| Standalone/full fidelity | Full dataset and family views remain resident. Bounded tests do not prove the full-corpus memory ceiling. The measured full run decides whether further execution changes are necessary. |
+| Standalone/full fidelity | The standalone validator retains the full indexed dataset; this full run hit its 30 GiB guard during parsing. Full publisher fidelity was not reached, so its full-corpus capacity remains unmeasured. |
 
 [Accounting measurements](accounting-scaling.json) compare separate cold
 processes at 1×, 2× and 4× record and release counts. All old/new accounting
@@ -96,8 +96,97 @@ DocSpec and SpicySearch commits, owner/dependency wheel hashes, final installed
 versions and dependency check. [The scope receipt](installed-consumer-scope.json)
 records copied test files, installed-test results, and every existing adjudicated
 identifier-case skip with its reason. These results establish package compatibility.
-The fresh full build, complete qualification, and consumer queries against the
-new qualified data artifact remain pending. No public promotion is claimed.
+The fresh full build passed. Complete qualification stopped for validator memory
+capacity; consumer queries against the new qualified data artifact remain pending. No public promotion is claimed.
+
+## Fresh full build
+
+[The completed producer receipt](full-build-phase.json) records a successful
+full build in 8,562.7 seconds. Sampled physical footprint peaked at 8.79 GiB and
+RSS at 10.05 GiB, below their 18 GiB guards. These are local process-group
+measurements with the macOS limitation stated above. Peak retained build disk
+was about 74 GiB; final outputs and earlier failed artifacts remain intact.
+
+Derivation, accounting construction and accounting validation completed. The
+previous failure area now finishes in about 108 seconds; the accounting phase's
+sampled footprint peak was about 8.2 GiB. This proves the repaired producer's
+measured capacity at this corpus, not the standalone validator's capacity.
+
+[The candidate pins and pack measurements](full-candidate-pins.json) identify
+the completed distribution and full Parquet view. The largest uncompressed pack
+is about 0.94 GiB and the aggregate is about 23.3 GiB, within the unchanged
+4 GiB per-pack and 32 GiB aggregate limits. The generator passed actual byte
+guards, accounting, Parquet parity, metadata and sealing checks.
+
+[The build input snapshot](full-build-inputs.json) pins the producer revision.
+[The input review](full-build-input-review.json) confirms that construction
+inputs remained unchanged while later qualifier/workflow fixes landed.
+Qualification records its own revision and checks its inputs before and after
+each phase.
+
+[The measured build summary](full-build-result.json) retains phase timings and
+an additional performance opportunity: sampled Parquet comparisons reread RDF
+per sampled subject, costing `O(S * B)` reads and about 33 minutes in this run.
+A future replacement should select all sample IDs first, scan once, and retain
+exact current row semantics under a frozen oracle and mutations. That additional
+optimization was observed during final validation and is not implemented here.
+
+The August comparison finds the added agency release and the replacement GAO
+capture. Two large mapping units now use bounded hash partitions. The Federal
+Register topic release changed with the earlier shared-reader parser version;
+[reconstruction reproduces both old and new release identities exactly](fr-release-identity-attribution.json)
+using identical source inputs/accounting and only the parser-version change.
+[The mapping comparison](mapping-partition-equivalence.json) authenticated every
+old/new pack and proved exact sorted RDF byte equality across both repartitioned
+mapping units. The [retained driver](compare-mapping-partitions.py) merges the
+new partitions with one current line per pack plus reader buffers: `O(B log p)`
+merge work for `B` bytes and `p` partitions. Its [phase receipt](mapping-partition-phase.json)
+records successful completion in about 79.5 seconds. This proves unchanged mapping
+content across partitioning; final independent qualification remains incomplete.
+
+## Full qualification capacity stop
+
+[The qualification receipt](full-qualification.json) is `incomplete`. Transport
+inventory passed, and the cold copied standalone binding passed its initial
+source-accounting checks. RDF parsing reached a last reported 120 completed
+packs, representing at least 54,014,188 of 100,916,862 quads, before the physical
+memory guard stopped the owned process group. [The phase receipt](full-standalone-audit-phase.json)
+records about 26 minutes elapsed and 30.10 GiB peak footprint against the
+30 GiB ceiling; its [log](full-standalone-audit.log) retains the last completed
+progress markers. This is an incomplete capacity result, not a semantic verdict.
+
+The memory growth follows the current execution model. The parser accumulates
+every pack in [one dataset](../../../bindings/atlas/3.1/tools/validate.py#L3145).
+The [two-index store](../../../bindings/atlas/3.1/tools/parse_substrate.py#L101)
+keeps subject/predicate/object and predicate/object/subject lookup structures.
+Terms can share object references, but each index adds Python dictionary/set
+entries and container overhead. Clearing the per-pack term lookup does not
+release terms still referenced by this graph. The parser also retains subject
+ownership, selected fact/type indexes and per-node evidence digests, while the
+parsed source-accounting JSON remains available for later checks.
+
+This retained state grows with total statements, payload bytes and identities,
+not just the largest pack: `O(T + U + I)` for statement/index entries `T`, retained
+term/accounting payload bytes `U`, and additional global identity entries `I`.
+The trace identifies intentional retention; it does not allocate measured
+percentages to each structure or establish a separate memory leak. Global
+reference, evidence and hierarchy checks explain why the existing implementation
+keeps the graph. They do not establish that all of it must live in Python memory.
+A bounded replacement could stream local checks and use compact or disk-backed
+global joins, with the current validator copied as a test oracle and verdict
+agreement proved on real data and mutations. That replacement is not implemented
+or validated here.
+
+[The capacity summary](full-qualification-capacity.json) lists all gates not
+reached. Complete publisher fidelity, full/compact view qualification and new
+artifact consumer queries are still pending. The repaired scoped audits and
+installed-package checks remain valid within their recorded scopes.
+
+The [read-only repository runner inventory](release-runner-inventory.json)
+returned no runners. No adequately provisioned release runner was verified
+available, and none was provisioned. Continue full qualification on an exclusive
+Linux cgroup runner with sufficient measured headroom and the same candidate
+pins. Keep audit mode, all semantic checks and the binding limits.
 
 ## Run and receipt locations
 

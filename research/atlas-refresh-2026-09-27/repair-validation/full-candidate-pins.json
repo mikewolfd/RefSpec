@@ -1,0 +1,24 @@
+{
+  "distributionManifestDigest": "sha256:93fd9c17d44d96ed98eb6a6ad022ce44371e353809e2cc386d87580beb306139",
+  "fullViewManifestDigest": "sha256:4d301b1cd77a9d7bd39758cc4ed8313f4a8dab9c8b8c97821178f83b7e3fcb8f",
+  "packCount": 223,
+  "counts": {
+    "crossRingRelationAssertions": 32131,
+    "derivedRelations": 47164,
+    "evidenceBindings": 2259830,
+    "identifiers": 3581,
+    "labels": 2307104,
+    "mappingAssertions": 1252705,
+    "nativeRelationAssertions": 969735,
+    "projectedRelations": 0,
+    "relationAssertions": 2259456,
+    "releases": 119,
+    "resources": 1506266,
+    "sourceAssignments": 4885,
+    "sourceRecords": 2759544
+  },
+  "maxContentBytes": 1011304895,
+  "maxTransportBytes": 48250306,
+  "totalContentBytes": 24995889290,
+  "qualificationSourceCommit": "ddb5fc91e0a5bb9ace049d439c814d0f8c3125a1"
+}

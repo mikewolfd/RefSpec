@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "scope": "exact authenticated sorted RDF bytes across mapping repartitioning; not complete artifact qualification",
+  "comparisons": [
+    {
+      "unit": "fast-lcsh-adopted-2026-08-15",
+      "status": "passed",
+      "canonicalContentDigest": "sha256:42dc8cb8a4b970513b7358ff40d90e8b5584f81697baf38f41a3613e11bfd86e",
+      "quadCount": 12830794,
+      "byteLength": 3443023377,
+      "beforePackCount": 1,
+      "afterPackCount": 16,
+      "transportAndContentPinsChecked": true
+    },
+    {
+      "unit": "lcsh-external-links-mappings-2026-08-15",
+      "status": "passed",
+      "canonicalContentDigest": "sha256:2ae9742bdede2c6ca49638aa0e5d8c8e3fbf2f4789878caf7b94ffbcd89f3363",
+      "quadCount": 24059764,
+      "byteLength": 6580663676,
+      "beforePackCount": 1,
+      "afterPackCount": 16,
+      "transportAndContentPinsChecked": true
+    }
+  ],
+  "cost": "O(B log p) merge work, bounded to one current line per pack plus reader buffers"
+}

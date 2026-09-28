@@ -1,0 +1,42 @@
+{
+  "childCpuSecondsIncludingProbeTools": 8630.421097,
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "-c",
+    "import faulthandler, runpy, signal, sys; from pathlib import Path; output = sys.argv[1]; trace = (Path(output).parent / \"stack-samples.log\").open(\"w\"); faulthandler.register(signal.SIGUSR1, file=trace, all_threads=True); sys.path.insert(0, \"tools\"); sys.argv = [\"tools/generate_atlas_v3_full.py\", \"--output\", output]; runpy.run_path(sys.argv[0], run_name=\"__main__\")",
+    "output/atlas-3.1-full-2026-09-27-repaired/distribution"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 8562.736798582999,
+  "exitCode": 0,
+  "footprintLimitBytes": 19327352832,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 53%",
+    "swap": "total = 9216.00M  used = 8639.19M  free = 576.81M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   501030.\nPages active:                                 447185.\nPages inactive:                               713683.\nPages speculative:                              6016.\nPages throttled:                                   0.\nPages wired down:                             288365.\nPages purgeable:                               10794.\n\"Translation faults\":                     1882378625.\nPages copy-on-write:                        96346689.\nPages zero filled:                         963708878.\nPages reactivated:                         182043843.\nPages purged:                                9653595.\nFile-backed pages:                            484594.\nAnonymous pages:                              682290.\nPages stored in compressor:                  2462952.\nPages occupied by compressor:                1133919.\nDecompressions:                            300405512.\nCompressions:                              324780228.\nPageins:                                   145673804.\nPageouts:                                    1629417.\nSwapins:                                     5329250.\nSwapouts:                                    6200232."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 78%",
+    "swap": "total = 12288.00M  used = 10980.44M  free = 1307.56M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   552266.\nPages active:                                 927867.\nPages inactive:                               843345.\nPages speculative:                            100060.\nPages throttled:                                   0.\nPages wired down:                             309590.\nPages purgeable:                               16293.\n\"Translation faults\":                     1653273503.\nPages copy-on-write:                        84676810.\nPages zero filled:                         803532594.\nPages reactivated:                         156834947.\nPages purged:                                7815207.\nFile-backed pages:                            438297.\nAnonymous pages:                             1432975.\nPages stored in compressor:                  1814879.\nPages occupied by compressor:                 356918.\nDecompressions:                            282682327.\nCompressions:                              303992416.\nPageins:                                    78090108.\nPageouts:                                    1371419.\nSwapins:                                     4757199.\nSwapouts:                                    5748097."
+  },
+  "hostSwapUsedDeltaBytes": -2454978560,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-3.1-full-2026-09-27-repaired/build-phase.log",
+  "peakDiskBytes": 79396401152,
+  "peakFootprintBytes": 9437996848,
+  "peakRssBytes": 10785013760,
+  "phase": "full-build",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 13234,
+  "rssLimitBytes": 19327352832,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "output/atlas-3.1-full-2026-09-27-repaired/build-phase.samples.jsonl",
+  "startedAtUnix": 1790546335.6091468,
+  "status": "passed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

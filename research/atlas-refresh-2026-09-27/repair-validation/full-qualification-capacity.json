@@ -1,0 +1,29 @@
+{
+  "status": "incomplete",
+  "blockingPhase": "standalone-audit",
+  "reason": "capacity-stopped",
+  "elapsedSeconds": 1560.193553582998,
+  "guardBytes": 32212254720,
+  "peakFootprintBytes": 32316087984,
+  "peakRssBytes": 16016048128,
+  "lastReportedCompletedPacks": 120,
+  "totalPacks": 223,
+  "completedQuadsLowerBound": 54014188,
+  "totalQuads": 100916862,
+  "scope": "Cold copied standalone binding; audit mode; no validation cache; macOS process-group measurement",
+  "semanticVerdict": "not reached; capacity stop is not semantic rejection",
+  "completedQualificationPhases": [
+    "pack-inventory"
+  ],
+  "notReached": [
+    "build-agency-view",
+    "verify-agency-view",
+    "publisher-fidelity",
+    "full-view",
+    "build-compact-view",
+    "verify-compact-view",
+    "new-artifact installed consumer queries"
+  ],
+  "operationalBoundary": "Repository Actions runner inventory returned no runners; no larger release runner verified available. No runner provisioned, workflow dispatched or deployment performed.",
+  "nextStep": "Run complete qualification on an adequately provisioned exclusive Linux cgroup runner with the same artifact pins and full audit checks. Do not substitute smoke mode or treat producer acceptance as independent qualification."
+}

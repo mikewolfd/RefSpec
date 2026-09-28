@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-28T00:43:59.610675+00:00",
+  "scope": "read-only repository-level GitHub Actions runner inventory; organization runners not independently enumerated",
+  "command": [
+    "gh",
+    "api",
+    "repos/Formspec-Labs/RefSpec/actions/runners",
+    "--jq",
+    "{total_count: .total_count, runners: [.runners[] | {name, os, status, busy, labels: [.labels[].name]}]}"
+  ],
+  "result": {
+    "runners": [],
+    "total_count": 0
+  },
+  "action": "no workflow triggered or runner provisioned"
+}

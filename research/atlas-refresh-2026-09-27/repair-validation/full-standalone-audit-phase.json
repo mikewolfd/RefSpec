@@ -1,0 +1,44 @@
+{
+  "childCpuSecondsIncludingProbeTools": 1566.6505899999997,
+  "command": [
+    "uv",
+    "run",
+    "--no-project",
+    "--with-requirements",
+    "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27-repaired/qualification/standalone-binding/requirements.txt",
+    "python",
+    "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27-repaired/qualification/standalone-binding/tools/validate.py",
+    "--distribution",
+    "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27-repaired/distribution"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 1560.193553582998,
+  "exitCode": 143,
+  "footprintLimitBytes": 32212254720,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 58%",
+    "swap": "total = 15360.00M  used = 14085.94M  free = 1274.06M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                  1175485.\nPages active:                                 290294.\nPages inactive:                               341414.\nPages speculative:                              4273.\nPages throttled:                                   0.\nPages wired down:                             336367.\nPages purgeable:                                   2.\n\"Translation faults\":                     1958264804.\nPages copy-on-write:                        99183340.\nPages zero filled:                         995745205.\nPages reactivated:                         205880175.\nPages purged:                               11770810.\nFile-backed pages:                            200595.\nAnonymous pages:                              435386.\nPages stored in compressor:                  2681884.\nPages occupied by compressor:                 942220.\nDecompressions:                            323761699.\nCompressions:                              351378806.\nPageins:                                   153042310.\nPageouts:                                    2604883.\nSwapins:                                     5438628.\nSwapouts:                                    6657884."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 53%",
+    "swap": "total = 9216.00M  used = 8631.19M  free = 584.81M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    37455.\nPages active:                                 570439.\nPages inactive:                              1003190.\nPages speculative:                             50277.\nPages throttled:                                   0.\nPages wired down:                             301254.\nPages purgeable:                               22212.\n\"Translation faults\":                     1883827947.\nPages copy-on-write:                        96450482.\nPages zero filled:                         964549784.\nPages reactivated:                         182044275.\nPages purged:                                9656314.\nFile-backed pages:                            853629.\nAnonymous pages:                              770277.\nPages stored in compressor:                  2434479.\nPages occupied by compressor:                1126878.\nDecompressions:                            300431282.\nCompressions:                              324780228.\nPageins:                                   145919588.\nPageouts:                                    1629417.\nSwapins:                                     5330001.\nSwapouts:                                    6200232."
+  },
+  "hostSwapUsedDeltaBytes": 5719719936,
+  "linuxSwapLimitBytes": 0,
+  "log": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27-repaired/qualification/standalone-audit.log",
+  "peakDiskBytes": 3845894144,
+  "peakFootprintBytes": 32316087984,
+  "peakRssBytes": 16016048128,
+  "phase": "standalone-audit",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 16165,
+  "rssLimitBytes": 32212254720,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "/Users/mikewolfd/Work/spicy-stack-worktrees/refspec-atlas-refresh-20260927/output/atlas-3.1-full-2026-09-27-repaired/qualification/standalone-audit.samples.jsonl",
+  "startedAtUnix": 1790554963.270133,
+  "status": "capacity-stopped",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "AtlasBuildInputReview",
+  "buildSourceCommit": "e81fc616cc0acbc71b01f1737f02295e09779a7c",
+  "reviewSourceCommit": "b9944286d26767a4d404886226a7e1e304cfab17",
+  "checkedFiles": 280,
+  "changedFiles": [
+    {
+      "path": "tools/qualify_atlas_release.py",
+      "buildStartDigest": "sha256:2a8973a4b43267934cff13b3d52e2bdc78d71c12668695fc4eda11ebe5ca1274",
+      "currentDigest": "sha256:2c8a12f243ae04217ac75deea3c93395cfda475fdb463923e56cd592c3912867"
+    }
+  ],
+  "producerInputsUnchanged": true,
+  "explanation": "The qualifier receipt-schema correction does not participate in Atlas construction. Build source code, package, binding, and declared data inputs remain identical to the build-start snapshot."
+}

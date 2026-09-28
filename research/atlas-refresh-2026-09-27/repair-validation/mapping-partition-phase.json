@@ -1,0 +1,40 @@
+{
+  "childCpuSecondsIncludingProbeTools": 80.120255,
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "output/atlas-refresh-repair-validation/compare-mapping-partitions.py"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 79.49771020800108,
+  "exitCode": 0,
+  "footprintLimitBytes": 3221225472,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 61%",
+    "swap": "total = 15360.00M  used = 13989.94M  free = 1370.06M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   825119.\nPages active:                                 529514.\nPages inactive:                               508489.\nPages speculative:                             30494.\nPages throttled:                                   0.\nPages wired down:                             334480.\nPages purgeable:                               18434.\n\"Translation faults\":                     1961990717.\nPages copy-on-write:                        99426848.\nPages zero filled:                         998147755.\nPages reactivated:                         205881094.\nPages purged:                               11774330.\nFile-backed pages:                            358883.\nAnonymous pages:                              709614.\nPages stored in compressor:                  2488272.\nPages occupied by compressor:                 861576.\nDecompressions:                            323941596.\nCompressions:                              351378806.\nPageins:                                   153183304.\nPageouts:                                    2604883.\nSwapins:                                     5445839.\nSwapouts:                                    6657884."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 61%",
+    "swap": "total = 15360.00M  used = 14021.94M  free = 1338.06M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   937821.\nPages active:                                 478769.\nPages inactive:                               448967.\nPages speculative:                             28227.\nPages throttled:                                   0.\nPages wired down:                             320540.\nPages purgeable:                               17284.\n\"Translation faults\":                     1960345228.\nPages copy-on-write:                        99313214.\nPages zero filled:                         996891081.\nPages reactivated:                         205880764.\nPages purged:                               11772514.\nFile-backed pages:                            276002.\nAnonymous pages:                              679961.\nPages stored in compressor:                  2522976.\nPages occupied by compressor:                 875354.\nDecompressions:                            323910678.\nCompressions:                              351378806.\nPageins:                                   153098513.\nPageouts:                                    2604883.\nSwapins:                                     5444125.\nSwapouts:                                    6657884."
+  },
+  "hostSwapUsedDeltaBytes": -33554432,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-3.1-full-2026-09-27-repaired/mapping-partition-phase.log",
+  "peakDiskBytes": 0,
+  "peakFootprintBytes": 44172272,
+  "peakRssBytes": 76431360,
+  "phase": "mapping-partition-equivalence",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 40905,
+  "rssLimitBytes": 3221225472,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "output/atlas-3.1-full-2026-09-27-repaired/mapping-partition-phase.samples.jsonl",
+  "startedAtUnix": 1790556599.3124192,
+  "status": "passed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "unit": "federal-register-api-topics-2026-08-03",
+  "scope": "reconstruct both release identities with identical authenticated inputs and accounting, varying only parser version",
+  "parserChangeCommit": "7f0d561400df89c0b1b5bcf193d065e292c72aec",
+  "reconstructed": {
+    "federal-register-topics-api-source-faithful-v1": "urn:ref:atlas-release:federal-register-api-topics-2026-08-03:9dd93c1e75b710b4f8f0e4e02d70ea34f43a2790dcbbe6b0e734a76f013aaed0",
+    "federal-register-topics-api-shared-reader-v2": "urn:ref:atlas-release:federal-register-api-topics-2026-08-03:fae5748bcb2df8c8c8c66a82c75069c79566d34d5705015a51bd9483bbcaef9d"
+  },
+  "observed": {
+    "after": "urn:ref:atlas-release:federal-register-api-topics-2026-08-03:fae5748bcb2df8c8c8c66a82c75069c79566d34d5705015a51bd9483bbcaef9d",
+    "before": "urn:ref:atlas-release:federal-register-api-topics-2026-08-03:9dd93c1e75b710b4f8f0e4e02d70ea34f43a2790dcbbe6b0e734a76f013aaed0"
+  }
+}
