@@ -74,10 +74,12 @@ supporting members, RDF transports, and pack inventory. It then confirms that
 the view pins that source metadata before checking manifest counts, logical
 record identities, release and source-record closure, label provenance and
 uniqueness, identifier uniqueness, statement endpoints and ring context, and
-immutable evidence coverage. Compact-pack bytes are authenticated while the
-view is built; this preflight does not reread them. A full development view
-with 3,302,340 logical records completed the columnar semantic checks in 7.8
-seconds after the 2026-08-08 scan consolidation.
+immutable evidence coverage. DuckDB runs these relational checks directly over
+the pinned Parquet files, selecting needed columns and spilling intermediate
+joins and groups to temporary storage. Its buffer-manager limit does not cap
+total process memory; the preceding view verification still reads some complete
+projected columns. See the [measured audit simplification](../research/atlas-refresh-2026-09-27/audit-simplification/README.md)
+for the full-candidate measurement and its scope.
 
 This command is a fast development gate, not the Atlas 3 release verdict. Its
 JSON result lists the remaining release-only checks: closed JSON schemas and

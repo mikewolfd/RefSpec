@@ -1,0 +1,38 @@
+{
+  "childCpuSecondsIncludingProbeTools": 778.556455,
+  "command": [
+    "make",
+    "test-package",
+    "PYTEST_ARGS=--junitxml=output/atlas-audit-simplification/fast-tier.xml"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 137.7986324999947,
+  "exitCode": 2,
+  "footprintLimitBytes": 19327352832,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 42%",
+    "swap": "total = 13312.00M  used = 11822.62M  free = 1489.38M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   198010.\nPages active:                                 515286.\nPages inactive:                               591808.\nPages speculative:                             15262.\nPages throttled:                                   0.\nPages wired down:                             328500.\nPages purgeable:                                   6.\n\"Translation faults\":                     2011949502.\nPages copy-on-write:                       102062470.\nPages zero filled:                        1038493838.\nPages reactivated:                         207531650.\nPages purged:                               11854401.\nFile-backed pages:                            362833.\nAnonymous pages:                              759523.\nPages stored in compressor:                  2996909.\nPages occupied by compressor:                1441165.\nDecompressions:                            324510961.\nCompressions:                              352824775.\nPageins:                                   154164525.\nPageouts:                                    2605440.\nSwapins:                                     5568044.\nSwapouts:                                    6707679."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 65%",
+    "swap": "total = 13312.00M  used = 11846.62M  free = 1465.38M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   222191.\nPages active:                                 798918.\nPages inactive:                               907707.\nPages speculative:                            112195.\nPages throttled:                                   0.\nPages wired down:                             306289.\nPages purgeable:                               11633.\n\"Translation faults\":                     2004254120.\nPages copy-on-write:                       101798610.\nPages zero filled:                        1032591049.\nPages reactivated:                         205894027.\nPages purged:                               11830948.\nFile-backed pages:                            740836.\nAnonymous pages:                             1077984.\nPages stored in compressor:                  2051154.\nPages occupied by compressor:                 742220.\nDecompressions:                            324217074.\nCompressions:                              351378806.\nPageins:                                   153856030.\nPageouts:                                    2604886.\nSwapins:                                     5566573.\nSwapouts:                                    6707679."
+  },
+  "hostSwapUsedDeltaBytes": -25165824,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-audit-simplification/fast-tier.log",
+  "peakDiskBytes": 0,
+  "peakFootprintBytes": 15237114376,
+  "peakRssBytes": 14778089472,
+  "phase": "fast-tier-simplified",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 62459,
+  "rssLimitBytes": 19327352832,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "output/atlas-audit-simplification/fast-tier.samples.jsonl",
+  "startedAtUnix": 1790558463.820918,
+  "status": "command-failed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

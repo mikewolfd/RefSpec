@@ -1,0 +1,7 @@
+{
+  "src/refspec/atlas/parquet_preflight.py": "sha256:151fa5e657a4a979d91d06cc1a55cdd420f746059477fac9c71d43d692ae18ca",
+  "src/refspec/atlas/parquet_view.py": "sha256:90222b87f0fa5de9b457200df4243fa2d23af827457c670566a40cec4a0aa6ab",
+  "bindings/atlas/3.1/tools/validate.py": "sha256:8da5a9b96c371b759ddec2c3abceaa61487311d5041b424b667a0da4f5dc704c",
+  "tools/generate_atlas_v3_full.py": "sha256:a6f309f896e1b209e47730aa186ae7f6db71dbe129975e0d540a8d1ef00e9b9e",
+  "tools/verify_atlas_source_fidelity.py": "sha256:64dc9b4ab54524ac07702127b63c09461b77e2cc093189602fc252ede9b2c96a"
+}

@@ -1,0 +1,44 @@
+{
+  "childCpuSecondsIncludingProbeTools": 8.611267999999999,
+  "command": [
+    "env",
+    "REFSPEC_ATLAS_VALIDATION_MODE=audit",
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "bindings/atlas/3.1/tools/validate.py",
+    "--distribution",
+    "output/atlas-3.1-umthes-2026-09-27/distribution"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 8.614024041002267,
+  "exitCode": 0,
+  "footprintLimitBytes": 4294967296,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 67%",
+    "swap": "total = 13312.00M  used = 11910.75M  free = 1401.25M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   262871.\nPages active:                                 785116.\nPages inactive:                               920053.\nPages speculative:                            106082.\nPages throttled:                                   0.\nPages wired down:                             275088.\nPages purgeable:                               12141.\n\"Translation faults\":                     2002960153.\nPages copy-on-write:                       101716869.\nPages zero filled:                        1031498266.\nPages reactivated:                         205893439.\nPages purged:                               11828578.\nFile-backed pages:                            727775.\nAnonymous pages:                             1083476.\nPages stored in compressor:                  2056197.\nPages occupied by compressor:                 740159.\nDecompressions:                            324211854.\nCompressions:                              351378806.\nPageins:                                   153818565.\nPageouts:                                    2604886.\nSwapins:                                     5562065.\nSwapouts:                                    6707679."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 67%",
+    "swap": "total = 13312.00M  used = 11910.75M  free = 1401.25M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   247773.\nPages active:                                 794315.\nPages inactive:                               920147.\nPages speculative:                            112323.\nPages throttled:                                   0.\nPages wired down:                             275105.\nPages purgeable:                               16453.\n\"Translation faults\":                     2002811176.\nPages copy-on-write:                       101710417.\nPages zero filled:                        1031399811.\nPages reactivated:                         205893410.\nPages purged:                               11828450.\nFile-backed pages:                            734090.\nAnonymous pages:                             1092695.\nPages stored in compressor:                  2056251.\nPages occupied by compressor:                 740156.\nDecompressions:                            324211784.\nCompressions:                              351378806.\nPageins:                                   153817338.\nPageouts:                                    2604886.\nSwapins:                                     5562053.\nSwapouts:                                    6707679."
+  },
+  "hostSwapUsedDeltaBytes": 0,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-audit-simplification/bounded-rdf-audit.log",
+  "peakDiskBytes": 0,
+  "peakFootprintBytes": 224511128,
+  "peakRssBytes": 257785856,
+  "phase": "bounded-rdf-audit",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 61773,
+  "rssLimitBytes": 4294967296,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "output/atlas-audit-simplification/bounded-rdf-audit.samples.jsonl",
+  "startedAtUnix": 1790558343.741608,
+  "status": "passed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

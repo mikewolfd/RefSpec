@@ -143,6 +143,9 @@ new partitions with one current line per pack plus reader buffers: `O(B log p)`
 merge work for `B` bytes and `p` partitions. Its [phase receipt](mapping-partition-phase.json)
 records successful completion in about 79.5 seconds. This proves unchanged mapping
 content across partitioning; final independent qualification remains incomplete.
+The replay script takes an explicit `--baseline` directory. The measured version
+at commit `d6e15122` used the same comparison with a machine-specific path; the
+argument replaces that path without changing the retained result.
 
 ## Full qualification capacity stop
 

@@ -1,0 +1,21 @@
+{
+  "command": ".venv/bin/python output/atlas-audit-simplification/benchmark_sample_scan.py",
+  "source": "output/atlas-3.1-umthes-2026-09-27/distribution/packs/sources/umthes-gemet-endpoints-2026-08-15/all.nq.zst",
+  "lines": 50000,
+  "subjects": 45,
+  "selection": "First 50,000 retained canonical lines; first 45 complete Resource subject groups",
+  "historicalInMemorySelectorSeconds": {
+    "old": 0.4584289999984321,
+    "new": 0.07912816700263647
+  },
+  "implementation": "One RDF pass into temporary per-sample files; one sample Dataset at a time; bounded expected-row list",
+  "limitations": "Bounded warm local-file comparison, not a full build or full-scale memory test. Includes row parsing and reconstruction.",
+  "bytes": 9135777,
+  "selectedInputSha256": "722b644e6301e447b9f6757cf5fdb0f3ba0e5f47fae2d1baea426fef34953e13",
+  "seconds": {
+    "old": 0.38124999999126885,
+    "new": 0.08161966699117329
+  },
+  "exactRowAgreement": true,
+  "speedup": 4.671055568414643
+}

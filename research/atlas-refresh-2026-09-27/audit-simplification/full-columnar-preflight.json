@@ -1,0 +1,49 @@
+{
+  "childCpuSecondsIncludingProbeTools": 23.933100000000003,
+  "command": [
+    "uv",
+    "run",
+    "--frozen",
+    "python",
+    "-m",
+    "refspec.atlas.parquet_preflight_cli",
+    "--distribution",
+    "output/atlas-3.1-full-2026-09-27-repaired/distribution",
+    "--distribution-manifest-digest",
+    "sha256:93fd9c17d44d96ed98eb6a6ad022ce44371e353809e2cc386d87580beb306139",
+    "--view",
+    "output/atlas-3.1-full-2026-09-27-repaired/parquet-view",
+    "--view-manifest-digest",
+    "sha256:4d301b1cd77a9d7bd39758cc4ed8313f4a8dab9c8b8c97821178f83b7e3fcb8f"
+  ],
+  "containmentLimitation": "new sessions/groups escape macOS sampling and process-group cleanup",
+  "elapsedSeconds": 14.22808649999206,
+  "exitCode": 0,
+  "footprintLimitBytes": 8589934592,
+  "hostAfter": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 66%",
+    "swap": "total = 13312.00M  used = 11910.75M  free = 1401.25M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   182858.\nPages active:                                 823664.\nPages inactive:                               935945.\nPages speculative:                            101779.\nPages throttled:                                   0.\nPages wired down:                             306274.\nPages purgeable:                               14490.\n\"Translation faults\":                     2000021857.\nPages copy-on-write:                       101539529.\nPages zero filled:                        1028942157.\nPages reactivated:                         205892215.\nPages purged:                               11819962.\nFile-backed pages:                            715842.\nAnonymous pages:                             1145546.\nPages stored in compressor:                  2058404.\nPages occupied by compressor:                 739767.\nDecompressions:                            324209377.\nCompressions:                              351378806.\nPageins:                                   153791826.\nPageouts:                                    2604886.\nSwapins:                                     5561320.\nSwapouts:                                    6707679."
+  },
+  "hostBefore": {
+    "pressure": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 65%",
+    "swap": "total = 13312.00M  used = 11934.75M  free = 1377.25M  (encrypted)",
+    "vm": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                   438073.\nPages active:                                 772637.\nPages inactive:                               707999.\nPages speculative:                            102666.\nPages throttled:                                   0.\nPages wired down:                             309751.\nPages purgeable:                               16485.\n\"Translation faults\":                     1999414965.\nPages copy-on-write:                       101513877.\nPages zero filled:                        1028546978.\nPages reactivated:                         205892188.\nPages purged:                               11813752.\nFile-backed pages:                            485454.\nAnonymous pages:                             1097848.\nPages stored in compressor:                  2059576.\nPages occupied by compressor:                 758985.\nDecompressions:                            324208193.\nCompressions:                              351378806.\nPageins:                                   153562014.\nPageouts:                                    2604883.\nSwapins:                                     5560477.\nSwapouts:                                    6707679."
+  },
+  "hostSwapUsedDeltaBytes": -25165824,
+  "linuxSwapLimitBytes": 0,
+  "log": "output/atlas-audit-simplification/full-columnar-preflight.log",
+  "peakDiskBytes": 0,
+  "peakFootprintBytes": 2520976600,
+  "peakRssBytes": 2596913152,
+  "phase": "full-columnar-preflight",
+  "physicalMeasurementScope": "supervised-process-group",
+  "physicalMetric": "physical-footprint",
+  "pid": 59965,
+  "rssLimitBytes": 8589934592,
+  "rssMeasurementScope": "supervised-process-group",
+  "samples": "output/atlas-audit-simplification/full-columnar-preflight.samples.jsonl",
+  "startedAtUnix": 1790558166.15425,
+  "status": "passed",
+  "swapPolicy": "permitted within physical-footprint budget; host usage observed"
+}

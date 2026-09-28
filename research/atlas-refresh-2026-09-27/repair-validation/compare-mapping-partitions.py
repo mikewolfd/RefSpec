@@ -1,4 +1,5 @@
 """Authenticate and compare sorted RDF bytes before and after pack partitioning."""
+import argparse
 import contextlib
 import hashlib
 import heapq
@@ -6,7 +7,9 @@ import json
 from pathlib import Path
 from backports import zstd
 
-baseline = Path('/Users/mikewolfd/Work/spicy-stack/RefSpec/output/atlas-3.1-full-2026-08-21d')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--baseline', type=Path, required=True, help='Retained baseline distribution directory')
+baseline = parser.parse_args().baseline
 fresh = Path('output/atlas-3.1-full-2026-09-27-repaired/distribution')
 old_manifest = json.loads((baseline / 'atlas-manifest.json').read_text())
 new_manifest = json.loads((fresh / 'atlas-manifest.json').read_text())
