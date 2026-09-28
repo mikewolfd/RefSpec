@@ -74,3 +74,6 @@ No full rebuild, upload, deployment or promotion was performed in this cleanup.
 Benchmark scripts are retained unchanged from `output/atlas-audit-simplification/`.
 Replay them from that original location in the repository with the named
 retained inputs available; their relative root calculation assumes that path.
+
+Raw logs containing terminal progress or whitespace are retained as `.log.gz`;
+decompression reproduces the original output bytes exactly.

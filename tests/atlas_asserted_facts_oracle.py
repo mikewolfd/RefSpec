@@ -311,4 +311,3 @@ class _AssertedFacts:
         if subjects is None:
             raise AssertionError(f"{asserted_type} is not an indexed asserted type")
         return subject in subjects
-

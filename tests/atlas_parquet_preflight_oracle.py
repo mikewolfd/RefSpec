@@ -585,5 +585,3 @@ def validate_atlas_parquet_tables(
         "releaseOnlyChecks": list(RELEASE_ONLY_CHECKS),
         "status": "passed",
     }
-
-
