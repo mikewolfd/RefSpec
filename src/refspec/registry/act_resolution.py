@@ -68,19 +68,27 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from bisect import bisect_right
 from collections.abc import Mapping
 from dataclasses import asdict, dataclass, field, replace
 from functools import cached_property
 from pathlib import Path
 from typing import NamedTuple
 
-from refspec.registry.citation_grammar import ActRelativeCitation, normalize_popular_name
+from refspec.registry.citation_grammar import (
+    ActRelativeCitation,
+    act_name_with_trailing_year,
+    normalize_popular_name,
+)
 
 __all__ = [
     "ALIAS_PRECEDENCE_RULE",
     "ALIAS_YEAR_RULE",
     "ANSWERING_SOURCES",
     "DIVISION_RULE",
+    "ENCLOSING_SOURCE_IDENTITY_RULE",
+    "GENERIC_ACT_STEM_STOPLIST",
+    "REVIEWED_ACT_ALIASES",
     "SOURCE_COMPOSITION_RULE",
     "SOURCE_CREDIT_STATUSES",
     "UNRESOLVED_REASONS",
@@ -93,8 +101,10 @@ __all__ = [
     "SourceCreditAnswer",
     "SourceCreditIndex",
     "SourceCreditTarget",
+    "StatutoryShortTitleMatch",
     "act_name_absence_reason",
     "canonical_usc_iri",
+    "find_statutory_short_titles",
     "resolve_act_name",
     "resolve_act_relative_citation",
     "stated_name_chain",
@@ -195,6 +205,23 @@ ALIAS_MAX_DEPTH = 8
 #: range, regardless of row count. Unknown or narrowed pages cannot prove it;
 #: an in-range page does not establish membership. The next start bounds the end.
 DIVISION_RULE = "act-division-complete-pages-exclusion-v2"
+
+#: An Act enacted inside a section of another public law (such as the Small
+#: Business Act in Pub. L. 85-536, § 2[3]) is keyed by the composite enclosing
+#: identity ``(law, division, enclosing_section)``. Without enclosing-section
+#: alignment, bare section lookups against that law refuse as ambiguous rather
+#: than hitting outer public-law sections (such as 85-536 § 3 -> 12 U.S.C. 371).
+ENCLOSING_SOURCE_IDENTITY_RULE = "composite-law-division-enclosing-section-v1"
+
+#: Reviewed popular-name aliases confirmed against OLRC's Popular Name Tool,
+#: consulted only after stated cross-references and only when the target act is
+#: present in the active index.
+REVIEWED_ACT_ALIASES: Mapping[str, str] = {
+    "cercla": "comprehensive environmental response, compensation, and liability act of 1980",
+}
+
+_ENCLOSING_ACT_SECTION = re.compile(r"^(?P<enclosing>[1-9]\d*[A-Za-z]*)\[(?P<inner>[^\[\]()][^\[\]]*)\]$")
+_TRAILING_SUBSECTION_PARENS = re.compile(r"(?:\([^()]+\))+$")
 
 #: Both sources are consulted, always. Either may answer alone; the same
 #: identifier from both says ``both``; different identifiers REFUSE. The
@@ -404,6 +431,7 @@ class PopularNameRecord:
     #: Builder evidence, absent from the sealed table.
     statutes_at_large_witness: str | None = None
     refused_usc_anchor: str | None = None
+    enclosing_section: str | None = None
 
 
 @dataclass(frozen=True)
@@ -438,6 +466,8 @@ class ActResolution:
     table3_candidate_iri: str | None = None
     #: Division established by the name source or explicitly stated citation.
     act_division: str | None = None
+    #: Enclosing public-law section established by the name source or citation.
+    enclosing_section: str | None = None
     #: Competing name records, including records ruled out by a stated division.
     name_sources: tuple[PopularNameRecord, ...] = ()
     #: Each compatible identity's lookup; none is selected by their parent result.
@@ -508,6 +538,45 @@ class ActIndex:
     division_starts: Mapping[str, tuple[tuple[str, int], ...]] = field(default_factory=dict)
     #: The producer retained non-single-page spellings separately from first pages.
     narrowed_page_sections: frozenset[tuple[str, str]] = frozenset()
+    #: Normalized popular name -> enclosing public-law section when the act was
+    #: enacted inside another section of a public law (e.g. ``"2"`` for 85-536).
+    enclosing_section_by_name: Mapping[str, str] = field(default_factory=dict)
+
+    @cached_property
+    def act_names(self) -> frozenset[str]:
+        """Every normalized popular name and stated/reviewed alias this index recognizes."""
+
+        return (
+            frozenset(self.table3_key_by_name)
+            | frozenset(self.alias_by_name)
+            | frozenset(alias for alias, target in REVIEWED_ACT_ALIASES.items() if target in self.table3_key_by_name)
+        )
+
+    @cached_property
+    def enclosing_sections_by_law(self) -> Mapping[str, frozenset[str]]:
+        """Table III key -> enclosing sections hosting an enacted Act inside that law.
+
+        A law carries an enclosing section ``enc`` when Table III records either
+        two or more distinct ``enc[inner]`` classifications under ``enc``, or an
+        ``enc[inner]`` classification whose ``inner`` also appears as a bare
+        section key in the same law.
+        """
+
+        found: dict[str, frozenset[str]] = {}
+        for law, sections in self.classifications.items():
+            by_enc: dict[str, set[str]] = {}
+            for sec in sections:
+                match = _ENCLOSING_ACT_SECTION.fullmatch(sec)
+                if match is not None:
+                    by_enc.setdefault(match.group("enclosing"), set()).add(match.group("inner"))
+            enclosing = frozenset(
+                enc
+                for enc, inners in by_enc.items()
+                if len(inners) >= 2 or any(inner in sections for inner in inners)
+            )
+            if enclosing:
+                found[law] = enclosing
+        return found
 
     @cached_property
     def acts_supplying_year(self) -> Mapping[str, tuple[str, ...]]:
@@ -552,6 +621,18 @@ class ActIndex:
         if start is None:
             return None
         return (start, min((page for _, page in starts if page > start), default=_PAGE_RANGE_OPEN_END))
+
+    def find_statutory_short_titles(
+        self, text: str, *, deduplicate: bool = True
+    ) -> tuple[StatutoryShortTitleMatch, ...]:
+        """Extract enacted statutory short titles from unstructured prose via maximal-NP scanning."""
+
+        return find_statutory_short_titles(text, self, deduplicate=deduplicate)
+
+    def scan_text(self, text: str, *, deduplicate: bool = True) -> tuple[StatutoryShortTitleMatch, ...]:
+        """Alias for :meth:`find_statutory_short_titles` over unstructured prose."""
+
+        return find_statutory_short_titles(text, self, deduplicate=deduplicate)
 
     @classmethod
     def from_artifact(cls, artifact_dir: Path) -> ActIndex:
@@ -600,18 +681,21 @@ class ActIndex:
                 by_division[row["division"]] = min(by_division.get(row["division"], page), page)
         table3_key_by_name = {}
         division_by_name = {}
+        enclosing_section_by_name = {}
         name_candidates = {}
         for name, records in records_by_name.items():
             laws = {r.table3_key for r in records}
             table3_key_by_name[name] = next(iter(laws)) if len(laws) == 1 else None
-            identities = {(r.table3_key, r.division) for r in records}
+            identities = {(r.table3_key, r.division, r.enclosing_section) for r in records}
             if len(identities) > 1:
                 name_candidates[name] = tuple(sorted(records, key=lambda r: tuple(str(v or "") for v in asdict(r).values())))
             else:
-                division = next(iter(identities))[1]
+                _, division, enclosing = next(iter(identities))
                 if division:
                     page = min((int(r.statutes_at_large_page) for r in records if r.statutes_at_large_page), default=None)
                     division_by_name[name] = (division, page)
+                if enclosing:
+                    enclosing_section_by_name[name] = enclosing
         classifications: dict[str, dict[str, tuple[Classification, ...]]] = {}
         for row in _read_pinned_parquet(directory, "usc-act-sections.parquet"):
             by_section = classifications.setdefault(row["table3_key"], {})
@@ -633,6 +717,7 @@ class ActIndex:
                 for key, by_division in starts.items()
             },
             narrowed_page_sections=narrowed,
+            enclosing_section_by_name=enclosing_section_by_name,
         )
 
 
@@ -672,16 +757,35 @@ class SourceCreditIndex:
     """
 
     targets: Mapping[tuple[str, str, str], tuple[SourceCreditTarget, ...]] = field(default_factory=dict)
+    #: Composite enclosing identity ``(law, division, enclosing_section, act_section)``.
+    enclosing_targets: Mapping[tuple[str, str | None, str, str], tuple[SourceCreditTarget, ...]] = field(
+        default_factory=dict
+    )
 
     @classmethod
     def from_rows(cls, rows) -> SourceCreditIndex:
         collected: dict[tuple[str, str, str], list[SourceCreditTarget]] = {}
-        for law, division, act_section, usc_title, usc_section, volume, page in rows:
+        enclosing_collected: dict[tuple[str, str | None, str, str], list[SourceCreditTarget]] = {}
+        for row in rows:
+            if len(row) == 8:
+                law, division, enclosing_section, act_section, usc_title, usc_section, volume, page = row
+            else:
+                law, division, act_section, usc_title, usc_section, volume, page = row
+                enclosing_section = None
+                if match := _ENCLOSING_ACT_SECTION.fullmatch(str(act_section or "")):
+                    enclosing_section = match.group("enclosing")
+                    act_section = match.group("inner")
             target = SourceCreditTarget(usc_title, usc_section, volume, page)
-            bucket = collected.setdefault((law, division, act_section), [])
+            if enclosing_section:
+                bucket = enclosing_collected.setdefault((law, division or None, enclosing_section, act_section), [])
+            else:
+                bucket = collected.setdefault((law, division, act_section), [])
             if target not in bucket:
                 bucket.append(target)
-        return cls(targets={k: tuple(v) for k, v in collected.items()})
+        return cls(
+            targets={k: tuple(v) for k, v in collected.items()},
+            enclosing_targets={k: tuple(v) for k, v in enclosing_collected.items()},
+        )
 
     @classmethod
     def from_artifact(cls, artifact_dir: Path) -> SourceCreditIndex:
@@ -694,6 +798,7 @@ class SourceCreditIndex:
             (
                 row["public_law"],
                 row["division"],
+                row.get("enclosing_section"),
                 row["act_section"],
                 row["usc_title"],
                 row["usc_section"],
@@ -703,21 +808,43 @@ class SourceCreditIndex:
             for row in _read_pinned_parquet(directory, "usc-source-credits.parquet")
         )
 
-    def targets_for(self, public_law: str, division: str, act_section: str) -> tuple[SourceCreditTarget, ...]:
+    def targets_for(
+        self,
+        public_law: str,
+        division: str | None,
+        act_section: str,
+        *,
+        enclosing_section: str | None = None,
+    ) -> tuple[SourceCreditTarget, ...]:
+        if enclosing_section:
+            return self.enclosing_targets.get((public_law, division or None, enclosing_section, act_section), ())
+        if not division:
+            return ()
         return self.targets.get((public_law, division, act_section), ())
 
-    def lookup(self, public_law: str | None, division: str | None, act_section: str) -> SourceCreditAnswer:
+    def lookup(
+        self,
+        public_law: str | None,
+        division: str | None,
+        act_section: str,
+        *,
+        enclosing_section: str | None = None,
+    ) -> SourceCreditAnswer:
         """This source's answer, with "nothing to look under" kept distinct.
 
-        The division is part of the key, not a filter applied afterwards, so a
-        citation with no division has no key here at all. That costs nothing:
-        every one of the 3,721 credit rows names a division, and every one of
-        the 109 laws they cover is also a Table III key.
+        The division (and any enclosing section) is part of the key, not a
+        filter applied afterwards, so a citation lacking the required key
+        components has no key here at all.
         """
 
-        if not public_law or not division:
-            return SourceCreditAnswer(status="no_key")
-        found = self.targets_for(public_law, division, act_section)
+        if enclosing_section:
+            if not public_law:
+                return SourceCreditAnswer(status="no_key")
+            found = self.targets_for(public_law, division, act_section, enclosing_section=enclosing_section)
+        else:
+            if not public_law or not division:
+                return SourceCreditAnswer(status="no_key")
+            found = self.targets_for(public_law, division, act_section)
         if not found:
             return SourceCreditAnswer(status="absent")
         if len({(t.usc_title, t.usc_section) for t in found}) > 1:
@@ -788,6 +915,10 @@ def resolve_act_name(name: str, index: ActIndex) -> str | None:
         if stripped != step and stripped in index.table3_key_by_name:
             return stripped
     for step in chain:
+        reviewed = REVIEWED_ACT_ALIASES.get(step)
+        if reviewed is not None and reviewed in index.table3_key_by_name:
+            return reviewed
+    for step in chain:
         supplied = index.acts_supplying_year.get(step, ())
         if len(supplied) == 1:
             return supplied[0]
@@ -817,18 +948,86 @@ class _Verdict:
 _SILENT = _Verdict()
 
 
+def _lookup_table3_rows(
+    law_sections: Mapping[str, tuple[Classification, ...]],
+    section: str,
+    *,
+    enclosing_section: str | None,
+    has_enclosing_structure: bool,
+) -> tuple[str, tuple[Classification, ...], str | None]:
+    """Resolve Table III classification rows respecting composite enclosing-section identity."""
+
+    stripped = section.strip()
+    explicit = _ENCLOSING_ACT_SECTION.fullmatch(stripped)
+    if explicit is not None:
+        enc, inner = explicit.group("enclosing"), explicit.group("inner")
+        if enclosing_section is not None and enc != enclosing_section:
+            return stripped, (), "act_section_ambiguous"
+        rows = law_sections.get(stripped, ())
+        if rows:
+            return stripped, rows, None
+        base_inner = _TRAILING_SUBSECTION_PARENS.sub("", inner)
+        if base_inner != inner and not any(k.startswith(f"{enc}[{base_inner}(") for k in law_sections):
+            fallback_key = f"{enc}[{base_inner}]"
+            rows = law_sections.get(fallback_key, ())
+            if rows:
+                return fallback_key, rows, None
+        return stripped, (), "act_section_not_classified"
+
+    if enclosing_section is not None:
+        enclosed_key = f"{enclosing_section}[{stripped}]"
+        rows = law_sections.get(enclosed_key, ())
+        if rows:
+            return enclosed_key, rows, None
+        base = _TRAILING_SUBSECTION_PARENS.sub("", stripped)
+        if base != stripped and not any(
+            k.startswith(f"{enclosing_section}[{base}(") for k in law_sections
+        ):
+            fallback_key = f"{enclosing_section}[{base}]"
+            rows = law_sections.get(fallback_key, ())
+            if rows:
+                return fallback_key, rows, None
+        return enclosed_key, (), "act_section_not_classified"
+
+    if has_enclosing_structure:
+        return stripped, (), "act_section_ambiguous"
+
+    rows = law_sections.get(section, ())
+    if rows:
+        return section, rows, None
+    base = _TRAILING_SUBSECTION_PARENS.sub("", stripped)
+    if base != stripped and not any(k.startswith(f"{base}(") for k in law_sections):
+        rows = law_sections.get(base, ())
+        if rows:
+            return base, rows, None
+    return section, (), "act_section_not_classified"
+
+
 def _resolve_through_table3(
-    citation: ActRelativeCitation, index: ActIndex, act_key: str, table3_key: str
+    citation: ActRelativeCitation,
+    index: ActIndex,
+    act_key: str,
+    table3_key: str,
+    *,
+    enclosing_section: str | None = None,
 ) -> _Verdict:
     """Table III's verdict. Always an identifier or a reason, never silence."""
 
     if table3_key in index.incomplete_sources:
         return _Verdict(reason="source_incomplete")
-    rows = index.classifications.get(table3_key, {}).get(citation.section, ())
-    if not rows:
-        return _Verdict(reason="act_section_not_classified")
+    effective_enclosing = enclosing_section if enclosing_section is not None else getattr(citation, "enclosing_section", None)
+    law_sections = index.classifications.get(table3_key, {})
+    enclosing_by_law = getattr(index, "enclosing_sections_by_law", {})
+    lookup_key, rows, lookup_reason = _lookup_table3_rows(
+        law_sections,
+        citation.section,
+        enclosing_section=effective_enclosing,
+        has_enclosing_structure=table3_key in enclosing_by_law,
+    )
+    if lookup_reason is not None:
+        return _Verdict(reason=lookup_reason)
     page_range = index.act_page_range(act_key)
-    if page_range is not None and (table3_key, citation.section) not in index.narrowed_page_sections:
+    if page_range is not None and (table3_key, lookup_key) not in index.narrowed_page_sections:
         low, high = page_range
         # Exclusion only: unknown pages cannot prove it, and narrowing to one
         # in-range row cannot identify that row as belonging to the named act.
@@ -924,26 +1123,49 @@ def resolve_act_relative_citation(
     sources = index.name_candidates.get(act_key, ())
     if sources:
         groups = {}
+        division_compatible = False
         for source in sources:
             if citation.division and source.division and citation.division != source.division:
                 continue
-            identity = (source.table3_key, source.division or citation.division)
+            division_compatible = True
+            if (
+                citation.enclosing_section
+                and source.enclosing_section
+                and citation.enclosing_section != source.enclosing_section
+            ):
+                continue
+            identity = (
+                source.table3_key,
+                source.division or citation.division,
+                source.enclosing_section or citation.enclosing_section,
+            )
             groups.setdefault(identity, []).append(source)
         candidates = []
-        for (law, division), records in sorted(groups.items(), key=lambda item: (item[0][0], item[0][1] or "")):
+        for (law, division, enclosing), records in sorted(
+            groups.items(), key=lambda item: (item[0][0], item[0][1] or "", item[0][2] or "")
+        ):
             page = min((int(r.statutes_at_large_page) for r in records if r.statutes_at_large_page), default=None)
-            narrowed = replace(index, table3_key_by_name={act_key: law}, name_candidates={},
-                               division_by_name={act_key: (division, page)} if division else {})
+            narrowed = replace(
+                index,
+                table3_key_by_name={act_key: law},
+                name_candidates={},
+                division_by_name={act_key: (division, page)} if division else {},
+                enclosing_section_by_name={act_key: enclosing} if enclosing else {},
+            )
             candidates.append(resolve_act_relative_citation(citation, index=narrowed, source_credits=source_credits))
         if len(candidates) == 1:
             return replace(candidates[0], name_sources=sources)
+        empty_reason = "act_section_ambiguous" if division_compatible else "act_division_conflict"
         return ActResolution(citation, act_key=act_key, table3_key=index.table3_key_by_name[act_key],
-                             unresolved_reason="act_name_ambiguous" if candidates else "act_division_conflict",
+                             unresolved_reason="act_name_ambiguous" if candidates else empty_reason,
                              name_sources=sources, candidate_resolutions=tuple(candidates))
     table3_key = index.table3_key_by_name[act_key]
     stated = index.division_by_name.get(act_key)
+    stated_enclosing = index.enclosing_section_by_name.get(act_key)
+    effective_enclosing = stated_enclosing or citation.enclosing_section
     common = {"act_key": act_key, "table3_key": table3_key,
-              "act_division": stated[0] if stated else citation.division}
+              "act_division": stated[0] if stated else citation.division,
+              "enclosing_section": effective_enclosing}
 
     # A division the citation itself names is the strongest discriminator
     # there is; if it contradicts the resolved act's division, the two halves
@@ -952,22 +1174,53 @@ def resolve_act_relative_citation(
     # them under — and the resolution records that as ``not_consulted``.
     if citation.division and stated and citation.division != stated[0]:
         return ActResolution(citation, **common, unresolved_reason="act_division_conflict")
+    if citation.enclosing_section and stated_enclosing and citation.enclosing_section != stated_enclosing:
+        return ActResolution(
+            citation,
+            act_key=act_key,
+            table3_key=table3_key,
+            act_division=stated[0] if stated else citation.division,
+            enclosing_section=stated_enclosing,
+            unresolved_reason="act_section_ambiguous",
+        )
 
-    table3 = _resolve_through_table3(citation, index, act_key, table3_key)
+    table3 = _resolve_through_table3(
+        citation, index, act_key, table3_key, enclosing_section=effective_enclosing
+    )
 
     # The second source is consulted even when Table III answered, because a
     # disagreement is a finding; and even when Table III's page could not be
     # read, because a hole in one source is exactly what a second is for.
-    if source_credits is None:
+    # When a law carries section-enclosed acts and neither the act nor the
+    # citation aligns on an enclosing section, there is no agreed key to
+    # consult credits under.
+    explicit_sec = _ENCLOSING_ACT_SECTION.fullmatch(citation.section.strip())
+    if source_credits is None or (
+        effective_enclosing is None and explicit_sec is None and table3_key in index.enclosing_sections_by_law
+    ):
         credit = SourceCreditAnswer(status="not_consulted")
     else:
+        credit_enclosing = effective_enclosing or (explicit_sec.group("enclosing") if explicit_sec else None)
+        credit_section = explicit_sec.group("inner") if explicit_sec else citation.section
+        credit_law = table3_key if _PUBLIC_LAW_KEY.fullmatch(table3_key or "") else None
+        credit_div = stated[0] if stated else citation.division
         credit = source_credits.lookup(
-            table3_key if _PUBLIC_LAW_KEY.fullmatch(table3_key or "") else None,
-            # Equal whenever both are stated: the conflict above already
-            # returned. This reads "whichever half named a division".
-            stated[0] if stated else citation.division,
-            citation.section,
+            credit_law,
+            credit_div,
+            credit_section,
+            enclosing_section=credit_enclosing,
         )
+        if credit.status == "absent":
+            base_sec = _TRAILING_SUBSECTION_PARENS.sub("", credit_section.strip())
+            law_secs = index.classifications.get(table3_key, {})
+            sub_prefix = f"{credit_enclosing}[{base_sec}(" if credit_enclosing else f"{base_sec}("
+            if base_sec != credit_section.strip() and not any(k.startswith(sub_prefix) for k in law_secs):
+                credit = source_credits.lookup(
+                    credit_law,
+                    credit_div,
+                    base_sec,
+                    enclosing_section=credit_enclosing,
+                )
     credits = _verdict_from_credits(credit)
 
     shared = {**common, "table3_reason": table3.reason, "source_credit_status": credit.status,
@@ -1024,3 +1277,675 @@ def resolve_act_relative_citation(
         statutes_at_large_volume=answer.statutes_at_large_volume,
         statutes_at_large_page=answer.statutes_at_large_page,
     )
+
+
+# --------------------------------------------------------------------------- #
+# Maximal-NP statutory short-title scanning over unstructured prose
+# --------------------------------------------------------------------------- #
+
+#: Generic demonstratives and articles that appear before ``Act`` in legislative
+#: and regulatory prose ("This Act", "Such Act", "That Act", "The Act") and
+#: never identify a statutory short title on their own, even on a synthetic index.
+GENERIC_ACT_STEM_STOPLIST: frozenset[str] = frozenset(
+    {
+        "a",
+        "an",
+        "any",
+        "each",
+        "other",
+        "present",
+        "prior",
+        "said",
+        "same",
+        "such",
+        "that",
+        "the",
+        "this",
+    }
+)
+
+_PROSE_CHAR_MAP = str.maketrans(
+    {
+        "‘": "'",
+        "’": "'",
+        "‛": "'",
+        "′": "'",
+        "“": '"',
+        "”": '"',
+        "‟": '"',
+        "″": '"',
+        "\u00a0": " ",
+        **dict.fromkeys("‐‑‒–—―−\x96\x97", "-"),
+    }
+)
+_PROSE_PARAGRAPH_BREAK_RE = re.compile(r"\r?\n[ \t]*\r?\n")
+_PROSE_ACT_CONNECTORS = frozenset(
+    {
+        "of",
+        "for",
+        "and",
+        "or",
+        "the",
+        "to",
+        "on",
+        "in",
+        "with",
+        "&",
+        "by",
+        "against",
+        "from",
+    }
+)
+_PROSE_ACT_STOP_TOKENS = frozenset(
+    {
+        "ACTS",
+        "USC",
+        "USCA",
+        "USCS",
+        "CFR",
+        "STAT",
+        "FR",
+        "PL",
+        "EO",
+        "PUB",
+        "AMEND",
+        "AMENDS",
+        "AMENDED",
+        "AMENDING",
+        "UNDER",
+        "PURSUANT",
+        "ENACTED",
+        "TITLED",
+        "ENTITLED",
+    }
+)
+_PROSE_SENTENCE_INITIAL_OPENERS = frozenset(
+    {
+        "all",
+        "although",
+        "anything",
+        "because",
+        "both",
+        "but",
+        "cf",
+        "compare",
+        "despite",
+        "during",
+        "each",
+        "either",
+        "even",
+        "every",
+        "everything",
+        "except",
+        "few",
+        "following",
+        "given",
+        "hence",
+        "however",
+        "if",
+        "including",
+        "instead",
+        "irrespective",
+        "many",
+        "meanwhile",
+        "moreover",
+        "most",
+        "neither",
+        "nevertheless",
+        "no",
+        "none",
+        "nonetheless",
+        "nor",
+        "note",
+        "nothing",
+        "notwithstanding",
+        "once",
+        "only",
+        "otherwise",
+        "pending",
+        "regarding",
+        "regardless",
+        "respecting",
+        "save",
+        "see",
+        "several",
+        "since",
+        "so",
+        "some",
+        "something",
+        "then",
+        "therefore",
+        "though",
+        "throughout",
+        "thus",
+        "unless",
+        "unlike",
+        "until",
+        "when",
+        "whenever",
+        "where",
+        "whereas",
+        "whether",
+        "while",
+        "within",
+        "yet",
+    }
+)
+_PROSE_ABBREV_DOTTED_RE = re.compile(
+    r"(?:(?:[A-Za-z]\.){1,6}(?:-[A-Za-z0-9']+)?|\d+\.\d+|(?i:"
+    r"Adm|Admin|App|Art|Assn|Brig|Bros|Capt|Cf|Ch|Cmdr|Co|Col|Coop|Corp|Cpl"
+    r"|Dept|Dev|Div|Dr|Envt|Fed|Ft|Gen|Gov|Govt|Hon|Inc|Intl|Jr|Lt|Ltd|Maj"
+    r"|Mgmt|Mr|Mrs|Ms|Mt|Natl|No|Nos|Para|Prev|Prof|Pt|Pub|Pvt|Rehab|Rep"
+    r"|Rev|Ry|Sec|Secs|Sen|Sgt|Sr|St|Ste|Subch|Subpt|Subsec|Supp|Tech|Tit|Vet"
+    r")\.)"
+)
+_PROSE_CAP_TOKEN_RE = re.compile(
+    r"(?:(?:[A-Z]\.){1,6}(?:-[\w']+)?|\d+\.\d+|[A-Z0-9][\w'\-&]*(?:\([A-Za-z0-9.\-&]{1,12}\))*\.?)"
+)
+_PROSE_FWD_LEX_RE = re.compile(
+    r"(?P<para>\r?\n[ \t]*\r?\n)"
+    r"|(?P<ws>\s+)"
+    r"|(?P<comma>,)"
+    r"|(?P<quoted>\"[^\"\r\n]{1,32}\"|''[^'\r\n]{1,32}'')"
+    r"|(?P<paren>\([^()\r\n]{1,40}\))"
+    r"|(?P<word>"
+    r"(?:[A-Za-z]\.){2,6}(?:-[\w']+)?"
+    r"|\d+\.\d+"
+    r"|[A-Za-z0-9][\w'\-&]*(?:\([A-Za-z0-9.\-&]{1,12}\))+"
+    r"|[A-Za-z0-9][\w'\-&]*\.?"
+    r"|§+"
+    r"|&"
+    r")"
+    r"|(?P<other>.)"
+)
+_PROSE_LIST_MARKER_PAREN_RE = re.compile(r"^\([A-Za-z0-9]{1,4}\)$")
+_PROSE_DESIGNATOR_RE = re.compile(
+    r"^(?:"
+    r"[A-Z]{1,3}"
+    r"|[IVXLCDM]{1,8}"
+    r"|\d{1,5}[A-Za-z0-9.\-]*(?:\([A-Za-z0-9.\-]{1,6}\))*"
+    r"|\([A-Za-z0-9]{1,4}\)(?:\([A-Za-z0-9]{1,4}\))*"
+    r")$"
+)
+_PROSE_DESIGNATOR_CONJ = frozenset({"and", "&", "or", "through", "to"})
+_PROSE_STRUCTURAL_CONTAINERS = frozenset(
+    {
+        "article",
+        "articles",
+        "art",
+        "ch",
+        "chapter",
+        "chapters",
+        "clause",
+        "clauses",
+        "div",
+        "division",
+        "divisions",
+        "item",
+        "items",
+        "para",
+        "paragraph",
+        "paragraphs",
+        "part",
+        "parts",
+        "pt",
+        "schedule",
+        "sec",
+        "secs",
+        "section",
+        "sections",
+        "subch",
+        "subchapter",
+        "subchapters",
+        "subparagraph",
+        "subparagraphs",
+        "subpart",
+        "subparts",
+        "subpt",
+        "subsec",
+        "subsection",
+        "subsections",
+        "subtitle",
+        "subtitles",
+        "tit",
+        "title",
+        "titles",
+        "§",
+        "§§",
+    }
+)
+_PROSE_AMENDMENTS_TAIL_RE = re.compile(r"\s+Amendments?\b")
+_PROSE_OF_YEAR_TAIL_RE = re.compile(r"\s*(?:,\s*)?of\s+(?P<year>(?:1[789]|20)\d{2})\b")
+_PROSE_COMMA_YEAR_TAIL_RE = re.compile(r"\s*,\s*(?P<year>(?:1[789]|20)\d{2})\b")
+_PROSE_FOUR_DIGIT_YEAR_RE = re.compile(r"^(?:1[789]|20)\d{2}$")
+_PROSE_QUOTED_ACT_END_RE = re.compile(r"\bAct\s*[\"']+$")
+
+
+class _ProseToken(NamedTuple):
+    kind: str
+    raw: str
+    bare: str
+    start: int
+    has_comma: bool
+
+
+@dataclass(frozen=True, slots=True)
+class StatutoryShortTitleMatch:
+    """One enacted statutory short title resolved from unstructured prose."""
+
+    surface: str
+    act_key: str
+    table3_key: str | None
+    start: int
+    end: int
+
+    @property
+    def normalized_surface(self) -> str:
+        """Single-line whitespace-collapsed rendering of :attr:`surface`."""
+
+        return re.sub(r"\s+", " ", self.surface).strip()
+
+    @property
+    def resolved_act_key(self) -> str:
+        """Alias preserving compatibility with callers reading ``resolved_act_key``."""
+
+        return self.act_key
+
+
+def _is_sentence_initial(norm: str, pos: int) -> bool:
+    """Whether ``pos`` sits at the opening word of a sentence, line heading, or quoted/bulleted clause."""
+
+    idx = pos
+    while idx > 0 and norm[idx - 1] in " \t\"'([{-*•":
+        idx -= 1
+    return idx == 0 or norm[idx - 1] in ".!?;:\n\r"
+
+
+def _tokenize_window_backward(norm: str, window_start: int, act_start: int) -> list[_ProseToken]:
+    """Tokenize ``norm[window_start:act_start]`` in one forward ``O(W)`` pass and walk right-to-left."""
+
+    lex_items: list[tuple[str, str, int, bool]] = []
+    for m in _PROSE_FWD_LEX_RE.finditer(norm, window_start, act_start):
+        lkind = m.lastgroup
+        if lkind == "ws" or lkind is None:
+            continue
+        raw = m.group()
+        if lkind == "comma":
+            if lex_items and lex_items[-1][0] != "barrier" and not lex_items[-1][3]:
+                prev_k, prev_r, prev_s, _ = lex_items[-1]
+                lex_items[-1] = (prev_k, prev_r, prev_s, True)
+            else:
+                lex_items.append(("barrier", ",", m.start(), False))
+            continue
+        if lkind == "para" or lkind == "other":
+            lex_items.append(("barrier", raw, m.start(), False))
+            continue
+        if lkind == "quoted":
+            if _PROSE_QUOTED_ACT_END_RE.search(raw) or not any(ch.isalnum() for ch in raw):
+                # An earlier quoted Act title ("Clean Air Act") wraps a complete title rather than an inner nickname.
+                lex_items.append(("barrier", raw, m.start(), False))
+            else:
+                lex_items.append(("quoted", raw, m.start(), False))
+            continue
+        lex_items.append((lkind, raw, m.start(), False))
+
+    if not lex_items or lex_items[-1][0] == "barrier" or lex_items[-1][3]:
+        # A barrier or comma immediately preceding "Act" cannot belong to this Act's noun phrase.
+        return []
+
+    tokens: list[_ProseToken] = []
+    for k in range(len(lex_items) - 1, -1, -1):
+        kind, raw_word, tok_start, has_comma = lex_items[k]
+        if kind == "barrier":
+            break
+        if kind == "quoted":
+            tokens.append(_ProseToken("quoted", raw_word, raw_word, tok_start, has_comma))
+            continue
+        if kind == "paren":
+            has_left_np_neighbor = (
+                k > 0
+                and lex_items[k - 1][0] in {"word", "quoted", "paren"}
+                and not lex_items[k - 1][1].endswith(".")
+                and (
+                    lex_items[k - 1][1][:1].isupper()
+                    or lex_items[k - 1][1].lower() in {"the", "a", "an"}
+                )
+            )
+            if (
+                any(ch.isupper() or ch.isdigit() for ch in raw_word)
+                or _PROSE_LIST_MARKER_PAREN_RE.fullmatch(raw_word)
+                or has_left_np_neighbor
+            ):
+                tokens.append(_ProseToken("paren", raw_word, raw_word, tok_start, has_comma))
+                continue
+            break
+
+        bare_word = raw_word.rstrip(".")
+        upper_word = bare_word.upper()
+        lower_word = bare_word.lower()
+
+        if raw_word.endswith("."):
+            if _PROSE_ABBREV_DOTTED_RE.fullmatch(raw_word):
+                prev_bare_upper = (
+                    lex_items[k - 1][1].replace(".", "").upper()
+                    if k > 0 and lex_items[k - 1][0] == "word"
+                    else ""
+                )
+                if upper_word == "L" and prev_bare_upper in {"PUB", "P"}:
+                    break
+                if upper_word == "APP" and prev_bare_upper in {"USC", "USCA", "USCS", "C"}:
+                    break
+            else:
+                # Only treat an unknown capitalized dotted word as part of the NP when immediately preceded
+                # by an article ("the Brig. Smith Act"), otherwise "." ends the preceding sentence.
+                preceded_by_article = (
+                    raw_word[:1].isupper()
+                    and k > 0
+                    and lex_items[k - 1][0] == "word"
+                    and not lex_items[k - 1][1].endswith(".")
+                    and not lex_items[k - 1][3]
+                    and lex_items[k - 1][1].lower() in {"the", "a", "an"}
+                )
+                if not preceded_by_article:
+                    break
+
+        if upper_word in _PROSE_ACT_STOP_TOKENS:
+            break
+
+        if (
+            _PROSE_CAP_TOKEN_RE.fullmatch(raw_word)
+            or lower_word in _PROSE_ACT_CONNECTORS
+            or lower_word in _PROSE_STRUCTURAL_CONTAINERS
+        ):
+            tokens.append(_ProseToken("word", raw_word, bare_word, tok_start, has_comma))
+            continue
+        break
+
+    return tokens
+
+
+def _resolve_prose_act_candidate(
+    norm: str,
+    span_start: int,
+    act_end: int,
+    index: ActIndex,
+    *,
+    leading_the_start: int | None = None,
+) -> tuple[int, int, str] | None:
+    """Resolve one candidate NP start through forward ``Amendments`` and year tails, longest span first."""
+
+    base_end = act_end
+    amend_match = _PROSE_AMENDMENTS_TAIL_RE.match(norm, base_end)
+    if amend_match is not None and not _PROSE_PARAGRAPH_BREAK_RE.search(norm, base_end, amend_match.end()):
+        base_end = amend_match.end()
+
+    def _try_surface(c_start: int, c_end: int, probe_text: str) -> tuple[int, int, str] | None:
+        resolved = resolve_act_name(probe_text, index)
+        if resolved is None:
+            reordered = act_name_with_trailing_year(normalize_popular_name(probe_text))
+            if reordered is not None:
+                resolved = resolve_act_name(reordered, index)
+        if resolved is not None:
+            return c_start, c_end, resolved
+        if leading_the_start is not None and c_start == span_start:
+            with_the = f"the {probe_text}"
+            resolved_the = resolve_act_name(with_the, index)
+            if resolved_the is not None:
+                return leading_the_start, c_end, resolved_the
+        return None
+
+    stem_surface = re.sub(r"\s+", " ", norm[span_start:base_end]).strip()
+    of_year = _PROSE_OF_YEAR_TAIL_RE.match(norm, base_end)
+    if of_year is not None and not _PROSE_PARAGRAPH_BREAK_RE.search(norm, base_end, of_year.end()):
+        yr = of_year.group("year")
+        yr_end = of_year.end()
+        # Try "of YYYY" first, then ", YYYY" for pre-modern statutes titled with a comma year.
+        for candidate_str in (f"{stem_surface} of {yr}", f"{stem_surface}, {yr}"):
+            hit = _try_surface(span_start, yr_end, candidate_str)
+            if hit is not None:
+                return hit
+        # An explicit "of YYYY" belongs to the stated title; never drop it to match a different year's act.
+        return None
+
+    comma_year = _PROSE_COMMA_YEAR_TAIL_RE.match(norm, base_end)
+    if comma_year is not None and not _PROSE_PARAGRAPH_BREAK_RE.search(norm, base_end, comma_year.end()):
+        yr = comma_year.group("year")
+        yr_end = comma_year.end()
+        for candidate_str in (f"{stem_surface}, {yr}", f"{stem_surface} of {yr}"):
+            hit = _try_surface(span_start, yr_end, candidate_str)
+            if hit is not None:
+                return hit
+        # Unlike "of YYYY", ", YYYY" in prose may open the next clause ("Under the Clean Air Act, 2023 emissions..."),
+        # so fall through to the pre-comma span when neither year-qualified spelling is indexed.
+
+    return _try_surface(span_start, base_end, stem_surface)
+
+
+def _match_structural_prefix_before_of(trimmed: list[_ProseToken]) -> int | None:
+    """If ``trimmed`` opens with ``[Container] <Designator> [(and|or|through) <Designator>]* of <NP>``, return the ``of`` index."""
+
+    idx = len(trimmed) - 1
+    if idx < 1:
+        return None
+    if trimmed[idx].kind == "word" and trimmed[idx].bare.lower() in _PROSE_STRUCTURAL_CONTAINERS:
+        idx -= 1
+    if idx < 1 or not _PROSE_DESIGNATOR_RE.fullmatch(trimmed[idx].bare):
+        return None
+    idx -= 1
+    while idx >= 2 and trimmed[idx].bare.lower() in _PROSE_DESIGNATOR_CONJ:
+        if not _PROSE_DESIGNATOR_RE.fullmatch(trimmed[idx - 1].bare):
+            break
+        idx -= 2
+    if idx >= 1 and trimmed[idx].bare.lower() == "of":
+        return idx
+    return None
+
+
+def _trim_and_resolve_token_slice(
+    raw_slice: list[_ProseToken],
+    norm: str,
+    act_start: int,
+    act_end: int,
+    index: ActIndex,
+) -> tuple[int, int, str] | None:
+    """Trim leading connectors/designators on one uninterrupted NP slice and resolve it without inner sub-slicing."""
+
+    toks = list(raw_slice)
+    leading_the_start: int | None = None
+    while toks and toks[-1].kind == "word" and toks[-1].bare.lower() in _PROSE_ACT_CONNECTORS:
+        leading_the_start = toks[-1].start if toks[-1].bare.lower() == "the" else None
+        toks.pop()
+    if not toks:
+        return None
+
+    def _attempt(active: list[_ProseToken], the_start: int | None) -> tuple[int, int, str] | None:
+        if not active or not any(
+            t.raw[:1].isupper() or t.kind == "quoted" for t in active
+        ):
+            return None
+        c_start = active[-1].start
+        stem_raw = re.sub(r"\s+", " ", norm[c_start:act_start]).strip()
+        stem_norm = _LEADING_ARTICLE.sub("", normalize_popular_name(stem_raw)).strip()
+        if not stem_norm or stem_norm in GENERIC_ACT_STEM_STOPLIST:
+            return None
+        return _resolve_prose_act_candidate(norm, c_start, act_end, index, leading_the_start=the_start)
+
+    # First try the full maximal slice (preserving e.g. "Title I of the Elementary and Secondary Education Act of 1965").
+    direct = _attempt(toks, leading_the_start)
+    if direct is not None:
+        return direct
+
+    trimmed = list(toks)
+    sub_the = leading_the_start
+    changed = False
+    while trimmed:
+        if (trimmed[-1].kind == "paren" and _PROSE_LIST_MARKER_PAREN_RE.fullmatch(trimmed[-1].raw)) or (
+            len(trimmed) >= 2
+            and trimmed[-1].kind == "word"
+            and not trimmed[-1].has_comma
+            and _is_sentence_initial(norm, trimmed[-1].start)
+            and (
+                (trimmed[-2].kind == "word" and trimmed[-2].bare.lower() == "the")
+                or (
+                    trimmed[-1].bare.lower() in _PROSE_SENTENCE_INITIAL_OPENERS
+                    and trimmed[-2].kind == "word"
+                    and trimmed[-2].bare.lower() in _PROSE_ACT_CONNECTORS
+                )
+            )
+        ):
+            trimmed.pop()
+            changed = True
+        else:
+            of_idx = _match_structural_prefix_before_of(trimmed)
+            if of_idx is not None:
+                trimmed = trimmed[:of_idx]
+                changed = True
+            else:
+                break
+
+        sub_the = None
+        while trimmed and trimmed[-1].kind == "word" and trimmed[-1].bare.lower() in _PROSE_ACT_CONNECTORS:
+            sub_the = trimmed[-1].start if trimmed[-1].bare.lower() == "the" else None
+            trimmed.pop()
+
+    if changed and trimmed:
+        return _attempt(trimmed, sub_the)
+    return None
+
+
+def _build_candidate_slices(tokens: list[_ProseToken]) -> list[list[_ProseToken]]:
+    """Order candidate slices longest-first, splitting only at coordinated inner ``Act`` boundaries or clause commas."""
+
+    slices: list[list[_ProseToken]] = [tokens]
+    seen_lengths: set[int] = {len(tokens)}
+
+    def _push(sub: list[_ProseToken]) -> None:
+        if sub and len(sub) not in seen_lengths:
+            seen_lengths.add(len(sub))
+            slices.append(sub)
+
+    for idx_tok in range(len(tokens) - 1, 0, -1):
+        tok = tokens[idx_tok]
+        # 1. Coordinated multi-Act fallback ("Clean Air Act and the Safe Drinking Water Act"):
+        #    only split after an earlier "Act [Amendments] [of/, YYYY]" when followed by explicit
+        #    coordination (comma or and/&/or), never inside an uncoordinated compound NP
+        #    ("Violence Against Women Act Reauthorization Act" or "Kelsey Smith Act Technical Amendments Act").
+        if tok.kind == "word" and tok.raw == "Act":
+            cur = idx_tok - 1
+            if cur >= 0 and tokens[cur].kind == "word" and tokens[cur].bare in {"Amendment", "Amendments"}:
+                cur -= 1
+            tail_had_comma = tokens[cur + 1].has_comma
+            if (
+                cur >= 1
+                and tokens[cur].kind == "word"
+                and tokens[cur].bare.lower() == "of"
+                and _PROSE_FOUR_DIGIT_YEAR_RE.fullmatch(tokens[cur - 1].bare)
+            ):
+                tail_had_comma = tokens[cur - 1].has_comma
+                cur -= 2
+            elif (
+                tail_had_comma
+                and cur >= 0
+                and _PROSE_FOUR_DIGIT_YEAR_RE.fullmatch(tokens[cur].bare)
+            ):
+                tail_had_comma = tokens[cur].has_comma
+                cur -= 1
+            if cur >= 0 and tail_had_comma:
+                if tokens[cur].bare.lower() in {"and", "&", "or"}:
+                    cur -= 1
+                if cur >= 0:
+                    _push(tokens[: cur + 1])
+            elif cur >= 1 and tokens[cur].bare.lower() in {"and", "&", "or"}:
+                _push(tokens[:cur])
+
+        # 2. Non-conjunction clause comma ("According to Congress, Clean Air Act rules apply"),
+        #    skipping serial-title commas ("Prevention, Detection, and Smith Act") and comma-years (", 2023").
+        if tok.has_comma:
+            right_neighbor_bare = tokens[idx_tok - 1].bare.lower()
+            if right_neighbor_bare not in {"and", "&", "or"} and not _PROSE_FOUR_DIGIT_YEAR_RE.fullmatch(
+                right_neighbor_bare
+            ):
+                _push(tokens[:idx_tok])
+
+    return slices
+
+
+def find_statutory_short_titles(
+    text: str,
+    index: ActIndex,
+    *,
+    deduplicate: bool = True,
+) -> tuple[StatutoryShortTitleMatch, ...]:
+    """Deterministically extract enacted statutory short titles from unstructured prose.
+
+    Tokenizes each 450-character pre-``Act`` window in one forward ``O(W)`` pass and
+    arbitrates overlapping matches longest-span first via ``O(M log M)`` binary search,
+    enforcing two precision invariants:
+
+    1. **Generic-stem stoplisting** (:data:`GENERIC_ACT_STEM_STOPLIST`): anaphoric and
+       determiner phrases (``This Act``, ``Such Act``, ``That Act``, ``The Act``, ``An Act``,
+       ``Said Act``) are refused outright before consulting ``index``.
+    2. **Maximal-NP longest-span resolution**: an uninterrupted noun phrase (including
+       middle initials, honorifics, inner nicknames/parentheticals, and multi-``Act``
+       compounds) is queried whole and never sub-sliced into shorter inner suffixes, so
+       unenacted bill titles such as ``Kelsey Smith Act``, ``John L. Smith Act``, or
+       ``SEC Small Business Act`` never false-positive onto inner suffixes.
+    """
+
+    if not text:
+        return ()
+    raw_text = str(text)
+    norm = raw_text.translate(_PROSE_CHAR_MAP)
+    raw_hits: list[StatutoryShortTitleMatch] = []
+
+    for match in re.finditer(r"\bAct\b", norm):
+        act_start, act_end = match.start(), match.end()
+        window_start = max(0, act_start - 450)
+        tokens = _tokenize_window_backward(norm, window_start, act_start)
+        if not tokens:
+            continue
+
+        for cand_slice in _build_candidate_slices(tokens):
+            resolved_hit = _trim_and_resolve_token_slice(cand_slice, norm, act_start, act_end, index)
+            if resolved_hit is not None:
+                hit_start, hit_end, resolved_key = resolved_hit
+                raw_hits.append(
+                    StatutoryShortTitleMatch(
+                        surface=raw_text[hit_start:hit_end],
+                        act_key=resolved_key,
+                        table3_key=index.table3_key_by_name.get(resolved_key),
+                        start=hit_start,
+                        end=hit_end,
+                    )
+                )
+                break
+
+    if not raw_hits:
+        return ()
+
+    # Arbitrate overlapping matches longest-span first in O(M log M) via sorted disjoint intervals.
+    by_length = sorted(raw_hits, key=lambda item: (-(item.end - item.start), item.start))
+    kept_starts: list[int] = []
+    kept_ends: list[int] = []
+    kept: list[StatutoryShortTitleMatch] = []
+    for candidate in by_length:
+        idx = bisect_right(kept_starts, candidate.start)
+        if (idx > 0 and kept_ends[idx - 1] > candidate.start) or (
+            idx < len(kept_starts) and kept_starts[idx] < candidate.end
+        ):
+            continue
+        kept_starts.insert(idx, candidate.start)
+        kept_ends.insert(idx, candidate.end)
+        kept.append(candidate)
+    kept.sort(key=lambda item: (item.start, item.end))
+
+    if not deduplicate:
+        return tuple(kept)
+    seen_keys: set[str] = set()
+    unique: list[StatutoryShortTitleMatch] = []
+    for item in kept:
+        if item.act_key not in seen_keys:
+            seen_keys.add(item.act_key)
+            unique.append(item)
+    return tuple(unique)
+

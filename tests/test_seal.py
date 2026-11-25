@@ -16,6 +16,7 @@ from typing import Any
 
 import pytest
 
+from refspec.atlas.generation import select_atlas_generation
 from refspec.atlas.parquet_artifact import file_sha256
 from refspec.atlas.parquet_view import MANIFEST_FILE as VIEW_MANIFEST_FILE
 from refspec.release_model import canonical_json_bytes
@@ -32,18 +33,12 @@ from refspec.seal import (
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ROOT = REPOSITORY_ROOT / "output" / "atlas-3.1-federal-register-thesaurus-2025-04-01"
-DISTRIBUTION_ROOT = RELEASE_ROOT / "distribution"
-PARQUET_VIEW_ROOT = RELEASE_ROOT / "parquet-view"
 SIGNER_IDENTITY = "release@refspec.test"
 
-pytestmark = pytest.mark.skipif(
-    not (DISTRIBUTION_ROOT / MANIFEST_MEMBER).is_file()
-    or not (PARQUET_VIEW_ROOT / VIEW_MANIFEST_FILE).is_file(),
-    reason=(
-        "the HEAD-conforming Federal Register Thesaurus distribution and its served "
-        f"Parquet view are not built at {RELEASE_ROOT.relative_to(REPOSITORY_ROOT)}"
-    ),
-)
+# The HEAD-conforming Federal Register Thesaurus distribution and its served
+# Parquet view: `make release-atlas-federal-register-thesaurus` writes them in
+# seconds, and `make test-package` and `make build-derived` both run it first,
+# so a missing release fails here rather than skipping.
 
 
 def _generate_key(directory: Path, name: str) -> Path:
@@ -108,8 +103,9 @@ def distribution(tmp_path: Path) -> Path:
     """
 
     root = tmp_path / "distribution"
-    shutil.copytree(DISTRIBUTION_ROOT, root)
-    shutil.copytree(PARQUET_VIEW_ROOT, default_parquet_view_path(root))
+    selected = select_atlas_generation(RELEASE_ROOT / "distribution")
+    shutil.copytree(selected.distribution, root)
+    shutil.copytree(selected.parquet_view, default_parquet_view_path(root))
     return root
 
 
@@ -155,12 +151,16 @@ def test_seal_is_written_beside_the_distribution_and_verifies_every_member_and_p
     assert result.manifest_sha256 == seal["payload"]["manifestSha256"]
     assert result.acceptance_sha256 == seal["payload"]["acceptanceSha256"]
     assert result.member_count == len(manifest["members"]) == 4
-    assert result.pack_count == len(manifest["packs"]) == 2
+    # Three since 1b5fd0ab (2026-08-19): the FR release's derived graph carries
+    # content, so a derived view pack joins the source and catalog packs. This
+    # test skipped until REF-071 and still said two.
+    assert result.pack_count == len(manifest["packs"]) == 3
     # The third bound digest: the served Parquet view beside the distribution,
     # which the manifest cannot declare without a cycle -- the view manifest
     # pins the distribution manifest's own digest.
     assert result.parquet_view_manifest_sha256 == file_sha256(view / VIEW_MANIFEST_FILE)
-    assert result.parquet_table_count == len(view_manifest["members"]) == 8
+    # Nine since ae23819d (2026-08-19) added the derived-relations table.
+    assert result.parquet_table_count == len(view_manifest["members"]) == 9
     assert view_manifest["input"]["manifestSha256"] == result.manifest_sha256
     assert result.verified_byte_length == sum(
         [member["byteLength"] for member in manifest["members"]]
@@ -454,3 +454,30 @@ def test_create_seal_refuses_to_sign_a_distribution_with_an_added_file(
         create_seal(distribution, signing_key, SIGNER_IDENTITY)
 
     assert not default_seal_path(distribution).exists()
+
+
+def test_seal_cli_mints_and_verifies_selected_generation(
+    tmp_path, distribution, signing_key, allowed_signers, monkeypatch, capsys,
+):
+    import sys
+
+    from tools import seal_distribution
+    generation = tmp_path / ".selected.generations" / ("a" * 32)
+    generation.mkdir(parents=True)
+    view = default_parquet_view_path(distribution)
+    distribution.rename(generation / "distribution")
+    view.rename(generation / "parquet-view")
+    (generation / "generation-report.json").write_text("{}")
+    selection = tmp_path / "selected"
+    selection.symlink_to((generation / "distribution").relative_to(tmp_path))
+    monkeypatch.setattr(sys, "argv", ["seal", "mint", "--selection", str(selection),
+        "--private-key", str(signing_key), "--signer-identity", SIGNER_IDENTITY])
+    assert seal_distribution.main() == 0
+    minted = json.loads(capsys.readouterr().out)
+    assert minted["sealPath"] == str(generation / "distribution-seal.json")
+    monkeypatch.setattr(sys, "argv", ["seal", "verify", "--selection", str(selection),
+        "--allowed-signers", str(allowed_signers)])
+    assert seal_distribution.main() == 0
+    verified = json.loads(capsys.readouterr().out)
+    assert verified["distribution_id"] == minted["distributionId"]
+    assert verified["manifest_sha256"] == minted["manifestSha256"]

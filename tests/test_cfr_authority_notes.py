@@ -9,6 +9,7 @@ from pathlib import Path
 
 import pytest
 
+from conftest import missing_pinned_input
 from refspec.registry.cfr_authority_notes import (
     CFR_AUTHORITY_NOTES_ARTIFACT,
     FAMILIES,
@@ -31,13 +32,13 @@ from refspec.registry.cfr_authority_notes import (
     read_note_citations,
     usc_citation,
 )
-from refspec.registry.usc_disposition_tables import USC_DISPOSITION_TABLES_ARTIFACT
+from refspec.registry.usc_disposition_tables import USC_DISPOSITION_TABLES_ARTIFACTS
 from refspec.registry.usc_section_oracle import USC_SECTION_ORACLE_ARTIFACT
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 CACHE = REPOSITORY_ROOT / CFR_AUTHORITY_NOTES_ARTIFACT
 
-pytestmark = pytest.mark.skipif(not CACHE.is_file(), reason="the pinned eCFR authority-note cache is not present")
+pytestmark = pytest.mark.pinned_input(not CACHE.is_file(), reason="the pinned eCFR authority-note cache is not present")
 
 
 @pytest.fixture(scope="module")
@@ -777,10 +778,10 @@ def test_a_drifted_section_oracle_refuses_instead_of_quietly_withholding(tmp_pat
     """
 
     notes_path = _repository_carrying_only_the_notes_cache(tmp_path)
-    for artifact in (USC_SECTION_ORACLE_ARTIFACT, USC_DISPOSITION_TABLES_ARTIFACT):
+    for artifact in (USC_SECTION_ORACLE_ARTIFACT, *USC_DISPOSITION_TABLES_ARTIFACTS):
         source = REPOSITORY_ROOT / artifact
         if not source.is_dir():
-            pytest.skip(f"the pinned {artifact} is not present")
+            missing_pinned_input(f"the pinned {artifact} is not present")
         destination = tmp_path / artifact
         destination.mkdir(parents=True)
         for table in source.iterdir():

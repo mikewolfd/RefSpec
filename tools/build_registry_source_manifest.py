@@ -120,28 +120,57 @@ def _usc_disposition_table_test_inputs() -> dict[str, tuple[dict[str, Any], ...]
         head, *tail = re.split(r"[^0-9A-Za-z]+", Path(urlsplit(recodification.source_url).path).stem)
         return head.lower() + "".join(part[:1].upper() + part[1:] for part in tail) + "PrintedVolume"
 
-    return {
-        "usc_disposition_tables.py": tuple(
+    def local_path_for(recodification: Any) -> str:
+        if recodification.source_local_path is not None:
+            return recodification.source_local_path
+        return f"{recodification.artifact}/{Path(urlsplit(recodification.source_url).path).name}"
+
+    def scope_for(group: list[Any], local_path: str) -> str:
+        committed = not local_path.startswith("output/")
+        custody = (
+            "retained in the repository beside its derived table"
+            if committed
+            else "retained outside Git (re-fetchable from publisherUrl and verified against this sha256 and byte length)"
+        )
+        tables_clause = "; ".join(
+            f"{r.name} ({r.enacted_by}) -> {r.artifact}/{r.table} at {r.digest}" for r in group
+        )
+        return (
+            f"the printed volume fetched {group[0].source_fetched}, {custody}, carrying the "
+            f"disposition evidence for {tables_clause}; each committed extractor re-checks this "
+            f"sha256 and byte length before reading a page"
+        )
+
+    grouped: dict[str, list[Any]] = {}
+    for recodification in tables.RECODIFICATIONS:
+        grouped.setdefault(recodification.source_url, []).append(recodification)
+
+    descriptors: list[dict[str, Any]] = []
+    for _url, group in grouped.items():
+        first = group[0]
+        local_path = local_path_for(first)
+        for other in group[1:]:
+            if (local_path_for(other), other.source_digest, other.source_bytes) != (
+                local_path,
+                first.source_digest,
+                first.source_bytes,
+            ):
+                raise ValueError(f"conflicting source volume pins across {first.name} and {other.name}")
+        descriptors.append(
             {
-                "name": named(recodification),
-                "localPath": (
-                    f"{tables.USC_DISPOSITION_TABLES_ARTIFACT}/"
-                    f"{Path(urlsplit(recodification.source_url).path).name}"
-                ),
-                "publisherUrl": recodification.source_url,
-                "sha256": recodification.source_digest,
-                "byteLength": recodification.source_bytes,
+                "name": named(first),
+                "localPath": local_path,
+                "publisherUrl": first.source_url,
+                "sha256": first.source_digest,
+                "byteLength": first.source_bytes,
                 "acquisition": "directPublisherDownload",
                 "provenance": "publisherDistribution",
-                "scope": (
-                    f"the printed volume carrying the disposition table for the {recodification.name} "
-                    f"recodification ({recodification.enacted_by}), fetched 2026-08-23; the committed "
-                    f"extractor beside it re-checks this sha256 and byte length before reading a page, "
-                    f"and writes {recodification.table} at {recodification.digest}"
-                ),
+                "scope": scope_for(group, local_path),
             }
-            for recodification in tables.RECODIFICATIONS
-        ),
+        )
+
+    return {
+        "usc_disposition_tables.py": tuple(descriptors),
     }
 
 
@@ -231,7 +260,24 @@ def _acquisition_wave_test_inputs() -> dict[str, tuple[dict[str, Any], ...]]:
     return rows
 
 
+def _congress_glossary_test_inputs() -> dict[str, tuple[dict[str, Any], ...]]:
+    from refspec.registry.congress_legislative_glossary import GLOSSARY_2026_11_14
+
+    pin = GLOSSARY_2026_11_14
+    return {"congress_legislative_glossary.py": ({
+        "name": "congressLegislativeGlossary20261114",
+        "localPath": "output/registry-real-data-sources/congress-legislative-glossary-20261114.html",
+        "publisherUrl": pin.source_url,
+        "sha256": pin.expected_sha256,
+        "byteLength": pin.expected_byte_length,
+        "acquisition": "zyteRawHttp",
+        "provenance": "publisherPageResponse",
+        "scope": "Complete captured Congress.gov glossary; page anchors locate entries without asserting stable concept identity.",
+    },)}
+
+
 TEST_INPUTS: dict[str, tuple[dict[str, Any], ...]] = {
+    **_congress_glossary_test_inputs(),
     **_acquisition_wave_test_inputs(),
     **_cfr_authority_note_test_inputs(),
     **_usc_disposition_table_test_inputs(),
@@ -1505,14 +1551,6 @@ NESTED_MODULE_AUDIT: dict[str, dict[str, Any]] = {
         "auditRole": "support",
         "coveredBy": [],
         "inputRefs": [],
-    },
-    "infrastructure/zyte_transport.py": {
-        "auditRole": "networkHarness",
-        "coveredBy": ["adapters/crs_zyte.py", "adapters/icpsr_zyte.py"],
-        "inputRefs": [
-            ("crs_legislative_resources.py", "crsLegislativeSubjects20260730"),
-            ("adapters/icpsr_zyte.py", "icpsrManagedIndexA"),
-        ],
     },
     "managed_releases/federal_register_thesaurus_2025_managed_release.py": {
         "auditRole": "downstreamProjection",

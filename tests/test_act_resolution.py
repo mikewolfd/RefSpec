@@ -29,11 +29,13 @@ from refspec.registry.act_resolution import (
     _RKAF_USC_IRI,
     ALIAS_MAX_DEPTH,
     ANSWERING_SOURCES,
+    REVIEWED_ACT_ALIASES,
     SOURCE_CREDIT_STATUSES,
     UNRESOLVED_REASONS,
     ActIndex,
     ActResolution,
     Classification,
+    PopularNameRecord,
     SourceCreditAnswer,
     SourceCreditIndex,
     SourceCreditTarget,
@@ -46,18 +48,16 @@ from refspec.registry.act_resolution import (
     resolve_act_relative_citation,
     stated_name_chain,
 )
-from refspec.registry.citation_grammar import ActRelativeCitation, normalize_popular_name
+from refspec.registry.citation_grammar import (
+    ActRelativeCitation,
+    find_act_relative_occurrences,
+    normalize_popular_name,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 ACT_DIR = ROOT / "output" / "usc-act-index-2026-08-02"
 BULK_ACT_DIR = ROOT / "output" / "usc-act-index-2026-08-22"
 CREDIT_DIR = ROOT / "output" / "usc-source-credit-index-2026-08-02"
-
-artifact = pytest.mark.skipif(
-    not (ACT_DIR.is_dir() and BULK_ACT_DIR.is_dir() and CREDIT_DIR.is_dir()),
-    reason="pinned OLRC artifacts are not present",
-)
-
 
 def _citation(act: str, section: str, division: str | None = None) -> ActRelativeCitation:
     """One act-relative citation whose key is the normalized act name."""
@@ -699,7 +699,6 @@ def test_a_parenthetical_is_dropped_not_refused() -> None:
 # Real-artifact cases.
 
 
-@artifact
 def test_the_pinned_artifacts_load_and_carry_their_receipted_coverage(index, credits) -> None:
     """Both artifacts load: the index holds over 10,000 keys and one recorded incomplete source."""
 
@@ -710,7 +709,6 @@ def test_the_pinned_artifacts_load_and_carry_their_receipted_coverage(index, cre
     assert len(index.incomplete_sources) == 1
 
 
-@artifact
 def test_the_pins_restate_the_receipts_they_are_meant_to_outrank() -> None:
     """Two copies of one digest, deliberately, held together by this test.
 
@@ -733,7 +731,6 @@ def test_the_pins_restate_the_receipts_they_are_meant_to_outrank() -> None:
         assert set(pins) <= set(receipted[artifact_name]), artifact_name
 
 
-@artifact
 def test_only_a_pinned_table_can_be_read_through_this_door(tmp_path) -> None:
     """The pin is the authentication, so an unpinned table has no way in."""
 
@@ -742,20 +739,20 @@ def test_only_a_pinned_table_can_be_read_through_this_door(tmp_path) -> None:
         _read_pinned_parquet(tmp_path, "unlisted.parquet")
 
 
-@artifact
 def test_a_drifted_artifact_refuses_to_load() -> None:
     """One appended byte to a pinned table refuses with the drifted-artifact error."""
 
     with tempfile.TemporaryDirectory() as scratch:
         copy = Path(scratch) / "artifact"
-        shutil.copytree(ACT_DIR, copy)
+        # copyfile, not copy2: pinned inputs are read-only hardlinks, and the
+        # mutation targets this private copy, never the pinned bytes.
+        shutil.copytree(ACT_DIR, copy, copy_function=shutil.copyfile)
         target = copy / "usc-popular-names.parquet"
         target.write_bytes(target.read_bytes() + b" ")
         with pytest.raises(ValueError, match="pinned act artifact drifted"):
             ActIndex.from_artifact(copy)
 
 
-@artifact
 def test_the_two_act_indexes_share_names_but_have_distinct_classifications_and_quarantine() -> None:
     """What the artifact-keyed pins can and cannot tell apart, stated.
 
@@ -781,7 +778,6 @@ def test_the_two_act_indexes_share_names_but_have_distinct_classifications_and_q
     )
 
 
-@artifact
 def test_the_bulk_built_index_loads_through_the_same_door_and_carries_more(index) -> None:
     """The 2026-08-22 rebuild is read by this module unchanged.
 
@@ -801,7 +797,6 @@ def test_the_bulk_built_index_loads_through_the_same_door_and_carries_more(index
     assert "119-21" in bulk.classifications
 
 
-@artifact
 def test_a_directory_that_is_not_the_artifact_fails_loudly() -> None:
     """Both loaders read the receipt first, so a wrong directory raises rather
     than yielding an empty index that would look like a source with no
@@ -815,7 +810,6 @@ def test_a_directory_that_is_not_the_artifact_fails_loudly() -> None:
             SourceCreditIndex.from_artifact(empty)
 
 
-@artifact
 def test_clean_air_act_section_111_resolves_from_the_real_tables(index, credits) -> None:
     """Clean Air Act section 111 resolves to 42 U.S.C. 7411 via Table III alone; its chapter key is no_key for credits."""
 
@@ -831,7 +825,6 @@ def test_clean_air_act_section_111_resolves_from_the_real_tables(index, credits)
     assert resolution.answered_by == "table3"
 
 
-@artifact
 def test_a_session_law_chapter_is_never_offered_to_the_credits(index) -> None:
     """1,921 of the index's 8,391 Table III keys pre-date public-law numbering.
 
@@ -853,7 +846,6 @@ def test_a_session_law_chapter_is_never_offered_to_the_credits(index) -> None:
     assert all(re.fullmatch(r"\d{4}:\d+", k) for k in chapters)
 
 
-@artifact
 def test_table_iii_always_states_an_identifier_or_a_reason(index) -> None:
     """The invariant that made two branches in the composer unreachable.
 
@@ -883,7 +875,6 @@ def test_table_iii_always_states_an_identifier_or_a_reason(index) -> None:
     assert set(reasons) <= set(UNRESOLVED_REASONS)
 
 
-@artifact
 def test_every_answer_is_a_name_the_index_actually_keys(index, every_name) -> None:
     """An alias chain ends inside the index or nowhere. It never invents a key."""
 
@@ -892,7 +883,6 @@ def test_every_answer_is_a_name_the_index_actually_keys(index, every_name) -> No
         assert answer is None or answer in index.table3_key_by_name, name
 
 
-@artifact
 def test_resolution_is_deterministic_and_independent_of_call_order(index, every_name) -> None:
     """The derived stem map is a cache, so a wrong one would show as history.
 
@@ -913,7 +903,6 @@ def test_resolution_is_deterministic_and_independent_of_call_order(index, every_
     }
 
 
-@artifact
 def test_the_longest_stated_chain_in_the_pinned_index_is_two_hops(index) -> None:
     """Measured headroom for :data:`ALIAS_MAX_DEPTH`.
 
@@ -940,7 +929,6 @@ def test_the_longest_stated_chain_in_the_pinned_index_is_two_hops(index) -> None
     assert longest < ALIAS_MAX_DEPTH
 
 
-@artifact
 def test_the_refusals_are_mostly_names_the_tool_does_list(index, every_name) -> None:
     """``act_not_in_index`` is true of 19 of the 107 names it is published for.
 
@@ -984,7 +972,6 @@ def test_the_refusals_are_mostly_names_the_tool_does_list(index, every_name) -> 
         assert listed in cited and listed in refused
 
 
-@artifact
 def test_every_name_the_index_keys_is_a_name_a_query_can_spell(index) -> None:
     """A join key must be a fixed point of the function that builds queries.
 
@@ -1019,7 +1006,6 @@ def test_every_name_the_index_keys_is_a_name_a_query_can_spell(index) -> None:
     assert resolve_act_name("``Kick-Back'' Racket Act", index) == "copeland anti-kickback act"
 
 
-@artifact
 def test_an_article_the_tool_wrote_into_its_own_cross_reference_is_spelling(index) -> None:
     """Four names, named — and the precedence that lets them through.
 
@@ -1050,7 +1036,6 @@ def test_an_article_the_tool_wrote_into_its_own_cross_reference_is_spelling(inde
         assert resolve_act_name(name, index) == name, name
 
 
-@artifact
 def test_the_article_strip_moves_exactly_four_names_and_nothing_else(index, every_name) -> None:
     """The blast radius, measured over every name the tool writes.
 
@@ -1084,7 +1069,6 @@ def test_the_article_strip_moves_exactly_four_names_and_nothing_else(index, ever
     ]
 
 
-@artifact
 def test_the_minted_space_is_the_contract_verbatim() -> None:
     """:data:`_RKAF_USC_IRI` restates rkaf. This holds the copy true.
 
@@ -1109,7 +1093,6 @@ def test_the_minted_space_is_the_contract_verbatim() -> None:
     assert _RKAF_USC_IRI.pattern.replace("(?:", "(") == next(iter(stated))
 
 
-@artifact
 def test_every_identifier_this_module_mints_satisfies_the_contract(index) -> None:
     """The property, over every classification in the artifact.
 
@@ -1137,7 +1120,6 @@ def test_every_identifier_this_module_mints_satisfies_the_contract(index) -> Non
     assert (minted, refused, len(targets)) == (6_236, 1_286, 7_522)
 
 
-@artifact
 def test_what_the_space_still_cannot_express_is_a_gap_in_rkaf(index) -> None:
     """1,286 targets still refuse. None is a section; two kinds are citable.
 
@@ -1196,7 +1178,6 @@ def test_what_the_space_still_cannot_express_is_a_gap_in_rkaf(index) -> None:
     assert sum(census.values()) == 1_286
 
 
-@artifact
 def test_act_section_not_classified_is_mostly_never_fetched(index) -> None:
     """The module's commonest refusal is a false absence, and here is its size.
 
@@ -1239,7 +1220,6 @@ def test_act_section_not_classified_is_mostly_never_fetched(index) -> None:
     assert resolution.unresolved_reason == "act_section_not_classified"
 
 
-@artifact
 def test_the_appendix_to_title_five_is_a_real_place(index) -> None:
     """Five rows classify to "5 App." with no section. Real, and mislabelled.
 
@@ -1279,7 +1259,6 @@ def test_the_appendix_to_title_five_is_a_real_place(index) -> None:
             }, (key, section, verdict.reason)
 
 
-@artifact
 def test_one_credit_target_never_hides_two_pages(credits) -> None:
     """``lookup`` reads ``found[0]``'s provenance. That must not be a choice.
 
@@ -1303,7 +1282,6 @@ def test_one_credit_target_never_hides_two_pages(credits) -> None:
     ) == 325
 
 
-@artifact
 def test_the_credits_key_needs_a_division_and_lose_nothing_by_it(credits) -> None:
     """The asymmetry between the two sources, measured rather than assumed.
 
@@ -1319,7 +1297,6 @@ def test_the_credits_key_needs_a_division_and_lose_nothing_by_it(credits) -> Non
     assert len({row["public_law"] for row in rows}) == 109
 
 
-@artifact
 def test_every_resolution_over_the_real_tables_keeps_its_contract(index, credits, every_name) -> None:
     """The whole pipeline, over a wide real slice: every published field legal.
 
@@ -1381,7 +1358,6 @@ DOWNSTREAM_SPECIMENS = (
 )
 
 
-@artifact
 @pytest.mark.parametrize(("weight", "act_key", "section", "iri", "outcome"), DOWNSTREAM_SPECIMENS)
 def test_a_real_downstream_citation_resolves_the_way_it_did(
     index, credits, weight, act_key, section, iri, outcome
@@ -1402,7 +1378,7 @@ def test_a_real_downstream_citation_resolves_the_way_it_did(
     assert (resolution.answered_by or resolution.unresolved_reason) == outcome
 
 
-@artifact
+@pytest.mark.reads_built_artifact
 def test_every_pair_the_agenda_produced_keeps_its_contract(index, credits) -> None:
     """The whole live corpus, checked for contract rather than for a count.
 
@@ -1420,9 +1396,6 @@ def test_every_pair_the_agenda_produced_keeps_its_contract(index, credits) -> No
         / "output/registry-real-data-sources/unified-agenda-parquet"
         / "unified_agenda_legal_authorities.parquet"
     )
-    if not agenda.is_file():
-        pytest.skip("the unified agenda artifact is not present")
-
     table = pq.read_table(agenda, columns=["act_key", "act_section"])
     pairs = sorted(
         {
@@ -1455,7 +1428,6 @@ def test_every_pair_the_agenda_produced_keeps_its_contract(index, credits) -> No
     assert answered > 150
 
 
-@artifact
 def test_the_four_names_where_a_stated_reference_and_a_year_both_offer_an_answer(index) -> None:
     """Every real case of the precedence, read off the pinned popularnames.htm.
 
@@ -1497,7 +1469,6 @@ def test_the_four_names_where_a_stated_reference_and_a_year_both_offer_an_answer
     ]
 
 
-@artifact
 def test_a_typo_in_the_tools_own_cross_reference_refuses(index) -> None:
     """"Canal Zone Code — see Panana Canal Code". The Code is real; the
     spelling is not, and this module does not repair it.
@@ -1511,7 +1482,6 @@ def test_a_typo_in_the_tools_own_cross_reference_refuses(index) -> None:
     assert resolve_act_name("Canal Zone Code", index) is None
 
 
-@artifact
 def test_a_cross_reference_naming_two_acts_is_not_one_act(index) -> None:
     """"Lea-Wagner Act — see Investment Advisers Act of 1940; Investment
     Company Act of 1940" names TWO acts, and refuses.
@@ -1532,7 +1502,6 @@ def test_a_cross_reference_naming_two_acts_is_not_one_act(index) -> None:
     assert resolve_act_name("Lea-Wagner Act", index) is None
 
 
-@artifact
 def test_the_three_absences_are_told_apart_and_the_source_is_quoted_right(index, every_name) -> None:
     """`act_not_in_index` was published for 107 names and true of 19.
 
@@ -1577,3 +1546,166 @@ def test_an_index_that_states_no_cited_names_still_answers() -> None:
     aliased = ActIndex(alias_by_name={"a": "b"})
     assert act_name_absence_reason("a", aliased) == "act_alias_target_not_listed"
     assert act_name_absence_reason("b", ActIndex(cited_names=frozenset({"b"}))) == "act_listed_without_classification"
+
+
+def test_act_index_scan_text_extracts_enacted_short_titles_from_prose() -> None:
+    """``ActIndex.scan_text`` / ``find_statutory_short_titles`` resolves maximal NPs and ignores generic stems."""
+
+    prose = (
+        "This Act amends ERISA. Under Such Act and That Act, the Employee Retirement Income Security Act "
+        "and the Taxpayer Certainty and Disaster Tax Relief Act of 2020 govern, while the "
+        "Unenacted Demo Act does not."
+    )
+    hits = FIXTURE_INDEX.scan_text(prose)
+    assert [h.act_key for h in hits] == [
+        "employee retirement income security act of 1974",
+        "taxpayer certainty and disaster tax relief act of 2020",
+    ]
+    assert [h.table3_key for h in hits] == ["93-406", "116-260"]
+    assert FIXTURE_INDEX.find_statutory_short_titles(prose) == hits
+
+
+# --------------------------------------------------------------------------- #
+# Enclosing source identity (ss-njjd) & CERCLA / Civil Rights Act witnesses.
+
+
+def test_small_business_act_enclosing_section_witness_refuses_without_alignment(index, credits) -> None:
+    """``85-536 § 2[3]`` negative control: bare section 3 MUST refuse rather than return ``12-371``."""
+
+    bulk = ActIndex.from_artifact(BULK_ACT_DIR)
+    for active in (index, bulk):
+        for phrase in ("section 3 of the Small Business Act", "Small Business Act section 3"):
+            occs = find_act_relative_occurrences(phrase, act_names=active.act_names)
+            assert len(occs) == 1, phrase
+            resolution = resolve_act_relative_citation(occs[0].citation, index=active, source_credits=credits)
+            assert resolution.iri is None
+            assert resolution.unresolved_reason == "act_section_ambiguous"
+            assert resolution.source_credit_status == "not_consulted"
+            assert resolution.table3_key == "85-536"
+
+        # Section 4 also collides with outer Pub. L. 85-536 § 4 (15 U.S.C. nt. prec. 601).
+        sec4 = resolve_act_relative_citation(_citation("Small Business Act", "4"), index=active, source_credits=credits)
+        assert sec4.iri is None
+        assert sec4.unresolved_reason == "act_section_ambiguous"
+
+        # When the composite enclosing identity (85-536, None, "2") IS aligned, § 3 resolves to 15 U.S.C. 632.
+        aligned = resolve_act_relative_citation(
+            ActRelativeCitation("Small Business Act", "small business act", "3", enclosing_section="2"),
+            index=active,
+            source_credits=credits,
+        )
+        assert aligned.iri == "urn:rkaf:us:usc:15:632"
+        assert (aligned.usc_title, aligned.usc_section) == ("15", "632")
+        assert aligned.enclosing_section == "2"
+        assert aligned.answered_by == "table3"
+
+
+def test_enclosing_source_identity_joins_and_refuses_conflicts_across_table3_and_credits() -> None:
+    """Composite ``(law, division, enclosing_section)`` joins both sources and refuses mismatches."""
+
+    sba_index = ActIndex(
+        table3_key_by_name={"small business act": "85-536"},
+        enclosing_section_by_name={"small business act": "2"},
+        classifications={
+            "85-536": {
+                "2[2]": (Classification("15", "631", None, 384),),
+                "2[3]": (Classification("15", "632", None, 384),),
+                "3": (Classification("12", "371", None, 396),),
+            }
+        },
+    )
+    sba_credits = SourceCreditIndex.from_rows(
+        [
+            ("85-536", None, "2", "3", "15", "632", "72", "384"),
+            # A bare row without enclosing_section must never leak into an enclosed lookup.
+            ("85-536", "A", "3", "12", "371", "72", "396"),
+        ]
+    )
+    resolved = resolve_act_relative_citation(
+        _citation("Small Business Act", "3"), index=sba_index, source_credits=sba_credits
+    )
+    assert resolved.iri == "urn:rkaf:us:usc:15:632"
+    assert resolved.answered_by == "both"
+    assert resolved.enclosing_section == "2"
+    assert (resolved.statutes_at_large_volume, resolved.statutes_at_large_page) == ("72", "384")
+
+    # Conflicting citation enclosing section refuses without consulting credits.
+    conflict = resolve_act_relative_citation(
+        ActRelativeCitation("Small Business Act", "small business act", "3", enclosing_section="5"),
+        index=sba_index,
+        source_credits=sba_credits,
+    )
+    assert conflict.iri is None
+    assert conflict.unresolved_reason == "act_section_ambiguous"
+    assert conflict.source_credit_status == "not_consulted"
+
+    # Candidate multiplicity preserves distinct enclosing sections and refuses until aligned.
+    multi = ActIndex(
+        table3_key_by_name={"example act": "85-536"},
+        name_candidates={
+            "example act": (
+                PopularNameRecord(name="Example Act", content_type="cite", table3_key="85-536", enclosing_section="2"),
+                PopularNameRecord(name="Example Act", content_type="cite", table3_key="85-536", enclosing_section="9"),
+            )
+        },
+        classifications=sba_index.classifications,
+    )
+    ambig = resolve_act_relative_citation(_citation("Example Act", "3"), index=multi, source_credits=sba_credits)
+    assert ambig.iri is None
+    assert ambig.unresolved_reason == "act_name_ambiguous"
+    assert len(ambig.candidate_resolutions) == 2
+
+    narrowed = resolve_act_relative_citation(
+        ActRelativeCitation("Example Act", "example act", "3", enclosing_section="2"),
+        index=multi,
+        source_credits=sba_credits,
+    )
+    assert narrowed.iri == "urn:rkaf:us:usc:15:632"
+    assert narrowed.enclosing_section == "2"
+
+
+def test_cercla_section_107a_resolves_to_42_9607(credits) -> None:
+    """``section 107(a) of CERCLA`` resolves to ``42-9607`` via grammar and direct citation."""
+
+    bulk = ActIndex.from_artifact(BULK_ACT_DIR)
+    occs = find_act_relative_occurrences("section 107(a) of CERCLA", act_names=bulk.act_names)
+    assert len(occs) == 1
+    assert occs[0].pinpoint == ("a",)
+
+    for cit in (occs[0].citation, _citation("CERCLA", "107(a)")):
+        res = resolve_act_relative_citation(cit, index=bulk, source_credits=credits)
+        assert res.iri == "urn:rkaf:us:usc:42:9607"
+        assert (res.usc_title, res.usc_section) == ("42", "9607")
+        assert res.table3_key == "96-510"
+        assert res.answered_by == "table3"
+
+    # Reviewed alias resolves even on an index without an explicit see-row alias, and refuses when target is absent.
+    assert "cercla" in REVIEWED_ACT_ALIASES
+    minimal = ActIndex(
+        table3_key_by_name={REVIEWED_ACT_ALIASES["cercla"]: "96-510"},
+        classifications={"96-510": {"107": (Classification("42", "9607", None, 2781),)}},
+    )
+    assert resolve_act_relative_citation(_citation("CERCLA", "107(a)"), index=minimal).iri == "urn:rkaf:us:usc:42:9607"
+    assert resolve_act_relative_citation(_citation("CERCLA", "107(a)"), index=ActIndex()).unresolved_reason == "act_not_in_index"
+
+
+def test_civil_rights_act_of_1964_section_706_resolves_and_bare_name_refuses(credits) -> None:
+    """``Civil Rights Act of 1964`` § 706 resolves to ``42-2000e-5``; bare ``Civil Rights Act`` stays refused."""
+
+    bulk = ActIndex.from_artifact(BULK_ACT_DIR)
+    for phrase in ("section 706 of the Civil Rights Act of 1964", "Civil Rights Act of 1964 section 706"):
+        occs = find_act_relative_occurrences(phrase, act_names=bulk.act_names)
+        assert len(occs) == 1, phrase
+        res = resolve_act_relative_citation(occs[0].citation, index=bulk, source_credits=credits)
+        assert res.iri == "urn:rkaf:us:usc:42:2000e-5"
+        assert (res.usc_title, res.usc_section) == ("42", "2000e-5")
+        assert res.table3_key == "88-352"
+        assert res.answered_by == "table3"
+
+    # Multiple Civil Rights Acts (1866, 1957, 1960, 1964, 1968, 1991) exist; bare name must never guess 1964.
+    assert find_act_relative_occurrences("Civil Rights Act section 706", act_names=bulk.act_names) == ()
+    bare = resolve_act_relative_citation(_citation("Civil Rights Act", "706"), index=bulk, source_credits=credits)
+    assert bare.iri is None
+    assert bare.unresolved_reason == "act_not_in_index"
+
+

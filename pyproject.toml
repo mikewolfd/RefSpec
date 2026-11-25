@@ -1,11 +1,11 @@
 [project]
 name = "refspec"
-version = "0.1.0.dev12"
+version = "0.1.0.dev25"
 description = "Reference implementation and bindings for the Regulatory Evidence Framework"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "spicy-docs[acquisition,pdf-pypdf]==0.26.5",
+    "spicy-docs[acquisition,pdf-pypdf]==0.54.0",
     "backports-zstd==1.6.0; python_version < '3.14'",
     "duckdb>=1.5.5,<2",
     "jsonschema>=4.26,<5",
@@ -20,10 +20,10 @@ dependencies = [
     "referencing>=0.37,<1",
     "typing-extensions>=4.12,<5",
     "pymarc>=5.1,<6",
-    "rulespec-conformance==0.2.0rc18",
+    "rulespec-conformance==0.2.0rc19",
     # Shared exact-byte storage for retained publisher captures; also required
     # by rulespec-conformance. Pin the qualified vendored wheel.
-    "rulespec-artifacts==1.1.0",
+    "rulespec-artifacts==1.1.2",
 ]
 
 [project.scripts]
@@ -35,15 +35,15 @@ refspec-validate = "refspec.binding:main"
 refspec-release-graph-gate = "refspec.release_graph:main"
 
 [tool.uv.sources]
-spicy-docs = { path = "vendor/spicy_docs-0.26.5-py3-none-any.whl" }
+spicy-docs = { path = "vendor/spicy_docs-0.54.0-py3-none-any.whl" }
 # Vendored until a package index exists for rulespec-conformance. See
 # vendor/README.md for why, and for the bump procedure. The path is
 # relative so `uv lock`/`uv sync --frozen` are hermetic on CI runners,
 # which have no ~/Work/rulespec checkout.
-rulespec-conformance = { path = "vendor/rulespec_conformance-0.2.0rc18-py3-none-any.whl" }
+rulespec-conformance = { path = "vendor/rulespec_conformance-0.2.0rc19-py3-none-any.whl" }
 # Shared immutable artifacts and local blob storage. Use the qualified wheel
 # because this package is not yet available from an index.
-rulespec-artifacts = { path = "vendor/rulespec_artifacts-1.1.0-py3-none-any.whl" }
+rulespec-artifacts = { path = "vendor/rulespec_artifacts-1.1.2-py3-none-any.whl" }
 
 [dependency-groups]
 dev = [
@@ -73,6 +73,15 @@ dev = [
     # this is a gate, so a parser release that tightens a rule arrives as a
     # deliberate bump rather than as a red build nobody asked for.
     "pyoxigraph==0.5.9",
+    # tools/fetch_pinned_inputs.py downloads the pinned output/ inputs from R2 over
+    # its S3 API. SpicyDocs' acquisition extra already locks it; declared here
+    # because this repository imports it directly.
+    "boto3>=1.40,<2",
+    # tools/benchmark_beyond_equivalence_candidate_retrieval.py's canonical-order
+    # test needs it; pinned to the version the benchmark itself runs with.
+    "rapidfuzz==3.14.3",
+    # tests/test_test_tiers.py reads the CI workflow to prove each tier has a job.
+    "pyyaml>=6,<7",
 ]
 
 [build-system]
@@ -83,7 +92,11 @@ build-backend = "uv_build"
 testpaths = ["tests"]
 markers = [
     "slow: reads or derives from a large pinned real source; runs in the audit tier, excluded from test-package",
-    "no_artifact: needs no built artifact, so it runs in a fresh checkout where its module's default is to skip",
+    "no_artifact: needs no built artifact, so it stays in the fast tier inside a module that reads one",
+    "reads_built_artifact: reads a derived artifact `make build-derived` writes; runs in the slow tier unless no_artifact",
+    "release_tier: corpus-wide release checks (minutes); in the slow tier (`make test-slow`)",
+    "full_atlas: constructs or validates the complete Atlas topology (~10 GB, tens of minutes); its own tier and job",
+    "pinned_input(condition, reason): fails the test when condition says a pinned input is absent (skipif's arguments)",
 ]
 
 [tool.ruff]

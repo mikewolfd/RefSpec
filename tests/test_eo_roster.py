@@ -26,6 +26,7 @@ from refspec.registry import citation_grammar, eo_roster, hand_validated_interpr
 from refspec.registry.eo_roster import (
     _ROSTER_PIN,
     ABSENT_CAPABLE,
+    CANDIDATE_REJECTION_REASONS,
     EO_ROSTER_ARTIFACT,
     FR_API_DENSE_MAX,
     FR_API_WINDOW,
@@ -34,8 +35,10 @@ from refspec.registry.eo_roster import (
     UNKNOWN_REASONS,
     VERDICTS,
     WINDOWS,
+    EoCandidateCheck,
     EoRosterOracle,
     EoVerdict,
+    is_valid_eo_candidate,
     window_for,
 )
 
@@ -629,7 +632,7 @@ def test_the_pinned_raw_captures_back_the_8284_claim() -> None:
     assert "Prescribing the Duties of the Librarian Emeritus of the Library of Congress" in nara
     assert "4 FR 4603, November 17, 1939" in nara
 
-    pypdf = pytest.importorskip("pypdf")
+    import pypdf
     reader = pypdf.PdfReader(str(raw / "govinfo-FR-1939-11-17.pdf"))
     text = "".join(page.extract_text() or "" for page in reader.pages)
     assert "Librarian Emeritus" in text
@@ -662,3 +665,166 @@ def test_the_capture_pins_agree_with_the_evidence_manifest() -> None:
         assert pin.expected_sha256 == f"sha256:{row['sha256']}", relative_path
         assert pin.expected_byte_length == int(row["bytes"]), relative_path
         assert pin.source_url.startswith("https://"), relative_path
+
+
+# --------------------------------------------------------------------------- #
+# Roster-derived candidate validation & XML/file-path/span guards (PR-U2)
+# --------------------------------------------------------------------------- #
+
+
+def test_ref057_roster_bound_and_candidate_validation_preservation() -> None:
+    """Honors REF-057: no ``FR_API_DENSE_MAX + 200`` ceiling or duplicate prose scanner; upper bound comes from ``max_eo``."""
+
+    bound = oracle()
+    assert {
+        "DEFAULT_MAX_PLAUSIBLE_EO",
+        "EO_PLAUSIBLE_HEADROOM",
+        "EoProseCitation",
+        "find_executive_order_citations",
+        "citation_grammar",
+        "EO_HIGHEST_KNOWN",
+    } & set(vars(eo_roster)) == set()
+    assert not hasattr(EoRosterOracle, "scan_text")
+    assert not hasattr(EoRosterOracle, "max_plausible_number")
+    assert bound.max_eo == FR_API_DENSE_MAX == 14_420
+
+    # Every single entry on the pinned 6,147-row roster validates cleanly and preserves exact lookup semantics.
+    rows = list(csv.DictReader(ROSTER_PATH.read_bytes().decode("utf-8").splitlines()))
+    assert len(rows) == 6_147
+    for sample_num in (9, 8284, 12866, 13563, 14420):
+        check = bound.validate_candidate(sample_num)
+        assert check.is_valid is True
+        assert check.rejection_reason is None
+        assert check.verdict == bound.verdict(sample_num)
+    assert all(bound.is_valid_candidate(int(r["eo_number"])) for r in rows)
+
+    # Sparse-window real order (9397) within [1, max_eo] remains valid with honest 'unknown' verdict.
+    sparse_check = bound.validate_candidate(9397)
+    assert sparse_check.is_valid is True
+    assert sparse_check.verdict == EoVerdict(9397, "unknown", "nara_codification", reason="nara_window_miss")
+
+    # Non-positive integers fail loudly with non_positive_number.
+    for non_pos in (0, -1, "-5", "E.O. 0", "EO -12"):
+        res = bound.validate_candidate(non_pos)
+        assert res.is_valid is False
+        assert res.rejection_reason == "non_positive_number"
+
+    # 5-digit numbers above oracle.max_eo fail with above_roster_max while keeping honest 'unknown' verdict;
+    # when oracle=None, no roster ceiling is invented.
+    for above_roster in (14_421, 20_450, 21_600, 23_891):
+        res = bound.validate_candidate(above_roster)
+        assert res.is_valid is False
+        assert res.rejection_reason == "above_roster_max"
+        assert res.verdict == EoVerdict(above_roster, "unknown", None, reason="outside_known_windows")
+        assert is_valid_eo_candidate(above_roster, oracle=bound) is False
+        assert is_valid_eo_candidate(above_roster, oracle=None) is True
+
+    # 6-7+ digit OCR/slug concatenations fail with implausible_digit_length both with and without an oracle.
+    for concat_trap in (100_000, 1_165_492, "E.O. 1165492", "Executive Order 1165492"):
+        res = bound.validate_candidate(concat_trap)
+        assert res.is_valid is False
+        assert res.rejection_reason == "implausible_digit_length"
+        assert is_valid_eo_candidate(concat_trap, oracle=None) is False
+
+
+def test_xml_file_path_homoglyph_leading_zero_span_and_type_guards(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Uniformly enforces type, span-bounds, leading-zero, ``_``, ``E0``, and >6-char path guards (F4/F5)."""
+
+    bound = oracle()
+    assert set(CANDIDATE_REJECTION_REASONS) == {
+        "xml_or_file_path",
+        "zero_homoglyph_or_malformed_label",
+        "leading_zero",
+        "non_positive_number",
+        "implausible_digit_length",
+        "above_roster_max",
+        "absent_in_dense_window",
+    }
+
+    # Strict type guards reject bools, floats, None, and lists without silent int() truncation (F4.3).
+    for bad_input in (True, False, 12866.003, 12866.0, None, [12866]):
+        with pytest.raises(TypeError):
+            bound.validate_candidate(bad_input)  # type: ignore[arg-type]
+        with pytest.raises(TypeError):
+            is_valid_eo_candidate(bad_input)  # type: ignore[arg-type]
+
+    for path_trap in (
+        r"\E043025.003.xml",
+        r"G:\M\18\MISC\E043025.003.xml",
+        "/archive/EO12866.pdf",
+        "EO12866.xml",
+        "E.O. 12866.003",
+        "EO_12866",
+    ):
+        res = bound.validate_candidate(path_trap)
+        assert res.is_valid is False, path_trap
+        assert res.rejection_reason == "xml_or_file_path", path_trap
+
+    # Uniform context checks across span=None and explicit span=(start, end) (F4.1, F4.2):
+    assert bound.validate_candidate(43025, surrounding_text=r"G:\M\18\E043025.003.xml").rejection_reason == "xml_or_file_path"
+    assert bound.validate_candidate(12866, surrounding_text=r"C:\files\EO12866.xml").rejection_reason == "xml_or_file_path"
+    assert bound.validate_candidate(12866, surrounding_text="EO_12866").rejection_reason == "xml_or_file_path"
+    assert bound.validate_candidate(12866, surrounding_text="EO_12866", span=(3, 8)).rejection_reason == "xml_or_file_path"
+    assert (
+        bound.validate_candidate(12866, surrounding_text=r"G:\M\18\MISC\EO12866", span=(15, 20)).rejection_reason
+        == "xml_or_file_path"
+    )
+    assert (
+        bound.validate_candidate(12866, surrounding_text=r"G:\M\18\MISC\EO 12866", span=(16, 21)).rejection_reason
+        == "xml_or_file_path"
+    )
+    assert bound.validate_candidate(12866, surrounding_text="EO 012866").rejection_reason == "leading_zero"
+    assert bound.validate_candidate(12866, surrounding_text="EO 012866", span=(0, 9)).rejection_reason == "leading_zero"
+    assert bound.validate_candidate(12866, surrounding_text="EO 012866", span=(4, 9)).rejection_reason == "leading_zero"
+    assert (
+        bound.validate_candidate(12866, surrounding_text="E0 12866", span=(3, 8)).rejection_reason
+        == "zero_homoglyph_or_malformed_label"
+    )
+    assert (
+        bound.validate_candidate(12866, surrounding_text="E012866", span=(2, 7)).rejection_reason
+        == "zero_homoglyph_or_malformed_label"
+    )
+
+    # Valid prose contexts (including English colons, HTML/XML <p> tags, and mixed clean+archive text).
+    assert bound.validate_candidate(12866, surrounding_text="Authority: E.O. 12866.", span=(11, 21)).is_valid is True
+    assert bound.validate_candidate(12866, surrounding_text="<p>Pursuant to E.O. 12866</p>", span=(15, 25)).is_valid is True
+    assert bound.validate_candidate(12866, surrounding_text="Pursuant to E.O. 12866 (archived at /eo/12866.pdf).").is_valid is True
+
+    # Out-of-bounds or malformed span raises loudly rather than failing open (F4.1).
+    for bad_span in ((-1, 5), (0, 99), (4, 4), (6, 2)):
+        with pytest.raises(ValueError, match="out of bounds"):
+            bound.validate_candidate(12866, surrounding_text="E.O. 12866", span=bad_span)
+    with pytest.raises(ValueError, match="requires surrounding_text"):
+        bound.validate_candidate(12866, span=(0, 5))
+    with pytest.raises(TypeError, match="tuple of ints"):
+        bound.validate_candidate(12866, surrounding_text="E.O. 12866", span=(True, 5))  # type: ignore[arg-type]
+
+    for homoglyph in ("E0 12866", "E043025", "eo 12866", "Romeo 12866", ""):
+        res = bound.validate_candidate(homoglyph)
+        assert res.is_valid is False, homoglyph
+        assert res.rejection_reason == "zero_homoglyph_or_malformed_label", homoglyph
+
+    for zero_padded in ("012866", "EO 012866", "Executive Order 043025"):
+        res = bound.validate_candidate(zero_padded)
+        assert res.is_valid is False, zero_padded
+        assert res.rejection_reason == "leading_zero", zero_padded
+
+    # Sentence-final period on a valid EO string is permitted.
+    assert bound.validate_candidate("E.O. 12866.").is_valid is True
+
+    # Dense-window hole is rejected as absent_in_dense_window.
+    rows = [(n, "fr_api", "fr-api") for n in (200, 201, 202, 204, 205)]
+    synth = _synthetic_oracle(tmp_path, monkeypatch, rows, verify_density=False)
+    hole = synth.validate_candidate(203)
+    assert hole.is_valid is False
+    assert hole.rejection_reason == "absent_in_dense_window"
+
+    with pytest.raises(ValueError, match="rejection_reason"):
+        EoCandidateCheck(eo_number=12866, is_valid=True, rejection_reason="leading_zero")
+    with pytest.raises(ValueError, match="undeclared candidate rejection reason"):
+        EoCandidateCheck(eo_number=12866, is_valid=False, rejection_reason="bogus")
+    with pytest.raises(ValueError, match="positive integer"):
+        EoCandidateCheck(eo_number=0, is_valid=True, rejection_reason=None)
+

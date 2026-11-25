@@ -1,4 +1,4 @@
-"""Compare two build trees byte for byte and name the first differences.
+"""Compare two selected Atlas generations byte for byte and name the first differences.
 
 The determinism claim this repository makes is not "the manifest digest is
 stable" -- it is that the same source bytes rebuild the same tree. A manifest
@@ -20,9 +20,34 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 from pathlib import Path
 
+from refspec.atlas.generation import select_atlas_generation
+
 REPORT_LIMIT = 20
+# Files a machine measures rather than the source determines (peak RSS, elapsed
+# milliseconds). Each must exist in both trees with the same JSON shape, so
+# dropping one or changing what it records still fails; only its values go
+# uncompared. The generator writes the one entry beside its report
+# (tools/generate_atlas_v3_full.py GENERATION_MEASUREMENTS_FILE, REF-071).
+MEASURED_FILES = frozenset({"generation-measurements.json"})
+
+
+def _shape(value: object) -> object:
+    """A JSON value with every leaf replaced by its type name: what a measurement records, not what it measured."""
+
+    if isinstance(value, dict):
+        return {key: _shape(item) for key, item in sorted(value.items())}
+    if isinstance(value, list):
+        return [_shape(item) for item in value]
+    return type(value).__name__
+
+
+def _measured_digest(path: Path) -> str:
+    """Digest a measured file by its JSON shape so machine-measured values stay uncompared."""
+    shape = json.dumps(_shape(json.loads(path.read_bytes())), sort_keys=True)
+    return "measured:" + hashlib.sha256(shape.encode("utf-8")).hexdigest()
 
 
 def _file_digest(path: Path) -> str:
@@ -34,10 +59,10 @@ def _file_digest(path: Path) -> str:
 
 
 def tree_digests(root: Path) -> dict[str, str]:
-    """Map every regular file under `root` to its sha256, by relative path."""
+    """Map every regular file under `root` to its sha256, by relative path; a measured file maps to its JSON shape."""
 
     return {
-        str(path.relative_to(root)): _file_digest(path)
+        str(path.relative_to(root)): _measured_digest(path) if path.name in MEASURED_FILES else _file_digest(path)
         for path in sorted(root.rglob("*"))
         if path.is_file() and not path.is_symlink()
     }
@@ -56,10 +81,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("second", type=Path)
     arguments = parser.parse_args(argv)
 
-    for root in (arguments.first, arguments.second):
-        if not root.is_dir():
-            print(f"determinism gate: {root} is not a directory", flush=True)
-            return 1
+    try:
+        arguments.first = select_atlas_generation(arguments.first).root
+        arguments.second = select_atlas_generation(arguments.second).root
+    except ValueError as error:
+        print(f"determinism gate: {error}", flush=True)
+        return 1
 
     first = tree_digests(arguments.first)
     second = tree_digests(arguments.second)

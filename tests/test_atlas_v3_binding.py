@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import os
 import re
@@ -13,7 +14,7 @@ from pathlib import Path
 
 import pytest
 from rdflib import Dataset, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import OWL, RDF, SKOS
+from rdflib.namespace import OWL, RDF, RDFS, SKOS
 
 ROOT = Path(__file__).resolve().parents[1]
 BINDING_ROOT = ROOT / "bindings" / "atlas" / "3.1"
@@ -113,10 +114,10 @@ def test_atlas_v3_binding_and_sealed_corpus_pass() -> None:
     completed = _standalone()
     assert completed.returncode == 0, completed.stderr
     assert json.loads(completed.stdout) == {
-        "caseCount": 174,
-        "invalidCount": 151,
+        "caseCount": 198,
+        "invalidCount": 173,
         "registryDescriptorCount": 106,
-        "registryDescriptorQuadCount": 1252,
+        "registryDescriptorQuadCount": 1257,
         "schemaCount": 10,
     }
 
@@ -130,10 +131,10 @@ def test_memory_fallback_matches_the_sealed_corpus() -> None:
     )
     assert completed.returncode == 0, completed.stderr
     assert json.loads(completed.stdout) == {
-        "caseCount": 174,
-        "invalidCount": 151,
+        "caseCount": 198,
+        "invalidCount": 173,
         "registryDescriptorCount": 106,
-        "registryDescriptorQuadCount": 1252,
+        "registryDescriptorQuadCount": 1257,
         "schemaCount": 10,
     }
 
@@ -170,9 +171,11 @@ def test_the_aggregate_test_target_runs_the_sealed_corpus_exactly_once() -> None
     """Pin that `make test` reaches the sealed corpus exactly once: both tiers listed, `test-atlas-v3` not, recipe
     matching ``_standalone()``.
 
-    The corpus pass is ``@pytest.mark.slow``, so only `test-slow` (`-m slow`)
+    The corpus pass is ``@pytest.mark.slow``, so only `test-slow` (`--tier slow`)
     runs it; dropping it silently stopped the whole slow tier under `make test`
-    between the 2026-08-23 slow-marking pass and the fix.
+    between the 2026-08-23 slow-marking pass and the fix. The ``full-atlas``
+    tier is deliberately not part of `make test` (REF-071): it constructs the
+    complete topology and is its own local target, `make test-full-atlas`.
     """
 
     prerequisites, _ = _makefile_rule("test")
@@ -180,7 +183,7 @@ def test_the_aggregate_test_target_runs_the_sealed_corpus_exactly_once() -> None
     assert "test-slow" in prerequisites, (
         "make test would skip the sealed corpus and the rest of the slow "
         "tier: test_atlas_v3_binding_and_sealed_corpus_pass is "
-        "pytest.mark.slow, and only test-slow (-m slow) runs it"
+        "pytest.mark.slow, and only test-slow (--tier slow) runs it"
     )
     assert "test-atlas-v3" not in prerequisites, (
         "make test would run the sealed corpus twice: the slow tier already "
@@ -195,12 +198,12 @@ def test_the_aggregate_test_target_runs_the_sealed_corpus_exactly_once() -> None
     ] == ["uv", "run", "--no-project", "--with-requirements", REQUIREMENTS, "python", VALIDATOR_PATH]
 
     # Listing both tiers is only half the claim. The other half is what each
-    # tier SELECTS: `test-package` must take `not slow` and `test-slow` must
-    # take `slow`, or the prerequisite list above is satisfied by a pair that
-    # runs the corpus twice (both unfiltered) or not at all (both `not slow`).
+    # tier SELECTS: `test-package` must take `--tier fast` and `test-slow` must
+    # take `--tier slow`, or the prerequisite list above is satisfied by a pair
+    # that runs the corpus twice (both unfiltered) or not at all (both fast).
     assert _slow_tier_partition_violation(MAKEFILE) is None
-    assert _pytest_marker_expressions(_makefile_rule("test-package")[1]) == ["not slow"]
-    assert _pytest_marker_expressions(_makefile_rule("test-slow")[1]) == ["slow"]
+    assert _pytest_tier_selections(_makefile_rule("test-package")[1]) == ["fast"]
+    assert _pytest_tier_selections(_makefile_rule("test-slow")[1]) == ["slow"]
 
 
 #: The two Makefile edits that keep every prerequisite assertion above green
@@ -210,23 +213,23 @@ def test_the_aggregate_test_target_runs_the_sealed_corpus_exactly_once() -> None
 _SLOW_TIER_MUTATIONS = (
     (
         "test-package stops filtering, so the corpus runs in both tiers",
-        'uv run pytest -q -n auto -m "not slow";',
-        "uv run pytest -q -n auto;",
+        "uv run pytest -q -n auto --dist loadgroup --tier fast $(PYTEST_ARGS);",
+        "uv run pytest -q -n auto --dist loadgroup $(PYTEST_ARGS);",
     ),
     (
-        "test-slow takes `not slow` too, so the corpus runs in neither tier",
-        "test-slow: atlas-v3-fixtures\n\tuv run pytest -q -n auto -m slow",
-        'test-slow: atlas-v3-fixtures\n\tuv run pytest -q -n auto -m "not slow"',
+        "test-slow takes the fast tier too, so the corpus runs in neither",
+        "uv run pytest -q -n $(SLOW_WORKERS) --tier slow $(PYTEST_ARGS)",
+        "uv run pytest -q -n $(SLOW_WORKERS) --tier fast $(PYTEST_ARGS)",
     ),
 )
 
 
-def _pytest_marker_expressions(recipe: list[str]) -> list[str | None]:
-    """Every ``-m`` selection the recipe's pytest invocations make, in order.
+def _pytest_tier_selections(recipe: list[str]) -> list[str | None]:
+    """Every ``--tier`` selection the recipe's pytest invocations make, in order.
 
-    A pytest command carrying no ``-m`` at all yields ``None`` rather than
+    A pytest command carrying no ``--tier`` at all yields ``None`` rather than
     being skipped: "unfiltered" is one of the two mutations this has to catch,
-    and a parser that only looked at the expressions it found would read an
+    and a parser that only looked at the selections it found would read an
     unfiltered command as no command.
     """
 
@@ -236,44 +239,45 @@ def _pytest_marker_expressions(recipe: list[str]) -> list[str | None]:
             match = re.search(r"(?:^|\s)pytest(?:\s|$)", command)
             if match is None:
                 continue
-            selection = re.search(
-                r"""\s-m\s+(?:"([^"]*)"|'([^']*)'|(\S+))""", command[match.end() :]
-            )
-            found.append(
-                None if selection is None else next(g for g in selection.groups() if g is not None)
-            )
+            selection = re.search(r"\s--tier\s+(\S+)", command[match.end() :])
+            found.append(None if selection is None else selection.group(1))
     return found
 
 
 def _slow_tier_partition_violation(makefile: Path) -> str | None:
     """Why `test-package` and `test-slow` do not partition the suite, or None.
 
-    Evaluated with pytest's own marker-expression evaluator rather than by
-    string match, so the question asked is the one that matters: for a test
-    marked ``slow``, and for one that is not, does EXACTLY ONE of the two
-    tiers select it? Two tiers selecting it is the sealed corpus running
+    Evaluated through conftest.tier_of rather than by string match, so the
+    question asked is the one that matters: for a test marked ``slow`` (the
+    sealed corpus pass), and for one that is not, does EXACTLY ONE of the two
+    targets select it? Two targets selecting it is the sealed corpus running
     twice; none selecting it is the corpus not running at all under
     `make test`.
     """
 
-    from _pytest.mark.expression import Expression
+    from conftest import tier_of
+
+    class _Marked:
+        def __init__(self, *markers: str) -> None:
+            self.markers = markers
+
+        def get_closest_marker(self, name: str):
+            return name if name in self.markers else None
 
     selections = {}
     for target in ("test-package", "test-slow"):
-        expressions = _pytest_marker_expressions(_makefile_rule(target, makefile)[1])
-        if len(expressions) != 1:
-            return f"{target} runs {len(expressions)} pytest commands, expected exactly 1"
-        selections[target] = expressions[0]
+        tiers = _pytest_tier_selections(_makefile_rule(target, makefile)[1])
+        if len(tiers) != 1:
+            return f"{target} runs {len(tiers)} pytest commands, expected exactly 1"
+        selections[target] = tiers[0]
 
     for marked in (True, False):
+        tier = tier_of(_Marked("slow") if marked else _Marked())
         selecting = [
             target
-            for target, expression in selections.items()
-            # No `-m` at all selects everything.
-            if expression is None
-            or Expression.compile(expression).evaluate(
-                lambda name, marked=marked: marked and name == "slow"
-            )
+            for target, selection in selections.items()
+            # No `--tier` at all selects everything.
+            if selection is None or selection == tier
         ]
         if len(selecting) != 1:
             state = "slow-marked" if marked else "unmarked"
@@ -422,6 +426,14 @@ def test_ontology_uses_the_declared_safe_local_profile() -> None:
         for subject in graph.subjects()
     )
 
+    atlas_validate._lint_ontology(graph)
+    specializes_skos = Graph()
+    for triple in graph:
+        specializes_skos.add(triple)
+    specializes_skos.add((ATLAS.originalOrganization, RDFS.subPropertyOf, SKOS.exactMatch))
+    with pytest.raises(atlas_validate.AtlasValidationError, match="specializes the SKOS property"):
+        atlas_validate._lint_ontology(specializes_skos)
+
     graph.add((ATLAS.injected, OWL.inverseOf, ATLAS.other))
     with pytest.raises(atlas_validate.AtlasValidationError, match="ontology.profile"):
         atlas_validate._lint_ontology(graph)
@@ -534,12 +546,16 @@ def _policy_node_digest(graph: Graph, node: URIRef) -> str:
 
 
 
-def test_assertion_identity_independently_excludes_lifecycle_and_evidence() -> None:
-    """Pin that the assertion digest recomputes from its nine basis fields and excludes lifecycle/evidence fields."""
+@pytest.mark.parametrize("ring", (ATLAS.subject, ATLAS.entity, ATLAS.value, ATLAS.legalIdentity))
+def test_assertion_identity_independently_excludes_lifecycle_and_evidence(ring: URIRef) -> None:
+    """Recompute each ring's identity from RDF, including only effective-scope dates."""
 
     _dataset, graphs, _manifest = _load_distribution()
     asserted = graphs["asserted"]
-    assertion = next(asserted.subjects(RDF.type, ATLAS.MappingAssertion))
+    assertion = next(
+        row for row in asserted.subjects(RDF.type, ATLAS.MappingAssertion)
+        if asserted.value(row, ATLAS.semanticRing) == ring
+    )
     policy = asserted.value(assertion, ATLAS.governedByPolicy)
     basis = {
         "object": str(asserted.value(assertion, RDF.object)),
@@ -552,6 +568,12 @@ def test_assertion_identity_independently_excludes_lifecycle_and_evidence() -> N
         "targetRelease": str(asserted.value(assertion, ATLAS.targetRelease)),
         "type": str(ATLAS.MappingAssertion),
     }
+    period = asserted.value(assertion, RKAF.hasEffectivePeriod)
+    if period is not None:
+        basis["effectivePeriodStart"] = str(asserted.value(period, RKAF.effectivePeriodStart))
+        end = asserted.value(period, RKAF.effectivePeriodEnd)
+        if end is not None:
+            basis["effectivePeriodEnd"] = str(end)
     payload = (
         json.dumps(
             basis,
@@ -744,6 +766,76 @@ def test_a_missing_or_unparseable_receipt_falls_back_to_the_rebuild(tmp_path: Pa
     assert "rebuilt and compared" in missing.stdout
 
 
+def _sandboxed_make_fixtures(root: Path) -> subprocess.CompletedProcess[str]:
+    """Run `make atlas-v3-fixtures`, every tier's prerequisite, inside the sandboxed copy."""
+
+    shutil.copy2(MAKEFILE, root / "Makefile")
+    return subprocess.run(
+        ["make", "--no-print-directory", "atlas-v3-fixtures"], cwd=root, check=False, capture_output=True, text=True
+    )
+
+
+def _stale_the_case_tree(fixtures: Path) -> tuple[Path, bytes, Path]:
+    """Edit one byte of a valid case and add a case another commit had; return the edited file, its bytes, the stray."""
+
+    edited = min((fixtures / "valid").rglob("atlas-acceptance.json"))
+    original = edited.read_bytes()
+    edited.write_bytes(original.replace(b"{", b"{ ", 1))
+    stray = fixtures / "invalid" / "a-case-another-commit-had" / "atlas-manifest.json"
+    stray.parent.mkdir()
+    stray.write_bytes(b"{}\n")
+    return edited, original, stray
+
+
+def test_a_stale_or_mutated_case_file_is_not_the_tree_the_receipt_pins(tmp_path: Path, monkeypatch) -> None:
+    """Pin that `make atlas-v3-fixtures`' question sees one edited byte under valid/ and one stray file under invalid/.
+
+    Until 2026-09-27 the target asked only whether `valid/` existed, so the
+    suite at another commit read the old commit's cases. The clean copy is the
+    control, and the make run shows the target answers it without a rebuild.
+    """
+
+    import build_fixtures as atlas_fixtures
+
+    root = _sandboxed_repository(tmp_path)
+    fixtures = root / "bindings" / "atlas" / "3.1" / "fixtures"
+    monkeypatch.setattr(atlas_fixtures, "FIXTURE_ROOT", fixtures)
+    monkeypatch.setattr(atlas_fixtures, "GENERATED_ROOTS", (fixtures / "valid", fixtures / "invalid"))
+    monkeypatch.setattr(atlas_fixtures, "RECEIPT_PATH", fixtures.parent / "fixtures-receipt.json")
+    assert atlas_fixtures._tree_is_the_receipts()
+
+    clean = _sandboxed_make_fixtures(root)
+    assert clean.returncode == 0, clean.stderr
+    assert "are the tree fixtures-receipt.json pins" in clean.stdout
+    assert "rebuilding" not in clean.stdout
+
+    edited, original, stray = _stale_the_case_tree(fixtures)
+    assert not atlas_fixtures._tree_is_the_receipts()
+    edited.write_bytes(original)
+    assert not atlas_fixtures._tree_is_the_receipts(), "the stray alone"
+    stray.unlink()
+    stray.parent.rmdir()
+    assert atlas_fixtures._tree_is_the_receipts()
+
+
+@pytest.mark.slow
+def test_make_atlas_v3_fixtures_rebuilds_a_stale_tree_to_the_receipts(tmp_path: Path) -> None:
+    """Pin that the tiers' prerequisite replaces a stale case tree with the one the receipt pins (~20s rebuild)."""
+
+    root = _sandboxed_repository(tmp_path)
+    fixtures = root / "bindings" / "atlas" / "3.1" / "fixtures"
+    edited, original, stray = _stale_the_case_tree(fixtures)
+
+    result = _sandboxed_make_fixtures(root)
+
+    assert result.returncode == 0, result.stderr
+    assert "rebuilding" in result.stdout
+    assert "matched the committed receipt" in result.stdout
+    assert edited.read_bytes() == original
+    assert not stray.parent.exists()
+    assert _sandboxed_make_fixtures(root).stdout.count("are the tree fixtures-receipt.json pins") == 1
+
+
 def test_tool_edits_do_not_move_the_contract_digest_but_ontology_edits_do() -> None:
     """Pin that the three contract inputs reissue contractDigest while tool edits are refused as not in the contract.
 
@@ -757,6 +849,7 @@ def test_tool_edits_do_not_move_the_contract_digest_but_ontology_edits_do() -> N
     for contract in (
         "admitted-derived-rules.json",
         "ontology/atlas.ttl",
+        "registry-resource-profiles.json",
         "shapes/atlas.shacl.ttl",
     ):
         changed = (BINDING_ROOT / contract).read_bytes() + b"\n# contract comment\n"
@@ -770,6 +863,184 @@ def test_tool_edits_do_not_move_the_contract_digest_but_ontology_edits_do() -> N
             atlas_validate._binding_digests(content_overrides={tool: b"# edited tool\n"})
 
     assert Path("README.md") not in atlas_validate.CONTRACT_PATHS
+
+
+#: A registry module the atlas index cites as source-implementation evidence and
+#: the Federal Register release's adapter recipe does not pin. The recipe's three
+#: files (see the release's construction summary) still move the release pins on
+#: purpose: they are the code that built its pack (REF-073).
+EDITED_REGISTRY_MODULE = "src/refspec/registry/billstatus_codes.py"
+FR_RELEASE_INPUTS = (
+    "output/registry-real-data-sources/federal-register-thesaurus-2025.pdf",
+    "output/refspec-vocabulary-portfolio/federal-register-thesaurus-2025",
+)
+
+
+def _load_tool(name: str):
+    spec = importlib.util.spec_from_file_location(name, ROOT / "tools" / f"{name}.py")
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _scratch_registry_repository(tmp_path: Path, *, release_inputs: bool = False) -> Path:
+    """Copy what the registry generators read into a scratch repository, and with ``release_inputs`` what the
+    Federal Register release build reads besides: the rest of the code, the binding, and its pinned inputs.
+
+    The generated fixture cases are left behind (the build never reads them), and so is every file the index
+    does not cite.
+    """
+
+    def skip(directory: str, names: list[str]) -> list[str]:
+        generated = {"valid", "invalid"} if Path(directory).name == "fixtures" else set()
+        return [name for name in names if name == "__pycache__" or name in generated]
+
+    root = tmp_path / "registry-repo"
+    for directory in ("src", "portfolio", *(("tools", "bindings") if release_inputs else ())):
+        shutil.copytree(ROOT / directory, root / directory, ignore=skip)
+    index = json.loads((ROOT / "portfolio" / "atlas-index-v0.json").read_text(encoding="utf-8"))
+    cited = {item["path"] for row in index["rows"] for item in row["readinessEvidence"]}
+    # A source-concept release's evidence names its package beside it, so the whole directory comes.
+    cited |= {str(Path(row["release"]["evidencePath"]).parent) for row in index["rows"] if row["release"]}
+    for relative in sorted(cited | set(FR_RELEASE_INPUTS if release_inputs else ())):
+        source, target = ROOT / relative, root / relative
+        if target.exists():
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.is_dir():
+            shutil.copytree(source, target, ignore=skip)
+        else:
+            shutil.copy2(source, target)
+    return root
+
+
+def _append_comment(path: Path) -> None:
+    path.write_bytes(path.read_bytes() + b"\n# an edit that changes no behavior\n")
+
+
+def test_a_registry_module_edit_leaves_the_contract_digest_where_it_was(tmp_path: Path) -> None:
+    """Pin that the registry proofs regenerate byte-identical after a module edit (REF-073).
+
+    The atlas index hashes every module it cites, and until REF-073 its digest
+    carried those bytes into the registry coverage and descriptor proofs, two
+    contract files, so a comment in any cited module moved `contractDigest` and
+    the release pins. The edit still reaches the index -- its `evidenceDigest`
+    moves, which is what makes the unchanged proofs mean something.
+    """
+
+    from refspec.atlas_index import build_atlas_index
+    from refspec.resource_catalog import load_json
+
+    coverage_tool = _load_tool("generate_atlas_v3_registry_coverage")
+    descriptor_tool = _load_tool("generate_atlas_v3_registry_descriptors")
+    root = _scratch_registry_repository(tmp_path)
+    committed = load_json(ROOT / "portfolio" / "atlas-index-v0.json")
+    implementations = {
+        item["path"]
+        for row in committed["rows"]
+        for item in row["readinessEvidence"]
+        if item["kind"] == "sourceImplementation"
+    }
+    assert EDITED_REGISTRY_MODULE in implementations, "an edit the index does not hash would prove nothing"
+
+    _append_comment(root / EDITED_REGISTRY_MODULE)
+    catalog = load_json(ROOT / "portfolio" / "resource-catalog-v0.json")
+    profiles = load_json(BINDING_ROOT / "registry-resource-profiles.json")
+    index = build_atlas_index(
+        load_json(ROOT / "portfolio" / "atlas-index-input-v0.json"), catalog, repository_root=root
+    )
+    assert index["evidenceDigest"] != committed["evidenceDigest"]
+    assert index["indexDigest"] == committed["indexDigest"]
+
+    coverage = coverage_tool.render_json(
+        coverage_tool.build_registry_coverage(catalog, index, profiles, repository_root=root)
+    ).encode("utf-8")
+    dataset, proof = descriptor_tool.build_registry_descriptors(catalog, index, profiles)
+    regenerated = {
+        Path("tests/registry-coverage.json"): coverage,
+        Path("tests/registry-descriptors.json"): proof,
+        Path("tests/registry-descriptors.nq"): dataset,
+    }
+    for relative, payload in regenerated.items():
+        assert payload == (BINDING_ROOT / relative).read_bytes(), f"{relative} moved with a module edit"
+    assert (
+        atlas_validate._binding_digests(content_overrides=regenerated)["contractDigest"]
+        == atlas_validate._binding_digests()["contractDigest"]
+    )
+
+
+def _contract_dev_pair(root: Path, output: Path) -> tuple[str, str]:
+    """Build the bounded Federal Register release as `make contract-dev` does; return the two digests it prints."""
+
+    environment = {**os.environ, "PYTHONPATH": str(root / "src")}
+    for tool in (
+        "generate_atlas_index",
+        "generate_atlas_v3_registry_coverage",
+        "generate_atlas_v3_registry_descriptors",
+    ):
+        generated = subprocess.run(
+            [sys.executable, f"tools/{tool}.py", "--write"], cwd=root, env=environment, capture_output=True, text=True
+        )
+        assert generated.returncode == 0, generated.stderr
+    built = subprocess.run(
+        [
+            sys.executable,
+            "tools/generate_atlas_v3_full.py",
+            "--only-release",
+            "federal-register-thesaurus-2025",
+            "--output",
+            str(output / "distribution"),
+        ],
+        cwd=root,
+        env=environment,
+        capture_output=True,
+        text=True,
+    )
+    assert built.returncode == 0, built.stderr[-4000:]
+    from refspec.atlas.generation import select_atlas_generation
+
+    selected = select_atlas_generation(output / "distribution")
+    manifest, view = (
+        hashlib.sha256((selected.root / member).read_bytes()).hexdigest()
+        for member in ("distribution/atlas-manifest.json", "parquet-view/view-manifest.json")
+    )
+    return manifest, view
+
+
+@pytest.mark.slow
+@pytest.mark.pinned_input(
+    not all((ROOT / relative).exists() for relative in FR_RELEASE_INPUTS),
+    reason="the Federal Register thesaurus release inputs are absent",
+)
+def test_a_registry_module_edit_leaves_the_release_pins_and_a_contract_edit_moves_them(tmp_path: Path) -> None:
+    """Pin, end to end, the pair `make contract-dev` prints (REF-073), ~4 s a build.
+
+    The fast test above sees only the contract files; this one would also see a
+    new path from module bytes into the manifest or view that bypasses them. The
+    release is built from a scratch copy of the repository -- the same bytes at
+    another path -- once after a registry module edit, where the pair must be the
+    recorded pins, and once each after an ontology and a shapes edit, where both
+    must move.
+    """
+
+    makefile = MAKEFILE.read_text(encoding="utf-8")
+    pins = tuple(
+        re.search(rf"^{name} \?= ([0-9a-f]{{64}})$", makefile, re.MULTILINE).group(1)
+        for name in ("ATLAS_FR_RELEASE_MANIFEST_SHA256", "ATLAS_FR_RELEASE_VIEW_SHA256")
+    )
+    root = _scratch_registry_repository(tmp_path, release_inputs=True)
+
+    _append_comment(root / EDITED_REGISTRY_MODULE)
+    assert _contract_dev_pair(root, tmp_path / "module-edit") == pins
+
+    for contract in ("ontology/atlas.ttl", "shapes/atlas.shacl.ttl"):
+        path = root / "bindings" / "atlas" / "3.1" / contract
+        original = path.read_bytes()
+        _append_comment(path)
+        manifest, view = _contract_dev_pair(root, tmp_path / Path(contract).stem)
+        assert manifest != pins[0] and view != pins[1], f"{contract} must move both pins"
+        path.write_bytes(original)
 
 
 def test_derived_rule_registry_is_contract_covered_and_matches_the_executable_roster() -> None:

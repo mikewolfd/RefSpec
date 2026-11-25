@@ -1117,6 +1117,8 @@ the cited paths are sufficient.
   renditions, text representations, and structural passages to SpicyRegs and
   topic assignments to Rulespec Extrapolator, and the older Rulespec and README
   prose carrying those same assignments. The rest of Decision 0001 stands.
+- **Amended:** 2026-09-24, the "identity functions" clause only (spicy-regs
+  decision 28); see the amendment at the end of this entry.
 
 The platform has five products and six ownership rows, extending
 [REF-008](#ref-008-count-four-products-and-five-ownership-rows)'s counting rule
@@ -1150,6 +1152,52 @@ suffice to prove a consumable surface. One decision, cited by identifier rather
 than by checkout path, is the fix. This entry changes the day a product's
 published release shape changes; another document needing one of its rows is not
 that day.
+
+**Amended 2026-09-24 (spicy-regs decision 28): Rulespec Core owns the
+identifier lexical spaces, not the functions that mint into them.** The
+ownership paragraph above gives Rulespec Core "identity functions". That
+clause is narrowed: Core owns the lexical spaces, the `urn:rkaf:us:*` patterns
+its compiled profiles state, and the IRI minters live in SpicyDocs beside the
+identifier shapes they refuse over, as `spicy_docs.interpretation.iri_minting`
+(shipped in SpicyDocs 0.31.0). SpicyDocs' tests hold those minters to Core's
+spaces, which it restates verbatim as `IDENTIFIER_SPACES`. The text above
+stands as written; every other clause remains in force.
+
+The owner confirmed spicy-regs decision 28 (spicy-regs
+`docs/research/fork-delivery-decisions-2026-09-22.md`, row 28) on 2026-09-24;
+SpicyDocs records the move in its `docs/decisions.md` entry "The stack's
+identifier minting lives beside the shapes". A minter is refusal logic over
+the shapes and a collision table, not a format: a Core minter would either
+copy the shapes or take pre-validated strings, and adding
+`rulespec-conformance` (rdflib, pyshacl) to spicy-regs for an f-string is not
+justified. The exchange rule above is unchanged: every consumer installs the
+SpicyDocs wheel, and none reads a sibling tree.
+
+Measured over 3,966,225 paired calls (RefSpec's pinned Federal Register and
+Unified Agenda columns, every literal in its minting, zero-part and shape
+tests, and fuzz), SpicyDocs 0.31.0's minters and
+`src/refspec/registry/iri_minting.py` (as of `4a680c81`, unchanged since)
+return byte-identical results, `ValueError` messages included, except three
+dockets ending in a `-RULE`-family token, which 0.31.0's column docket reader
+admits and RefSpec refuses. One is real:
+`Docket #GIPSA-2010-FGIS-0014-NONRULEMAKING`, the only such value in the
+pinned Federal Register `docket_ids_json`.
+
+At its step-2 import switch (PLAN.md, the SpicyDocs 0.31.0 repin), RefSpec
+imports `iri_minting` from SpicyDocs. Until then its own
+`src/refspec/registry/iri_minting.py` stays the minter; at the switch it
+becomes a test-only oracle, per this repository's rule for a replaced check.
+The switch also adds a test holding RefSpec's collision table (the verdicts
+of `hand_validated_interpretations._FR_COLLISION_TABLE`, REF-066's seven rows)
+equal to the imported `_FR_COLLISION_VERDICTS`, and points
+`test_the_minted_spaces_are_the_contract_verbatim` (`tests/test_iri_minting.py`)
+at the imported `IDENTIFIER_SPACES`. Both checks live here because SpicyDocs
+can read neither source: the collision census, witnesses and audit stay in
+RefSpec, and SpicyDocs deliberately does not depend on the vendored
+`rulespec-conformance` wheel. The `-RULE`-family refusal asserted in
+`tests/test_identifier_shapes.py` moves with the switch, and a new Federal
+Register collision lands in RefSpec's evidence first, then in SpicyDocs'
+table.
 
 ### REF-025: Retain canonical Label.id in the next search view
 
@@ -2370,6 +2418,25 @@ English-only, but remain non-empty, explicitly language-tagged, canonical
 lowercase BCP 47 literals with at most one preferred label per language.
 Definitions and notes remain English-only.
 
+**Shape correction, 2026-09-27.** The resource shape still limited
+`skosxl:prefLabel` to one node in total, contradicting this decision, the
+binding README and both the producer and independent label checks. The pinned
+UMTHES response `records/_00000013.nt` demonstrates the difference: the same
+concept publishes `"Abbau"@de` and `"degradation"@en`, alongside separately
+marked alternative labels and broader concepts. Neither preferred label is
+an alternative spelling or a label borrowed from its broader concept.
+The shape now checks `sh:uniqueLang` on the preferred labels' literal forms.
+The old cardinality clause remains a test-only oracle: distinct-language
+preferred labels are the sole intended acceptance change. Distinct literals
+with the same language still fail SHACL; the linear label-integrity check
+counts label nodes before deduplicating literal values, so two nodes with an
+identical preferred literal remain refused too. Role disjointness stays
+unchanged. The corpus tests both cases and two preferred languages on one
+resource; its older
+`multilingual-label` case changed one label's language and could not detect
+this defect. This correction changes the binding digest and bounded-release
+pins, not publisher inputs or the adopted language policy.
+
 **OCLC and the Publications Office.** OCLC's pinned FAST bulk is licensed under
 the **“Open Data Commons Attribution License (ODC-By) v1.0.”** It contains
 935,540 admitted topical relations or mappings: 311,890 `schema:sameAs`,
@@ -2507,6 +2574,10 @@ then verifies that every unchanged mapping names the selected endpoint release.
   identifier census, 321-assertion entity mapping release, pure projection
   builder, producer, portfolio chain, Atlas binding, and Parquet view are
   registered and checked together.
+- **Amended:** 2026-09-26, a consumer-side reverse lookup beside the builder
+  (spicy-regs decision 56); see the amendment at the end of this entry. Also
+  2026-09-26 by [REF-072](#ref-072-an-organizations-succession-is-a-dated-event-never-an-identity):
+  organization change events join the entity ring.
 
 **The roster closes REF-034's credential barrier.** The owner supplied a
 `REGULATIONS_GOV_API_KEY`, and the publisher returned 331 records from
@@ -2647,6 +2718,31 @@ fixture check both sides of that invariant. Adding the required corpus case
 moved `fixtures-receipt.json`'s `fixturesDigest` from
 `sha256:6ffa6fc58ba290961b55bcf0428e46482c63ac41d7029f0d011063bcad05a95c`
 to `sha256:6043d5867474942264cc235cde63ec30e43572cb38ecbc565c969909e7ab0938`.
+
+**Amended 2026-09-26 (spicy-regs decision 56): a reverse lookup reads the
+projection backwards and asserts nothing.** `reverse_agency_projection()`, beside
+the builder in `src/refspec/atlas/agency_projection.py`, maps a selected
+organization (the IRI a row's `org` carries, whose suffix is the Federal
+Register agency id, the eCFR slug or the Federal Hierarchy organization id)
+back to a regulations.gov code. An organization resolves only where exactly one
+row selects it; an organization several rows select resolves to nothing and is
+listed as ambiguous with every code; unresolved rows contribute nothing, closest
+candidates included. It is a pure function of the projection, deterministic and
+frozen like the projection. It is a consumer's interpretation, not a claim: the
+release above still asserts one direction and mints no inverse, and the reverse
+lookup must never be emitted as an `atlas:sameEntityAs` assertion; beside the
+forward one, the binding's `dataset.mapping-direction` check would refuse it.
+
+On the pinned projection, 311 of the 321 codes reverse. Five organizations are
+ambiguous, two codes each: the Office of the Federal Register (`FR`, `OFR`,
+an eCFR organization), the Federal Procurement Policy Office (`FPPO`, `OFPP`),
+the Advisory Council on Historic Preservation (`ACHP`, `HPAC`), the Community
+Development Financial Institutions Fund (`CDFI`, `CDFIF`) and the Corporation
+for National and Community Service (`CNCS`, `CORP`). None is a parent
+department: the projection selects each bureau's own organization, so no
+department collects its bureaus' codes. `tests/test_agency_projection.py` pins those counts, a
+round trip for every reversible pair, and a fixture of real rows in which
+`MMA`'s closest candidate, the organization `MMS` selects, stays resolved.
 
 ### REF-039: Two retained validation structures remain acceptable only at the measured corpus scale
 
@@ -4960,6 +5056,102 @@ layer up, and
 carries the reasoning so the next reader does not close the gap in whichever
 direction they happen to be standing in.
 
+### REF-071: pinned inputs arrive from R2, the suite runs in three tiers, and a test skips only for a reason it states
+
+- **Date:** 2026-09-22
+- **Status:** Accepted. Adds `tools/pinned_inputs.json`, `tools/fetch_pinned_inputs.py`,
+  `tools/check_skips.py` (replacing `tools/check_skip_budget.py`),
+  `tests/allowed_skips.json`, the `--tier` option in `conftest.py`, and the
+  `pinned-inputs-present`, `build-derived` and `test-full-atlas` targets; splits
+  CI into three jobs behind `.github/actions/pinned-setup`; deletes the unread
+  ELSST R6 bench `SourceSpec`; moves the atlas index, coverage digests,
+  descriptors proof pin and fixture receipt (test evidence moved; the `.nq`
+  graph is byte-identical). No binding or schema version moves.
+
+**Why.** A clean clone has no `output/`, so CI ran a suite in which roughly 480
+tests skipped for absent data. The skip budget recorded 101 on 2026-08-11 and
+had drifted to 477 without anyone lowering or raising it, because CI stopped
+at the 40 tests that read `output/` without a guard before it reached the
+budget step. Skipping also hid rot: `test_seal.py` still expected two packs and
+eight view tables three weeks after the derived graph (`1b5fd0ab`, `ae23819d`)
+made them three and nine; the FR determinism gate had not passed since
+`memoryProfile` joined the byte-compared generation report (`08b854bc`,
+2026-08-16); and two complete-topology tests, opt-in by environment variable,
+had drifted (a resource count) and slowed (over an hour) unseen.
+
+**Inputs.** Every file under `output/` whose SHA-256 a tracked file records is
+listed in `tools/pinned_inputs.json` and held, content-addressed, in the
+private `refspec-pinned-inputs` R2 bucket (the spicy-regs fork's Cloudflare
+account). The fetcher downloads by digest, refuses bytes that do not hash to
+it, hard-links from a store under `output/`, hashes each file once, and prunes
+objects the manifest dropped. R2 is transport, not trust: readers still verify
+their own pins. `tests/test_fetch_pinned_inputs.py` names the few inputs only
+the manifest pins, each with its reason, and fails in both directions -- an
+unrecorded input not on the list, and a listed one whose digest has since been
+recorded. "Recorded" means the digest string occurs in a tracked file, not that
+a reader verifies it. DocSpec's `S3ContentAddressedBlobStore` solves the same
+problem, but REF-024 keeps products from importing each other's source, so the
+fetcher is local and small. `regulatory-native-current/` is not hosted:
+nothing reads it, and REF-032 refuses it as an observed inventory.
+
+**Opt-in paths.** The root `conftest.py` points every `REFSPEC_*_PATH` at its
+pinned input through the real-data audit's own mapping
+(`pinned_input_environment`). The variables stay because the audit still sets
+them to the files it materializes; every former `is None: skip` branch now
+fails instead.
+
+**Tiers.** `conftest.tier_of` puts every test in exactly one tier, selected
+with `--tier`: `fast` (`make test-package`, which CI runs on every push and
+pull request), `slow` (`make test-slow`, local, after `make build-derived`; it
+includes
+`release_tier`, REF-027's parity sweep, which needed `REFSPEC_RELEASE_TIER=1`,
+and every `reads_built_artifact` test not marked `no_artifact`) and
+`full-atlas` (`make test-full-atlas`, local; the complete producer prebuild
+and its deep validation). Only the fast tier runs in CI: the first CI run of the
+slow tier (35879235424) outgrew a 16 GB hosted runner at 70%, and an hour of
+real-data work per commit buys little that a local run before a release does
+not. CI calls `make test-package`, so a developer's fast run and CI's are one
+selection; `tests/test_test_tiers.py` checks that each tier has one target,
+that CI runs the fast one on every push, and that no heavy tier runs there; the
+sealed-corpus
+guard in `tests/test_atlas_v3_binding.py` still proves `make test` runs that
+corpus exactly once. The slow and full-Atlas tiers run on capped workers
+(`SLOW_WORKERS`): with every input present, `-n auto` on a 14-core, 48 GB host
+froze it on 2026-09-23. The owner audit runs every tier but `full-atlas`.
+
+**The rule.** A test skips only for a reason it states that no fetch or build
+can remove. A presence guard keeps its condition and its words but fails:
+`@pytest.mark.pinned_input` takes `skipif`'s arguments, and
+`conftest.missing_pinned_input` replaces an in-body skip, both naming
+`make fetch-pinned-inputs`. `tools/check_skips.py` checks each tier's report
+against `tests/allowed_skips.json`, in both directions. What remains: the two
+git-context skips in `test_unified_agenda_parquet.py`, which describe an
+installed package rather than a checkout, and the strict xfail on the registry
+audit summary (2026-09-07, `term_explanation`), which only the owner-run
+`make audit-registry-real-data` regenerates.
+
+**ELSST.** The ELSST R6 atlas2 bench bundle (`sha256:466a4464…`) survives
+nowhere searched on 2026-09-22 (this machine, `corpora`, git history, the
+fork's R2 bucket), nor does the R6-only bundle it was resealed from. Neither
+loader read it -- `refspec.atlas.v3_registry_vocabularies` builds ELSST from
+the pinned `ELSST_R6.ttl` -- and only the no-argument `verify_inputs()` walked
+its `SourceSpec`, so the entry is gone and `REGISTRY_LOADED_SOURCE_KEYS` names
+the one release still declared but loaded elsewhere. The atlas index's ELSST
+row cites its evidence, not this entry, and did not move.
+
+**Determinism.** The generator now writes RSS and timing to
+`generation-measurements.json` beside the report; `tools/compare_build_trees.py`
+requires that file in both trees with the same JSON shape and compares
+everything else byte for byte.
+
+**CI.** Pull requests and pushes to `main` (not both for one change) run the
+fast tier and the FR determinism gate; a newer push to a pull request cancels
+the older run. The runner installs Poppler for the two readers that shell out
+to `pdftotext`. The store cache is restored
+under an exact key or the newest older one, pruned after the fetch, and saved
+right after it on `main` only. A warm store builds no R2 client, so a fork's
+pull request without secrets passes unless the manifest changed.
+
 ### REF-070: a handed term is answerable only where a directory of instances exists, and the top families are blocked on acquisition
 
 - **Date:** 2026-09-07
@@ -5695,3 +5887,566 @@ pinned-column census moves exactly five values from `first-class` to
 `refused` (480,566 → 480,561; 360 → 365 of 1,004,233) and zero values
 anywhere else -- the two `consulted` numbers were already counted
 first-class and stay there.
+
+### REF-072: An organization's succession is a dated event, never an identity
+
+- **Date:** 2026-09-26
+- **Status:** Accepted and executed: the event design in the Atlas 3.1
+  binding, then the release `agency-registry-2026-09-26`. Amends REF-038.
+  The owner decided the design (`plans/agency-registry-design.md` §8) and
+  adjudicated the batch-1 events it first carries
+  (`plans/agency-registry-batch-1-decisions.json`).
+
+**What REF-038 could not say.** REF-038's wire carries identity: one-way
+`atlas:sameEntityAs` mappings, undated, because an identity holds of two
+records rather than of a period. Agency registry batch 1 adds successions --
+five renames and four splits of Federal Register agencies, each on a day a
+public record states. None fits a mapping. A split has several results, a
+merger several originals, and `rdf:subject`/`rdf:object` hold one of each; the
+entity-ring branch of `atlas:MappingAssertionShape`'s ring-context `sh:xone`
+refuses a date on any entity mapping; and `_validated_relation_context` in
+`semantic_foundation.py` refused context on every entity relation record.
+
+**The event.** A succession is one `atlas:OrganizationChangeEvent`, an n-ary
+record in the entity ring, specializing W3C ORG rather than minting a parallel
+vocabulary: the class is `rdfs:subClassOf org:ChangeEvent`, and
+`atlas:originalOrganization` and `atlas:resultingOrganization` are
+`rdfs:subPropertyOf` `org:originalOrganization` and `org:resultingOrganization`.
+An ORG-aware consumer infers the `org:` statements from the ontology; the wire
+carries only the Atlas terms, and a raw `org:` predicate is refused
+(`change-event-raw-org-predicate`). The date is `rkaf:effectiveDate`, the one
+instant rkaf gives an event taking effect, never an `rkaf:EffectivePeriod`: an
+event happens on a day, and a period would claim it is "in force". The event is
+evidence-bound exactly as an assertion is, through `rkaf:bindsAssertion`, and
+its IRI is `urn:ref:atlas-change-event:<digest hex>` over its own facts, so the
+owner's review stays bound to exactly the event reviewed.
+
+The profile map gains one `changeEventPolicies` entry: it admits the event
+class, its two links, the entity ring, and `atlas:EntityResource` as the class
+the links reach (`profileDigest`
+`sha256:7d7c4933…` → `sha256:d69a48c6c3de33007aea900d8ae4341c493cdf205bbcc201395c48a0d5409d9c`).
+Its loader refuses a non-Atlas term and a link any assertion cell admits.
+`atlas:OrganizationChangeEventShape` states the owner's clauses, one property
+shape each: exactly one date; at least one original; at least one result; no
+original among the results (`sh:disjoint`); at least one binding whose
+evidence is a public record, served by its publisher at an `https` URL; and
+human review by `urn:ref:reviewer:refspec-owner` on every binding
+(`atlas:OwnerHumanReviewShape`). `tools/validate.py` adds what relates several
+records: the event's ring and every organization it names against the policy
+(`dataset.change-event-policy`), the content-derived IRI
+(`dataset.change-event-identity`), and over the whole distribution no inverse
+pair (`dataset.change-event-inverse`), no cycle through events
+(`dataset.change-event-cycle`, the hierarchy check's Tarjan pass), and no
+current `atlas:sameEntityAs` between an event's original and any of its results
+(`dataset.change-event-same-entity`). Each clause and each rule has its own
+negative case, and `organization-change-events` is the valid one -- a split
+and a later rename of one of its results, a chain the cycle rule must admit.
+`tests/test_atlas_v3_change_events.py` pins that each negative fails on its own
+clause's path, since two pairs share a SHACL component. The corpus grows from
+174 to 188 cases (151 to 164 invalid), and `fixturesDigest` re-seals
+(`bindings/atlas/3.1/fixtures-receipt.json`).
+
+**Why a succession never folds into identity.** `atlas:sameEntityAs` is
+timeless and, in meaning, symmetric. Folding a rename or a split into it would
+equate two records the Register files apart, route every pre-change document
+to an organization that never published it (every pre-2003 INS document to
+three DHS components), and drop the date the record states. The validator
+therefore refuses both at once for one pair. The entity ring's no-period rule
+for mappings is untouched: `mapping-entity-identity-dated` proves a period on
+`atlas:sameEntityAs` is still refused. The registry mirrors the wire: in
+`semantic_foundation.py`, an entity `successorOf` record now requires the day
+it took effect (`effectiveFrom`, and no `effectiveThrough`), and identity and
+related-entity records still refuse any context.
+
+**`dcterms:isReplacedBy` is not reused.** It stays a release-level native
+identity property (`src/refspec/managed_release.py:149`, beside
+`dcterms:isVersionOf` and `owl:priorVersion`), relating a release to the one
+that supersedes it. A successor organization is not a later version of its
+predecessor's record, a split has no single replacement, and the property
+carries no date, so organizations use the event.
+
+**The release: `agency-registry-2026-09-26`.** A new entity-ring mapping
+release beside REF-038's, never a revision of it: REF-038's release and its
+331 = 321 + 10 parity are byte-identical, and `build_agency_projection()`
+still reads REF-038 alone and refuses this release. It is a new mapping-only
+catalog resource, `agency-registry`, loaded by
+`load_agency_registry_mapping_release()` in
+`src/refspec/atlas/v3_registry_alignments_entity.py`, the entity group module
+every entity release's recipe pins; the owner's decision contract
+(`load_decisions`, `decision_digests`, `decision_answers`) moved there from
+`tools/assemble_agency_registry_batch_1.py`, which imports it, so the sheet and
+the release read one file one way. The release reads the committed candidates
+and decisions by file digest, recomputes the candidates digest the owner
+decided on (`sha256:7fe88a9167a9363f5c2bfdcd3911953b7323abe1564d40586991c9612f95f4bc`),
+binds each decision to its item's `content_digest`, and refuses the whole
+release while any decision is stale or missing or any answer has no rule: the
+generic answers mean the same everywhere, and the three numbered options it
+reads (`same:fr151…` option 2, `same:fr296…` option 1, `event:fr564` option 1)
+are named one by one, their text sealed inside the item digest. Candidates
+never enter the release; it re-derives every sealed name and parent from the
+pinned rosters and refuses drift.
+
+It emits exactly the owner's 26 decisions: 13 one-way Federal Register bridges
+to eCFR or Federal Hierarchy organizations in REF-038's shape (the proposed
+basis, both sealed names, both parents, two E4 records each, citing the
+decisions file and the `questionTool` channel), 9 change events (5 renames, 4
+splits; one E4 record per public record, 22 in all, each result's functions in
+the evidence and the metadata), and 4 recorded non-emissions (the
+Export-Import Bank, same organization but the reverse-lookup cost refused; the
+Udall Foundation, held until the basis vocabulary gains a statutory-rename
+value, which this release does not add; the IBWC withdrawal; CISA with no
+Federal Register counterpart). Parity: 26 = 13 + 9 + 4, checked as REF-038
+checks 331 = 321 + 10. An event whose public records include no statute,
+reorganization plan, or Federal Register notice or document is refused
+(`DATED_PUBLIC_RECORD_KINDS`), and so is one naming any organization that is
+not a Federal Register roster record, rather than pinning it to the Register's
+release. Each item attests the day its own decision records (`decided_on`),
+and the release is issued on its earliest decision day, since a mapping
+release refuses evidence older than its issue. A non-emission's reason is one
+of four closed codes (`AGENCY_REGISTRY_NON_EMISSION_REASONS`), refused
+otherwise by the release and by the view's verifier. The producer writes each
+event into its mapping release's pack. It has no compact-record role, so the
+typed Atlas Parquet view omits it, and its bindings with it: a served binding
+must bind a served statement, which `verify_atlas_parquet_view` checks (an
+independent review found the 22 event bindings orphaned in the view before
+the omission). The construction counts still count them. A bounded build of the five
+rosters, the two releases they reference (the Treasury accounts and the eCFR
+CFR titles) and both entity releases validated whole under the binding, with
+the legacy and streamed writers byte-identical; REF-038's pack did not move.
+The new catalog resource adds one descriptor (1,252 -> 1,257 quads), and
+because `v3_source_data.py` and the descriptors are fixture-receipt inputs,
+`fixturesDigest` re-seals again (`bindings/atlas/3.1/fixtures-receipt.json`).
+
+**What an edit to the entity module moves (2026-09-28).** Both entity
+releases' adapter recipes pin `src/refspec/atlas/v3_registry_alignments_entity.py`
+by its bytes (`_adapter_recipe_inputs`), so any edit to it -- the parent-map
+change after batch 1 is one -- moves `atlas-manifest.json`,
+`atlas-construction-summary.json`, `atlas-acceptance.json` and
+`atlas-producer-validation.json` in every distribution that carries the
+registry release or REF-038's, while the N-Quads packs stay byte-identical
+when the claims did not change. The distribution's Parquet view manifest
+moves with them, because it names the distribution manifest. The independent
+review measured this for the registry release only: the bounded agency
+distribution it built at two commits that differ in that module's bytes
+holds no REF-038 release. Of that distribution's 14 files, those four moved
+and the rest did not; for REF-038's release the move follows from the same
+recipe pin and was not measured. The Federal Register thesaurus pair does
+not move: that release's recipe does not pin this module.
+
+**The view and the lookup.** The release has its own sealed Parquet view,
+never rows in REF-038's projection: `build_agency_registry_view()` projects it
+into bridges, one row per (event, result), and non-emissions, refusing rows
+that are not exactly the release's claims, and `seal_agency_registry_view()`
+writes them with the Atlas view's writer contract
+(`tools/build_agency_registry_view.py`; manifest
+`sha256:77b357cc06fe3e67bcacb0591833884087572727064f89643e10aa2a28ad6b87`,
+members named in the design note §8). `current_agency_successors()`, beside
+`reverse_agency_projection()`, walks the events forward and returns a set --
+every result of a split, the end of a chain -- and is never asserted.
+Later (2026-09-28): the events table gained each original's roster parent
+(`original_parents`), so the view's `schemaVersion` went from 1.0 to 1.1 and
+its manifest to
+`sha256:c7dc9310f9c11cd346245d7cf882f9eaf69b70b25f59841ae6004dca4944866e`;
+the 1.0 view above stays verifiable against the release with that column set
+aside. The release's claims and evidence did not move, and neither did the
+Federal Register thesaurus pair `make contract-dev` prints; the entity module
+edit moved the agency distributions' manifest files as recorded above.
+Later (2026-10-03): the view seals the current successors as a fourth
+table, derived from its events by `current_successor_rows()` and never
+asserted, so spicy-regs can read the walk's answer by digest and delete its
+verbatim port of `current_agency_successors()` (its MCP image cannot import
+RefSpec). `schemaVersion` went to 1.2 and the manifest to
+`sha256:99b8234ad15881e411ca4af2faa9e99bb9d91a22ba140e6ae792da4a8d4e41f9`;
+the asserted tables, the logical-content digest `777c6100…` and the 1.1 view's
+verifiability did not move. The independent agency checker derives the table
+on its own, by a fixpoint over the plans' events rather than the producer's
+walk.
+Later still (2026-10-03): the owner accepted the succession batch's one
+event, `event:fr200` (the Food and Nutrition Service became the Food and
+Nutrition Administration, FR 200 to FR 625, effective 2026-06-24, the day 91
+FR 37779's revision of the 7 CFR chapter II heading took effect;
+`plans/agency-registry-succession-batch-decisions.json`). It is released the
+way batch 1 is, in the same release: `load_agency_registry_mapping_release()`
+reads each batch's candidates and decisions by pinned digest
+(`agency_registry_batches()`), recomputes each batch's decided candidates
+digest, refuses a stale, missing or unruled decision and a batch whose parity
+differs, and refuses an item decided in two batches. The event rides beside
+batch 1's 13 bridges, so the release keeps at least one mapping, which a
+batch of events alone could not (refused as "has no mappings"). Parity is now
+27 = 13 + 10 + 4. The key and issue day stay (`agency-registry-2026-09-26`,
+the earliest decision); the `sourceReleaseDigest` moves to
+`sha256:dc639b30526052a4cf1fa9162a201bce6476d82ec67f581e2053091a25aa367b`,
+and batch 1 alone still rebuilds `69001a43…`, which the 1.1 and 1.0 views
+verify against. The view's release identity names each batch's decided
+digest (`candidatesDigests`); its manifest is
+`sha256:0b39812de31930f267dea2d7d51039d71b0a1852606387d5aba64aa75d25ec17`
+(logical `05a360a4…`), with 15 event rows and 15 current successors, FR 200
+to FR 625 among them. The independent agency checker reads both batches; the
+retained source-review receipt still covers batch 1 only, and the succession
+batch's records are retained under
+`research/evidence/fns-fna-succession-2026-10-03/`.
+
+**What keeps the view's rows at E4 owner review (2026-09-28).** Since then
+the view states the evidence tier, warrant and reviewer that the release's
+approvals state, and its verifier compares the view with the release, not
+with literals: an honest view of a release whose evidence falls short
+verifies as that release's view, and shows the shortfall to its consumer. So
+the view does not keep the release at E4 owner review, and what does differs
+by claim. For the 9 change events, SHACL enforces the owner's human review on
+the wire: `atlas:OwnerHumanReviewShape` refuses any binding that is not it.
+For the 13 bridges, SHACL enforces no owner review -- an entity-ring mapping
+takes any sanctioned warrant -- so it rests on three things: the release
+builder's constants (`_mapping_evidence()` writes `evidenceTier` E4,
+`humanReview` and the owner's IRI), the independent agency checker
+(`tools/atlas_independent_agency.py`, slow tier), which expects E4 human
+review of every bridge and event row from the plans themselves, and the
+view's manifest pin, which a changed row moves. The tier label E4 is a field
+of the evidence payload, which SHACL Core cannot read, so for the events too
+the label rests on the builder and the checker.
+
+**Recorded readings, for the owner to overrule.** "A dated public record" is
+read, on the wire, as a public record its publisher serves at an `https` URL.
+The batch-1 records carry kind, citation, URL and note but no structured date,
+and a date lifted from a citation's text would be a new claim; so the wire
+checks what it can see, and the date-bearing kinds (statute, reorganization
+plan, Federal Register notice or document, as against a roster description)
+are checked where the kind is known, when the release is assembled. The kind
+stays a release-time check, not a shape rule: it is a field of this producer's
+evidence payload, not a binding term, and checking it would tie the
+independent validator to that payload's shape. SHACL Core also cannot see
+inside the payload's canonical `rdf:JSON`. Any change is the assertions
+follow-up's. The ring-context `sh:xone` needed no constraint change: it
+targets `atlas:MappingAssertion`, which the event is not, so the amendment
+there is the comment that says so.
+
+**Open for the owner (2026-09-28).** `atlas:OwnerHumanReviewShape` fixes four
+values on every change-event binding -- origin, attestor kind, basis and
+role -- but only the warrant `sh:xone`'s humanReview branch admits
+`rkaf:humanAsserted`, and that branch pins the other three. So the origin
+clause, beside the warrant rule, implies the other three: no binding breaks
+any one of the four without also failing the xone (the one-axis negatives
+are refused by both), and `change-event-owner-attested-other-warrant`, which
+passes the xone, breaks all four together. Trimming the shape to the
+attestor and the origin, or to a reference to the humanReview branch, would
+move the contract digest and the release pins, so it is the owner's call;
+nothing has been changed.
+
+**The red path's bounded fallback (2026-09-28).** Building the
+owner-review negatives above found the fail-fast red path's focused re-run
+incomplete, and the fix sent such a red build to the whole-graph normative
+report instead -- the run measured at 94 minutes on a 32M-quad red build --
+recorded in `_run_shacl` as a known limit. The cause was pySHACL 0.31's
+`use_shapes`, which loads the shapes it names and the blank nodes under them
+and ignores every reference to a named shape it did not load
+(`_build_node_shape_cache_from_list`): the `sh:node`,
+`sh:qualifiedValueShape`, `sh:property` or `sh:not` constraint is skipped,
+and the member is dropped from an `sh:and`/`sh:or`/`sh:xone` list. The
+binding reaches its eight named value shapes through `sh:node` and
+`sh:qualifiedValueShape`. All eight were skipped, and
+ten of the 62 `shacl.data` corpus cases paid the whole-graph run for it: the
+seven change-event cases on `atlas:OwnerHumanReviewShape` and
+`atlas:PublicRecordEvidenceShape`, the two `atlas:DateTimeValueShape` cases,
+and `non-english-definition`, whose nested literal focus node the sampler
+refused.
+
+Now the focused re-run is one engine run on a copy of the shapes whose
+targets are replaced by `sh:targetNode` of the sampled nodes, so every shape
+is loaded and traversed. The sampler keeps one node per `(resultPath,
+component, sourceShape)` and takes a nested result by its top-level result's
+node. The source shape is in the key because the batched plan inlines value
+shapes: the independent review found `rkaf:effectiveDate` refused with one
+component by `atlas:OrganizationChangeEventShape` (through
+`atlas:DateTimeValueShape`, normatively Node plus the nested Datatype) and by
+`atlas:LifecycleEventShape` (Datatype alone), so a lifecycle event that
+sorted first stood in for the change event and the default path dropped the
+Node audit mode names. The completeness check (`_focused_report_is_complete`)
+could not see that: it compares with the components the batched run names,
+and an inlined shape never names Node there. So the sample is not complete
+by construction; its key is what makes it complete, and the oracle below is
+what holds it. When a sample still falls short, the fallback re-validates
+every node the fast path refused the same way. The sample-size cap and the
+IRI-only focus guard, which served `use_shapes` and routed to the
+whole-graph run, are gone.
+
+The cost. The sample's report is O(|shapes| + k·c) with k at most one node
+per signature the shapes file can produce and c a node's shape closure: on
+the bounded agency build (2,249,294 quads), with the source shape in the
+key, it re-validated 12-14 nodes in about 0.03 s from 658 to 21,303 batched
+violations across 19 source shapes (the round-2 review's measurement). The
+fallback is O(refused nodes): about 1 ms a node there (0.8-1.4 ms; 81 s for
+92,091 refused nodes), so when nearly every node is refused it approaches
+the whole-graph run's cost, though it never evaluates more (shape, node)
+pairs than that run -- 264 s over 292,174 pairs on that build with one
+violation planted inside each
+named shape, against 0.03 s over 11 pairs for the sample and 0.34 s over 741
+for the fallback. On the ten corpus cases: 82-98 ms over 239-262 pairs
+against 11-18 ms over one or two. The fast path that finds a build red is
+unchanged and linear (14-17 µs a quad; 36-60 s on the agency build).
+
+The owner's decision (2026-09-28): when the fallback's engine run clears
+every refused node, the role passes, rather than taking a one-time
+whole-graph check. The risk is recorded with it: the pass is the whole-graph
+verdict only while the batched plan misses no violation. That is more than
+the assumption the green path rests on, because this branch fires only after
+the engine has contradicted every node the plan refused, which is itself
+proof the plan is wrong for that input. A plan that wrongly refused node A
+and also missed a real violation at node B would pass a build audit mode
+fails. What bounds the risk: release verdicts run in audit mode
+(`tools/qualify_atlas_release.py` sets `REFSPEC_ATLAS_VALIDATION_MODE=audit`,
+and `release.yml` runs it), so a release with an inlining defect plus one
+false refusal is refused rather than passed; the pass reaches default-mode
+builds only.
+The whole-graph run stays audit mode's report and the answer to a fast path
+that cannot be read (an engine exception, a result without a focus node, a
+node no shape targets).
+
+The replaced fallback lives on as the test-only oracle in
+`tests/test_atlas_v3_red_path_oracle.py`, over the red corpus and a mutation
+battery that plants a violation inside each named shape, all of them at
+once, the `rkaf:effectiveDate` collision, three refused warrants and a node
+targeted only through `rdfs:subClassOf`. One `_run_shacl` run per input on
+its own wiring: the completeness check answers for the sample and is then
+forced false, so the sample must name the oracle's components, the fallback
+`_run_shacl` takes must report the oracle's violations node for node, and a
+focused run's shapes graph may carry no target but `sh:targetNode`, naming
+only the nodes that run was asked about. No divergence is deliberate. Every
+defect mutant of `validate.py` tried against it fails the red-path tests:
+the first review's thirteen, regenerated on the final code; three more (the
+sample key without the source shape, an empty fallback reported instead of
+passing, the dead inline entry); and the round-2 review's, among them a
+whole-graph run disguised as `sh:targetNode` on every targeted node. They
+include the five earlier versions of the oracle let through: a retarget
+keeping the original targets, a fallback given only the least miss, a
+sample capped at two nodes, target resolution without the subclass walk,
+and that disguised whole-graph run. The round-2 review's survivors are by
+design: two alternative sample keys and a probe that keeps the greatest
+node per signature instead of the least, which a sound key must pass. No
+corpus case's recorded components moved, and neither did the contract pair.
+
+### REF-073: The Atlas contract covers what a release serves, never module source
+
+- **Date:** 2026-09-28
+- **Status:** Accepted and executed; the owner decided it on 2026-09-28.
+  Amends REF-013's index identity. REF-029's rule that `contractDigest` is the
+  rules and nothing else stands, and this entry enforces it.
+
+**What moved the pins.** The Federal Register thesaurus release's manifest
+binds `binding.contractDigest`, which hashes the binding's contract files.
+Two of them, the registry coverage and descriptor proofs, are generated from
+the atlas index and carry its `indexDigest` as `inputs.atlasIndexDigest`, and
+the coverage proof's `indexedPlacementIdentities` hashed every `rowId`. The
+index hashes every file it cites as evidence -- 69 registry and atlas module
+sources, 71 test files, and six research and plan records -- and its
+`indexDigest` and each `rowDigest` covered those file digests. A comment in
+any cited module therefore moved the index, both proofs, the contract digest,
+the manifest and both release pins, and the construction summary with them,
+since it records the descriptor proof's digest (REF-020). The owner counted 25
+such moves in six weeks that no commit recorded; the builder's own pin on the
+descriptor proof (`REGISTRY_DESCRIPTORS_PROOF_EXPECTED_DIGEST`) has a comment
+history made mostly of them.
+
+**The change.** The index still hashes every cited file, but those digests
+are evidence, not placement. `indexDigest`, `indexId` and every
+`rowDigest`/`rowId` now cover the index with the file digests
+(`readinessEvidence[].sha256`, `release.evidenceSha256`) left out, and a new
+`evidenceDigest` covers the map from each cited path to its file digest, for
+whoever needs to know that evidence bytes changed; `PinnedAtlasIndex.pin()`
+returns it. `atlas_index_digests()` computes both, and
+`verify_atlas_index_digests()` checks both and the identity; the descriptor
+generator and the release builder call it instead of each hashing the index
+their own way. Regeneration still refuses a stale index, so an edited module
+still fails `check-generated` until `make generate` runs -- it just no longer
+moves the Atlas contract. The binding does not change: the proofs keep their
+schema, key names and validator, and `inputs.atlasIndexDigest` still names the
+index's `indexDigest`, which now means the placement.
+
+The contract digest then covers what the release serves: the ontology, the
+shapes, the schemas, the profile map, the admitted derived rules, and the
+registry coverage and descriptor data, all generated from placement, catalog
+and profile content. Three things still move the pins, on purpose: an edit to
+any of those files; a change of placement, including the registry module
+inventory (a module added, removed or reclassified), which the coverage proof
+records by name; and the release's own adapter recipe, whose three files
+(`src/refspec/atlas/v3_registry_vocabularies.py`,
+`src/refspec/registry/federal_register_thesaurus_2025.py`,
+`src/refspec/storage.py`) the construction summary pins as the code that built
+the served pack (REF-020).
+
+**The one-time move.** This change moves the pins once, for itself: every
+`rowId`, the index digest (`sha256:a5ab65d8…` →
+`sha256:fd8ba4a4dd197f5ac4ecf27af9748bf08adb793ed7206a2eab90b29e3752170f`),
+both proofs (the descriptors `.nq` graph byte-identical at 1,257 quads), the
+builder's proof pin, `fixturesDigest` (`sha256:3c0b9a62…` →
+`sha256:66d3a95c…`), the contract digest (`sha256:3cd04cf1…` →
+`sha256:3e9488ab3331ea78f6c0c04e7780f06cad6c76a8d287307b8e055e0405880f56`)
+and the release pins, re-recorded in the same commit from `make contract-dev`.
+
+**The proof.** `tests/test_atlas_v3_binding.py` regenerates the index and both
+proofs from a scratch copy of what the index reads, with a comment appended to
+`src/refspec/registry/billstatus_codes.py`: the proofs come out byte-identical
+and `contractDigest` stays, while `evidenceDigest` moves, so the edit was
+seen. A slow-tier test builds the release from a scratch copy of the
+repository as `make contract-dev` does: after that edit the pair is the
+recorded pins, and after an ontology or a shapes comment both digests move.
+The existing contract-edit test now covers the profile map. Restoring the
+file digests to `indexDigest` fails all three new tests (measured). By hand,
+`make contract-dev` printed the same pair before and after the module comment
+and `make generate`, which moved only that module and the index.
+
+**Later moves.** One line each, with the change that moved the pair.
+
+- The per-language preferred-label shape (`atlas.shacl.ttl`, a contract
+  file) and its new conformance cases (`fixtures/corpus.json`, whose digest
+  the acceptance receipt records and the manifest pins as a member):
+  `5344028b…` / `c792a2f9…` (manifest / view). Measured on dev22 one file at
+  a time: the shape alone gives `a0e51c56…` / `b2dd370a…`, the corpus alone
+  `76c7cbd5…` / `c7dba413…`.
+- The negative `change-event-same-entity-closure` (a new case in
+  `fixtures/corpus.json`) for the same-entity check's reading of identity's
+  closure; the case alone moves the pair, the validator edit moves nothing:
+  `525e6a04…` / `65103a92…`.
+- REF-072's six missing change-event negatives -- no date, a non-midnight
+  date, and one per fixed value of the owner's review (origin, attestor
+  kind, basis, role) -- as new cases in `fixtures/corpus.json`:
+  `8ef2e5df…` / `aa3e5785…`.
+- The owner attesting an event under publisherAssertion, the negative only
+  the owner review's four fixed values refuse (a new case in
+  `fixtures/corpus.json`): `1c14dc75…` / `e6c5d30b…`.
+
+### REF-074: Dated assertion validation follows the producer's effective-period identity
+
+**Owner decision:** the 2026-10-31 adjudication recorded in `ss-no7p` requires
+no sealed identity moves. Recorded here on 2026-11-04 before local landing.
+
+A dated assertion's identity includes the exact literal text of
+`rkaf:effectivePeriodStart` and, when present, `rkaf:effectivePeriodEnd` from
+its `rkaf:EffectivePeriod`. An absent end contributes no key. The producer
+already emits that basis; the independent binding validator and its README
+must agree with it. Undated assertions retain their existing identity basis.
+This correction changes neither existing sealed assertion IRIs nor the binding
+version, and it does not reissue a distribution.
+
+`tests/test_atlas_period_identity.py` retains the period-omitting basis as a
+copied test-only oracle. Its frozen divergence is the effective-period keys;
+the tests compare the producer's retained UA-GAO-CRA mappings with the
+independent validator and exercise changed bounds, absent ends, legacy hashes,
+undated controls and packed-distribution refusals. The complete maintained
+`make test` gate must pass on the final local candidate before landing.
+Served as-of query behavior remains the separate `ss-2zlv` obligation.
+
+### REF-075: The agency registry view 1.3 is the one agency pin, and free-text aliases are owner-decided release items
+
+- **Date:** 2026-11-08
+- **Status:** Accepted and built; amends REF-072. The owner decided the
+  shape through the question tool on 2026-11-08
+  (`plans/agency-registry-alias-plan.md` section 5): D1, D2, D3 and D6 as
+  recommended, D4 "decide each alias", and D5 "read citations, then adopt".
+
+**The contract moved because the consumers changed.** SpicyRegs pinned two
+artifacts (REF-038's projection from the Atlas parquet-view build, and the 1.2
+registry view), and congressional-tech needs the whole Federal Register list
+plus the strings witnesses write. View 1.3 is one pin for both:
+
+- **Aliases** are asserted: an `agencyRegistryAliases` table, in the
+  logical-content digest, one row per alias the owner adopted. Each names its
+  match key (`agency_projection.name_key`, version
+  `nameKeyVersion` in the manifest), the organization it names where a held
+  roster has it, and the FR record an FR-keyed consumer resolves it to,
+  `same` or `partOf` (D3: part-of claims no identity).
+- **Organizations** (all 472 pinned FR agencies with names, short name,
+  parent, REF-038 codes and current successors) and **REF-038's projection
+  and abstentions** are derived and assert nothing: the verifier rebuilds them
+  from the pinned rosters and refuses any other row. The REF-038 tables keep
+  the Atlas view's schemas; their rows equal SpicyRegs' vendored copy row for
+  row (321 and 10, schemas equal; bytes differ only by writer, as the
+  2026-09-26 pyarrow note in SpicyRegs' README records), and the manifest
+  names their digest, `0dd32dd5…`, the one the Atlas view states.
+
+**Aliases ride in the release as decided items (D2),** beside the
+non-emissions, not as RDF statements: an owner label on a roster resource
+would break source-faithful labels, and a resource per string would mint what
+the spine never mints. The alias batch is the release's third batch, read by
+digest like the others, with two deliberate differences. An undecided alias
+is held rather than refusing the release, because one alias's meaning never
+depends on another's (bridges can: reverse lookups). And an alias's answer
+means what its own `answer_effects` say, inside its content digest, so a
+numbered option cannot be misread by a table in code. An alias answered no is
+a non-emission, reason `aliasRejectedByOwner`.
+
+**An unread citation refuses the release (D5).** Each judgment alias's public
+records are retained under `research/evidence/agency-alias-records-2026-11-08/`
+(govinfo and the Federal Register, fixed anonymous User-Agent), and each cites
+the passage read. `alias_record_is_read()` holds a record read only while its
+bytes hash as the manifest states and contain the passage; the batch tool
+refuses a row whose passage is absent, and the release re-reads every adopted
+alias's records. Negative cases: a changed passage, a changed digest, a
+missing file, and a release whose records read as unread.
+
+**As decided on 2026-11-08:** the owner approved each of the 12 mechanical
+aliases individually (D4: no rule-wide derivation for the other agencies);
+50 of 58 judgment aliases took their recommendation as the statutes confirm
+it; the other 8, which no statute read confirmed (16 U.S.C. 1609 even makes
+the National Forest System lands, not an organization), the owner sent back
+for agency records ("find agency pages, then adopt"), and a read record
+confirmed each: DoD's FOIA rule (82 FR 1192) for the Africa and Transportation
+commands, USPACOM's answer for the House Armed Services record for U.S. Forces
+Korea, Air Force and Navy Federal Register notices for Headquarters (United
+States) Air Force and "USMC", a State notice for the Bureau of Near Eastern
+Affairs, the Forest Service's organization page for the National Forest System
+program unit, and Pub. L. 116-92 sec. 952(a) for Air Force Space Command, which
+it redesignated the Space Force (the alias names the Space Force, part of the
+Department of the Air Force). defense.gov and the other .mil and state.gov
+hosts answered 403 to the probe, a bot challenge left unbypassed. All 70 are
+decided: 63 adopted (4 through the part-of option), 7 rejected; the view pin is
+`sha256:7a806ea0…`. The 1.2 view stays verifiable against the
+release without the alias batch (`tests/fixtures/agency_registry_view_1_2`).
+`.github/workflows/release.yml` pins the 1.3 view and a review receipt and
+evidence manifest that also cover the alias batch. The independent agency check
+(`tools/atlas_independent_agency.py`) derives all eight tables without producer
+code -- aliases and non-emissions from each alias's `answer_effects`, the
+organizations from the FR capture, REF-038's projection from the roster captures
+and its adjudication file -- re-hashes every cited record and finds its passage,
+and refuses a planted wrong value in each table.
+
+### REF-076: Prose short-title scanning belongs to the act index, lexical bill-drafting context stays out of the section oracle, and the EO roster states no constant ceiling
+
+- **Date:** 2026-11-16
+- **Status:** Accepted. Governs the three prose-facing registry helpers backported
+  from the DocMeta V6 validation pass (`act_resolution.find_statutory_short_titles` /
+  `usc_act_index.scan_text`, `citation_grammar.is_proposed_usc_section`, and
+  `eo_roster.EoRosterOracle.validate_candidate`). No sealed artifact digest or
+  binding version moves.
+
+1. **Maximal-NP statutory short-title scanning (`act_resolution`, `usc_act_index`).**
+   `find_statutory_short_titles` (exposed on `ActIndex` and via
+   `python -m refspec.registry.usc_act_index --scan-text`) tokenizes each
+   pre-`Act` window in a single forward `O(W)` pass (`W <= 450`) and arbitrates
+   overlapping candidates longest-span first in `O(M log M)` via `bisect`. Two
+   invariants prevent false positives on unstructured legislative and hearing
+   prose: `GENERIC_ACT_STEM_STOPLIST` refuses anaphoric determiners (`This Act`,
+   `Such Act`, `That Act`, `The Act`) before consulting the index, and an
+   uninterrupted noun phrase (including middle initials `L.`, acronyms `SEC`,
+   honorifics `Sen.`/`Rev.`, parentheticals `(Kids)`, inner nicknames `"Kelsey"`,
+   and compound multi-`Act` titles such as `Violence Against Women Act
+   Reauthorization Act of 2022`) is queried whole and never sub-sliced into
+   inner suffixes when unindexed. `StatutoryShortTitleMatch.surface` preserves
+   exact `text[start:end]` slice identity.
+2. **Lexical proposed-section classification stays in `citation_grammar` (REF-062).**
+   `UscSectionOracle` remains strictly a three-valued enacted-Code existence
+   oracle (`VERDICTS = ("exists", "absent", "unknown")`). Distinguishing a
+   not-yet-enacted section proposed by positive-law amendatory bill prose
+   (`Chapter 83 of title 41, United States Code, is amended by adding at the end
+   the following new section: '§ 8302A. ...'`) is a lexical property of the
+   citing text, so `is_proposed_usc_section(title, section, surrounding_text)`
+   lives in `refspec.registry.citation_grammar` (`STRING_GRAMMAR_MODULES`),
+   requires explicit `United States Code` / `U.S.C.` title context, preserves
+   line-initial U.S.C. titles `1..26` during GPO margin stripping, and anchors
+   extraction to the added heading opening rather than body cross-references.
+3. **EO candidate validation derives its upper bound from the loaded roster (REF-057).**
+   `eo_roster` carries neither a duplicate prose citation scanner nor a
+   module-level `FR_API_DENSE_MAX + K` constant ceiling. `EoRosterOracle.validate_candidate`
+   and `is_valid_eo_candidate` enforce uniform XML/file-path, `_` slug, `E0`
+   zero-homoglyph, leading-zero, and 6+ digit concatenation guards across string,
+   integer, `span`, and `span=None` inputs, while deriving any roster ceiling
+   strictly from `oracle.max_eo` and keeping dense-window `absent` vs sparse/post-capture
+   `unknown` verdicts unchanged.

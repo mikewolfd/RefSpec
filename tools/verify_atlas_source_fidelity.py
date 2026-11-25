@@ -31,10 +31,11 @@ rediscovered:
   exception is a ``source-extract`` comparison, where the publisher ships no IRIs
   at all: there the join is the source-local identity the Atlas record itself
   declares in ``atlas:nativePayload``, and the comparison says so in the receipt.
-* ``atlas:sourceDigest`` is source-specific: some adapters retain a publisher
-  file or archive-member digest, while others digest a constructed native
-  relation. The verifier checks the applicable digest rule, but never treats a
-  matching digest as a substitute for field-level comparison.
+* A SourceRecord's ``atlas:sourceDigest`` hashes its complete canonical
+  ``nativePayload`` without a terminal LF. Publisher input digests and locators
+  are independently reconstructed evidence inside that payload and its pins.
+  A matching self-hash proves format consistency, not publisher fidelity.
+
 
 Findings are separated by who owns them. A ``source`` finding is a defect in the
 publisher's own data; preserving it faithfully is correct behaviour and it never
@@ -43,17 +44,16 @@ and what we assert about them, and it fails the run. Narrow executable policies
 may define an Atlas representation only after checking their exact prerequisites
 and exact permitted claim set; a policy name is never a waiver.
 
-Usage. ``--distribution`` is required: there is no default distribution, because
-a default silently audits whatever build happens to be on disk (the retired
-``output/atlas-3.0-full-2026-08-07-ring-audit`` tree was exactly that). Name the
-artifact, or go through the Makefile target, which names it for you::
+Usage. The Make target requires a builder generation selector and pins it once::
 
     make audit-atlas-v3-source-fidelity \\
-        ATLAS_V3_AUDIT_ROOT=output/atlas-3.1-federal-register-thesaurus-2025-04-01
+        ATLAS_V3_AUDIT_ROOT=output/example/distribution
 
+Direct use requires the concrete distribution from that selection::
+
+    selected=$(uv run --frozen python -m refspec.atlas.generation output/example/distribution)
     uv run python tools/verify_atlas_source_fidelity.py \\
-        --distribution output/atlas-3.1-federal-register-thesaurus-2025-04-01/distribution \\
-        --output findings.json
+        --distribution "$selected/distribution" --output findings.json
 
 ``--only NAME`` (repeatable) restricts the run to named comparisons, so a bounded
 artifact costs a bounded run. It narrows what is proven, never what is claimed:
@@ -90,6 +90,7 @@ from collections import Counter, defaultdict
 from collections.abc import Callable, Collection, Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime, timedelta
+from functools import cached_property
 from html.parser import HTMLParser
 from itertools import chain
 from pathlib import Path
@@ -105,15 +106,12 @@ except ImportError:  # pragma: no cover - exercised by the older interpreter
     from backports import zstd
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
-# No default distribution, deliberately. The old one
-# (output/atlas-3.0-full-2026-08-07-ring-audit) outlived the wire it was built
-# from and stayed on disk, so a bare invocation kept auditing a retired artifact
-# and reporting a fidelity verdict about a distribution nobody ships. Same
-# reasoning as ATLAS_V3_AUDIT_ROOT in the Makefile: the caller names the
-# artifact under audit, every time.
+# No default distribution, deliberately: a default silently audits whatever
+# build is on disk (the retired 2026-08-07 ring-audit tree did exactly that).
+# Each caller names the concrete selected distribution.
 DEFAULT_SOURCE_ROOT = REPOSITORY_ROOT / "output" / "registry-real-data-sources"
 
-VERIFIER_VERSION = "atlas-source-fidelity/15"
+VERIFIER_VERSION = "atlas-source-fidelity/16"
 ASSERTED_GRAPH = "urn:ref:atlas:graph:v3:asserted"
 CONSTRUCTION_SUMMARY = "atlas-construction-summary.json"
 LANGUAGE_SCOPE_EXCLUSIONS = REPOSITORY_ROOT / "language-scope-exclusions.json"
@@ -610,7 +608,7 @@ class ExpectedMappingEvidence:
     """One independently reconstructed mapping evidence record."""
 
     source_locator: str
-    source_digest: str
+    input_digest: str
     native_payload: Mapping[str, Any]
 
 
@@ -653,7 +651,7 @@ class PublisherView:
     has_top_concept: frozenset[tuple[str, str]]
     resource_predicate_counts: Mapping[tuple[str, str], int]
     defects: tuple[Finding, ...]
-    resource_input_digests: Mapping[str, frozenset[str]]
+    resource_input_digests: Mapping[str, Collection[str]]
     input_content_digests: Mapping[str, str]
     unevaluated_claims: tuple[str, ...] = ()
     # Blank-node claims a declared exclusion accounts for, by exclusion name.
@@ -677,12 +675,18 @@ class PublisherView:
     expected_mapping_evidence: Mapping[tuple[str, str, str], tuple[ExpectedMappingEvidence, ...]] = field(
         default_factory=dict
     )
-    # High-cardinality stock readers can retain the one exact digest directly
-    # instead of allocating one frozenset per publisher resource.  The boolean
-    # additionally says that this digest authenticates the entire independently
-    # reconstructed native payload, not merely an input file.
-    resource_input_digest_values: Mapping[str, str] = field(default_factory=dict)
-    source_digest_is_native_payload_digest: bool = False
+    # Independently reconstructed canonical payload hashes, never upstream file hashes.
+    expected_native_payload_digests: Mapping[str, str] = field(default_factory=dict)
+    reading_exceptions: tuple[Mapping[str, Any], ...] = ()
+
+    @cached_property
+    def subject_types(self) -> dict[str, frozenset[str]]:
+        """Index publisher types once, retaining them only for this view's lifetime."""
+        types: dict[str, set[str]] = defaultdict(set)
+        for subject, predicate, obj in self.iri_claims:
+            if predicate == RDF_TYPE:
+                types[subject].add(obj)
+        return {subject: frozenset(values) for subject, values in types.items()}
 
 
 @dataclass(frozen=True)
@@ -733,6 +737,7 @@ class AtlasView:
     structural_failures: tuple[str, ...]
     checked_packs: tuple[str, ...]
     checked_pack_transports: Mapping[str, tuple[str, int]]
+    record_statuses: frozenset[tuple[str, LiteralValue]] = frozenset()
 
 
 @dataclass(frozen=True)
@@ -853,20 +858,7 @@ class RdfSourcePolicy:
     relation_scope: str = "member-subject"
     source_wide_literal_predicates: tuple[str, ...] = ()
     record_digest_input_paths: tuple[str, ...] = ()
-    #: When true, this spec's own ``atlas:sourceDigest`` is defined as sha256
-    #: over the record's own canonical ``nativePayload`` -- a FORMAT
-    #: self-consistency check, not an independent fidelity proof, because RDF
-    #: sources carry no natural per-resource byte range to hash independently
-    #: of what Atlas already stored. The binding's own validator
-    #: (``bindings/atlas/3.1/tools/validate.py:_check_native_payloads``)
-    #: already enforces this invariant at build time for every SourceRecord;
-    #: this check only reconfirms it did not regress. Independent fidelity for
-    #: these records comes from the field-level inverses below
-    #: (schemeIris/topConceptOfIris/etc.) and the release-level input-file
-    #: digest pin, never from this flag.
-    record_digest_is_native_payload_digest: bool = False
     record_locator: str | None = None
-    record_input_path_by_resource: tuple[tuple[str, str], ...] = ()
     record_locator_by_resource: tuple[tuple[str, str], ...] = ()
 
 
@@ -1513,6 +1505,9 @@ class Context:
         repr=False,
     )
 
+    agency_result: Mapping[str, Any] = field(default_factory=dict)
+    provenance_cache: dict[int, tuple[str, ...]] = field(default_factory=dict, compare=False, repr=False)
+
     def vocabularies(self) -> tuple[SourcePair, ...]:
         return tuple(pair for pair in self.pairs if pair.spec.kind == "vocabulary")
 
@@ -1525,6 +1520,11 @@ class Context:
                 *(pair.spec for pair in self.pairs),
                 *(pair.spec for pair in self.native_control_pairs),
                 *(pair.spec for pair in self.source_extract_pairs),
+                *(
+                    spec
+                    for spec in self.specs
+                    if spec.kind == "agency" and self.agency_result.get("status") in {"passed", "failed"}
+                ),
             ]
         )
 
@@ -2267,10 +2267,11 @@ def _select_publisher_view(view: PublisherView, subset: str) -> PublisherView:
         },
         expected_relation_payloads=view.expected_relation_payloads,
         expected_mapping_evidence=view.expected_mapping_evidence,
-        resource_input_digest_values={
-            resource: digest for resource, digest in view.resource_input_digest_values.items() if resource in resources
+        expected_native_payload_digests={
+            resource: digest
+            for resource, digest in view.expected_native_payload_digests.items()
+            if resource in resources
         },
-        source_digest_is_native_payload_digest=(view.source_digest_is_native_payload_digest),
     )
 
 
@@ -2352,10 +2353,11 @@ def _select_publisher_concepts(
         },
         expected_relation_payloads=view.expected_relation_payloads,
         expected_mapping_evidence=view.expected_mapping_evidence,
-        resource_input_digest_values={
-            resource: digest for resource, digest in view.resource_input_digest_values.items() if resource in resources
+        expected_native_payload_digests={
+            resource: digest
+            for resource, digest in view.expected_native_payload_digests.items()
+            if resource in resources
         },
-        source_digest_is_native_payload_digest=(view.source_digest_is_native_payload_digest),
     )
 
 
@@ -2406,8 +2408,9 @@ GAO_CRA_PRIORITY_PDF_READER = "gao-cra-priority-pdf-v1/1.0"
 NRC_APS_PROFILE_PROPERTIES_PDF_READER = "nrc-aps-profile-properties-pdf-v1/1.0"
 NRC_APS_ACCESSION_NUMBER_PDF_READER = "nrc-aps-accession-number-pdf-v1/1.0"
 FAST_BOOK_FUND_GROUPS_OOXML_READER = "fast-book-fund-groups-ooxml-v1/1.0"
-SPEC_SCOPED_RECORD_READERS = frozenset(
+PUBLISHER_CONCEPT_RECORD_READERS = frozenset(
     {
+        "independent-positioned-pdf",
         CFR_SUBJECT_INDEX_HTML_READER,
         CSV_RECORD_SELECTOR_READER,
         ECFR_AGENCIES_JSON_READER,
@@ -2641,6 +2644,7 @@ def _api_capture_view(
         unevaluated_claims=tuple(unevaluated_claims),
         resource_locators=locators,
         expected_native_payloads=native_payloads,
+        expected_native_payload_digests={key: _canonical_json_digest(value) for key, value in native_payloads.items()},
     )
 
 
@@ -5786,9 +5790,7 @@ def _read_regulations_gov_agency_identity_mapping(
             endpoint_rows.append(
                 ExpectedMappingEvidence(
                     source_locator=(
-                        pin.source_iri
-                        + "#agency-identity-resource="
-                        + urllib.parse.quote(resource, safe="")
+                        pin.source_iri + "#agency-identity-resource=" + urllib.parse.quote(resource, safe="")
                     ),
                     source_digest=source_digest,
                     native_payload={
@@ -8121,6 +8123,7 @@ def read_atlas_source(
     source_claim_subjects: frozenset[str] = frozenset(),
     *,
     compact_normalized_claims: bool = False,
+    retain_publisher_record_status: bool = False,
     compact_native_payload_fields: frozenset[str] | None = None,
     compact_native_payload_atlas_only_fields: frozenset[str] = frozenset(),
 ) -> AtlasView:
@@ -8151,6 +8154,7 @@ def read_atlas_source(
     native_payloads: dict[str, Mapping[str, Any]] = {}
     pending_native_payload_digests: dict[str, str] = {}
     compact_native_payload_records: set[str] = set()
+    record_statuses: set[tuple[str, LiteralValue]] = set()
     native_payload_digest_differences: dict[
         str,
         tuple[str, str | None],
@@ -8237,6 +8241,8 @@ def read_atlas_source(
                 pack,
             )
             for quad in quads:
+                if retain_publisher_record_status and quad.predicate == ATLAS_RECORD_STATUS and quad.is_literal:
+                    record_statuses.add((quad.subject, _literal_value(quad.obj, quad.language, quad.datatype)))
                 literal_claim = (
                     quad.subject,
                     quad.predicate,
@@ -8336,13 +8342,8 @@ def read_atlas_source(
                         quad.subject,
                         None,
                     )
-                    if pending_payload_digest is not None:
-                        compact_native_payload_records.add(quad.subject)
-                        if pending_payload_digest != quad.obj:
-                            native_payload_digest_differences[quad.subject] = (
-                                pending_payload_digest,
-                                quad.obj,
-                            )
+                    if pending_payload_digest is not None and pending_payload_digest != quad.obj:
+                        native_payload_digest_differences[quad.subject] = (pending_payload_digest, quad.obj)
                 elif predicate == ATLAS_REPRESENTS_RESOURCE:
                     if quad.subject in record_targets and record_targets[quad.subject] != quad.obj:
                         structural_failures.append(
@@ -8365,23 +8366,24 @@ def read_atlas_source(
                             f"{pack}: source record <{quad.subject}> has non-object atlas:nativePayload JSON"
                         )
                         continue
+                    canonical_payload = _canonical_json_bytes(payload)
+                    if quad.obj.encode("utf-8") != canonical_payload:
+                        structural_failures.append(
+                            f"{pack}: source record <{quad.subject}> nativePayload is not canonical JSON"
+                        )
+                    payload_digest = "sha256:" + hashlib.sha256(canonical_payload).hexdigest()
+                    prior_digest = pending_native_payload_digests.get(quad.subject)
+                    if prior_digest is not None and prior_digest != payload_digest:
+                        structural_failures.append(
+                            f"{pack}: source record <{quad.subject}> has contradictory atlas:nativePayload values"
+                        )
+                    source_digest = record_source_digests.get(quad.subject)
+                    if source_digest is None:
+                        pending_native_payload_digests[quad.subject] = payload_digest
+                    elif source_digest != payload_digest:
+                        native_payload_digest_differences[quad.subject] = (payload_digest, source_digest)
                     if compact_native_payload_fields is not None:
-                        payload_digest = _canonical_json_digest(payload)
-                        prior_digest = pending_native_payload_digests.get(quad.subject)
-                        if prior_digest is not None and prior_digest != payload_digest:
-                            structural_failures.append(
-                                f"{pack}: source record <{quad.subject}> has contradictory atlas:nativePayload values"
-                            )
-                        source_digest = record_source_digests.get(quad.subject)
-                        if source_digest is None:
-                            pending_native_payload_digests[quad.subject] = payload_digest
-                        else:
-                            compact_native_payload_records.add(quad.subject)
-                            if source_digest != payload_digest:
-                                native_payload_digest_differences[quad.subject] = (
-                                    payload_digest,
-                                    source_digest,
-                                )
+                        compact_native_payload_records.add(quad.subject)
                         unexpected_fields = tuple(
                             sorted(
                                 set(payload) - compact_native_payload_fields - compact_native_payload_atlas_only_fields
@@ -8606,11 +8608,7 @@ def read_atlas_source(
         hidden[subject].update(forms)
 
     for record, payload_digest in pending_native_payload_digests.items():
-        compact_native_payload_records.add(record)
-        native_payload_digest_differences[record] = (
-            payload_digest,
-            record_source_digests.get(record),
-        )
+        native_payload_digest_differences[record] = (payload_digest, record_source_digests.get(record))
 
     linked_label_nodes = {
         *(node for _, node in pref_edges),
@@ -8769,6 +8767,7 @@ def read_atlas_source(
     )
 
     return AtlasView(
+        record_statuses=frozenset(record_statuses),
         resources=frozen_resources,
         releases=frozen_releases,
         rdf_types=frozen_rdf_types,
@@ -8956,9 +8955,7 @@ def _rdf_source_policy(
     relation_scope: str = "member-subject",
     source_wide_literal_predicates: tuple[str, ...] = (),
     record_digest_input_paths: tuple[str, ...] = (),
-    record_digest_is_native_payload_digest: bool = False,
     record_locator: str | None = None,
-    record_input_path_by_resource: tuple[tuple[str, str], ...] = (),
     record_locator_by_resource: tuple[tuple[str, str], ...] = (),
 ) -> RdfSourcePolicy:
     """Declare only the publisher-evidence fields one RDF adapter reverses."""
@@ -8981,9 +8978,7 @@ def _rdf_source_policy(
         relation_scope=relation_scope,
         source_wide_literal_predicates=source_wide_literal_predicates,
         record_digest_input_paths=record_digest_input_paths,
-        record_digest_is_native_payload_digest=(record_digest_is_native_payload_digest),
         record_locator=record_locator,
-        record_input_path_by_resource=record_input_path_by_resource,
         record_locator_by_resource=record_locator_by_resource,
     )
 
@@ -9020,7 +9015,6 @@ def _stock_vocabulary_view(
     retain_expected_native_payloads: bool = True,
     compact_resource_digests: bool = False,
     expected_relation_payloads: Mapping[str, Mapping[str, Any]] | None = None,
-    source_digest_is_native_payload_digest: bool = True,
     additional_literal_claims: Collection[tuple[str, str, LiteralValue]] = (),
 ) -> PublisherView:
     """Build the comparison view shared by stock XML, RDF, MARC, and JSON readers."""
@@ -9035,8 +9029,8 @@ def _stock_vocabulary_view(
     if retain_claim_sets:
         iri_claims.update((resource, SKOS_IN_SCHEME, scheme) for resource, scheme in memberships)
     predicate_counts: dict[tuple[str, str], int] = defaultdict(int)
-    resource_input_digests: dict[str, frozenset[str]] = {}
-    resource_input_digest_values: dict[str, str] = {}
+    resource_input_digests: dict[str, Collection[str]] = {}
+    expected_native_payload_digests: dict[str, str] = {}
     resource_locators: dict[str, str] = {}
     expected_native_payloads: dict[str, Mapping[str, Any]] = {}
     for record in records:
@@ -9077,10 +9071,10 @@ def _stock_vocabulary_view(
                 predicate_counts[(record.resource, RDF_TYPE)] = 1
             for _, predicate, _ in record_annotations:
                 predicate_counts[(record.resource, predicate)] += 1
-        if compact_resource_digests:
-            resource_input_digest_values[record.resource] = record.source_digest
-        else:
-            resource_input_digests[record.resource] = frozenset({record.source_digest})
+        expected_native_payload_digests[record.resource] = _canonical_json_digest(record.native_payload)
+        resource_input_digests[record.resource] = (
+            (record.source_digest,) if compact_resource_digests else frozenset({record.source_digest})
+        )
         resource_locators[record.resource] = record.source_locator
         if retain_expected_native_payloads:
             expected_native_payloads[record.resource] = record.native_payload
@@ -9127,8 +9121,7 @@ def _stock_vocabulary_view(
         resource_locators=resource_locators,
         expected_native_payloads=expected_native_payloads,
         expected_relation_payloads=dict(expected_relation_payloads or {}),
-        resource_input_digest_values=resource_input_digest_values,
-        source_digest_is_native_payload_digest=(source_digest_is_native_payload_digest),
+        expected_native_payload_digests=expected_native_payload_digests,
     )
 
 
@@ -9214,10 +9207,8 @@ def _stock_source_view(
                 native_payload=record.native_payload,
             )
 
-    # These three sources use file or source-row digests, not native-payload
-    # digests. Main's compact payload path therefore cannot prove field values.
-    # Keep that one necessary expected-value map, while dropping duplicate claim
-    # and predicate-count indexes and using the compact one-string digest map.
+    # Preserve upstream identity separately from complete expected payload hashes.
+    # Retain expected fields for source comparison and avoid duplicate claim indexes.
     return _stock_vocabulary_view(
         stock_records(),
         relations,
@@ -9228,7 +9219,6 @@ def _stock_source_view(
         retain_claim_sets=False,
         retain_expected_native_payloads=True,
         compact_resource_digests=True,
-        source_digest_is_native_payload_digest=False,
     )
 
 
@@ -9535,6 +9525,7 @@ def _read_federal_register_topics_json(
                 source_digest=row_digest,
                 native_payload={
                     "collection": collection,
+                    "identityStatus": "sourceLocalCaptureRow",
                     "record": dict(row),
                     "sourceOrdinal": ordinal,
                     "sourceRecordDigest": row_digest,
@@ -9633,6 +9624,7 @@ def _read_gcmd_science_keywords_csv(
                     "variableLevel3": level_3 or None,
                     "detailedVariable": detailed or None,
                     "sourceIdentity": source_identity,
+                    "hierarchyIsDescriptiveNotInferred": True,
                 },
             )
         )
@@ -10148,7 +10140,6 @@ def _mapping_view(
         pins,
         retain_predicate_counts=False,
         retain_expected_native_payloads=False,
-        source_digest_is_native_payload_digest=False,
     )
     return replace(
         view,
@@ -10361,7 +10352,7 @@ def _read_fast_lcsh_mapping(
             evidence[relation] = (
                 ExpectedMappingEvidence(
                     source_locator=f"{source_pin.source_iri}#fast-{numeric_id}",
-                    source_digest=source_pin.sha256,
+                    input_digest=source_pin.sha256,
                     native_payload=_fast_mapping_evidence_payload(
                         subject=subject,
                         predicate=predicate,
@@ -10570,7 +10561,7 @@ def _read_lc_external_links_mapping(
                     evidence[relation] = (
                         ExpectedMappingEvidence(
                             source_locator=(f"{source_pin.source_iri}#external_links.nt-line-{line_number}"),
-                            source_digest=statement_digest,
+                            input_digest=statement_digest,
                             native_payload={
                                 "mappingTripleDigest": _canonical_json_digest(
                                     {
@@ -10660,7 +10651,7 @@ def _read_fast_bulk_delta_mapping(
                     evidence[relation] = (
                         ExpectedMappingEvidence(
                             source_locator=(f"{source_pin.source_iri}#FASTTopical.nt-line-{line_number}"),
-                            source_digest=source_pin.sha256,
+                            input_digest=source_pin.sha256,
                             native_payload={
                                 "mappingTripleDigest": _canonical_json_digest(
                                     {
@@ -10726,25 +10717,8 @@ def _lc_target_vocabulary(iri: str) -> str:
     return matches[0]
 
 
-def _read_lc_external_target_endpoints(
-    spec: SourceSpec,
-    payloads: Mapping[SourcePin, bytes],
-) -> PublisherView:
-    """Rebuild LC-published target endpoint records without the registry reader."""
-
-    source_pin = next(pin for pin in spec.inputs if pin.role == "publisherEndpointSource")
-    payload = payloads[source_pin]
-    vocabularies = {key.removeprefix("lc-external-").removesuffix("-endpoints-2026-08-15") for key in spec.release_keys}
-    active_fast = (
-        _fast_active_iris_from_pins(
-            spec,
-            payloads,
-            base_role="publisherBase",
-            change_role_prefix="publisherChange",
-        )
-        if "fast" in vocabularies
-        else frozenset()
-    )
+def _parse_lc_endpoint_capture(source_pin: SourcePin, payload: bytes) -> tuple[dict, dict]:
+    """Two passes over one authenticated ZIP; selection never changes parsing."""
     targets: dict[str, str] = {}
     label_rows: dict[str, list[tuple[int, str, str, str, str, str]]] = defaultdict(list)
     try:
@@ -10765,7 +10739,7 @@ def _read_lc_external_target_endpoints(
                         continue
                     target = object_match.group(1)
                     vocabulary = _lc_target_vocabulary(target)
-                    if vocabulary in vocabularies and target not in active_fast:
+                    if vocabulary in _LC_TARGET_PREFIXES:
                         targets[target] = vocabulary
             with archive.open(members[0]) as source:
                 for line_number, raw in enumerate(source, start=1):
@@ -10800,6 +10774,41 @@ def _read_lc_external_target_endpoints(
                     )
     except (OSError, zipfile.BadZipFile) as error:
         raise ValueError(f"{source_pin.path} is not a valid LC ZIP") from error
+    by_vocabulary: dict[str, set[str]] = defaultdict(set)
+    for target, vocabulary in targets.items():
+        by_vocabulary[vocabulary].add(target)
+    return label_rows, dict(by_vocabulary)
+
+
+def _read_lc_external_target_endpoints(
+    spec: SourceSpec,
+    payloads: Mapping[SourcePin, bytes],
+    *,
+    parsed_capture: tuple[dict, dict] | None = None,
+) -> PublisherView:
+    """Rebuild LC-published target endpoint records without the registry reader."""
+
+    source_pin = next(pin for pin in spec.inputs if pin.role == "publisherEndpointSource")
+    payload = payloads[source_pin]
+    vocabularies = {key.removeprefix("lc-external-").removesuffix("-endpoints-2026-08-15") for key in spec.release_keys}
+    active_fast = (
+        _fast_active_iris_from_pins(
+            spec,
+            payloads,
+            base_role="publisherBase",
+            change_role_prefix="publisherChange",
+        )
+        if "fast" in vocabularies
+        else frozenset()
+    )
+    all_labels, by_vocabulary = parsed_capture or _parse_lc_endpoint_capture(source_pin, payload)
+    targets = {
+        target: vocabulary
+        for vocabulary in vocabularies
+        for target in by_vocabulary.get(vocabulary, ())
+        if target not in active_fast
+    }
+    label_rows = {target: all_labels[target] for target in targets if target in all_labels}
     missing = set(targets) - set(label_rows)
     if missing:
         raise ValueError(f"{spec.name} target endpoints lack labels: {sorted(missing)[:5]}")
@@ -10856,7 +10865,6 @@ def _read_lc_external_target_endpoints(
         (),
         (),
         spec.inputs,
-        source_digest_is_native_payload_digest=False,
     )
 
 
@@ -11016,7 +11024,6 @@ def _read_fast_bulk_see_also_endpoints(
         (),
         (),
         spec.inputs,
-        source_digest_is_native_payload_digest=False,
     )
 
 
@@ -11080,6 +11087,43 @@ def _umthes_manifest(
     if set(members) != expected_members:
         raise ValueError(f"{pin.path} UMTHES archive members differ")
     return manifest, members
+
+
+#: SKOS S27 forbids skos:related between concepts on one hierarchy path. The
+#: producer moves such an authored association to atlas:thesaurusRelated and
+#: records exactly this transformation in the relation's SourceRecord payload.
+_S27_TRANSFORMATION: Mapping[str, str] = {
+    "fromPredicate": f"{SKOS}related",
+    "reason": "SKOS-S27-hierarchy-path",
+    "rule": "preserveAuthoredAssociationOutsideSkosProjection",
+    "toPredicate": f"{ATLAS}thesaurusRelated",
+}
+#: The publisherRelation a stock RDF reader's S27 record carries: the
+#: publisher's triple and the predicate the producer normalized it to.
+_S27_PUBLISHER_RELATION_FIELDS = frozenset({"subjectIri", "predicateIri", "objectIri", "normalizedPredicateIri"})
+
+
+def _requested_reachability(
+    graph: Mapping[str, Collection[str]],
+    pairs: Iterable[tuple[str, str]],
+) -> frozenset[tuple[str, str]]:
+    """Answer exact directed paths with one temporary visited set per start."""
+    requested: dict[str, set[str]] = defaultdict(set)
+    for start, target in pairs:
+        requested[start].add(target)
+    answers: set[tuple[str, str]] = set()
+    for start, targets in requested.items():
+        visited: set[str] = set()
+        pending = list(graph.get(start, ()))
+        while pending:
+            node = pending.pop()
+            if node in visited:
+                continue
+            visited.add(node)
+            if node in targets:
+                answers.add((start, node))
+            pending.extend(graph.get(node, ()))
+    return frozenset(answers)
 
 
 def _read_umthes_endpoints(
@@ -11222,12 +11266,44 @@ def _read_umthes_endpoints(
             f"publisherLabels={publisher_label_count}, emittedLabels={emitted_label_count}, "
             f"deprecated={deprecated_count}, relations={len(relations)}"
         )
+    hierarchy: dict[str, set[str]] = defaultdict(set)
+    for subject, predicate, target in relations:
+        if predicate == f"{SKOS}broader":
+            hierarchy[subject].add(target)
+        elif predicate == f"{SKOS}narrower":
+            hierarchy[target].add(subject)
+    reachable = _requested_reachability(
+        hierarchy,
+        (
+            (start, end)
+            for subject, predicate, target in relations
+            if predicate == f"{SKOS}related"
+            for start, end in ((subject, target), (target, subject))
+        ),
+    )
+    response_digests = {record.resource: record.source_digest for record in records}
+    relation_payloads: dict[str, Mapping[str, Any]] = {}
+    for subject, predicate, target in relations:
+        if predicate != f"{SKOS}related" or not ((subject, target) in reachable or (target, subject) in reachable):
+            continue
+        native_relation = {
+            "subjectIri": subject,
+            "predicateIri": predicate,
+            "objectIri": target,
+            "responseDigest": response_digests[subject],
+        }
+        digest = _canonical_json_digest(native_relation)
+        relation_payloads[digest] = {
+            "publisherRelation": native_relation,
+            "publisherRelationDigest": digest,
+            "editorialTransformation": dict(_S27_TRANSFORMATION),
+        }
     return _stock_vocabulary_view(
         sorted(records, key=lambda record: record.resource),
         relations,
         (),
         spec.inputs,
-        source_digest_is_native_payload_digest=False,
+        expected_relation_payloads=relation_payloads,
     )
 
 
@@ -11315,7 +11391,7 @@ def _read_eurovoc_portfolio_mapping(
         evidence[relation] = (
             ExpectedMappingEvidence(
                 source_locator=pin.source_iri or "",
-                source_digest=pin.sha256,
+                input_digest=pin.sha256,
                 native_payload=native,
             ),
         )
@@ -11436,7 +11512,7 @@ def _read_gemet_mapping(
         evidence[relation] = (
             ExpectedMappingEvidence(
                 source_locator=(f"{pin.source_iri}#mapping-" + locator_triple_digest.removeprefix("sha256:")),
-                source_digest=pin.sha256,
+                input_digest=pin.sha256,
                 native_payload=native,
             ),
         )
@@ -12057,7 +12133,6 @@ def _read_lcsh_consolidated(
         (),
         spec.inputs,
         require_relation_members=False,
-        source_digest_is_native_payload_digest=False,
     )
 
 
@@ -12217,7 +12292,7 @@ def _read_ua_gao_priority_mapping(
         ) -> ExpectedMappingEvidence:
             return ExpectedMappingEvidence(
                 source_locator=(f"{pin.source_iri}#source-path=" + urllib.parse.quote(source_path, safe="")),
-                source_digest=pin.sha256,
+                input_digest=pin.sha256,
                 native_payload={
                     **triple_payload,
                     "decisionBasis": "gaoInstitutionalTaxonomyReuse",
@@ -12262,7 +12337,7 @@ def _read_ua_gao_priority_mapping(
             ),
             ExpectedMappingEvidence(
                 source_locator=(f"{bridge_pin.source_iri}#federal-rules-database-priority-and-footnotes-6-9"),
-                source_digest=bridge_pin.sha256,
+                input_digest=bridge_pin.sha256,
                 native_payload={
                     **triple,
                     "decisionBasis": "gaoInstitutionalTaxonomyReuse",
@@ -13452,23 +13527,15 @@ def _read_icpsr_managed_release(
             broader_graph[subject].add(target)
         elif relation_name == "narrower":
             broader_graph[target].add(subject)
-    ancestor_cache: dict[str, frozenset[str]] = {}
-
-    def ancestors(start: str) -> frozenset[str]:
-        cached = ancestor_cache.get(start)
-        if cached is not None:
-            return cached
-        found: set[str] = set()
-        pending = list(broader_graph.get(start, ()))
-        while pending:
-            target = pending.pop()
-            if target in found:
-                continue
-            found.add(target)
-            pending.extend(broader_graph.get(target, ()))
-        result = frozenset(found)
-        ancestor_cache[start] = result
-        return result
+    reachable = _requested_reachability(
+        broader_graph,
+        (
+            (start, end)
+            for subject, kind, target, _ in raw_relations
+            if kind == "related"
+            for start, end in ((subject, target), (target, subject))
+        ),
+    )
 
     relation_predicates = {
         "broader": f"{SKOS}broader",
@@ -13484,15 +13551,10 @@ def _read_icpsr_managed_release(
         if predicate is None:
             raise ValueError(f"ICPSR relation kind is unsupported: {relation_name!r}")
         relations.add((subject, predicate, target))
-        if relation_name == "related" and (target in ancestors(subject) or subject in ancestors(target)):
+        if relation_name == "related" and ((subject, target) in reachable or (target, subject) in reachable):
             relation_digest = _canonical_json_digest(source_payload)
             relation_payloads[relation_digest] = {
-                "editorialTransformation": {
-                    "fromPredicate": f"{SKOS}related",
-                    "reason": "SKOS-S27-hierarchy-path",
-                    "rule": "preserveAuthoredAssociationOutsideSkosProjection",
-                    "toPredicate": f"{ATLAS}thesaurusRelated",
-                },
+                "editorialTransformation": dict(_S27_TRANSFORMATION),
                 "publisherRelation": source_payload,
                 "publisherRelationDigest": relation_digest,
             }
@@ -17928,38 +17990,38 @@ SOURCES: tuple[SourceSpec, ...] = (
             relation_scope="all",
         ),
     ),
-    SourceSpec(
-        name="lc-external-target-endpoints-2026-08-15",
-        kind="vocabulary",
-        release_keys=tuple(
-            f"lc-external-{vocabulary}-endpoints-2026-08-15"
-            for vocabulary in sorted(_LC_TARGET_PREFIXES)
-            if vocabulary != "fast"
-        ),
-        inputs=(
-            _registry_source_pin(
-                "lcsh-externallinks-2026-08-15.nt.zip",
-                "sha256:7d279d69c6920b41a579634a84a1b31ff73af764345fe51df3f7c480efeba9d1",
-                239_565_667,
-                "https://id.loc.gov/download/externallinks.nt.zip",
-                fmt="zip-ntriples",
-                role="publisherEndpointSource",
+    *(
+        SourceSpec(
+            name=f"lc-external-{vocabulary}-endpoints-2026-08-15",
+            kind="vocabulary",
+            release_keys=(f"lc-external-{vocabulary}-endpoints-2026-08-15",),
+            inputs=(
+                _registry_source_pin(
+                    "lcsh-externallinks-2026-08-15.nt.zip",
+                    "sha256:7d279d69c6920b41a579634a84a1b31ff73af764345fe51df3f7c480efeba9d1",
+                    239_565_667,
+                    "https://id.loc.gov/download/externallinks.nt.zip",
+                    fmt="zip-ntriples",
+                    role="publisherEndpointSource",
+                ),
             ),
-        ),
-        reader=LC_EXTERNAL_TARGET_ENDPOINT_READER,
-        identity_policy="publisher-iri",
-        policies=DIRECT_SKOS_POLICIES,
-        rdf_source=_rdf_source_policy(
-            frozenset(
-                {
-                    "languageDeterminedBy",
-                    "publisherLabels",
-                    "publisherLanguageTagPresent",
-                    "targetVocabulary",
-                }
+            reader=LC_EXTERNAL_TARGET_ENDPOINT_READER,
+            identity_policy="publisher-iri",
+            policies=DIRECT_SKOS_POLICIES,
+            rdf_source=_rdf_source_policy(
+                frozenset(
+                    {
+                        "languageDeterminedBy",
+                        "publisherLabels",
+                        "publisherLanguageTagPresent",
+                        "targetVocabulary",
+                    }
+                ),
+                relation_scope="all",
             ),
-            relation_scope="all",
-        ),
+        )
+        for vocabulary in sorted(_LC_TARGET_PREFIXES)
+        if vocabulary != "fast"
     ),
     SourceSpec(
         name="lc-external-fast-endpoints-2026-08-15",
@@ -19041,7 +19103,7 @@ SOURCES: tuple[SourceSpec, ...] = (
             ),
         ),
         reader=ECFR_AGENCIES_JSON_READER,
-        identity_policy="publisher-key",
+        identity_policy="source-key-derived",
         policies=DIRECT_SKOS_POLICIES,
         rdf_source=_rdf_source_policy(
             frozenset(
@@ -19083,7 +19145,7 @@ SOURCES: tuple[SourceSpec, ...] = (
             ),
         ),
         reader=REGULATIONS_GOV_AGENCIES_JSON_READER,
-        identity_policy="publisher-key",
+        identity_policy="source-key-derived",
         policies=DIRECT_SKOS_POLICIES,
         rdf_source=_rdf_source_policy(
             frozenset(
@@ -19862,7 +19924,6 @@ SOURCES: tuple[SourceSpec, ...] = (
             _GENERIC_SKOS_NATIVE_FIELDS,
             note_predicate_inverse=SKOS_SCOPE_NOTE,
             record_digest_input_paths=("osti-semantic-thesaurus-2020.rdf",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -19925,7 +19986,6 @@ SOURCES: tuple[SourceSpec, ...] = (
         rdf_source=_rdf_source_policy(
             _GENERIC_SKOS_NATIVE_FIELDS | {"metadata"},
             record_digest_input_paths=("ELSST_R6.ttl",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -19957,7 +20017,6 @@ SOURCES: tuple[SourceSpec, ...] = (
                 {"attribution", "licenseIri", "publisher", "publisherResourceKind", "releaseVersion"}
             ),
             record_digest_input_paths=("eurovoc-4.24-skos-core.zip",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -19989,7 +20048,6 @@ SOURCES: tuple[SourceSpec, ...] = (
                 {"attribution", "licenseIri", "publisher", "publisherResourceKind", "releaseVersion"}
             ),
             record_digest_input_paths=("eurovoc-4.24-skos-core.zip",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -20025,7 +20083,6 @@ SOURCES: tuple[SourceSpec, ...] = (
             ),
             member_type_inverse=((SKOS_CONCEPT, SKOS_CONCEPT_SCHEME),),
             record_digest_input_paths=("eurovoc-4.24-skos-core.zip",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -20211,7 +20268,6 @@ SOURCES: tuple[SourceSpec, ...] = (
                 }
             ),
             record_digest_input_paths=("gemet.rdf",),
-            record_digest_is_native_payload_digest=True,
         ),
     ),
     SourceSpec(
@@ -20303,7 +20359,6 @@ SOURCES: tuple[SourceSpec, ...] = (
                 ),
             ),
             record_digest_input_paths=("thesaurus-SKOS.xml",),
-            record_digest_is_native_payload_digest=True,
             source_wide_literal_predicates=("http://synaptica.net/zthes/label",),
         ),
     ),
@@ -20394,6 +20449,191 @@ def _regulations_gov_agency_identity_mapping_source() -> SourceSpec:
 
 SOURCES = (*SOURCES, _regulations_gov_agency_identity_mapping_source())
 
+# Independent adapters own source interpretation; registration stays here.
+if __package__:
+    from tools import atlas_independent_pdf as _independent_pdf
+else:
+    import atlas_independent_pdf as _independent_pdf
+
+_PUBLISHER_READERS = {
+    **_PUBLISHER_READERS,
+    "independent-positioned-pdf": lambda spec, payloads: _independent_pdf.read_adapter(
+        sys.modules[__name__], spec, payloads
+    ),
+}
+SOURCES = (
+    *SOURCES,
+    *_independent_pdf.register_sources(sys.modules[__name__]),
+    SourceSpec(
+        name="agency-registry-2026-09-26",
+        kind="agency",
+        release_keys=("agency-registry-2026-09-26",),
+        reader="independent-agency",
+        inputs=(
+            SourcePin(
+                path="output/registry-real-data-sources/EHRI-Data-Standards-20260804.xlsx",
+                sha256="sha256:6978bd6d76158f029d468982737fcd68e6dd742c2aedaa9ab5dca151d2a84bfc",
+                byte_length=1154183,
+                fmt="xlsx",
+                role="agencyRoster03Input01",
+                source_iri="https://data.opm.gov/data-standards/ehri-data-standards",
+            ),
+            SourcePin(
+                path="plans/agency-registry-batch-1-candidates.json",
+                sha256="sha256:6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2",
+                byte_length=191706,
+                fmt="json",
+                role="ownerCandidates",
+                source_iri="urn:ref:source-artifact:6bb7c2d4dc818b24cb92b1e220704b9d9acb9afc6be6fc400c0daccde14b71d2",
+            ),
+            SourcePin(
+                path="plans/agency-registry-batch-1-decisions.json",
+                sha256="sha256:a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098",
+                byte_length=6744,
+                fmt="json",
+                role="ownerDecisions",
+                source_iri="urn:ref:source-artifact:a454ea277d533ce25a331a996a676d58f0bd2573700a43893a1f52b6c8938098",
+            ),
+            SourcePin(
+                path="plans/agency-registry-succession-batch-candidates.json",
+                sha256="sha256:92c7ef5e74b236498062034b6f71fb8e72a18309629b5de310d521ee644c9afd",
+                byte_length=9527,
+                fmt="json",
+                role="successionOwnerCandidates",
+                source_iri="urn:ref:source-artifact:92c7ef5e74b236498062034b6f71fb8e72a18309629b5de310d521ee644c9afd",
+            ),
+            SourcePin(
+                path="plans/agency-registry-succession-batch-decisions.json",
+                sha256="sha256:4ac49dcab3de07c31c9ba79a43f859d3ce44aa0455eeca8bf58d1480e1a9b060",
+                byte_length=665,
+                fmt="json",
+                role="successionOwnerDecisions",
+                source_iri="urn:ref:source-artifact:4ac49dcab3de07c31c9ba79a43f859d3ce44aa0455eeca8bf58d1480e1a9b060",
+            ),
+            SourcePin(
+                path="plans/agency-registry-alias-batch-candidates.json",
+                sha256="sha256:a29add9b4ef3047658099fdc983b556183b9c7af6540516bdae72d97b0f8cb3c",
+                byte_length=134315,
+                fmt="json",
+                role="aliasOwnerCandidates",
+                source_iri="urn:ref:source-artifact:a29add9b4ef3047658099fdc983b556183b9c7af6540516bdae72d97b0f8cb3c",
+            ),
+            SourcePin(
+                path="plans/agency-registry-alias-batch-decisions.json",
+                sha256="sha256:c74edd516f4a0f8b89d6b809455f0dbf5741c42f9a1a1bc2f28b4c4ad2507e0d",
+                byte_length=35499,
+                fmt="json",
+                role="aliasOwnerDecisions",
+                source_iri="urn:ref:source-artifact:c74edd516f4a0f8b89d6b809455f0dbf5741c42f9a1a1bc2f28b4c4ad2507e0d",
+            ),
+            SourcePin(
+                path="tests/fixtures/cfr_list_of_subjects/ecfr-agencies-2026-08-15.json",
+                sha256="sha256:766685f466d62fa558a504cdeac23eef1d41f3ea24a2f5a3f78b38f2bcd5365e",
+                byte_length=98197,
+                fmt="json",
+                role="agencyRoster04Input01",
+                source_iri="https://www.ecfr.gov/api/admin/v1/agencies.json",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-0.json",
+                sha256="sha256:b684a583f8775ee109cf113949fe1a1c59d1166d2db718b48583272274bca8ff",
+                byte_length=183892,
+                fmt="json",
+                role="agencyRoster02Input01",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=0",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-1.json",
+                sha256="sha256:8043dd5bcc850b0036ed1c28c5f36a55d1bb44e4c0c934548c9f8086f21ad6e2",
+                byte_length=179237,
+                fmt="json",
+                role="agencyRoster02Input02",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=200",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-2.json",
+                sha256="sha256:7dbb2ab10f480f08f661049cda4753d5618983d4ba0c95fca314348f53804c64",
+                byte_length=181649,
+                fmt="json",
+                role="agencyRoster02Input03",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=400",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-3.json",
+                sha256="sha256:90be1eb4f7dafdea9e26e87596f2c17df8d09cdcc8b0a228758ef29a94af1e96",
+                byte_length=182189,
+                fmt="json",
+                role="agencyRoster02Input04",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=600",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-all-page-4.json",
+                sha256="sha256:bb78b6c039167ef158bea672275c86961be784e269f4db41a52e4b0cd09c277e",
+                byte_length=100030,
+                fmt="json",
+                role="agencyRoster02Input05",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?limit=200&offset=800",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-total-dept.json",
+                sha256="sha256:e08d262428b48a2539c8db513982510e731978220461e7058c155d2a01ab35b6",
+                byte_length=919,
+                fmt="json",
+                role="agencyRoster02Input06",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?fhorgtype=Department%2FInd.%20Agency&limit=1&offset=0",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_hierarchy_complete/fh-orgs-total-subtier.json",
+                sha256="sha256:9f23757566e92492e4eeb0bd272a677048a87985bba9db98930f354359431359",
+                byte_length=898,
+                fmt="json",
+                role="agencyRoster02Input07",
+                source_iri="https://api.sam.gov/prod/federalorganizations/v1/orgs?fhorgtype=Sub-Tier&limit=1&offset=0",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_register_native_controls/fr-agencies-2026-08-15.json",
+                sha256="sha256:70dd0e8fa373a22d5c9577ac1f70ea736542f0e564f816c3caf28014bd05a92b",
+                byte_length=694024,
+                fmt="json",
+                role="agencyRoster01Input01",
+                source_iri="https://www.federalregister.gov/api/v1/agencies",
+            ),
+            SourcePin(
+                path="tests/fixtures/federal_register_native_controls/fr-api-documentation-2026-08-15.json",
+                sha256="sha256:9190df715f0227e62acb57ff924635fc7115732064a5d2c1fb15a57d80879a42",
+                byte_length=229776,
+                fmt="json",
+                role="agencyRoster01Input02",
+                source_iri="https://www.federalregister.gov/api/v1/documentation.json",
+            ),
+            SourcePin(
+                path="tests/fixtures/govinfo_collections/ecfr-cfr-titles-2026-08-03.json",
+                sha256="sha256:a5985527fc0b07ac95d2cb5d7c867cfd0ddbc2712708e271edbe4ad742001781",
+                byte_length=8033,
+                fmt="json",
+                role="agencyRoster04Input02",
+                source_iri="https://www.ecfr.gov/api/versioner/v1/titles.json",
+            ),
+            SourcePin(
+                path="tests/fixtures/regulations_gov_agencies/regulations-gov-agencies-2026-08-16.json",
+                sha256="sha256:28ab9f5422dd27fc7906ddc696e8e7811b11056822f370bcee7ea18a28418fa2",
+                byte_length=91408,
+                fmt="json",
+                role="agencyRoster05Input01",
+                source_iri="https://api.regulations.gov/v4/agencies",
+            ),
+            SourcePin(
+                path="tests/fixtures/treasury_tas_fast_book/fast-book-part-ii-iii-2026-07-31.xlsx",
+                sha256="sha256:0e40902a2e4bfee7439fbe24d90fd9ff39fad859b4ba432725256866b06cb461",
+                byte_length=420508,
+                fmt="xlsx",
+                role="agencyRoster02Input08",
+                source_iri="https://tfx.treasury.gov/media/60111/download?inline=",
+            ),
+        ),
+    ),
+)
+
 
 def build_context(
     distribution: Path,
@@ -20401,6 +20641,7 @@ def build_context(
     expectations: Expectations | None = None,
     specs: Sequence[SourceSpec] = SOURCES,
     scoped_out_specs: Sequence[SourceSpec] = (),
+    agency_options: Mapping[str, Any] | None = None,
 ) -> Context:
     """Authenticate and read all declared inputs while collecting recoverable errors."""
     specs = tuple(specs)
@@ -20529,6 +20770,7 @@ def build_context(
     native_control_pairs: list[NativeControlPair] = []
     source_extract_pairs: list[SourceExtractPair] = []
     atlas_views: list[tuple[SourceSpec, AtlasView]] = []
+    lc_capture_cache: dict[tuple[str, SourcePin], tuple[dict, dict]] = {}
     publisher_cache: dict[
         tuple[object, ...],
         PublisherView | str,
@@ -20568,7 +20810,7 @@ def build_context(
                 # Structured captures can share bytes while selecting different
                 # lists. Other readers keep main's
                 # cross-spec cache sharing, including the EuroVoc partitions.
-                (spec.name if spec.reader in SPEC_SCOPED_RECORD_READERS else None),
+                (None if spec.reader == "rdf" else spec),
                 spec.inputs,
                 additional_annotation_predicates,
                 additional_relation_predicates,
@@ -20594,7 +20836,16 @@ def build_context(
                         reader = _PUBLISHER_READERS.get(spec.reader)
                         if reader is None:
                             raise ValueError(f"unsupported publisher reader {spec.reader!r}")
-                        cached = reader(spec, authenticated_payloads)
+                        if spec.reader == LC_EXTERNAL_TARGET_ENDPOINT_READER:
+                            source_pin = next(pin for pin in spec.inputs if pin.role == "publisherEndpointSource")
+                            capture_key = (spec.reader, source_pin)
+                            capture = lc_capture_cache.get(capture_key)
+                            if capture is None:
+                                capture = _parse_lc_endpoint_capture(source_pin, authenticated_payloads[source_pin])
+                                lc_capture_cache[capture_key] = capture
+                            cached = reader(spec, authenticated_payloads, parsed_capture=capture)
+                        else:
+                            cached = reader(spec, authenticated_payloads)
                 except Exception as error:  # noqa: BLE001 - keep reading independent sources
                     cached = f"{type(error).__name__}: {error}"
                 publisher_cache[cache_key] = cached
@@ -20639,7 +20890,9 @@ def build_context(
         try:
             compact_native_payload = (
                 publisher is not None
-                and publisher.source_digest_is_native_payload_digest
+                and bool(publisher.expected_native_payload_digests)
+                and (publisher.concepts | _publisher_traced_subjects_for(publisher, spec.rdf_source))
+                <= publisher.expected_native_payload_digests.keys()
                 and not publisher.expected_native_payloads
                 and spec.rdf_source is not None
             )
@@ -20648,6 +20901,7 @@ def build_context(
                 packs,
                 source_claim_subjects,
                 compact_normalized_claims=(publisher is not None and spec.reader != "rdf"),
+                retain_publisher_record_status=(spec.name == "ferc-docket-prefixes"),
                 compact_native_payload_fields=(
                     spec.rdf_source.evaluated_native_payload_fields if compact_native_payload else None
                 ),
@@ -20704,6 +20958,23 @@ def build_context(
         )
     else:
         atlas_language_scope_evidence = AtlasLanguageScopeEvidence()
+    agency_result: Mapping[str, Any] = {}
+    if any(spec.kind == "agency" for spec in specs):
+        if __package__:
+            from tools.atlas_independent_agency import verify_agency_artifacts
+        else:
+            from atlas_independent_agency import verify_agency_artifacts
+        agency_result = verify_agency_artifacts(
+            source_root=REPOSITORY_ROOT,
+            distribution=distribution,
+            source_paths={
+                pin.construction_path or pin.path: _resolve_source_pin(source_root, pin)
+                for spec in specs
+                if spec.kind == "agency"
+                for pin in spec.inputs
+            },
+            **dict(agency_options or {}),
+        )
     return Context(
         distribution=distribution,
         source_root=source_root,
@@ -20722,6 +20993,7 @@ def build_context(
         load_failures=tuple(load_failures),
         atlas_language_scope_evidence=atlas_language_scope_evidence,
         source_extract_pairs=tuple(source_extract_pairs),
+        agency_result=agency_result,
         scoped_out_specs=scoped_out_specs,
     )
 
@@ -20732,7 +21004,7 @@ def build_context(
 
 
 RDF_COMPARISON_KINDS = frozenset({"vocabulary", "mapping"})
-COMPARISON_KINDS = frozenset({*RDF_COMPARISON_KINDS, "native-control", "source-extract"})
+COMPARISON_KINDS = frozenset({*RDF_COMPARISON_KINDS, "native-control", "source-extract", "agency"})
 
 
 def _not_evaluated(ctx: Context, kind: str | None = None) -> list[str]:
@@ -20906,6 +21178,14 @@ def check_configuration(ctx: Context) -> CheckResult:
                 failures.append(f"{spec.name}: source-extract comparison must not declare RDF source policy")
             if not any(pin.role == "publisherSource" for pin in spec.inputs):
                 failures.append(f"{spec.name}: source-extract comparison declares no publisher artifact pin")
+        if spec.kind == "agency":
+            if (spec.name, spec.reader, spec.release_keys) != (
+                "agency-registry-2026-09-26",
+                "independent-agency",
+                ("agency-registry-2026-09-26",),
+            ):
+                failures.append(f"{spec.name}: no exact executable agency comparison is registered")
+            continue
         if spec.kind == "source-extract":
             continue
         if selector is not None:
@@ -20997,7 +21277,8 @@ def check_distribution_coverage(ctx: Context) -> CheckResult:
     # every distribution. The catalog carries only Atlas descriptors, profiles,
     # rings and titles -- no source-shaped claim -- which is why it is exempt.
     atlas_only_manifest_packs = frozenset({"catalog.nq.zst"})
-    unit_keys = {unit.key for unit in ctx.units}
+    units_by_key = {unit.key: unit for unit in ctx.units}
+    unit_keys = set(units_by_key)
     covered_keys = {key for spec in ctx.loaded_specs() for key in spec.release_keys}
     # A scoped run evaluates fewer comparisons on purpose. Those units are
     # neither covered nor failed: they are reported as not evaluated, and the
@@ -21016,12 +21297,13 @@ def check_distribution_coverage(ctx: Context) -> CheckResult:
             "mapping": "mapping",
             "native-control": "sourceRelease",
             "source-extract": "sourceRelease",
+            "agency": "mapping",
         }.get(spec.kind)
         if expected_kind is None:
             failures.append(f"{spec.name}: unsupported comparison kind {spec.kind!r}")
         else:
             for key in spec.release_keys:
-                unit = next((item for item in ctx.units if item.key == key), None)
+                unit = units_by_key.get(key)
                 if unit is not None and unit.kind != expected_kind:
                     failures.append(
                         f"{spec.name}: comparison kind {spec.kind!r} requires construction kind "
@@ -21201,6 +21483,10 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
         return [f"{source}: RDF comparison has no independent provenance policy"]
 
     failures: list[str] = []
+    for record, (_, observed_digest) in sorted(pair.atlas.native_payload_digest_differences.items()):
+        failures.append(
+            f"{source}: source record <{record}> native payload digest differs: sourceDigest fails nativePayload format self-consistency; observed {observed_digest!r}"
+        )
 
     # Widened and narrowed the same way concept-traceability is: a publisher
     # subject a declared additional-traced-type covers (GEMET's Group/
@@ -21215,7 +21501,7 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
     # below instead of the concept contract.
     organization_subjects = _additional_traced_publisher_subjects(pair) - pair.publisher.concepts
     organization_fields = policy.organization_record_payload_fields
-    publisher_subject_types = _publisher_subject_types(pair.publisher) if organization_fields else {}
+    publisher_subject_types = pair.publisher.subject_types if organization_fields else {}
 
     default_digests = {
         pair.publisher.input_content_digests[path]
@@ -21233,7 +21519,7 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
     reader_native_fields = frozenset(
         field_name for payload in pair.publisher.expected_native_payloads.values() for field_name in payload
     )
-    if pair.publisher.source_digest_is_native_payload_digest:
+    if pair.publisher.expected_native_payload_digests:
         reader_native_fields |= expected_payload_fields
     supported_resource_fields = (
         per_record_resource_fields | aggregate_relation_fields | aggregate_source_evidence_fields | reader_native_fields
@@ -21253,8 +21539,18 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
         source_top_concepts[resource].add(scheme)
     for scheme, resource in pair.publisher.has_top_concept:
         source_top_concepts[resource].add(scheme)
-    input_path_by_resource = dict(policy.record_input_path_by_resource)
     locator_by_resource = dict(policy.record_locator_by_resource)
+
+    if pair.spec.name == "ferc-docket-prefixes":
+        expected_status = {
+            (resource, _literal_value(str(payload["status"]), None, None))
+            for resource, payload in pair.publisher.expected_native_payloads.items()
+        }
+        observed_status = {
+            (resource, value) for resource, value in pair.atlas.record_statuses if resource in pair.publisher.concepts
+        }
+        if expected_status != observed_status:
+            failures.append(f"{source}: recordStatus differs from exact publisher docket status")
 
     mapping_records: dict[tuple[str, str, str], list[str]] = defaultdict(list)
     observed_mapping_evidence: dict[tuple[str, str, str], list[tuple[str | None, str | None, str]]] = defaultdict(list)
@@ -21264,6 +21560,8 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
         | set(pair.atlas.native_payloads)
         | set(pair.atlas.compact_native_payload_records)
     )
+    observed_relation_payloads: Counter[str] = Counter()
+    s27_pairs: dict[str, tuple[str, str]] = {}
     for record in sorted(record_ids):
         target = pair.atlas.record_targets.get(record)
         payload = pair.atlas.native_payloads.get(record)
@@ -21283,6 +21581,7 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
                 else None
             )
             if expected_relation_payload is not None:
+                observed_relation_payloads[publisher_relation_digest] += 1
                 publisher_relation = payload.get("publisherRelation")
                 if not isinstance(publisher_relation, Mapping):
                     failures.append(f"{source}: source record <{record}> publisherRelation is not an object")
@@ -21311,30 +21610,53 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
                     )
                 continue
 
-            publisher_relation = _payload_relation(payload.get("publisherRelation"))
-            if publisher_relation is not None:
-                relation_payload = payload["publisherRelation"]
-                relation_digest = _canonical_json_digest(relation_payload)
-                if publisher_relation not in pair.publisher.relations:
+            if "publisherRelation" in payload:
+                if pair.publisher.expected_relation_payloads:
+                    # This reader reconstructs every transformed relation
+                    # exactly (UMTHES, ICPSR), so an unmatched record has none.
+                    failures.append(
+                        f"{source}: source record <{record}> publisher relation has no exact independent reconstruction"
+                    )
+                    continue
+                # A stock RDF reader keeps the publisher's triples, not their
+                # payloads: compare the record with those triples and with the
+                # one transformation the producer applies. Its sourceDigest is
+                # the digest of this whole payload, checked for every record
+                # above; the publisher relation keeps its own digest inside.
+                publisher_relation = payload["publisherRelation"]
+                relation = _payload_relation(publisher_relation)
+                if (
+                    relation is None
+                    or set(publisher_relation) != _S27_PUBLISHER_RELATION_FIELDS
+                    or publisher_relation.get("normalizedPredicateIri") != _S27_TRANSFORMATION["fromPredicate"]
+                ):
+                    failures.append(f"{source}: source record <{record}> publisherRelation is not an S27 relation")
+                    continue
+                if relation not in pair.publisher.relations:
                     failures.append(
                         f"{source}: source record <{record}> publisherRelation "
-                        f"{publisher_relation!r} is absent from publisher bytes"
+                        f"{relation!r} is absent from publisher bytes"
                     )
+                relation_digest = _canonical_json_digest(publisher_relation)
                 if payload.get("publisherRelationDigest") != relation_digest:
                     failures.append(
                         f"{source}: source record <{record}> publisherRelationDigest differs "
-                        f"from its exact relation payload"
+                        "from its exact relation payload"
                     )
-                if pair.atlas.record_source_digests.get(record) != relation_digest:
+                if (
+                    set(payload) != {"editorialTransformation", "publisherRelation", "publisherRelationDigest"}
+                    or payload["editorialTransformation"] != _S27_TRANSFORMATION
+                ):
                     failures.append(
-                        f"{source}: source record <{record}> sourceDigest differs from its "
-                        "exact publisherRelation payload"
+                        f"{source}: source record <{record}> transformed publisher relation "
+                        "payload differs from the exact S27 transformation"
                     )
                 expected_locator = "urn:ref:publisher-relation:" + relation_digest.removeprefix("sha256:")
                 if pair.atlas.record_source_locators.get(record) != expected_locator:
                     failures.append(
                         f"{source}: source record <{record}> relation locator differs -- expected <{expected_locator}>"
                     )
+                s27_pairs[record] = (relation[0], relation[2])
                 continue
 
             mapping_relation = _payload_relation(payload)
@@ -21371,17 +21693,6 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
                     failures.append(
                         f"{source}: source record <{record}> locator differs -- expected "
                         f"<{policy.record_locator}>, observed {locator!r}"
-                    )
-                observed_digest = pair.atlas.record_source_digests.get(record)
-                if len(default_digests) != 1:
-                    failures.append(
-                        f"{source}: mapping record <{record}> has {len(default_digests)} "
-                        "direct publisher digest candidates"
-                    )
-                elif observed_digest != next(iter(default_digests)):
-                    failures.append(
-                        f"{source}: mapping record <{record}> digest differs -- expected "
-                        f"{next(iter(default_digests))}, observed {observed_digest!r}"
                     )
                 independently_checked = {
                     "mappingTripleDigest",
@@ -21422,65 +21733,29 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
                 f"<{expected_locator}>, observed {locator!r}"
             )
 
-        resource_input_path = input_path_by_resource.get(target)
-        compact_resource_digest = pair.publisher.resource_input_digest_values.get(target)
-        if policy.record_digest_is_native_payload_digest and payload is not None:
-            # This spec's stated record contract: sourceDigest is the sha256
-            # over the record's own canonical nativePayload bytes, never a
-            # digest tied to the pinned publisher file. RDF sources carry no
-            # natural per-resource byte range to hash independently of what
-            # Atlas already stored, so -- honestly -- this is a FORMAT
-            # self-consistency check, not an independent publisher-fidelity
-            # proof: it can only ever confirm the same invariant the
-            # binding's own validator already enforces at build time
-            # (bindings/atlas/3.1/tools/validate.py:_check_native_payloads).
-            # The independent tie to publisher bytes for these records lives
-            # in the field-level inverses below (schemeIris/topConceptOfIris/
-            # etc.) and the release-level input-file digest pin.
-            expected_payload_digest = _canonical_json_digest(payload)
-            observed_digest = pair.atlas.record_source_digests.get(record)
-            if observed_digest != expected_payload_digest:
-                failures.append(
-                    f"{source}: source record <{record}> sourceDigest fails its own nativePayload "
-                    f"format self-consistency check (not an independent publisher-fidelity proof; "
-                    f"see record_digest_is_native_payload_digest) -- expected {expected_payload_digest} "
-                    f"over its own native payload, observed {observed_digest!r}"
-                )
-        elif resource_input_path in pair.publisher.input_content_digests:
-            expected_digests = {pair.publisher.input_content_digests[resource_input_path]}
-        elif default_digests:
-            expected_digests = default_digests
-        elif compact_resource_digest is not None:
-            expected_digests = {compact_resource_digest}
-        else:
-            expected_digests = set(pair.publisher.resource_input_digests.get(target, frozenset()))
-        if policy.record_digest_is_native_payload_digest and payload is not None:
-            expected_digests = None
-        observed_digest = pair.atlas.record_source_digests.get(record)
-        if expected_digests is None:
-            pass
-        elif len(expected_digests) != 1:
-            failures.append(
-                f"{source}: source record <{record}> has {len(expected_digests)} direct "
-                f"publisher digest candidates for <{target}>; exact sourceDigest is not proven"
+        expected_digest = pair.publisher.expected_native_payload_digests.get(target)
+        if expected_digest is None and target not in pair.publisher.expected_native_payloads:
+            unproved = (
+                expected_payload_fields
+                - per_record_resource_fields
+                - aggregate_relation_fields
+                - aggregate_source_evidence_fields
             )
-        elif observed_digest != next(iter(expected_digests)):
+            if unproved:
+                failures.append(
+                    f"{source}: source record <{record}> lacks independent payload proof for fields {sorted(unproved)}"
+                )
+        expected_digests = {expected_digest} if expected_digest is not None else None
+        observed_digest = pair.atlas.record_source_digests.get(record)
+        if expected_digest is not None and observed_digest != expected_digest:
             failures.append(
                 f"{source}: source record <{record}> digest differs -- expected "
-                f"{next(iter(expected_digests))}, observed {observed_digest!r}"
+                f"{expected_digest}, observed {observed_digest!r}"
             )
-
         if payload is None and not compact_payload:
             failures.append(f"{source}: source record <{record}> has no native payload")
             continue
         if payload is None:
-            digest_difference = pair.atlas.native_payload_digest_differences.get(record)
-            if digest_difference is not None:
-                payload_digest, source_digest = digest_difference
-                failures.append(
-                    f"{source}: source record <{record}> native payload digest "
-                    f"{payload_digest} differs from atlas:sourceDigest {source_digest!r}"
-                )
             unexpected_fields, missing_fields = pair.atlas.native_payload_field_differences.get(record, ((), ()))
             for field_name in unexpected_fields:
                 unexpected_payload_fields[field_name].append(record)
@@ -21522,14 +21797,9 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
             expected_per_record_fields = shared_fields | frozenset(reader_expected_payload)
         else:
             expected_per_record_fields = per_record_resource_fields | frozenset(reader_expected_payload)
-        # expected_digests is None exactly when policy.record_digest_is_native_payload_digest
-        # already forced it above (this spec's own format self-check, not this
-        # reader-level one) -- guarded here so the two flags, which are
-        # independent and may legitimately both be set, never collide into a
-        # len(None) crash.
         if (
             expected_digests is not None
-            and pair.publisher.source_digest_is_native_payload_digest
+            and pair.publisher.expected_native_payload_digests
             and len(expected_digests) == 1
             and not reader_expected_payload
         ):
@@ -21597,18 +21867,30 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
                     f"{source}: source record <{record}> native payload {field_name} "
                     f"differs -- expected {expected!r}, observed {payload.get(field_name)!r}"
                 )
-        if (
-            expected_digests is not None
-            and pair.publisher.source_digest_is_native_payload_digest
-            and len(expected_digests) == 1
-        ):
-            expected_payload_digest = next(iter(expected_digests))
-            observed_payload_digest = _canonical_json_digest(payload)
-            if observed_payload_digest != expected_payload_digest:
+
+    if s27_pairs:
+        # The transformation is justified only for concepts on one publisher
+        # hierarchy path, in either direction, as the producer decides it.
+        hierarchy: dict[str, set[str]] = defaultdict(set)
+        for subject, predicate, target in pair.publisher.relations:
+            if predicate == f"{SKOS}broader":
+                hierarchy[subject].add(target)
+            elif predicate == f"{SKOS}narrower":
+                hierarchy[target].add(subject)
+        reachable = _requested_reachability(
+            hierarchy, (ends for start, end in s27_pairs.values() for ends in ((start, end), (end, start)))
+        )
+        for record, (start, end) in sorted(s27_pairs.items()):
+            if (start, end) not in reachable and (end, start) not in reachable:
                 failures.append(
-                    f"{source}: source record <{record}> native payload digest differs -- "
-                    f"expected {expected_payload_digest}, observed {observed_payload_digest}"
+                    f"{source}: source record <{record}> applies S27 to <{start}> and <{end}>, "
+                    "which share no publisher hierarchy path"
                 )
+
+    for digest in sorted(pair.publisher.expected_relation_payloads):
+        count = observed_relation_payloads[digest]
+        if count != 1:
+            failures.append(f"{source}: transformed relation {digest} has {count} source records; expected 1")
 
     if pair.spec.kind == "mapping":
         publisher_relations = set(pair.publisher.relations)
@@ -21627,7 +21909,7 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
             expected_rows = sorted(
                 (
                     row.source_locator,
-                    row.source_digest,
+                    _canonical_json_digest(row.native_payload),
                     _canonical_json_bytes(row.native_payload).decode("utf-8"),
                 )
                 for row in expected_evidence
@@ -21648,12 +21930,30 @@ def _rdf_provenance_failures(pair: SourcePair) -> list[str]:
     return failures
 
 
+def _cached_provenance(ctx: Context, pair: SourcePair) -> tuple[str, ...]:
+    key = id(pair)
+    if key not in ctx.provenance_cache:
+        ctx.provenance_cache[key] = tuple(_rdf_provenance_failures(pair))
+    return ctx.provenance_cache[key]
+
+
+def check_agency_fidelity(ctx: Context) -> CheckResult:
+    failures = [f"agency-registry-2026-09-26: {row}" for row in ctx.agency_result.get("failures", ())]
+    if (
+        any(spec.kind == "agency" for spec in ctx.specs)
+        and ctx.agency_result.get("status") != "passed"
+        and not failures
+    ):
+        failures.append("agency-registry-2026-09-26: required comparison has no passed result")
+    return _result("agency-fidelity", "Independent agency decisions, evidence and view comparison", failures)
+
+
 def check_rdf_provenance_fidelity(ctx: Context) -> CheckResult:
     """Validate source-record evidence directly without production semantic ETL."""
     failures = _incomplete_evaluation_failure(ctx, "RDF provenance fidelity")
     checked_records = 0
     for pair in ctx.pairs:
-        failures.extend(_rdf_provenance_failures(pair))
+        failures.extend(_cached_provenance(ctx, pair))
         checked_records += len(pair.atlas.source_records)
     return _result(
         "rdf-provenance-fidelity",
@@ -22154,7 +22454,7 @@ def _publisher_traced_subjects_for(
     """
     if policy is None or not policy.additional_traced_publisher_types:
         return frozenset()
-    types = _publisher_subject_types(view)
+    types = view.subject_types
     return frozenset(
         subject for subject, subject_types in types.items() if subject_types & policy.additional_traced_publisher_types
     )
@@ -23718,7 +24018,7 @@ def _atlas_publisher_concepts(pair: SourcePair) -> frozenset[str]:
     Atlas-owned resources, rings, profiles, and governed schemes are deliberately
     absent from this view. The binding validator owns those claims.
     """
-    if pair.spec.reader in SPEC_SCOPED_RECORD_READERS or pair.spec.reader == (CRS_SOURCE_CONCEPT_RELEASE_READER):
+    if pair.spec.reader in PUBLISHER_CONCEPT_RECORD_READERS or pair.spec.reader == (CRS_SOURCE_CONCEPT_RELEASE_READER):
         # Structured JSON captures also describe value, structure, entity, and
         # legal-identity resources. Their source records are the exact
         # independent join; requiring skos:Concept here would discard every
@@ -24387,31 +24687,6 @@ def check_source_release_metadata(ctx: Context) -> CheckResult:
     )
 
 
-#: Memo for ``_publisher_subject_types``. Every claim-family comparison now asks
-#: which publisher subjects a declared additional traced type covers, and
-#: rebuilding this index over a 33 MB publisher graph once per question turns a
-#: quarter-hour audit into an hour. The entry holds the view it indexed, so an
-#: ``id()`` key can never alias a later view that reused the same address. Only
-#: a spec that declares a claim exclusion or an additional traced type ever
-#: reaches this function, so the memo holds a handful of indexes, never one per
-#: comparison in the registry.
-_PUBLISHER_SUBJECT_TYPES_CACHE: dict[int, tuple[PublisherView, dict[str, frozenset[str]]]] = {}
-
-
-def _publisher_subject_types(view: PublisherView) -> dict[str, frozenset[str]]:
-    """Index the rdf:type values the publisher's own bytes assert per subject."""
-    cached = _PUBLISHER_SUBJECT_TYPES_CACHE.get(id(view))
-    if cached is not None and cached[0] is view:
-        return cached[1]
-    types: dict[str, set[str]] = defaultdict(set)
-    for subject, predicate, obj in view.iri_claims:
-        if predicate == RDF_TYPE:
-            types[subject].add(obj)
-    resolved = {subject: frozenset(values) for subject, values in types.items()}
-    _PUBLISHER_SUBJECT_TYPES_CACHE[id(view)] = (view, resolved)
-    return resolved
-
-
 def _compared_publisher_subjects(pair: SourcePair) -> frozenset[str]:
     """Return the publisher subjects this adapter's comparisons actually read.
 
@@ -24447,7 +24722,7 @@ def _declared_exclusion_subjects(
     exclusions = pair.spec.declared_claim_exclusions
     if not exclusions:
         return ()
-    types = _publisher_subject_types(pair.publisher)
+    types = pair.publisher.subject_types
     subjects = {
         *(subject for subject, _, _ in pair.publisher.iri_claims),
         *(subject for subject, _, _ in pair.publisher.literal_claims),
@@ -24509,7 +24784,7 @@ def _declared_claim_exclusion_report(pair: SourcePair) -> list[dict[str, Any]]:
     if not resolved:
         return []
     compared = _compared_publisher_subjects(pair)
-    types = _publisher_subject_types(pair.publisher)
+    types = pair.publisher.subject_types
     empty: frozenset[str] = frozenset()
     adopted_releases = _atlas_source_release_subjects(pair)
     rows: list[dict[str, Any]] = []
@@ -25002,6 +25277,7 @@ _CHECKS: tuple[Callable[[Context], CheckResult], ...] = (
     check_publisher_input_pins,
     check_graph_structure,
     check_rdf_provenance_fidelity,
+    check_agency_fidelity,
     check_native_control_fidelity,
     check_source_extract_fidelity,
     check_concept_traceability,
@@ -25027,6 +25303,9 @@ CHECK_NAMES: tuple[str, ...] = tuple(check.__name__.removeprefix("check_").repla
 
 def run_checks(ctx: Context, checks: Sequence[Callable[[Context], CheckResult]] = _CHECKS) -> list[CheckResult]:
     """Run every check, converting a broken check into evidence instead of aborting."""
+    if isinstance(ctx, Context):
+        ctx.provenance_cache.clear()
+        ctx.comparison_claim_scope_cache.clear()
     results: list[CheckResult] = []
     for check in checks:
         try:
@@ -25132,7 +25411,9 @@ def _claim_family(
     }
 
 
-def _comparison_claim_scope(spec: SourceSpec, pair: SourcePair | None) -> dict[str, Any]:
+def _comparison_claim_scope(
+    spec: SourceSpec, pair: SourcePair | None, provenance: Sequence[str] | None = None
+) -> dict[str, Any]:
     """Describe exactly which publisher claim families one adapter evaluated."""
     if pair is None:
         return {
@@ -25659,7 +25940,7 @@ def _comparison_claim_scope(spec: SourceSpec, pair: SourcePair | None) -> dict[s
         )
     )
 
-    provenance_failures = _rdf_provenance_failures(pair)
+    provenance_failures = _rdf_provenance_failures(pair) if provenance is None else provenance
     families.append(
         _claim_family(
             name="sourceRecordProvenance",
@@ -26007,7 +26288,7 @@ def _cached_comparison_claim_scope(
     cached = ctx.comparison_claim_scope_cache.get(spec)
     if cached is not None:
         return cached
-    scope = _comparison_claim_scope(spec, pair)
+    scope = _comparison_claim_scope(spec, pair, _cached_provenance(ctx, pair) if pair is not None else None)
     ctx.comparison_claim_scope_cache[spec] = scope
     return scope
 
@@ -26152,6 +26433,16 @@ def _receipt(ctx: Context, results: Sequence[CheckResult]) -> dict[str, Any]:
         ]
 
     def claim_scope(spec: SourceSpec) -> dict[str, Any]:
+        if spec.kind == "agency":
+            return {
+                "status": "exact"
+                if ctx.agency_result.get("status") == "passed"
+                else "not-evaluated"
+                if ctx.agency_result.get("status") == "unevaluated"
+                else "differences-found",
+                "claimFamilies": [],
+                "independentAgencyComparison": dict(ctx.agency_result),
+            }
         if spec.kind == "native-control":
             return _native_control_claim_scope(
                 spec,
@@ -26219,7 +26510,9 @@ def _receipt(ctx: Context, results: Sequence[CheckResult]) -> dict[str, Any]:
                 "includedPublisherConceptIris": sorted(spec.included_concept_iris),
                 "releaseKeys": list(spec.release_keys),
                 "publisherLoaded": (
-                    spec in native_controls_by_spec
+                    spec in ctx.loaded_specs()
+                    if spec.kind == "agency"
+                    else spec in native_controls_by_spec
                     if spec.kind == "native-control"
                     else spec in source_extracts_by_spec
                     if spec.kind == "source-extract"
@@ -26236,6 +26529,9 @@ def _receipt(ctx: Context, results: Sequence[CheckResult]) -> dict[str, Any]:
                 "nonWaivingPredicateDeclarations": sorted(spec.excluded_resource_predicates),
                 "claimScope": scope_by_spec[spec],
                 "fidelityStatus": fidelity_by_spec[spec],
+                "readingExceptions": list(pairs_by_spec[spec].publisher.reading_exceptions)
+                if spec in pairs_by_spec
+                else [],
                 "publisherInputs": [
                     {
                         "path": pin.path,
@@ -26294,6 +26590,17 @@ def _receipt(ctx: Context, results: Sequence[CheckResult]) -> dict[str, Any]:
     return {
         "type": "AtlasSourceFidelityReceipt",
         "verifier": VERIFIER_VERSION,
+        "implementationFiles": [
+            {
+                "path": str(path.relative_to(REPOSITORY_ROOT)),
+                "sha256": "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest(),
+            }
+            for path in (
+                Path(__file__),
+                REPOSITORY_ROOT / "tools/atlas_independent_pdf.py",
+                REPOSITORY_ROOT / "tools/atlas_independent_agency.py",
+            )
+        ],
         "passed": all(result.passed for result in results),
         "manifestDigest": ctx.manifest_digest,
         "constructionSummaryDigest": ctx.construction_summary_digest,
@@ -26414,10 +26721,19 @@ def render(results: Iterable[CheckResult]) -> str:
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--distribution", type=Path, default=None)
+    parser.add_argument("--distribution", type=Path, required=True)
     parser.add_argument("--source-root", type=Path, default=DEFAULT_SOURCE_ROOT)
     parser.add_argument("--output", type=Path, default=None)
     parser.add_argument("--minimum-label-sample", type=int, default=200)
+    for option in (
+        "agency-view",
+        "agency-view-manifest-sha256",
+        "agency-audit-evidence-manifest",
+        "agency-audit-evidence-sha256",
+        "agency-review-receipt",
+        "agency-review-receipt-sha256",
+    ):
+        parser.add_argument("--" + option, default=None)
     parser.add_argument(
         "--only",
         action="append",
@@ -26431,19 +26747,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    if args.distribution is None:
-        parser.error(
-            "--distribution is required; there is no default. The old default "
-            "(output/atlas-3.0-full-2026-08-07-ring-audit) was retired and would "
-            "audit an artifact nobody ships. Name the distribution directory that "
-            "holds atlas-manifest.json, e.g.\n"
-            "  uv run python tools/verify_atlas_source_fidelity.py "
-            "--distribution output/atlas-3.1-federal-register-thesaurus-2025-04-01/distribution\n"
-            "or go through the Makefile target, which resolves the directory for you:\n"
-            "  make audit-atlas-v3-source-fidelity "
-            "ATLAS_V3_AUDIT_ROOT=output/atlas-3.1-federal-register-thesaurus-2025-04-01"
-        )
-
     try:
         selected_specs, scoped_out_specs = select_scope(args.only or (), SOURCES)
     except ValueError as error:
@@ -26455,6 +26758,17 @@ def main(argv: Sequence[str] | None = None) -> int:
         expectations=Expectations(minimum_label_sample=args.minimum_label_sample),
         specs=selected_specs,
         scoped_out_specs=scoped_out_specs,
+        agency_options={
+            name: getattr(args, name)
+            for name in (
+                "agency_view",
+                "agency_view_manifest_sha256",
+                "agency_audit_evidence_manifest",
+                "agency_audit_evidence_sha256",
+                "agency_review_receipt",
+                "agency_review_receipt_sha256",
+            )
+        },
     )
     results = run_checks(ctx)
 

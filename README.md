@@ -55,6 +55,11 @@ covered by the same seal. The
 contract; its validator deliberately imports nothing from this package, so a
 consumer can copy that one directory and verify a distribution offline.
 
+The full builder selects complete retained generations through one local
+pointer. Consumers pin it once before reading sibling artifacts; see
+[generation selection](docs/atlas-generation-selection.md). Existing real
+output directories remain intact and require a fresh selection path for a new build.
+
 ## Who owns what
 
 RefSpec owns vocabulary acquisition, release validation, crosswalk evidence,
@@ -75,6 +80,7 @@ never source trees or live databases
 | Seal | `src/refspec/seal.py` + [design](docs/seal-design.md) |
 | Source-fidelity auditor | `tools/verify_atlas_source_fidelity.py` |
 | Publisher adapters | `src/refspec/registry/` |
+| Pinned legislative glossary reference | [`docs/congress-legislative-glossary.md`](docs/congress-legislative-glossary.md) |
 | Decision ledger (why) | [`docs/decisions.md`](docs/decisions.md) |
 | Active plan (what's next) | [`plans/validation-cost-reset-plan.md`](plans/validation-cost-reset-plan.md) |
 | US/EU landscape context | [`ATLAS_US_EU_COMPARISON.md`](ATLAS_US_EU_COMPARISON.md) |
@@ -119,7 +125,7 @@ publishers (leg 2) — leg 2 is the fidelity auditor's job, run on a schedule,
 not at read time:
 
 ```sh
-make audit-atlas-v3-source-fidelity ATLAS_V3_AUDIT_ROOT=<distribution>
+make audit-atlas-v3-source-fidelity ATLAS_V3_AUDIT_ROOT=<generation-selector>
 ```
 
 The auditor reads the publishers' pinned bytes with stock parsers, converts

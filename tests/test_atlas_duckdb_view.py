@@ -15,6 +15,8 @@ elsewhere; these tests are about the SQL the query methods run.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -39,12 +41,13 @@ _SAME_ENTITY_AS = "https://refspec.org/ns/atlas/v3#sameEntityAs"
 _B32 = pa.binary(32)
 
 #: The newest sealed compact search view carrying REF-042's derived-relations
-#: table. ``output/`` is git-ignored, so the one test that reads it skips
-#: when it is absent -- the same posture ``tests/test_atlas_explorer_cli.py``
-#: takes toward its own sealed view.
+#: table. ``output/`` is git-ignored; its manifest and the two tables the one
+#: test below reads arrive with the pinned inputs (``make fetch-pinned-inputs``),
+#: and the test checks both tables against this manifest before reading them.
 _SEALED_SEARCH_VIEW = (
     Path(__file__).resolve().parents[1] / "output" / "atlas-3.1-parquet-search-view-2026-08-21d"
 )
+_SEALED_SEARCH_VIEW_MANIFEST_SHA256 = "sha256:33961f3acac41c60cfaadb75e004bd0723c7e35758926c3dd6d50e77053ea092"
 
 # The compact search-view schemas duckdb_view.py actually queries against --
 # narrower than refspec.atlas.parquet_tables.TABLE_SCHEMAS, which shapes the
@@ -1207,17 +1210,23 @@ def test_overview_draws_cross_release_derived_relations_as_edges_when_opted_in(
 def test_overview_pins_the_sealed_views_cross_release_derived_edge_volume() -> None:
     """Pin the real cross-release derived volume the sealed view carries.
 
-    Skipped when the (git-ignored) sealed search view is not present locally.
-    Only ``resources`` and ``releases`` are read from it; the other compact
-    tables are registered empty, which keeps the whole check under a second
+    The (git-ignored) sealed search view is a pinned input (``make fetch-pinned-inputs``).
+    ``resources`` and ``releases`` are read through registered views and
+    ``derived-relations`` from the view root; the other compact tables are
+    registered empty, which keeps the whole check under a second
     and leaves ``edges`` holding *nothing but* the derived cross-release
     volume this test is about -- the asserted mapping volume between the same
     releases is large, churns per build, and is pinned elsewhere.
     """
 
     sealed = _SEALED_SEARCH_VIEW
-    if not (sealed / "tables" / DERIVED_RELATION_TABLE_NAME).is_file():
-        pytest.skip(f"the sealed compact search view is not present locally: {sealed}")
+    manifest_bytes = (sealed / "search-view-manifest.json").read_bytes()
+    assert "sha256:" + hashlib.sha256(manifest_bytes).hexdigest() == _SEALED_SEARCH_VIEW_MANIFEST_SHA256
+    members = {member["path"]: member["sha256"] for member in json.loads(manifest_bytes)["members"]}
+    # The view reads the derived-relations table from its root, not through the
+    # registered compact tables, so it is the third file this test depends on.
+    derived = sealed / "tables" / DERIVED_RELATION_TABLE_NAME
+    assert "sha256:" + hashlib.sha256(derived.read_bytes()).hexdigest() == members[f"tables/{derived.name}"]
 
     temporary_directory = tempfile.TemporaryDirectory()
     connection = duckdb.connect(str(Path(temporary_directory.name) / "pin.duckdb"))
@@ -1227,7 +1236,10 @@ def test_overview_pins_the_sealed_views_cross_release_derived_edge_volume() -> N
     }
     for role in CompactRecordRole:
         if role in real_tables:
-            relation = connection.read_parquet(str(sealed / "tables" / real_tables[role]))
+            table_path = sealed / "tables" / real_tables[role]
+            digest = "sha256:" + hashlib.sha256(table_path.read_bytes()).hexdigest()
+            assert digest == members[f"tables/{real_tables[role]}"], f"{table_path} differs from the sealed view manifest"
+            relation = connection.read_parquet(str(table_path))
         else:
             relation = connection.from_arrow(_COMPACT_SCHEMAS[role].empty_table())
         relation.create_view(ATLAS_DUCKDB_TABLES[role])

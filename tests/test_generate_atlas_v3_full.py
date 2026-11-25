@@ -19,7 +19,9 @@ import pyarrow.parquet as pq
 import pytest
 from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF
+from writer_path_equivalence import write_both_and_compare
 
+from conftest import missing_pinned_input
 from refspec.atlas.v3_source_data import (
     RegistryCrossRingRelation,
     RegistryInputPin,
@@ -32,6 +34,7 @@ from refspec.atlas.v3_source_data import (
     RegistrySupplementalSourceRecord,
     mapping_triple_digest,
 )
+from refspec.atlas_index import atlas_index_digests
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
@@ -685,12 +688,9 @@ def test_recorded_instant_comes_from_release_dates_not_a_clock() -> None:
 def test_fixed_distribution_inputs_are_externally_pinned_and_logical() -> None:
     """Pin that the fixed inputs inventory is externally pinned and carries only logical paths."""
 
-    # Same split as the ICPSR fixture: an absent capture skips, a moved digest
-    # raises `ValueError` and fails, because that is drift rather than absence.
-    try:
-        inventory = generator.verify_inputs()
-    except FileNotFoundError as error:
-        pytest.skip(str(error))
+    # Every input arrives with the pinned inputs (`make fetch-pinned-inputs`), so
+    # an absent capture fails here like a moved digest does (REF-071).
+    inventory = generator.verify_inputs()
 
     assert set(inventory) == {
         "expectedResources",
@@ -1511,17 +1511,16 @@ def test_registry_mapping_policy_pins_index_content_and_descriptor_proof(
 
     index = generator._read_json(generator.ROOT / "portfolio/atlas-index-v0.json")
     proof = generator._read_json(generator.REGISTRY_DESCRIPTORS_PROOF)
-    assert len(generator._validated_registry_index_rows(index, proof)) == 112
+    assert len(generator._validated_registry_index_rows(index, proof)) == 113
 
     changed_index = json.loads(json.dumps(index))
     mapping_row = next(row for row in changed_index["rows"] if row["resourceId"] == "eurovoc-lcsh-alignment")
     mapping_row["sourceModule"] = "refspec.registry.unapproved_alignment"
-    with pytest.raises(ValueError, match="index content digest differs"):
+    with pytest.raises(ValueError, match="indexDigest differs from its content"):
         generator._validated_registry_index_rows(changed_index, proof)
 
-    changed_digest = generator._registry_index_content_digest(changed_index)
-    changed_index["indexDigest"] = changed_digest
-    changed_index["indexId"] = "urn:ref:atlas-index:" + changed_digest.removeprefix("sha256:")
+    changed_index.update(atlas_index_digests(changed_index))
+    changed_index["indexId"] = "urn:ref:atlas-index:" + changed_index["indexDigest"].removeprefix("sha256:")
     with pytest.raises(ValueError, match="differs from the descriptor proof"):
         generator._validated_registry_index_rows(changed_index, proof)
 
@@ -1824,37 +1823,6 @@ def test_streamed_construction_matches_the_whole_graph_oracle(
     )
     releases, mapping_release = _compiled_mapping_case(tmp_path)
     mapping_releases = (mapping_release,)
-    prebuild = _compiled_stream_prebuild(releases, mapping_releases)
-    compiled_rows = prebuild.compiled_rows
-    pack_plans = prebuild.pack_plans
-    construction_seeds = prebuild.construction_seeds
-
-    graphs = generator._build_graphs(
-        releases,
-        mapping_releases=mapping_releases,
-        include_projection=False,
-    )
-    try:
-        legacy_validation = generator._validate_compiled_producer_output(
-            releases,
-            graphs,
-            compiled_rows,
-            mapping_releases,
-        )
-        legacy_accounting = generator._plain(graphs.accounting)
-        legacy_root = tmp_path / "whole-graph"
-        legacy_result, legacy_manifest = generator._write_candidate_distribution(
-            legacy_root / "distribution",
-            graphs,
-            releases=pack_plans,
-            created_at=_TEST_CREATED_AT,
-            compiled_validation=legacy_validation,
-            construction_seeds=construction_seeds,
-            parquet_tables=legacy_root / "parquet-view",
-        )
-    finally:
-        graphs.release()
-
     comparand_calls = {"idsByRole": 0, "reachability": 0}
     original_ids_by_role = generator.ATLAS_VALIDATE._rdf_record_ids_by_role
     original_reachability = generator.ATLAS_VALIDATE._check_explorer_reachability
@@ -1870,49 +1838,38 @@ def test_streamed_construction_matches_the_whole_graph_oracle(
         comparand_calls["reachability"] += 1
         original_reachability(served, asserted)
 
-    monkeypatch.setattr(
-        generator.ATLAS_VALIDATE,
-        "_rdf_record_ids_by_role",
-        counted_ids_by_role,
-    )
-    monkeypatch.setattr(
-        generator.ATLAS_VALIDATE,
-        "_check_explorer_reachability",
-        counted_reachability,
-    )
-    streamed = generator._stream_construct_graphs(
-        list(releases),
-        list(mapping_releases),
-        prebuild=prebuild,
-        spool_root=tmp_path / "stream-spool",
-    )
-    streamed_root = tmp_path / "streamed"
-    streamed_result, streamed_manifest = generator._write_streamed_candidate_distribution(
-        streamed_root / "distribution",
-        streamed,
-        pack_plans,
+    def count_streamed_comparands() -> None:
+        monkeypatch.setattr(
+            generator.ATLAS_VALIDATE,
+            "_rdf_record_ids_by_role",
+            counted_ids_by_role,
+        )
+        monkeypatch.setattr(
+            generator.ATLAS_VALIDATE,
+            "_check_explorer_reachability",
+            counted_reachability,
+        )
+
+    streamed, _manifest = write_both_and_compare(
+        tmp_path,
+        releases,
+        mapping_releases,
+        _compiled_stream_prebuild(releases, mapping_releases),
         created_at=_TEST_CREATED_AT,
-        construction_seeds=construction_seeds,
-        parquet_tables=streamed_root / "parquet-view",
+        before_streaming=count_streamed_comparands,
     )
-
-    def files(root: Path) -> dict[str, bytes]:
-        return {
-            path.relative_to(root).as_posix(): path.read_bytes()
-            for path in root.rglob("*")
-            if path.is_file()
-        }
-
-    unstamped = generator.UNSTAMPED_ASSERTED_INVENTORY_DIGEST
-    assert generator._stamped_source_accounting(
-        streamed.accounting, unstamped
-    ) == generator._stamped_source_accounting(legacy_accounting, unstamped)
-    assert streamed.compiled_validation == legacy_validation
-    assert streamed_manifest == legacy_manifest
-    assert streamed_result == legacy_result
-    assert files(streamed_root) == files(legacy_root)
+    legacy_root = tmp_path / "legacy"
+    streamed_root = tmp_path / "streamed"
     assert comparand_calls["idsByRole"] > 0
     assert comparand_calls["reachability"] > 0
+    spool = streamed.spool
+    for raw, sorted_paths in (
+        (spool.spool_paths, spool.sorted_rdf_paths),
+        (spool.compact_paths, spool.sorted_compact_paths),
+    ):
+        assert raw and raw.keys() == sorted_paths.keys()
+        assert not any(path.exists() for path in raw.values())
+        assert all(path.is_file() for path in sorted_paths.values())
 
     role = generator.CompactRecordRole.LABEL
     table_path = streamed_root / "parquet-view" / generator.TABLE_DIRECTORY / generator.TABLE_NAMES[role]
@@ -1945,6 +1902,80 @@ def test_streamed_construction_matches_the_whole_graph_oracle(
     finally:
         legacy_graphs.release()
     assert legacy_error.value.code == streamed_error.value.code
+
+
+@pytest.mark.parametrize("failure", ["_write_sorted_lines", "_materialize_nquads_pack", "line-count"])
+def test_streamed_pack_failure_keeps_raw_input(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, failure: str,
+) -> None:
+    catalog = Graph()
+    catalog.add((URIRef("urn:test:subject"), URIRef("urn:test:predicate"), URIRef("urn:test:object")))
+    spool = generator._StreamingGraphSpool(tmp_path / "spool", (), resource_owner_tokens={}, catalog=catalog)
+    spool.append_catalog()
+    key = (None, None)
+    raw = spool.spool_paths[key]
+    original = raw.read_bytes()
+
+    if failure == "line-count":
+        spool.line_counts[key] += 1
+        expected = pytest.raises(ValueError, match="streamed pack line count differs")
+    else:
+        def fail(*_args, **_kwargs):
+            raise OSError("injected pack failure")
+
+        monkeypatch.setattr(generator, failure, fail)
+        expected = pytest.raises(OSError, match="injected pack failure")
+
+    with expected:
+        spool.materialize_packs(tmp_path / "distribution", incremental=generator.ColdPackMaterialization())
+    assert raw.read_bytes() == original
+
+
+@pytest.mark.parametrize("failure", ["sort", "write"])
+def test_streamed_compact_failure_keeps_current_raw_input(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, failure: str,
+) -> None:
+    monkeypatch.setattr(generator, "_registry_asserted_graph", _compiled_descriptor_graph)
+    releases = (_compiled_source_release(tmp_path),)
+    streamed = generator._stream_construct_graphs(
+        list(releases), [], prebuild=_compiled_stream_prebuild(releases, ()), spool_root=tmp_path / "spool",
+    )
+    spool = streamed.spool
+    role = generator.CompactRecordRole.SOURCE_RECORD
+    raw = spool.compact_paths[role]
+    original = raw.read_bytes()
+    completed = spool.compact_paths[generator.CompactRecordRole.RESOURCE]
+    assert completed.is_file()
+    error = OSError("injected compact failure")
+
+    if failure == "sort":
+        sort = generator._write_sorted_lines
+
+        def fail_role_sort(path, lines):
+            if path == spool.sorted_compact_root / raw.name:
+                raise error
+            sort(path, lines)
+
+        monkeypatch.setattr(generator, "_write_sorted_lines", fail_role_sort)
+    else:
+        add = generator.AtlasParquetTableWriter.add
+        consumed_one = False
+
+        def fail_role_write(writer, observed_role, record):
+            nonlocal consumed_one
+            if observed_role == role:
+                if consumed_one:
+                    raise error
+                consumed_one = True
+            add(writer, observed_role, record)
+
+        monkeypatch.setattr(generator.AtlasParquetTableWriter, "add", fail_role_write)
+
+    with pytest.raises(OSError, match="injected compact failure") as caught:
+        spool.write_parquet(tmp_path / "parquet-view")
+    assert caught.value is error
+    assert raw.read_bytes() == original
+    assert not completed.exists()
 
 
 def _probe_reachability_divergence(
@@ -2290,13 +2321,14 @@ def _probe_evidence_resolution(
     def remove_mapping_evidence(
         graph: Graph,
         current_mappings: tuple[RegistryMappingRelease, ...] = (),
+        accounting_expectations=None,
     ) -> None:
         nonlocal mutated
         if current_mappings and not mutated:
             binding = next(graph.subjects(RDF.type, generator.RKAF.EvidenceBinding))
             graph.remove((binding, None, None))
             mutated = True
-        original(graph, current_mappings)
+        original(graph, current_mappings, accounting_expectations)
 
     monkeypatch.setattr(
         generator,
@@ -3429,7 +3461,7 @@ def icpsr_release():
     try:
         return generator._load_icpsr(_source_spec("icpsr-subject-thesaurus"))
     except FileNotFoundError as error:
-        pytest.skip(str(error))
+        missing_pinned_input(str(error))
 
 
 @pytest.fixture(scope="module")
@@ -3439,7 +3471,7 @@ def registry_code_releases():
     from refspec.atlas.v3_registry_codes import load_registry_code_releases
 
     if not (ROOT / "output" / "registry-real-data-sources").is_dir():
-        pytest.skip("pinned registry code sources are not present: output/registry-real-data-sources")
+        missing_pinned_input("pinned registry code sources are not present: output/registry-real-data-sources")
     return tuple(generator._adapt_registry_release(release) for release in load_registry_code_releases(ROOT))
 
 
@@ -4006,24 +4038,13 @@ def test_source_accounting_recounts_all_22_icpsr_remap_evidence_records() -> Non
     )
 
 
-def test_generation_report_uses_a_location_independent_distribution_path(
-    tmp_path: Path,
-) -> None:
-    """Pin that the generation report names the distribution by a relative path."""
-
-    first = tmp_path / "checkout-a" / "distribution"
-    second = tmp_path / "checkout-b" / "distribution"
-
-    assert generator._generation_report_distribution_path(first) == "distribution"
-    assert generator._generation_report_distribution_path(second) == "distribution"
-    assert not Path(generator._generation_report_distribution_path(first)).is_absolute()
-
-
+@pytest.mark.parametrize("parquet_view", [False, True])
 def test_streamed_generation_report_records_memory_profile_shape(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
+    parquet_view: bool,
 ) -> None:
-    """The final report exposes the diagnostic RSS receipt in a stable shape."""
+    """The selected real candidate keeps the report, optional view and diagnostics coherent."""
 
     monkeypatch.setattr(
         generator,
@@ -4038,6 +4059,7 @@ def test_streamed_generation_report_records_memory_profile_shape(
         prebuild=prebuild,
         spool_root=tmp_path / "stream-spool",
     )
+    projection, missing_projection_keys = generator._agency_projection_from_loaded_releases(releases, ())
     output = tmp_path / "built" / "distribution"
     generator._write_streamed_distribution(
         output,
@@ -4045,10 +4067,18 @@ def test_streamed_generation_report_records_memory_profile_shape(
         releases=prebuild.pack_plans,
         construction_seeds=prebuild.construction_seeds,
         generation_report=prebuild.generation_report,
+        parquet_view=parquet_view,
+        agency_projection=projection,
+        agency_projection_missing_keys=missing_projection_keys,
     )
 
-    report = json.loads((output.parent / "generation-report.json").read_bytes())
-    profile = report["memoryProfile"]
+    selected = generator.select_atlas_generation(output)
+    assert selected.parquet_view.exists() is parquet_view
+    report = json.loads(selected.report.read_bytes())
+    assert report["distribution"]["path"] == "distribution"
+    assert "memoryProfile" not in report, "measurements stay out of the byte-compared report"
+    measurements = json.loads((selected.root / generator.GENERATION_MEASUREMENTS_FILE).read_bytes())
+    profile = measurements["memoryProfile"]
     assert set(profile) == {
         "measurement",
         "peakRssBytes",

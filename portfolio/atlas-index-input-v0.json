@@ -10,6 +10,7 @@
     "refspec.registry.agency_crosswalk",
     "refspec.registry.cfr_authority_notes",
     "refspec.registry.citation_grammar",
+    "refspec.registry.congress_legislative_glossary",
     "refspec.registry.claim_release_exports",
     "refspec.registry.ecfr",
     "refspec.registry.entity_registry_release",
@@ -29,7 +30,6 @@
     "refspec.registry.infrastructure.source_concept_release",
     "refspec.registry.infrastructure.source_controlled_resource",
     "refspec.registry.infrastructure.source_identity",
-    "refspec.registry.infrastructure.zyte_transport",
     "refspec.registry.iri_minting",
     "refspec.registry.managed_releases.federal_register_thesaurus_2025_managed_release",
     "refspec.registry.managed_releases.icpsr_managed_release",
@@ -47,8 +47,8 @@
     "refspec.registry.uslm",
     "refspec.registry.xml_text"
   ],
-  "recordedAt": "2026-09-21T00:00:00Z",
-  "resourceCatalogDigest": "sha256:51f9d1085b5eabc35713c5d10fb1c6c4c6da50b09bf31e51da97b2abce8cf2c8",
+  "recordedAt": "2026-09-26T00:00:00Z",
+  "resourceCatalogDigest": "sha256:7764cdd375eb30519179d6c029433c77d7b65fc08b111d458c8bd9212c592987",
   "rows": [
     {
       "assignmentRole": "https://rulespec.org/ns/v1#assignmentContextual",
@@ -1847,6 +1847,34 @@
       "resourceId": "regulations-gov-agency-identity",
       "semanticRing": "entity",
       "sourceModule": "refspec.registry.regulations_gov_agencies"
+    },
+    {
+      "assignmentRole": "https://rulespec.org/ns/v1#assignmentMention",
+      "atlasParticipation": null,
+      "facet": "urn:ref:facet:entity",
+      "intendedUses": [
+        "entityResolution",
+        "mappingReference"
+      ],
+      "planningStatus": "planned",
+      "readinessEvidence": [
+        {
+          "kind": "sourceImplementation",
+          "path": "src/refspec/atlas/v3_registry_alignments_entity.py"
+        },
+        {
+          "kind": "parserTest",
+          "path": "tests/test_atlas_v3_agency_registry_release.py"
+        },
+        {
+          "kind": "sourceObservation",
+          "path": "plans/agency-registry-batch-1-decisions.json"
+        }
+      ],
+      "release": null,
+      "resourceId": "agency-registry",
+      "semanticRing": "entity",
+      "sourceModule": "refspec.registry.federal_register_native_controls"
     },
     {
       "assignmentRole": "https://rulespec.org/ns/v1#assignmentContextual",

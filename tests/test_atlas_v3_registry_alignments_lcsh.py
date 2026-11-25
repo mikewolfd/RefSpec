@@ -14,6 +14,7 @@ from pathlib import Path
 
 import pytest
 
+from conftest import LCSH_RELEASE_GROUP, missing_pinned_input
 from refspec.atlas.v3_registry_alignments_lcsh import (
     DEFAULT_SOURCE_ROOT,
     LCSH_BULK_FILENAME,
@@ -31,6 +32,9 @@ from refspec.registry.eurovoc_lcsh_alignment import EUROVOC_LCSH_ALIGNMENT_FILEN
 from refspec.registry.lcsh_topical import LcshTopicalLabel, LcshTopicalRecord
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# One xdist worker loads the release for every test here (conftest.LCSH_RELEASE_GROUP).
+pytestmark = LCSH_RELEASE_GROUP
 
 
 def _generator_module():
@@ -68,7 +72,7 @@ def release():
     """Load the consolidated release once per module, skipping when the pinned sources are not cached."""
 
     if not HAS_REAL_SOURCES:
-        pytest.skip("pinned LCSH consolidation sources are not cached")
+        missing_pinned_input("pinned LCSH consolidation sources are not cached")
     return load_lcsh_consolidated_release(SOURCE_ROOT)
 
 
@@ -188,7 +192,7 @@ def test_referenced_selection_pins_are_cached_and_include_fast_inputs() -> None:
     from refspec.atlas.v3_registry_alignments_lcsh import _lcsh_referenced_selection_pins
 
     if not HAS_REAL_SOURCES:
-        pytest.skip("pinned LCSH consolidation sources are not cached")
+        missing_pinned_input("pinned LCSH consolidation sources are not cached")
     first = _lcsh_referenced_selection_pins(SOURCE_ROOT)
     second = _lcsh_referenced_selection_pins(SOURCE_ROOT)
     assert first is second

@@ -38,8 +38,11 @@ like superscripts.
 
 from __future__ import annotations
 
-from collections.abc import Mapping
+from collections.abc import Iterator, Mapping
+from contextlib import contextmanager
 from types import MappingProxyType
+
+from spicy_docs.extraction.pypdf import PypdfDocument, PypdfReader
 
 # Presentation forms and typographic hyphens, mapped to what the author wrote.
 # Enumerated rather than derived from a Unicode category so that adding a
@@ -73,3 +76,23 @@ def pdf_text_fold_counts(value: str) -> Mapping[str, int]:
     """Report which folds ``value`` would trigger, for evidence and tests."""
 
     return {source: value.count(source) for source in PDF_TEXT_FOLDS if source in value}
+
+
+@contextmanager
+def open_pdf(payload: bytes) -> Iterator[PypdfDocument]:
+    """Open pinned PDF bytes through SpicyDocs' shared pypdf reader, for reading selected pages.
+
+    The empty password is tried explicitly, as pypdf's own constructor did for
+    the direct loops this replaced. A protected file or an unreadable page
+    raises ``spicy_docs.extraction.pypdf.PdfReadError``; it never reads as empty.
+    """
+
+    with PypdfReader().open(payload, password="") as document:
+        yield document
+
+
+def pdf_page_texts(payload: bytes) -> tuple[str, ...]:
+    """Every page's raw text layer (see :func:`open_pdf`); a page with none reads ``""``."""
+
+    with open_pdf(payload) as document:
+        return tuple(document.read_page(number) or "" for number in range(1, document.page_count + 1))

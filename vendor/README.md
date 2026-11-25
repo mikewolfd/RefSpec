@@ -1,24 +1,110 @@
 # Vendored dependencies
 
-`spicy_docs-0.26.5-py3-none-any.whl` supplies shared source readers and
+`spicy_docs-0.54.0-py3-none-any.whl` supplies shared source readers and
 bounded U.S. Code acquisition with validated archive member delivery.
-SHA-256: `c17453a827f45c514196ac8dace414a4f50b6f8859b5fb8f2d0153d1a32e3a5d`.
-Provider source: SpicyDocs `1dc77011d79eeef26024396626a1200059a6e09a` on `main`, with Rulespec Artifacts 1.1.0.
+SHA-256: `c17f7b36b6a6756e7475e6b50d21e172b1ab69ef21fd2255ed4a2c3539f27bae`.
+Provider source: SpicyDocs `ae2c71ee55388d4218a5cd8c14c695f7f174067a`, the
+0.54.0 release commit, with Rulespec Artifacts 1.1.2; two builds from a clean
+archive of that commit reproduce these bytes.
 RefSpec 0.1.0.dev10 retains snapshot acceptance, normalization and interpretation.
 Its title cache records original HTTP facts; its corpus and annual tools process
 validated members without reopening ZIPs. See [U.S. Code inputs](../docs/uscode-acquisition.md).
 
 Python 3.12, PyArrow 25.0.1 and DuckDB 1.5.5 or later remain unchanged. Existing
 sealed artifacts are unchanged; comparing a new writer to older Parquet bytes
-requires a row comparison. RefSpec 0.1.0.dev12 is qualified with SpicyDocs 0.26.5 and Rulespec Artifacts 1.1.0,
-shared by the whole stack.
-The current DocSpec 0.6/Search 0.2/Engine 0.4 stack pins SpicyDocs 0.17 and cannot
-share this environment until a coordinated adoption. Search's optional identity
-comparison group still uses the separately qualified RefSpec dev9; its runtime
-does not depend on RefSpec. SpicyRegs 0.1.6 remains qualified with SpicyDocs 0.18.
+requires a row comparison. RefSpec 0.1.0.dev25 selects SpicyDocs 0.54.0
+and Rulespec Artifacts 1.1.2. Sibling pins move on their own schedule, so read
+each repository's `pyproject.toml` rather than a list here; SpicySearch vendors
+RefSpec in optional groups only, and its runtime does not depend on RefSpec.
+
+**What 0.31.0 adds for RefSpec.** The canonical citation grammar, identifier
+shapes and `urn:rkaf` minting (`spicy_docs.interpretation.citation_grammar`,
+`identifier_shapes` with `normalize_docket_references`, and `iri_minting`),
+ported from RefSpec's own modules, and the Unified Agenda field-path projection
+(`spicy_docs.sources.unified_agenda.projection`), moved from
+`unified_agenda_editions`. RefSpec does not import these yet: the switch moves
+expectations and Unified Agenda counts, so it waits for a rebuild (see
+[PLAN.md](../PLAN.md)). The only new `Requires-Dist` against 0.26.6 is the
+unused `courtlistener-local` extra.
+
+**What 0.36.0 changes for RefSpec.** Its `Requires-Dist` equals 0.31.0's. Of
+the modules RefSpec imports, four changed: `sources.uscode` now ships OLRC
+Table III's `iter_table3_chain`, and an act without a Table III page is a
+retried transport failure that keeps the dropped body rather than a refusal;
+`sources.zyte` moved its shared provider rules into `transport.provider_api`,
+with the names RefSpec imports unchanged; `transport.credentials` makes `CREDENTIAL_PARAMETERS`
+public and lets `scrub_credential` take several keys; `reading.zip_archive`
+gains an optional per-member observer. The Unified Agenda and Federal Register
+Topics receipts hash unchanged modules, so their producer blocks do not move;
+a rebuilt U.S. Code source-credit receipt records new digests for
+`sources.uscode` and `reading.zip_archive`. Since 0.31.0 the grammar, shapes and
+minters RefSpec has not yet imported changed too (`identifier_shapes` most),
+and the table contracts gained cross-table references; RefSpec imports neither
+`spicy_docs.interpretation` nor `spicy_docs.schemas`.
+
+**What 0.39.2 changes for RefSpec.** Nothing it imports. Since 0.36.0
+SpicyDocs changed bill families, citations, SAM extracts, bill-version codes and
+three bill-table descriptions; 0.39.2 is 0.39.1's code requiring Rulespec
+Artifacts 1.1.2 exactly, its only `Requires-Dist` change.
+
+**What 0.42.0 changes for RefSpec.** Of the modules it imports, only
+`sources.uscode` changed: 0.40.0 removed OLRC Table III's `iter_table3_chain`,
+which RefSpec never imported, and reads an act's absence from the bulk file
+(`read_table3_bulk_archive`) instead of the chain of pages. A rebuilt U.S. Code
+source-credit receipt therefore records a new digest for `sources.uscode`; the
+Unified Agenda and Federal Register Topics receipts hash unchanged modules. The
+new `federal_register` table contract is in `spicy_docs.schemas`, which RefSpec
+does not import. The `Requires-Dist` set is unchanged.
+
+**What 0.44.0 changes for RefSpec.** Nothing it imports. Since 0.42.0 SpicyDocs
+added per-column types to its table contracts, the typed `document_attributes`
+and `docket_attributes` contracts with their projections, and the
+`fec_committee_history` contract with the FEC committee master reader, all under
+`spicy_docs.schemas` and `spicy_docs.sources.fec`, which RefSpec does not
+import. Every module RefSpec imports has the same bytes, so no receipt's
+producer digest moves. The `Requires-Dist` set is unchanged.
+
+**What 0.45.0 changes for RefSpec.** Nothing it imports or reads. 0.45.0 moves
+the Regulations.gov document policy from 1.2 to 1.3 (a volatile tie goes to the
+newest S3 write, evidence packs v2, and 1.2 document releases are refused) and
+gives the Mirrulations reader each object's `last_modified`, in
+`spicy_docs.sources.regulations_gov`, `sources.mirrulations`, `source_native`,
+`releases` and `schemas`. RefSpec imports none of them and replays no SpicyDocs
+release: its only Regulations.gov bytes are SpicyRegs Parquet snapshots pinned
+by digest (the sealed agency crosswalk's `dockets.parquet` and
+`documents.parquet`), which a test reads with PyArrow and the Atlas build
+refuses as a substrate. Every SpicyDocs module RefSpec's imports load has the
+same bytes, so no receipt's producer digest moves; the `Requires-Dist` set is
+unchanged.
+
+**What 0.46.0 changes for RefSpec.** Nothing it imports or reads. 0.46.0 adds
+the `at-joined/1` member-key spelling (the identity's components in contract
+order joined by `@`, each non-empty and free of `@`, refused per row rather
+than escaped) and declares it on the `bill_sections` and
+`fec_committee_history` contracts, and splits the Mirrulations keyed download
+into `download_keyed()` -- four files under `spicy_docs.schemas` and
+`spicy_docs.sources.mirrulations`, none of which RefSpec imports (the
+fifty-eight modules its imports load are byte-identical to 0.44.0's, so no
+receipt's producer digest moves). The `Requires-Dist` set is unchanged.
+
+**What 0.47.0 through 0.50.0 change for RefSpec.** Nothing it imports or
+reads. 0.47.0 appends `bill_sections.congress`; 0.50.0 (0.48.x and 0.49.0
+were never released) adds the `bill_cosponsors` and
+`member_party_affiliations` tables, inserts columns mid-table in `comments`,
+`documents` and `house_communications`, leads the `document_citations`
+identity with `document_kind`, and spells the bill citation `target_rule`
+`bill_number:<basis>` under `CITATION_RULE_SET_VERSION` `fffaef3303b1`. All of
+it is in `spicy_docs.schemas`, `interpretation`, `sources.congress.bill_status`,
+`sources.legislators`, `sources.regulations_gov` and new `reading` and
+`sources.gao` modules; RefSpec imports none of them, and the fifty-eight
+modules its imports load are byte-identical to 0.46.0's, so no receipt's
+producer digest moves. RefSpec reads no SpicyDocs table contract: its
+Regulations.gov and Federal Register Parquet inputs are snapshots pinned by
+digest and read by column name. The `Requires-Dist` set is unchanged.
 
 The `acquisition` extra supplies explicit Topics and U.S. Code HTTP routes.
-Imports remain offline. The `pdf-pypdf` extra supplies shared GAO page reading.
+Imports remain offline. The `pdf-pypdf` extra supplies shared PDF page reading
+(`refspec.pdf_text.pdf_page_texts`: the GAO, GNIS, FERC and RISC captures).
 USLM/eCFR formatting, Unicode positions and section interpretation stay here.
 
 PAR07 compares the complete CFR preservation record and its three accepted
@@ -30,13 +116,13 @@ separate SpicyDocs byte comparer checks selected file consistency, not authentic
 This wheel is vendored for reproducible installation and is not published to
 an index. Earlier qualification covers all 7,767 FR topic rows and 241,726
 Agenda records. Sealed data remains unchanged. Topics runs now retain separate producer receipts,
-and source-credit receipts include installed reader hashes. The `pdf-pypdf` extra
-shares raw GAO PDF page reading while RefSpec retains folding and interpretation.
+and source-credit receipts include installed reader hashes. RefSpec retains PDF
+text folding and interpretation.
 
 Prior U.S. Code structure corrections remain unadopted candidates. CFR authority
 observations retain actual scope; the existing authority cache is unchanged.
 
-`rulespec_conformance-0.2.0rc18-py3-none-any.whl` is vendored into this repo
+`rulespec_conformance-0.2.0rc19-py3-none-any.whl` is vendored into this repo
 because CI runners have no `~/Work/rulespec` checkout and `ci.yml` runs
 `uv sync --frozen`: a path source outside the repository cannot resolve
 there. Vendoring the wheel keeps `uv lock`/`uv sync` hermetic and lets
@@ -47,11 +133,12 @@ private index or an internal registry) exists for `rulespec-conformance`,
 at which point the vendored files and the `[tool.uv.sources]` entries in
 `pyproject.toml` should be deleted in favor of normal version constraints.
 
-**Source of truth**: rc18 is built from the rulespec repository's annotated
-tag `v0.2.0-pre.18` (tag object `b942529e`, commit `a519d06b`), pushed to
+**Source of truth**: rc19 is built from the rulespec repository's annotated
+tag `v0.2.0-pre.19` (tag object `e04a297c`, commit `52d80cc1`), pushed to
 `github.com/Formspec-Labs/rulespec`. Its SHA-256 digest is
-`ed11ab4a4709fd36b36ad445dd17ac0e14c10ec0d1f605f662f1a68a6ab662fb`, byte
-identical to the copy SpicySearch vendors. It carries the one shared
+`bb1e2fd674b8863be8022b2bafe4093279194c8dde7aa2c6ce0a6a28ec48e218`, byte
+identical to the copy SpicySearch vendors. rc18 came from tag `v0.2.0-pre.18`
+(commit `a519d06b`, digest `ed11ab4a…`). It carries the one shared
 platform artifact protocol, its common fixtures, and the source-item schema
 used by SpicyRegs, DocSpec, and SpicySearch.
 
@@ -79,18 +166,26 @@ bytes come from, not whether anyone else can get them, so that field stays
 `localUnpublished` until an index exists -- the same event that deletes this
 directory.
 
-**Why a second wheel.** `rulespec_artifacts-1.1.0-py3-none-any.whl` is
-vendored alongside it because rc18 declares a `rulespec-artifacts>=1.0.11`
+**Why a second wheel.** `rulespec_artifacts-1.1.2-py3-none-any.whl` is
+vendored alongside it because rc19, like rc18, declares a `rulespec-artifacts>=1.0.11`
 floor where rc16 and rc17 declared a hard `==1.0.9`, so 1.0.9 no longer
 satisfies it. That dependency arrived with the shared platform-artifact
 protocol. RefSpec now uses its bounded local blob writer for BILLSTATUS
 captures. The package is also required by rulespec-conformance, and `rulespec-artifacts` is on no index either, so it
 is vendored on the same interim terms and should be deleted at the same
-time. Version 1.1.0 is the exact dependency of SpicyDocs 0.26.5, built from
-Rulespec commit `dba6c0a9a54e64b74d48aa1393bf75460fb41e8a` on 2026-09-22 and shared by the whole stack. Its SHA-256
-digest is `3b2abcdcfa082f34baa3b03042c54fcc4e5e713901cd505cbd777dfd9bdf23cd`.
-It adds opt-in DocumentCapture v2 and v1 checker fixes after 1.0.14; the
-bounded local blob writer and public exports remain.
+time. Version 1.1.2 is the exact dependency of SpicyDocs 0.50.0, built in
+`packages/rulespec-artifacts` from Rulespec's release commit
+`23d5f2d98973b2a7f1bf7ce4c9c7a786a4f369ab` and shared by the whole stack; the same
+procedure reproduces 1.1.1 from `a3acb04`. Its SHA-256 digest is
+`7d547cd432b1d533b93dcfd3802e4a0e179de6e89301fd6faa8bb917b99830ef`.
+It adds opt-in DocumentCapture v2 and v1 checker fixes after 1.0.14; 1.1.2 changes
+only its version and ships platform fixtures that name it, where 1.1.1's named
+1.1.0. The bounded local blob writer and public exports remain.
+
+**What rc19 changed in the contract.** The context declares `oa:XPathSelector`,
+already a bound Core selector class, and the release version; no space widened.
+Its m2 release fixtures are re-stamped for the recompiled `source-fragment` and
+`ai-lineage` schemas, and its platform fixtures name `rulespec-artifacts` 1.1.0.
 
 **What rc17 and rc18 changed in the contract.** Two additions, no widening of
 an existing space, so nothing previously valid changed meaning.
@@ -128,3 +223,28 @@ rather than sitting here for days, which is how the 2026-09-04 re-cut was
 found. Check the new wheel's `Requires-Dist` against the previous one before
 locking: an added dependency that is on no index has to be vendored too,
 which is how the second wheel above arrived.
+
+**What 0.53.0 changes for RefSpec.** The imported XML reader adds optional
+byte positions and a separate span parser; its existing calls keep their
+behavior. MODS adds access-ID properties without changing its default element
+bound. Zyte records unencoded Content-Length and rejects ambiguous lengths;
+provider read failures become the provider's own error without raw exception
+chaining. These modules change their source hashes, so new capture receipts
+record the new implementation. Existing sealed data and binding versions stay
+unchanged. Qualification evidence is retained in
+`~/Work/corpora/claude-recovery-20260930/refspec-provider-comparison.json` and
+`refspec-provider.diff` beside it.
+
+**What 0.54.0 changes for RefSpec.** The SpicyDocs modules RefSpec calls are
+byte-identical to 0.53.0's: the U.S. Code readers, the CFR agency roster and
+subject index, the pypdf reader, PREMIS and Zyte. Importing every `spicy_docs`
+name RefSpec mentions in `src/`, `tools/`, `tests/` and `bindings/` (24
+modules) loads 61, and 11 of them differ. `sources.cfr.models` is the one
+RefSpec imports directly, for `CfrSourceError`, which is unchanged; the module
+adds the annual package id and its inverse. The rest load with their packages:
+the extraction package (Docling as the default recognition stack and the
+body-text derivation version), the annual CFR granule ids,
+`sources.govinfo.uslm` (a law's last Statutes page) and
+`sources.uscode.classification` (a row's page cell). Their source hashes move,
+so new capture receipts record the new implementation. Existing sealed data
+and binding versions stay unchanged.

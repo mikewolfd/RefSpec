@@ -1,14 +1,13 @@
-.PHONY: seal-distribution verify-distribution-seal generate check-generated lint lint-rdf-strict test test-package test-slow test-json-binding test-atlas-v3 \
+.PHONY: qualify-atlas-release fetch-pinned-inputs pinned-inputs-present build-derived build-atlas-umthes build-atlas-agency build-agency-registry-view test-full-atlas seal-distribution verify-distribution-seal generate check-generated lint lint-rdf-strict test test-package test-slow test-json-binding test-atlas-v3 \
 	atlas-v3-fixtures contract-dev \
 	audit-atlas-v3-source-fidelity audit-registry-inventory audit-registry-real-data \
 	release-atlas-federal-register-thesaurus verify-atlas-federal-register-thesaurus \
 	determinism-atlas-federal-register-thesaurus benchmark-atlas-shacl-scale \
 	stage-atlas-mapping-topology
 
-# No default. The prior default (output/atlas-3.0-full-2026-08-07-ring-audit)
-# is retired: HEAD's binding refuses that distribution's constructorProfile
-# (see plans/validation-cost-reset-plan.md). Callers must name a distribution
-# that validates under HEAD.
+# Require an explicit builder generation selector for each audit: a default
+# silently audits whatever build is on disk (the retired 2026-08-07 ring-audit
+# tree did exactly that).
 ATLAS_V3_AUDIT_ROOT ?=
 ATLAS_V3_AUDIT_SOURCE_ROOT ?= output/registry-real-data-sources
 # Space-separated comparison names. Empty means the whole registry. A scoped run
@@ -18,7 +17,7 @@ ATLAS_V3_AUDIT_ONLY ?=
 # Beside the distribution, never inside it. A distribution validates its own
 # membership as a closed set, so a receipt written into that directory makes
 # the audited artifact fail its own walk -- which is exactly what happened.
-ATLAS_V3_AUDIT_RECEIPT ?= $(ATLAS_V3_AUDIT_ROOT)-source-fidelity-receipt.json
+ATLAS_V3_AUDIT_RECEIPT ?= $(ATLAS_V3_AUDIT_ROOT:/=)-source-fidelity-receipt.json
 
 generate:
 	python3 tools/generate_model.py
@@ -33,13 +32,12 @@ generate:
 	uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
 		python bindings/atlas/3.1/tools/build_fixtures.py
 
-# The last step here also MATERIALIZES the Atlas 3.0 case tree. Those 8,339
-# files are generated and gitignored, so on a cold checkout that rebuild writes
-# them and proves them against the committed `fixtures-receipt.json`; on a warm
-# one the receipt answers in ~1.5s. `test` lists this target before
-# `test-package` for exactly that reason -- four test modules read case
-# directories directly.
-check-generated:
+# The prerequisite first makes the gitignored Atlas 3.0 case tree the one the
+# committed `fixtures-receipt.json` pins, so the last step compares the builder
+# with the receipt's tree, not with whatever an earlier checkout left on disk
+# (which used to fail here as "fixtures differ"); on a warm tree the receipt
+# answers in ~0.5s. Four test modules read case directories directly.
+check-generated: atlas-v3-fixtures
 	python3 tools/generate_model.py --check
 	uv run python tools/generate_crs_source_concept_releases.py --check
 	uv run python tools/generate_resource_catalog.py --check
@@ -72,16 +70,17 @@ check-generated:
 # ordering.
 test: lint lint-rdf-strict check-generated audit-registry-inventory test-json-binding test-package test-slow
 
-# Build the Atlas 3.0 case tree if, and only if, it is not there. `--check`
-# both builds and proves (against `fixtures-receipt.json`), so the cold path
-# gets its ~9s build and the warm path pays one directory test. Anything that
-# reads `bindings/atlas/3.1/fixtures/valid|invalid` should depend on this.
+# Make the Atlas 3.0 case tree the one `fixtures-receipt.json` pins. The tree is
+# generated and gitignored, so it survives a checkout of another commit; until
+# 2026-09-27 this target built it only when `valid/` was missing, and the suite
+# at another commit read the old commit's cases. `--materialize` hashes the tree
+# on disk once (~0.5s warm) and rebuilds only when that digest is not the
+# receipt's (~20s), proving the rebuild against the receipt before replacing
+# the tree. Anything that reads `bindings/atlas/3.1/fixtures/valid|invalid`
+# should depend on this.
 atlas-v3-fixtures:
-	@if [ ! -d bindings/atlas/3.1/fixtures/valid ]; then \
-		echo "Atlas 3.0 fixtures absent (generated, gitignored); building once"; \
-		uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
-			python bindings/atlas/3.1/tools/build_fixtures.py --check; \
-	fi
+	uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
+		python bindings/atlas/3.1/tools/build_fixtures.py --materialize
 
 # First, because it is the cheapest gate in the pipeline (~1s against ~1.7min).
 # The rule set is stated in pyproject.toml and the ruff version is pinned there.
@@ -90,6 +89,12 @@ atlas-v3-fixtures:
 # its style today, so adding it would reformat a third of the tree in exchange
 # for no failure class this gate does not already catch. Adopting it later is a
 # one-shot reformat commit plus one line here, not a decision to defer forever.
+# Puts every pinned input tools/pinned_inputs.json lists under output/, fetched
+# from R2 by digest and verified; needs the read-only REFSPEC_R2_* credentials
+# only when something is missing. `--check` verifies without downloading.
+fetch-pinned-inputs:
+	uv run python tools/fetch_pinned_inputs.py
+
 lint:
 	uv run ruff check .
 
@@ -108,11 +113,10 @@ lint-rdf-strict:
 audit-registry-inventory:
 	uv run python tools/verify_registry_audit.py
 
-# The real-data gate. It runs the suite with the claim-export real-data tests
-# enabled and rejects any registry module whose publisher evidence is unproven,
-# so it must set REFSPEC_REGISTRY_CLAIM_REAL_DATA rather than rely on the caller.
+# The real-data gate. It runs the suite, claim-export real-data tests included,
+# and rejects any registry module whose publisher evidence is unproven.
 audit-registry-real-data:
-	REFSPEC_REGISTRY_CLAIM_REAL_DATA=1 uv run python tools/verify_registry_audit.py \
+	uv run python tools/verify_registry_audit.py \
 		--run-tests --run-all-tests --require-real-data \
 		--output research/evidence/registry-real-data-audit-2026-08-03/summary.json
 
@@ -136,18 +140,50 @@ audit-registry-real-data:
 # pass), so 240s stays rather than tightens: two quiet-machine runs are not
 # the repeated measurement the 112-140s spread came from, and shrinking the
 # guard on that little evidence would risk the same nondeterministic flip.
-test-package: atlas-v3-fixtures
+# Every tier reads the pinned inputs (`make fetch-pinned-inputs`). This checks
+# presence and size only, so it costs nothing on each run; the fetch is what
+# verifies digests, when it places a file.
+pinned-inputs-present:
+	uv run python tools/fetch_pinned_inputs.py --present
+
+# The tiers are one function, conftest.tier_of, selected with `--tier`
+# (REF-071); CI calls these targets rather than spelling the selection out. The
+# slow and full-Atlas tiers load large real corpora in every worker -- one test
+# once reached 14.4 GiB, and `-n auto` on a 14-core, 48 GB host froze it on
+# 2026-09-23 -- so they run on a capped worker count; the fast tier stays auto.
+# CI raises the runaway guard, because a hosted runner is not this machine and
+# the job's own timeout is its guard.
+SLOW_WORKERS ?= 4
+PYTEST_ARGS ?=
+TEST_PACKAGE_FAIL_SECONDS ?= 240
+
+# The release this tier reads is also verified against its committed pins
+# (~2.4s measured 2026-09-27). The build alone never compared them, so the
+# pins went stale at a5a0aa2b (2026-08-14) and stayed stale for six weeks.
+#
+# `--dist loadgroup` keeps each `xdist_group` on one worker and deals every
+# other test out as `--dist load` does. The one group is
+# conftest.LCSH_RELEASE_GROUP: the consolidated LCSH release costs 70-90 s
+# and 4 GB per worker that loads it, and without the group two workers could
+# each pay it. Main at cd78e476 happened to load it once (its tests all on
+# one worker, 2 of 2 runs); the bounded red-path branch's added tests moved
+# them onto two, which is when the double load appeared. Measured 2026-09-28
+# on that branch, interleaved at the same load: the fast tier took 132-152 s
+# of pytest time with two loads, 103-119 s with one, and the grouped worker
+# (86-97 s busy) was never the busiest. Grouping makes one load a guarantee
+# rather than an accident of the test count.
+test-package: atlas-v3-fixtures pinned-inputs-present release-atlas-federal-register-thesaurus verify-atlas-federal-register-thesaurus
 	@start=$$(date +%s); \
-	uv run pytest -q -n auto -m "not slow"; \
+	uv run pytest -q -n auto --dist loadgroup --tier fast $(PYTEST_ARGS); \
 	status=$$?; \
 	end=$$(date +%s); \
 	elapsed=$$((end - start)); \
 	if [ "$$status" -ne 0 ]; then exit "$$status"; fi; \
-	if [ "$$elapsed" -gt 240 ]; then \
-		echo "test-package budget FAIL: took $${elapsed}s, exceeds the 240s runaway-guard budget" >&2; \
+	if [ "$$elapsed" -gt $(TEST_PACKAGE_FAIL_SECONDS) ]; then \
+		echo "test-package budget FAIL: took $${elapsed}s, exceeds the $(TEST_PACKAGE_FAIL_SECONDS)s runaway-guard budget" >&2; \
 		exit 1; \
 	elif [ "$$elapsed" -gt 130 ]; then \
-		echo "test-package budget WARN: took $${elapsed}s, over the 130s target (within the 240s fail budget)" >&2; \
+		echo "test-package budget WARN: took $${elapsed}s, over the 130s target (within the $(TEST_PACKAGE_FAIL_SECONDS)s fail budget)" >&2; \
 	fi
 
 # The slow tier `test-package` excludes: registry alignment/vocabulary tests
@@ -159,12 +195,14 @@ test-package: atlas-v3-fixtures
 # test_unified_agenda_editions.py, test_usc_section_oracle.py,
 # test_usc_disposition_tables.py, test_usc_act_index.py and
 # test_identifier_shapes.py (158 tests). Each of those six files keeps its
-# small synthetic-fixture tests in this tier; test_unified_agenda_parquet.py
-# also keeps test_the_entry_point_verifies_the_artifact_against_its_receipt,
-# so the fast tier still proves the shared artifact matches its receipt.
-# `audit-registry-real-data` already runs the complete, unfiltered suite
-# (tools/verify_registry_audit.py's run_full_test_suite passes pytest no `-m`
-# selection at all), so this tier duplicates no coverage against that audit --
+# small synthetic-fixture tests in the fast tier. Since REF-071 every test that
+# reads a derived artifact is `reads_built_artifact` and runs here, after
+# `make build-derived` -- including
+# test_the_entry_point_verifies_the_artifact_against_its_receipt, which the fast
+# tier used to keep and now cannot, having no artifact to read.
+# `audit-registry-real-data` runs every tier but `full_atlas`
+# (tools/verify_registry_audit.py's run_full_test_suite), so this tier
+# duplicates no coverage against that audit --
 # it gives the slow half of the suite a target that can be run and measured on
 # its own, AND (as a prerequisite of `test`, above) is what makes `make test`
 # complete: it is the only thing that runs the sealed Atlas 3.1 conformance
@@ -172,8 +210,14 @@ test-package: atlas-v3-fixtures
 # slow-marked tests once `test-package` stopped covering them. Without this
 # target wired into `test`, a developer can break the binding validator and
 # still get a green `make test`.
-test-slow: atlas-v3-fixtures
-	uv run pytest -q -n auto -m slow
+test-slow: atlas-v3-fixtures pinned-inputs-present build-derived
+	uv run pytest -q -n $(SLOW_WORKERS) --tier slow $(PYTEST_ARGS)
+
+# The complete Atlas topology: the full producer prebuild and its deep
+# compiled-output validation (~10 GB, tens of minutes each). One worker; local
+# work, like `test-slow` -- CI runs only `test-package` (REF-071).
+test-full-atlas: pinned-inputs-present
+	uv run pytest -q -n 1 --tier full-atlas $(PYTEST_ARGS)
 
 test-json-binding:
 	uv run --no-project --with-requirements bindings/json/1.0/requirements.txt \
@@ -184,20 +228,8 @@ test-atlas-v3: atlas-v3-fixtures
 		python bindings/atlas/3.1/tools/validate.py
 
 audit-atlas-v3-source-fidelity:
-	@if [ -z "$(ATLAS_V3_AUDIT_ROOT)" ]; then \
-		echo "error: ATLAS_V3_AUDIT_ROOT is unset. The old default" >&2; \
-		echo "(output/atlas-3.0-full-2026-08-07-ring-audit) was retired:" >&2; \
-		echo "HEAD's binding refuses that distribution's constructorProfile" >&2; \
-		echo "(see plans/validation-cost-reset-plan.md). Name a distribution" >&2; \
-		echo "that validates under HEAD, for example:" >&2; \
-		echo "  make audit-atlas-v3-source-fidelity \\" >&2; \
-		echo "    ATLAS_V3_AUDIT_ROOT=output/atlas-3.1-federal-register-thesaurus-2025-04-01" >&2; \
-		exit 1; \
-	fi
-	@audit_distribution="$(ATLAS_V3_AUDIT_ROOT)"; \
-	if [ ! -f "$$audit_distribution/atlas-manifest.json" ]; then \
-		audit_distribution="$$audit_distribution/distribution"; \
-	fi; \
+	@test -n "$(ATLAS_V3_AUDIT_ROOT)" || { echo "ATLAS_V3_AUDIT_ROOT must name a builder generation selector" >&2; exit 2; }
+	@set -e; audit_distribution=$$(uv run --frozen python -m refspec.atlas.generation "$(ATLAS_V3_AUDIT_ROOT)" --artifact distribution); \
 	only_flags=""; \
 	for comparison in $(ATLAS_V3_AUDIT_ONLY); do \
 		only_flags="$$only_flags --only $$comparison"; \
@@ -219,18 +251,33 @@ audit-atlas-v3-source-fidelity:
 # the whole code-declared topology -- and the identity is derived from the
 # source accounting, so the same source bytes rebuild the same tree byte for
 # byte and the manifest digest below stays an external pin rather than a
-# reading of whatever happens to be on disk.
+# reading of whatever happens to be on disk. The manifest binds the contract
+# digest, so a change to any contract file -- the generated registry coverage
+# and descriptors included -- moves both pins; `make contract-dev` prints the
+# new pair to record in the same commit, and `make test-package` fails until then.
+# Editing a registry module or its test moves neither: the index digest those
+# two proofs carry covers placement, not the bytes of the files it cites
+# (REF-073). This release's own adapter recipe still does, on purpose.
 ATLAS_FR_RELEASE_KEY ?= federal-register-thesaurus-2025
 ATLAS_FR_RELEASE_ROOT ?= output/atlas-3.1-federal-register-thesaurus-2025-04-01
 ATLAS_FR_RELEASE_SOURCE_ROOT ?= output/registry-real-data-sources
-ATLAS_FR_RELEASE_MANIFEST_SHA256 ?= 5af4afc8b426ca72b503621ddcbeee7cd1a8becffee5b41985986b3b9708cc9d
+ATLAS_FR_RELEASE_MANIFEST_SHA256 ?= 629d5e7e0f64424489f5b5af5bb878c39e7ff5fc1cac130c85983d3bf32e9fdf
 # The served Parquet view is a separate sealed artifact with its own external
 # pin; the seal payload binds both digests, and the view manifest names this
 # distribution manifest back.
-ATLAS_FR_RELEASE_VIEW_SHA256 ?= ffea1b83bee61ac1ea5e2680852d5e18a409e54f4b41d3035367887b9fe36a57
+ATLAS_FR_RELEASE_VIEW_SHA256 ?= 96018f4e2d6d87aa0f648e188ce0fe7c44bc4f840965cfaba937dd645eb23f36
 # Beside the distribution, never inside it, for the reason stated above the
 # source-fidelity receipt.
 ATLAS_FR_RELEASE_RECEIPT ?= $(ATLAS_FR_RELEASE_ROOT)-verification-receipt.json
+
+# The builder retains every generation it selects, but these gate inputs
+# (the FR release here, UMTHES and agency below) are disposable and rebuilt cold
+# on every run. Each target first drops only the builder-owned selection of its
+# root -- selector symlink, generation store, stale temp links -- instead of
+# accumulating a generation per run. A real directory (a pre-selection release,
+# or any mistyped root) is left for the builder to refuse; nothing else under
+# the root is touched, and a root is never removed wholesale.
+clear_selection = if [ -L "$(1)/distribution" ]; then rm -rf "$(1)/.distribution.generations" "$(1)/distribution" "$(1)"/.distribution.*.selecting; fi
 
 # Bare `uv run`, i.e. the PROJECT environment -- deliberately, and it must stay
 # that way. The builder imports RefSpec package code, so it is a project tool,
@@ -242,9 +289,60 @@ ATLAS_FR_RELEASE_RECEIPT ?= $(ATLAS_FR_RELEASE_ROOT)-verification-receipt.json
 # `--no-project --with-requirements` for the opposite reason: they must prove a
 # consumer can verify offline with no RefSpec package code at all.
 release-atlas-federal-register-thesaurus:
+	@$(call clear_selection,$(ATLAS_FR_RELEASE_ROOT))
 	uv run python tools/generate_atlas_v3_full.py \
 		--only-release "$(ATLAS_FR_RELEASE_KEY)" \
 		--output "$(ATLAS_FR_RELEASE_ROOT)/distribution"
+
+# Every derived artifact the suite reads, built from the pinned inputs
+# (`make fetch-pinned-inputs`): the Federal Register Thesaurus release with its
+# Parquet view (seconds; the fast tier reads it), the Unified Agenda Parquet
+# artifact (189 s measured 2026-09-22), the EuroVoc/GEMET claim releases, and
+# the bounded UMTHES and agency distributions with the agency registry view
+# (below). The slow tier reads all of them; its tests fail, not skip, when one
+# is missing.
+# The claim exporter refuses to replace a release, so a checkout that already
+# holds one exports beside it and swaps, keeping one previous generation.
+CLAIM_RELEASES_ROOT ?= output/registry-claim-releases
+
+build-derived: release-atlas-federal-register-thesaurus build-atlas-umthes build-atlas-agency build-agency-registry-view
+	uv run python -m refspec.registry.unified_agenda_parquet
+	rm -rf "$(CLAIM_RELEASES_ROOT).building"
+	uv run python tools/export_registry_claim_releases.py --output-root "$(CLAIM_RELEASES_ROOT).building"
+	rm -rf "$(CLAIM_RELEASES_ROOT).previous"
+	if [ -d "$(CLAIM_RELEASES_ROOT)" ]; then mv "$(CLAIM_RELEASES_ROOT)" "$(CLAIM_RELEASES_ROOT).previous"; fi
+	mv "$(CLAIM_RELEASES_ROOT).building" "$(CLAIM_RELEASES_ROOT)"
+
+# The bounded distributions the independent source-fidelity tests read, each a
+# cold build of pinned inputs: the complete UMTHES slice (~16 s measured
+# 2026-09-27; test_atlas_provenance_repair, test_atlas_asserted_facts_equivalence,
+# test_atlas_parquet_sample_scan) and the agency registry with the rosters,
+# Treasury accounts and CFR titles its endpoints need (~81 s), which
+# test_atlas_independent_adapters compares with the registry's own sealed view.
+ATLAS_UMTHES_ROOT ?= output/atlas-3.1-umthes-2026-09-27
+ATLAS_AGENCY_ROOT ?= output/atlas-3.1-agency-2026-09-27
+ATLAS_AGENCY_RELEASES = agency-registry-2026-09-26 ecfr-cfr-titles ecfr-agencies-roster-2026-08-15 \
+	federal-hierarchy-orgs-complete-2026-08-15 federal-register-agencies-roster-2026-08-15 \
+	opm-ehri-agency-subelement-2026-08-04 regulations-gov-agencies-roster-2026-08-16 \
+	treasury-fast-book-accounts-parts-ii-iii-2026-07
+AGENCY_REGISTRY_VIEW_ROOT ?= output/agency-registry-view
+
+build-atlas-umthes:
+	@$(call clear_selection,$(ATLAS_UMTHES_ROOT))
+	uv run python tools/generate_atlas_v3_full.py \
+		--only-release umthes-gemet-endpoints-2026-08-15 \
+		--output "$(ATLAS_UMTHES_ROOT)/distribution"
+
+build-atlas-agency:
+	@$(call clear_selection,$(ATLAS_AGENCY_ROOT))
+	uv run python tools/generate_atlas_v3_full.py \
+		$(foreach key,$(ATLAS_AGENCY_RELEASES),--only-release $(key)) \
+		--output "$(ATLAS_AGENCY_ROOT)/distribution"
+
+# The view refuses to replace a directory, so the rebuild starts empty.
+build-agency-registry-view:
+	rm -rf "$(AGENCY_REGISTRY_VIEW_ROOT)"
+	uv run python tools/build_agency_registry_view.py --output "$(AGENCY_REGISTRY_VIEW_ROOT)"
 
 # The determinism gate, in the miniature that runs in 6.4s measured (both
 # builds plus the comparison, 2026-08-13): build the same bounded release twice,
@@ -271,7 +369,7 @@ determinism-atlas-federal-register-thesaurus:
 	$(MAKE) release-atlas-federal-register-thesaurus \
 		ATLAS_FR_RELEASE_ROOT="$(ATLAS_FR_DETERMINISM_ROOT)-b"
 	uv run python tools/compare_build_trees.py \
-		"$(ATLAS_FR_DETERMINISM_ROOT)-a" "$(ATLAS_FR_DETERMINISM_ROOT)-b"
+		"$(ATLAS_FR_DETERMINISM_ROOT)-a/distribution" "$(ATLAS_FR_DETERMINISM_ROOT)-b/distribution"
 
 # The staging gate to run BEFORE any full build. The Federal Register release is
 # one source unit whose key is already a valid pack-path token, so a build
@@ -304,9 +402,10 @@ stage-atlas-mapping-topology:
 		--only-release gao-cra-priority-of-regulation \
 		--only-release unified-agenda-gao-cra-priority-2026-08-15 \
 		--output "$(ATLAS_MAPPING_STAGE_ROOT)/distribution"
+	@set -e; selected=$$(uv run --frozen python -m refspec.atlas.generation "$(ATLAS_MAPPING_STAGE_ROOT)/distribution"); \
 	uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
 		python bindings/atlas/3.1/tools/validate.py \
-		--distribution "$(ATLAS_MAPPING_STAGE_ROOT)/distribution"
+		--distribution "$$selected/distribution"
 
 # The contract-iteration inner loop, ~45s. Edit the ontology, the shapes, a
 # schema or the conformance corpus, then run this one target: it re-derives the
@@ -325,25 +424,24 @@ stage-atlas-mapping-topology:
 # release artifact against the committed pins.
 ATLAS_CONTRACT_DEV_ROOT ?= output/atlas-3.1-contract-dev
 
-contract-dev:
+contract-dev: atlas-v3-fixtures
 	uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
 		python bindings/atlas/3.1/tools/build_fixtures.py --check
 	$(MAKE) test-atlas-v3
 	rm -rf "$(ATLAS_CONTRACT_DEV_ROOT)"
 	$(MAKE) release-atlas-federal-register-thesaurus \
 		ATLAS_FR_RELEASE_ROOT="$(ATLAS_CONTRACT_DEV_ROOT)"
+	@set -e; selected=$$(uv run --frozen python -m refspec.atlas.generation "$(ATLAS_CONTRACT_DEV_ROOT)/distribution"); \
 	uv run --no-project --with-requirements bindings/atlas/3.1/requirements.txt \
 		python bindings/atlas/3.1/tools/validate.py \
-		--smoke "$(ATLAS_CONTRACT_DEV_ROOT)/distribution" --quiet
-	@manifest_sha256=$$(shasum -a 256 \
-		"$(ATLAS_CONTRACT_DEV_ROOT)/distribution/atlas-manifest.json" | cut -d' ' -f1); \
-	view_sha256=$$(shasum -a 256 \
-		"$(ATLAS_CONTRACT_DEV_ROOT)/parquet-view/view-manifest.json" | cut -d' ' -f1); \
+		--smoke "$$selected/distribution" --quiet; \
+	manifest_sha256=$$(shasum -a 256 "$$selected/distribution/atlas-manifest.json" | cut -d' ' -f1); \
+	view_sha256=$$(shasum -a 256 "$$selected/parquet-view/view-manifest.json" | cut -d' ' -f1); \
 	uv run --with-requirements bindings/atlas/3.1/requirements.txt \
 		python tools/verify_federal_register_thesaurus_distribution.py \
-		--distribution "$(ATLAS_CONTRACT_DEV_ROOT)/distribution" \
+		--distribution "$$selected/distribution" \
 		--expected-manifest-sha256 "$$manifest_sha256" \
-		--parquet-view "$(ATLAS_CONTRACT_DEV_ROOT)/parquet-view" \
+		--parquet-view "$$selected/parquet-view" \
 		--expected-view-manifest-sha256 "$$view_sha256" \
 		--source-root "$(ATLAS_FR_RELEASE_SOURCE_ROOT)" \
 		--output "$(ATLAS_CONTRACT_DEV_ROOT)-verification-receipt.json" >/dev/null; \
@@ -360,22 +458,24 @@ contract-dev:
 # predicts its cost. Release tier by weight, not by principle -- the number that
 # matters is measured at release scale, and the runner sized for it is where it
 # belongs (release.yml's acceptance job runs it there).
-ATLAS_SHACL_BENCH_ROOT ?= $(ATLAS_FR_RELEASE_ROOT)
+ATLAS_SHACL_BENCH_ROOT ?= $(ATLAS_FR_RELEASE_ROOT)/distribution
 
 benchmark-atlas-shacl-scale:
+	@set -e; distribution=$$(uv run --frozen python -m refspec.atlas.generation "$(ATLAS_SHACL_BENCH_ROOT)" --artifact distribution); \
 	REFSPEC_ATLAS_VALIDATION_MODE=audit uv run python tools/benchmark_atlas_shacl_scale.py \
-		--distribution "$(ATLAS_SHACL_BENCH_ROOT)"
+		--distribution "$$distribution"
 
 # Reads both ends and compares them: the exact publisher PDF, whose occurrence
 # ledger is the only place the source-side count exists, and the published
 # bytes, counted from the authenticated Parquet tables rather than from the
 # producer's own receipt inside the artifact.
 verify-atlas-federal-register-thesaurus:
+	@set -e; selected=$$(uv run --frozen python -m refspec.atlas.generation "$(ATLAS_FR_RELEASE_ROOT)/distribution"); \
 	uv run --with-requirements bindings/atlas/3.1/requirements.txt \
 		python tools/verify_federal_register_thesaurus_distribution.py \
-		--distribution "$(ATLAS_FR_RELEASE_ROOT)/distribution" \
+		--distribution "$$selected/distribution" \
 		--expected-manifest-sha256 "$(ATLAS_FR_RELEASE_MANIFEST_SHA256)" \
-		--parquet-view "$(ATLAS_FR_RELEASE_ROOT)/parquet-view" \
+		--parquet-view "$$selected/parquet-view" \
 		--expected-view-manifest-sha256 "$(ATLAS_FR_RELEASE_VIEW_SHA256)" \
 		--source-root "$(ATLAS_FR_RELEASE_SOURCE_ROOT)" \
 		--output "$(ATLAS_FR_RELEASE_RECEIPT)"
@@ -388,25 +488,31 @@ verify-atlas-federal-register-thesaurus:
 # precisely so a consumer can tell "signed" from "signed AND proven".
 #
 #   make seal-distribution SEAL_ROOT=output/atlas-3.1-full-<date> SEAL_KEY=~/path/to/key
+#   make verify-distribution-seal SEAL_ROOT=output/atlas-3.1-full-<date>
 #
 # `verify-distribution-seal` needs no key and checks the signature, all three
 # bound digests, closed membership and every pinned byte against
 # docs/seal-allowed-signers.
-SEAL_ROOT ?= output/atlas-3.1-full-2026-08-13b
+SEAL_ROOT ?=
 SEAL_SIGNER ?= atlas-release@refspec
 SEAL_ALLOWED_SIGNERS ?= docs/seal-allowed-signers
 
 seal-distribution:
+	@test -n "$(SEAL_ROOT)" || { echo "SEAL_ROOT must name a release root whose distribution is a builder generation selector" >&2; exit 2; }
 	@test -n "$(SEAL_KEY)" || { echo "SEAL_KEY is required (the offline signing key); nothing was signed"; exit 2; }
 	uv run --no-sync python tools/seal_distribution.py mint \
-		--distribution "$(SEAL_ROOT)/distribution" \
-		--parquet-view "$(SEAL_ROOT)/parquet-view" \
+		--selection "$(SEAL_ROOT)/distribution" \
 		--private-key "$(SEAL_KEY)" \
 		--signer-identity "$(SEAL_SIGNER)"
 
 verify-distribution-seal:
+	@test -n "$(SEAL_ROOT)" || { echo "SEAL_ROOT must name a release root whose distribution is a builder generation selector" >&2; exit 2; }
 	uv run --no-sync python tools/seal_distribution.py verify \
-		--distribution "$(SEAL_ROOT)/distribution" \
-		--parquet-view "$(SEAL_ROOT)/parquet-view" \
-		--seal "$(SEAL_ROOT)/distribution-seal.json" \
+		--selection "$(SEAL_ROOT)/distribution" \
 		--allowed-signers "$(SEAL_ALLOWED_SIGNERS)"
+
+# Full artifact qualification consumes explicit trusted manifests. It does not
+# rebuild the distribution or replace the bounded producer prebuild test tier.
+ATLAS_QUALIFICATION_ARGS ?=
+qualify-atlas-release:
+	uv run --frozen python tools/qualify_atlas_release.py $(ATLAS_QUALIFICATION_ARGS)

@@ -259,7 +259,9 @@ combined SKOS dataset is an OWL 2 RL ontology.
 
 The Atlas-owned ontology in [`ontology/atlas.ttl`](ontology/atlas.ttl) uses a
 small OWL 2 RL-safe subset: named classes, subclass and disjointness axioms,
-named properties, domains, ranges, and the OWL 2 RL datatype allowlist. The
+named properties, subproperty axioms (today only toward W3C ORG; one under a
+SKOS property is refused), domains, ranges, and the OWL 2 RL datatype
+allowlist. The
 ontology uses `rdfs:Literal` as the range for RDF JSON fields; SHACL applies the
 more specific `rdf:JSON` publication constraint. The ontology contains no
 property chain, functional property, inverse-property axiom, or Atlas-authored
@@ -383,11 +385,14 @@ pair of `atlas:identifierScheme` and `atlas:identifierValue` MUST identify
 exactly one `atlas:AtlasResource`. More than one identifier record MAY repeat
 the pair only when every record identifies that same resource.
 
-`atlas:SourceRecord` identifies the source-local record and pins the exact
-external locator and digest from which normalized resources, labels, or
-assertions were derived. It carries a canonical English-only normalized native
-view and explicit `atlas:representsResource` links; it does not claim to copy a
-multilingual publisher record verbatim. Source record, label, and normalized
+`atlas:SourceRecord` identifies a source-local record. Its `atlas:sourceDigest`
+hashes the complete canonical `atlas:nativePayload` without a terminal LF.
+Publisher-byte digests and archive-member locators remain distinct evidence
+inside the payload and input pins. The payload is a normalized evidence view;
+its language scope follows the distribution's declared scope, including
+multilingual evidence when admitted. It carries explicit
+`atlas:representsResource` links and need not copy publisher bytes verbatim.
+Source record, label, and normalized
 resource identities MUST be distinct. A source record belongs to exactly one
 captured source release and has exactly one disposition in
 `atlas-source-accounting.json` when that source release has enumerated
@@ -510,13 +515,19 @@ has a content digest and the content-derived IRI
 the claim identity; an existing binding MUST NOT be rewritten.
 
 The stable identity of a same-ring assertion is SHA-256 over canonical REF JSON,
-including one terminal LF, with exactly these keys: `object`, `policy`,
+including one terminal LF, with these base keys: `object`, `policy`,
 `policyContentDigest`, `predicate`, `semanticRing`, `sourceRelease`, `subject`,
 `targetRelease`, and `type`. A cross-ring assertion replaces `semanticRing`
-with the two keys `sourceRing` and `targetRing`. The result is both
+with the two keys `sourceRing` and `targetRing`. A dated mapping adds
+`effectivePeriodStart` and, when present, `effectivePeriodEnd`, using the exact
+literal text on its `rkaf:EffectivePeriod`. An absent end adds no key.
+The result is both
 `atlas:assertionIdentityDigest` and the suffix of
 `urn:ref:atlas-assertion:<digest hex>`. It deliberately excludes evidence,
-timestamps, lifecycle status, and supersession. The separate
+assertion/review timestamps, lifecycle status, and supersession. Effective
+bounds are claim scope: changing them changes the claim identity. Undated
+identities stay unchanged; the period-omitting identity is not an alternative
+accepted form for a dated mapping. The separate
 `atlas:contentDigest` covers the assertion's complete outgoing RDF state.
 
 Publisher provenance and Atlas version adoption are separate facts. A mapping
@@ -539,6 +550,44 @@ subject, and source release. A non-terminal record MUST be `atlas:superseded`; a
 terminal record MUST NOT be. Only a terminal `atlas:current` assertion is
 admitted to the projection. A terminal `atlas:withdrawn` assertion remains
 auditable but has no public relation triple.
+
+### Organization change events
+
+A rename, split, or merger of organizations is an `atlas:OrganizationChangeEvent`
+(REF-072), never an identity: `atlas:sameEntityAs` is timeless, and a
+succession happened on a day. The event is one n-ary record in the entity
+ring. It names every defunct `atlas:originalOrganization` and every
+`atlas:resultingOrganization`, carries exactly one `rkaf:effectiveDate` (the
+UTC midnight beginning the day a public record states), and is bound by
+`rkaf:bindsAssertion` evidence exactly as an assertion is. The class and the
+two properties specialize W3C ORG's `org:ChangeEvent`,
+`org:originalOrganization`, and `org:resultingOrganization` in the ontology;
+the wire carries only the Atlas terms, and a raw `org:` predicate is refused.
+The profile map's `changeEventPolicies` entry is the one policy that admits
+the event class, its two links, its ring, and the resource class its links
+reach.
+
+`atlas:OrganizationChangeEventShape` requires one date, at least one original
+and one result, no original among the results, at least one binding whose
+evidence is a public record served at an `https` URL, and human review by
+`urn:ref:reviewer:refspec-owner` on every binding. The validator then refuses
+an event outside its policy's ring or naming an organization outside it
+(`dataset.change-event-policy`), an event whose IRI is not
+`urn:ref:atlas-change-event:<digest hex>` over its own facts
+(`dataset.change-event-identity`), and, across the whole distribution, an
+inverse pair (`dataset.change-event-inverse`), a cycle through events
+(`dataset.change-event-cycle`), and an original that current
+`atlas:sameEntityAs` identifies with any of its results
+(`dataset.change-event-same-entity`) -- through identity's symmetric,
+transitive closure, so two records each bridged to a third are one entity
+too.
+Change events have no projection triple and no compact-record role, and the
+typed Parquet view omits them together with their evidence bindings: a served
+binding must bind a served statement, which the view verifier checks. The
+public records behind the events -- 22 in the agency-registry release -- stay
+in `source-records.parquet`, where no served binding points at them. The
+construction counts still count every binding, since they describe the RDF.
+The agency-registry release's own sealed view serves the events.
 
 ## Projection and inference
 
@@ -927,7 +976,9 @@ precedence between gates. `shaclComponents` is different in kind and is
 contractual: it is what an operator reads to know *which* constraint refused,
 it must be identical under the fail-fast red path and under
 `REFSPEC_ATLAS_VALIDATION_MODE=audit` (the release tier re-validates every
-`shacl.data` case in both modes to prove it), and a case that reported a
+`shacl.data` case in both modes to prove it, and the fast tier holds the red
+path's report to the whole-graph report over the same cases and a mutation
+battery), and a case that reported a
 different set of components would be a different rejection, not a reordered
 one.
 

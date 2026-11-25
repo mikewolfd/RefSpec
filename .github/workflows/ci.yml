@@ -1,43 +1,50 @@
 name: CI
 
+# CI runs the fast tier, on pushes to main and pull requests (not both for one
+# change: a pull request's own push would otherwise run it twice). The slow and
+# full-Atlas tiers are local work -- `make test-slow`, `make test-full-atlas` --
+# because an hour of real-data runs per commit, on a 16 GB runner they outgrow,
+# buys little (REF-071).
 on:
   pull_request:
   push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
+# A newer push to the same pull request supersedes the older run; main keeps
+# every run, so each merge still gets its verdict. The event is part of the
+# group: GitHub holds one running and one pending run per group, so a dispatched
+# run sharing a group with pushes would queue them and cancel all but the newest.
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+# The job runs the fast tier, conftest.tier_of, through `make test-package`, so
+# CI and a developer's `make` run the same selection; tests/test_test_tiers.py
+# checks that. It starts from a clean clone plus the pinned inputs
+# .github/actions/pinned-setup fetches from R2. The rest of the
+# gitignored `output/` tree (derived builds and unpinned captures) is never
+# present, so a step that reads it fails with a missing file rather than a
+# finding; `audit-registry-real-data` rewrites sealed evidence and stays the
+# owner's run.
 jobs:
   bounded-gates:
     name: Bounded gates
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - name: Check out source
         uses: actions/checkout@v4
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
+      - name: Set up with the pinned inputs
+        uses: ./.github/actions/pinned-setup
         with:
-          enable-cache: true
-          version: "0.11.x"
-
-      # No version argument: `uv python install` reads `.python-version`, which
-      # pins the exact patch. `3.12` here would resolve to whatever the latest
-      # 3.12 patch is on the day the job runs -- a build input nobody declared.
-      - name: Install Python
-        run: uv python install
-
-      - name: Install dependencies
-        run: uv sync --frozen
-
-      # Every step below runs on a clean clone. The gitignored `output/` tree is
-      # roughly 22 GB of regenerable captures and is never present here, so a
-      # step that reads it would fail with a missing file rather than a finding.
-      # `make test`'s remaining target, `audit-registry-real-data`, is excluded
-      # for exactly that reason; it belongs to the release job of PLAN.md item 6.
+          r2-access-key-id: ${{ secrets.REFSPEC_R2_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.REFSPEC_R2_SECRET_ACCESS_KEY }}
 
       - name: Check source and machine files
         run: make lint
@@ -64,35 +71,20 @@ jobs:
       - name: Validate the JSON 1.0 binding
         run: make test-json-binding
 
-      # Spelled out rather than `make test-package` for one reason: the report.
-      # The command is otherwise identical, and the report is what the skip
-      # budget below counts, so it is written outside the checkout.
-      - name: Run the packaged suite
-        run: uv run pytest -q -n auto --junitxml="$RUNNER_TEMP/pytest.xml"
+      # `make test-package` builds the Federal Register Thesaurus release it reads
+      # (seconds), verifies it against the Makefile's pins and the publisher PDF,
+      # and runs the fast tier. The report is written outside the
+      # checkout for the skip check; the runaway guard is raised because a hosted
+      # runner is not the machine it was measured on, and the job timeout guards.
+      - name: Run the fast tier
+        run: make test-package PYTEST_ARGS="--junitxml=$RUNNER_TEMP/pytest.xml" TEST_PACKAGE_FAIL_SECONDS=1200
 
-      - name: Assert the skip budget
-        run: uv run python tools/check_skip_budget.py "$RUNNER_TEMP/pytest.xml" --budget 101
+      - name: Check skips against the fast tier's allowlist
+        run: uv run python tools/check_skips.py "$RUNNER_TEMP/pytest.xml" --tier fast
 
       # The reproducible-rebuild control in its ~6s miniature: build the bounded
       # Federal Register release twice into scratch roots and require the two
-      # trees to be byte-identical. It does not run on this runner and the step
-      # name says so rather than reporting a green that proves nothing -- the
-      # build reads two gitignored inputs, the pinned 2025-04-01 publisher PDF
-      # under output/ (never present here, per the note above) and the portfolio
-      # managed release, which came home to this repo's own output/ on
-      # 2026-08-31 (formerly the sibling spicy-regs checkout). This is a presence
-      # check, not a gate, until this job runs somewhere those captures live;
-      # arming it is deleting the check. Until then the control runs on a
-      # developer machine as `make determinism-atlas-federal-register-thesaurus`,
-      # which is also where the whole release section of the Makefile runs.
-      - name: "FR double-build determinism gate (skipped: no captures on hosted runners)"
-        run: |
-          set -euo pipefail
-          pdf="output/registry-real-data-sources/federal-register-thesaurus-2025.pdf"
-          portfolio="output/refspec-vocabulary-portfolio/federal-register-thesaurus-2025"
-          portfolio="$portfolio/managed-release/managed-release.json"
-          if [ ! -f "$pdf" ] || [ ! -f "$portfolio" ]; then
-            echo "::notice title=FR determinism gate skipped::pinned publisher captures absent on this runner ($pdf, $portfolio); the control runs as 'make determinism-atlas-federal-register-thesaurus' where they live"
-            exit 0
-          fi
-          make determinism-atlas-federal-register-thesaurus
+      # trees to be byte-identical, apart from the one measurements file the
+      # comparator names. Its inputs arrive with the pinned inputs (REF-071).
+      - name: FR double-build determinism gate
+        run: make determinism-atlas-federal-register-thesaurus

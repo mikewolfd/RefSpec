@@ -18,6 +18,7 @@ from __future__ import annotations
 import hashlib
 import json
 import shutil
+import stat
 import tempfile
 import xml.etree.ElementTree as ET
 import zipfile
@@ -37,14 +38,19 @@ from refspec.registry.usc_act_index import (
     BULK_SOURCE_BYTES,
     BULK_SOURCE_DIGEST,
     BULK_WELL_FORMEDNESS_DEFECT,
+    GENERIC_ACT_STEM_STOPLIST,
     POPULAR_NAME_COLUMNS,
     QUARANTINE_COLUMNS,
+    ActIndex,
     BulkFormatError,
     BulkRecord,
+    StatutoryShortTitleMatch,
     build,
     canonical_json,
+    find_statutory_short_titles,
     iter_act_fragments,
     parse_act,
+    scan_text,
     table3_key_from_search_key,
     verify_artifact,
     verify_source,
@@ -55,8 +61,8 @@ ZIP_PATH = ROOT / BULK_SOURCE
 OLD_DIR = ROOT / "output" / "usc-act-index-2026-08-02"
 NEW_DIR = ROOT / "output" / "usc-act-index-2026-08-22"
 
-source = pytest.mark.skipif(not ZIP_PATH.is_file(), reason="the OLRC Table III bulk release is not present")
-artifact = pytest.mark.skipif(
+source = pytest.mark.pinned_input(not ZIP_PATH.is_file(), reason="the OLRC Table III bulk release is not present")
+artifact = pytest.mark.pinned_input(
     not (OLD_DIR.is_dir() and NEW_DIR.is_dir()), reason="the pinned act-index artifacts are not present"
 )
 
@@ -613,6 +619,8 @@ def test_verify_passes_the_sealed_artifact_and_names_every_drift() -> None:
         assert verify_artifact(copy) == []
 
         target = copy / "usc-act-sections.parquet"
+        # copytree preserves the pinned file's read-only mode.
+        target.chmod(stat.S_IMODE(target.stat().st_mode) | stat.S_IWUSR)
         target.write_bytes(target.read_bytes() + b" ")
         problems = verify_artifact(copy)
         assert any("usc-act-sections.parquet drifted" in problem for problem in problems)
@@ -649,3 +657,243 @@ def test_canonical_json_is_the_shared_strict_serializer_not_a_local_copy() -> No
     receipt = json.loads(sealed_bytes)
 
     assert canonical_json(receipt).encode("utf-8") == sealed_bytes
+
+
+# --------------------------------------------------------------------------- #
+# Maximal-NP statutory short-title prose scanning (PR-U2)
+
+
+_PROSE_FIXTURE_INDEX = ActIndex(
+    table3_key_by_name={
+        "clean air act": "1955:360",
+        "clean air act amendments of 1990": "101-549",
+        "federal water pollution control act": "1948:758",
+        "social security act": "1935:531",
+        "smith act": "1940:439",
+        "small business act": "85-536",
+        "technical amendments act of 1958": "85-866",
+        "david l. boren national security education act of 1991": "102-183",
+        "sec small business advocate act of 2016": "114-284",
+        "violence against women act": "103-322",
+        "violence against women act reauthorization act of 2022": "117-103",
+        "consolidated appropriations act, 2023": "117-328",
+        "merchant marine act, 1920": "1920:250",
+        "the tariff act of 1930": "1930:497",
+        "build america, buy america act": "117-58",
+        "federal food, drug, and cosmetic act": "1938:675",
+        "secure 2.0 act of 2022": "117-328",
+        "u.s. housing act of 1937": "1937:896",
+        "richard b. russell national school lunch act": "1946:281",
+        "icc termination act of 1995": "104-88",
+        "quiet title act": "92-562",
+        "adjustable interest rate (libor) act": "117-103",
+        "the american national red cross governance modernization act of 2007": "110-26",
+    },
+    alias_by_name={
+        "clean water act": "federal water pollution control act",
+    },
+)
+
+
+def test_maximal_np_prose_scan_resolves_longest_spans_and_never_subslices_inner_suffixes() -> None:
+    """Maximal uninterrupted NPs resolve longest-first; unenacted ``Kelsey Smith Act`` never slices to ``Smith Act``."""
+
+    prose = (
+        "Standards under the Clean Air Act and the Clean Air Act Amendments of 1990 apply here, "
+        "whereas the proposed Kelsey Smith Act, the Kelsey Smith Act of 2024, and the "
+        "Prevention, Detection, and Smith Act are unindexed bills."
+    )
+    hits = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(prose)
+    assert [h.act_key for h in hits] == ["clean air act", "clean air act amendments of 1990"]
+    assert [h.table3_key for h in hits] == ["1955:360", "101-549"]
+    assert [h.surface for h in hits] == ["Clean Air Act", "Clean Air Act Amendments of 1990"]
+    for hit in hits:
+        assert isinstance(hit, StatutoryShortTitleMatch)
+        assert prose[hit.start : hit.end] == hit.surface
+        assert hit.resolved_act_key == hit.act_key
+    assert scan_text(prose, _PROSE_FIXTURE_INDEX) == hits
+    assert find_statutory_short_titles(prose, _PROSE_FIXTURE_INDEX) == hits
+    assert _PROSE_FIXTURE_INDEX.scan_text(prose) == hits
+
+
+def test_generic_act_stems_are_stoplisted_even_if_present_in_a_synthetic_index() -> None:
+    """``This Act``, ``Such Act``, ``That Act``, and ``The Act`` never extract as statutory short titles."""
+
+    assert {"this", "such", "that", "the"} <= GENERIC_ACT_STEM_STOPLIST
+    poisoned = ActIndex(
+        table3_key_by_name={
+            "this act": "99-1",
+            "such act": "99-2",
+            "that act": "99-3",
+            "the act": "99-4",
+            "an act": "99-5",
+            "said act": "99-6",
+            "any act": "99-7",
+            "clean air act": "1955:360",
+        }
+    )
+    prose = (
+        "This Act amends the law. Under Such Act, That Act, The Act, An Act, Any Act, "
+        "and Said Act, only the Clean Air Act is a real short title."
+    )
+    hits = poisoned.find_statutory_short_titles(prose)
+    assert [h.act_key for h in hits] == ["clean air act"]
+    assert [h.surface for h in hits] == ["Clean Air Act"]
+
+
+def test_prose_scan_handles_punctuation_commas_versions_initials_and_designators() -> None:
+    """Sentence periods, clause commas, comma-years, decimal versions, initials, and structural designators resolve cleanly."""
+
+    prose = (
+        "In 2020, EPA sued Texas. Clean Air Act rules stood. "
+        "According to Congress, Clean Water Act permits and Title IV of the Clean Air Act govern. "
+        "Under the Clean Air Act, 2023 emissions fell, while the Consolidated Appropriations Act, 2023 "
+        "enacted the SECURE 2.0 Act of 2022 alongside the Build America, Buy America Act, "
+        "the Federal Food, Drug, and Cosmetic Act, the U.S. Housing Act of 1937, "
+        "the Richard B. Russell National School Lunch Act, the ICC Termination Act of 1995, "
+        "the Quiet Title Act, the Adjustable Interest Rate (LIBOR) Act, "
+        "the 1990 Clean Air Act Amendments, the Merchant Marine Act of 1920, and "
+        "The American National Red Cross Governance Modernization Act of 2007. "
+        "By contrast, the Clean Air Act of 2099 does not exist."
+    )
+    hits = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(prose)
+    assert [h.act_key for h in hits] == [
+        "clean air act",
+        "federal water pollution control act",
+        "consolidated appropriations act, 2023",
+        "secure 2.0 act of 2022",
+        "build america, buy america act",
+        "federal food, drug, and cosmetic act",
+        "u.s. housing act of 1937",
+        "richard b. russell national school lunch act",
+        "icc termination act of 1995",
+        "quiet title act",
+        "adjustable interest rate (libor) act",
+        "clean air act amendments of 1990",
+        "merchant marine act, 1920",
+        "the american national red cross governance modernization act of 2007",
+    ]
+    all_occurrences = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(prose, deduplicate=False)
+    assert [h.act_key for h in all_occurrences].count("clean air act") == 3
+
+
+def test_prose_scan_refuses_mid_np_subslicing_and_recalls_multi_act_sentence_initial_and_designators() -> None:
+    """Covers every F1/F5/F6 edge case: initials, SEC, honorifics, parens, quotes, multi-Act, sentence openers, designators, and slice identity."""
+
+    # 1. Precision: none of these unindexed noun phrases may break mid-NP and false-positive onto "smith act"
+    #    or "small business act" or "technical amendments act of 1958" (F1.1).
+    for trap in (
+        "the John L. Smith Act",
+        "the SEC Small Business Act",
+        "the Sen. Smith Act",
+        "the Rep. Smith Act",
+        "the Rev. Smith Act",
+        "the Gen. Smith Act",
+        "the Col. Smith Act",
+        "the Lt. Smith Act",
+        "the Brig. Smith Act",
+        "the Online (Kids) Smith Act",
+        "the “Kelsey” Smith Act",
+        'the "Kelsey" Smith Act',
+        "the Kelsey Smith Act Technical Amendments Act",
+        "Friends of the Smith Act",
+        "Because the Kelsey Smith Act failed.",
+        " Clean Air\n\nAct",
+    ):
+        assert _PROSE_FIXTURE_INDEX.find_statutory_short_titles(trap) == (), trap
+
+    # 2. Enacted titles with L., SEC, and multi-Act compounds resolve whole via longest-span arbitration (F1.1, F5.2).
+    compound_prose = (
+        "Grants under the David L. Boren National Security Education Act of 1991, "
+        "cited as the “SEC Small Business Advocate Act of 2016”, and "
+        "the Violence Against Women Act Reauthorization Act of 2022."
+    )
+    compound_hits = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(compound_prose)
+    assert [h.act_key for h in compound_hits] == [
+        "david l. boren national security education act of 1991",
+        "sec small business advocate act of 2016",
+        "violence against women act reauthorization act of 2022",
+    ]
+    assert [h.table3_key for h in compound_hits] == ["102-183", "114-284", "117-103"]
+
+    # 3. Coordinated Act after an unindexed Act still resolves cleanly.
+    coord_hits = _PROSE_FIXTURE_INDEX.find_statutory_short_titles("The Kelsey Smith Act and the Clean Air Act.")
+    assert [h.act_key for h in coord_hits] == ["clean air act"]
+
+    # 4. Sentence-initial non-stopwords, list markers, section/division designators, Pub. L. / App. boundaries (F1.2, F5.2).
+    recall_cases = (
+        ("Nothing in the Clean Air Act preempts state authority.", ["clean air act"]),
+        ("Because the Clean Air Act applies, EPA issued rules.", ["clean air act"]),
+        ("Because of the Clean Air Act, emissions fell.", ["clean air act"]),
+        ("See the Clean Air Act.", ["clean air act"]),
+        ("Both the Clean Air Act and the Quiet Title Act apply.", ["clean air act", "quiet title act"]),
+        ("(a) The Clean Air Act governs.", ["clean air act"]),
+        ("under section 111(d) of the Clean Air Act", ["clean air act"]),
+        ("under §§ 111(d) and 112 of the Clean Air Act", ["clean air act"]),
+        ("under section 1102 of the Social Security Act", ["social security act"]),
+        ("under section 107A of the Clean Air Act", ["clean air act"]),
+        ("Division EE of the Consolidated Appropriations Act, 2023", ["consolidated appropriations act, 2023"]),
+        ("IV of the Clean Air Act", ["clean air act"]),
+        ("See Pub. L. 101-549, Clean Air Act rules.", ["clean air act"]),
+        ("See 50 U.S.C. App. Clean Air Act rules.", ["clean air act"]),
+        # Leading 'the' combined with swapped comma-year -> 'of YYYY' (F6.2).
+        ("pursuant to the Tariff Act, 1930", ["the tariff act of 1930"]),
+    )
+    for text_case, expected_keys in recall_cases:
+        got = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(text_case)
+        assert [h.act_key for h in got] == expected_keys, text_case
+        for h in got:
+            assert text_case[h.start : h.end] == h.surface
+
+    # 5. Verbatim slice identity holds across embedded newlines, while normalized_surface collapses whitespace (F6.1).
+    wrapped = "Standards under the Clean Air\nAct apply."
+    wrapped_hits = _PROSE_FIXTURE_INDEX.find_statutory_short_titles(wrapped)
+    assert len(wrapped_hits) == 1
+    assert wrapped_hits[0].surface == "Clean Air\nAct"
+    assert wrapped[wrapped_hits[0].start : wrapped_hits[0].end] == wrapped_hits[0].surface
+    assert wrapped_hits[0].normalized_surface == "Clean Air Act"
+
+
+@artifact
+@pytest.mark.slow
+def test_prose_scan_against_the_real_sealed_act_index(capsys: pytest.CaptureFixture[str]) -> None:
+    """End-to-end maximal-NP extraction and CLI ``--scan-text`` against the pinned 20,865-row OLRC Popular Names artifact."""
+
+    from refspec.registry import usc_act_index
+
+    real_index = ActIndex.from_artifact(NEW_DIR)
+    passage = (
+        "This Act may be cited as the Kelsey Smith Act or the John L. Smith Act or the SEC Small Business Act. "
+        "Nothing in Such Act or That Act alters the Clean Air Act, the Clean Water Act, "
+        "the David L. Boren National Security Education Act of 1991, "
+        "the SEC Small Business Advocate Act of 2016, "
+        "the Violence Against Women Act Reauthorization Act of 2022, "
+        "Division EE of the Consolidated Appropriations Act, 2023, "
+        "the SECURE 2.0 Act of 2022, or the ICC Termination Act of 1995."
+    )
+    hits = real_index.scan_text(passage)
+    assert [h.act_key for h in hits] == [
+        "clean air act",
+        "federal water pollution control act",
+        "david l. boren national security education act of 1991",
+        "sec small business advocate act of 2016",
+        "violence against women act reauthorization act of 2022",
+        "consolidated appropriations act, 2023",
+        "secure 2.0 act of 2022",
+        "icc termination act of 1995",
+    ]
+    assert all("smith" not in h.act_key for h in hits)
+
+    rc = usc_act_index.main(["--output", str(NEW_DIR), "--scan-text", "Nothing in the Clean Air Act applies."])
+    assert rc == 0
+    cli_rows = json.loads(capsys.readouterr().out)
+    assert cli_rows == [
+        {
+            "act_key": "clean air act",
+            "end": 28,
+            "start": 15,
+            "surface": "Clean Air Act",
+            "table3_key": "1955:360",
+        }
+    ]
+

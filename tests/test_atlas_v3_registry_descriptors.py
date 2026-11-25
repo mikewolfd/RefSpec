@@ -27,6 +27,8 @@ SHAPES_PATH = ROOT / "bindings" / "atlas" / "3.1" / "shapes" / "atlas.shacl.ttl"
 sys.path.insert(0, str(ROOT / "bindings" / "atlas" / "3.1" / "tools"))
 import validate as atlas_validate
 
+from refspec.atlas_index import verify_atlas_index_digests
+
 ATLAS = Namespace("https://refspec.org/ns/atlas/v3#")
 GRAPH_IRI = URIRef("urn:ref:atlas-v3:registry-descriptors")
 
@@ -81,7 +83,7 @@ def test_descriptor_proof_pins_exact_registry_inputs_and_output() -> None:
     assert proof["graphIri"] == str(GRAPH_IRI)
 
     assert catalog["catalogDigest"] == _input_digest(catalog, "catalogDigest", "catalogId")
-    assert index["indexDigest"] == _input_digest(index, "indexDigest", "indexId")
+    assert index["indexDigest"] == verify_atlas_index_digests(index)
     assert profiles["profileDigest"] == _input_digest(profiles, "profileDigest", None)
     assert proof["inputs"] == {
         "atlasIndexDigest": index["indexDigest"],
@@ -96,8 +98,8 @@ def test_descriptor_proof_pins_exact_registry_inputs_and_output() -> None:
         "sha256": _file_sha256(dataset_bytes),
     }
     resource_ids = sorted(resource["resourceId"] for resource in catalog["resources"])
-    assert len(resource_ids) == len(set(resource_ids)) == 117
-    assert len(index["rows"]) == 112
+    assert len(resource_ids) == len(set(resource_ids)) == 118
+    assert len(index["rows"]) == 113
     assert proof["resourceIdSetDigest"] == _canonical_sha256(resource_ids)
     # REF-034: the retired AGROVOC and NALT rows and the closed EPA row left
     # the catalog (89 -> 87, three concept schemes with them); the GAO CRA
@@ -112,8 +114,12 @@ def test_descriptor_proof_pins_exact_registry_inputs_and_output() -> None:
     # source (116 -> 117), one scheme (105 -> 106, concept schemes 41 -> 42),
     # one member release (87 -> 88), 11 quads (1241 -> 1252), and
     # atlasIndexPlacementCount unmoved at 112.
+    # REF-072 adds `agency-registry`, mapping-only like REF-038's identity
+    # release: one registry source (117 -> 118) and no scheme, one index
+    # placement (112 -> 113), mappingAssertionsOnly 11 -> 12, 5 quads
+    # (1252 -> 1257).
     assert proof["counts"] == {
-        "atlasIndexPlacementCount": 112,
+        "atlasIndexPlacementCount": 113,
         "conceptSchemeCount": 42,
         "memberDispositionCounts": {
             "assignmentEvidenceOnly": 4,
@@ -121,13 +127,13 @@ def test_descriptor_proof_pins_exact_registry_inputs_and_output() -> None:
             "definitionOnly": 1,
             "historicalEvidenceOnly": 2,
             "memberRelease": 88,
-            "mappingAssertionsOnly": 11,
+            "mappingAssertionsOnly": 12,
             "noPublisherRecord": 3,
             "resourceFamily": 1,
             "reviewWithheld": 1,
         },
-        "quadCount": 1252,
-        "registrySourceCount": 117,
+        "quadCount": 1257,
+        "registrySourceCount": 118,
         "resourceSchemeCount": 106,
         "supportedRingStatementCount": 95,
     }
@@ -188,13 +194,13 @@ def test_every_catalog_row_has_one_source_and_member_sources_have_schemes() -> N
     rings_by_resource: dict[str, set[str]] = defaultdict(set)
     for row in index["rows"]:
         rings_by_resource[row["resourceId"]].add(row["semanticRing"])
-    assert sum(len(rings) for rings in rings_by_resource.values()) == 106
+    assert sum(len(rings) for rings in rings_by_resource.values()) == 107
 
     resources = {resource["resourceId"]: resource for resource in catalog["resources"]}
     scheme_nodes = set(graph.subjects(RDF.type, ATLAS.ResourceScheme))
     source_nodes = set(graph.subjects(RDF.type, ATLAS.RegistrySource))
-    assert len(scheme_nodes) == len(resources) - 11 == 106
-    assert len(source_nodes) == len(resources) == 117
+    assert len(scheme_nodes) == len(resources) - 12 == 106
+    assert len(source_nodes) == len(resources) == 118
     for resource_id, resource in resources.items():
         node = URIRef("urn:ref:atlas-resource-scheme:" + quote(resource_id, safe="-._~"))
         source = URIRef("urn:ref:atlas-source-descriptor:" + quote(resource_id, safe="-._~"))
@@ -204,6 +210,7 @@ def test_every_catalog_row_has_one_source_and_member_sources_have_schemes() -> N
         assert expected_rings <= supported_by_profile[profile]
 
         if resource_id in {
+            "agency-registry",
             "eurovoc-gemet-alignment",
             "eurovoc-lcsh-alignment",
             "eurovoc-mesh-alignment",
@@ -297,7 +304,7 @@ def test_checked_descriptor_bytes_are_exactly_regenerable() -> None:
     assert completed.returncode == 0, completed.stderr
     assert completed.stderr == ""
     assert completed.stdout == (
-        "Atlas 3.1 registry descriptors are current: 106 schemes, 112 index placements, 1252 quads\n"
+        "Atlas 3.1 registry descriptors are current: 106 schemes, 113 index placements, 1257 quads\n"
     )
 
 

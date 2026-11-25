@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 import validate as atlas_validate
-from rdflib import BNode, Graph, Literal, URIRef
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, PROV, RDF, SKOS, XSD
 
 ATLAS = atlas_validate.ATLAS
@@ -23,6 +23,9 @@ SKOSXL = atlas_validate.SKOSXL
 FIXTURE_ROOT = atlas_validate.FIXTURE_ROOT
 GENERATED_ROOTS = (FIXTURE_ROOT / "valid", FIXTURE_ROOT / "invalid")
 REVIEWER = URIRef("urn:ref:agent:atlas-fixture-reviewer")
+# The one reviewer an organization change event admits (REF-072).
+OWNER_REVIEWER = URIRef("urn:ref:reviewer:refspec-owner")
+ORG = Namespace("http://www.w3.org/ns/org#")
 CREATED_AT = "2026-08-05T12:00:00+00:00"
 CONSTRUCTION_PROFILE = "atlas-3-release-local-construction-v1"
 LANGUAGE_SCOPE = {
@@ -355,6 +358,10 @@ def _add_assertion(
         basis["targetRing"] = str(target_ring)
     else:
         basis["semanticRing"] = str(ring)
+    if effective_period is not None:
+        basis["effectivePeriodStart"] = effective_period[0]
+        if effective_period[1] is not None:
+            basis["effectivePeriodEnd"] = effective_period[1]
     digest = atlas_validate.canonical_sha256(basis)
     assertion = URIRef("urn:ref:atlas-assertion:" + digest.removeprefix("sha256:"))
     graph.add((assertion, RDF.type, ATLAS.RelationAssertion))
@@ -396,10 +403,6 @@ def _add_assertion(
             )
         )
     graph.add((assertion, ATLAS.assertionIdentityDigest, Literal(digest)))
-    evidence = URIRef(f"urn:ref:atlas-evidence:pending:{evidence_name}")
-    graph.add((evidence, RDF.type, RKAF.EvidenceBinding))
-    graph.add((evidence, RKAF.bindsAssertion, assertion))
-    graph.add((evidence, ATLAS.evidenceSourceRecord, evidence_record))
     attestor = REVIEWER
     if assertion_type == ATLAS.MappingAssertion and review_warrant == "publisherAssertion":
         endpoint_scheme = graph.value(subject, ATLAS.inScheme)
@@ -407,6 +410,36 @@ def _add_assertion(
         if not isinstance(endpoint_source, URIRef):
             raise ValueError("publisherAssertion mapping fixtures require a source-owned endpoint")
         attestor = endpoint_source
+    _add_evidence_binding(
+        graph,
+        bound=assertion,
+        evidence_record=evidence_record,
+        evidence_name=evidence_name,
+        attestor=attestor,
+        review_warrant=review_warrant,
+        attested_at=asserted_at,
+        adopted_evidence=adopted_evidence,
+    )
+    return assertion
+
+
+def _add_evidence_binding(
+    graph: Graph,
+    *,
+    bound: URIRef,
+    evidence_record: URIRef,
+    evidence_name: str,
+    attestor: URIRef,
+    review_warrant: str,
+    attested_at: str = CREATED_AT,
+    adopted_evidence: URIRef | None = None,
+) -> URIRef:
+    """Mint one approved, content-addressed binding of a source record to a claim."""
+
+    evidence = URIRef(f"urn:ref:atlas-evidence:pending:{evidence_name}")
+    graph.add((evidence, RDF.type, RKAF.EvidenceBinding))
+    graph.add((evidence, RKAF.bindsAssertion, bound))
+    graph.add((evidence, ATLAS.evidenceSourceRecord, evidence_record))
     graph.add((evidence, RKAF.attestor, attestor))
     graph.add((evidence, RKAF.decision, RKAF.approved))
     for axis, value in atlas_validate.evidence_warrant_facts(review_warrant):
@@ -418,7 +451,7 @@ def _add_assertion(
         (
             evidence,
             RKAF.attestedAt,
-            Literal(asserted_at, datatype=XSD.dateTime, normalize=False),
+            Literal(attested_at, datatype=XSD.dateTime, normalize=False),
         )
     )
     graph.add(
@@ -435,7 +468,7 @@ def _add_assertion(
         graph.remove((evidence, evidence_predicate, evidence_object))
         graph.add((evidence_id, evidence_predicate, evidence_object))
     graph.add((evidence_id, ATLAS.contentDigest, Literal(evidence_digest)))
-    return assertion
+    return evidence_id
 
 
 def _adjudication_iri(kind: str, *parts: str) -> URIRef:
@@ -3481,6 +3514,19 @@ def _mutations() -> list[tuple[str, list[str], str, Callable[[Fixture], None]]]:
         fixture.asserted.add((label, SKOSXL.literalForm, Literal("Agence exemplaire", lang="fr")))
         fixture.projection = atlas_validate._expected_projection(fixture.asserted)
 
+    def multilingual_preferred_labels(fixture: Fixture) -> None:
+        # REF-037 permits one preferred label per language on the SAME resource.
+        # The multilingual-label case changes a language but never adds a label,
+        # so it cannot catch a stale resource-wide sh:maxCount 1.
+        resource = URIRef("urn:ref:atlas-fixture:resource:subject-c")
+        label = URIRef("urn:ref:atlas-fixture:label:subject-c:preferred:de")
+        fixture.asserted.add((resource, SKOSXL.prefLabel, label))
+        fixture.asserted.add((label, RDF.type, SKOSXL.Label))
+        fixture.asserted.add((label, SKOSXL.literalForm, Literal("Verwaltungsrecht", lang="de")))
+        for predicate in (ATLAS.inRelease, ATLAS.sourceRecord):
+            fixture.asserted.add((label, predicate, next(fixture.asserted.objects(resource, predicate))))
+        fixture.projection = atlas_validate._expected_projection(fixture.asserted)
+
     def non_english_definition(fixture: Fixture) -> None:
         resource = next(fixture.asserted.subjects(ATLAS.definition, None))
         definition = next(fixture.asserted.objects(resource, ATLAS.definition))
@@ -3550,6 +3596,15 @@ def _mutations() -> list[tuple[str, list[str], str, Callable[[Fixture], None]]]:
         fixture.asserted.add((label, SKOSXL.literalForm, Literal("Duplicate", lang="en")))
         fixture.asserted.add((label, ATLAS.inRelease, release))
         fixture.asserted.add((label, ATLAS.sourceRecord, source))
+
+    def duplicate_preferred_literal(fixture: Fixture) -> None:
+        resource = URIRef("urn:ref:atlas-fixture:resource:subject-c")
+        original = next(fixture.asserted.objects(resource, SKOSXL.prefLabel))
+        label = URIRef("urn:ref:atlas-fixture:label:duplicate-literal:en")
+        fixture.asserted.add((resource, SKOSXL.prefLabel, label))
+        for predicate, value in list(fixture.asserted.predicate_objects(original)):
+            fixture.asserted.add((label, predicate, value))
+        fixture.projection = atlas_validate._expected_projection(fixture.asserted)
 
     def missing_evidence(fixture: Fixture) -> None:
         assertion = next(fixture.asserted.subjects(RDF.type, ATLAS.MappingAssertion))
@@ -3959,6 +4014,293 @@ def _mutations() -> list[tuple[str, list[str], str, Callable[[Fixture], None]]]:
 
     def mapping_undated_legal_identity(fixture: Fixture) -> None:
         strip_period(fixture, dated_mapping(fixture, ATLAS.legalIdentity))
+
+    # ORGANIZATION CHANGE EVENTS (REF-072). Every case below starts from the
+    # same accounted roster of four organizations no identity joins, so each
+    # negative differs from organization-change-events by exactly the defect it
+    # is named for, and every event is minted under its content-derived IRI
+    # after its last fact -- the identity negative is the only one that is not.
+    def add_change_event_organizations(fixture: Fixture) -> tuple[list[URIRef], URIRef]:
+        _release, _scheme, source_release, rows = _add_release(
+            fixture.asserted,
+            name="organizations",
+            profile=ATLAS.identifierScheme,
+            ring=ATLAS.entity,
+            resources=[
+                ("organization-predecessor", ATLAS.EntityResource, "Example Naturalization Service"),
+                ("organization-successor-a", ATLAS.EntityResource, "Example Services Bureau"),
+                ("organization-successor-b", ATLAS.EntityResource, "Example Enforcement Bureau"),
+                ("organization-successor-c", ATLAS.EntityResource, "Example Services Agency"),
+            ],
+        )
+        fixture.accounting["inputs"].append(
+            {
+                "dispositions": [
+                    {"atlasResources": [str(resource)], "sourceRecord": str(record), "status": "represented"}
+                    for resource, record in sorted(rows, key=lambda row: str(row[1]))
+                ],
+                "membershipMode": "complete",
+                "sourceRelease": str(source_release),
+            }
+        )
+        return [resource for resource, _ in rows], source_release
+
+    def add_public_record(fixture: Fixture, source_release: URIRef, name: str) -> URIRef:
+        """One public record the owner reviewed, served by its publisher at an https URL."""
+
+        url = f"https://publisher.example/records/{name}"
+        record = URIRef(f"urn:ref:atlas-fixture:source-record:{name}")
+        payload = atlas_validate.canonical_native_json_bytes(
+            {"citation": f"Fixture reorganization record {name}", "kind": "frNotice", "note": "Fixture.", "url": url}
+        )
+        fixture.asserted.add((record, RDF.type, ATLAS.SourceRecord))
+        fixture.asserted.add((record, ATLAS.inSourceRelease, source_release))
+        fixture.asserted.add((record, ATLAS.sourceDigest, Literal(_sha256(payload))))
+        fixture.asserted.add((record, ATLAS.sourceLocator, URIRef(url)))
+        fixture.asserted.add(
+            (record, ATLAS.nativePayload, Literal(payload.decode("utf-8"), datatype=RDF.JSON, normalize=False))
+        )
+        source = next(row for row in fixture.accounting["inputs"] if row["sourceRelease"] == str(source_release))
+        source["dispositions"].append({"atlasResources": [], "sourceRecord": str(record), "status": "represented"})
+        source["dispositions"].sort(key=lambda row: row["sourceRecord"])
+        return record
+
+    def add_change_event(
+        fixture: Fixture,
+        name: str,
+        *,
+        originals: Sequence[URIRef],
+        results: Sequence[URIRef],
+        record: URIRef,
+        dates: Sequence[str] = ("2003-03-01T00:00:00+00:00",),
+        attestor: URIRef = OWNER_REVIEWER,
+        review_warrant: str = "humanReview",
+    ) -> URIRef:
+        pending = URIRef(f"urn:ref:atlas-change-event:pending:{name}")
+        fixture.asserted.add((pending, RDF.type, ATLAS.OrganizationChangeEvent))
+        fixture.asserted.add((pending, ATLAS.semanticRing, ATLAS.entity))
+        for original in originals:
+            fixture.asserted.add((pending, ATLAS.originalOrganization, original))
+        for result in results:
+            fixture.asserted.add((pending, ATLAS.resultingOrganization, result))
+        for date in dates:
+            fixture.asserted.add((pending, RKAF.effectiveDate, Literal(date, datatype=XSD.dateTime, normalize=False)))
+        digest = atlas_validate.rdf_node_digest(fixture.asserted, pending)
+        event = URIRef(atlas_validate.CHANGE_EVENT_IRI_PREFIX + digest.removeprefix("sha256:"))
+        for _, predicate, obj in list(fixture.asserted.triples((pending, None, None))):
+            fixture.asserted.remove((pending, predicate, obj))
+            fixture.asserted.add((event, predicate, obj))
+        _add_evidence_binding(
+            fixture.asserted,
+            bound=event,
+            evidence_record=record,
+            evidence_name=f"change-event-{name}",
+            attestor=attestor,
+            review_warrant=review_warrant,
+        )
+        return event
+
+    def change_event_roster(fixture: Fixture) -> tuple[list[URIRef], URIRef]:
+        """The four organizations and one public record every event case reviews."""
+
+        organizations, source_release = add_change_event_organizations(fixture)
+        fixture.accounting["inputs"].sort(key=lambda row: row["sourceRelease"])
+        return organizations, add_public_record(fixture, source_release, "reorganization-plan")
+
+    def drop_public_record(fixture: Fixture, record: URIRef) -> None:
+        """Remove a public record no binding names, with its disposition."""
+
+        fixture.asserted.remove((record, None, None))
+        for source in fixture.accounting["inputs"]:
+            source["dispositions"] = [row for row in source["dispositions"] if row["sourceRecord"] != str(record)]
+
+    def account_change_events(fixture: Fixture) -> None:
+        """Restate the ledger and the projection for the roster the event cases add."""
+
+        fixture.projection = atlas_validate._expected_projection(fixture.asserted)
+        _account_assertions(fixture)
+        dispositions = [row for source in fixture.accounting["inputs"] for row in source["dispositions"]]
+        fixture.accounting["totals"] = {
+            "excluded": sum(row["status"] == "excluded" for row in dispositions),
+            "represented": sum(row["status"] == "represented" for row in dispositions),
+            "sourceRecords": len(dispositions),
+            "sourceReleases": len(fixture.accounting["inputs"]),
+            "unresolved": sum(row["status"] == "unresolved" for row in dispositions),
+        }
+
+    def organization_change_events(fixture: Fixture) -> None:
+        # A three-way split and a later rename of one of its results: a chain,
+        # which the cycle rule must not mistake for a cycle.
+        (predecessor, services, enforcement, agency), record = change_event_roster(fixture)
+        split_source = next(fixture.asserted.objects(record, ATLAS.inSourceRelease))
+        rename_record = add_public_record(fixture, split_source, "rename-notice")
+        add_change_event(
+            fixture, "split", originals=[predecessor], results=[services, enforcement], record=record
+        )
+        add_change_event(
+            fixture,
+            "rename",
+            originals=[services],
+            results=[agency],
+            record=rename_record,
+            dates=("2008-11-21T00:00:00+00:00",),
+        )
+        account_change_events(fixture)
+
+    def change_event_case(defect: Callable[[Fixture, list[URIRef], URIRef], None]) -> Callable[[Fixture], None]:
+        def mutate(fixture: Fixture) -> None:
+            organizations, record = change_event_roster(fixture)
+            defect(fixture, organizations, record)
+            account_change_events(fixture)
+
+        return mutate
+
+    def change_event_two_dates(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(
+            fixture,
+            "two-dates",
+            originals=orgs[:1],
+            results=orgs[1:2],
+            record=record,
+            dates=("2003-03-01T00:00:00+00:00", "2003-03-02T00:00:00+00:00"),
+        )
+
+    def change_event_no_original(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(fixture, "no-original", originals=(), results=orgs[1:2], record=record)
+
+    def change_event_no_result(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(fixture, "no-result", originals=orgs[:1], results=(), record=record)
+
+    def change_event_no_date(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(fixture, "no-date", originals=orgs[:1], results=orgs[1:2], record=record, dates=())
+
+    def change_event_date_not_midnight(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # An event takes effect on a day, stated as that day's UTC midnight;
+        # noon is an instant no public record states.
+        add_change_event(
+            fixture,
+            "date-not-midnight",
+            originals=orgs[:1],
+            results=orgs[1:2],
+            record=record,
+            dates=("2003-03-01T12:00:00+00:00",),
+        )
+
+    def change_event_owner_review(name: str, axis: URIRef, value: URIRef) -> Callable[[Fixture, list[URIRef], URIRef], None]:
+        """The owner's review with one of its four fixed values changed, the binding re-minted over it.
+
+        Each value stays inside its axis's own sh:in, so no enum refuses it.
+        atlas:EvidenceBindingShape's humanReview branch pins the same four
+        values, and no other warrant pairs humanAsserted with textualEvidence,
+        so each case also fails that shape's sh:xone: no one-axis change
+        satisfies another warrant. The corpus pins both shapes' components;
+        tests/test_atlas_v3_change_events.py reads the refused axis off the
+        report graph.
+        """
+
+        def defect(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+            event = add_change_event(fixture, name, originals=orgs[:1], results=orgs[1:2], record=record)
+            binding = next(fixture.asserted.subjects(RKAF.bindsAssertion, event))
+            _remove_subject_predicate(fixture.asserted, binding, axis)
+            fixture.asserted.add((binding, axis, value))
+            _reseal_evidence_to_fixed_point(fixture.asserted)
+
+        return defect
+
+    def change_event_owner_attested_other_warrant(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # The owner attests, but under publisherAssertion, a sanctioned warrant:
+        # atlas:EvidenceBindingShape's sh:xone admits it, so only the owner
+        # review's four fixed values refuse it -- every one of them, which is
+        # what the one-axis negatives above cannot show.
+        add_change_event(
+            fixture,
+            "owner-attested-other-warrant",
+            originals=orgs[:1],
+            results=orgs[1:2],
+            record=record,
+            review_warrant="publisherAssertion",
+        )
+
+    def change_event_original_among_results(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(
+            fixture, "original-among-results", originals=orgs[:1], results=orgs[:2], record=record
+        )
+
+    def change_event_no_public_record(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # Reviewed by the owner, but on a RefSpec-internal roster record rather
+        # than a public record the publisher serves.
+        drop_public_record(fixture, record)
+        roster_record = next(fixture.asserted.objects(orgs[0], ATLAS.sourceRecord))
+        add_change_event(fixture, "no-public-record", originals=orgs[:1], results=orgs[1:2], record=roster_record)
+
+    def change_event_not_owner_reviewed(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(
+            fixture, "not-owner-reviewed", originals=orgs[:1], results=orgs[1:2], record=record, attestor=REVIEWER
+        )
+
+    def change_event_result_outside_entity_ring(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        concept = URIRef("urn:ref:atlas-fixture:resource:subject-a")
+        add_change_event(fixture, "outside-ring", originals=orgs[:1], results=[concept], record=record)
+
+    def change_event_identity_drift(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # The owner reviewed a two-way split; a third result added afterwards
+        # keeps the reviewed IRI, so the review would cover a result nobody
+        # reviewed.
+        event = add_change_event(fixture, "drift", originals=orgs[:1], results=orgs[1:3], record=record)
+        fixture.asserted.add((event, ATLAS.resultingOrganization, orgs[3]))
+
+    def change_event_inverse_pair(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        add_change_event(fixture, "forward", originals=orgs[:1], results=orgs[1:2], record=record)
+        add_change_event(fixture, "backward", originals=orgs[1:2], results=orgs[:1], record=record)
+
+    def change_event_cycle(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # Three events, no two of them inverse: only the cycle rule sees this.
+        add_change_event(fixture, "cycle-1", originals=orgs[:1], results=orgs[1:2], record=record)
+        add_change_event(fixture, "cycle-2", originals=orgs[1:2], results=orgs[2:3], record=record)
+        add_change_event(fixture, "cycle-3", originals=orgs[2:3], results=orgs[:1], record=record)
+
+    def change_event_same_entity(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # The base fixture already asserts atlas:sameEntityAs between these two.
+        add_change_event(
+            fixture,
+            "same-entity",
+            originals=[URIRef("urn:ref:atlas-fixture:resource:entity-agency")],
+            results=[URIRef("urn:ref:atlas-fixture:resource:entity-agency-canonical")],
+            record=record,
+        )
+
+    def change_event_same_entity_closure(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # No direct link: each of the two organizations is bridged to one
+        # canonical record, so identity's closure makes them one entity, and
+        # the event from one to the other is refused as a direct link is.
+        canonical = URIRef("urn:ref:atlas-fixture:resource:entity-agency-canonical")
+        for index, organization in enumerate(orgs[:2]):
+            _add_assertion(
+                fixture.asserted,
+                assertion_type=ATLAS.MappingAssertion,
+                ring=ATLAS.entity,
+                subject=organization,
+                predicate=ATLAS.sameEntityAs,
+                obj=canonical,
+                source_release=next(fixture.asserted.objects(organization, ATLAS.inRelease)),
+                target_release=next(fixture.asserted.objects(canonical, ATLAS.inRelease)),
+                evidence_record=next(fixture.asserted.objects(organization, ATLAS.sourceRecord)),
+                evidence_name=f"change-event-bridge-{index}",
+            )
+        add_change_event(fixture, "same-entity-closure", originals=orgs[:1], results=orgs[1:2], record=record)
+
+    def change_event_raw_org_predicate(fixture: Fixture, orgs: list[URIRef], record: URIRef) -> None:
+        # The ORG superproperty is what a consumer infers; on the wire it is
+        # refused like any other unadmitted predicate.
+        event = add_change_event(fixture, "raw-org", originals=orgs[:1], results=orgs[1:2], record=record)
+        fixture.asserted.add((event, ORG.resultingOrganization, orgs[1]))
+
+    def mapping_entity_identity_dated(fixture: Fixture) -> None:
+        # REF-072 dates the entity ring's change events, never its identity:
+        # atlas:sameEntityAs still carries no period.
+        period = next(fixture.asserted.objects(dated_mapping(fixture, ATLAS.legalIdentity), RKAF.hasEffectivePeriod))
+        fixture.asserted.add((dated_mapping(fixture, ATLAS.entity), RKAF.hasEffectivePeriod, period))
+
 
     def mapping_subject_ring_dated(fixture: Fixture) -> None:
         # The other half of the ring rule, and the half a "period is optional
@@ -5103,12 +5445,19 @@ def _mutations() -> list[tuple[str, list[str], str, Callable[[Fixture], None]]]:
             multilingual_label,
         ),
         (
+            "multilingual-preferred-labels",
+            ["rdf", "shacl", "dataset"],
+            "valid",
+            multilingual_preferred_labels,
+        ),
+        (
             "non-english-definition",
             ["shacl"],
             "shacl.data",
             non_english_definition,
         ),
         ("duplicate-preferred-language", ["shacl"], "shacl.data", duplicate_preferred_language),
+        ("duplicate-preferred-literal", ["dataset"], "dataset.label-integrity", duplicate_preferred_literal),
         ("mapping-missing-evidence", ["shacl", "dataset"], "shacl.data", missing_evidence),
         (
             "cross-ring-missing-evidence",
@@ -5235,6 +5584,138 @@ def _mutations() -> list[tuple[str, list[str], str, Callable[[Fixture], None]]]:
             ["shacl", "dataset"],
             "shacl.data",
             mapping_undated_legal_identity,
+        ),
+        (
+            "organization-change-events",
+            ["shacl", "dataset"],
+            "valid",
+            organization_change_events,
+        ),
+        (
+            "change-event-two-dates",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_two_dates),
+        ),
+        (
+            "change-event-no-date",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_no_date),
+        ),
+        (
+            "change-event-date-not-midnight",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_date_not_midnight),
+        ),
+        (
+            "change-event-no-original",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_no_original),
+        ),
+        (
+            "change-event-no-result",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_no_result),
+        ),
+        (
+            "change-event-original-among-results",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_original_among_results),
+        ),
+        (
+            "change-event-no-public-record",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_no_public_record),
+        ),
+        (
+            "change-event-not-owner-reviewed",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_not_owner_reviewed),
+        ),
+        (
+            "change-event-owner-attested-other-warrant",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_owner_attested_other_warrant),
+        ),
+        (
+            "change-event-owner-review-origin",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_owner_review("owner-review-origin", RKAF.assertionOrigin, RKAF.aiSuggested)),
+        ),
+        (
+            "change-event-owner-review-attestor-kind",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_owner_review("owner-review-attestor-kind", RKAF.attestorKind, RKAF.aiAgent)),
+        ),
+        (
+            "change-event-owner-review-basis",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_owner_review("owner-review-basis", RKAF.epistemicBasis, RKAF.sourceExplicit)),
+        ),
+        (
+            "change-event-owner-review-role",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_owner_review("owner-review-role", RKAF.evidenceRole, RKAF.officialSourceMetadata)),
+        ),
+        (
+            "change-event-raw-org-predicate",
+            ["shacl"],
+            "shacl.data",
+            change_event_case(change_event_raw_org_predicate),
+        ),
+        (
+            "change-event-result-outside-entity-ring",
+            ["dataset"],
+            "dataset.change-event-policy",
+            change_event_case(change_event_result_outside_entity_ring),
+        ),
+        (
+            "change-event-identity-drift",
+            ["dataset"],
+            "dataset.change-event-identity",
+            change_event_case(change_event_identity_drift),
+        ),
+        (
+            "change-event-inverse-pair",
+            ["dataset"],
+            "dataset.change-event-inverse",
+            change_event_case(change_event_inverse_pair),
+        ),
+        (
+            "change-event-cycle",
+            ["dataset"],
+            "dataset.change-event-cycle",
+            change_event_case(change_event_cycle),
+        ),
+        (
+            "change-event-same-entity",
+            ["dataset"],
+            "dataset.change-event-same-entity",
+            change_event_case(change_event_same_entity),
+        ),
+        (
+            "change-event-same-entity-closure",
+            ["dataset"],
+            "dataset.change-event-same-entity",
+            change_event_case(change_event_same_entity_closure),
+        ),
+        (
+            "mapping-entity-identity-dated",
+            ["shacl", "dataset"],
+            "shacl.data",
+            mapping_entity_identity_dated,
         ),
         (
             "mapping-subject-ring-dated",
@@ -5895,6 +6376,22 @@ def _recorded_receipt() -> dict[str, Any] | None:
         return None
 
 
+def _tree_is_the_receipts() -> bool:
+    """Whether the case tree on disk is the one the committed receipt pins, by one streamed digest over it.
+
+    The suite's question (``--materialize``), narrower than ``--check``'s: not
+    whether the receipt still describes its inputs, only whether these files
+    are the ones it names.
+    """
+
+    recorded = _recorded_receipt()
+    return (
+        recorded is not None
+        and all(root.is_dir() for root in GENERATED_ROOTS)
+        and recorded.get("fixturesDigest") == _fixtures_tree_digest(FIXTURE_ROOT)
+    )
+
+
 def _receipt_is_current() -> bool:
     """Fail closed: any doubt at all returns False and the full rebuild runs."""
 
@@ -6013,16 +6510,31 @@ def _derive_shacl_components(
         shutil.rmtree(probe_root, ignore_errors=True)
 
 
-def build(*, check: bool) -> None:
-    if check and _receipt_is_current():
+def build(*, check: bool, materialize: bool = False) -> None:
+    """Write the corpus, prove it (``check``), or make the gitignored case tree the receipt's (``materialize``).
+
+    ``materialize`` is ``make atlas-v3-fixtures``, run before every tier that
+    reads the tree. The tree survives a checkout of another commit, so it
+    rebuilds whenever the files on disk are not the ones the committed receipt
+    pins, and proves the rebuild against that receipt before replacing them.
+    """
+
+    if materialize:
+        if _tree_is_the_receipts():
+            print("Atlas 3.1 fixtures on disk are the tree fixtures-receipt.json pins")
+            return
+        print("Atlas 3.1 fixtures on disk are absent or not the tree fixtures-receipt.json pins; rebuilding")
+    elif check and _receipt_is_current():
         print(
             f"Atlas 3.1 fixtures are current: receipt matches {len(_receipt_inputs())} inputs and the committed corpus"
         )
         return
     # Has anyone built the case tree here yet? `--check` compares against it
     # when it exists and materializes it when it does not, which is what makes
-    # a cold checkout self-healing without a second entry point.
-    materialized = any(root.is_dir() for root in GENERATED_ROOTS)
+    # a cold checkout self-healing without a second entry point. `materialize`
+    # never compares against it: a tree the receipt does not pin is the stale
+    # cache being replaced, so the receipt is the comparand.
+    materialized = not materialize and any(root.is_dir() for root in GENERATED_ROOTS)
     output_root = FIXTURE_ROOT
     temporary_root = output_root.parent / ".atlas-3.1-fixtures.tmp"
     if temporary_root.exists():
@@ -6064,15 +6576,13 @@ def build(*, check: bool) -> None:
             distribution_id=f"urn:ref:atlas-fixture:distribution:{name}",
         )
 
-    expected_files = {
-        path.relative_to(temporary_root): path.read_bytes() for path in temporary_root.rglob("*") if path.is_file()
-    }
-    current_files = (
-        {path.relative_to(output_root): path.read_bytes() for path in output_root.rglob("*") if path.is_file()}
-        if output_root.exists()
-        else {}
-    )
     if check and materialized:
+        expected_files = {
+            path.relative_to(temporary_root): path.read_bytes() for path in temporary_root.rglob("*") if path.is_file()
+        }
+        current_files = {
+            path.relative_to(output_root): path.read_bytes() for path in output_root.rglob("*") if path.is_file()
+        }
         shutil.rmtree(temporary_root)
         if current_files != expected_files:
             missing = sorted(str(path) for path in expected_files.keys() - current_files.keys())
@@ -6090,10 +6600,11 @@ def build(*, check: bool) -> None:
         print(f"Atlas 3.1 fixtures rebuilt and compared: {len(expected_files)} files identical")
         return
 
-    # Cold checkout: the case tree is generated and gitignored, so there is
-    # nothing on disk to compare against. The committed receipt is the
-    # comparand instead -- the rebuild must reproduce its `fixturesDigest`
-    # before the tree is materialized for the validator and the suite to read.
+    # Cold checkout, or a tree `materialize` is replacing: nothing on disk is a
+    # comparand. The committed receipt is instead -- the rebuild must reproduce
+    # its `fixturesDigest` before the tree is materialized for the validator
+    # and the suite to read.
+    file_count = sum(1 for path in temporary_root.rglob("*") if path.is_file())
     recorded_digest = None
     if check:
         recorded = _recorded_receipt()
@@ -6106,40 +6617,49 @@ def build(*, check: bool) -> None:
                 f"{built_digest} but fixtures-receipt.json records {recorded_digest}. "
                 "Run build_fixtures.py and commit the receipt."
             )
+        # `corpus.json` is tracked: an edit to it is `--check`'s to report,
+        # never the suite's prerequisite's to undo.
+        committed_corpus = output_root / "corpus.json"
+        if materialize and committed_corpus.is_file() and committed_corpus.read_bytes() != corpus_bytes:
+            shutil.rmtree(temporary_root)
+            raise SystemExit(
+                "fixtures/corpus.json is not the corpus fixtures-receipt.json pins; "
+                "run make check-generated to see why"
+            )
 
     output_root.mkdir(parents=True, exist_ok=True)
     for generated_root in GENERATED_ROOTS:
         if generated_root.exists():
             shutil.rmtree(generated_root)
-    for path in list(output_root.glob("corpus.json")):
-        path.unlink()
-    for source in sorted(temporary_root.rglob("*")):
-        relative = source.relative_to(temporary_root)
-        target = output_root / relative
-        if source.is_dir():
-            target.mkdir(parents=True, exist_ok=True)
-        else:
-            target.write_bytes(source.read_bytes())
-    shutil.rmtree(temporary_root)
+    # Renamed into place, not copied: the digest above was the one read.
+    for source in temporary_root.iterdir():
+        source.replace(output_root / source.name)
+    temporary_root.rmdir()
     if check and recorded_digest is not None:
         # The committed receipt already pins exactly these bytes, so leave it
         # alone: rewriting it here would dirty a checked-in file on every cold
         # build for no new information.
-        print(f"Atlas 3.1 fixtures materialized and matched the committed receipt: {len(expected_files)} files")
+        print(f"Atlas 3.1 fixtures materialized and matched the committed receipt: {file_count} files")
         return
     RECEIPT_PATH.write_bytes(atlas_validate.canonical_json_bytes(_current_receipt()))
-    print(f"Atlas 3.1 fixtures written: {len(expected_files)} files, receipt over {len(_receipt_inputs())} inputs")
+    print(f"Atlas 3.1 fixtures written: {file_count} files, receipt over {len(_receipt_inputs())} inputs")
 
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="prove the committed corpus and receipt current")
+    mode.add_argument(
+        "--materialize",
+        action="store_true",
+        help="rebuild the case tree only if it is not the one fixtures-receipt.json pins",
+    )
     return parser
 
 
 def main(argv: Iterable[str] | None = None) -> int:
     args = _parser().parse_args(list(argv) if argv is not None else None)
-    build(check=args.check)
+    build(check=args.check or args.materialize, materialize=args.materialize)
     return 0
 
 

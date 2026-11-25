@@ -125,9 +125,10 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import re
 from collections.abc import Mapping
 from dataclasses import dataclass
-from functools import cached_property
+from functools import cached_property, lru_cache
 from pathlib import Path
 from types import MappingProxyType
 
@@ -135,6 +136,7 @@ from refspec.registry import hand_validated_interpretations
 
 __all__ = [
     "ABSENT_CAPABLE",
+    "CANDIDATE_REJECTION_REASONS",
     "EO_ROSTER_ARTIFACT",
     "FR_API_DENSE_MAX",
     "FR_API_WINDOW",
@@ -146,9 +148,11 @@ __all__ = [
     "UNKNOWN_REASONS",
     "VERDICTS",
     "WINDOWS",
+    "EoCandidateCheck",
     "EoCapturePin",
     "EoRosterOracle",
     "EoVerdict",
+    "is_valid_eo_candidate",
     "window_for",
 ]
 
@@ -215,6 +219,16 @@ VERDICTS = ("exists", "absent", "unknown")
 #: grammar constant: :func:`_verify_density` refuses to load a roster that
 #: does not attain it -- see the module docstring's "Measured absence".
 FR_API_DENSE_MAX = 14_420
+
+CANDIDATE_REJECTION_REASONS = (
+    "xml_or_file_path",
+    "zero_homoglyph_or_malformed_label",
+    "leading_zero",
+    "non_positive_number",
+    "implausible_digit_length",
+    "above_roster_max",
+    "absent_in_dense_window",
+)
 
 #: 34.7% dense (4,394 of 12,659 numbers, measured against the pinned roster
 #: -- see the evidence home's measure.py). Affirm-only.
@@ -476,6 +490,43 @@ class EoRosterOracle:
             return EoVerdict(number, "absent", window)
         return EoVerdict(number, "unknown", window, reason="nara_window_miss")
 
+    @cached_property
+    def max_eo(self) -> int:
+        """The highest Executive Order number attested in this roster."""
+
+        return max(self._rows)
+
+    def validate_candidate(
+        self,
+        candidate: int | str,
+        *,
+        surrounding_text: str | None = None,
+        span: tuple[int, int] | None = None,
+    ) -> EoCandidateCheck:
+        """Validate a prose or numeric Executive Order candidate against path guards and this roster."""
+
+        return _validate_eo_candidate(
+            candidate,
+            oracle=self,
+            surrounding_text=surrounding_text,
+            span=span,
+        )
+
+    def is_valid_candidate(
+        self,
+        candidate: int | str,
+        *,
+        surrounding_text: str | None = None,
+        span: tuple[int, int] | None = None,
+    ) -> bool:
+        """Boolean convenience wrapper around :meth:`validate_candidate`."""
+
+        return self.validate_candidate(
+            candidate,
+            surrounding_text=surrounding_text,
+            span=span,
+        ).is_valid
+
     @staticmethod
     def flag_for(eo_number: int) -> hand_validated_interpretations.Interpretation | None:
         """The hand-validated FLAG for this number, or ``None`` if none is recorded.
@@ -510,3 +561,209 @@ class EoRosterOracle:
                 f"hand_validated_interpretations.lookup and decide there"
             )
         return row
+
+
+# --------------------------------------------------------------------------- #
+# Candidate validation & XML/file-path/homoglyph false-positive guards
+# --------------------------------------------------------------------------- #
+
+_EO_DASH_MAP = str.maketrans(dict.fromkeys("‐‑‒–—―−\x96\x97", "-"))
+_EO_TOKEN_DELIMITERS = frozenset(",;()[]{}<>\"'")
+_EO_DIGIT_RUN_RE = re.compile(r"\d+")
+_EO_DOTTED_FILE_SUFFIX_RE = re.compile(r"\d\.[A-Za-z0-9]")
+_EO_ZERO_HOMOGLYPH_INLINE_RE = re.compile(r"(?<![A-Za-z0-9])E0\s*\d")
+_EO_ZERO_HOMOGLYPH_LABEL_RE = re.compile(r"(?<![A-Za-z0-9])E0\.?$")
+_EO_PRECEDING_LABEL_TAIL_RE = re.compile(r"(?:(?i:orders?|ord\.?)|EOs?\.?|E\.O\.?s?|E0\.?)$")
+_EO_CLEAN_PRECEDING_LABEL_RE = re.compile(
+    r"(?:(?i:Executive\s+Orders?|Exec\.?\s*(?:Orders?|Ord\.?))|EOs?\.?|E\.\s*O\.?s?)\s*(?i:Nos?\.?\s*)?$"
+)
+_EO_CANDIDATE_LABEL_RE = re.compile(
+    r"^(?:"
+    r"(?i:Executive\s+Orders?|Exec\.?\s*(?:Orders?|Ord\.?))"
+    r"|(?:EOs?\.?|E\.\s*O\.?s?)"
+    r")\s*(?i:Nos?\.?\s*)?(?P<num>-?\d+)\.?$"
+)
+_MAX_EO_DIGITS_STRUCTURAL = 99_999
+
+
+@dataclass(frozen=True, slots=True)
+class EoCandidateCheck:
+    """Result of validating an Executive Order candidate against path guards and roster bounds."""
+
+    eo_number: int | None
+    is_valid: bool
+    verdict: EoVerdict | None = None
+    rejection_reason: str | None = None
+
+    def __post_init__(self) -> None:
+        if self.is_valid != (self.rejection_reason is None):
+            raise ValueError("a valid candidate carries no rejection_reason, and a rejected candidate must name one")
+        if self.rejection_reason is not None and self.rejection_reason not in CANDIDATE_REJECTION_REASONS:
+            raise ValueError(f"undeclared candidate rejection reason: {self.rejection_reason!r}")
+        if self.is_valid and (self.eo_number is None or self.eo_number < 1):
+            raise ValueError("a valid EO candidate must carry a positive integer eo_number")
+
+
+def _expand_enclosing_token(norm: str, start: int, end: int) -> tuple[int, int]:
+    tok_s = start
+    while tok_s > 0 and not norm[tok_s - 1].isspace() and norm[tok_s - 1] not in _EO_TOKEN_DELIMITERS:
+        tok_s -= 1
+    tok_e = end
+    while tok_e < len(norm) and not norm[tok_e].isspace() and norm[tok_e] not in _EO_TOKEN_DELIMITERS:
+        tok_e += 1
+    return tok_s, tok_e
+
+
+def _preceding_horizontal_token(norm: str, pos: int) -> tuple[str, int]:
+    idx = pos
+    while idx > 0 and norm[idx - 1] in " \t":
+        idx -= 1
+    if idx == 0 or norm[idx - 1].isspace() or norm[idx - 1] in _EO_TOKEN_DELIMITERS:
+        return "", idx
+    end = idx
+    while idx > 0 and not norm[idx - 1].isspace() and norm[idx - 1] not in _EO_TOKEN_DELIMITERS:
+        idx -= 1
+    return norm[idx:end], idx
+
+
+def _inspect_span_in_context(norm: str, start: int, end: int, eo_number: int) -> str | None:
+    """Uniformly inspect ``norm[start:end]`` and its enclosing token for path, homoglyph, and leading-zero traps."""
+
+    tok_s, tok_e = _expand_enclosing_token(norm, start, end)
+    enclosing_stripped = norm[tok_s:tok_e].rstrip(".")
+    if any(ch in enclosing_stripped for ch in "\\/_:") or _EO_DOTTED_FILE_SUFFIX_RE.search(enclosing_stripped):
+        return "xml_or_file_path"
+    if _EO_ZERO_HOMOGLYPH_INLINE_RE.search(enclosing_stripped):
+        return "zero_homoglyph_or_malformed_label"
+
+    prev_tok, prev_s = _preceding_horizontal_token(norm, tok_s)
+    if prev_tok.rstrip(".").lower() in {"no", "nos"}:
+        prev_tok, prev_s = _preceding_horizontal_token(norm, prev_s)
+    if prev_tok and _EO_PRECEDING_LABEL_TAIL_RE.search(prev_tok):
+        if any(ch in prev_tok for ch in "\\/_") or ":" in prev_tok.rstrip(":"):
+            return "xml_or_file_path"
+        if _EO_ZERO_HOMOGLYPH_LABEL_RE.search(prev_tok):
+            return "zero_homoglyph_or_malformed_label"
+    elif prev_tok and _EO_ZERO_HOMOGLYPH_LABEL_RE.search(prev_tok):
+        return "zero_homoglyph_or_malformed_label"
+
+    for digit_match in _EO_DIGIT_RUN_RE.finditer(enclosing_stripped):
+        digits = digit_match.group(0)
+        if int(digits) == eo_number and digits.startswith("0"):
+            return "leading_zero"
+    return None
+
+
+@lru_cache(maxsize=8)
+def _index_eo_context(surrounding_text: str) -> tuple[str, tuple[tuple[int, int, int], ...]]:
+    norm = surrounding_text.translate(_EO_DASH_MAP)
+    runs = tuple((int(m.group(0)), m.start(), m.end()) for m in _EO_DIGIT_RUN_RE.finditer(norm))
+    return norm, runs
+
+
+def _context_rejection_for_number(
+    eo_number: int,
+    surrounding_text: str,
+    span: tuple[int, int] | None,
+) -> str | None:
+    """Check ``surrounding_text`` for XML/file-path, leading-zero, or ``E0`` homoglyph traps around ``eo_number``."""
+
+    norm, runs = _index_eo_context(surrounding_text)
+    if span is not None:
+        if (
+            not isinstance(span, tuple)
+            or len(span) != 2
+            or any(isinstance(x, bool) or not isinstance(x, int) for x in span)
+        ):
+            raise TypeError("span must be a (start, end) tuple of ints")
+        start, end = span
+        if start < 0 or end > len(norm) or start >= end:
+            raise ValueError(f"span {span!r} is out of bounds for surrounding_text of length {len(norm)}")
+        return _inspect_span_in_context(norm, start, end, eo_number)
+
+    reasons_seen: list[str] = []
+    saw_clean_labeled = False
+    for run_val, ns, ne in runs:
+        if run_val != eo_number:
+            continue
+        trap = _inspect_span_in_context(norm, ns, ne, eo_number)
+        if trap is not None:
+            reasons_seen.append(trap)
+            continue
+        before = norm[max(0, ns - 36) : ns]
+        if _EO_CLEAN_PRECEDING_LABEL_RE.search(before):
+            saw_clean_labeled = True
+    if saw_clean_labeled:
+        return None
+    return reasons_seen[0] if reasons_seen else None
+
+
+def _validate_eo_candidate(
+    candidate: int | str,
+    *,
+    oracle: EoRosterOracle | None = None,
+    surrounding_text: str | None = None,
+    span: tuple[int, int] | None = None,
+) -> EoCandidateCheck:
+    if isinstance(candidate, bool) or not isinstance(candidate, (int, str)):
+        raise TypeError(f"candidate must be an int or str, got {type(candidate).__name__}")
+    if span is not None and surrounding_text is None:
+        raise ValueError("span requires surrounding_text")
+
+    if isinstance(candidate, str):
+        cleaned = candidate.translate(_EO_DASH_MAP).strip()
+        if not cleaned:
+            return EoCandidateCheck(None, False, None, "zero_homoglyph_or_malformed_label")
+        if any(ch in cleaned for ch in "\\/_:") or _EO_DOTTED_FILE_SUFFIX_RE.search(cleaned):
+            return EoCandidateCheck(None, False, None, "xml_or_file_path")
+
+        bare_int = re.fullmatch(r"(-?\d+)\.?", cleaned)
+        if bare_int is not None:
+            digits = bare_int.group(1)
+        else:
+            labeled = _EO_CANDIDATE_LABEL_RE.fullmatch(cleaned)
+            if labeled is None:
+                return EoCandidateCheck(None, False, None, "zero_homoglyph_or_malformed_label")
+            digits = labeled.group("num")
+
+        eo_num = int(digits)
+        if digits.startswith("-") or eo_num <= 0:
+            return EoCandidateCheck(eo_num, False, None, "non_positive_number")
+        if digits.startswith("0"):
+            return EoCandidateCheck(eo_num, False, None, "leading_zero")
+    else:
+        eo_num = candidate
+        if eo_num <= 0:
+            return EoCandidateCheck(eo_num, False, None, "non_positive_number")
+
+    if surrounding_text is not None:
+        ctx_rejection = _context_rejection_for_number(eo_num, surrounding_text, span)
+        if ctx_rejection is not None:
+            return EoCandidateCheck(eo_num, False, None, ctx_rejection)
+
+    verdict = oracle.verdict(eo_num) if oracle is not None else None
+    if eo_num > _MAX_EO_DIGITS_STRUCTURAL:
+        return EoCandidateCheck(eo_num, False, verdict, "implausible_digit_length")
+    if oracle is not None and eo_num > oracle.max_eo and (verdict is None or verdict.verdict != "exists"):
+        return EoCandidateCheck(eo_num, False, verdict, "above_roster_max")
+    if verdict is not None and verdict.verdict == "absent":
+        return EoCandidateCheck(eo_num, False, verdict, "absent_in_dense_window")
+    return EoCandidateCheck(eo_num, True, verdict, None)
+
+
+def is_valid_eo_candidate(
+    candidate: int | str,
+    *,
+    oracle: EoRosterOracle | None = None,
+    surrounding_text: str | None = None,
+    span: tuple[int, int] | None = None,
+) -> bool:
+    """Whether ``candidate`` passes XML/file-path/homoglyph guards and optional ``oracle`` checks."""
+
+    return _validate_eo_candidate(
+        candidate,
+        oracle=oracle,
+        surrounding_text=surrounding_text,
+        span=span,
+    ).is_valid
+

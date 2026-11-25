@@ -38,9 +38,34 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, BinaryIO
 
-from refspec.registry.act_resolution import UNRESOLVED_REASONS
+from refspec.registry.act_resolution import (
+    GENERIC_ACT_STEM_STOPLIST as GENERIC_ACT_STEM_STOPLIST,
+)
+from refspec.registry.act_resolution import (
+    UNRESOLVED_REASONS,
+)
+from refspec.registry.act_resolution import (
+    ActIndex as ActIndex,
+)
+from refspec.registry.act_resolution import (
+    StatutoryShortTitleMatch as StatutoryShortTitleMatch,
+)
+from refspec.registry.act_resolution import (
+    find_statutory_short_titles as find_statutory_short_titles,
+)
 from refspec.registry.infrastructure.artifact_serialization import file_sha256, scan_for_secrets, scan_text_for_secrets
 from refspec.storage import canonical_json
+
+
+def scan_text(
+    text: str,
+    index: ActIndex,
+    *,
+    deduplicate: bool = True,
+) -> tuple[StatutoryShortTitleMatch, ...]:
+    """Scan unstructured prose for enacted statutory short titles using ``index``."""
+
+    return find_statutory_short_titles(text, index, deduplicate=deduplicate)
 
 _REPO_ROOT = Path(__file__).resolve().parents[3]
 
@@ -830,7 +855,32 @@ def main(argv: list[str] | None = None) -> int:
         help="sealed artifact whose Table III rows this build's reproduction is measured against",
     )
     parser.add_argument("--verify", action="store_true", help="verify the artifact against its receipt")
+    parser.add_argument(
+        "--scan-text",
+        type=str,
+        default=None,
+        help="scan unstructured prose against the sealed act index and emit resolved statutory short titles as JSON",
+    )
     args = parser.parse_args(argv)
+
+    if args.scan_text is not None:
+        index = ActIndex.from_artifact(args.output)
+        hits = scan_text(args.scan_text, index)
+        print(
+            canonical_json(
+                [
+                    {
+                        "act_key": hit.act_key,
+                        "end": hit.end,
+                        "start": hit.start,
+                        "surface": hit.surface,
+                        "table3_key": hit.table3_key,
+                    }
+                    for hit in hits
+                ]
+            )
+        )
+        return 0
 
     if args.verify:
         problems = verify_artifact(args.output, zip_path=args.bulk_source)

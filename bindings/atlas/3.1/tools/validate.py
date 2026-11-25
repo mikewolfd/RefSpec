@@ -698,6 +698,9 @@ MEMBER_DISPOSITIONS = frozenset(
         "reviewWithheld",
     }
 )
+# REF-072: an organization change event is named by the digest of its own
+# facts (dataset.change-event-identity), so the prefix alone says a node is one.
+CHANGE_EVENT_IRI_PREFIX = "urn:ref:atlas-change-event:"
 RING_RESOURCE_CLASSES = {
     ATLAS.entity: ATLAS.EntityResource,
     ATLAS.legalIdentity: ATLAS.LegalIdentityResource,
@@ -730,6 +733,7 @@ ALLOWED_ASSERTED_TYPES = frozenset(
         RKAF.RelationComparisonContext,
         RKAF.EffectivePeriod,
         RKAF.RegistryConflict,
+        ATLAS.OrganizationChangeEvent,
         ATLAS.RelationAssertion,
         *ASSERTION_TYPES,
         ATLAS.SkosMappingAssertion,
@@ -757,6 +761,7 @@ ASSERTED_CARRIER_TYPES = frozenset(
         RKAF.RelationComparisonContext,
         RKAF.EffectivePeriod,
         RKAF.RegistryConflict,
+        ATLAS.OrganizationChangeEvent,
         *ASSERTION_TYPES,
         SKOSXL.Label,
     }
@@ -878,6 +883,8 @@ ALLOWED_ASSERTED_PREDICATES = frozenset(
         RKAF.conflictingEntries,
         RKAF.severity,
         RKAF.detectedAt,
+        ATLAS.originalOrganization,
+        ATLAS.resultingOrganization,
         ATLAS.contentDigest,
     }
 )
@@ -887,106 +894,9 @@ XL_TO_SKOS = {
     SKOSXL.hiddenLabel: SKOS.hiddenLabel,
 }
 SKOS_TO_XL = {plain: xl for xl, plain in XL_TO_SKOS.items()}
-# Every asserted predicate whose objects a bucket-2 semantic gate reads back
-# per carrier node, and nothing else. `_AssertedFacts` keeps exactly these as
-# the packs are parsed, so the gates read a prepared index instead of asking
-# the 29M-quad store one subject at a time. Adding a predicate here costs one
-# retained reference per occurrence in the asserted graph, so the list is the
-# read set, not the vocabulary: `atlas:nativePayload`, `atlas:notation` and the
-# other bulk literals are deliberately absent because no folded gate reads them
-# through this index. A gate asking for a predicate that is NOT here raises
-# rather than silently answering from the store, so the list cannot drift out
-# from under a check without failing loudly.
-#
-# Machine-adjudication records are structurally absent from the staging
-# distribution. Keeping their complete read set separate makes that zero and
-# its memory consequence measurable without weakening the shared allowlist.
-_MACHINE_ADJUDICATION_INDEXED_PREDICATES = frozenset(
-    {
-        RKAF.hasArtifactIdentifier,
-        RKAF.hasContentDigest,
-        RKAF.proofRecordDigest,
-        RKAF.proofIssuer,
-        RKAF.hasAILineage,
-        RKAF.proofComparisonContext,
-        RKAF.proofEvaluatedAt,
-        RKAF.adjudicationVerdict,
-        RKAF.proofOutcome,
-        RKAF.proofSnapshot,
-        RKAF.sealedRequestDigest,
-        RKAF.inputContextHash,
-        RKAF.independenceGroup,
-        RKAF.proofResolver,
-        RKAF.modelId,
-        RKAF.sealedResponseArtifact,
-        RKAF.proofInput,
-        RKAF.proofInputDigest,
-        RKAF.comparisonExpectedAssertion,
-        RKAF.comparisonOutcome,
-        RKAF.comparisonSnapshot,
-        RKAF.comparisonBaselineArtifact,
-        RKAF.comparisonObservedArtifact,
-        RKAF.comparisonProofRecord,
-    }
-)
-_INDEXED_ASSERTED_PREDICATES = (
-    frozenset(
-        {
-            RDF.subject,
-            RDF.predicate,
-            RDF.object,
-            PROV.hadMember,
-            SKOSXL.prefLabel,
-            SKOSXL.altLabel,
-            SKOSXL.hiddenLabel,
-            SKOSXL.literalForm,
-            ATLAS.inRelease,
-            ATLAS.inSourceRelease,
-            ATLAS.inScheme,
-            ATLAS.semanticRing,
-            ATLAS.sourceRing,
-            ATLAS.targetRing,
-            ATLAS.supportedRing,
-            ATLAS.resourceProfile,
-            ATLAS.sourceRecord,
-            ATLAS.representsResource,
-            ATLAS.identifierScheme,
-            ATLAS.identifierValue,
-            ATLAS.identifies,
-            ATLAS.sourceRelease,
-            ATLAS.targetRelease,
-            ATLAS.governedByPolicy,
-            ATLAS.assertionIdentityDigest,
-            ATLAS.evidenceSourceRecord,
-            ATLAS.evidenceSourceDigest,
-            ATLAS.contentDigest,
-            RKAF.assertedAt,
-            RKAF.attestedAt,
-            RKAF.attestor,
-            RKAF.decision,
-            RKAF.assertionOrigin,
-            RKAF.epistemicBasis,
-            RKAF.evidenceRole,
-            RKAF.attestorKind,
-            RKAF.evidentiaryFunction,
-            RKAF.bindsAssertion,
-            RKAF.basedOnAttestation,
-            RKAF.supersedesAssertion,
-            RKAF.appliesTo,
-            RKAF.lifecycleEventKind,
-            RKAF.conflictingEntries,
-        }
-    )
-    | _MACHINE_ADJUDICATION_INDEXED_PREDICATES
-)
-# The assertion-shaped `rdf:type` objects, and the two of them the shared
-# carrier inventory cannot answer. `_check_graph_roles` already hands every
-# gate a set per concrete carrier type, so `atlas:RelationAssertion` and
-# `atlas:SkosMappingAssertion` -- which are abstract and carried BESIDE a
-# concrete type -- are the only type facts left to index, and they are indexed
-# as two membership sets rather than a per-subject type map.
+# Abstract assertion types accompany a concrete carrier type.
 _ASSERTION_TYPE_TERMS = frozenset({ATLAS.RelationAssertion, ATLAS.SkosMappingAssertion, *ASSERTION_TYPES})
-_INDEXED_ASSERTED_TYPES = _ASSERTION_TYPE_TERMS - ASSERTED_CARRIER_TYPES
+_ABSTRACT_ASSERTION_TYPES = _ASSERTION_TYPE_TERMS - ASSERTED_CARRIER_TYPES
 REQUIRED_GATES = frozenset(
     {
         "canonical-json",
@@ -1074,6 +984,7 @@ REQUIRED_CORPUS_CASES = frozenset(
         "derived-reflexive-output",
         "derived-rescinded-input",
         "duplicate-preferred-language",
+        "duplicate-preferred-literal",
         "eurovoc-microthesaurus-domain-broader",
         "eurovoc-microthesaurus-domain-duplicates-asserted",
         "eurovoc-microthesaurus-domain-malformed-inputs",
@@ -1129,6 +1040,30 @@ REQUIRED_CORPUS_CASES = frozenset(
         "mapping-publisher-without-standing",
         "mapping-silent-predicate-rewrite",
         "mapping-subject-ring-dated",
+        "mapping-entity-identity-dated",
+        # REF-072: organization change events, one valid pair of events and a
+        # negative per shape clause and per corpus-wide rule.
+        "organization-change-events",
+        "change-event-two-dates",
+        "change-event-no-date",
+        "change-event-date-not-midnight",
+        "change-event-no-original",
+        "change-event-no-result",
+        "change-event-original-among-results",
+        "change-event-no-public-record",
+        "change-event-not-owner-reviewed",
+        "change-event-owner-attested-other-warrant",
+        "change-event-owner-review-origin",
+        "change-event-owner-review-attestor-kind",
+        "change-event-owner-review-basis",
+        "change-event-owner-review-role",
+        "change-event-raw-org-predicate",
+        "change-event-result-outside-entity-ring",
+        "change-event-identity-drift",
+        "change-event-inverse-pair",
+        "change-event-cycle",
+        "change-event-same-entity",
+        "change-event-same-entity-closure",
         "mapping-undated-legal-identity",
         "mapping-undated-value-crosswalk",
         "mapping-wrong-endpoint-release",
@@ -1142,6 +1077,7 @@ REQUIRED_CORPUS_CASES = frozenset(
         "naked-projected-mapping",
         "no-derived",
         "multilingual-label",
+        "multilingual-preferred-labels",
         "multiple-assertions-one-projection",
         "multiple-evidence-one-assertion",
         "multiple-evidence-stale-count",
@@ -1223,11 +1159,8 @@ class ExactMatchIndex:
 class SemanticInventory:
     """Reusable carrier inventory built during graph-placement validation.
 
-    `facts` is the parse-observed read index for the asserted graph, when the
-    inventory was built from one (`_AssertedFacts`). It travels with the
-    inventory because every gate that reads asserted objects back per carrier
-    already takes the inventory; a gate handed no inventory, or one built
-    without an index, reads the store instead and behaves identically.
+    Gates share an asserted-graph reader through `facts`; its reads use the
+    graph's own indexes and retain no separate copy of the RDF facts.
     """
 
     asserted_by_carrier: Mapping[URIRef, AbstractSet[URIRef]]
@@ -1330,212 +1263,36 @@ _PLACEMENT_ALLOWED = 0
 _PLACEMENT_TYPE = 1
 _PLACEMENT_PROJECTED = 2
 _PLACEMENT_UNSUPPORTED = 3
-# `_AssertedFacts` distinguishes "this subject carries no such object" from a
-# stored `None`, which no RDF term ever is; a module-level sentinel keeps the
-# hot lookup to one `dict.get`.
-_FACT_ABSENT: Any = object()
-# Above this many objects for one (subject, predicate), `_AssertedFacts.contains`
-# builds a set once instead of scanning the list on every call. One release's
-# `prov:hadMember` is ~588K objects and every resource asks whether it is in
-# there, so the linear scan is the difference between one pass and a quadratic
-# one; below the threshold the list scan is cheaper than the set it would build.
-_FACT_MEMBERSHIP_THRESHOLD = 8
-
-
 class _AssertedFacts:
-    """The asserted objects the semantic gates read back, indexed while parsing.
+    """Read asserted facts through the graph's existing SPO and POS indexes."""
 
-    The gates below are per-carrier loops: for every resource, label,
-    assertion, evidence binding and source record, ask the store for the same
-    handful of predicates. Measured on the 1M-quad staging distribution: 1.4M
-    `Graph.triples` calls across four phases costing 5.8s, and the same loops
-    at full scale run over 20-60x the carriers. The parser already holds every
-    one of those objects as it builds the store, so they ride along into a
-    columnar index (`predicate -> subject -> object`) and the gates read that.
-    The original four phases then issued 150 store calls and cost 2.5s. After
-    construction ownership and machine adjudication joined them, the 67-row
-    allowlist retained the same 826,127 staging occurrences: its median parse
-    RSS cost was 41 MiB (~1.16 GiB projected at 29M quads), because the 24 new
-    machine predicates have no occurrences in that artifact.
+    __slots__ = ("_graph", "graph_id")
 
-    This is the `_AssertedPlacementObservation` pattern, applied to reads
-    rather than to placement: nothing here fails, the gates still raise, in the
-    same order, with the same codes and messages. Semantics are preserved by
-    construction rather than by argument -- the index answers exactly "the
-    objects of `predicate` on `subject` in the asserted graph", which is what
-    `Graph.objects` answers, and the gates' control flow is untouched.
-
-    Two modes, one API. The parser fills the index; `from_graph` recreates it
-    for `validate_preparsed_distribution`, which has resident graphs but no
-    parse observer. Bound directly to a graph (`for_graph`), it answers from
-    the store for helper calls that have neither observation. `one` in graph
-    mode is literally `_one`, so a caller counting `_one` still counts it.
-
-    Duplicate objects are impossible on the indexed path and so are not
-    filtered: canonical packs are strictly increasing (`_NQuadsProfileReader`),
-    which forbids a repeated quad inside one pack, and `pack.co-location` --
-    proved by `observe_subject`, which runs BEFORE this observer on the same
-    line -- forbids one subject's outgoing facts from appearing in two packs.
-    That is the same invariant `_AssertedNodeDigests` already stands on.
-    """
-
-    __slots__ = ("_graph", "_membership", "_reorder", "_rows", "_types", "graph_id")
-
-    def __init__(
-        self,
-        graph_id: URIRef,
-        *,
-        graph: Graph | None = None,
-        from_walk: bool = False,
-    ) -> None:
-        self.graph_id = graph_id
+    def __init__(self, graph: Graph) -> None:
         self._graph = graph
-        # Filled only when the index is built by walking a finished store: that
-        # walk yields a context's triples in set order, so a subject carrying
-        # two objects for one predicate can arrive in an order `Graph.objects`
-        # would never produce -- and two folded gates iterate those objects and
-        # raise on the first offender. Single-valued rows cannot disagree, so
-        # only the transitions are remembered and only they are re-read.
-        self._reorder: list[tuple[URIRef, URIRef]] | None = [] if from_walk else None
-        self._rows: dict[URIRef, dict[URIRef, Any]] | None = (
-            None if graph is not None else {predicate: {} for predicate in _INDEXED_ASSERTED_PREDICATES}
-        )
-        self._types: dict[URIRef, set[URIRef]] | None = (
-            None if graph is not None else {asserted_type: set() for asserted_type in _INDEXED_ASSERTED_TYPES}
-        )
-        self._membership: dict[tuple[URIRef, URIRef], frozenset[Any]] = {}
+        self.graph_id = graph.identifier
 
     @classmethod
     def for_graph(cls, asserted: Graph) -> _AssertedFacts:
-        """Answer from an already-parsed graph, for callers that did not parse here."""
-
-        return cls(asserted.identifier, graph=asserted)
-
-    @property
-    def indexed(self) -> bool:
-        return self._rows is not None
-
-    def observe(self, subject: URIRef, predicate: URIRef, obj: Any) -> None:
-        """Record one asserted quad's object, if any gate reads that predicate.
-
-        One `dict.get` for every quad in the asserted graph, and nothing else
-        for the ~30% of them no gate reads back. Only reachable on an indexed
-        instance: a graph-backed one has nothing to observe.
-        """
-
-        rows = self._rows
-        if rows is None:
-            return
-        row = rows.get(predicate)
-        if row is None:
-            if predicate == RDF.type:
-                subjects = self._types.get(obj)  # type: ignore[union-attr]
-                if subjects is not None:
-                    subjects.add(subject)
-            return
-        existing = row.get(subject, _FACT_ABSENT)
-        if existing is _FACT_ABSENT:
-            row[subject] = obj
-        elif type(existing) is list:
-            existing.append(obj)
-        else:
-            row[subject] = [existing, obj]
-            if self._reorder is not None:
-                self._reorder.append((predicate, subject))
-
-    def align_to_graph(self, asserted: Graph) -> None:
-        """Put the multi-valued rows a store walk filled back in the store's order."""
-
-        if not self._reorder:
-            return
-        for predicate, subject in self._reorder:
-            self._rows[predicate][subject] = list(  # type: ignore[index]
-                asserted.objects(subject, predicate)
-            )
-        self._reorder.clear()
-
-    def _row(self, predicate: URIRef) -> dict[URIRef, Any]:
-        row = self._rows.get(predicate)  # type: ignore[union-attr]
-        if row is None:
-            raise AssertionError(f"{predicate} is not an indexed asserted predicate")
-        return row
+        return cls(asserted)
 
     def objects(self, subject: URIRef, predicate: URIRef) -> tuple[Any, ...]:
-        """Every object of `predicate` on `subject`, in the graph's own order."""
-
-        if self._rows is None:
-            return tuple(self._graph.objects(subject, predicate))  # type: ignore[union-attr]
-        value = self._row(predicate).get(subject, _FACT_ABSENT)
-        if value is _FACT_ABSENT:
-            return ()
-        if type(value) is list:
-            return tuple(value)
-        return (value,)
+        return tuple(self._graph.objects(subject, predicate))
 
     def one(self, subject: URIRef, predicate: URIRef, *, code: str) -> Any:
-        """`_one`, answered from the index; identical refusal either way."""
-
-        if self._rows is None:
-            return _one(self._graph, subject, predicate, code=code)  # type: ignore[arg-type]
-        value = self._row(predicate).get(subject, _FACT_ABSENT)
-        if value is _FACT_ABSENT:
-            _fail(code, f"{subject} must have exactly one {predicate}; found 0")
-        if type(value) is list:
-            _fail(code, f"{subject} must have exactly one {predicate}; found {len(value)}")
-        return value
+        return _one(self._graph, subject, predicate, code=code)
 
     def value(self, subject: URIRef, predicate: URIRef) -> Any:
-        """`Graph.value`: the first object, or None when there is none."""
-
-        if self._rows is None:
-            return self._graph.value(subject, predicate)  # type: ignore[union-attr]
-        value = self._row(predicate).get(subject, _FACT_ABSENT)
-        if value is _FACT_ABSENT:
-            return None
-        if type(value) is list:
-            return value[0]
-        return value
+        return self._graph.value(subject, predicate)
 
     def contains(self, subject: URIRef, predicate: URIRef, obj: Any) -> bool:
-        """Whether the asserted graph carries this exact triple."""
-
-        if self._rows is None:
-            return (subject, predicate, obj) in self._graph  # type: ignore[operator]
-        value = self._row(predicate).get(subject, _FACT_ABSENT)
-        if value is _FACT_ABSENT:
-            return False
-        if type(value) is not list:
-            return bool(value == obj)
-        if len(value) < _FACT_MEMBERSHIP_THRESHOLD:
-            return obj in value
-        key = (subject, predicate)
-        members = self._membership.get(key)
-        if members is None:
-            members = self._membership[key] = frozenset(value)
-        return obj in members
+        return (subject, predicate, obj) in self._graph
 
     def subject_objects(self, predicate: URIRef) -> Iterable[tuple[URIRef, Any]]:
-        """Every (subject, object) pair for one predicate across the asserted graph."""
-
-        if self._rows is None:
-            yield from self._graph.subject_objects(predicate)  # type: ignore[union-attr]
-            return
-        for subject, value in self._row(predicate).items():
-            if type(value) is list:
-                for obj in value:
-                    yield subject, obj
-            else:
-                yield subject, value
+        yield from self._graph.subject_objects(predicate)
 
     def has_type(self, subject: URIRef, asserted_type: URIRef) -> bool:
-        """Whether `subject` declares one of the indexed abstract carrier types."""
-
-        if self._types is None:
-            return (subject, RDF.type, asserted_type) in self._graph  # type: ignore[operator]
-        subjects = self._types.get(asserted_type)
-        if subjects is None:
-            raise AssertionError(f"{asserted_type} is not an indexed asserted type")
-        return subject in subjects
+        return (subject, RDF.type, asserted_type) in self._graph
 
 
 @dataclass(slots=True)
@@ -1558,11 +1315,8 @@ class _AssertedPlacementObservation:
     subject, including subjects that carry no `rdf:type` at all, because "has
     exactly one concrete carrier type" is one of the things being checked.
 
-    It carries `_AssertedFacts` for the same reason and on the same terms: one
-    walk of the asserted quads, whoever does the walking, serves both the
-    placement pass and the per-carrier reads the later gates would otherwise
-    take one store query at a time. `types` is drained by `_check_graph_roles`;
-    `facts` outlives it and is handed on through `SemanticInventory`.
+    `types` is drained by `_check_graph_roles`. Later gates share the graph
+    through `_AssertedFacts`; they retain no second copy of its indexes.
     """
 
     graph_id: URIRef
@@ -1572,10 +1326,6 @@ class _AssertedPlacementObservation:
     first_violation: tuple[int, URIRef, URIRef] | None = None
     consumed: bool = False
     facts: _AssertedFacts | None = None
-
-    def __post_init__(self) -> None:
-        if self.facts is None:
-            self.facts = _AssertedFacts(self.graph_id)
 
     def consume_types(self) -> dict[URIRef, tuple[Any, ...]]:
         """Hand the subject/type map over, once, so the reader can drain it.
@@ -1605,7 +1355,6 @@ class _AssertedPlacementObservation:
         return verdict
 
     def observe(self, subject: URIRef, predicate: URIRef, obj: Any) -> None:
-        self.facts.observe(subject, predicate, obj)  # type: ignore[union-attr]
         types = self.types
         verdict = self.verdicts.get(predicate)
         if verdict is None:
@@ -1631,11 +1380,10 @@ class _AssertedPlacementObservation:
         observation = cls(
             graph_id=asserted.identifier,
             projection_only_predicates=_projection_only_predicates(),
-            facts=_AssertedFacts(asserted.identifier, from_walk=True),
+            facts=_AssertedFacts.for_graph(asserted),
         )
         for subject, predicate, obj in asserted:
             observation.observe(subject, predicate, obj)
-        observation.facts.align_to_graph(asserted)  # type: ignore[union-attr]
         return observation
 
 
@@ -2148,6 +1896,10 @@ def _parse_nquads_preserving_lexical_forms(
 ) -> Counter[URIRef]:
     """Parse and count canonical N-Quads without global literal normalization."""
 
+    if asserted_placement is not None:
+        asserted_placement.facts = _AssertedFacts.for_graph(
+            dataset.graph(asserted_placement.graph_id)
+        )
     input_source = create_input_source(source=source, format="nquads")
     parser = _LexicalNQuadsParser(
         subject_observer=subject_observer,
@@ -3231,6 +2983,7 @@ def _lint_ontology(ontology: Graph) -> None:
         RDFS.label,
         RDFS.range,
         RDFS.subClassOf,
+        RDFS.subPropertyOf,
         OWL.disjointWith,
         OWL.versionInfo,
     }
@@ -3259,6 +3012,11 @@ def _lint_ontology(ontology: Graph) -> None:
             _fail("ontology.profile", f"Atlas ontology uses non-allowlisted predicate {predicate}")
         if predicate == RDF.type and obj not in allowed_declaration_types:
             _fail("ontology.profile", f"Atlas ontology uses non-allowlisted rdf:type {obj}")
+        # Subproperty axioms exist to specialize W3C ORG (REF-072); one under a
+        # SKOS or SKOS-XL property would change what a SKOS consumer infers,
+        # which the standards boundary in README.md rules out.
+        if predicate == RDFS.subPropertyOf and str(obj).startswith((str(SKOS), str(SKOSXL))):
+            _fail("ontology.profile", f"Atlas ontology specializes the SKOS property {obj}")
         if (
             predicate == RDFS.range
             and (subject, RDF.type, OWL.DatatypeProperty) in ontology
@@ -3282,6 +3040,11 @@ _SHACL_TARGET_PREDICATES = (
     SH.targetObjectsOf,
     SH.targetSubjectsOf,
 )
+# The named value shapes the batched plan folds into the property shapes that
+# reach them. atlas:EnglishTextLiteralValueShape is not one: its sh:languageIn
+# is not a constraint `_INLINE_VALUE_CONSTRAINTS` carries, so it stays a named
+# shape (its predecessor, atlas:TextLiteralValueShape, was listed here until
+# the rename left the entry dead).
 _INLINE_VALUE_SHAPES = frozenset(
     {
         ATLAS.DateTimeValueShape,
@@ -3289,7 +3052,6 @@ _INLINE_VALUE_SHAPES = frozenset(
         ATLAS.NonEmptyStringValueShape,
         ATLAS.ResourceProfileValueShape,
         ATLAS.SemanticRingValueShape,
-        ATLAS.TextLiteralValueShape,
     }
 )
 _INLINE_VALUE_CONSTRAINTS = frozenset(
@@ -3380,14 +3142,6 @@ _EVIDENCE_WARRANT_BRANCH_SIGNATURES = frozenset(
 # Which SHACL report a refused distribution gets. See `_run_shacl`.
 VALIDATION_MODE_ENV = "REFSPEC_ATLAS_VALIDATION_MODE"
 AUDIT_VALIDATION_MODE = "audit"
-# How many distinct violated constraints the focused red path reproduces. The
-# number of distinct (shape, component, path) signatures a graph can violate is
-# bounded by the shapes file, so this only binds on a distribution that
-# violates nearly all of the binding at once -- and when it binds, the
-# whole-graph report is used rather than risk naming fewer components than the
-# audit run would.
-SHACL_FOCUS_SAMPLE_LIMIT = 256
-_FOCUS_NODE_SCHEMES = ("http:", "https:", "urn:", "file:")
 
 
 def _copy_graph(graph: Graph) -> Graph:
@@ -3741,20 +3495,20 @@ def _batched_shacl_precheck_misses(
     plan: _BatchedShaclPlan,
     *,
     first_only: bool,
-) -> list[Any]:
-    """Return one focus node per lifted constraint that the fast path refuses.
+) -> list[list[Any]]:
+    """Return every focus node each lifted constraint refuses, one list per constraint that refuses any.
 
     Each lifted constraint (one closed shape, the relation ring context, or
     the evidence warrant) can only ever produce its own constraint component,
-    so one violating focus node per lifted constraint is enough to reproduce
-    that component under the normative shapes.  `first_only` stops at the
-    first miss for the plain conformance question, which is all the audit path
-    needs.
+    so the red path samples one node per list to reproduce that component
+    under the normative shapes, and re-validates the rest only if that sample
+    falls short (`_run_shacl`). `first_only` stops at the first miss for the
+    plain conformance question, which is all the audit path needs.
     """
 
-    misses: list[Any] = []
+    refused: list[list[Any]] = []
     for closed in plan.closed_shapes:
-        miss: Any = None
+        misses: list[Any] = []
         for focus in _core_shacl_targets(data_graph, normative_shapes, closed.shape):
             if any(
                 (predicate, obj) != (RDF.type, RDFS.Resource)
@@ -3763,17 +3517,13 @@ def _batched_shacl_precheck_misses(
                 for predicate, obj in data_graph.predicate_objects(focus)
             ):
                 if first_only:
-                    return [focus]
-                # Keep the lexicographically least violating node so the
-                # red-path sample -- and the report built from it -- is
-                # stable across runs; set iteration order is not.
-                if miss is None or str(focus) < str(miss):
-                    miss = focus
-        if miss is not None:
-            misses.append(miss)
+                    return [[focus]]
+                misses.append(focus)
+        if misses:
+            refused.append(misses)
 
     if plan.checks_relation_ring_context:
-        miss = None
+        misses = []
         for focus in _core_shacl_targets(data_graph, normative_shapes, ATLAS.RelationAssertionShape):
             semantic_count = sum(1 for _ in data_graph.objects(focus, ATLAS.semanticRing))
             source_count = sum(1 for _ in data_graph.objects(focus, ATLAS.sourceRing))
@@ -3782,11 +3532,10 @@ def _batched_shacl_precheck_misses(
             cross_ring = semantic_count == 0 and source_count >= 1 and target_count >= 1
             if same_ring == cross_ring:
                 if first_only:
-                    return [focus]
-                if miss is None or str(focus) < str(miss):
-                    miss = focus
-        if miss is not None:
-            misses.append(miss)
+                    return [[focus]]
+                misses.append(focus)
+        if misses:
+            refused.append(misses)
 
     if plan.warrant_branches is not None:
         # One indexed read per constrained path per binding, then the parsed
@@ -3794,7 +3543,7 @@ def _batched_shacl_precheck_misses(
         # so both zero and two are misses and both hand the same
         # XoneConstraintComponent back through focused re-validation.
         warrant_paths = tuple({row[0] for branch in plan.warrant_branches for row in branch})
-        miss = None
+        misses = []
         for focus in _core_shacl_targets(data_graph, normative_shapes, ATLAS.EvidenceBindingShape):
             values = {path: set(data_graph.objects(focus, path)) for path in warrant_paths}
             matched = 0
@@ -3805,12 +3554,11 @@ def _batched_shacl_precheck_misses(
                         break
             if matched != 1:
                 if first_only:
-                    return [focus]
-                if miss is None or str(focus) < str(miss):
-                    miss = focus
-        if miss is not None:
-            misses.append(miss)
-    return misses
+                    return [[focus]]
+                misses.append(focus)
+        if misses:
+            refused.append(misses)
+    return refused
 
 
 def _batched_shacl_prechecks(data_graph: Graph, normative_shapes: Graph, plan: _BatchedShaclPlan) -> bool:
@@ -3838,70 +3586,79 @@ def _validate_shacl_data(data_graph: Graph, shapes: Graph) -> tuple[bool, Any, s
     )
 
 
-def _shacl_focus_samples(precheck_misses: Sequence[Any], report: Any) -> list[URIRef] | None:
+def _shacl_focus_samples(precheck_misses: Sequence[Any], report: Any) -> list[Any] | None:
     """Name focus nodes that reproduce every violation the fast path found.
 
     The fast path knows more than "no". Its precheck misses arrive as focus
     nodes already, and its batched report carries one `sh:focusNode` per
-    violation. Two violations of the same `(sourceShape, component, path)` can
-    only ever produce the same constraint component, so one focus node per
-    distinct signature reproduces the whole component list -- 2,003 identical
+    violation. Two violations of one shape's constraint on one path, the
+    signature `(resultPath, component, sourceShape)`, give the same
+    components under the normative shapes, so one focus node per distinct
+    signature reproduces the whole component list -- 2,003 identical
     evidence-binding violations become one node to re-validate.
 
-    Returns None whenever the sample cannot be trusted to be complete or
-    usable, which sends the caller back to the whole-graph normative report.
+    A violation nested under another through `sh:detail` -- one inside a
+    named shape that `sh:node` reaches -- is sampled by its top-level result's
+    focus node, because re-validating that node is what reproduces it; its own
+    focus is a value node that no shape targets, a literal for a language or
+    datatype value shape.
+
+    Returns None when the report cannot be read as a sample (a result without
+    a focus node or a component), which sends the caller back to the
+    whole-graph normative report.
     """
 
     sampled: list[Any] = list(precheck_misses)
     if isinstance(report, Graph):
-        by_signature: dict[tuple[str, str], Any] = {}
-        for result in report.subjects(RDF.type, SH.ValidationResult):
-            focus = next(report.objects(result, SH.focusNode), None)
-            component = next(report.objects(result, SH.sourceConstraintComponent), None)
-            if focus is None or component is None:
+        by_signature: dict[tuple[str, str, Any], Any] = {}
+        for top in report.objects(None, SH.result):
+            focus = next(report.objects(top, SH.focusNode), None)
+            if focus is None:
                 return None
-            signature = (
-                str(next(report.objects(result, SH.resultPath), "")),
-                str(component),
-            )
-            # Keep the lexicographically least focus node per signature so
-            # the red-path sample is run-stable (graph iteration order is
-            # not). The signature is `(resultPath, component)` and NOT
-            # `sh:sourceShape`: an engine may leave the source shape an
-            # anonymous node -- Jena does -- and a sample keyed on a blank
-            # node id would be stable for one processor only. Nothing is lost
-            # by dropping it, because the component the sample exists to
-            # reproduce is still part of the key; `_root_shape_focus_groups`
-            # then re-derives every shape that targets the sampled node from
-            # the shapes graph, not from the report.
-            previous = by_signature.get(signature)
-            if previous is None or str(focus) < str(previous):
-                by_signature[signature] = focus
+            # `transitive_objects` yields the top-level result first, then
+            # every result nested under it.
+            for result in report.transitive_objects(top, SH.detail):
+                component = next(report.objects(result, SH.sourceConstraintComponent), None)
+                if component is None:
+                    return None
+                # The source shape is in the key because the batched plan
+                # inlines value shapes: two shapes can refuse one path with one
+                # component there and still differ under the normative shapes.
+                # rkaf:effectiveDate is atlas:OrganizationChangeEventShape's
+                # through `sh:node` atlas:DateTimeValueShape (normatively Node
+                # plus the nested Datatype) and atlas:LifecycleEventShape's
+                # directly (Datatype alone); keyed without the shape, a
+                # lifecycle event that sorted first stood in for the change
+                # event and its Node went unreported. The shape only groups,
+                # within one report, and never orders, so an engine that leaves
+                # it anonymous -- Jena does -- cannot make the sample unstable.
+                signature = (
+                    str(next(report.objects(result, SH.resultPath), "")),
+                    str(component),
+                    next(report.objects(result, SH.sourceShape), None),
+                )
+                # Keep the lexicographically least focus node per signature so
+                # the red-path sample is run-stable (graph iteration order is
+                # not). `_root_shape_focus_groups` then re-derives every shape
+                # that targets the sampled node from the shapes graph, not from
+                # the report.
+                previous = by_signature.get(signature)
+                if previous is None or str(focus) < str(previous):
+                    by_signature[signature] = focus
         # Emitted in the canonical report order, `(focusNode, resultPath,
-        # component)`. The focus node is carried as the term the report named,
-        # never re-minted from its string: a non-IRI focus must stay non-IRI so
-        # the guard below still sends it back to the whole-graph run.
+        # component)`. The focus node is carried as the term the report
+        # named, never re-minted from its string.
         sampled.extend(
             focus
             for _key, focus in sorted(
-                (((str(focus), path, component), focus) for (path, component), focus in by_signature.items()),
+                (((str(focus), path, component), focus) for (path, component, _shape), focus in by_signature.items()),
                 key=lambda row: row[0],
             )
         )
 
-    if not sampled or len(sampled) > SHACL_FOCUS_SAMPLE_LIMIT:
+    if not sampled:
         return None
-    unique: list[URIRef] = []
-    seen: set[Any] = set()
-    for focus in sampled:
-        # pySHACL resolves anything else through its CURIE expander, which
-        # would hand the engine a different node than the one that failed.
-        if not isinstance(focus, URIRef) or not str(focus).lower().startswith(_FOCUS_NODE_SCHEMES):
-            return None
-        if focus not in seen:
-            seen.add(focus)
-            unique.append(focus)
-    return unique
+    return list(dict.fromkeys(sampled))
 
 
 def _report_violations(report: Any) -> list[tuple[str, str, str]]:
@@ -3941,8 +3698,8 @@ def _report_violations(report: Any) -> list[tuple[str, str, str]]:
 def _root_shape_focus_groups(
     data_graph: Graph,
     shapes: Graph,
-    focus_nodes: Sequence[URIRef],
-) -> dict[URIRef, list[URIRef]] | None:
+    focus_nodes: Sequence[Any],
+) -> dict[Any, list[Any]] | None:
     """Group sampled focus nodes under the normative shapes that target them.
 
     This is `_core_shacl_targets` read backwards: instead of resolving one
@@ -3952,27 +3709,25 @@ def _root_shape_focus_groups(
     that would mean this resolution and the engine's disagree.
 
     Invariant this rides on: resolution reads the four SHACL Core target
-    predicates only, which is complete for today's shapes file (39
-    `sh:targetClass`, 1 `sh:targetObjectsOf`; no implicit class targets, no
-    `sh:sparql`, no `sh:deactivated`). A shape acquiring any other target
+    predicates only, which is complete for the target forms the shapes file
+    may use (`test_the_shapes_file_uses_only_the_target_forms_the_red_path_resolves`
+    pins them). A shape acquiring any other target
     form must extend this resolution -- a node targeted by *nothing* falls
     back to the whole-graph run, but a node this resolution groups under
     only *some* of its targeting shapes would silently shrink the component
     list, which is contractual.
     """
 
-    targeting: dict[URIRef, dict[Any, list[URIRef]]] = {
+    targeting: dict[URIRef, dict[Any, list[Any]]] = {
         predicate: defaultdict(list) for predicate in _SHACL_TARGET_PREDICATES
     }
     for predicate in _SHACL_TARGET_PREDICATES:
         for shape, value in shapes.subject_objects(predicate):
-            if not isinstance(shape, URIRef):
-                return None
             targeting[predicate][value].append(shape)
 
-    groups: dict[URIRef, list[URIRef]] = defaultdict(list)
+    groups: dict[Any, list[Any]] = defaultdict(list)
     for focus in focus_nodes:
-        matched: set[URIRef] = set(targeting[SH.targetNode].get(focus, ()))
+        matched: set[Any] = set(targeting[SH.targetNode].get(focus, ()))
         for node_type in data_graph.objects(focus, RDF.type):
             for target_class in data_graph.transitive_objects(node_type, RDFS.subClassOf):
                 matched.update(targeting[SH.targetClass].get(target_class, ()))
@@ -3992,59 +3747,85 @@ def _root_shape_focus_groups(
 def _focused_shacl_report(
     data_graph: Graph,
     shapes: Graph,
-    focus_nodes: Sequence[URIRef],
+    focus_nodes: Sequence[Any],
 ) -> tuple[str, list[tuple[str, str, str]]] | None:
-    """Report the sampled focus nodes under the unmodified normative shapes.
+    """Report the given focus nodes under the normative shapes, and no other node of the graph.
 
-    pySHACL's `use_shapes` plus `focus_nodes` skips target resolution
-    entirely: each named shape is evaluated against exactly the sampled nodes
-    it targets, over the same full data graph, so every value-side constraint
-    (`sh:class`, sequence paths, inverse paths) still sees the whole
-    distribution and the components are the engine's own. Returns None when
-    nothing was reproduced, which sends the caller back to the whole-graph run.
+    One engine run over the full data graph, with a copy of the shapes whose
+    targets are replaced by `sh:targetNode` of exactly these nodes, each under
+    every shape that targets it (`_root_shape_focus_groups`). Every constraint
+    is the binding's own and every value-side lookup (`sh:class`, sequence and
+    inverse paths) still sees the whole distribution, so each node gets the
+    violations the whole-graph run gives it. The cost is these nodes and the
+    shapes they reach; no target is resolved over the graph.
 
-    One report is assembled from several runs, so the assembly needs an order.
-    It is the canonical one -- each run's least
-    `(focusNode, resultPath, component)` -- rather than the shape IRI it used
-    to be. The shape IRIs here are the binding's own and would have been
-    stable, but ordering a report by a shape identity is the habit the engine
-    comparison ruled out, and this is the only place the validator had one.
+    The targets are rewritten rather than named through pySHACL's `use_shapes`
+    and `focus_nodes`: `use_shapes` loads only the shapes it names and the
+    blank nodes under them, and ignores every reference to a named shape it
+    did not load -- the `sh:node`, `sh:qualifiedValueShape`, `sh:property` or
+    `sh:not` constraint is skipped, and the member is dropped from an
+    `sh:and`/`sh:or`/`sh:xone` list (REF-072). With every shape loaded the
+    engine traverses named shapes as the whole-graph run does. The
+    nodes go in as RDF terms, not strings, so no CURIE expansion can hand the
+    engine a different node than the one that failed.
+
+    Returns the report text and its canonical violations -- empty when the
+    nodes conform -- or None when a node is targeted by no shape or the engine
+    raises, neither of which the caller can trust as a report.
     """
 
     groups = _root_shape_focus_groups(data_graph, shapes, focus_nodes)
     if not groups:
         return None
-    reports: list[tuple[tuple[str, str, str], str, list[tuple[str, str, str]]]] = []
-    for shape in sorted(groups, key=str):
-        try:
-            conforms, results, report = shacl_validate(
-                data_graph,
-                shacl_graph=shapes,
-                use_shapes=[shape],
-                focus_nodes=groups[shape],
-                inference="none",
-                inplace=True,
-                advanced=False,
-                abort_on_first=False,
-                allow_infos=False,
-                allow_warnings=False,
-                meta_shacl=False,
-            )
-        except Exception:  # noqa: BLE001 - fall back to the whole-graph report
-            return None
-        if conforms:
-            continue
-        violations = _report_violations(results)
-        if not violations:
-            return None
-        reports.append((violations[0], " ".join(str(report).split()), violations))
-    if not reports:
+    targeted = _copy_graph(shapes)
+    for predicate in _SHACL_TARGET_PREDICATES:
+        targeted.remove((None, predicate, None))
+    for shape, nodes in groups.items():
+        for node in nodes:
+            targeted.add((shape, SH.targetNode, node))
+    try:
+        _conforms, results, report = _validate_shacl_data(data_graph, targeted)
+    except Exception:  # noqa: BLE001 - the caller takes the whole-graph report
         return None
-    reports.sort(key=lambda row: row[0])
-    return (
-        " ".join(row[1] for row in reports),
-        sorted({violation for row in reports for violation in row[2]}),
-    )
+    return " ".join(str(report).split()), _report_violations(results)
+
+
+def _focused_report_is_complete(
+    focused: Sequence[tuple[str, str, str]],
+    batched_report: Any,
+    precheck_misses: Sequence[Any],
+) -> bool:
+    """Whether the focused re-run reproduced all the fast path found; if not, its sample is not one to trust.
+
+    Two things must reappear: every component the batched run named, and a
+    violation at every node a lifted precheck (a closed shape, the ring-context
+    or the warrant sh:xone) refused. This is a tripwire, and it sees only what
+    the batched run names: where the plan inlines a value shape, the batched
+    run names the inner component (Datatype) and never the normative Node, so
+    a sample that lost a Node passes it. What keeps the sample complete is its
+    signature (`_shacl_focus_samples`), and tests/test_atlas_v3_red_path_oracle.py
+    holds the sample and the fallback to the whole-graph report. When this
+    trips, the batched plan and the normative shapes disagree about a node.
+    """
+
+    named_components = {component for _focus, _path, component in focused}
+    named_nodes = {focus for focus, _path, _component in focused}
+    return {component for *_, component in _report_violations(batched_report)} <= named_components and {
+        str(miss) for miss in precheck_misses
+    } <= named_nodes
+
+
+def _refused_focus_nodes(refused: Sequence[Sequence[Any]], batched_report: Any) -> list[Any]:
+    """Every node the fast path refused: each lifted constraint's misses and each top-level batched result's focus.
+
+    A nested result is left out: its top-level result's node reproduces it.
+    """
+
+    nodes = {node for misses in refused for node in misses}
+    if isinstance(batched_report, Graph):
+        for top in batched_report.objects(None, SH.result):
+            nodes.update(batched_report.objects(top, SH.focusNode))
+    return list(nodes)
 
 
 @lru_cache(maxsize=1)
@@ -4109,8 +3890,34 @@ def _run_shacl(graphs: Mapping[str, Graph], ontology: Graph, shapes: Graph) -> N
     each mode. Anything else, including unset, fails fast. The failure code is
     `shacl.data` and the message names every violated constraint component in
     both modes; the focused path only narrows which nodes the engine is asked
-    about, and falls back to the whole-graph report whenever the sample cannot
-    be trusted to reproduce the same components.
+    about.
+
+    The bound. Past the batched run and the prechecks, which read the whole
+    graph once to find that it is red, the report is one engine run over k
+    nodes (`_focused_shacl_report`) and costs O(|shapes| + k * c), c being
+    one node under the shapes that target it and the named shapes they
+    reach. For the sample, k is one node per violated `(resultPath,
+    component, sourceShape)` signature plus one per refusing lifted
+    constraint: at most the signatures the shapes file can produce -- every
+    closed shape is lifted, so no signature carries a data predicate --
+    however many nodes violate them. If the sample falls short of what the
+    fast path found (`_focused_report_is_complete`), the report re-validates
+    every node the fast path refused instead, and k is the refused nodes:
+    about a millisecond each, which nears the whole-graph run's cost when
+    nearly every node is refused, and never exceeds the (shape, node) pairs
+    that run evaluates.
+
+    The engine's answer on the refused nodes is final: if every one
+    conforms, the role passes. That is the whole-graph verdict only while
+    the batched plan misses no violation, the assumption the green path
+    already rests on: a plan that wrongly refused one node and missed a real
+    violation at another would pass a build audit mode fails. The owner
+    chose this over a whole-graph check on that branch (REF-072, "The red
+    path's bounded fallback"). The whole-graph run remains audit mode's
+    report and the answer when the fast path itself cannot be read -- an
+    engine exception, a result without a focus node, a node no shape
+    targets. tests/test_atlas_v3_red_path_oracle.py holds the sample and the
+    fallback to it.
     """
 
     _prove_shape_graph_conforms(file_sha256(ONTOLOGY_PATH), file_sha256(SHAPES_PATH))
@@ -4124,7 +3931,7 @@ def _run_shacl(graphs: Mapping[str, Graph], ontology: Graph, shapes: Graph) -> N
             validation_view.namespace_manager.bind(prefix, namespace)
         conforms = False
         report: Any = ""
-        focus_samples: list[URIRef] | None = None
+        focus_samples: list[Any] | None = None
         try:
             if audit:
                 if _batched_shacl_prechecks(validation_view, shapes, plan):
@@ -4135,14 +3942,18 @@ def _run_shacl(graphs: Mapping[str, Graph], ontology: Graph, shapes: Graph) -> N
                 # warrant constraints, the batched shapes answer for every
                 # other one, and only their union is a complete sample of what
                 # failed.
-                misses = _batched_shacl_precheck_misses(
+                refused = _batched_shacl_precheck_misses(
                     validation_view,
                     shapes,
                     plan,
                     first_only=False,
                 )
+                # The least node per lifted constraint, so the sample -- and
+                # the report built from it -- is stable across runs; set
+                # iteration order is not.
+                misses = [min(nodes, key=str) for nodes in refused]
                 conforms, results, report = _validate_shacl_data(validation_view, plan.shapes)
-                conforms = conforms and not misses
+                conforms = conforms and not refused
                 if not conforms:
                     focus_samples = _shacl_focus_samples(misses, results)
         except Exception as exc:  # noqa: BLE001 - normalize SHACL processor failures
@@ -4153,10 +3964,13 @@ def _run_shacl(graphs: Mapping[str, Graph], ontology: Graph, shapes: Graph) -> N
             continue
 
         focused = _focused_shacl_report(validation_view, shapes, focus_samples) if focus_samples else None
+        if focused is not None and not _focused_report_is_complete(focused[1], results, misses):
+            focused = _focused_shacl_report(validation_view, shapes, _refused_focus_nodes(refused, results))
+            if focused is not None and not focused[1]:
+                continue
         if focused is None:
             # Keep the normative processor's exact report and error behavior
-            # for audit mode, for every unsupported fast-path condition, and
-            # for any sample the focused run could not reproduce.
+            # for audit mode and for a fast path that cannot be read.
             try:
                 conforms, results, report = _validate_shacl_data(validation_view, shapes)
             except Exception as exc:  # noqa: BLE001 - normalize SHACL processor failures
@@ -4348,12 +4162,7 @@ def _asserted_facts(
     asserted: Graph,
     inventory: SemanticInventory | None,
 ) -> _AssertedFacts:
-    """The parse-observed read index for this graph, or the graph itself.
-
-    The guard on `graph_id` is what keeps an index from answering for a graph
-    it did not observe: a helper called with a different graph and a stale
-    inventory reads the store, as it always did.
-    """
+    """Reuse this inventory's graph reader when it belongs to the same graph."""
 
     if inventory is not None:
         facts = inventory.facts
@@ -4365,6 +4174,7 @@ def _asserted_facts(
 def _profile_policy_document() -> Mapping[str, Any]:
     profile_map = _load_json(PROFILE_MAP_PATH, require_canonical=True)
     expected_keys = {
+        "changeEventPolicies",
         "crossRingRelationPolicies",
         "format",
         "namespace",
@@ -4592,6 +4402,56 @@ def _cross_ring_relation_policies() -> dict[tuple[URIRef, URIRef], frozenset[URI
     return policies
 
 
+@dataclass(frozen=True, slots=True)
+class _ChangeEventPolicy:
+    """The one entry that admits an n-ary change event, its two links, and its ring (REF-072)."""
+
+    event_class: URIRef
+    original_predicate: URIRef
+    resulting_predicate: URIRef
+    resource_class: URIRef
+    ring: URIRef
+
+
+def _change_event_policies() -> tuple[_ChangeEventPolicy, ...]:
+    """Load the closed change-event policy: Atlas terms only, no predicate shared with an assertion cell.
+
+    The two links are the event record's own fields, not assertion predicates,
+    so an overlap would make one predicate both a bare asserted fact and a
+    projection-only relation. A raw W3C ORG term is refused here as every
+    non-Atlas predicate outside the subject ring is refused in the relation
+    policy: the wire carries the Atlas specializations only.
+    """
+
+    rows = _profile_policy_document().get("changeEventPolicies")
+    if not isinstance(rows, list) or not rows:
+        _fail("profile.policy", "changeEventPolicies must be a nonempty list")
+    assertion_predicates = frozenset().union(
+        *(predicates for ring_policy in _relation_policies().values() for predicates in ring_policy.values()),
+        *_cross_ring_relation_policies().values(),
+    )
+    policies: list[_ChangeEventPolicy] = []
+    for position, row in enumerate(rows):
+        location = f"changeEventPolicies[{position}]"
+        fields = ("eventClass", "originalPredicate", "resourceClass", "resultingPredicate", "semanticRing")
+        if not isinstance(row, Mapping) or set(row) != set(fields):
+            _fail("profile.policy", f"{location} fields are incomplete or unknown")
+        if not all(isinstance(row[field], str) for field in fields):
+            _fail("profile.policy", f"{location} fields must be strings")
+        ring = URIRef(str(ATLAS) + row["semanticRing"])
+        if RING_RESOURCE_CLASSES.get(ring) != URIRef(row["resourceClass"]):
+            _fail("profile.policy", f"{location}.resourceClass does not match its ring")
+        terms = tuple(URIRef(row[field]) for field in ("eventClass", "originalPredicate", "resultingPredicate"))
+        if any(not str(term).startswith(str(ATLAS)) for term in terms):
+            _fail("profile.policy", f"{location} names a non-Atlas term")
+        if terms[1] == terms[2] or {terms[1], terms[2]} & assertion_predicates:
+            _fail("profile.policy", f"{location} links must be two predicates no assertion cell admits")
+        policies.append(_ChangeEventPolicy(*terms, resource_class=URIRef(row["resourceClass"]), ring=ring))
+    if len({policy.event_class for policy in policies}) != len(policies):
+        _fail("profile.policy", "changeEventPolicies repeat an event class")
+    return tuple(policies)
+
+
 def _projection_only_predicates() -> frozenset[URIRef]:
     same_ring_predicates = frozenset().union(
         *(predicates for ring_policy in _relation_policies().values() for predicates in ring_policy.values())
@@ -4777,7 +4637,7 @@ def _declared_assertion_types(
         return set(graph.objects(assertion, RDF.type)) & _ASSERTION_TYPE_TERMS
     declared = {assertion_type for assertion_type in ASSERTION_TYPES if assertion in inventory.nodes(assertion_type)}
     declared.update(
-        asserted_type for asserted_type in _INDEXED_ASSERTED_TYPES if facts.has_type(assertion, asserted_type)
+        asserted_type for asserted_type in _ABSTRACT_ASSERTION_TYPES if facts.has_type(assertion, asserted_type)
     )
     return declared
 
@@ -4903,6 +4763,24 @@ def _assertion_basis(
             label="semantic ring",
         )
         basis["semanticRing"] = str(ring)
+    # Effective scope changes the claim; assertion/review timestamps do not.
+    # Read the bounds from RDF, never from the period IRI or a stored digest.
+    if facts.objects(assertion, RKAF.hasEffectivePeriod):
+        period = _iri(
+            facts.one(assertion, RKAF.hasEffectivePeriod, code="dataset.assertion"),
+            code="dataset.assertion",
+            label="effective period",
+        )
+        for bound_predicate, key in (
+            (RKAF.effectivePeriodStart, "effectivePeriodStart"),
+            (RKAF.effectivePeriodEnd, "effectivePeriodEnd"),
+        ):
+            if bound_predicate == RKAF.effectivePeriodStart or facts.objects(period, bound_predicate):
+                basis[key] = _literal_text(
+                    facts.one(period, bound_predicate, code="dataset.assertion"),
+                    code="dataset.assertion",
+                    label=key,
+                )
     return basis, (subject, predicate, obj)
 
 
@@ -5167,6 +5045,9 @@ def _check_evidence_bindings(
     )
     source_records = _carrier_nodes(asserted, ATLAS.SourceRecord, inventory)
     bindings = _carrier_nodes(asserted, RKAF.EvidenceBinding, inventory)
+    # A change event is an n-ary claim, not a RelationAssertion, and carries its
+    # review the same way (REF-072); its shape requires the owner's.
+    change_events = _carrier_nodes(asserted, ATLAS.OrganizationChangeEvent, inventory)
 
     # Only an operatorAdoption binding may name a prior attestation, and when it
     # names one, the chain it starts must resolve to a non-adoption terminal
@@ -5242,7 +5123,10 @@ def _check_evidence_bindings(
             code="dataset.evidence",
             label="evidence source record",
         )
-        if not inventory.is_assertion(assertion) if inventory is not None else assertion not in assertions:
+        binds_change_event = assertion in change_events
+        if not binds_change_event and (
+            not inventory.is_assertion(assertion) if inventory is not None else assertion not in assertions
+        ):
             _fail("dataset.evidence", f"{binding} binds unknown assertion {assertion}")
         if source_record not in source_records:
             _fail("dataset.evidence", f"{binding} names unknown source record {source_record}")
@@ -5261,11 +5145,15 @@ def _check_evidence_bindings(
                 f"{binding} combines evidence axes no review warrant sanctions",
             )
         declared_warrant = next(iter(declared_warrants))
-        assertion_type = _assertion_type(
-            asserted,
-            assertion,
-            facts=facts,
-            inventory=inventory,
+        assertion_type = (
+            ATLAS.OrganizationChangeEvent
+            if binds_change_event
+            else _assertion_type(
+                asserted,
+                assertion,
+                facts=facts,
+                inventory=inventory,
+            )
         )
         if assertion_type == ATLAS.MappingAssertion:
             mapping_subject = _iri(
@@ -5421,6 +5309,90 @@ def _check_evidence_bindings(
     )
     if missing is not None:
         _fail("dataset.evidence", f"assertion has no immutable evidence binding: {missing}")
+
+
+def _check_change_events(
+    asserted: Graph,
+    current: Mapping[AssertionTriple, AssertionSupport],
+    inventory: SemanticInventory | None = None,
+    *,
+    node_digests: _AssertedNodeDigests | None = None,
+) -> None:
+    """The rules over organization change events that no per-node shape can state (REF-072).
+
+    atlas:OrganizationChangeEventShape holds each event to its own clauses.
+    Here: its ring and every organization it names against the one
+    changeEventPolicies entry; its IRI against its own facts, so the owner's
+    review stays bound to exactly the event reviewed; and three rules over the
+    whole distribution -- no inverse pair (A to B in one event, B to A in any),
+    no cycle through events, and no original that current atlas:sameEntityAs
+    identifies with any of its results, because a succession is never folded
+    into identity. Identity is read through its symmetric, transitive closure,
+    not only its direct links: bridging A and B each to X identifies A with B,
+    so an event from A to B is refused as surely as a direct link would refuse
+    it. Linear in events, links and identity pairs: one pass builds the edge
+    set, the hierarchy check's iterative Tarjan pass finds any cycle, and the
+    exactMatch component index, built over the atlas:sameEntityAs pairs, holds
+    the closure without materializing it. The one pass over every current
+    assertion, for those pairs, runs only when some event names a link.
+    """
+
+    facts = _asserted_facts(asserted, inventory)
+    same_entity: ExactMatchIndex | None = None
+    for policy in _change_event_policies():
+        # First event naming each (original, result) link, for the refusals.
+        edges: dict[tuple[URIRef, URIRef], URIRef] = {}
+        for event in sorted(_carrier_nodes(asserted, policy.event_class, inventory), key=str):
+            if facts.objects(event, ATLAS.semanticRing) != (policy.ring,):
+                _fail("dataset.change-event-policy", f"{event} is not in the {policy.ring} ring its policy admits")
+            originals = facts.objects(event, policy.original_predicate)
+            results = facts.objects(event, policy.resulting_predicate)
+            for endpoint in (*originals, *results):
+                if not _has_carrier_type(asserted, endpoint, policy.resource_class, inventory) or (
+                    facts.objects(endpoint, ATLAS.semanticRing) != (policy.ring,)
+                ):
+                    _fail(
+                        "dataset.change-event-policy",
+                        f"{event} names {endpoint}, which is no {policy.resource_class} in the {policy.ring} ring",
+                    )
+            digest = _node_digest(asserted, event, node_digests)
+            if event != URIRef(CHANGE_EVENT_IRI_PREFIX + digest.removeprefix("sha256:")):
+                _fail("dataset.change-event-identity", f"{event} is not its content-derived IRI")
+            for original in originals:
+                for result in results:
+                    edges.setdefault((original, result), event)
+        if not edges:
+            continue
+        for (original, result), event in sorted(edges.items()):
+            reverse = edges.get((result, original))
+            if reverse is not None:
+                _fail(
+                    "dataset.change-event-inverse",
+                    f"{event} turns {original} into {result} and {reverse} turns it back",
+                )
+        vertices = sorted({vertex for edge in edges for vertex in edge}, key=str)
+        position = {vertex: index for index, vertex in enumerate(vertices)}
+        adjacency: list[list[int]] = [[] for _ in vertices]
+        self_loops = [0] * len(vertices)
+        for original, result in sorted(edges):
+            adjacency[position[original]].append(position[result])
+            if original == result:
+                self_loops[position[original]] = 1
+        component_by_vertex, component_is_cyclic = _hierarchy_strong_components(adjacency, self_loops)
+        cyclic = [vertex for vertex in vertices if component_is_cyclic[component_by_vertex[position[vertex]]]]
+        if cyclic:
+            _fail("dataset.change-event-cycle", f"organization change events form a cycle through {cyclic[0]}")
+        if same_entity is None:
+            same_entity = _build_exact_match_index_from_triples(
+                frozenset(triple for triple in current if triple[1] == ATLAS.sameEntityAs)
+            )
+        for (original, result), event in sorted(edges.items()):
+            if same_entity.same_component(original, result):
+                _fail(
+                    "dataset.change-event-same-entity",
+                    f"{event} changes {original} into {result}, which atlas:sameEntityAs already identifies with it"
+                    " directly or through other records",
+                )
 
 
 def _adjudicated_relation(verdicts: AbstractSet[URIRef]) -> URIRef | None:
@@ -6330,7 +6302,11 @@ def _build_exact_match_index(
 def _build_exact_match_index_from_triples(
     direct_triples: frozenset[AssertionTriple],
 ) -> ExactMatchIndex:
-    """Build the exactMatch index from triples collected by another graph pass."""
+    """Build the exactMatch index from triples collected by another graph pass.
+
+    Only the pairs matter, so any symmetric, transitive relation's closure is
+    held the same way: _check_change_events builds one over atlas:sameEntityAs.
+    """
 
     adjacency: dict[URIRef, set[URIRef]] = defaultdict(set)
     for subject, _, obj in direct_triples:
@@ -6676,6 +6652,7 @@ def _check_label_integrity(
         source_records = set(facts.objects(resource, ATLAS.sourceRecord))
         labels_by_role: dict[URIRef, set[URIRef]] = {}
         literals_by_role: dict[URIRef, set[Literal]] = {}
+        preferred_languages: list[str] = []
         for role in role_predicates:
             labels: set[URIRef] = set()
             literals: set[Literal] = set()
@@ -6704,11 +6681,12 @@ def _check_label_integrity(
                 )
                 if not isinstance(literal, Literal):
                     _fail("dataset.label-integrity", f"{label} literalForm is not a literal")
+                if role == SKOSXL.prefLabel:
+                    preferred_languages.append((literal.language or "").lower())
                 literals.add(literal)
             labels_by_role[role] = labels
             literals_by_role[role] = literals
 
-        preferred_languages = [(literal.language or "").lower() for literal in literals_by_role[SKOSXL.prefLabel]]
         if len(preferred_languages) != len(set(preferred_languages)):
             _fail(
                 "dataset.label-integrity",
@@ -6906,7 +6884,9 @@ def _check_source_accounting(
                     f"{record} is {status} but names a represented assertion",
                 )
             for assertion in ledger_assertions:
-                if not facts.has_type(assertion, ATLAS.RelationAssertion):
+                if not facts.has_type(assertion, ATLAS.RelationAssertion) and not _has_carrier_type(
+                    asserted, assertion, ATLAS.OrganizationChangeEvent, inventory
+                ):
                     _fail(
                         "source.accounting",
                         f"{record} names unknown Atlas assertion {assertion}",
@@ -9462,6 +9442,34 @@ def _rdf_record_ids_by_role(asserted: Graph) -> dict[str, set[str]]:
     }
 
 
+def binds_change_event(graph: Graph, binding: URIRef) -> bool:
+    """Whether one evidence binding supports an organization change event rather than a relation assertion.
+
+    Read off the binding's own rkaf:bindsAssertion object, whose IRI names an
+    event exactly when it carries CHANGE_EVENT_IRI_PREFIX
+    (dataset.change-event-identity), so one subject's own lines decide it.
+    """
+
+    return str(graph.value(binding, RKAF.bindsAssertion)).startswith(CHANGE_EVENT_IRI_PREFIX)
+
+
+def _served_record_ids_by_role(asserted: Graph) -> dict[str, set[str]]:
+    """The logical records the Atlas Parquet view serves: every asserted record but a change event's bindings.
+
+    A change event has no compact-record role, so the view omits it, and with
+    it the evidence bindings that support it -- a served binding must bind a
+    served statement. The agency-registry release's own sealed view serves the
+    events instead (REF-072). The construction counts still count every
+    binding: they describe the RDF, not the view.
+    """
+
+    ids = _rdf_record_ids_by_role(asserted)
+    ids["EvidenceBinding"] = {
+        binding for binding in ids["EvidenceBinding"] if not binds_change_event(asserted, URIRef(binding))
+    }
+    return ids
+
+
 def _check_explorer_reachability(
     served_ids_by_role: Mapping[str, Sequence[str]],
     rdf_ids_by_role: Mapping[str, AbstractSet[str]],
@@ -9536,8 +9544,7 @@ def _check_construction_record_ownership(
     own output. With the packs gone the comparand is the graph: every carrier
     is resolved to the construction unit that owns it and tallied, and the
     published counts must equal that tally exactly, per release and per role.
-    A parse-observed fact index answers the per-record ownership reads when
-    available; direct callers retain the graph-backed path.
+    Per-record ownership reads use the graph's existing indexes.
     """
 
     source_owner: dict[str, str] = {}
@@ -9973,6 +9980,7 @@ def _validate_semantic_graphs(
     _STATUS.phase("check-evidence-and-assertions")
     _check_evidence_bindings(graphs["asserted"], inventory, node_digests=node_digests)
     current_assertions = _validate_assertions(graphs["asserted"], inventory)
+    _check_change_events(graphs["asserted"], current_assertions, inventory, node_digests=node_digests)
     _STATUS.phase("check-machine-adjudication")
     _check_machine_adjudication(
         graphs["asserted"],
